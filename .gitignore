@@ -9,6 +9,9 @@ wheels/
 # Virtual environments
 .venv
 worktrees/
+
+# Local connection secrets
+.env
 results/
 queue/
 

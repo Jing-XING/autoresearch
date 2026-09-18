@@ -2,6 +2,18 @@
 
 This is an experiment to have the LLM do its own research.
 
+## Generalized project contract
+
+This repository contains the original language-model task plus a task-agnostic
+execution layer in `autolab/`. Treat `research.json` as the contract for the
+current task. The agent chooses hypotheses and edits only `editable_files`;
+the fixed evaluator and data preparation remain outside the search space.
+
+For a non-language task, keep the protocol and replace the command, metrics, and
+task adapter in `research.json`. Run candidates through `python -m
+autolab.runner`, which enforces a timeout, saves the full log, rejects missing
+metrics, and appends a structured record to `results.jsonl`.
+
 ## Setup
 
 To set up a new experiment, work with the user to:

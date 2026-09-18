@@ -1,0 +1,11 @@
+{
+  "name": "language-model-baseline",
+  "command": "uv run train.py",
+  "timeout_seconds": 600,
+  "metrics": [
+    {"name": "val_bpb", "pattern": "^val_bpb:\\s+([0-9.eE+-]+)$", "goal": "min"},
+    {"name": "peak_vram_mb", "pattern": "^peak_vram_mb:\\s+([0-9.eE+-]+)$", "goal": "min"}
+  ],
+  "editable_files": ["train.py"],
+  "frozen_files": ["prepare.py"]
+}

@@ -39,6 +39,35 @@ uv run train.py
 
 If the above commands all work ok, your setup is working and you can go into autonomous research mode.
 
+## Reusable research loop
+
+The language-model benchmark is one concrete task. The reusable execution layer
+is in `autolab/`: it runs a bounded command, extracts numeric metrics, writes a
+complete log, records a JSONL result, and compares the run with the best prior
+result. It has no assumptions about NLP, GPUs, or tokenizers.
+
+`research.json` is the task contract. It describes the experiment command, the
+metric regular expressions and optimization direction, and which files the
+agent may edit. After the agent commits one candidate change, run for example:
+
+```bash
+python -m autolab.runner \
+  --run-id baseline \
+  --command "uv run train.py" \
+  --metric 'val_bpb=^val_bpb:\\s+([0-9.eE+-]+)$:min' \
+  --metric 'peak_vram_mb=^peak_vram_mb:\\s+([0-9.eE+-]+)$:min' \
+  --timeout 600
+```
+
+The first metric is the primary objective; later metrics are diagnostics or
+constraints. The runner saves output under `runs/` and appends a structured
+record to `results.jsonl`. Missing metrics and non-zero exits are failures; they
+cannot accidentally become a new best result. The runner deliberately does not edit
+Git, so the agent or human can review `improved` and perform the keep/reset
+decision. This same contract can drive image, time-series, simulation,
+compiler, or scientific-code experiments by replacing the command and metric.
+See [`autolab/AGENT_PROTOCOL.md`](autolab/AGENT_PROTOCOL.md).
+
 ## Running the agent
 
 Simply spin up your Claude/Codex or whatever you want in this repo (and disable all permissions), then you can prompt something like:
