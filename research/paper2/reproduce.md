@@ -166,3 +166,27 @@ For regeneration, use an isolated reproduction copy without that generated
 receipt; the entry point refuses to overwrite an existing receipt. Run
 `python -m unittest tests.test_budget_complete_names` for the format and
 multiset checks. No model inference is needed for this analysis.
+
+
+## Annotation sensitivity added after offline artifact v4
+
+The core v4 archive and its seventeen Windows/Linux checks predate the
+annotation-sensitivity extension. They must not be cited as verification of
+this extension. Its separate receipt is
+`research/evidence/paper2_annotation_sensitivity_receipt_v1.json`.
+From the repository root, with the pinned expansion archive and committed
+cards, annotations and summaries available, run:
+
+```bash
+python scripts/analyze_expansion_annotation_bounds_v1.py --output annotation-recomputed.json
+python scripts/check_paper2_manuscript_tables.py
+```
+
+The first output path must be new. Compare its parsed JSON with
+`research/evidence/vakra_expansion_annotation_bounds_v1.json`; byte-identical
+line endings are not required for JSON-value comparison. The program verifies
+all 420 raw records, preserves exact task/text identity and missing-answer
+constraints, and recomputes the hypothetical label-flip and ambiguity bounds.
+It does not create new judgments or provide independent semantic adjudication.
+The second program checks eighteen result rows, the executed reminder and the
+unchanged historical study record; it is an editorial consistency check.

@@ -1,10 +1,12 @@
 # Successful Calls, Insufficient Evidence: Scope and Coverage in Tool-Using Agents
 
 **Research manuscript; not submission-ready.** The empirical studies reported
-here are complete. The saved-record artifact has passed Windows and Linux
-reanalysis; independent answer adjudication, public artifact release and
-submission-format verification remain unfinished. The preceding
-manuscript is preserved verbatim in `study_record.md` as a detailed study record.
+here are complete. The core saved-record artifact passed Windows and Linux
+reanalysis. The later annotation-sensitivity extension has a separate local
+verification record and is not included in that historical artifact.
+Independent answer adjudication and complete public artifact release remain
+unfinished. The preceding manuscript is preserved verbatim in `study_record.md`
+as a detailed study record.
 
 ## Abstract
 
@@ -147,6 +149,10 @@ malformed outputs and budget failures are retained.
 
 ### 3.2 Selection and study sequence
 
+**Table 1. Study sequence and number of model episodes.** Overlapping
+studies are not independent task samples. CPU tool replays and evaluator-authored
+acquisition controls are not new model episodes.
+
 | Study | Task set | New model episodes | Role |
 |---|---|---:|---|
 | Initial observations | 4 world queries, 2 checkpoints | 8 | Development; one OOM |
@@ -158,8 +164,6 @@ malformed outputs and budget failures are retained.
 | Prospective expansion | 70 queries, 4 further databases, 3 checkpoints, 2 prompts | 420 | Primary transfer evidence |
 | Larger generation budget | 2 expansion tasks, 3 checkpoints, 2 prompts | 12 | Registered length sensitivity |
 
-Table 1. Overlapping studies, not independent task samples. CPU tool replays
-and evaluator-authored acquisition controls are not new model episodes.
 
 The initial replication selects the three smallest previously untested
 non-world capability-1 databases by file size: computer_student, cars and
@@ -201,6 +205,11 @@ in `study_record.md`.
 
 ## 4. RQ1: Mixed transfer of the coverage reminder
 
+### 4.1 Prospective task and domain comparisons
+
+**Table 2. Requested-value matches against frozen interpretations.** The
+genes floor concerns only three scored tasks and does not establish equivalence.
+
 | Domain | Scored tasks per arm | Qwen3-4B original / reminder | Qwen2.5-7B original / reminder | Qwen3-30B-A3B original / reminder |
 |---|---:|---:|---:|---:|
 | Cookbook | 16 | 9 / 8 | 7 / 7 | 11 / 11 |
@@ -209,8 +218,6 @@ in `study_record.md`.
 | Ice hockey | 12 | 3 / 3 | 2 / 1 | 4 / 3 |
 | Combined | 49 | 24 / 20 | 14 / 15 | 27 / 29 |
 
-Table 2. Requested-value matches against frozen interpretations. The genes
-floor concerns only three scored tasks and does not establish equivalence.
 
 All 24 workers exit successfully, producing the exact 420 registered records
 and 210 verified initial prompt pairs. The complete archive retains 364 final
@@ -219,13 +226,16 @@ The fixed 21-task ambiguity mask excludes
 126 executions from answer accuracy while retaining all costs. Thus each arm
 has 49 scored tasks across the same four databases.
 
+**Table 3. Paired reminder effects on the 49 scored expansion tasks.**
+
 | Checkpoint | Original correct | Reminder correct | Gains / losses | Difference (pp) | Conditional 95% paired bootstrap interval (pp) |
 |---|---:|---:|---:|---:|---:|
 | Qwen3-4B | 24/49 | 20/49 | 3 / 7 | -8.16 | [-20.41, 4.08] |
 | Qwen2.5-7B | 14/49 | 15/49 | 4 / 3 | +2.04 | [-8.16, 12.24] |
 | Qwen3-30B-A3B | 27/49 | 29/49 | 4 / 2 | +4.08 | [-4.08, 14.29] |
 
-Table 3 reports aggregate differences and intervals. For this descriptive analysis, we compute the exact finite distribution of
+
+For this descriptive analysis, we compute the exact finite distribution of
 the stratified paired bootstrap. Each task pair contributes -1, 0 or +1 for
 reminder-minus-original correctness. Within each of the four fixed domains,
 we resample its observed number of scored pairs with replacement, then sum
@@ -245,6 +255,8 @@ versus 19/49, 14/49 versus 14/49, and 25/49 versus 28/49 respectively; all
 three corresponding conditional intervals still include zero. These checks
 restrict the aggregate prompt-benefit interpretation. They do not establish
 prompt equivalence or erase the within-domain gains and losses.
+
+### 4.2 Sensitivity to answer annotation
 
 A separate post-hoc calculation addresses label sensitivity rather than
 task resampling. We group exact final-answer text within the same question,
@@ -272,6 +284,8 @@ not population intervals or sharp bounds over coherent SQL interpretations;
 some extremal label assignments may have no common semantic interpretation.
 They leave the original denominator and labels unchanged and reinforce that
 the reported conditional 49-task comparison is not a score for all 70 tasks.
+
+### 4.3 Resource limits and development context
 
 Forty-three expansion episodes terminate at the input ceiling, all in ice
 hockey. Saved attempted-input counters range from 32,849 to 161,160 tokens,
@@ -303,6 +317,8 @@ All first replies match; 37 trajectories diverge after model inputs change,
 while 213 final answers remain byte-identical. This is a known-task sensitivity
 study, not a replacement for the original results.
 
+**Table 4. Final-response production and correctness under two executors.**
+
 | Checkpoint / prompt | Strict finals | Sequential finals | Strict correct | Sequential correct |
 |---|---:|---:|---:|---:|
 | Qwen3 / original | 60/60 | 60/60 | 29/55 | 29/55 |
@@ -310,8 +326,9 @@ study, not a replacement for the original results.
 | Qwen2.5 / original | 51/60 | 56/60 | 19/55 | 19/55 |
 | Qwen2.5 / reminder | 49/60 | 56/60 | 21/55 | 22/55 |
 
-Table 4. Twelve additional Qwen2.5 final responses produce one net additional
-correct answer. Recovered answers can omit rows, misalign fields or use the
+
+Twelve additional Qwen2.5 final responses produce one net additional correct
+answer. Recovered answers can omit rows, misalign fields or use the
 wrong scope. Under the original prompt, one correct recovered answer is
 offset by loss of another; the reminder contributes the net gain.
 
@@ -340,6 +357,8 @@ record. Offline comparison independently confirms those initial inputs.
 All twelve runs produce final answers, without protocol, input-limit or
 step-limit terminations; none reaches the new generation ceiling.
 
+**Table 5. All twelve registered generation-budget controls.**
+
 | Task / checkpoint | Primary complete answers, original / reminder | Larger-budget complete answers, original / reminder | Final tokens, larger-budget original / reminder |
 |---|---:|---:|---:|
 | 791 recipe names / Qwen3-4B | 0 / 0 | 0 / 0 | 55 / 94 |
@@ -349,7 +368,8 @@ step-limit terminations; none reaches the new generation ceiling.
 | 129 player names / Qwen2.5-7B | 0 / 0 | 0 / 0 | 33 / 54 |
 | 129 player names / Qwen3-30B-A3B | 0 / 0 | 1 / 1 | 626 / 628 |
 
-Table 5 reports all twelve controls. All four recovered player lists contain exactly the 129 requested names,
+
+All four recovered player lists contain exactly the 129 requested names,
 checked by parsing their complete comma-separated bodies and comparing name
 multisets with the frozen SQL card. The corresponding short-budget answers
 end at 512 generated tokens and omit required names. The eight other final

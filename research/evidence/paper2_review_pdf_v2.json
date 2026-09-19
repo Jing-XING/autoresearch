@@ -1,0 +1,34 @@
+{
+  "source": "research/paper2/manuscript.md",
+  "source_sha256": "6f78e2b4d1c4fff9e66eb98a3a943773f52482bea89df1bec40e3ace543ccf31",
+  "bibliography_sha256": "34957babc5a197f2eeaf04944198fcf4142785184c73bdb10b2fd5357e82082a",
+  "builder_sha256": "bb8adbc6f66bbb6d83acce6a772f222c1648be010ecde4e288fa791f283bace3",
+  "output": "output/pdf/paper2-scope-coverage-review-v2.pdf",
+  "pdf_sha256": "d49b75dda12260618fb2c2e86f133e5bdf69c4dc05016817c378f423f81e9b89",
+  "pages": 10,
+  "tables": 5,
+  "reference_records": 11,
+  "review_date": "2026-09-20",
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0"
+  },
+  "publication_ready": false,
+  "visual_review": "passed: all ten rendered page PNGs inspected; no clipping, overlap or missing glyphs",
+  "rendered_pages": 10,
+  "out_of_bounds_characters": 0,
+  "missing_glyph_squares": 0,
+  "main_words": 4892,
+  "abstract_words": 245,
+  "result_rows_verified": 18,
+  "exact_prompt_verified": true,
+  "annotation_sensitivity_included": true,
+  "historical_offline_v4_includes_annotation_sensitivity": false,
+  "prior_manuscript_sha256": "f09f7e4d48f5c00242dcf0391e0c8768f05c773bd3d815a3415cd9c31c3de27e",
+  "notes": [
+    "Editorial organization and captions updated; experimental labels and table bodies unchanged.",
+    "Core offline artifact v4 verified on Windows and Linux; later annotation sensitivity separately locally verified.",
+    "No DOCX produced: bundled Windows runtime has no LibreOffice renderer. Markdown remains editable source.",
+    "This is an incomplete review manuscript, not a submission-ready paper."
+  ]
+}
