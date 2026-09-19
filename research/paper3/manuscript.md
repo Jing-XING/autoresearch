@@ -430,6 +430,8 @@ loss. The selected sequence and single pinned implementation limit its scope.
 
 ## 6. What the released experiment archive shows
 
+### 6.1 Recovery-framework archive
+
 We separately inspect all 280 JSON files in the published archive. The audit
 distinguishes execution traces from aggregate records and progress snapshots.
 The 13 aggregate JSON files contain 1,272 record occurrences but only 224
@@ -453,6 +455,52 @@ reported domain and evaluator. The linked anonymous task artifact was expired
 when accessed. We retain these access and provenance limits rather than
 imputing successful outcomes from token counts or choosing the best duplicate
 record. No published success-rate claim is revised by our local probes.
+
+### 6.2 A separate screen of published retail trajectories
+
+To test whether the source-selected retail composition is actually visible
+in existing model trajectories, we freeze a descriptive screen of all four
+public retail result files in the pinned tau2 snapshot. Earlier work had
+inspected their task/trial coverage and reward totals; the composition screen
+is fixed before extracting matching calls or reading cancellation payloads.
+Each file contains four trials on the same 114 task IDs. The 1,824 simulations
+therefore do not constitute 1,824 independent tasks. These are historical
+author-produced executions, not additional model runs in our environment.
+
+Every assistant payment-change and cancellation call is retained, including
+errors. Tool-call IDs associate calls with following responses inside each
+simulation; no selected call has a missing, duplicate or ambiguous response.
+A qualifying composition requires a successful, matching pending-order
+response to payment change before a later cancellation of the same order,
+followed by a successful cancelled-order response. Same-message calls cannot
+establish this response-before-call ordering and are counted separately.
+
+| Archived agent | Simulations | Payment-change calls | Cancellation calls | Scorable cancelled-order payloads |
+|---|---:|---:|---:|---:|
+| Claude 3.7 Sonnet | 456 | 4 | 117 | 116 |
+| GPT-4.1 | 456 | 4 | 118 | 118 |
+| GPT-4.1 mini | 456 | 6 | 110 | 110 |
+| o4-mini | 456 | 4 | 89 | 89 |
+
+None of the 434 cancellation calls follows a payment change for the same
+order, and no same-message change/cancel pair occurs. The 433 parseable
+cancelled-order payloads cover 31 distinct task IDs across files. All have
+zero signed net on every payment instrument under an independent arithmetic
+recomputation. The remaining call returns an explicit non-pending-order
+error and supplies no scorable order payload; it is not counted as a
+successful cancellation. No canonical simulation record is duplicated
+across the four files.
+
+The local archive files have Windows line endings. Normalizing only CRLF
+pairs yields the exact blob sizes and Git object hashes in the pinned
+upstream tree; parsed JSON is unchanged. The archive's recorded execution
+revision is `c30d59aaa71c65f9b9eb6a8f8636b48945028fcf` for three models and
+`ade39493be54aad326a4c65295f77fe09780329b` for GPT-4.1 mini. Neither is assumed
+identical to the native census revision. Returned payloads are not independent
+persisted-state observations, and the recorded task rewards are not relabelled.
+This negative screen does not corroborate occurrence of our constructed
+composition failure in these published runs. It also cannot certify the
+absence of failures in unobserved workflows or implementations.
 
 ## 7. Related work and limits
 

@@ -92,3 +92,29 @@ are recorded separately in the v3 portability and reanalysis receipts.
 hashes, five tables, nine references and complete visual/geometry inspection.
 It remains explicitly labelled incomplete; rendering is not a publication
 readiness judgment.
+
+## Published retail trajectory screen (section 6.2)
+
+Protocol `research/retail_archive_composition_protocol_v1.md`, registration
+`retail_archive_composition_registration_v1.json` and extractor were committed
+as `df4788e` before occurrence extraction. The selection is explicitly informed
+by the native composition finding and earlier archive coverage/reward audits.
+Four archived files contain 1,824 simulations over the same 114 task IDs;
+the screen finds 18 payment changes, 434 cancellations, no same-order earlier
+payment change before cancellation, and no same-message change/cancel pair.
+All 433 scorable cancelled-order payloads have zero per-instrument net.
+One explicit non-pending-order error is retained as unscorable. These payloads
+cover 31 distinct tasks, not 433 independent tasks.
+
+`retail_archive_composition_reanalysis_v1.json` independently verifies every
+selected raw call/result and recomputes all ledger totals with rational
+arithmetic. `retail_archive_git_provenance_v1.json` verifies Git blob hashes
+at the pinned snapshot after CRLF-to-LF normalization; original extraction
+bytes remain pinned separately. Runtime revisions differ from the native
+census. No historical final database, external effect, new model execution
+or benchmark-score revision is claimed. The zero-occurrence result restricts
+the native finding to its constructed diagnostic evidence.
+
+The retained integrated v3 archive and nine-page review PDF predate section
+6.2. They remain valid for their pinned contents and do not include this
+later archival screen. Its separate package receipt records the extension.

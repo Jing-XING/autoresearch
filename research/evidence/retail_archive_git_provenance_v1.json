@@ -1,0 +1,49 @@
+{
+  "url": "https://api.github.com/repos/sierra-research/tau2-bench/git/trees/b7ea9074c1cba482b30687fecdb5c8425fd6f619?recursive=1",
+  "revision": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "response_sha256": "1e85b5f74b68a0e403d9e26acbc52fb49ac076f0ed64aa71567864f767098c9d",
+  "truncated": false,
+  "verification": "Local files contain Windows CRLF. Removing CR bytes only in CRLF pairs yields exact Git blob SHA1 and size; parsed JSON unchanged. Registration pins original local bytes used for extraction.",
+  "files": [
+    {
+      "path": "data/tau2/results/final/claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "git_blob_sha1": "1b0e345db5bd9ae5cecfc70ff399f590be70c4f8",
+      "local_sha256": "8ed278ae09736e28cda92fc353cf5755e754b6ca0030bf6071444ef966748a66",
+      "local_bytes": 25297194,
+      "git_content_sha256": "ed41dbd18c080154156484e3a0122c095e324a11367a640d88e15956daed7b9d",
+      "git_bytes": 24908843,
+      "crlf_to_lf_pairs": 388351,
+      "json_equal_after_normalization": true
+    },
+    {
+      "path": "data/tau2/results/final/gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "git_blob_sha1": "b30d695834f16ddbb114e254e9fc35376d819f6b",
+      "local_sha256": "512df82cc0e95e655029c35f1452b6933aa1d27f9b14be3553b4c785eb484e71",
+      "local_bytes": 22401800,
+      "git_content_sha256": "5fc5b96ada0fe46a463eaed98d1bfed9947fe073bac052290162dae18d71394e",
+      "git_bytes": 22044059,
+      "crlf_to_lf_pairs": 357741,
+      "json_equal_after_normalization": true
+    },
+    {
+      "path": "data/tau2/results/final/gpt-4.1-mini-2025-04-14_retail_base_gpt-4.1-2025-04-14_4trials.json",
+      "git_blob_sha1": "8a55836aa5e9ed735c9900c0e357b1dd80f71c28",
+      "local_sha256": "a9d8827875713ce65899cb149bb30e9c27e3a16459816376032b81c0a8084222",
+      "local_bytes": 24082699,
+      "git_content_sha256": "6d6badb43b716adca31591b0b40e15fd493b49adddaa8e2c47035bb557549257",
+      "git_bytes": 23697012,
+      "crlf_to_lf_pairs": 385687,
+      "json_equal_after_normalization": true
+    },
+    {
+      "path": "data/tau2/results/final/o4-mini-2025-04-16_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "git_blob_sha1": "bfd1be3546169e95d47f49c8b6fdf59e93a20188",
+      "local_sha256": "e9287afa8b499b79cc7735a46d8a4fbee7c96497d67ef4f362b8e72cf9c62651",
+      "local_bytes": 22439916,
+      "git_content_sha256": "7135f38bbbbd46d6babe830574c8623bb276d8fd6da316580b905cf513853f98",
+      "git_bytes": 22066527,
+      "crlf_to_lf_pairs": 373389,
+      "json_equal_after_normalization": true
+    }
+  ]
+}

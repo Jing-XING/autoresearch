@@ -1,0 +1,142 @@
+{
+  "scope": "Archived returned payloads only; no independent persisted state, replay, reward revision or prevalence outside these fixed files.",
+  "registration_sha256": "ce4649344b8333c772db0353c79db468c27bd128737ac43c94d005da7dd3c8ce",
+  "files": [
+    {
+      "file": "claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "sha256": "8ed278ae09736e28cda92fc353cf5755e754b6ca0030bf6071444ef966748a66",
+      "bytes": 25297194,
+      "recorded_execution_commit": "c30d59aaa71c65f9b9eb6a8f8636b48945028fcf",
+      "agent": {
+        "implementation": "llm_agent",
+        "llm": "claude-3-7-sonnet-20250219",
+        "llm_args": {
+          "temperature": 0.0
+        }
+      },
+      "summary": {
+        "counts": {
+          "simulations": 456,
+          "cancel_pending_order": 117,
+          "association_unique_following_result": 121,
+          "scored_cancel_payload": 116,
+          "modify_pending_order_payment": 4,
+          "cancel_with_earlier_change": 0,
+          "qualifying_composition": 0,
+          "cancel_with_same_message_change": 0,
+          "nonzero_cancel_payload": 0
+        },
+        "distinct_tasks": {
+          "scored_cancel_payload": 28
+        }
+      }
+    },
+    {
+      "file": "gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "sha256": "512df82cc0e95e655029c35f1452b6933aa1d27f9b14be3553b4c785eb484e71",
+      "bytes": 22401800,
+      "recorded_execution_commit": "c30d59aaa71c65f9b9eb6a8f8636b48945028fcf",
+      "agent": {
+        "implementation": "llm_agent",
+        "llm": "gpt-4.1-2025-04-14",
+        "llm_args": {
+          "temperature": 0.0
+        }
+      },
+      "summary": {
+        "counts": {
+          "simulations": 456,
+          "modify_pending_order_payment": 4,
+          "association_unique_following_result": 122,
+          "cancel_pending_order": 118,
+          "scored_cancel_payload": 118,
+          "cancel_with_earlier_change": 0,
+          "qualifying_composition": 0,
+          "cancel_with_same_message_change": 0,
+          "nonzero_cancel_payload": 0
+        },
+        "distinct_tasks": {
+          "scored_cancel_payload": 27
+        }
+      }
+    },
+    {
+      "file": "gpt-4.1-mini-2025-04-14_retail_base_gpt-4.1-2025-04-14_4trials.json",
+      "sha256": "a9d8827875713ce65899cb149bb30e9c27e3a16459816376032b81c0a8084222",
+      "bytes": 24082699,
+      "recorded_execution_commit": "ade39493be54aad326a4c65295f77fe09780329b",
+      "agent": {
+        "implementation": "llm_agent",
+        "llm": "gpt-4.1-mini-2025-04-14",
+        "llm_args": {
+          "temperature": 0.0
+        }
+      },
+      "summary": {
+        "counts": {
+          "simulations": 456,
+          "modify_pending_order_payment": 6,
+          "association_unique_following_result": 116,
+          "cancel_pending_order": 110,
+          "scored_cancel_payload": 110,
+          "cancel_with_earlier_change": 0,
+          "qualifying_composition": 0,
+          "cancel_with_same_message_change": 0,
+          "nonzero_cancel_payload": 0
+        },
+        "distinct_tasks": {
+          "scored_cancel_payload": 24
+        }
+      }
+    },
+    {
+      "file": "o4-mini-2025-04-16_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "sha256": "e9287afa8b499b79cc7735a46d8a4fbee7c96497d67ef4f362b8e72cf9c62651",
+      "bytes": 22439916,
+      "recorded_execution_commit": "c30d59aaa71c65f9b9eb6a8f8636b48945028fcf",
+      "agent": {
+        "implementation": "llm_agent",
+        "llm": "o4-mini-2025-04-16",
+        "llm_args": {
+          "reasoning_effort": "high"
+        }
+      },
+      "summary": {
+        "counts": {
+          "simulations": 456,
+          "modify_pending_order_payment": 4,
+          "association_unique_following_result": 93,
+          "cancel_pending_order": 89,
+          "scored_cancel_payload": 89,
+          "cancel_with_earlier_change": 0,
+          "qualifying_composition": 0,
+          "cancel_with_same_message_change": 0,
+          "nonzero_cancel_payload": 0
+        },
+        "distinct_tasks": {
+          "scored_cancel_payload": 19
+        }
+      }
+    }
+  ],
+  "summary": {
+    "counts": {
+      "simulations": 1824,
+      "cancel_pending_order": 434,
+      "association_unique_following_result": 452,
+      "scored_cancel_payload": 433,
+      "modify_pending_order_payment": 18,
+      "cancel_with_earlier_change": 0,
+      "qualifying_composition": 0,
+      "cancel_with_same_message_change": 0,
+      "nonzero_cancel_payload": 0
+    },
+    "distinct_tasks": {
+      "scored_cancel_payload": 31
+    }
+  },
+  "canonical_duplicate_groups": [],
+  "raw_audit_path": "results/audits/retail-archive-composition-v1.json",
+  "raw_audit_sha256": "6065d1b8602b6817ff1c41f92ebbc1fd10d62ee8e4469137049a585fe1e15304",
+  "freeze_commit": "df4788e"
+}

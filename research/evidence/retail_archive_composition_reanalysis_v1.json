@@ -1,0 +1,46 @@
+{
+  "scope": "Independent raw JSON re-count and Fraction ledger arithmetic; no persisted-state or historical runtime verification.",
+  "audit_sha256": "6065d1b8602b6817ff1c41f92ebbc1fd10d62ee8e4469137049a585fe1e15304",
+  "audit_bytes": 2818664,
+  "registration_sha256": "ce4649344b8333c772db0353c79db468c27bd128737ac43c94d005da7dd3c8ce",
+  "simulation_records_verified": 1824,
+  "cancellation_payloads_recomputed": 433,
+  "qualifying_compositions": 0,
+  "nonzero_payloads": 0,
+  "git_blob_provenance_verified": true,
+  "canonical_duplicates": 0,
+  "files": [
+    {
+      "file": "claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "simulations": 456,
+      "payment_changes": 4,
+      "cancellations": 117,
+      "scored_payloads": 116,
+      "nonzero_payloads": 0
+    },
+    {
+      "file": "gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "simulations": 456,
+      "payment_changes": 4,
+      "cancellations": 118,
+      "scored_payloads": 118,
+      "nonzero_payloads": 0
+    },
+    {
+      "file": "gpt-4.1-mini-2025-04-14_retail_base_gpt-4.1-2025-04-14_4trials.json",
+      "simulations": 456,
+      "payment_changes": 6,
+      "cancellations": 110,
+      "scored_payloads": 110,
+      "nonzero_payloads": 0
+    },
+    {
+      "file": "o4-mini-2025-04-16_retail_default_gpt-4.1-2025-04-14_4trials.json",
+      "simulations": 456,
+      "payment_changes": 4,
+      "cancellations": 89,
+      "scored_payloads": 89,
+      "nonzero_payloads": 0
+    }
+  ]
+}

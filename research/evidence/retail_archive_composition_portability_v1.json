@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "a34b9d135436e5a8a5fc89765204e7ad2198ff4ef368b8d1baee4b664d758ea5",
+  "cwd": "results/audits/retail-archive-portable-v1",
+  "command": [
+    "C:\\Users\\xingjing\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-I",
+    "scripts/verify_retail_archive_composition_v1.py",
+    "--audit",
+    "results/audits/retail-archive-composition-v1.json",
+    "--output",
+    "verification-new.json"
+  ],
+  "exit_code": 0,
+  "report_json_equal_to_workspace": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Actual extracted archive verification with isolated Python standard library; no historical tool or model replay."
+}

@@ -1,0 +1,69 @@
+{
+  "archive": "results/remote/retail-archive-composition-v1.zip",
+  "bytes": 9153016,
+  "sha256": "a34b9d135436e5a8a5fc89765204e7ad2198ff4ef368b8d1baee4b664d758ea5",
+  "entries": 16,
+  "manifest": {
+    "research/evidence/retail_archive_composition_reanalysis_v1.json": {
+      "bytes": 1562,
+      "sha256": "269b9bfa9fc5022ef4b2691c48f3de7746c40a4b6de2b4ac4c904bd29ec5fe31"
+    },
+    "research/evidence/retail_archive_composition_registration_v1.json": {
+      "bytes": 1414,
+      "sha256": "ce4649344b8333c772db0353c79db468c27bd128737ac43c94d005da7dd3c8ce"
+    },
+    "research/evidence/retail_archive_composition_summary_v1.json": {
+      "bytes": 4933,
+      "sha256": "c7dd308490983d42b6e6c91d48a43e08a856fa991f69ad92e8a4e220d4864316"
+    },
+    "research/evidence/retail_archive_git_provenance_v1.json": {
+      "bytes": 2639,
+      "sha256": "460d6e61be1dde00c97bb41ca514a0258b9b8d87ea9e31560236b229345a0108"
+    },
+    "research/retail_archive_composition_protocol_v1.md": {
+      "bytes": 3688,
+      "sha256": "10ed07829e2ab41d03186fb511b7ed509b2c7b5449d95a49bd1010e5896f25d6"
+    },
+    "results/audits/retail-archive-composition-v1.json": {
+      "bytes": 2818664,
+      "sha256": "6065d1b8602b6817ff1c41f92ebbc1fd10d62ee8e4469137049a585fe1e15304"
+    },
+    "results/audits/retail-archive-github-tree-v1.json": {
+      "bytes": 503601,
+      "sha256": "1e85b5f74b68a0e403d9e26acbc52fb49ac076f0ed64aa71567864f767098c9d"
+    },
+    "results/third_party/tau2-bench/LICENSE": {
+      "bytes": 1093,
+      "sha256": "74741b87a33d4704c6f33e5c71742542446c984233f7a7e4905bf36f4da5a33b"
+    },
+    "results/third_party/tau2-bench/data/tau2/results/final/claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 25297194,
+      "sha256": "8ed278ae09736e28cda92fc353cf5755e754b6ca0030bf6071444ef966748a66"
+    },
+    "results/third_party/tau2-bench/data/tau2/results/final/gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 22401800,
+      "sha256": "512df82cc0e95e655029c35f1452b6933aa1d27f9b14be3553b4c785eb484e71"
+    },
+    "results/third_party/tau2-bench/data/tau2/results/final/gpt-4.1-mini-2025-04-14_retail_base_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 24082699,
+      "sha256": "a9d8827875713ce65899cb149bb30e9c27e3a16459816376032b81c0a8084222"
+    },
+    "results/third_party/tau2-bench/data/tau2/results/final/o4-mini-2025-04-16_retail_default_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 22439916,
+      "sha256": "e9287afa8b499b79cc7735a46d8a4fbee7c96497d67ef4f362b8e72cf9c62651"
+    },
+    "scripts/audit_retail_archive_composition_v1.py": {
+      "bytes": 8088,
+      "sha256": "97e4bf072431f681ebf2fc534f428eaee0f1dbae14308bcf3cbd6fa824a90822"
+    },
+    "scripts/verify_retail_archive_composition_v1.py": {
+      "bytes": 7010,
+      "sha256": "06c01690b8eadd2b7e3b30709f0a6a6e26417173279e350a3a62b0e15f74daf4"
+    },
+    "tests/test_retail_archive_composition.py": {
+      "bytes": 1709,
+      "sha256": "5c42455a760a5bf18f068d4782924a448bb8d88488e071d3f943e74952723d02"
+    }
+  },
+  "scope": "Complete archived JSON observations and offline reanalysis, not historical runtime reexecution or independent state snapshots."
+}

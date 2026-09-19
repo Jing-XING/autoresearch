@@ -113,3 +113,27 @@ artifact verifier, it is not yet a standalone relocated package entry point.
 The integrated v3 entry point above removes that workspace-path dependency
 for offline reanalysis. Existing report files are created exclusively. Do not overwrite them or
 count another audit as a new native experiment.
+
+## Published retail trajectory screen
+
+The separate `results/remote/retail-archive-composition-v1.zip` package contains
+the four complete historical retail JSON files, frozen extraction protocol,
+registration, analysis and independent verifier, original extraction output,
+Git tree response, provenance receipt and upstream license. Its external
+receipt is `research/evidence/retail_archive_composition_package_v1.json`.
+Extract into an empty directory, then run from that directory with standard
+library Python:
+
+```sh
+python scripts/verify_retail_archive_composition_v1.py \
+  --audit results/audits/retail-archive-composition-v1.json \
+  --output verification-new.json
+```
+
+To regenerate the extraction, run `scripts/audit_retail_archive_composition_v1.py`
+with `--output extraction-new.json`. Outputs must not already exist. The
+registration preserves the original local CRLF bytes; the verifier independently
+checks that newline-normalized contents match upstream Git objects. This is
+an archive analysis, not replay of historical models/tools or an observation
+of persisted final states. The earlier v3 integrated package and review PDF
+do not cover this later manuscript section 6.2.
