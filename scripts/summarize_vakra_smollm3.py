@@ -1,5 +1,6 @@
 """Join complete third-model execution and literal answer reviews."""
 from collections import Counter
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -9,7 +10,7 @@ def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def main():
+def main(output=None):
     ev = Path('research/evidence')
     sp = ev / 'vakra_smollm3_v1_execution_summary.json'
     ap = ev / 'vakra_smollm3_v1_answer_annotations.json'
@@ -60,11 +61,13 @@ def main():
               'groups': groups, 'prompt_pairs': paired,
               'answer_labels': dict(Counter(r['answer_label'] for r in rows)),
               'limits': 'Assistant qualitative SQL audit, not official scoring. Two USA predictions are explicitly qualified; both credited and excluded sensitivity totals provided. Known tasks, single run per cell, native-profile/resource-specific floor performance, not a general model ranking.'}
-    with (ev / 'vakra_smollm3_v1_answer_summary.json').open('x', encoding='utf-8') as f:
+    with (output or ev / 'vakra_smollm3_v1_answer_summary.json').open('x', encoding='utf-8') as f:
         json.dump(report, f, indent=2)
     print(json.dumps({'groups': [g for g in groups if g['domain'] == 'all'], 'pairs': paired,
                       'labels': report['answer_labels']}))
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, help='New report path; do not overwrite existing evidence')
+    main(parser.parse_args().output)

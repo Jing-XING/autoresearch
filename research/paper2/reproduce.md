@@ -1,5 +1,36 @@
 # Reproducing the complete prospective expansion analysis
 
+## Complete saved-record analysis package
+
+The local archive `results/remote/paper2-offline-evidence-v4.zip` contains
+702 payload files plus its manifest, 24,089,944 bytes, SHA256
+`89fc8480bcab4a793903c8ad68696b8ec9aa0fcc79c50db6f68dbd8fb8e25e24`.
+It includes all eight complete model batches (1,328 executions), the prepared
+databases, source, annotations, replay reports and paper artifacts. Extract
+into a new directory and run:
+
+```sh
+python -I scripts/verify_paper2_offline_artifact.py --output-dir reanalysis
+```
+
+The actual isolated Windows Python 3.12.14 run completed 17 checks. Its
+receipt is `research/evidence/paper2_offline_artifact_v4.json`. A deliberately
+altered extracted prediction was rejected, and the original bytes were
+restored. Earlier package attempts are retained with their three explicitly
+guarded legacy-report schema adaptations. See `artifact_README.md` for scope,
+licensing and exact exclusions from provenance comparisons.
+
+This recomputes saved-record analyses, not model inference, independent answer
+judgments or native MCP mutation executions. The package is local and has not
+been published as a public download. After explicit user approval, the same
+archive was transferred to the designated research server. An actual Linux
+Python 3.13.5 isolated run completed all 17 checks with exit code zero in
+8.911 seconds. Its returned JSON report equals the Windows report after JSON
+parsing; byte hashes differ because the platform text writers use different
+line endings. The receipt retains both hashes and the transfer outcome.
+
+## Individual analyses and review PDF
+
 To check the reorganized manuscript's four result tables against the retained
 evidence, run `python scripts/check_paper2_manuscript_tables.py`. To rebuild
 the review PDF with ReportLab and pypdf installed, run:
@@ -62,6 +93,11 @@ a fresh checkout without the existing output receipt, since it intentionally
 refuses to overwrite evidence. Its pure `exact_bootstrap` function can be
 imported without writes. The distribution preserves each domain's task count
 and each original/reminder pair; it does not resample checkpoints as tasks.
+
+The uncertainty program now accepts `--output NEW_REPORT.json`, so an isolated
+reproduction need not remove the original receipt. The budget-comparison and
+SmolLM3 answer-summary programs have the same optional argument. Their
+calculations are unchanged; the existing-output refusal remains in force.
 
 The label materialization script records an already performed qualitative
 review and imports the earlier 300 labels only after source-hash checks.

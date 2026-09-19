@@ -4,6 +4,7 @@ Exact finite bootstrap distribution over task pairs within each fixed domain;
 not a population interval over domains, a new method, or a preregistered test.
 """
 from collections import Counter,defaultdict
+import argparse
 from copy import deepcopy
 from fractions import Fraction
 import hashlib
@@ -68,7 +69,7 @@ def analyze(annotations,summary,rules):
     return result
 
 
-def main():
+def main(output=None):
     ev=ROOT/'research/evidence';ep=ev/'vakra_expansion_complete_grid_v1.json';ap=ev/'vakra_expansion_complete_annotations_v1.json'
     cp=ev/'vakra_domain_expansion_sql_cards_v1.json';dp=ev/'vakra_expansion_disney_review_sensitivity_v1.json'
     summary=json.loads(ep.read_bytes());ann=json.loads(ap.read_bytes());rules=json.loads(cp.read_bytes())['cards']
@@ -101,11 +102,14 @@ def main():
                 'Checkpoints are reported separately; no independent-domain population or multiplicity-adjusted superiority claim.',
                 'The eight Disney review changes were already disclosed before full-grid completion; not a bound over all possible adjudications.',
                 'No new model runs or prompt changes; one unblinded assistant annotation.'])
-    path=ev/'vakra_expansion_complete_sensitivity_v1.json'
+    path=output or ev/'vakra_expansion_complete_sensitivity_v1.json'
     with path.open('x',encoding='utf-8') as f:json.dump(report,f,indent=2);f.write('\n')
     print(json.dumps({variant:[{k:r[k] for k in ('model','original_correct','reminder_correct','gains','losses','difference_percentage_points')}|{'interval':r['conditional_paired_bootstrap']['interval_percentage_points']} for r in report[variant]] for variant in ['primary','retained_disney_annotation_sensitivity']}))
     print(json.dumps({'input_budget_failures':len(budget),'successful_calls_before_failure':dict(Counter(r['successful_generation_calls'] for r in budget)),
         'attempted_input_range':[min(r['recorded_attempted_input_tokens'] for r in budget),max(r['recorded_attempted_input_tokens'] for r in budget)]}))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,help='New report path; existing evidence is never overwritten')
+    main(parser.parse_args().output)

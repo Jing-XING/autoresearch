@@ -5,6 +5,7 @@ Exact name-list checks supplement four positive hockey judgements; they are
 not an automatic general semantic scorer or an independent human review.
 """
 from collections import Counter
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -30,7 +31,7 @@ def calls(episode):
     return [r for t in episode['trace'] for r in t.get('calls',[t]) if 'tool_call' in r]
 
 
-def main():
+def main(output=None):
     ev=ROOT/'research/evidence';archive=ROOT/'results/remote/vakra-output-budget-v2-complete.zip'
     deployment=ROOT/'results/deploy/vakra-output-budget-v2.zip'
     assert archive.stat().st_size==259852 and sha(archive)=='9ad8955cdf0c368412e1e57f1f2ae2b74aedbd4d63f1d79f956e4cf6f71f63d7'
@@ -128,8 +129,11 @@ def main():
                 'The intervention changed every generation ceiling. Observed histories happen to match before final generation; this does not establish final-only equivalence in other tasks.',
                 'No new controller, acquired-evidence sufficiency or official benchmark scoring claim. Primary420scores remain unchanged.',
                 'Warmup/prefix replay assertions are runtime provenance, not separately saved second copies of every replayed response.'])
-    save(ev/'vakra_output_budget_complete_analysis_v1.json',report)
+    save(output or ev/'vakra_output_budget_complete_analysis_v1.json',report)
     print(json.dumps(report['totals']));print(json.dumps([{k:r[k] for k in ('domain','model','condition','primary_final_tokens','new_final_tokens','answer_label')} for r in rows]))
 
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,help='New report path; existing evidence is never overwritten')
+    main(parser.parse_args().output)

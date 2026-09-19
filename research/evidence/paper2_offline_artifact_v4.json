@@ -1,0 +1,598 @@
+{
+  "archive": "results/remote/paper2-offline-evidence-v4.zip",
+  "archive_sha256": "89fc8480bcab4a793903c8ad68696b8ec9aa0fcc79c50db6f68dbd8fb8e25e24",
+  "bytes": 24089944,
+  "members": 703,
+  "payload_files": 702,
+  "manifest_sha256": "1242499c55961de5a7658d160c244457c50263cf6d3ac37b630df87fd9343b23",
+  "model_execution_records": 1328,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "isolated_interpreter": true,
+  "actual_verifier_exit": 0,
+  "completed_checks": 17,
+  "report_path": "results/audits/paper2-portable-v4/reanalysis/report.json",
+  "report_sha256": "fe11bdf983b0829b2e9d160621f890ff945ef649e91886170d1d7c087c0c2e21",
+  "report": {
+    "format": "paper2-offline-v1",
+    "verified_payload_files": 702,
+    "manifest_sha256": "1242499c55961de5a7658d160c244457c50263cf6d3ac37b630df87fd9343b23",
+    "model_execution_records": 1328,
+    "inventory": [
+      {
+        "batch": "vakra-native-first4-v1",
+        "episodes": 8,
+        "zero_exit_workers": 4,
+        "terminations": {
+          "agent_finished": 7,
+          "model_error": 1
+        }
+      },
+      {
+        "batch": "vakra-coverage12-v1",
+        "episodes": 48,
+        "zero_exit_workers": 4,
+        "terminations": {
+          "agent_finished": 34,
+          "protocol_error_limit": 2,
+          "input_budget_exceeded": 12
+        }
+      },
+      {
+        "batch": "vakra-crossdomain-v1",
+        "episodes": 240,
+        "zero_exit_workers": 12,
+        "terminations": {
+          "protocol_error_limit": 18,
+          "agent_finished": 220,
+          "max_steps": 2
+        }
+      },
+      {
+        "batch": "vakra-permissive-v1",
+        "episodes": 240,
+        "zero_exit_workers": 12,
+        "terminations": {
+          "protocol_error_limit": 4,
+          "agent_finished": 232,
+          "tool_budget_exceeded": 2,
+          "max_steps": 2
+        }
+      },
+      {
+        "batch": "vakra-smollm3-v1",
+        "episodes": 240,
+        "zero_exit_workers": 12,
+        "terminations": {
+          "agent_finished": 221,
+          "tool_budget_exceeded": 5,
+          "protocol_error_limit": 12,
+          "max_steps": 2
+        }
+      },
+      {
+        "batch": "vakra-qwen30b-v1",
+        "episodes": 120,
+        "zero_exit_workers": 6,
+        "terminations": {
+          "agent_finished": 118,
+          "protocol_error_limit": 2
+        }
+      },
+      {
+        "batch": "vakra-expansion-v2",
+        "episodes": 420,
+        "zero_exit_workers": 24,
+        "terminations": {
+          "agent_finished": 364,
+          "protocol_error_limit": 5,
+          "max_steps": 8,
+          "input_budget_exceeded": 43
+        }
+      },
+      {
+        "batch": "vakra-output-budget-v2",
+        "episodes": 12,
+        "zero_exit_workers": 12,
+        "terminations": {
+          "agent_finished": 12
+        }
+      }
+    ],
+    "checks": [
+      {
+        "check": "initial",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": [
+          "groups",
+          "rows",
+          "input_sha256"
+        ],
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "development",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": [
+          "groups",
+          "rows",
+          "input_sha256"
+        ],
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "development_answers",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "strict",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "strict_answers",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "sequential",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "sequential_answers",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "executor_pairing",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "smollm3",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "smollm3_answers",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      },
+      {
+        "check": "capacity",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": [
+          "analysis_source_sha256"
+        ]
+      },
+      {
+        "check": "capacity_answers",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": [
+          "analysis_source_sha256"
+        ]
+      },
+      {
+        "check": "expansion",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": [
+          "analysis_source_sha256"
+        ]
+      },
+      {
+        "check": "expansion_answers",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": [
+          "analysis_source_sha256"
+        ]
+      },
+      {
+        "check": "output_budget",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": [
+          "script_sha256"
+        ]
+      },
+      {
+        "check": "expansion_uncertainty",
+        "exit_code": 0,
+        "matches_retained_report": true,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": [
+          "script_sha256"
+        ]
+      },
+      {
+        "check": "manuscript_tables",
+        "exit_code": 0,
+        "matches_retained_report": false,
+        "compared_fields": "all except named provenance fields",
+        "excluded_provenance_fields": []
+      }
+    ],
+    "limits": [
+      "Saved assistant annotations are reused, not independently adjudicated.",
+      "No neural inference or native MCP mutation replay is performed by this verifier.",
+      "Native replay records, scripts and prepared databases are included for inspection.",
+      "Only named machine-local source-path and analysis-script fingerprints are excluded from report equality.",
+      "Hash agreement establishes provenance, not semantic truth or paper readiness."
+    ],
+    "legacy_schema_adaptations": [
+      {
+        "report": "vakra_crossdomain_v1_execution_summary.json",
+        "added_neutral_fields": {
+          "call_policy": "single",
+          "rows_and_groups.tool_budget_rejections": 0
+        },
+        "guard": "New values must match these constants; every retained old field is compared."
+      },
+      {
+        "report": "vakra_qwen30b_complete_grid_v1.json",
+        "added_fields": {
+          "closed_domain": null,
+          "closed_domain_complete": false,
+          "audited_episodes": 120,
+          "scope_wall_seconds": "max worker finish minus min worker start from raw grid"
+        },
+        "guard": "New values must match the fixed full-grid scope and raw worker timestamps."
+      },
+      {
+        "report": "vakra_qwen30b_answer_summary_v1.json",
+        "added_fields": {
+          "review_scope": "full_registered_grid",
+          "complete_batch": true
+        },
+        "guard": "New scope markers must match the verified complete 120-record batch."
+      }
+    ]
+  },
+  "tamper_control": {
+    "exit_code": 1,
+    "detected": "Existing extraction differs",
+    "altered_file": "results\\remote\\vakra-coverage12-v1\\runs\\vakra-coverage12-v1\\original\\qwen3\\shard-0\\case-000.json",
+    "original_sha256": "767b363fb1d4e82c31fa6d8f249dfaf0a4bf7d966bb89b19325926b25f4ccbff",
+    "source_archive_changed": false,
+    "original_restored": true
+  },
+  "preserved_failed_attempts": [
+    {
+      "archive": "paper2-offline-evidence-v1.zip",
+      "reason": "Strict execution report predates three types of neutral schema field occurrences."
+    },
+    {
+      "archive": "paper2-offline-evidence-v2.zip",
+      "reason": "Capacity execution report predates whole-grid scope metadata."
+    },
+    {
+      "archive": "paper2-offline-evidence-v3.zip",
+      "reason": "Capacity answer report predates complete-batch and review-scope markers."
+    }
+  ],
+  "remote_linux_verification": {
+    "status": "passed",
+    "transfer_started": true,
+    "designated_server": "172.16.32.11",
+    "archive_sha256": "89fc8480bcab4a793903c8ad68696b8ec9aa0fcc79c50db6f68dbd8fb8e25e24",
+    "remote_extraction": "/xingjing/autoresearch-agent-papers/preflights/paper2-offline-v4",
+    "python": "3.13.5",
+    "isolated_interpreter": true,
+    "actual_verifier_exit": 0,
+    "elapsed_seconds": 8.911,
+    "completed_checks": 17,
+    "report_bytes": 7313,
+    "report_sha256": "a2d1226138ab43f5cec239c0caa1d7bfab3867248408570cc715aca6239ef26b",
+    "returned_report_path": "results/remote/paper2-offline-linux-v4.json",
+    "json_equals_windows": true,
+    "byte_difference": "Windows CRLF versus Linux LF only",
+    "transfer": {
+      "http_get_status": 200,
+      "http_post_status": 200,
+      "received_sha256_verified": true,
+      "bridge_exited": true
+    },
+    "approval_history": [
+      "Automatic approval review initially rejected this transfer before process creation.",
+      "User explicitly approved the specified approximately 24 MB payload and designated server for Linux offline verification.",
+      "Same bounded transfer then ran successfully; no credentials or .env were included."
+    ],
+    "report": {
+      "format": "paper2-offline-v1",
+      "verified_payload_files": 702,
+      "manifest_sha256": "1242499c55961de5a7658d160c244457c50263cf6d3ac37b630df87fd9343b23",
+      "model_execution_records": 1328,
+      "inventory": [
+        {
+          "batch": "vakra-native-first4-v1",
+          "episodes": 8,
+          "zero_exit_workers": 4,
+          "terminations": {
+            "agent_finished": 7,
+            "model_error": 1
+          }
+        },
+        {
+          "batch": "vakra-coverage12-v1",
+          "episodes": 48,
+          "zero_exit_workers": 4,
+          "terminations": {
+            "agent_finished": 34,
+            "protocol_error_limit": 2,
+            "input_budget_exceeded": 12
+          }
+        },
+        {
+          "batch": "vakra-crossdomain-v1",
+          "episodes": 240,
+          "zero_exit_workers": 12,
+          "terminations": {
+            "protocol_error_limit": 18,
+            "agent_finished": 220,
+            "max_steps": 2
+          }
+        },
+        {
+          "batch": "vakra-permissive-v1",
+          "episodes": 240,
+          "zero_exit_workers": 12,
+          "terminations": {
+            "protocol_error_limit": 4,
+            "agent_finished": 232,
+            "tool_budget_exceeded": 2,
+            "max_steps": 2
+          }
+        },
+        {
+          "batch": "vakra-smollm3-v1",
+          "episodes": 240,
+          "zero_exit_workers": 12,
+          "terminations": {
+            "agent_finished": 221,
+            "tool_budget_exceeded": 5,
+            "protocol_error_limit": 12,
+            "max_steps": 2
+          }
+        },
+        {
+          "batch": "vakra-qwen30b-v1",
+          "episodes": 120,
+          "zero_exit_workers": 6,
+          "terminations": {
+            "agent_finished": 118,
+            "protocol_error_limit": 2
+          }
+        },
+        {
+          "batch": "vakra-expansion-v2",
+          "episodes": 420,
+          "zero_exit_workers": 24,
+          "terminations": {
+            "agent_finished": 364,
+            "protocol_error_limit": 5,
+            "max_steps": 8,
+            "input_budget_exceeded": 43
+          }
+        },
+        {
+          "batch": "vakra-output-budget-v2",
+          "episodes": 12,
+          "zero_exit_workers": 12,
+          "terminations": {
+            "agent_finished": 12
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "initial",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": [
+            "groups",
+            "rows",
+            "input_sha256"
+          ],
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "development",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": [
+            "groups",
+            "rows",
+            "input_sha256"
+          ],
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "development_answers",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "strict",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "strict_answers",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "sequential",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "sequential_answers",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "executor_pairing",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "smollm3",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "smollm3_answers",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        },
+        {
+          "check": "capacity",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": [
+            "analysis_source_sha256"
+          ]
+        },
+        {
+          "check": "capacity_answers",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": [
+            "analysis_source_sha256"
+          ]
+        },
+        {
+          "check": "expansion",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": [
+            "analysis_source_sha256"
+          ]
+        },
+        {
+          "check": "expansion_answers",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": [
+            "analysis_source_sha256"
+          ]
+        },
+        {
+          "check": "output_budget",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": [
+            "script_sha256"
+          ]
+        },
+        {
+          "check": "expansion_uncertainty",
+          "exit_code": 0,
+          "matches_retained_report": true,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": [
+            "script_sha256"
+          ]
+        },
+        {
+          "check": "manuscript_tables",
+          "exit_code": 0,
+          "matches_retained_report": false,
+          "compared_fields": "all except named provenance fields",
+          "excluded_provenance_fields": []
+        }
+      ],
+      "limits": [
+        "Saved assistant annotations are reused, not independently adjudicated.",
+        "No neural inference or native MCP mutation replay is performed by this verifier.",
+        "Native replay records, scripts and prepared databases are included for inspection.",
+        "Only named machine-local source-path and analysis-script fingerprints are excluded from report equality.",
+        "Hash agreement establishes provenance, not semantic truth or paper readiness."
+      ],
+      "legacy_schema_adaptations": [
+        {
+          "report": "vakra_crossdomain_v1_execution_summary.json",
+          "added_neutral_fields": {
+            "call_policy": "single",
+            "rows_and_groups.tool_budget_rejections": 0
+          },
+          "guard": "New values must match these constants; every retained old field is compared."
+        },
+        {
+          "report": "vakra_qwen30b_complete_grid_v1.json",
+          "added_fields": {
+            "closed_domain": null,
+            "closed_domain_complete": false,
+            "audited_episodes": 120,
+            "scope_wall_seconds": "max worker finish minus min worker start from raw grid"
+          },
+          "guard": "New values must match the fixed full-grid scope and raw worker timestamps."
+        },
+        {
+          "report": "vakra_qwen30b_answer_summary_v1.json",
+          "added_fields": {
+            "review_scope": "full_registered_grid",
+            "complete_batch": true
+          },
+          "guard": "New scope markers must match the verified complete 120-record batch."
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Reuses saved assistant labels; not independent semantic validation.",
+    "No new model inference or native MCP mutation execution.",
+    "Native replay reports and source/databases are included for inspection; quick start verifies neural-record analyses only.",
+    "Package is present locally and on the designated research server; not yet a public artifact download."
+  ]
+}

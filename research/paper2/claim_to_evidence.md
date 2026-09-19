@@ -31,6 +31,29 @@ not a submission-ready paper. Its receipt is
 
 ## Historical claim ledger
 
+### Offline artifact verification
+
+`paper2_offline_artifact_v4.json` records a fresh extraction of the 703-member
+local ZIP and an actual Python `-I` run of the bundled verifier. All 1,328 model
+records are present, and 17 analysis/table checks finish successfully. The
+verifier preserves old result files and explicitly adapts three historical
+report schemas only after checking their fixed full-grid/neutral values.
+Changed program fingerprints and machine-local source-path dictionaries are
+recorded as provenance exclusions; scores, predictions, failures, intervals
+and raw hashes are not excluded. A deliberately changed extracted prediction
+is rejected before result analysis. This verifies portable saved-record
+analysis on Windows and Linux, not independent annotations, native MCP
+reexecution or publication readiness. After an initial automatic approval
+rejection, the user explicitly approved this payload and destination. The
+same archive then passed all 17 checks under Linux Python 3.13.5 in 8.911
+seconds. The hash-verified returned report matches the Windows JSON exactly
+after parsing; different line endings explain the byte-hash difference.
+The archive remains a local/server artifact, not a public release. The
+manifest defines the bundled documentation snapshot, which predates this
+post-verification receipt and documentation update.
+
+### Original observations
+
 | Claim | Evidence | Limit |
 |---|---|---|
 | Eight initial episodes contain incomplete language lists, wrong aggregation scope and one OOM. | `../evidence/vakra_native_first4_v1_audit.md`, corresponding summary and hashed archive | Selected first four public training queries, two Qwen checkpoints; not prevalence. |
