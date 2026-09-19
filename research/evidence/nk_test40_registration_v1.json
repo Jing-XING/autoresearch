@@ -1,0 +1,78 @@
+{
+  "batch": "tau-nk-test40-v1",
+  "registered_episodes": 160,
+  "target_count": 40,
+  "conditions": [
+    "nk_schema",
+    "nk_schema_boundary"
+  ],
+  "models": [
+    "qwen3",
+    "qwen25"
+  ],
+  "selection_sha256": "425fbd67713028e1bd5063eaa7d5cd05edf16c55cefd5eaaf8e62caba29665b9",
+  "curation_registration_sha256": "27147be4e34c5a6c51fa349247e39960305ce872767e130c0a471b7280a04414",
+  "tasks_file_sha256": "20793073500dba5761f76d038dd32a343903985af442b3eae7eeb3a4e0d5d75d",
+  "splits_file_sha256": "b862e473e8e9b25a0774d811cd9264790aa4560e620ad794e3f57bd9fd7c54e0",
+  "target_outputs_seen": false,
+  "curation_outputs_seen": false,
+  "max_steps": 60,
+  "max_errors": 5,
+  "max_new_tokens": 512,
+  "seed": 20260919,
+  "decoding": "greedy_native_template_tool_prefix",
+  "model_files_sha256": {
+    "qwen3": {
+      "config.json": "5beea1a4a34c62782bfb2f911c606741a3bab8f92d80a118fa053c28af12e8ba",
+      "configuration.json": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9",
+      "generation_config.json": "835fffe355c9438e7a25be099b3fccaa98350b83451f9fd2d99512e74f1ade48",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+      "model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+      "model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d",
+      "model.safetensors.index.json": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "qwen25": {
+      "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+      "configuration.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+      "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+      "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+      "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+      "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "prior_model_manifest_sha256": {
+    "qwen3": "f03e4ee367bf67ccbfcf8e0bb2f7b35d142089dfad4df88f94d74aa3223e040c",
+    "qwen25": "76ad4c33bb1413e004551f3108afb02c81b42c955da0e1543b3f349014c2ae5b"
+  },
+  "source_files_sha256": {
+    "autolab/tau2_nk_transfer.py": "bf2ea4970c3c5ea0940c337c1726d4880553a9268534e5e978251f132c81dc49",
+    "autolab/nk_prefix_bank.py": "b3a2b235d60ba69abbcdcf177dc52d6ce2265cd791872e714369134bb7f9c58b",
+    "autolab/nk_prefix_curation.py": "6d3a5dc4826a2248f8cbe9dc41bcfb3ca3675a855f975ef01d7bd3270056a5e4",
+    "autolab/nk_prefix_comparator.py": "cc97c4e2dec21b008b54b0e8760e7b9591272eaffab1cead95fa8cba99ad3570",
+    "autolab/experience_memory_bank.py": "37566407d0c7ce58f3450ab5feceec95ee8961410ea784e69f93f8b60ac9cbac",
+    "autolab/experience_curator.py": "79ffc2bba5283c4e262798befc81ef8ea94489bcdaedb2f2af7d227c1760b185",
+    "autolab/tau2_native_baseline.py": "be065fc05b8802b5962e4aa88b9d1499abd36e465da6a31c28a303b900a9f70b",
+    "autolab/tau2_native_agent.py": "e08b87baf1b79bd70646f592fbd6394d9db085cc6a3e6de81415fc1bbde74728",
+    "autolab/native_tool_agent.py": "c5b9e41ca0c5324787c123d7b592a4387cf6b8f30286fc4eba6facdbe1bcfe83",
+    "autolab/local_smoke.py": "8cb174e8baa64fde27400fe8186d89b359a5b162435d797efac361bbb0f20847",
+    "autolab/tool_agent.py": "94c0f45a46abe4642a3f27ea0b82a9a61817429c83c85c70164c17befb58c019",
+    "autolab/trajectory_cutoffs.py": "2d07086bf4191ccf48051fec347608724aaa5d2c03b44f51f2adc7df70e2cdd8",
+    "scripts/run_tau_nk_test40_v1.py": "6212404925257bf3f61370ddcb33290123dc9c7600361416f886514211f6a31a",
+    "scripts/preflight_nk_target.py": "9e0420bdae76e2eec357f4270b1b18bd5999e148e17df62588560d500d9b4273"
+  },
+  "protocol_sha256": "ecead4d17c216d1a8534e9e06c309687c2cecad5941f3030310200b0f5d1c299",
+  "no_memory_runs": 0,
+  "primary_contrast": "nk_schema_boundary minus nk_schema separately per checkpoint; all 40 tasks including errors",
+  "invalid_memory_policy": "same source choice; empty experience under common wrapper; no re-retrieval",
+  "status": "registered_not_executed"
+}

@@ -6,6 +6,10 @@ for JSON, JSONL and Python files. Keep these attributes when checking out on
 Windows or Linux. Do not reformat frozen cards, registrations or result files
 before validating their recorded hashes.
 
+The NK target protocol Markdown file is explicitly covered as well because
+its registration pins the protocol's exact bytes. Other prose documents are
+not implicitly assumed to have byte-stable line endings.
+
 A 2026-09-19 audit found 86 differences between local tracked-file bytes and
 commit `3f4554b`, all attributable solely to CRLF/LF conversion. This could make
 a Linux checkout fail a hash check even though the JSON data were identical.

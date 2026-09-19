@@ -438,7 +438,33 @@ five groups, three deliberately chosen source rules and two fixed checkpoints,
 we do not interpret these values as population-level uncertainty estimates.
 The frozen extension is queued; no test outcome or effect is reported here.
 
-### 5.2 Interpretation limits
+### 5.2 Registered structured-curation extension
+
+A further extension applies the paired boundary instruction within an
+NK-schema adaptation. The curator retains the prior method's six-field
+representation and fixed failure vocabularies, but reads telecom prefixes
+instead of scientific code and logs. It is not a reproduction of the complete
+Negative Knowledge procedure. Both new arms use the same 1,024-token curation
+ceiling and the same Qwen3 checkpoint. Visible zero-reward eligibility yields
+70 source records. The remaining four successful records are excluded before
+curation and retrieval, never according to downstream outcomes.
+
+The endpoint comprises all 40 official test tasks, both target checkpoints
+and both new conditions: 160 registered episodes. These reuse the preceding
+test task identities and are not an additional independent sample. Frozen
+ticket-based retrieval selects five sources with reuse 13/3/8/1/15; one task's
+source identity differs from the original 74-source selection. If a chosen
+curation is invalid or fails to generate, that source remains selected and
+an empty experience is supplied under the common wrapper. No alternate
+retrieval or target exclusion follows from generation quality.
+
+The primary contrast is boundary versus base NK-schema curation within each
+checkpoint. Its changed pool and larger curation ceiling prevent attributing
+differences from the earlier generic-curation study to representation alone.
+Code and task-selection preflights have passed, but new curation and target
+outcomes are still pending. No accuracy result or benefit is reported here.
+
+### 5.3 Interpretation limits
 
 The primary development comparison is paired target success for boundary-aware
 versus full-metadata memories, separately by target checkpoint. The complete
