@@ -214,7 +214,9 @@ async def run(args):
                                     max_input_tokens=args.max_input_tokens,
                                     template_profile=args.template_profile, template_date=args.template_date,
                                     device_profile=args.device_profile)
-    (args.output / "model_placement.json").write_text(json.dumps(model.runtime_placement, indent=2), encoding="utf-8")
+    placement = dict(model.runtime_placement)
+    placement["hf_device_map"] = {k: str(v) for k, v in placement["hf_device_map"].items()}
+    (args.output / "model_placement.json").write_text(json.dumps(placement, indent=2), encoding="utf-8")
     params = StdioServerParameters(command=sys.executable,
         args=["-X", "utf8", "-m", "autolab.vakra_stdio", "--runtime", str(prepared / "runtime"),
               "--database", str(database), "--domain", prep["domain"]],

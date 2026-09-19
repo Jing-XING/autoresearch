@@ -21,11 +21,17 @@ def stable(value):
 
 
 def audit(root, archive, kind):
-    expected_archive = {
-        'capacity': '9d4bfabd959a02a0c72aca3fc054d7f028aa34403bcbbef391ecd147080b9d1f',
-        'expansion': 'f76dae6430ca433afad53b39b1c54e67d777802d2f95dbcb1c81c674180fbc61',
+    expected_archives = {
+        'capacity': {'9d4bfabd959a02a0c72aca3fc054d7f028aa34403bcbbef391ecd147080b9d1f'},
+        'expansion': {
+            'f76dae6430ca433afad53b39b1c54e67d777802d2f95dbcb1c81c674180fbc61',
+            # Registered infrastructure restart: only placement-log serialization
+            # and separately recorded supervisor paths changed, no task outputs.
+            'b254562e1969a6bff4299bee152777dc86d29f2489a93455956ef97766ef0961',
+        },
     }[kind]
-    assert sha(archive) == expected_archive, 'Deployment archive changed'
+    expected_archive = sha(archive)
+    assert expected_archive in expected_archives, 'Deployment archive changed'
     with zipfile.ZipFile(archive) as z:
         selection = json.loads(z.read('protocol/selection.json'))
         source_hashes = {Path(n).name: hashlib.sha256(z.read(n)).hexdigest()

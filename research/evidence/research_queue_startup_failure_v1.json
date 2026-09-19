@@ -1,0 +1,22 @@
+{
+  "reason": "Single-GPU placement metadata contains torch.device, which JSON cannot serialize.",
+  "archive": "results/remote/research-queue-startup-failure-v1.zip",
+  "archive_sha256": "d111ce9c82483cd4035a3da6d5bfcb7f293efccf41e2cc5bb15611d013020bb9",
+  "archive_bytes": 52521,
+  "archive_members": 29,
+  "crc_verified": true,
+  "affected_case_files": 0,
+  "expansion_workers_started": 4,
+  "qwen3_workers_failed_before_task_initialization": 2,
+  "qwen25_workers_terminated_during_checkpoint_loading": 2,
+  "dependent_batches_workers_started": 0,
+  "failed_batches": [
+    "vakra-expansion-v1",
+    "vakra-output-budget-v1",
+    "tau-memory-test40-ties-v1",
+    "nk-prefix-curation-v1",
+    "tau-nk-test40-v1"
+  ],
+  "old_files_preserved": true,
+  "repair_amendment": "research/evidence/research_queue_restart_amendment_v2.json"
+}

@@ -1,0 +1,39 @@
+{
+  "purpose": "Conditional task-paired uncertainty for the complete 30B checkpoint audit.",
+  "source_sha256": "e7fce1f01a3b845c33256637e4d2ffaac9870b35ce823aa6276fbe9a43d13414",
+  "script_sha256": "cd84297613edb88d2d1956fc1b75f489cbf3bdb7153602c2481642588f691f1f",
+  "seed": 20260919,
+  "resamples": 10000,
+  "n": 55,
+  "wins": 5,
+  "losses": 2,
+  "ties": 48,
+  "difference_percentage_points": 5.454545454545454,
+  "conditional_bootstrap_percentile_95": [
+    -3.6363636363636362,
+    14.545454545454545
+  ],
+  "strata": {
+    "book_publishing_company": 20,
+    "cars": 18,
+    "computer_student": 17
+  },
+  "leave_one_domain_out": [
+    {
+      "omitted_domain": "book_publishing_company",
+      "n": 35,
+      "difference_percentage_points": 5.714285714285714
+    },
+    {
+      "omitted_domain": "cars",
+      "n": 37,
+      "difference_percentage_points": 5.405405405405405
+    },
+    {
+      "omitted_domain": "computer_student",
+      "n": 38,
+      "difference_percentage_points": 5.2631578947368425
+    }
+  ],
+  "limits": "Fixed convenience domains and fixed assistant labels; no annotation, seed or unseen-domain uncertainty. Descriptive, not a population significance claim."
+}

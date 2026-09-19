@@ -90,3 +90,29 @@ files by task and preserves all six model/executor prompt comparisons during
 Qwen3's leave-one-domain-out difference changes sign when cars is omitted.
 These conditional descriptive intervals exclude model-seed, annotation and
 unseen-domain uncertainty; no benchmark-population hypothesis test is claimed.
+
+## Complete larger-checkpoint extension
+
+`vakra_qwen30b_complete_grid_v1.json` verifies all 120 known-task executions,
+all six successful worker exits and sixty matched initial prompt pairs.
+`vakra_qwen30b_answer_annotations_v1.json` contains the complete single-assistant
+review; the joined `vakra_qwen30b_answer_summary_v1.json` gives original/reminder
+scores 35/55 and 38/55, with 58/60 and 60/60 final answers. The five pre-existing
+ambiguous tasks per prompt remain excluded only from primary accuracy. All
+failures and ambiguous executions remain in resource accounting.
+
+`vakra_qwen30b_conditional_uncertainty_v1.json` records five gains, two losses,
+48 ties and the conditional interval [-3.64, 14.55] percentage points. This
+known-task checkpoint comparison is not a causal scaling study. Publishing
+012 illustrates that a reference-compatible final price can coexist with an
+incorrect aggregate-sales derivation; no answer label is a grounding score.
+
+## Preserved infrastructure failure
+
+The initial expansion failed before any task generation because a device
+object could not be written to JSON. Downstream batches stopped before their
+workers launched. `research_queue_startup_failure_v1.json` records the raw
+archive, and `research_queue_restart_amendment_v2.json` links unchanged
+registrations to new run identifiers and a metadata-only serialization fix.
+`research_queue_restart_deployment_v2.json` verifies actual startup recovery.
+Those operational checks add no task-answer result to this manuscript.

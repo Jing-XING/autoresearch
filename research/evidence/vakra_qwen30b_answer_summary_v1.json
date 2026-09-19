@@ -1,0 +1,745 @@
+{
+  "purpose": "Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring",
+  "executions": 120,
+  "distinct_tasks": 60,
+  "groups": [
+    {
+      "domain": "computer_student",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 17,
+      "ambiguous_tasks": 3,
+      "correct": 5,
+      "labels": {
+        "correct": 5,
+        "incorrect": 12,
+        "ambiguous": 3
+      },
+      "accuracy": 0.29411764705882354,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 97,
+        "tool_calls": 77,
+        "input_tokens": 425146,
+        "output_tokens": 13076,
+        "generation_seconds": 2212.9864298086613,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 17,
+      "ambiguous_tasks": 3,
+      "correct": 6,
+      "labels": {
+        "correct": 6,
+        "incorrect": 11,
+        "ambiguous": 3
+      },
+      "accuracy": 0.35294117647058826,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 88,
+        "tool_calls": 68,
+        "input_tokens": 391760,
+        "output_tokens": 11885,
+        "generation_seconds": 1999.1388768013567,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cars",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 13,
+      "labels": {
+        "incorrect": 3,
+        "correct": 13,
+        "ambiguous": 2,
+        "no_answer": 2
+      },
+      "accuracy": 0.7222222222222222,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "protocol_error_limit": 2
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 94,
+        "tool_calls": 63,
+        "input_tokens": 1290101,
+        "output_tokens": 14740,
+        "generation_seconds": 2634.7393646072596,
+        "protocol_errors": 13
+      }
+    },
+    {
+      "domain": "cars",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 14,
+      "labels": {
+        "incorrect": 4,
+        "correct": 14,
+        "ambiguous": 2
+      },
+      "accuracy": 0.7777777777777778,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 81,
+        "tool_calls": 61,
+        "input_tokens": 1036308,
+        "output_tokens": 8211,
+        "generation_seconds": 1581.8932037986815,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 20,
+      "ambiguous_tasks": 0,
+      "correct": 17,
+      "labels": {
+        "correct": 17,
+        "incorrect": 3
+      },
+      "accuracy": 0.85,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 111,
+        "tool_calls": 93,
+        "input_tokens": 1842951,
+        "output_tokens": 9621,
+        "generation_seconds": 2016.736263986677,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 20,
+      "ambiguous_tasks": 0,
+      "correct": 18,
+      "labels": {
+        "correct": 18,
+        "incorrect": 2
+      },
+      "accuracy": 0.9,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 92,
+        "tool_calls": 74,
+        "input_tokens": 1521218,
+        "output_tokens": 9834,
+        "generation_seconds": 1959.486713487655,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 60,
+      "scored_tasks": 55,
+      "ambiguous_tasks": 5,
+      "correct": 35,
+      "labels": {
+        "correct": 35,
+        "incorrect": 18,
+        "ambiguous": 5,
+        "no_answer": 2
+      },
+      "accuracy": 0.6363636363636364,
+      "final_answers": 58,
+      "terminations": {
+        "agent_finished": 58,
+        "protocol_error_limit": 2
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 302,
+        "tool_calls": 233,
+        "input_tokens": 3558198,
+        "output_tokens": 37437,
+        "generation_seconds": 6864.462058402598,
+        "protocol_errors": 13
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 60,
+      "scored_tasks": 55,
+      "ambiguous_tasks": 5,
+      "correct": 38,
+      "labels": {
+        "correct": 38,
+        "incorrect": 17,
+        "ambiguous": 5
+      },
+      "accuracy": 0.6909090909090909,
+      "final_answers": 60,
+      "terminations": {
+        "agent_finished": 60
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 261,
+        "tool_calls": 203,
+        "input_tokens": 2949286,
+        "output_tokens": 29930,
+        "generation_seconds": 5540.518794087693,
+        "protocol_errors": 0
+      }
+    }
+  ],
+  "paired": [
+    {
+      "domain": "computer_student",
+      "model": "qwen30b",
+      "scored_tasks": 17,
+      "gains": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dce48035fac7"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6516ae4cda2f"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-362f022268de"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-333e7200668a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-839f3e3f08b0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dd1f0fd6952a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-69f4064c9895"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-c089830d9f27"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-178d76a262a8"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e88f2b619318"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-b174a579b40a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e00e77fb7090"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-a223bf6c44c0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-0bf6f436491e"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-55b68ffc5625"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6237d41221b2"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-f6490a3e3217"
+        }
+      ],
+      "difference_percentage_points": 5.882352941176471
+    },
+    {
+      "domain": "cars",
+      "model": "qwen30b",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-76785f95349f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-5f6e00f521b2"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-ecae01ec3f57"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-c8c0ee76f1fe"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-49f2b72eddcb"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-01d20bb1cfe7"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-02b30c2e311f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1856a4298798"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a14daed69e42"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-d8965b97188e"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-7e6b6c110247"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-f4c4d2aa8bd6"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-e5ab95182474"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-29698d7878a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1bff98ba02a8"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-4c0c5ef5f800"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-8f8d0031e0a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a11c6689e23f"
+        }
+      ],
+      "difference_percentage_points": 5.555555555555555
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen30b",
+      "scored_tasks": 20,
+      "gains": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e54b4404190f"
+        }
+      ],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e6dd5c0c82b6"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-be77953010d5"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-dca022f3e041"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3c3392e57062"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-8bebb64d620f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3db42fe063eb"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-4b2d539ed90b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-0db47e6e47ec"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3f392d8766f8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-b5246332ef10"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-72dd7c7b022b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-7d126a36167d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-9feeef14823d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-f4b1684d51e2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-ce6d88e92649"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-c0f31ebdd78f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-6bc4f635e23a"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-a31f54d71ff8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-df184354abd3"
+        }
+      ],
+      "difference_percentage_points": 5.0
+    },
+    {
+      "domain": "all",
+      "model": "qwen30b",
+      "scored_tasks": 55,
+      "gains": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dce48035fac7"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6516ae4cda2f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-76785f95349f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-5f6e00f521b2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e54b4404190f"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-362f022268de"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-ecae01ec3f57"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-333e7200668a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-839f3e3f08b0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dd1f0fd6952a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-69f4064c9895"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-c8c0ee76f1fe"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-49f2b72eddcb"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-01d20bb1cfe7"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-02b30c2e311f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1856a4298798"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a14daed69e42"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-d8965b97188e"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-7e6b6c110247"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-f4c4d2aa8bd6"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-e5ab95182474"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-29698d7878a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1bff98ba02a8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e6dd5c0c82b6"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-be77953010d5"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-dca022f3e041"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3c3392e57062"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-8bebb64d620f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3db42fe063eb"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-4b2d539ed90b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-0db47e6e47ec"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3f392d8766f8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-b5246332ef10"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-72dd7c7b022b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-7d126a36167d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-9feeef14823d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-f4b1684d51e2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-ce6d88e92649"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-c0f31ebdd78f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-6bc4f635e23a"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-c089830d9f27"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-178d76a262a8"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e88f2b619318"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-b174a579b40a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e00e77fb7090"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-a223bf6c44c0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-0bf6f436491e"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-55b68ffc5625"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6237d41221b2"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-f6490a3e3217"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-4c0c5ef5f800"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-8f8d0031e0a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a11c6689e23f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-a31f54d71ff8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-df184354abd3"
+        }
+      ],
+      "difference_percentage_points": 5.454545454545454
+    }
+  ],
+  "limits": [
+    "Failures remain in the fixed scored-task denominators.",
+    "Ambiguous tasks retain their executions and costs but do not enter answer accuracy.",
+    "Task pairs and checkpoints are not independent population samples.",
+    "No evidence-sufficiency or causal mechanism score is inferred from answer correctness."
+  ],
+  "kind": "capacity",
+  "execution_summary_sha256": "6b09886a8efd17230950423c46c61afc8d2c392bdedf38a20258c1bdfd271aab",
+  "annotations_sha256": "e7fce1f01a3b845c33256637e4d2ffaac9870b35ce823aa6276fbe9a43d13414",
+  "audit_cards_sha256": "50e71d927ed7666a3c68f751324ff8d5cf056af40f7a4642b42d377715c05e60",
+  "audit_policy_sha256": "ceff8ec6dcea7dd8ce2b9912c3fdd928d8ca81d7924981c2e429eb6d46b951af",
+  "analysis_source_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\scripts\\summarize_vakra_registered_answers.py": "966a606535627b79eebf6938cf936ebc69a6cd0cfffa6cffd19c213b3dba1414",
+    "autolab\\vakra_review_summary.py": "09127f15704b48d0ec8f87e091ebd83382b91e20c54e79f639e889e38dbf34f4"
+  }
+}

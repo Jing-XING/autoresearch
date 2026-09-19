@@ -1,0 +1,70 @@
+{
+  "observed_at": "2026-09-19 21:27 CST",
+  "bundle_sha256": "8eb10f3147eb1b8fac01aa2670ad49810bc81f101b4dbaef55bf210524b32c1f",
+  "transfer": "GET code and POST failure archive both hash-verified; bridge exited",
+  "remote_preflights": [
+    {
+      "revision": "vakra-output-budget-v2",
+      "exit_code": 0
+    },
+    {
+      "revision": "tau-memory-test40-ties-code-v3",
+      "exit_code": 0
+    },
+    {
+      "revision": "tau-nk-test40-v2",
+      "exit_code": 0
+    }
+  ],
+  "processes": [
+    {
+      "batch": "vakra-expansion-v2",
+      "pid": 11894,
+      "status": "running",
+      "workers": 4
+    },
+    {
+      "batch": "vakra-output-budget-v2",
+      "pid": 11895,
+      "status": "waiting_for_dependencies",
+      "workers": 0
+    },
+    {
+      "batch": "tau-memory-test40-ties-v2",
+      "pid": 11896,
+      "status": "waiting_for_dependencies",
+      "workers": 0
+    },
+    {
+      "batch": "nk-prefix-curation-v2",
+      "pid": 11897,
+      "status": "waiting_for_dependencies",
+      "workers": 0
+    },
+    {
+      "batch": "tau-nk-test40-v2",
+      "pid": 11898,
+      "status": "waiting_for_dependencies",
+      "workers": 0
+    }
+  ],
+  "all_five_proc_cmdlines_verified": true,
+  "expansion_case_files_observed": 12,
+  "expansion_answers_reviewed": false,
+  "all_four_single_gpu_placement_json_readable": true,
+  "all_four_device_maps": {
+    "": "cuda:0"
+  },
+  "gpu_utilization_observed_percent": [
+    89,
+    88,
+    97,
+    97
+  ],
+  "gpu_memory_mib": [
+    10449,
+    10861,
+    18735,
+    20153
+  ]
+}

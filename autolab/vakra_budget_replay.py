@@ -108,7 +108,9 @@ async def run(args):
         json.dump(metadata, f, ensure_ascii=False, indent=2)
     model = NativeTransformersModel(args.model_path, max_input_tokens=32768,
                                    device_profile=primary['device_profile'], template_profile='standard')
-    metadata['placement'] = model.runtime_placement
+    metadata['placement'] = dict(model.runtime_placement)
+    metadata['placement']['hf_device_map'] = {
+        k: str(v) for k, v in model.runtime_placement['hf_device_map'].items()}
     first = target.get('trace', [{}])[0]
     guard = InitialInputGuard(model, first['input'], target['tools'])
     params = StdioServerParameters(command=sys.executable,

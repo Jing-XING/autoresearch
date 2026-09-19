@@ -3,8 +3,8 @@
 **Working manuscript, not submission-ready.** This file develops a different
 question from the historical proposal in this directory. Eight initial model
 episodes, 48 matched development episodes, 240 fixed-prompt replication
-episodes, 240 executor-sensitivity episodes and 240 third-model sensitivity
-episodes support the present observations.
+episodes, 240 executor-sensitivity episodes, 240 third-model sensitivity
+episodes and 120 larger-checkpoint episodes support the present observations.
 A novel method and independently confirmed benefit are not established.
 
 ## Abstract
@@ -19,7 +19,10 @@ by domain: Qwen3 gains on cars but regresses on publishing. A matched
 same total call budget. Qwen2.5 produces twelve additional final answers but
 only one net additional SQL-compatible answer; Qwen3's subtotal is unchanged.
 A separate 240-episode SmolLM3 study produces 221 final responses but only six
-SQL-compatible answers among 220 scored executions. Full-transcript database
+SQL-compatible answers among 220 scored executions. On the same tasks,
+Qwen3-30B-A3B obtains 35/55 correct answers with the original prompt and
+38/55 with the reminder; the conditional paired interval includes zero.
+Full-transcript database
 replays provide two concrete examples in which a correct original answer is
 not identified by its observations under an explicit admissible intervention.
 One example retrieves every requested output value yet applies an incorrect
@@ -553,7 +556,8 @@ from these small, deliberately selected databases.
 The performance floor of SmolLM3 and the small number of databases motivate
 two separately registered extensions. Their design was fixed after the
 developmental results above; they are not retroactively described as part of
-the original study. No outcome from either extension is reported here.
+the original study. The known-task checkpoint extension is complete; the
+prospective domain extension remains pending.
 
 ### 10.1 A larger checkpoint on the known tasks
 
@@ -565,8 +569,46 @@ are pinned. The 120 executions retain the twenty-step/tool-call limits,
 worker uses two A40 devices with all model layers resident on the GPUs;
 two workers can run concurrently. This is a checkpoint comparison on known
 tasks. Differences in architecture, training and model capacity prevent its
-interpretation as a causal scaling experiment. The infrastructure generation
-check has passed, and collection is running; task results remain unaudited.
+interpretation as a causal scaling experiment.
+
+All six workers completed, producing 120 episode records. The complete
+archive passed grid, immutable source, checkpoint, task identity and
+initial-input pairing checks. The same unblinded assistant reviewed every
+answer against the previously frozen SQL interpretations. Five ambiguous
+tasks per arm remain outside primary answer accuracy, while all executions
+remain in completion and resource counts.
+
+| Domain | Scored tasks per prompt | Original correct | Reminder correct |
+|---|---:|---:|---:|
+| computer_student | 17 | 5 | 6 |
+| cars | 18 | 13 | 14 |
+| book_publishing_company | 20 | 17 | 18 |
+| All three | 55 | 35 | 38 |
+
+The paired difference is 5.45 percentage points (five gains, two losses,
+48 ties). A 10,000-draw task-paired bootstrap stratified by these fixed
+domains gives a conditional percentile interval of [-3.64, 14.55] percentage
+points. Leaving out any one domain yields differences between 5.26 and 5.71
+points. These calculations condition on the assistant's labels and the
+observed domains; they do not establish a population benefit or cover
+annotation uncertainty and generation-seed variability.
+
+The original arm produced 58 final answers and two protocol-error-limit
+terminations; the reminder arm produced 60 final answers. Across all sixty
+executions per arm, original/reminder totals are 302/261 model generations,
+233/203 tool calls, 3,558,198/2,949,286 input tokens and 37,437/29,930 output
+tokens. Summed generation times are 6,864.46/5,540.52 seconds, with 13/0
+recorded protocol errors. Summed worker generation time is not elapsed
+batch time or a hardware-normalized comparison with earlier checkpoints.
+
+Higher answer scores do not validate intermediate derivations. For publishing
+task 012, the reminder arm returns the SQL-compatible title and price while
+its stated reasoning uses a maximum individual sale instead of the reference
+aggregate sales. We score the requested answer as correct under the fixed
+policy and make no positive grounding judgment. Both prompts also produce
+incomplete requested lists in the student and car domains. This checkpoint
+therefore reduces the observed scoring floor without removing the distinction
+between completion, answer agreement and evidence support.
 
 ### 10.2 Prospective database expansion
 
@@ -729,9 +771,10 @@ scope, and whether a local adapter restricts otherwise legal tool sequences.
 The present controls show that these choices affect the meaning of a reported
 result. They do not establish a universally optimal executor, prompt or budget.
 
-The forthcoming capacity and domain extensions were frozen to examine some
-of these limits. Until those runs and their complete answer audits finish,
-they supply no additional empirical support. Even then, larger sample counts
+The completed larger-checkpoint extension improves absolute answer scores on
+the known tasks but leaves its conditional prompt-effect interval overlapping
+zero. The domain and output-budget extensions remain pending and supply no
+additional empirical support. Larger sample counts
 will not by themselves resolve assistant annotation bias, identify the cause
 of a prompt effect, or demonstrate a new method's superiority.
 
@@ -740,7 +783,9 @@ of a prompt effect, or demonstrate a new method's superiority.
 In the completed small-database studies, successful calls, correct answers
 and sufficient observed evidence are empirically distinct. A fixed reminder
 has mixed effects, relaxing one executor restriction mainly improves response
-completion, and the third checkpoint performs near the scoring floor. Two
+completion, and SmolLM3 performs near the scoring floor. A larger Qwen3
+checkpoint improves absolute scores on the known tasks, while its paired
+reminder comparison remains inconclusive. Two
 fully replayed examples show that a correct original answer can remain
 unidentified under an explicit admissible intervention, including after full
 output-column retrieval. These findings support more explicit evaluation and

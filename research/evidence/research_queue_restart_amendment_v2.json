@@ -1,0 +1,87 @@
+{
+  "purpose": "Infrastructure restart before any affected task generation; preserve original failed artifacts.",
+  "reason": "torch.device values in single-GPU hf_device_map could not be serialized to JSON.",
+  "scientific_changes": "None: tasks, prompts, source choices, checkpoints, sampling, budgets and scoring masks retained.",
+  "fix": "Convert only recorded device-map values to strings in VAKRA run and output-budget metadata; inference code unchanged.",
+  "supervisors": "New explicitly hashed entrypoints change only run/revision/dependency path identifiers; original registered scripts remain preserved.",
+  "revisions": [
+    {
+      "original_revision": "vakra-expansion-v1",
+      "revision": "vakra-expansion-v2",
+      "original_archive_sha256": "f76dae6430ca433afad53b39b1c54e67d777802d2f95dbcb1c81c674180fbc61",
+      "batch": "vakra-expansion-v2",
+      "changed_existing_files": {
+        "autolab/vakra_native.py": {
+          "before": "496887b469b53d97d61dd096959b9f3fa7d0f0c3038cdc97174eb887891041bd",
+          "after": "27eef0b9470d3a2870fce4e4617ec7721e644470b4ab690cbd377a78d7dc499e"
+        }
+      },
+      "supervisor_sha256": "6b77b865d4ffb0a70658d527c78f7cc808d8a62eb3d9cbd8e8a074be4c5e3422",
+      "preserved_protocol_files": {
+        "protocol/selection.json": "5c92a5fcdcdd9d69013478dfd1c3fb0a8d574f185ebc9b5815c9cebf0b3300a5"
+      },
+      "archive_sha256": "b254562e1969a6bff4299bee152777dc86d29f2489a93455956ef97766ef0961"
+    },
+    {
+      "original_revision": "vakra-output-budget-v1",
+      "revision": "vakra-output-budget-v2",
+      "original_archive_sha256": "d86b61d89bd7cf0004311d27c8d0e0ae924eb48822ef5d29b687227404b90bd9",
+      "batch": "vakra-output-budget-v2",
+      "changed_existing_files": {
+        "autolab/vakra_budget_replay.py": {
+          "before": "baf7206dc0d10e776d38f75f9a281920e35694594dffaa1585c7b25ad2d7882c",
+          "after": "f741737f1c6e430703675dd556afc8bd50811c10e45f9a190af124556879f963"
+        },
+        "autolab/vakra_native.py": {
+          "before": "496887b469b53d97d61dd096959b9f3fa7d0f0c3038cdc97174eb887891041bd",
+          "after": "27eef0b9470d3a2870fce4e4617ec7721e644470b4ab690cbd377a78d7dc499e"
+        }
+      },
+      "supervisor_sha256": "277b7051dc13ca41dc7fa17539720a24a1e87fbef3c55bc0f99c3663d0d918c2",
+      "preserved_protocol_files": {},
+      "archive_sha256": "7dea81ad419844bdb3f14c6386e5e6491eb64b0dc06af2e1f34afc86b8e851bd"
+    },
+    {
+      "original_revision": "tau-memory-test40-ties-code-v2",
+      "revision": "tau-memory-test40-ties-code-v3",
+      "original_archive_sha256": "d7a23dbe7876d5bcc0d70738ef147c6b17908e39552d4ad7b6286980905f8b3a",
+      "batch": "tau-memory-test40-ties-v2",
+      "changed_existing_files": {},
+      "supervisor_sha256": "413c2bab85fc8be7a457a916dfef3e63533d8f7cdbefd16a9a79c039058e039e",
+      "preserved_protocol_files": {
+        "protocol/registration.json": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb"
+      },
+      "archive_sha256": "249d705c1ad71ad7d1434a1bc3ec393894965f6fd8ede4dfca1d87f642788cf9"
+    },
+    {
+      "original_revision": "nk-prefix-curation-v1",
+      "revision": "nk-prefix-curation-v2",
+      "original_archive_sha256": "d14757ed8580f726ab8f33b16b1e95479b357d741c4d44fca9066fc6e0cfe2c9",
+      "batch": "nk-prefix-curation-v2",
+      "changed_existing_files": {},
+      "supervisor_sha256": "d7bcf1c8a7d9c0bd5c9ec9b17682c6f6775b790b371bb54d2a949dab303a7b05",
+      "preserved_protocol_files": {
+        "protocol/model_files_sha256.json": "65a6217d25ec18385e905da2b26e775757447ea2678e5875819651721aea08dd",
+        "protocol/registration.json": "27147be4e34c5a6c51fa349247e39960305ce872767e130c0a471b7280a04414"
+      },
+      "archive_sha256": "65258cdcd5edd617dd32915ddb6e05a9a233c09962815c1d9e6be7f10a4c0022"
+    },
+    {
+      "original_revision": "tau-nk-test40-v1",
+      "revision": "tau-nk-test40-v2",
+      "original_archive_sha256": "0b02ab2ce1bf6582bd4040c2fe73cc1d05e127cfc714bc2caece6bbb0a95ad46",
+      "batch": "tau-nk-test40-v2",
+      "changed_existing_files": {},
+      "supervisor_sha256": "74756a3db9d81f0e50f65342a64a24281641000d45def8cb0baed9eefb76af87",
+      "preserved_protocol_files": {
+        "protocol/curation_registration.json": "27147be4e34c5a6c51fa349247e39960305ce872767e130c0a471b7280a04414",
+        "protocol/registration.json": "778f6eeeb3b2f021c993e22c9e4aa6a5643a46673a99393d4f66a0e06073b2db",
+        "protocol/selection.json": "425fbd67713028e1bd5063eaa7d5cd05edf16c55cefd5eaaf8e62caba29665b9"
+      },
+      "archive_sha256": "468b852fca8deda021d99ee6cb2daa31ccd885ea45e45d399745119eb489b791"
+    }
+  ],
+  "bundle_sha256": "8eb10f3147eb1b8fac01aa2670ad49810bc81f101b4dbaef55bf210524b32c1f",
+  "bundle_bytes": 4756860,
+  "bundle_members": 647
+}
