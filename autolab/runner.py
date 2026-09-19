@@ -34,7 +34,7 @@ class MetricSpec:
 class RunResult:
     run_id: str
     status: str
-    command: str
+    command: str | list[str]
     duration_seconds: float
     metrics: dict[str, float]
     best_before: dict[str, float]
@@ -47,7 +47,7 @@ class RunResult:
 class ExperimentRunner:
     def __init__(
         self,
-        command: str,
+        command: str | list[str],
         metrics: list[MetricSpec],
         timeout_seconds: int = 600,
         log_dir: str | Path = "runs",
@@ -107,7 +107,9 @@ class ExperimentRunner:
         status = "crash"
         try:
             process = subprocess.run(
-                shlex.split(self.command),
+                # An argv list preserves paths and Python source on Windows.
+                # Strings retain the existing POSIX-style CLI syntax.
+                shlex.split(self.command) if isinstance(self.command, str) else self.command,
                 cwd=self.cwd,
                 capture_output=True,
                 text=True,

@@ -1,0 +1,762 @@
+{
+  "purpose": "public_development_only",
+  "complete": true,
+  "missing_models": [],
+  "groups": [
+    {
+      "model": "qwen25",
+      "expected_n": 20,
+      "completed_n": 20,
+      "missing_task_ids": [],
+      "successes": 7,
+      "run_errors": 0,
+      "protocol_error_runs": 0,
+      "success_fraction_all_registered_tasks": 0.35
+    },
+    {
+      "model": "qwen3",
+      "expected_n": 20,
+      "completed_n": 20,
+      "missing_task_ids": [],
+      "successes": 13,
+      "run_errors": 0,
+      "protocol_error_runs": 0,
+      "success_fraction_all_registered_tasks": 0.65
+    }
+  ],
+  "rows": [
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 9,
+      "usage": {
+        "input_tokens": 94354,
+        "output_tokens": 168,
+        "elapsed_seconds": 20.73213842883706
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "max_steps",
+      "model_calls": 31,
+      "usage": {
+        "input_tokens": 346354,
+        "output_tokens": 569,
+        "elapsed_seconds": 75.47697330266237
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 8,
+      "usage": {
+        "input_tokens": 83582,
+        "output_tokens": 154,
+        "elapsed_seconds": 18.5270276311785
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]bad_vpn[PERSONA:None]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 11,
+      "usage": {
+        "input_tokens": 116213,
+        "output_tokens": 199,
+        "elapsed_seconds": 25.297069508582354
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[service_issue]airplane_mode_on[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 7,
+      "usage": {
+        "input_tokens": 72590,
+        "output_tokens": 139,
+        "elapsed_seconds": 16.252627113834023
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[service_issue]lock_sim_card_pin[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "max_steps",
+      "model_calls": 31,
+      "usage": {
+        "input_tokens": 347103,
+        "output_tokens": 527,
+        "elapsed_seconds": 74.07453121058643
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[service_issue]overdue_bill_suspension[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "max_steps",
+      "model_calls": 31,
+      "usage": {
+        "input_tokens": 356217,
+        "output_tokens": 594,
+        "elapsed_seconds": 78.1421133056283
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mms_issue]bad_network_preference[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 15,
+      "usage": {
+        "input_tokens": 160063,
+        "output_tokens": 273,
+        "elapsed_seconds": 34.91235159151256
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mms_issue]break_apn_mms_setting[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 22,
+      "usage": {
+        "input_tokens": 239743,
+        "output_tokens": 412,
+        "elapsed_seconds": 52.50509188696742
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mms_issue]break_app_storage_permission[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 25,
+      "usage": {
+        "input_tokens": 273665,
+        "output_tokens": 486,
+        "elapsed_seconds": 60.56061924621463
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 25,
+      "usage": {
+        "input_tokens": 275501,
+        "output_tokens": 462,
+        "elapsed_seconds": 59.823549408465624
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]data_mode_off[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 7,
+      "usage": {
+        "input_tokens": 72776,
+        "output_tokens": 137,
+        "elapsed_seconds": 16.212992953136563
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]bad_network_preference[PERSONA:Hard]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 9,
+      "usage": {
+        "input_tokens": 94465,
+        "output_tokens": 179,
+        "elapsed_seconds": 21.162435015663505
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mobile_data_issue]data_usage_exceeded[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 25,
+      "usage": {
+        "input_tokens": 274067,
+        "output_tokens": 454,
+        "elapsed_seconds": 59.563411481678486
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[service_issue]unseat_sim_card[PERSONA:Easy]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 8,
+      "usage": {
+        "input_tokens": 83388,
+        "output_tokens": 154,
+        "elapsed_seconds": 18.4554241001606
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[service_issue]break_apn_settings[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 25,
+      "usage": {
+        "input_tokens": 275678,
+        "output_tokens": 444,
+        "elapsed_seconds": 59.51041209511459
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[service_issue]contract_end_suspension[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "max_steps",
+      "model_calls": 31,
+      "usage": {
+        "input_tokens": 375517,
+        "output_tokens": 567,
+        "elapsed_seconds": 81.18999033607543
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mms_issue]bad_wifi_calling[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "too_many_errors",
+      "model_calls": 15,
+      "usage": {
+        "input_tokens": 159759,
+        "output_tokens": 298,
+        "elapsed_seconds": 35.67555226199329
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mms_issue]break_app_sms_permission[PERSONA:None]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 27,
+      "usage": {
+        "input_tokens": 296541,
+        "output_tokens": 516,
+        "elapsed_seconds": 65.3168405033648
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen25",
+      "task_id": "[mms_issue]break_app_both_permissions[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "max_steps",
+      "model_calls": 31,
+      "usage": {
+        "input_tokens": 344606,
+        "output_tokens": 596,
+        "elapsed_seconds": 75.91322517208755
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen2.5-7B-Instruct"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 6,
+      "usage": {
+        "input_tokens": 62019,
+        "output_tokens": 114,
+        "elapsed_seconds": 11.775362418964505
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 21,
+      "usage": {
+        "input_tokens": 226467,
+        "output_tokens": 391,
+        "elapsed_seconds": 41.43699870817363
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 8,
+      "usage": {
+        "input_tokens": 83302,
+        "output_tokens": 148,
+        "elapsed_seconds": 15.335666164755821
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]bad_vpn[PERSONA:None]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 11,
+      "usage": {
+        "input_tokens": 115716,
+        "output_tokens": 192,
+        "elapsed_seconds": 20.95482195354998
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[service_issue]airplane_mode_on[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 7,
+      "usage": {
+        "input_tokens": 72412,
+        "output_tokens": 130,
+        "elapsed_seconds": 13.350531494244933
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[service_issue]lock_sim_card_pin[PERSONA:Hard]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 21,
+      "usage": {
+        "input_tokens": 226511,
+        "output_tokens": 443,
+        "elapsed_seconds": 43.3821678571403
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[service_issue]overdue_bill_suspension[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 16,
+      "usage": {
+        "input_tokens": 170780,
+        "output_tokens": 369,
+        "elapsed_seconds": 33.738347908481956
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mms_issue]bad_network_preference[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 12,
+      "usage": {
+        "input_tokens": 126046,
+        "output_tokens": 222,
+        "elapsed_seconds": 23.181222066283226
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mms_issue]break_apn_mms_setting[PERSONA:Hard]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 8,
+      "usage": {
+        "input_tokens": 83021,
+        "output_tokens": 148,
+        "elapsed_seconds": 15.266113083809614
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mms_issue]break_app_storage_permission[PERSONA:Easy]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 17,
+      "usage": {
+        "input_tokens": 181351,
+        "output_tokens": 305,
+        "elapsed_seconds": 33.09025517106056
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 22,
+      "usage": {
+        "input_tokens": 238242,
+        "output_tokens": 500,
+        "elapsed_seconds": 47.06623067520559
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]data_mode_off[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 6,
+      "usage": {
+        "input_tokens": 61937,
+        "output_tokens": 113,
+        "elapsed_seconds": 11.587534571066499
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]bad_network_preference[PERSONA:Hard]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 8,
+      "usage": {
+        "input_tokens": 83297,
+        "output_tokens": 156,
+        "elapsed_seconds": 15.776050567626953
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mobile_data_issue]data_usage_exceeded[PERSONA:Easy]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 23,
+      "usage": {
+        "input_tokens": 249758,
+        "output_tokens": 413,
+        "elapsed_seconds": 46.23043576069176
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[service_issue]unseat_sim_card[PERSONA:Easy]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 10,
+      "usage": {
+        "input_tokens": 104458,
+        "output_tokens": 177,
+        "elapsed_seconds": 19.242499539628625
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[service_issue]break_apn_settings[PERSONA:None]",
+      "reward": 0.0,
+      "termination": "max_steps",
+      "model_calls": 31,
+      "usage": {
+        "input_tokens": 365843,
+        "output_tokens": 737,
+        "elapsed_seconds": 73.73492901213467
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[service_issue]contract_end_suspension[PERSONA:Hard]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 16,
+      "usage": {
+        "input_tokens": 170780,
+        "output_tokens": 369,
+        "elapsed_seconds": 34.174450693652034
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mms_issue]bad_wifi_calling[PERSONA:Easy]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 16,
+      "usage": {
+        "input_tokens": 170263,
+        "output_tokens": 288,
+        "elapsed_seconds": 31.56947292201221
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mms_issue]break_app_sms_permission[PERSONA:None]",
+      "reward": 1.0,
+      "termination": "agent_stop",
+      "model_calls": 17,
+      "usage": {
+        "input_tokens": 181351,
+        "output_tokens": 305,
+        "elapsed_seconds": 33.576510755345225
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    },
+    {
+      "model": "qwen3",
+      "task_id": "[mms_issue]break_app_both_permissions[PERSONA:Hard]",
+      "reward": 0.0,
+      "termination": "agent_stop",
+      "model_calls": 24,
+      "usage": {
+        "input_tokens": 260983,
+        "output_tokens": 527,
+        "elapsed_seconds": 51.32834770530462
+      },
+      "protocol_errors": [],
+      "model_path": "/xingjing/autoresearch-agent-papers/models/Qwen3-4B-Instruct-2507"
+    }
+  ],
+  "configuration": {
+    "all_task_ids": [
+      "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+      "[mobile_data_issue]user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "[mobile_data_issue]user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "[mobile_data_issue]data_mode_off[PERSONA:None]",
+      "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+      "[mobile_data_issue]bad_network_preference[PERSONA:Hard]",
+      "[mobile_data_issue]bad_vpn[PERSONA:None]",
+      "[mobile_data_issue]data_usage_exceeded[PERSONA:Easy]",
+      "[service_issue]airplane_mode_on[PERSONA:None]",
+      "[service_issue]unseat_sim_card[PERSONA:Easy]",
+      "[service_issue]lock_sim_card_pin[PERSONA:Hard]",
+      "[service_issue]break_apn_settings[PERSONA:None]",
+      "[service_issue]overdue_bill_suspension[PERSONA:Easy]",
+      "[service_issue]contract_end_suspension[PERSONA:Hard]",
+      "[mms_issue]bad_network_preference[PERSONA:None]",
+      "[mms_issue]bad_wifi_calling[PERSONA:Easy]",
+      "[mms_issue]break_apn_mms_setting[PERSONA:Hard]",
+      "[mms_issue]break_app_sms_permission[PERSONA:None]",
+      "[mms_issue]break_app_storage_permission[PERSONA:Easy]",
+      "[mms_issue]break_app_both_permissions[PERSONA:Hard]"
+    ],
+    "seed": 20260919,
+    "decoder": "greedy_native_template_tool_prefix",
+    "max_new_tokens": 512,
+    "max_steps": 60,
+    "max_errors": 5,
+    "tau_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+    "tau_source_manifest_sha256": "d07cc342f43894f866d1fd151fdd1ed996976cb194299e2d87913bc5bc8ee349",
+    "source_sha256": {
+      "tau2_native_agent.py": "fda468ea3fac112b17fe1f7551b8da189e2aac609541e2035953460473ded810",
+      "tau2_native_baseline.py": "408423ea1c139995e6f829428c8e0303e28a3ed0c5fcb8de16c4dd20b7796f79",
+      "native_tool_agent.py": "ad0f22f6c84139e839f1f61a00336f54d51facd05feda6bb860a5fa918a26400",
+      "local_smoke.py": "eb371a9988185ce4f59cac5bc3b68e7e925f32e1da468ea2ef5674aeb164d096"
+    },
+    "task_split": "small"
+  },
+  "artifact_sha256": {
+    "qwen25/shard-0/case-000-model-audit.json": "4717d25b95ebe4ba36e1b95d4635e2cadff40fd50a83de29713285ade794c493",
+    "qwen25/shard-0/case-000-status.json": "5f101d1a752ccf7678b3b85d09f85cb64eaa49d33d2e7169758b80038e8ff30b",
+    "qwen25/shard-0/case-000.json": "a87df8d138a13bf3b5170025cf1d2107692333c4a82bad99f3c6d7d3f09bb706",
+    "qwen25/shard-0/case-001-model-audit.json": "4462a7804dea05d9b3d9eb33ba52768a862039ce5133755eba430e0d79f19b14",
+    "qwen25/shard-0/case-001-status.json": "8e62196177fc1ed13231652c95e5015a4b12dc80c55f8f8b512b15d15bc5a657",
+    "qwen25/shard-0/case-001.json": "002a0a655cb58c5a2aac9937b30c34be13005d40eba1b4c846c1df796034adef",
+    "qwen25/shard-0/case-002-model-audit.json": "5b34a8f6bdcd8560943d230513d5778a07f2480e7dcd4869d775426b5fdedad1",
+    "qwen25/shard-0/case-002-status.json": "4b90c55dde514d0faba4cf0dd2df5cf26295d8c6b1c42a394b3e75d6ee559563",
+    "qwen25/shard-0/case-002.json": "b43e60e996e6b1821ffec87f413ecc4e66ec3a490cf0e07e388f6a3754828c70",
+    "qwen25/shard-0/case-003-model-audit.json": "66ec0f358a2d980ed475380048304f79827b4503b0d14879c3c185f7eb35f8b3",
+    "qwen25/shard-0/case-003-status.json": "6066411e6b6f0398e814f938c80001efc7915d096ac540d1e4201c79ac94b7ed",
+    "qwen25/shard-0/case-003.json": "b47af45449a37a9e4f0a2204fe5bf3c51d27f9e3a97f3c35b7ae867a0dcd6792",
+    "qwen25/shard-0/case-004-model-audit.json": "24f529867c811a6b2d08fd860cf4f1020008778a9036940ff2fac358cda10622",
+    "qwen25/shard-0/case-004-status.json": "38b9e68f6d9475541305ebf7fc406dbe3a036a8a9d5572789d7cbae8e2eb300f",
+    "qwen25/shard-0/case-004.json": "fd5615cb71a6b274703450b3370806d29b9b4f86a28ecc797676820d254156f1",
+    "qwen25/shard-0/case-005-model-audit.json": "f4b5f709d622a9cd2c659517757babd004b1a55cfc489bdf940fdae50bac5a2d",
+    "qwen25/shard-0/case-005-status.json": "e578ddf0aeb499df75aa0c1efcff7198258d2f0c259e3e3ccd3fcfe02af07273",
+    "qwen25/shard-0/case-005.json": "609168f35b6ad39d7211c5022af3694777549f6811d6565fa81f2b6acfae595d",
+    "qwen25/shard-0/case-006-model-audit.json": "44fab6b986f600807733313e6f28dc969791f02d0dd850d12165eac1a7ee0ae1",
+    "qwen25/shard-0/case-006-status.json": "82cdc76eb83fdd31c4c0d7f3e7fa35557c66fbd78f33a55991f7ddc6f4f13913",
+    "qwen25/shard-0/case-006.json": "8ead829b1d8eba22bdc4abc3ce81f564de45967b86e670a3a5a797914047ade6",
+    "qwen25/shard-0/case-007-model-audit.json": "2516cbf581ce52ee25800f7b650b21ad2506fa8526b1b8682ede501805306ccf",
+    "qwen25/shard-0/case-007-status.json": "23e2847b8cb7782fd29d59ecaefbfbf6493272839c72559a97e7e4139a17f64f",
+    "qwen25/shard-0/case-007.json": "e78f49243f67fea49e36c452a2d511c1432b64b4509fe2e75fb6b00454f1c2ae",
+    "qwen25/shard-0/case-008-model-audit.json": "2a409a62d6d05adf30a85821ac283ae009c939053fdd3c3b7760277af1afecd1",
+    "qwen25/shard-0/case-008-status.json": "360d660a74022c6b5d8f617feffeb5c0c3480c7e74e8a430476d4e4c8cdd23cf",
+    "qwen25/shard-0/case-008.json": "0724732d0baf97222e625cf5285460922f68acd49c7f01068cf987d9ace946d6",
+    "qwen25/shard-0/case-009-model-audit.json": "6010978dca1eb4f38562d7b8f03fe1b46845a492823e3c215f8589119f37cc4f",
+    "qwen25/shard-0/case-009-status.json": "553b778f7211a42c8b122cc1db989509ed57a6a34ef4fc5702c08fdcdf3a481b",
+    "qwen25/shard-0/case-009.json": "ec40148e7747988ed93c4ec2a3c8aac02b5073605dccfdbd7f7c9dd2851db5ba",
+    "qwen25/shard-0/config.json": "5c3f39cab8d889050de0fd9152bfe9903e7fad7aa175a1cb9c2de50fd95bedf2",
+    "qwen25/shard-0/manifest.json": "724596f6ce1b10829178c522c3c11169b8b1e826042f651b89b00478645bc035",
+    "qwen25/shard-0/summary.json": "c9c961fd9cb26de1f61cebe7c8d682c8e251269524f2292956317b24cc3b78d2",
+    "qwen25/shard-1/case-000-model-audit.json": "6a1bcdd44be1c92ae2e7208e2ddab37558b2f8a964bbf9d87ba9ac62555c5633",
+    "qwen25/shard-1/case-000-status.json": "7713f29f0c85c6934d240d3ffe36f836d6c599503a1e0dda934c612769a2d564",
+    "qwen25/shard-1/case-000.json": "38895e55f6fe638331fa4e76930646f46d0c83c15da0cac5dc59b280a86dfe39",
+    "qwen25/shard-1/case-001-model-audit.json": "1a3d380b3185ed47cb68863670f703a2e060459153965ecef5f6ef4eaecf25ff",
+    "qwen25/shard-1/case-001-status.json": "2dd895bc6759d1328aa2ec672a70e24e3f53838cd1a0902e1697d80713626ff6",
+    "qwen25/shard-1/case-001.json": "68d1eba9bd032ac4e8dcf86bd1b579fa3f448ae7a38d24792846c0e438e7ce6e",
+    "qwen25/shard-1/case-002-model-audit.json": "60c5b991f8ced3f5930e0d1364ca52c6b8f3ead5e78d64d0c91e5230378fd507",
+    "qwen25/shard-1/case-002-status.json": "91dc2b1357ecadbfc6b825ca717b87cea73d71a3ddbcfcf618a5bc96a215b693",
+    "qwen25/shard-1/case-002.json": "4389316039502fe6330e55222a4fccece1ae62b27e1ec7d9a839bfa53da54318",
+    "qwen25/shard-1/case-003-model-audit.json": "a623bc3df89662e581533aa00e8db4cb1538db4da28fe8d8d3aee19ace964578",
+    "qwen25/shard-1/case-003-status.json": "5391c5a1a854c240eb55ee7b1b278cf130b5fb5f3cbf3f5f5cc972725302c767",
+    "qwen25/shard-1/case-003.json": "2ff742a98f0dd3d744e7c38baa77846b03b34816a74517a517cb36f4c9a9ab36",
+    "qwen25/shard-1/case-004-model-audit.json": "98e770760a4630922e8e10484d0ba5aa41d08eeb13e5b8ad7a786bfba9b7a783",
+    "qwen25/shard-1/case-004-status.json": "eb5271cab0de4800012e24e474e9d3f437f24497a0b62aee9e1e5dedbd65de4f",
+    "qwen25/shard-1/case-004.json": "8f99ef2530a2afa584c56debbc929bd115fca250db807c12133a4aa3c330f0ee",
+    "qwen25/shard-1/case-005-model-audit.json": "e96770d3a5a90d03451c67e1019b7fbc01624af120c4ea392077456839f3fd85",
+    "qwen25/shard-1/case-005-status.json": "7f8130e8ac113da33eefe547d67100276b8ad338223f340dfafe48623a853a91",
+    "qwen25/shard-1/case-005.json": "84d394b859e82f8419c5807f0e0cfb56ef3ebe3bb26d31a40a31e55d6ec49f06",
+    "qwen25/shard-1/case-006-model-audit.json": "c56b04fac6c08de43237433c1c737d67e990e7275f1b300faed689435724e2e9",
+    "qwen25/shard-1/case-006-status.json": "583ed812661c6a2df4bab563bbfcd4a237adbe922c1d130339d480201b80723d",
+    "qwen25/shard-1/case-006.json": "46a47a4aaaccd19f6060ffc01728dec0a4e4a83d8c10f5fd435b1d1e2f21342a",
+    "qwen25/shard-1/case-007-model-audit.json": "154f5ee3ec21b77cade9071787078d13da339f399f2bac5b61256dcf4f414d62",
+    "qwen25/shard-1/case-007-status.json": "816dcaf47ea5badffe77503070f972d5520e75f54543be1e03151d90f6a1fee3",
+    "qwen25/shard-1/case-007.json": "261f92d5acf364d96af2f31fd1859ee29247cfda07a4d880b1eaeb6d1aaf8c2e",
+    "qwen25/shard-1/case-008-model-audit.json": "396d11d3b5e0f584cd7381164fe8b8af0c1b530f9101e8aa7fbb60b04dd91f29",
+    "qwen25/shard-1/case-008-status.json": "8f84ebfc14ab69c3bc8aff85007362c9969b66a173b2332a84a21c0959afb520",
+    "qwen25/shard-1/case-008.json": "a40261c91caa9c6cf64fa517ac13e29fe26c5a8e495e37a14eb070f355ba3db4",
+    "qwen25/shard-1/case-009-model-audit.json": "a9f7cc0e751c26a690d49521898df47f3365f21fd781161c29778480f3a7a531",
+    "qwen25/shard-1/case-009-status.json": "4e07e1f82aeb035e64118b52f3adde11f6ec90af637616fbd77fb1de9760bfca",
+    "qwen25/shard-1/case-009.json": "692c83c721d395c4bbf86df10c881a5b3ea45edd12676b9c6174817924de0838",
+    "qwen25/shard-1/config.json": "5c3f39cab8d889050de0fd9152bfe9903e7fad7aa175a1cb9c2de50fd95bedf2",
+    "qwen25/shard-1/manifest.json": "e8340bab397c0f4ea1189d3f1d0875f8f016bda4bb6198af9e99adc6334c987e",
+    "qwen25/shard-1/summary.json": "d21b1294f6c7f8721cc658a0f25f51f4e02411bc43daf6287d7ed80bba93ccc0",
+    "qwen3/shard-0/case-000-model-audit.json": "2d0807bfa03501ed051baa6dd9e5d2fc6a5ed95d97503583911564e714da89d8",
+    "qwen3/shard-0/case-000-status.json": "c2915bf722b2dbf9bf0cfe67d973ca82f45201cd7cfe40f7473b41d119e39ff9",
+    "qwen3/shard-0/case-000.json": "69f13efb8c5fb9c2234b81b9fcedb4c57452b59e94697037b630e77d4e2c9b25",
+    "qwen3/shard-0/case-001-model-audit.json": "2938299746fa2b9b5b9a0d0bdc11c720c578da5b8065fdcf166fb85cc890b57e",
+    "qwen3/shard-0/case-001-status.json": "79aa00c197b5f359056dc987b44c6ad00292cbd2531f9f333fb73fd54b36f0fc",
+    "qwen3/shard-0/case-001.json": "359d853b73628736147cb7a6c44d7d044c2da82d6b3e6c6424f200d08a274f3b",
+    "qwen3/shard-0/case-002-model-audit.json": "80a99b3e7fbcb39497c654c55d0a5675ef06b66a5682bff76a6f168019877bdc",
+    "qwen3/shard-0/case-002-status.json": "3923555873f4ccfa0c8151a16e848f76f415e721ea4ab1a685c4014dc8b1f7f0",
+    "qwen3/shard-0/case-002.json": "6caddd845b3422ae78a2f91b185625d8476158146501b62c6914df33ec998c8b",
+    "qwen3/shard-0/case-003-model-audit.json": "2fbb93ceef394de148ea18d3d326f7417689b99b8998ecf384875637293c6404",
+    "qwen3/shard-0/case-003-status.json": "6066411e6b6f0398e814f938c80001efc7915d096ac540d1e4201c79ac94b7ed",
+    "qwen3/shard-0/case-003.json": "33a9fe8fd87dff23145f6372a873ad5be07528ecce10d613961cdbbd874a9a3b",
+    "qwen3/shard-0/case-004-model-audit.json": "47d567b14872a101bd82d30ea3bfcbf91fdb4ef83342e22d14faf4b92dc349d4",
+    "qwen3/shard-0/case-004-status.json": "38b9e68f6d9475541305ebf7fc406dbe3a036a8a9d5572789d7cbae8e2eb300f",
+    "qwen3/shard-0/case-004.json": "b6e66f32104ffca70eaadd0efb5cc623dfed3f65a043c56f0a419657c76acb90",
+    "qwen3/shard-0/case-005-model-audit.json": "6995dc3b0eaf277cc17b58046b4e088645b8ca90688fca837d1926804c2e053b",
+    "qwen3/shard-0/case-005-status.json": "378f60e2d591cf2790aa2602dbb60b6c4b103ae14b759bd24063f5106f2477a2",
+    "qwen3/shard-0/case-005.json": "6b936cb34d5144e9d5ab79f27e047a2379ec67416a261bb6d85788e689a8a84b",
+    "qwen3/shard-0/case-006-model-audit.json": "2fbac0253839ae589b5aacf700adc2ad0d490eb8d74a649367feee06ef891b63",
+    "qwen3/shard-0/case-006-status.json": "fd51e5a6a2b7fbfa443591fcef2b564f38c6057bd23a121da47b8c69f808200d",
+    "qwen3/shard-0/case-006.json": "1760c829de78ead53182a82c58da8e1efa3e6bb28e89e45ca71f09d16842c99e",
+    "qwen3/shard-0/case-007-model-audit.json": "e1b215dbc73bb9d0e9b30708843e44477f3ef779acb8fd5c00bc910f70ad2d63",
+    "qwen3/shard-0/case-007-status.json": "4abf668b1bdc3f1c964293e98aa7e2d302ebc501758252f1ed562fb542581cb2",
+    "qwen3/shard-0/case-007.json": "fac2d83c76c3007834c62719f6ae6e552f3fe8ca24e2b6be8e8c278d7d6cd64c",
+    "qwen3/shard-0/case-008-model-audit.json": "ed6a8867e2756271eb56a8ee771e7a8751b9b74aa881a235fab116ea42531ebd",
+    "qwen3/shard-0/case-008-status.json": "869680ac1cd7ac482be62bd7d0e0e57283c8ef7d26b7e3431c4a1f6db368393f",
+    "qwen3/shard-0/case-008.json": "fc5636630885c33f43b3c116fbdeca5b4125ec0cfdcbf951dc2367b2ed7c31c4",
+    "qwen3/shard-0/case-009-model-audit.json": "9a5109fe6a99140dce7985eaf6b98467fccf5d6ef43d578637f2d2b17468afcc",
+    "qwen3/shard-0/case-009-status.json": "1ece0f2813c8634774ae9e9737a10f79a48c71674fdcec300ccf7432f7490975",
+    "qwen3/shard-0/case-009.json": "55856c06975de413b8b5d85eea41ece78bc7ed6116078d51fe20ea62f11dc214",
+    "qwen3/shard-0/config.json": "9f3b942025869dd9ab664c5a202983ed879f1802b34e1a612457348896dba202",
+    "qwen3/shard-0/manifest.json": "65f472d127197cb0078bfb41dd1bf86683e1b4dae52224d9d280ff7d90e4188e",
+    "qwen3/shard-0/summary.json": "f54fce558f923cab33cfa3fc6218e0631100890048c0e5f276845ce71d1b6b63",
+    "qwen3/shard-1/case-000-model-audit.json": "0b14cd462d8015bb0f171577b7b2a3672eb98c3dec35216fffac79b08ea5267e",
+    "qwen3/shard-1/case-000-status.json": "caa20ac0a4ea90de1059f4b050882ee1a098c9ec2b3307f3d89915e393eecf22",
+    "qwen3/shard-1/case-000.json": "f498800a02b5a8eea8e34b016be3fa4759580a76be2c5f6491a02d60286ea85f",
+    "qwen3/shard-1/case-001-model-audit.json": "9562aa274a131893c0c199578c1d66a008296ebe8aead1da472d85f0e2175a77",
+    "qwen3/shard-1/case-001-status.json": "152c463528d4f649f920f56b8d28fcee6d322066fae555f45461b412af3ae4f2",
+    "qwen3/shard-1/case-001.json": "e8ef797799300b12dfdf97420a89dbbd5790e88d73435ec2fd9051a55fa18444",
+    "qwen3/shard-1/case-002-model-audit.json": "423b548536f1ee8426b5de0dd8c73783454c6962bf5c8d3bd95414949f14af12",
+    "qwen3/shard-1/case-002-status.json": "7566a6e9508cce214e780adecdbccf2d80f201c1dec88bf9ecc5143f4f481c6a",
+    "qwen3/shard-1/case-002.json": "7989ea0b189eb18ecdf438a219fe9b19822de0c3ce780e3098e41ccc9d8c5606",
+    "qwen3/shard-1/case-003-model-audit.json": "8b3ef7c6a1698950cfe75a64369b058bc95ee8fe273642ad23143cd3987cb9b0",
+    "qwen3/shard-1/case-003-status.json": "ca261f95e53b1f9236924384deae5c7cf9d23840e5319b165046f6b7aa8961dd",
+    "qwen3/shard-1/case-003.json": "82e8735dd31fd0f224a67f1f59a966e32a4ffc7325f47fff468b018ca22a3aa0",
+    "qwen3/shard-1/case-004-model-audit.json": "ee9b22b80b9ca070774ea10859f68c59028e918ee55d43ffd964db790abad31a",
+    "qwen3/shard-1/case-004-status.json": "2e2e7f92b63cbb5f283f7cb938ca027d775ebff5b7e28a5d894a0555d3637be2",
+    "qwen3/shard-1/case-004.json": "52f7b560d676ae008324931e315a75b227c2dcf40d462de67b317c4c9272ea36",
+    "qwen3/shard-1/case-005-model-audit.json": "7048e6a4e5edd76937ecbd6f2e2fab1c4085a149054dd2ae0974c81a2b9e3c50",
+    "qwen3/shard-1/case-005-status.json": "bf7156d2bbd3f80d15c06528e1290543bbb389389c01f9f65795776c3fc123d8",
+    "qwen3/shard-1/case-005.json": "292d4ecde5e88cea9f3a91fd348f5d43f7cb844fe4ed1bb0c56a14c024d32915",
+    "qwen3/shard-1/case-006-model-audit.json": "5bce8ac61444606dcc694c8fb69a80fad1aea9dc1deb0a1a1a3bfbd4ae938d9b",
+    "qwen3/shard-1/case-006-status.json": "147efc2e44fb2504ff5ec1b8669abdbaf8b511586f55fd0fc224f67e17ba0246",
+    "qwen3/shard-1/case-006.json": "95feadcc2abb919972fd81a478ef0a3a146a9412fd3890f27d290bcdf937a9f9",
+    "qwen3/shard-1/case-007-model-audit.json": "dafccd3957bae9450393be6e2d3949e4c5c9a2a9370e2fdf05bbbfc8cd95f5f0",
+    "qwen3/shard-1/case-007-status.json": "a5bd8548a4155c606a291b74411117f0040459b07f46ae95c0a58bb39b2053ca",
+    "qwen3/shard-1/case-007.json": "e9c29486e38c1322af80b490949565d885b24006080622c154285118d5cb6f64",
+    "qwen3/shard-1/case-008-model-audit.json": "0fab882d6fa8eae7e5f21ac122920823279c1703a2dcdba12bb1330f1a97d7d1",
+    "qwen3/shard-1/case-008-status.json": "ff4daffa5c74824e2a134879e0dfdad5c3468a3a109db18f53d288e4b6c80659",
+    "qwen3/shard-1/case-008.json": "09203728d6e0ae9f1bd34f984845120a46aa6b8d42b8737fbd2da36fcb19b4ae",
+    "qwen3/shard-1/case-009-model-audit.json": "a86fe002692ce0702d8233b9d6eca41f57f54e8a177f20facf27c56921ca51bc",
+    "qwen3/shard-1/case-009-status.json": "8a1a5ef50f3f8c648b9ee2c8f7113b15e46e6c8744512d5f17fee527e5b01c60",
+    "qwen3/shard-1/case-009.json": "f4ee569487cf97b33c72abc7d9f2b899b0405160982d579331a18338259b3d5b",
+    "qwen3/shard-1/config.json": "9f3b942025869dd9ab664c5a202983ed879f1802b34e1a612457348896dba202",
+    "qwen3/shard-1/manifest.json": "5267d16cf0df6bab2991fe90bae1a74dc48517852ce050c69609e1a5dede5725",
+    "qwen3/shard-1/summary.json": "c465b3b842c8923ea6d9acc3a86bbb286e9ac1f40569b99998627b7908979cf0"
+  },
+  "limitations": "Small development pool, greedy decoding, no significance or method-superiority claim."
+}
