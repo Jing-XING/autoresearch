@@ -127,3 +127,27 @@ The two initial-relation counterfactuals are concrete diagnostic artifacts.
 Their restriction to a prescribed task-local universe is essential because
 the live API also permits universe switching. Neither these witnesses nor
 the elementary indistinguishability argument establish a new general theorem.
+
+Further primary-abstract screening narrows any proposed counterfactual claim:
+
+- [ClaimReceipt](https://arxiv.org/abs/2609.01992) already distinguishes
+  recomputability of a claim from coverage of a committed experiment set.
+  Its receipt/accounting coverage is different from completeness of rows
+  for a user query, but a hashed ledger with PASS/INCONCLUSIVE outcomes is
+  plainly not new by itself.
+- [HERALD](https://arxiv.org/abs/2608.06012) applies same-question interventions
+  to retrieval rewards while separating agent-visible and oracle information.
+  A generic claim to introduce counterfactual grounding audits would overlap.
+  Its reported reward repairs are not reproduced here.
+- [GroundEval](https://arxiv.org/abs/2606.22737) uses deterministic evidence-path
+  checks for absence, time/access constraints and causal mechanisms. It is a
+  direct baseline family for any proposed trace-grounding score. Only the
+  abstract has been inspected; detailed checker assumptions still require
+  source-level comparison.
+
+Keep the database-state intervention question specific: does a legal change
+to unobserved data change the requested answer while preserving the full
+recorded observation? The existing two witnesses concern initialization only,
+not every model trajectory. Establishing a useful automatic search and its
+limits would require additional implementation and evidence. No priority or
+novelty claim is justified by this screening.

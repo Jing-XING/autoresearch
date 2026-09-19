@@ -1,0 +1,1181 @@
+{
+  "purpose": "partial execution audit, not an answer score",
+  "complete_batch": false,
+  "protocol_error_counts": {
+    "Incomplete tool-call block": 4,
+    "At most one tool call per iteration is allowed": 65,
+    "Tool name is absent from current schema": 4
+  },
+  "final_at_512_tokens": 3,
+  "limit": "At the generation ceiling does not alone prove truncation. Single-call enforcement is a local adapter restriction.",
+  "rows": [
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-000.json",
+      "source_sha256": "a27123f68c402cfeba3db17539391e50bf51d31dde6357538f0bddda2d2752e5",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-001.json",
+      "source_sha256": "3967b2230e337045f1849d2e3c4284c404f21d27ca9ffdb8469e15d755dbe0e1",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "Incomplete tool-call block": 1,
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-002.json",
+      "source_sha256": "3531025df037c082e0801f8a7d8c13494a78bdeaab3b7465d1d56946e3dd1709",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-003.json",
+      "source_sha256": "465f7b4098b25284f9783f102e8c87b08a67c492748206ae6b5897d7c3415285",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-004.json",
+      "source_sha256": "05ed4faab2f1626599a11d31ed3f874fca3a2c164192c2dcf56f9eb50c9e3078",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 3,
+        "Tool name is absent from current schema": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-005.json",
+      "source_sha256": "832a10a9b9af12e6b36059355408c32e63eb59d3fc0bb19d42f7a0dae1586fd9",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 3,
+        "Incomplete tool-call block": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-006.json",
+      "source_sha256": "da8f91d246e839fd231c9076eccc2f94151179df3b1daff5dbbe2869bfcfe3f0",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-007.json",
+      "source_sha256": "846a073dafe8785b56bd8d3326de877cd448ece1880c1bd25aa6ab8a6c5ea1c8",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-008.json",
+      "source_sha256": "8582d535ee884c4e1744a6522e8f2fd1d1ae3cce258bbd1b588285e17170c8fd",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-009.json",
+      "source_sha256": "78046d0d8bfca554a5a8c0a29f042858d7d4240b59c3247b2c1421d4c40aabfa",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-010.json",
+      "source_sha256": "fc45f67d185c3f3401255153fb66e4b45adbc2e24b4ec3818b641b01c4b4a83c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-011.json",
+      "source_sha256": "d62a466fa82613d81e346884ec7ed0130dc48f3e914e2752963459fef36b14e0",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-012.json",
+      "source_sha256": "57927b211bc1df066713c738db59392d613b9a4e69ea2c21f951ab79221d589d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-013.json",
+      "source_sha256": "8a9cdd0f128f08d13072dfba51946a20b875d72196ad681bec00612841fc7e05",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-014.json",
+      "source_sha256": "83485fd822fea49df39d66ff463fd3731a70289de614819a50c6a2c9baec6d43",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-015.json",
+      "source_sha256": "6aa197fd863b37593cc1b63bd305aeb04324d278d85008c8fdbdc9939abd719c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-016.json",
+      "source_sha256": "3b40b58dc476d0201a32f5131e090f273e38ea0260fb24912fe02ce85002d7bd",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-017.json",
+      "source_sha256": "de8d1ecb6566eb1c0fbe04ff4ab1df1069183bd6260f2dcbb2ed2690fa42f23f",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-018.json",
+      "source_sha256": "8d7f91958ddab6b158c54b3db075a83fc9806f12bb7070d097bd9ab1897a4962",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-019.json",
+      "source_sha256": "e6b681e9c208e6201be012babf26692a4f8a28bb969be216abfbbd20c3144ef3",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-000.json",
+      "source_sha256": "50b0ea1dd85a288a450045de3d3cdf6ada2ca849a535b399b33decc9758645c3",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-001.json",
+      "source_sha256": "d70ce39f7656934fc301b0c2bf355a570e94b1690daeedc7f41cd0d494176207",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-002.json",
+      "source_sha256": "85b7777e6773e05ab1b77235d67e937595e452cb4eca5d92e8b00d5c4682bd8d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-003.json",
+      "source_sha256": "84125bf9745a038884dfc28ad3d741901e8b2c024e6155cc7f3ecdd53f9abef3",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-004.json",
+      "source_sha256": "c3d14caae73b8c79f3564fe4bc96bef3a346677226eacb3680001281434b5251",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-005.json",
+      "source_sha256": "6399d4915e306182c269a0e4087c47137eec64f20662ddc93e9445879600ce1a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-006.json",
+      "source_sha256": "49c14ba38cfcd16f560e6647f296aaf1b0d09909a8a8dc4f6730a6bba63b710c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": true
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-007.json",
+      "source_sha256": "fc3d0e69f51b40208324e35ea7c901a035c0f860466ad59c6fe3c6d094e88c51",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-008.json",
+      "source_sha256": "1f7f1d9625e364a75f0fcca4ccc2442b504593fe9c736b0690f5bc23cee42399",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-009.json",
+      "source_sha256": "4849dbcdfb8e82484567ebbae5ae665af88b9ed02f56eeee96b1369e628a720a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-010.json",
+      "source_sha256": "7167df78dbb3cc5b083dc680a05cf6c583c6bda97ea0098205bf243784a52bd5",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-011.json",
+      "source_sha256": "9e32a19d46a957b138a427c38a2ada5e194d5392a43f5e120ed258873f749842",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-012.json",
+      "source_sha256": "868bdf30342b0b3b1f65c4f12b0f32c7e7f48f1ea0f899d95722ad443f14d843",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-013.json",
+      "source_sha256": "152df48bd68782db5f3ebb0a109d6337ed16625c7fe509e78c1f2a8f1e6a141d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-014.json",
+      "source_sha256": "872aff3289a5601c72646b4e45c27a17e386e8fc5c516fe72cace1ecd2d5a26b",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-015.json",
+      "source_sha256": "1da6d6a932b3bbd58436d1049cd87905060193ecc6c357fdd7bb3dd380d40871",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-016.json",
+      "source_sha256": "68d8db4e404122bb237ee38b7c9b60f2319cb32b4f4dd58189717d5ae58f3c10",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-017.json",
+      "source_sha256": "59b0458b5f84fbbac972e9e2450a6b3ddaf3811964b885d1eb1398cc9f3e785b",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-018.json",
+      "source_sha256": "3fa4e920cd9c10d28b18d325a9e265ef5411b7dd58d49b8ef5b8d7ef1b0d1de3",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-019.json",
+      "source_sha256": "b5aa6f301c7afdbee31ee0780afe1085bece313a2d74eba911fa0f7050e24250",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-000.json",
+      "source_sha256": "f633e8ef060edf0863e08b976c331326d5028190a2f86dc1c7d5238bca16e46d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-001.json",
+      "source_sha256": "20ed9367046b6fab6abe7d7b8df747e6078ac33eb1ce70336eb9bdfbb6b17b75",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-002.json",
+      "source_sha256": "21c682fdb7b596113c134c6136361ae99837fe4c702cc3fed25a0513e06bfede",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-003.json",
+      "source_sha256": "bb53773a43f7505592a5689c3f6fad93e969f55c8b7f57b575a5a8c69182b8ba",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-004.json",
+      "source_sha256": "d1e07ce4d525dfdc134aa88e101d66dd91f5a3a4ce3b4e680a8c2dfc691d61c5",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-005.json",
+      "source_sha256": "17b3f5616ef9284f4c77ff2fb97694850907fd4d91dfa6814b3d1620e36b7156",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 4,
+        "Incomplete tool-call block": 1
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-006.json",
+      "source_sha256": "07adeff9191c35d11f066d0b289c292c79aeb06d58829be6abbf50d31ab72212",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": true
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-007.json",
+      "source_sha256": "e9c21d14cfcc15834f337043f84f19712d94487d5040a8dbdebe412d396f1d4e",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-008.json",
+      "source_sha256": "fa63a88b204a6c37a3c0fd4c1e4515409c9cc09cdc711cab560429f07a8ee8c6",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-009.json",
+      "source_sha256": "b02abee37dd1e996aa8084fcef58c351647ed56e392fda0b7d9cd7016187ad47",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-010.json",
+      "source_sha256": "9d0c64b4b786365694c3ac8d2a9bca818d16b53df5d8bb32866145680e768ba0",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-011.json",
+      "source_sha256": "e57f9539015a2a8d2f411cd9ea0e1c252fd7270ac9392788e44d172aee754ae0",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-012.json",
+      "source_sha256": "c3cfb1602f34a6277727225284a5a70dc163b78c1550a9bdcb08f17a8206c66e",
+      "termination": "max_steps",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-013.json",
+      "source_sha256": "f4aac04f8ff6fc87c1d16979e08a22d518fbbb8f7f95b2b624035b86a5c6c5a9",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "Tool name is absent from current schema": 1
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-014.json",
+      "source_sha256": "e5494c846e9472fbbe87448537b06c0e53887d2112a69cf70702509df33eaa5a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-015.json",
+      "source_sha256": "062546d0f5fb7509f00e0aba37719f709f52ecb568037877f06daf48a7b2063c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 3
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-016.json",
+      "source_sha256": "47f702b989d5bd0b836431d174e467651158560b822272839a4d0c067f7f6011",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-017.json",
+      "source_sha256": "cd48ab2774ead8d1427402245be567bdbfc7fa7d29e425b07844247e6b4abff6",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-018.json",
+      "source_sha256": "aa7573042a0bad63bc1a88be18184c19ede9a8fa07eb63980f1faba2f5e7b651",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-019.json",
+      "source_sha256": "bcaa4806ff808bdda2a6b19c245c8687072f2e9d3e2bfc18994b34b34d7a0595",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-000.json",
+      "source_sha256": "788e412ed7a4c1cd04aa5fd24d4de804006fab57099110352d2dc0abd56b5127",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-001.json",
+      "source_sha256": "e6840d51576f1943067c2c1d44440f9863d9123059d2339470c21b9e8233e9ed",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-002.json",
+      "source_sha256": "5c63cf35946b3b0092e75d352216f30b29c94b2de03904fbeed057679a8fe817",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "Tool name is absent from current schema": 1
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-003.json",
+      "source_sha256": "615d706709d45c3b410083fcbefee5f6a5aadd817f6efb265641ba5b9a4cb473",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-004.json",
+      "source_sha256": "483a692fa4651e714be93d511fa2ff44bf4f0f8b83759c0f137e7590f8c75cc8",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-005.json",
+      "source_sha256": "0e69bf71dc18626df2d3e7fc267b24080d8a40d9de3dcff0163e84673f6cb4ea",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-006.json",
+      "source_sha256": "e2d5453163314fbc68dbc72de7ed6def0a241b5493825430c2a895bccea66a44",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": true
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-007.json",
+      "source_sha256": "531ed05328360f26ed2c93bbd9104056f133966a9c825bc6de0d26624516fca7",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-008.json",
+      "source_sha256": "9f67996a42339748ded230af2bc3d5481811ace329e92d5242961781eea22759",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-009.json",
+      "source_sha256": "65cc6494b7972c8190afc563ad002c403051e66993b6c3e021ad08fd99062cef",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-010.json",
+      "source_sha256": "a554f745b3b3e28b7bbe4948fd0c8026ce1426899f033a0249cb50ccbb05a3f3",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-011.json",
+      "source_sha256": "dbc183282f00454612b103846f25e2b538e5798ca09d6ec49d1aa5d7f06cc4d9",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-012.json",
+      "source_sha256": "af45deb898e6aa90206e22d6d7d2ac7b4406e6d14506e6ae4d02c40cc6a7c5c8",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-013.json",
+      "source_sha256": "c484198ff401640dfde4f1bc8a9bf91e687c54a5a7af7ae1f880c43b22fec7c3",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-014.json",
+      "source_sha256": "5f3037c7c68d87c65fa4d32a2c050667b08539cff2a47c8a7d27c90d349de091",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-015.json",
+      "source_sha256": "a79a14efde9f505dfdc1bbb4ba0edd0d2404be348f2ad7363bc85b1e4ddea474",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-016.json",
+      "source_sha256": "0aeb2d49a3c2048187ea1c7f871f1a1cb0844382c9addd5c00bcb485d27a503a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-017.json",
+      "source_sha256": "ea1c10790587eedc21131acb771c30aee5979b56d0caf82074cb48a81b952b96",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-018.json",
+      "source_sha256": "877bd0589a6a394766fa4428166fe710552d6e98b859117e5c14e6c20aa1028c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-019.json",
+      "source_sha256": "b3a8c7fdb5ffd36f98b64984012b04475125c84a24b64c9910991ed82217d4d0",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-000.json",
+      "source_sha256": "7830a1e8578f7f9ce41d9efb96d948fe0563c39d405c550a4582f9c0ac64dfb8",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-001.json",
+      "source_sha256": "1dbbb9e5695ba5464a350814f8aec730e29f7981b75f351e51c3339a7d977c40",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-002.json",
+      "source_sha256": "e86e170616f4315a48f7fb1a68326d0772d57b84fcb7976938bb4c0cf66e2207",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-003.json",
+      "source_sha256": "03ad3826d6a5a89d04726d503279d794f9fa86dd1d214d5e92acfcb473b27e44",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-004.json",
+      "source_sha256": "4281ab2f4e6f0a6d440c945a0889b7c0f51627d3d6ba1cd5005c7416186b3408",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-005.json",
+      "source_sha256": "9ebc7bde1f825fbcd8c6528499f65e40a60a8184e0dfa3fee69a9e3d64cbba7b",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-006.json",
+      "source_sha256": "49cf5e1643b0a55b73bd4b1c36ff20b6219b0704882eb983ab1400e88b2ec581",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-007.json",
+      "source_sha256": "9434052c07775ac27e272a83275cadd76f880d5ba606bf58d0556c4670f3d0e7",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-008.json",
+      "source_sha256": "a5fffa726a686667eec4848800e64f2d33302443a8318bf828bc00a652e09aef",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-009.json",
+      "source_sha256": "21d7e0a82bd7dcc87a79fefa0f4a14265e499a30ce5176ec4b82eb982a6cec23",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-010.json",
+      "source_sha256": "735e640c04d7fee308d788e4d599808407ce5d2ba33100d3abc33ac7a8d70d9d",
+      "termination": "protocol_error_limit",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 5
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-011.json",
+      "source_sha256": "17399d9a205940017b0acc76b81bc1077b2c58766bbb4a537f126a91a58321ce",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-012.json",
+      "source_sha256": "822d53b083f1108da9131d5941857b2b05ee585dcaf02ce1ed955d15901c2d8c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-013.json",
+      "source_sha256": "09fbcc81923c5245377b0c53f26bded1577de2eeb649eabf8339d7cb19b88a5e",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-014.json",
+      "source_sha256": "2efa59fbcb6717b778fd1f44ff68e9860f25ed21cabad5374abc28cfcc3ee5c4",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-015.json",
+      "source_sha256": "312739ea57a1ec5185451c7a6e0146bf4c5289df5bc31f4fd0f94402ddb9ec60",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-016.json",
+      "source_sha256": "cfcb3ea9a826a353aba1686aae7125277d58b5bfda4b0c350772234f4b57461c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-017.json",
+      "source_sha256": "fa7f417498c65c00ea670fcefa8f5f70a707f7e3aacd91a762e6622d28bb39b0",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-018.json",
+      "source_sha256": "fdeda2ae3234ebdc6d997a710c1e5c59c771c66835c8e4155248d21b99f6c0d6",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-019.json",
+      "source_sha256": "07af8bb93ea606f39dbe5cd785b5607995dea7bc3e1e2003399d58dc973b9b3b",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-000.json",
+      "source_sha256": "63b99b7472bde70d15d07c7bfe0d44253cfe9e05dffbd66c8b7ad544c0f60b8f",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-001.json",
+      "source_sha256": "0a041a39d23b3f0098d3d9cf27f5de9d2ca781660f3ddc12ebee36c6763f6713",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-002.json",
+      "source_sha256": "ff2414c00a0459030819883e683e493853c18781ed295209e08f0081e5a43dd9",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-003.json",
+      "source_sha256": "023ca571af25cdbdf6dc72d9aebceb380e2cf0894f6f9d276f19c14e679c20d1",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-004.json",
+      "source_sha256": "631459b3a2cae6cb3ad035e4110cf5fe00cb86fb505d6f11c6c92954308cc28d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-005.json",
+      "source_sha256": "9f7bb9ec39d83b6cdba838007d428b48f03352a505579a318386001c8ddd160f",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-006.json",
+      "source_sha256": "fa9166d218e34f80f14d3b21570b2872409f1931c8a3ed295a0d983f909a4eea",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-007.json",
+      "source_sha256": "df3518f967787bec9f6146ff14354d2ab2f66bcf7b4d0ea6f5bdbdc91805a96c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-008.json",
+      "source_sha256": "ec86a6b4cf67261663e76036c2180fc4ab04e4a8d860f31e8b472e30609e9e53",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-009.json",
+      "source_sha256": "2bb71b9d9ced4cb821e8cc73aa1f55ca794b12e7aef6ed06b5321953a8d9ed2e",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-010.json",
+      "source_sha256": "0dd09b1b681d8f13159e57b1b0cd548814a0afd567358c41cfcd6fc412e82ca5",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-011.json",
+      "source_sha256": "ed2663066d798018689695e4240bd6383743bb9a6daba0ce4d832282374292c6",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-012.json",
+      "source_sha256": "97170615cf5de753e3a31894c0cbf6ea394eefa90bfcfd693d08ccb48c34a680",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-013.json",
+      "source_sha256": "4c822e985518264391ed5797de0e91c44272f0f670bb5b0f110701f44593ea80",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-014.json",
+      "source_sha256": "66fac329154b543d239c728adb90d191341d9f7e0763418c94219247fbd7290e",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-015.json",
+      "source_sha256": "bf862dc9b2c55aba000f0996a260876d68fc4f92d6e221a86bbcbf558336ad0a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-016.json",
+      "source_sha256": "4764d27f0bb677d45197f16874dc1253b6eb3e09206b8ecfdda7b83d92b29416",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-017.json",
+      "source_sha256": "1e75573bc4a0c1deac513ddeb2b879f29a9e6b60b3c56a984f4cc8536d391c49",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-018.json",
+      "source_sha256": "3ef153217c9033197d135b6e0c0961fd68d2c349c83b44b97dcc2eac3f2c1309",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-019.json",
+      "source_sha256": "23c26643809134b08d459de2b9be025b2bab68ecba4ca2191d0893ebe277ad09",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-000.json",
+      "source_sha256": "475a4880287aef1bfccccdc87c341c22f9df573ad14d38666ad239e97ab4727f",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 2
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-001.json",
+      "source_sha256": "265044a3a1adb02ae9d631bec223a0c93cc16f92be6b71e06936f7c650ddebda",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-002.json",
+      "source_sha256": "7d074d315e26314d6ba95577852c30909b59892e600a036160587330c8cae625",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-003.json",
+      "source_sha256": "4590473793ad798de9bb14fa9050f83645fe5e31107e9443b9fcf07dc472bacb",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-004.json",
+      "source_sha256": "af9bbfb76ae84fd9d91c275354acacb1892c6f43e34c02ab286b485792b0def7",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-005.json",
+      "source_sha256": "93021d5a77f7db6653a6a0eea0e444bdcec987954a0526822896fcb02027eec7",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-006.json",
+      "source_sha256": "305e57b0880a3aaba7101358206f6f9f066307679f0e703f97e43e977b56b900",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-007.json",
+      "source_sha256": "7c71f6cbd88b7e1c147aca49607f979117accef3aeb1c1179588598f17b1a512",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-008.json",
+      "source_sha256": "51fb867363102c7b6733ea83967043e040600e0c336ca53110f2a90d1eb1d616",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-009.json",
+      "source_sha256": "08ad9138d5abf4e536f5618d8e393ea31690dae53a00443aadb5447092625c34",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-010.json",
+      "source_sha256": "3c4f8fa770520818425aba4272b78afa0a9dbe5f150059f173bd47b7b7a09afc",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-011.json",
+      "source_sha256": "efc82d3b6e5679c0e7a6c40a79bbc5d4f18e303dbab387ce41cad93658d3926d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-012.json",
+      "source_sha256": "46b35524e3e972692497fc28855c71df3bb7a35b70390320ca95b93dcd4d7729",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-013.json",
+      "source_sha256": "ba0a7ba237e75301eea5ff75230b37aa8cec5ef14323e7d678fbf25c65f1d0e4",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-014.json",
+      "source_sha256": "759a19b696cbe060112b3e1f5bb30d177cf7df1cd00b0427a8a7ff92f5f5642c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {
+        "At most one tool call per iteration is allowed": 1
+      },
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-015.json",
+      "source_sha256": "92741a2ab02089a67d3dc7a398de98ee3632c3972073bb35c1ce871b6ee0b9ae",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-016.json",
+      "source_sha256": "9925843bfea30b1b59da009f0cc0c9dfd250c1bdcb069545eaa425b1580cea4a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-017.json",
+      "source_sha256": "92ca1460e2fe4486bd4232a7e313595a5c307ce28649218eb6036d194ba07b79",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-018.json",
+      "source_sha256": "d184b96261fcf8d0ffc272d35a14ee0c2e97286972fc93559d687be50f5226a2",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-019.json",
+      "source_sha256": "1481e68f857c1fdbe3d340fd85ab6ce21f00a1282c32cc6ce0b28f92eea2dfeb",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-000.json",
+      "source_sha256": "562ecb85b0f752de6252e91699b3dbcf587eedab2c71a384617a9761b9ef6efb",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-001.json",
+      "source_sha256": "27b28e8ba7190b9dab80105436faa48001c8b99979de21b5793ce33966751bf6",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-002.json",
+      "source_sha256": "30a5ce024cad4ecd9e4a75594dc2f8ec63fdb0833958bbb24ddc033814df09f7",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-003.json",
+      "source_sha256": "fe4794ad43bfe1ca9bdeb5214f961546aa60a0b32043ecc6431bbb7a422b14b4",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-004.json",
+      "source_sha256": "96fe8b0e8124783ca2ef02337ea8f64bef7bd74542efda275701074ad288af2d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-005.json",
+      "source_sha256": "1ba2e7b9794bc1ab9c93efd42549434254f81a4f77fa6ca71caf1895dc4d7a7c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-006.json",
+      "source_sha256": "533847abd2314360bf13e36172c91bd964494ad4444462da5237b343d3fcbf81",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-007.json",
+      "source_sha256": "af8bc345c6d866473cbb5c2b11806f0ae0db1b418290ba251cd81fbd751f4669",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-008.json",
+      "source_sha256": "8f2e12f13f6397364f72150393f35521d6454fc3c89b0bd1e31d1552da81070c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-009.json",
+      "source_sha256": "7c08db7ac7f98bafe595d906c6f21cb94374fea3d6bce7aa33bfc5c96604ff54",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-010.json",
+      "source_sha256": "433936a5bc4435d07acff596c2ac548ae0651b79af322e88ee01a3b76e86d80e",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-011.json",
+      "source_sha256": "b55eddeeb67065f7b69f1d06fcfc608e79e86d0af87b5dd470641f0d4bcf04d7",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-012.json",
+      "source_sha256": "aa968d7dbd6d357133cc4a5ecbf797eba0d8f44df73b0e7f185c62daba434a9c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-013.json",
+      "source_sha256": "9bfc4abb9a7b4e192893a71cef1eb16ced51017bc86c6688238b228129705417",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-014.json",
+      "source_sha256": "5067324b13309317540abb64b1d547643a72434947340f3b42186eff84dcb20a",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-015.json",
+      "source_sha256": "db7c9df3dfccedacb402fb9bb50ddc3382d2fab39d12cc9c4d420cea302b563c",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-016.json",
+      "source_sha256": "6cb556a9fdbd6afff24f9e9bec9707a56ce345a31edcd12b03466a1cbc088d38",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-017.json",
+      "source_sha256": "5349f50af5b52f68fe0eedbed4c8f0f555b047f071c72fadfc775a6aaf19a837",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-018.json",
+      "source_sha256": "0b97cb9d7fbd58b86a904fe5bfc07bdaa903acf868bed21cc11bb030b90d2f6d",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-019.json",
+      "source_sha256": "c01c93712f50b1f0580a8f96620574de575c0706e3010ea3b3f1b7c4b2f80db6",
+      "termination": "agent_finished",
+      "protocol_error_messages": {},
+      "final_at_512_tokens": false
+    }
+  ]
+}
