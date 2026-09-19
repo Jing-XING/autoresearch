@@ -3,6 +3,15 @@
 This manuscript is incomplete. A verified development observation is not an
 independently confirmed result or a publication-level contribution.
 
+The structured NK-schema follow-up now has a complete-grid analysis program,
+frozen while both designated-server supervisors were verified live and
+waiting with zero workers. The integration receipt
+`../evidence/nk_test40_analysis_integration_v1.json` records preserved
+deployment bytes and eight passing tests, including a synthetic
+140-curation/160-target fixture. This is analysis readiness, not a memory
+quality or downstream performance result. See `reproduce.md` for the
+separate complete-grid command and its limits.
+
 | Claim | Evidence | Scope |
 |---|---|---|
 | Source collection covers 74 tasks for each of two models. | `../evidence/tau_train74_source_summary.json`; four hash-verified raw source archives. | 148 source episodes; one original protocol exception retained. |

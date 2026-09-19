@@ -1,0 +1,73 @@
+{
+  "purpose": "Pre-outcome analysis readiness for the frozen NK-schema adaptation; no scientific results",
+  "deployment_lineage": {
+    "revisions": {
+      "nk-prefix-curation-v2": {
+        "archive_sha256": "65258cdcd5edd617dd32915ddb6e05a9a233c09962815c1d9e6be7f10a4c0022",
+        "original_sha256": "d14757ed8580f726ab8f33b16b1e95479b357d741c4d44fca9066fc6e0cfe2c9",
+        "original_members_preserved": 203,
+        "only_added_member": "scripts/restart_registered_queue_v2.py",
+        "registration_sha256": "27147be4e34c5a6c51fa349247e39960305ce872767e130c0a471b7280a04414",
+        "supervisor_sha256": "d7bcf1c8a7d9c0bd5c9ec9b17682c6f6775b790b371bb54d2a949dab303a7b05",
+        "restart_preflight_recorded": false
+      },
+      "tau-nk-test40-v2": {
+        "archive_sha256": "468b852fca8deda021d99ee6cb2daa31ccd885ea45e45d399745119eb489b791",
+        "original_sha256": "0b02ab2ce1bf6582bd4040c2fe73cc1d05e127cfc714bc2caece6bbb0a95ad46",
+        "original_members_preserved": 68,
+        "only_added_member": "scripts/restart_registered_queue_v2.py",
+        "registration_sha256": "778f6eeeb3b2f021c993e22c9e4aa6a5643a46673a99393d4f66a0e06073b2db",
+        "supervisor_sha256": "74756a3db9d81f0e50f65342a64a24281641000d45def8cb0baed9eefb76af87",
+        "restart_preflight_recorded": true
+      }
+    },
+    "bundle_sha256": "8eb10f3147eb1b8fac01aa2670ad49810bc81f101b4dbaef55bf210524b32c1f",
+    "amendment_sha256": "f3132b527bafc7cc86bee861cf02d04f3d720e7d477d00278ab424abd55daa6e",
+    "deployment_sha256": "926913a409c38df8373854193282e72f9c916bae118d931ff302483de333ed71"
+  },
+  "analysis_source_sha256": {
+    "scripts/analyze_nk_test40_v1.py": "c08092f0a5aed9ae67d399d120fc7837030acb71c6b3a6265229a59ff03c415d",
+    "tests/test_nk_complete_analysis.py": "d8a6d8689048d9c53391eb1a368358c13e8bc6a51b25c1755f090e8095e1f437",
+    "scripts/analyze_memory_tie_transfer.py": "2f4491d9b343ed4d71a63d9549383e79f96241d1260fe95979ad3dbab5fd8381",
+    "scripts/prepare_memory_restart_analysis_receipt.py": "42ef1988b5d702967231824ea3e453621269cd0ca274f7abf14d433003a609c4",
+    "autolab/analyze_memory_transfer.py": "93151c972fb57f064fdeb4642186fb56b06e6c209b852a21a1e721bc707beac7"
+  },
+  "actual_execution_state_at_analysis_preparation": {
+    "source": "Designated server browser terminal; exact /proc/PID/cmdline checked",
+    "curation": {
+      "batch": "nk-prefix-curation-v2",
+      "supervisor_pid": 11897,
+      "status": "waiting_for_dependencies",
+      "workers": 0,
+      "json_files": 1
+    },
+    "target": {
+      "batch": "tau-nk-test40-v2",
+      "supervisor_pid": 11898,
+      "status": "waiting_for_dependencies",
+      "workers": 0,
+      "json_files": 1
+    },
+    "outcome_content_read": false
+  },
+  "validation": {
+    "command": "results/venvs/research-eval/Scripts/python.exe -m pytest tests/test_nk_complete_analysis.py tests/test_nk_prefix_bank.py -q",
+    "tests_passed": 8,
+    "elapsed_seconds": 2.54,
+    "synthetic_curations": 140,
+    "synthetic_target_executions": 160,
+    "real_model_calls": 0,
+    "fixture_source_bank_identity_override": "Synthetic fixture patches only the original source-bank SHA constant; production CLI retains the fixed original hash.",
+    "initial_failure_fixed": "Rebuilt bank has integer shard keys, saved JSON has string keys. Comparison now uses ordinary complete JSON roundtrip, with no excluded fields."
+  },
+  "actual_complete_grid_analyzed": false,
+  "deployed_inference_changed": false,
+  "primary_estimand_changed": false,
+  "limits": [
+    "Synthetic outcomes validate software, not experimental performance.",
+    "Schema validity is not semantic grounding.",
+    "The entry point requires closed target collection before curation text or target outcomes.",
+    "No-memory and cross-study superiority comparisons are not included.",
+    "No independent human annotation or external replication."
+  ]
+}
