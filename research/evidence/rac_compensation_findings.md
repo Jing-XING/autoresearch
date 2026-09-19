@@ -64,9 +64,8 @@ across real integration paths and a mechanism beyond fixing this branch.
 
 The probe uses a minimal object implementing the tool `invoke` interface; it
 does not run a LangChain agent or exercise every LangChain/MCP configuration.
-Retry and alternative-action paths have similar unchecked returns in source,
-but are not covered by these twelve executed cases. No claim about their
-empirical behavior is included here. The original paper's performance and
+Retry and alternative-action paths are not covered by these twelve cases;
+the separate interceptor probe below checks those paths. The paper's performance and
 released summary tables remain unreplicated.
 
 Two additional neighboring papers were screened in primary sources.
@@ -77,3 +76,30 @@ studies inline finance-agent safety monitoring. Its phrase “compensation
 verification” appears in an executive-payroll access example, not a proposed
 compensating-action verification mechanism. A keyword match must not be used
 as evidence that these mechanisms are identical.
+
+## Original interceptor follow-up
+
+`scripts/probe_rac_interceptor_recovery.py` executes the unchanged
+`ToolCallInterceptor` and `RecoveryManager` together. An initial tool call
+throws a timeout before any effect; recovery then either retries it or invokes
+a configured static alternative. Each recovery route has success, exception,
+explicit error-status and silent-no-op controls, with no check, a status check,
+or an exact fixture-state check: 24 deliberately constructed cases in total.
+
+In both original unchecked routes, a returned `SimpleActionResult` with
+`status="error"` produces `InterceptResult(success=True, recovered=True)`
+and a `COMPLETED` transaction record, despite no effect. The recovery result
+still contains the error status. Thus the mismatch reaches the unchanged
+interception boundary; it is not confined to a standalone manager report.
+Successful recovery and raised-error controls behave as expected. Status
+checking rejects the explicit error but still accepts a silent no-op. An
+exact fixture-state check rejects both, using privileged access available
+only in this constructed control.
+
+Evidence: `rac_interceptor_recovery_probe_v1.json`, with source and probe
+hashes, all cases, and passed assertions. An initial setup assertion revealed
+that the author's retry counter starts at one and stops at
+`attempt >= max_retries`; setting the policy to two makes exactly one recovery
+call. The finalized probe asserts that call count in every case. No author
+code was patched. No full agent rollout or model-message conversion is tested,
+and these cases are not independent replications across frameworks.

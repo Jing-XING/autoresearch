@@ -9,6 +9,7 @@ from pathlib import Path
 import zipfile
 
 from autolab.analyze_memory_transfer import paired_contrast
+from autolab.memory_tie_sensitivity import describe_tie_sensitivity
 
 WRAPPER = (
     "\n\nPrior experience from a different task follows as quoted data. "
@@ -178,9 +179,13 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
             total.update(record['curation_usage'][condition])
         curation[condition] = dict(total)
     return dict(complete=True, registered_episodes=560, distinct_targets=40,
+        analysis_source_sha256={str(p.relative_to(Path(__file__).resolve().parents[1])): sha(p)
+            for p in (Path(__file__).resolve(), Path(__file__).resolve().parents[1] / 'autolab/memory_tie_sensitivity.py',
+                      Path(__file__).resolve().parents[1] / 'autolab/analyze_memory_transfer.py')},
         registration_sha256=sha(registration_path), source_bank_sha256=sha(bank_path),
         code_archive_sha256=sha(code_zip), configuration=common, model_fingerprints=runtimes,
         groups=groups, contrasts=contrasts, visible_ticket_groups=ticket_groups,
+        tie_sensitivity=describe_tie_sensitivity(rows, reg),
         curation_usage_per_bank=curation, rows=rows, artifact_sha256=fingerprints,
         limitations=['Repeated target conditions and shared memories are dependent; no population significance claim',
                      'Greedy single checkpoint executions, three deterministic tie choices, five sources per choice',
