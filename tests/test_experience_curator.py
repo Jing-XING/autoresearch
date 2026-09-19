@@ -1,7 +1,8 @@
 import copy
 import json
 import unittest
-from autolab.experience_curator import COMMON_INSTRUCTION, curator_messages
+from autolab.experience_curator import COMMON_INSTRUCTION, COMPACT_INSTRUCTION, curator_messages, generation_status
+from types import SimpleNamespace
 
 
 class ExperienceCuratorTests(unittest.TestCase):
@@ -34,6 +35,19 @@ class ExperienceCuratorTests(unittest.TestCase):
         self.assertEqual(a[1], b[1])
         self.assertEqual(a[0]["content"], COMMON_INSTRUCTION)
         self.assertTrue(b[0]["content"].startswith(COMMON_INSTRUCTION))
+
+    def test_compact_contract_is_shared_without_changing_evidence(self):
+        for condition in ("outcome_only", "full_metadata", "boundary_aware"):
+            before = curator_messages(self.fixture(), condition)
+            after = curator_messages(self.fixture(), condition, "compact")
+            self.assertEqual(before[1], after[1])
+            self.assertEqual(after[0]["content"], before[0]["content"] + COMPACT_INSTRUCTION)
+
+    def test_ceiling_hit_cannot_be_accepted_as_complete_compact_memory(self):
+        clipped = SimpleNamespace(text="An unfinished recommendation", output_tokens=256)
+        self.assertEqual(generation_status(clipped, "compact"), "output_ceiling_hit")
+        self.assertEqual(generation_status(clipped, "legacy"), "generated")
+        self.assertEqual(generation_status(SimpleNamespace(text="Complete.", output_tokens=3), "compact"), "generated")
 
 
 if __name__ == "__main__":

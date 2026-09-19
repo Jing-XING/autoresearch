@@ -51,6 +51,14 @@ the same curator checkpoint, greedy decoder and 256-token output ceiling;
 actual output lengths and total curation/inference costs are reported. An
 equal ceiling is not an exact length match. Raw memory can be much longer.
 
+Development revision before any memory treatment: v1 lessons frequently ended
+at the 256-token ceiling with incomplete components. Its target grid was
+stopped while only no-memory workers had started. V2 applies a common compact
+contract (three sentences, at most 90 words) to all curated conditions and
+rejects ceiling-hit outputs at bank compilation. The original generations
+and aborted grid remain archived; no source record is silently replaced or
+selected by its outcome. See `evidence/memory_curation_v1_quality_stop.md`.
+
 The generic reflection arms are **not** presented as an exact reproduction of
 Reflexion. Reflexion's original protocol updates memory across repeated trials
 of a task and includes a heuristic that triggers reflection after excessive

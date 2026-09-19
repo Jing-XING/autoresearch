@@ -36,6 +36,8 @@ def build_bank(cutoff_root, curation_root, cutoff=8):
         if manifest["generation_cutoff"] != cutoff or set(manifest["conditions"]) != set(CONDITIONS):
             raise ValueError("Incompatible curation conditions or cutoff")
         comparable = {k: manifest[k] for k in ("seed", "decoding", "max_new_tokens", "source_sha256", "model_files_sha256")}
+        if "prompt_contract" in manifest:
+            comparable["prompt_contract"] = manifest["prompt_contract"]
         if manifests and comparable != manifests[0]["configuration"]:
             raise ValueError("Curator configuration changed across shards")
         manifests.append({"file": manifest_file.relative_to(curation_root).as_posix(),
@@ -70,7 +72,7 @@ def build_bank(cutoff_root, curation_root, cutoff=8):
         usage = {}
         for condition in CONDITIONS:
             output, file_hash = outputs[(record_id, condition)]
-            messages = curator_messages(payload, condition)
+            messages = curator_messages(payload, condition, manifests[0]["configuration"].get("prompt_contract", "legacy"))
             prompt_hash = hashlib.sha256(json.dumps(messages, sort_keys=True).encode()).hexdigest()
             if output["input"] != messages or output["input_sha256"] != prompt_hash:
                 raise ValueError("Curator used different evidence or instruction")

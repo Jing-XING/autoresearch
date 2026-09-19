@@ -84,9 +84,10 @@ def main():
     parser.add_argument("--root", required=True, type=Path)
     parser.add_argument("--tau-repo", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--split", choices=["small", "train"], default="small")
     args = parser.parse_args()
     source_hash = verify_tau_source(args.tau_repo)
-    tasks = {t.id: t for t in get_tasks("telecom", task_split_name="small")}
+    tasks = {t.id: t for t in get_tasks("telecom", task_split_name=args.split)}
     rows, failures, hashes = [], [], {}
     for file in sorted(args.root.glob("*/shard-*/case-*-status.json")):
         status = json.loads(file.read_bytes())
@@ -102,7 +103,7 @@ def main():
         rows.append({**identity, **result})
     if not rows and not failures:
         raise ValueError("No recorded cases found")
-    report = {"purpose": "development trajectory diagnosis only", "tau_source_sha256": source_hash,
+    report = {"purpose": "development trajectory diagnosis only", "task_split": args.split, "tau_source_sha256": source_hash,
               "input_sha256": hashes, "rows": rows, "unscored_runs": failures}
     with args.output.open("x", encoding="utf-8") as stream:
         json.dump(report, stream, ensure_ascii=False, indent=2)

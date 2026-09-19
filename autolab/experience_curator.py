@@ -30,11 +30,18 @@ BOUNDARY_INSTRUCTION = (
     "ineffective. Ground negative recommendations in observed contradictions or "
     "errors, and state when more execution would be needed to resolve uncertainty."
 )
+COMPACT_INSTRUCTION = (
+    " Return only three complete sentences totaling at most 90 words: first an "
+    "observation, then a recommendation, then its applicability and uncertainty. "
+    "Use no title, headings, bullet lists or examples. Finish all three sentences."
+)
 
 
-def curator_messages(payload, condition):
+def curator_messages(payload, condition, contract="legacy"):
     if condition not in CONDITIONS:
         raise ValueError("Unknown curator condition")
+    if contract not in ("legacy", "compact"):
+        raise ValueError("Unknown output contract")
     if set(payload) != VISIBLE_KEYS:
         raise ValueError("Unexpected input fields: future labels or hidden metadata forbidden")
     if any(m.get("role") != "system" for m in payload["system_messages"]):
@@ -46,8 +53,20 @@ def curator_messages(payload, condition):
         record["execution_metadata"] = {k: payload[k] for k in
             ("generation_budget", "observed_generations", "stop_reason")}
     instruction = COMMON_INSTRUCTION + (BOUNDARY_INSTRUCTION if condition == "boundary_aware" else "")
+    if contract == "compact":
+        instruction += COMPACT_INSTRUCTION
     return [{"role": "system", "content": instruction},
             {"role": "user", "content": json.dumps(record, sort_keys=True, ensure_ascii=False)}]
+
+
+def generation_status(reply, contract):
+    if not reply.text.strip():
+        return "empty_memory"
+    # Conservative completeness guard. A ceiling hit is retained for audit,
+    # but cannot silently become a supposedly complete lesson in a paired bank.
+    if contract == "compact" and reply.output_tokens >= 256:
+        return "output_ceiling_hit"
+    return "generated"
 
 
 def main():
@@ -58,6 +77,7 @@ def main():
     parser.add_argument("--shard", type=int, default=0)
     parser.add_argument("--shards", type=int, default=1)
     parser.add_argument("--cutoff", type=int, default=8)
+    parser.add_argument("--contract", choices=["legacy", "compact"], default="compact")
     parser.add_argument("--conditions", nargs="+", choices=CONDITIONS, default=list(CONDITIONS))
     args = parser.parse_args()
     if args.shards < 1 or not 0 <= args.shard < args.shards or args.cutoff < 1:
@@ -79,6 +99,7 @@ def main():
         "purpose": "development memory intervention preparation, not a performance claim",
         "seed": 20260919, "decoding": "greedy", "max_new_tokens": 256,
         "conditions": args.conditions, "generation_cutoff": args.cutoff,
+        "prompt_contract": args.contract,
         "all_record_ids": [p.stem for p, _ in selected],
         "selected_record_ids": [p.stem for p, _ in shard],
         "input_files_sha256": {p.name: sha256_file(p) for p, _ in shard},
@@ -93,13 +114,14 @@ def main():
     rows = []
     for path, payload in shard:
         for condition in args.conditions:
-            messages = curator_messages(payload, condition)
+            messages = curator_messages(payload, condition, args.contract)
             record = {"record_id": path.stem, "condition": condition, "input": messages,
                       "input_sha256": hashlib.sha256(json.dumps(messages, sort_keys=True).encode()).hexdigest()}
             try:
                 reply = model.generate(messages, 256)
                 record["reply"] = asdict(reply)
-                record["status"] = "generated"
+                record["status"] = generation_status(reply, args.contract)
+                record["output_word_count"] = len(reply.text.split())
             except Exception as exc:
                 record.update(status="generation_error", error_type=type(exc).__name__, error=str(exc))
             write_episode(record, args.output, path.stem + "-" + condition)
