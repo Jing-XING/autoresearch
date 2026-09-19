@@ -480,6 +480,15 @@ distinct contribution. A stronger comparison must implement its evidence and
 adoption structure; our current generic reflection controls do not reproduce
 that method.
 
+A separate NK-schema adaptation has now been prepared, but has not generated
+memories or target outcomes. It retains the six-field representation and
+closed failure vocabularies while changing the input to telecom prefixes.
+Visible zero-reward eligibility leaves 70 of the 74 source records. This
+changes the retrieval pool, so its future comparison with the original bank
+would not isolate representation alone. Its paired boundary-instruction
+contrast uses identical evidence and a common larger output ceiling.
+The preparation does not implement the full upstream adoption procedure.
+
 [Grounding Agent Memory](https://arxiv.org/html/2609.11060v1) lets a post-task
 curator inspect an environment through read-only probes before updating
 memory. The present protocol restricts curation to a recorded prefix and its
@@ -494,6 +503,14 @@ setting therefore does not itself establish novelty. The narrower variable
 under investigation is the interpretation of an imposed execution boundary
 when compressing otherwise matched experience. Whether that variable supports
 a useful method or a general empirical finding remains to be tested.
+
+[Auditing Self-Evolution in Financial Agents](https://arxiv.org/html/2608.17684v1)
+compares memory and workflow systems using matched acquisition trajectories
+and identifies an execution-interface mismatch in an AWM port. Thus matching
+source evidence and checking the native action interface are established
+evaluation concerns. Our controlled curation study must also separate these
+implementation effects from memory content. We have not reproduced that
+financial-agent evaluation.
 
 ## 7. Discussion
 

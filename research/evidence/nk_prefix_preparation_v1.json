@@ -1,0 +1,47 @@
+{
+  "schema": "autolab.nk_prefix_preparation_receipt.v1",
+  "status": "prepared_not_executed",
+  "date": "2026-09-19",
+  "visible_candidates": 74,
+  "eligible_sources": 70,
+  "excluded_sources": [
+    {
+      "record_id": "09060edd04ee056725e696c1",
+      "reason": "observed_reward_one"
+    },
+    {
+      "record_id": "28685250e103b91dab68f65e",
+      "reason": "observed_reward_one"
+    },
+    {
+      "record_id": "5d91821ff9e2f95b6a8924fc",
+      "reason": "observed_reward_one"
+    },
+    {
+      "record_id": "74d18ca8b1298cd881dfd617",
+      "reason": "observed_reward_one"
+    }
+  ],
+  "paired_input_packets": 140,
+  "all_pair_evidence_equal": true,
+  "max_new_tokens": 1024,
+  "model_calls": 0,
+  "target_episodes": 0,
+  "tests_passed": 4,
+  "output_directory": "results/preparations/nk-prefix-v1-final",
+  "manifest_sha256": "01dd8d5b05cc45a2e0dfe0eec088527aad636f58d8233a6914271823e90cc0bb",
+  "packet_file_hashes_sha256": "68e0af45ddc41b27536e9fea3cac1854e95bb55828d51eafc9fcf1350b235750",
+  "implementation_sha256": "cc97c4e2dec21b008b54b0e8760e7b9591272eaffab1cead95fa8cba99ad3570",
+  "upstream_revision": "015ac48da8a9ebd2420ffee0f4f84bd5d1d8bbb9",
+  "upstream_files_sha256": {
+    "negative_knowledge/prompts/curator_prompt__single_round_simpler_schema.md": "a0eeedb5dc7079e5d0c11d89f3b553e364bc4463c8232021f081e5cac284e268",
+    "negative_knowledge/curator.py": "6ea850898984d55376a7e6f4922adfd7265bd43cdc6fdf7758d840f6a290a972",
+    "LICENSE": "e388c5fabaab3f97b4c86eafc778785ac179f4393dba25c77d6727923a30ed2d"
+  },
+  "limitations": [
+    "NK-schema adaptation, not full NK reproduction",
+    "No target-run registration or inference yet",
+    "Different eligible pool and output ceiling from original three-sentence study",
+    "Schema validity does not establish semantic grounding"
+  ]
+}
