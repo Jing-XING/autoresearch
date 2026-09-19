@@ -39,6 +39,20 @@ def stripped_first_input(call, condition, expected_memory):
     return {'messages': messages, 'tools': call['tools']}
 
 
+def paired_outcomes(treatment, control):
+    """Retain both kinds of ties as well as the original wins/losses endpoint."""
+    result = paired_contrast(treatment, control)
+    a = {(r['model'], r['task_id']): r['reward'] == 1 for r in treatment}
+    b = {(r['model'], r['task_id']): r['reward'] == 1 for r in control}
+    for row in result:
+        tasks = sorted(t for m,t in a if m == row['model'])
+        row['joint_successes'] = [t for t in tasks if a[row['model'],t] and b[row['model'],t]]
+        row['joint_nonsuccesses'] = [t for t in tasks if not a[row['model'],t] and not b[row['model'],t]]
+        if sum(len(row[k]) for k in ('wins','losses','joint_successes','joint_nonsuccesses')) != row['tasks']:
+            raise ValueError('Paired outcome partition is incomplete')
+    return result
+
+
 def analyze(root, registration_path, bank_path, code_zip, deployment_path):
     reg, bank, deployment = map(read, (registration_path, bank_path, deployment_path))
     grid = read(root / 'grid_manifest.json')
@@ -46,6 +60,8 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
         raise ValueError('Refuse incomplete or failed worker grid')
     if grid['selection'] != reg or reg['registered_episodes'] != 560:
         raise ValueError('Registration differs from frozen grid')
+    if grid['batch'] != deployment['batch']:
+        raise ValueError('Grid batch differs from deployment receipt')
     if sha(code_zip) != deployment['source_archive_sha256']:
         raise ValueError('Deployment code ZIP mismatch')
     if sha(bank_path) != reg['source_bank_sha256']:
@@ -60,6 +76,10 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
     actual_workers = [(w['tie_order'], w['condition'], w['model'], w['shard']) for w in grid['workers']]
     if len(set(actual_workers)) != 28 or set(actual_workers) != expected_workers:
         raise ValueError('Missing, repeated or unexpected worker')
+    expected_manifests = {root / t / c / m / f'shard-{s}' / 'manifest.json'
+                          for t,c,m,s in expected_workers}
+    if set(root.glob('*/*/*/shard-*/manifest.json')) != expected_manifests:
+        raise ValueError('Unexpected or missing worker manifest')
     source_hashes = {}
     with zipfile.ZipFile(code_zip) as z:
         for name in z.namelist():
@@ -94,7 +114,9 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
         if set(manifest['task_sha256']) != set(ids[shard::2]):
             raise ValueError('Incomplete task fingerprints')
         local_rows = []
+        expected_cases = set()
         for index, task_id in enumerate(ids[shard::2]):
+            expected_cases.update({f'case-{index:03d}-status.json', f'case-{index:03d}-model-audit.json'})
             digest = manifest['task_sha256'][task_id]
             if task_id in task_hashes and task_hashes[task_id] != digest:
                 raise ValueError('Task content changed across cells')
@@ -107,6 +129,7 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
                 raise ValueError('Unexpected nonbinary reward')
             simulation_path = folder / f'case-{index:03d}.json'
             if status['reward'] is not None:
+                expected_cases.add(simulation_path.name)
                 simulation = read(simulation_path)
                 if simulation['task_id'] != task_id or simulation['reward_info']['reward'] != status['reward'] or simulation['termination_reason'] != status['termination']:
                     raise ValueError('Official simulation/status disagreement')
@@ -137,6 +160,7 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
             row = {'model': model, 'task_id': task_id, 'tie_order': tie, 'condition': condition,
                    'reward': status['reward'], 'error_type': status.get('error_type'),
                    'termination': status.get('termination'), 'model_calls': status['model_calls'],
+                   'initial_input_observed': bool(audit['calls']),
                    'usage': dict(usage), 'protocol_errors': protocol_errors,
                    'source_record_id': chosen['record_id'] if chosen else None,
                    'memory_text_sha256': hashlib.sha256(records[chosen['record_id']]['memories'][condition].encode()).hexdigest() if chosen else None,
@@ -147,6 +171,8 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
                    'ticket_sha256': selected[task_id]['ticket_sha256']}
             rows.append(row)
             local_rows.append(status)
+        if {p.name for p in folder.glob('case-*.json')} != expected_cases:
+            raise ValueError('Missing or extra case artifact; null rewards cannot retain a conflicting simulation')
         summary = read(folder / 'summary.json')
         if summary['rows'] != local_rows or summary['n'] != 20 or summary['successes'] != sum(r['reward'] == 1 for r in local_rows) or summary['errors'] != sum(r['reward'] is None for r in local_rows):
             raise ValueError('Worker summary disagreement')
@@ -169,14 +195,14 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
         full = [r for r in rows if r['tie_order'] == tie and r['condition'] == 'full_metadata']
         boundary = [r for r in rows if r['tie_order'] == tie and r['condition'] == 'boundary_aware']
         label = 'primary' if tie == 'record_id' else 'prespecified_sensitivity'
-        contrasts[tie + '_boundary_minus_full'] = {'role': label, 'paired': paired_contrast(boundary, full)}
+        contrasts[tie + '_boundary_minus_full'] = {'role': label, 'paired': paired_outcomes(boundary, full)}
         baseline = [r for r in rows if r['condition'] == 'none']
         for condition, subset in [('full_metadata', full), ('boundary_aware', boundary)]:
-            contrasts[tie + '_' + condition + '_minus_none'] = {'role': 'secondary_shared_baseline', 'paired': paired_contrast(subset, baseline)}
+            contrasts[tie + '_' + condition + '_minus_none'] = {'role': 'secondary_shared_baseline', 'paired': paired_outcomes(subset, baseline)}
         for ticket in sorted({r['ticket_sha256'] for r in rows}):
             a = [r for r in boundary if r['ticket_sha256'] == ticket]
             b = [r for r in full if r['ticket_sha256'] == ticket]
-            ticket_groups.append({'tie_order': tie, 'ticket_sha256': ticket, 'paired': paired_contrast(a, b)})
+            ticket_groups.append({'tie_order': tie, 'ticket_sha256': ticket, 'paired': paired_outcomes(a, b)})
     curation = {}
     for condition in reg['memory_conditions']:
         total = Counter()
@@ -188,6 +214,10 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
             for p in (Path(__file__).resolve(), Path(__file__).resolve().parents[1] / 'autolab/memory_tie_sensitivity.py',
                       Path(__file__).resolve().parents[1] / 'autolab/analyze_memory_transfer.py')},
         registration_sha256=sha(registration_path), source_bank_sha256=sha(bank_path),
+        deployment_receipt_sha256=sha(deployment_path), deployment_batch=grid['batch'],
+        first_input_observed_episodes=sum(r['initial_input_observed'] for r in rows),
+        no_first_input_episodes=[{k:r[k] for k in ('model','task_id','tie_order','condition','error_type')}
+                                 for r in rows if not r['initial_input_observed']],
         code_archive_sha256=sha(code_zip), configuration=common, model_fingerprints=runtimes,
         groups=groups, contrasts=contrasts, visible_ticket_groups=ticket_groups,
         tie_sensitivity=describe_tie_sensitivity(rows, reg),

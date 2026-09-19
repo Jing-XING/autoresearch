@@ -1,0 +1,37 @@
+{
+  "scope": "Pre-outcome analysis integration; synthetic fixtures and static deployment archives only, no target result content read.",
+  "test_command": "python -m pytest tests/test_memory_tie_full_grid.py tests/test_memory_tie_sensitivity.py tests/test_memory_transfer_analysis.py -q",
+  "actual_tests_passed": 10,
+  "exit_code": 0,
+  "elapsed_reported_seconds": 2.92,
+  "synthetic_fixture": {
+    "statuses": 560,
+    "workers": 28,
+    "distinct_targets": 40,
+    "first_inputs_observed": 559,
+    "pre_generation_errors": 1,
+    "real_model_calls": 0,
+    "official_tau2_execution": false
+  },
+  "source_sha256": {
+    "scripts/analyze_memory_tie_transfer.py": "2f4491d9b343ed4d71a63d9549383e79f96241d1260fe95979ad3dbab5fd8381",
+    "scripts/prepare_memory_restart_analysis_receipt.py": "42ef1988b5d702967231824ea3e453621269cd0ca274f7abf14d433003a609c4",
+    "autolab/memory_tie_sensitivity.py": "6b65beb228443ddaf00acd52d99e57d368ed817668aa4bf18eb0f22562b434dd",
+    "tests/test_memory_tie_full_grid.py": "9673762788484c85a50c4c7b7663a7e7573a18c57ebc97b994d3fe2d07cb9535",
+    "tests/test_memory_tie_sensitivity.py": "4127e3c7494724ada70b4cf531fbfe99be77ca4f5b8b53bde886c2a3bf1febe6",
+    "tests/test_memory_transfer_analysis.py": "4e249b40cee08234142752ec58d38fda46c26c578a7ac1ed616471cf2258c335"
+  },
+  "actual_complete_grid_validated": false,
+  "registered_estimands_changed": false,
+  "rejections": [
+    "nonterminal grid",
+    "wrong deployment batch",
+    "extra case status",
+    "null-error status with conflicting simulation",
+    "official simulation/status reward disagreement",
+    "missing status",
+    "changed target input despite internally consistent input hash",
+    "unexpected worker manifest"
+  ],
+  "static_provenance_receipt_sha256": "dfd11668368374af95d2ed599ce8cbf32385df1c29d6bebc1bf5ee9bb192dd7d"
+}

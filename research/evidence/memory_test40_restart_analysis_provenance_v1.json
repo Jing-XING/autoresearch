@@ -1,0 +1,25 @@
+{
+  "purpose": "Resolve the unchanged memory study's original and restarted deployment bytes.",
+  "batch": "tau-memory-test40-ties-v2",
+  "registration_batch": "tau-memory-test40-ties-v1",
+  "revision": "tau-memory-test40-ties-code-v3",
+  "source_archive_sha256": "249d705c1ad71ad7d1434a1bc3ec393894965f6fd8ede4dfca1d87f642788cf9",
+  "source_archive_bytes": 102595,
+  "source_archive_members": 54,
+  "original_archive_sha256": "d7a23dbe7876d5bcc0d70738ef147c6b17908e39552d4ad7b6286980905f8b3a",
+  "original_members_preserved": 53,
+  "only_added_member": "scripts/restart_registered_queue_v2.py",
+  "supervisor_sha256": "413c2bab85fc8be7a457a916dfef3e63533d8f7cdbefd16a9a79c039058e039e",
+  "registration_sha256": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb",
+  "source_bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "registered_episodes": 560,
+  "bundle_sha256": "8eb10f3147eb1b8fac01aa2670ad49810bc81f101b4dbaef55bf210524b32c1f",
+  "provenance_inputs_sha256": {
+    "memory_test40_tie_registration_v1.json": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb",
+    "memory_test40_tie_deployment_v1.json": "d1d853451273f088dbb2431807c889d67a8e0e62b1234776e2b78ad72397aa17",
+    "research_queue_restart_amendment_v2.json": "f3132b527bafc7cc86bee861cf02d04f3d720e7d477d00278ab424abd55daa6e",
+    "research_queue_restart_deployment_v2.json": "926913a409c38df8373854193282e72f9c916bae118d931ff302483de333ed71"
+  },
+  "preparation_source_sha256": "42ef1988b5d702967231824ea3e453621269cd0ca274f7abf14d433003a609c4",
+  "scope": "Static deployment lineage only. No target outputs read; no claim of run completion."
+}

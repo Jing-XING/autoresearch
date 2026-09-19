@@ -66,6 +66,7 @@ def describe_tie_sensitivity(rows, registration):
         if len(group) > 1:
             duplicate_checks.append(dict(model=key[0], task_id=key[1], condition=key[2],
                 memory_text_sha256=key[3], tie_orders=[r['tie_order'] for r in group],
+                observed_model_io_for_all=all(r.get('initial_input_observed') is True for r in group),
                 identical_model_io=len({r['model_io_sha256'] for r in group}) == 1,
                 identical_recorded_rewards=len({r['reward'] for r in group}) == 1))
     return dict(treatment_effects=summaries, within_condition_tie_changes=within_arm,

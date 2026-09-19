@@ -37,3 +37,21 @@ because the official loader order differed from the registration; the second
 immutable code revision restores the same registered order after checking
 identity-set equality. No target inference preceded that repair. The queued
 experiment has no completed results available for manuscript claims yet.
+
+## Analysis integration check during execution
+
+Before reading any held-out target outcome, the current analyzer was aligned
+with the retained restart amendment. The derived provenance receipt proves
+that all 53 original archive members remain byte-identical and that only the
+new supervisor was added. The scientific registration is unchanged. The
+analyzer now distinguishes that registration ID from the actual batch ID
+and refuses an old or unrelated deployment receipt.
+
+Ten analysis tests pass, including a complete synthetic 560-status grid and
+rejection controls for incomplete, extra, conflicting and changed-input data.
+Runs with no first call remain failures and are explicitly excluded from
+claims of observed input equivalence. Joint outcome categories are reported
+alongside the unchanged gains/losses endpoint. These changes implement the
+registered analysis and its provenance checks; they provide no test40
+success rates or new experimental observations. See `reproduce.md` for the
+exact future complete-grid command and validation boundaries.
