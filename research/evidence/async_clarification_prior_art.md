@@ -44,3 +44,11 @@ and a strong dependency/scheduling baseline. Resource contention, stale
 read results or unsupported reply alternatives are possible questions, not
 asserted novelty. This note prevents implementing an already-described
 workflow under a new name.
+
+Additional method check: [A2H](https://arxiv.org/html/2602.15831v1),
+sections 3.2.1–3.2.2, distinguishes hard-block permission, soft-block
+clarification/solicitation, and non-blocking notification. Its asynchronous
+callback pattern saves state, suspends, and resumes upon reply. This is not
+itself a scheduler for useful actions during a pending reply. However, that
+distinction does not rescue the broad proposal from the closer Async I/O and
+Speculative Actions overlap above. No A2H implementation was run.
