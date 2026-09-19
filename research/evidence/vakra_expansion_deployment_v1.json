@@ -1,0 +1,31 @@
+{
+  "purpose": "Deployment record, not model results",
+  "batch": "vakra-expansion-v1",
+  "supervisor_pid": 5443,
+  "registered_episodes": 420,
+  "distinct_tasks": 70,
+  "domains": [
+    "cookbook",
+    "disney",
+    "genes",
+    "ice_hockey_draft"
+  ],
+  "models": [
+    "qwen3",
+    "qwen25",
+    "qwen30b"
+  ],
+  "status_observed": "waiting_for_dependencies",
+  "last_observed": "2026-09-19 18:53 CST",
+  "workers_started": 0,
+  "source_archive_bytes": 1487107,
+  "source_archive_members": 157,
+  "source_archive_sha256": "f76dae6430ca433afad53b39b1c54e67d777802d2f95dbcb1c81c674180fbc61",
+  "receipt_sha256": "a4849298b614aadc690d909ddda1e0db3264c089fd117f5a4e600cf95f596af8",
+  "remote_adapter_tests_passed": 17,
+  "local_initialization_tasks_passed": 70,
+  "dependency": "vakra-qwen30b-v1 complete and GPUs idle",
+  "answers_packaged_with_agent": false,
+  "sql_cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "inference_results_available": false
+}

@@ -1,0 +1,949 @@
+{
+  "purpose": "Measure explicit reference-answer serialization lengths before model outcomes.\n\nReference length is a resource-risk diagnostic, not a lower bound on every\nsemantically equivalent answer and not a reason to exclude registered tasks.\n",
+  "cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "tokenizer_model": "Qwen3-30B-A3B-Instruct-2507",
+  "tokenizers_version": "0.22.1",
+  "model_outputs_seen": false,
+  "rows": [
+    {
+      "domain": "cookbook",
+      "task_index": 0,
+      "uuid": "ec134bf7bda5-b3edb4cc82cf",
+      "answer_rows": 2,
+      "distinct_rows": 2,
+      "token_counts": {
+        "compact_rows_json": 10,
+        "line_separated_rows": 7,
+        "unique_rows_json": 10
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 1,
+      "uuid": "ec134bf7bda5-0e705a585aa7",
+      "answer_rows": 791,
+      "distinct_rows": 791,
+      "token_counts": {
+        "compact_rows_json": 5406,
+        "line_separated_rows": 5047,
+        "unique_rows_json": 5406
+      },
+      "all_three_renderings_over_512": true
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 2,
+      "uuid": "ec134bf7bda5-bade8cc81968",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 14,
+        "line_separated_rows": 11,
+        "unique_rows_json": 14
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 3,
+      "uuid": "ec134bf7bda5-982d9425d9e4",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 4,
+      "uuid": "ec134bf7bda5-1011b856b367",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 7,
+        "line_separated_rows": 5,
+        "unique_rows_json": 7
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 5,
+      "uuid": "ec134bf7bda5-537cccd2783b",
+      "answer_rows": 9,
+      "distinct_rows": 9,
+      "token_counts": {
+        "compact_rows_json": 33,
+        "line_separated_rows": 30,
+        "unique_rows_json": 33
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 6,
+      "uuid": "ec134bf7bda5-10e58f0006b9",
+      "answer_rows": 11,
+      "distinct_rows": 11,
+      "token_counts": {
+        "compact_rows_json": 43,
+        "line_separated_rows": 40,
+        "unique_rows_json": 43
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 7,
+      "uuid": "ec134bf7bda5-eca8886ccfb0",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 14,
+        "line_separated_rows": 11,
+        "unique_rows_json": 14
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 8,
+      "uuid": "ec134bf7bda5-07fb2facaba4",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 8,
+        "line_separated_rows": 6,
+        "unique_rows_json": 8
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 9,
+      "uuid": "ec134bf7bda5-582bd1f32c89",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 10,
+      "uuid": "ec134bf7bda5-ca1de2e0240f",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 17,
+        "line_separated_rows": 14,
+        "unique_rows_json": 17
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 11,
+      "uuid": "ec134bf7bda5-b10f8154ccac",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 20,
+        "line_separated_rows": 18,
+        "unique_rows_json": 20
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 12,
+      "uuid": "ec134bf7bda5-e7dc4aeee090",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 3,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 13,
+      "uuid": "ec134bf7bda5-8a501e6101b8",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 14,
+        "line_separated_rows": 11,
+        "unique_rows_json": 14
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 14,
+      "uuid": "ec134bf7bda5-9e1a038d7893",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 7,
+        "line_separated_rows": 3,
+        "unique_rows_json": 7
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 15,
+      "uuid": "ec134bf7bda5-58edfd6495e1",
+      "answer_rows": 10,
+      "distinct_rows": 10,
+      "token_counts": {
+        "compact_rows_json": 37,
+        "line_separated_rows": 34,
+        "unique_rows_json": 37
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 16,
+      "uuid": "ec134bf7bda5-a5599b1a398c",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 4,
+        "line_separated_rows": 2,
+        "unique_rows_json": 4
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 17,
+      "uuid": "ec134bf7bda5-9e5d85f41df0",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 18,
+      "uuid": "ec134bf7bda5-a6f458e57aa7",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 12,
+        "line_separated_rows": 9,
+        "unique_rows_json": 12
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 19,
+      "uuid": "ec134bf7bda5-ca41d01e3687",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 20,
+        "line_separated_rows": 18,
+        "unique_rows_json": 20
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 0,
+      "uuid": "34a533dfd727-fdd5b0e943a7",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 1,
+      "uuid": "34a533dfd727-03a08ac84ca2",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 3,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 2,
+      "uuid": "34a533dfd727-1bd5ad982571",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 3,
+      "uuid": "34a533dfd727-c0fb51d1e703",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 4,
+        "line_separated_rows": 1,
+        "unique_rows_json": 4
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 4,
+      "uuid": "34a533dfd727-c9b00cbda527",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 3,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 5,
+      "uuid": "34a533dfd727-dfaa807317f7",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 3,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 6,
+      "uuid": "34a533dfd727-585fc36cc9c6",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 13,
+        "line_separated_rows": 11,
+        "unique_rows_json": 13
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 7,
+      "uuid": "34a533dfd727-bdca886a5f4f",
+      "answer_rows": 2,
+      "distinct_rows": 2,
+      "token_counts": {
+        "compact_rows_json": 15,
+        "line_separated_rows": 12,
+        "unique_rows_json": 15
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 8,
+      "uuid": "34a533dfd727-8e9434bbcc3f",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 7,
+        "line_separated_rows": 4,
+        "unique_rows_json": 7
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 9,
+      "uuid": "34a533dfd727-51ddf26f6a96",
+      "answer_rows": 2,
+      "distinct_rows": 2,
+      "token_counts": {
+        "compact_rows_json": 12,
+        "line_separated_rows": 9,
+        "unique_rows_json": 12
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 10,
+      "uuid": "34a533dfd727-21513bce4a10",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 4,
+        "line_separated_rows": 1,
+        "unique_rows_json": 4
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 11,
+      "uuid": "34a533dfd727-667fe456f4a6",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 16,
+        "line_separated_rows": 13,
+        "unique_rows_json": 16
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 12,
+      "uuid": "34a533dfd727-af5556147a53",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 13,
+      "uuid": "34a533dfd727-f1c6994b7ed9",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 7,
+        "line_separated_rows": 4,
+        "unique_rows_json": 7
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 14,
+      "uuid": "34a533dfd727-fdd9457bce2a",
+      "answer_rows": 0,
+      "distinct_rows": 0,
+      "token_counts": {
+        "compact_rows_json": 1,
+        "line_separated_rows": 0,
+        "unique_rows_json": 1
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 15,
+      "uuid": "34a533dfd727-30444c866c6d",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 9,
+        "line_separated_rows": 6,
+        "unique_rows_json": 9
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 16,
+      "uuid": "34a533dfd727-4f24103e8871",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 12,
+        "line_separated_rows": 9,
+        "unique_rows_json": 12
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 17,
+      "uuid": "34a533dfd727-5ddf6e60c7cb",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 4,
+        "line_separated_rows": 1,
+        "unique_rows_json": 4
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 18,
+      "uuid": "34a533dfd727-7ab1eb405866",
+      "answer_rows": 5,
+      "distinct_rows": 5,
+      "token_counts": {
+        "compact_rows_json": 27,
+        "line_separated_rows": 24,
+        "unique_rows_json": 27
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "disney",
+      "task_index": 19,
+      "uuid": "34a533dfd727-7478b02e4420",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 2,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 0,
+      "uuid": "912d5f84749d-d2c0982ba770",
+      "answer_rows": 13,
+      "distinct_rows": 13,
+      "token_counts": {
+        "compact_rows_json": 32,
+        "line_separated_rows": 30,
+        "unique_rows_json": 32
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 1,
+      "uuid": "912d5f84749d-c59a6f6623dc",
+      "answer_rows": 3,
+      "distinct_rows": 3,
+      "token_counts": {
+        "compact_rows_json": 12,
+        "line_separated_rows": 9,
+        "unique_rows_json": 12
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 2,
+      "uuid": "912d5f84749d-2cae827e21f0",
+      "answer_rows": 8,
+      "distinct_rows": 8,
+      "token_counts": {
+        "compact_rows_json": 32,
+        "line_separated_rows": 29,
+        "unique_rows_json": 32
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 3,
+      "uuid": "912d5f84749d-1850a2b13bd5",
+      "answer_rows": 52,
+      "distinct_rows": 52,
+      "token_counts": {
+        "compact_rows_json": 418,
+        "line_separated_rows": 415,
+        "unique_rows_json": 418
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 4,
+      "uuid": "912d5f84749d-312780d3b08b",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 3,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 5,
+      "uuid": "912d5f84749d-18ae4d00c552",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 21,
+        "line_separated_rows": 19,
+        "unique_rows_json": 21
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 6,
+      "uuid": "912d5f84749d-71ab404b0168",
+      "answer_rows": 8,
+      "distinct_rows": 8,
+      "token_counts": {
+        "compact_rows_json": 54,
+        "line_separated_rows": 49,
+        "unique_rows_json": 54
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 7,
+      "uuid": "912d5f84749d-1c4e380e14a8",
+      "answer_rows": 3,
+      "distinct_rows": 3,
+      "token_counts": {
+        "compact_rows_json": 40,
+        "line_separated_rows": 36,
+        "unique_rows_json": 40
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 8,
+      "uuid": "912d5f84749d-0dde410e1733",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 3,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "genes",
+      "task_index": 9,
+      "uuid": "912d5f84749d-012dca6e2ef4",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 3,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 0,
+      "uuid": "d0d7be63ebc2-778e84fced89",
+      "answer_rows": 129,
+      "distinct_rows": 129,
+      "token_counts": {
+        "compact_rows_json": 649,
+        "line_separated_rows": 646,
+        "unique_rows_json": 649
+      },
+      "all_three_renderings_over_512": true
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 1,
+      "uuid": "d0d7be63ebc2-63835e742d17",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 2,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 2,
+      "uuid": "d0d7be63ebc2-beca7a5257a8",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 4,
+        "line_separated_rows": 2,
+        "unique_rows_json": 4
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 3,
+      "uuid": "d0d7be63ebc2-3838aca46ae6",
+      "answer_rows": 20,
+      "distinct_rows": 20,
+      "token_counts": {
+        "compact_rows_json": 186,
+        "line_separated_rows": 164,
+        "unique_rows_json": 186
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 4,
+      "uuid": "d0d7be63ebc2-b9965c45b7fe",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 3,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 5,
+      "uuid": "d0d7be63ebc2-e8645030ed93",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 9,
+        "line_separated_rows": 6,
+        "unique_rows_json": 9
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 6,
+      "uuid": "d0d7be63ebc2-008141f3490a",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 4,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 7,
+      "uuid": "d0d7be63ebc2-515feaea408d",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 12,
+        "line_separated_rows": 9,
+        "unique_rows_json": 12
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 8,
+      "uuid": "d0d7be63ebc2-d60121090e94",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 7,
+        "line_separated_rows": 4,
+        "unique_rows_json": 7
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 9,
+      "uuid": "d0d7be63ebc2-f467c8ea44a0",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 3,
+        "line_separated_rows": 1,
+        "unique_rows_json": 3
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 10,
+      "uuid": "d0d7be63ebc2-e36b927124b8",
+      "answer_rows": 0,
+      "distinct_rows": 0,
+      "token_counts": {
+        "compact_rows_json": 1,
+        "line_separated_rows": 0,
+        "unique_rows_json": 1
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 11,
+      "uuid": "d0d7be63ebc2-9ce449e8941d",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 3,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 12,
+      "uuid": "d0d7be63ebc2-84be12829fa3",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 9,
+        "line_separated_rows": 6,
+        "unique_rows_json": 9
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 13,
+      "uuid": "d0d7be63ebc2-3c637838c96c",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 6,
+        "line_separated_rows": 3,
+        "unique_rows_json": 6
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 14,
+      "uuid": "d0d7be63ebc2-b7cff310082f",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 5,
+        "line_separated_rows": 3,
+        "unique_rows_json": 5
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 15,
+      "uuid": "d0d7be63ebc2-243866e7be3b",
+      "answer_rows": 5,
+      "distinct_rows": 5,
+      "token_counts": {
+        "compact_rows_json": 36,
+        "line_separated_rows": 33,
+        "unique_rows_json": 36
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 16,
+      "uuid": "d0d7be63ebc2-2984bcb9f6c2",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 7,
+        "line_separated_rows": 4,
+        "unique_rows_json": 7
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 17,
+      "uuid": "d0d7be63ebc2-9d464b384280",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 8,
+        "line_separated_rows": 5,
+        "unique_rows_json": 8
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 18,
+      "uuid": "d0d7be63ebc2-1d02732fa592",
+      "answer_rows": 1,
+      "distinct_rows": 1,
+      "token_counts": {
+        "compact_rows_json": 4,
+        "line_separated_rows": 2,
+        "unique_rows_json": 4
+      },
+      "all_three_renderings_over_512": false
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 19,
+      "uuid": "d0d7be63ebc2-fe7eab9789f6",
+      "answer_rows": 0,
+      "distinct_rows": 0,
+      "token_counts": {
+        "compact_rows_json": 1,
+        "line_separated_rows": 0,
+        "unique_rows_json": 1
+      },
+      "all_three_renderings_over_512": false
+    }
+  ],
+  "flagged_tasks": [
+    {
+      "domain": "cookbook",
+      "task_index": 1,
+      "uuid": "ec134bf7bda5-0e705a585aa7",
+      "answer_rows": 791,
+      "distinct_rows": 791,
+      "token_counts": {
+        "compact_rows_json": 5406,
+        "line_separated_rows": 5047,
+        "unique_rows_json": 5406
+      },
+      "all_three_renderings_over_512": true
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 0,
+      "uuid": "d0d7be63ebc2-778e84fced89",
+      "answer_rows": 129,
+      "distinct_rows": 129,
+      "token_counts": {
+        "compact_rows_json": 649,
+        "line_separated_rows": 646,
+        "unique_rows_json": 649
+      },
+      "all_three_renderings_over_512": true
+    }
+  ],
+  "limits": "Does not prove a shortest-answer lower bound, measure tool-result input lengths, or evaluate generated answers. Auxiliary columns removed only as documented. No new exclusions, prompt changes or budget changes. Use this diagnostic when interpreting fixed-budget performance and later explicitly registered budget sensitivity."
+}

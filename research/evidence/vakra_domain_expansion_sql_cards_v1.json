@@ -1,0 +1,4555 @@
+{
+  "purpose": "Freeze inspectable SQL interpretations before new-domain model inference.\n\nThese are evaluator-authored interpretations, not official benchmark labels.\nAmbiguities are retained explicitly and never resolved using model outcomes.\n",
+  "setup_sha256": "35d164b716edf5c54ca93d81669975a55841c864ffbef1c3f180d1de25e84369",
+  "script_sha256": "59ed3e6898a835980e5155ded3f85d37913582ed19b47b14c6dce38bec53ca63",
+  "model_answers_seen": false,
+  "cards": [
+    {
+      "domain": "cookbook",
+      "task_index": 0,
+      "uuid": "ec134bf7bda5-b3edb4cc82cf",
+      "query": "What are the optional ingredients for Warm Chinese Chicken Salad?",
+      "sql": "SELECT DISTINCT i.name FROM Recipe r JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE r.title='Warm Chinese Chicken Salad' AND q.optional='TRUE' ORDER BY i.name",
+      "columns": [
+        "name"
+      ],
+      "answer_rows": [
+        [
+          "fresh cilantro"
+        ],
+        [
+          "sesame seeds"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 1,
+      "uuid": "ec134bf7bda5-0e705a585aa7",
+      "query": "List the names of alcohol free recipes.",
+      "sql": "SELECT r.title FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE n.alcohol=0 ORDER BY r.recipe_id",
+      "columns": [
+        "title"
+      ],
+      "answer_rows": [
+        [
+          "Raspberry Chiffon Pie"
+        ],
+        [
+          "Fresh Apricot Bavarian"
+        ],
+        [
+          "Fresh Peaches"
+        ],
+        [
+          "Canned Cherry Crisp"
+        ],
+        [
+          "Chocolate Cream Cheese Frosting"
+        ],
+        [
+          "Sweet Cherry Ice"
+        ],
+        [
+          "Iced Raspberry Mousse"
+        ],
+        [
+          "Kiwifruit Popsicles"
+        ],
+        [
+          "Dessert Fruit Pizza"
+        ],
+        [
+          "Blueberry Cobbler"
+        ],
+        [
+          "Apple Upside Down Cake"
+        ],
+        [
+          "Peaches Amaretto"
+        ],
+        [
+          "Homemade Cherry Pie Filling"
+        ],
+        [
+          "Raspberry-Pear Couscous Cake"
+        ],
+        [
+          "Apricot Almond Bread Pudding"
+        ],
+        [
+          "Oregon Hazelnut Crunch"
+        ],
+        [
+          "Apple Bean Cake"
+        ],
+        [
+          "Foil Baked Banana Peach Delight"
+        ],
+        [
+          "Apricot Meringue Tart"
+        ],
+        [
+          "Basic Blueberry Pie Filling"
+        ],
+        [
+          "Nectarine Meringue Crowns"
+        ],
+        [
+          "Cayuga Cookies"
+        ],
+        [
+          "Chewy Chocolate Hazelnut Cookies"
+        ],
+        [
+          "Oranges in Grand Marnier"
+        ],
+        [
+          "Citrus Pecan Topping"
+        ],
+        [
+          "Old-Fashioned Fresh Pear Pie"
+        ],
+        [
+          "Butterscotch Crispies"
+        ],
+        [
+          "Grated Sweet Potato Pudding"
+        ],
+        [
+          "Peach Granita"
+        ],
+        [
+          "Light Apple Cake"
+        ],
+        [
+          "Whole Wheat Sugar Cookies"
+        ],
+        [
+          "Oatmeal Cherry Braid"
+        ],
+        [
+          "Cranberry-Pear Crisp"
+        ],
+        [
+          "Mom's Nectarine Lattice Pie"
+        ],
+        [
+          "Bronx Brownies"
+        ],
+        [
+          "Oregon Hazelnut Brittle"
+        ],
+        [
+          "Tutti Fruitti Rice Pudding"
+        ],
+        [
+          "No-Bake Fruit Crisp"
+        ],
+        [
+          "Super Chocolatey Cupcakes"
+        ],
+        [
+          "Chocolate Dipping Sauce"
+        ],
+        [
+          "California Plum Sorbet"
+        ],
+        [
+          "Blueberry Crisp"
+        ],
+        [
+          "Cherry Yogurt Cheesecake"
+        ],
+        [
+          "Fudgy Date Pudding Cake"
+        ],
+        [
+          "Fruit a la Russe"
+        ],
+        [
+          "Heavenly Strawberry Cheesecake"
+        ],
+        [
+          "Fresh Peach Buttermilk Sherbet"
+        ],
+        [
+          "Peachy Orange Sorbet"
+        ],
+        [
+          "Marshmallow Peach Cake"
+        ],
+        [
+          "Golden Apricot Rice Pudding"
+        ],
+        [
+          "Fresh Peach Shortcake"
+        ],
+        [
+          "Bill's Bean Fudge"
+        ],
+        [
+          "Microwave Fudge"
+        ],
+        [
+          "Apple Whole Grain Bread Pudding"
+        ],
+        [
+          "Plum-Nectarine Ambrosia"
+        ],
+        [
+          "Open Sesame Blueberry Pie"
+        ],
+        [
+          "Southern Sweet Potato Pie"
+        ],
+        [
+          "Cantaloupe-Ginger Sorbet"
+        ],
+        [
+          "Sauteed Apple Slices"
+        ],
+        [
+          "Possible Pumpkin Pie"
+        ],
+        [
+          "Sweet Cherry Sauce"
+        ],
+        [
+          "Frozen Nectarine Yogurt"
+        ],
+        [
+          "Lemony Poached Golden Apples"
+        ],
+        [
+          "Old-Fashioned Peach Cobbler"
+        ],
+        [
+          "Banana Kiwi Pudding"
+        ],
+        [
+          "It's The Berries Pie"
+        ],
+        [
+          "Nectarine Carrot Picnic Cake"
+        ],
+        [
+          "Nectarine Lime Sorbet"
+        ],
+        [
+          "Strawberry Sorbet"
+        ],
+        [
+          "Peach Oatmeal Cookies"
+        ],
+        [
+          "Apricot Applesauce Cake"
+        ],
+        [
+          "Grape Frozen Yogurt"
+        ],
+        [
+          "California Summer Fruit Tart"
+        ],
+        [
+          "Very Berry Meringues"
+        ],
+        [
+          "Fresh Apricot Ice Cream"
+        ],
+        [
+          "Peach and Blueberry Crisp"
+        ],
+        [
+          "After School Fruit Cup"
+        ],
+        [
+          "Oh-So-Cool Lime Whip"
+        ],
+        [
+          "Buffalo Bread"
+        ],
+        [
+          "Blueberry Sauce"
+        ],
+        [
+          "Nectarine-Strawberry Shortcake Torte"
+        ],
+        [
+          "Blueberry Snack Bars"
+        ],
+        [
+          "Tart Cherry Salad Mold"
+        ],
+        [
+          "Quick Plum Buttermilk Loaf"
+        ],
+        [
+          "Peach Blueberry Crisp"
+        ],
+        [
+          "Swiss Blueberry Fool"
+        ],
+        [
+          "Orange Date Shake"
+        ],
+        [
+          "Quick Kiwifruit Refresher"
+        ],
+        [
+          "Applesauce the Easy Way"
+        ],
+        [
+          "Brussels Sprouts with Peppers and Potatoes"
+        ],
+        [
+          "Tomato-Cucumber Relish"
+        ],
+        [
+          "Idaho Potato Cream Sauce"
+        ],
+        [
+          "Spicy Cranberry and Peach Salad Mold"
+        ],
+        [
+          "Confetti Appleslaw"
+        ],
+        [
+          "Garden Soup"
+        ],
+        [
+          "Glazed Fruit Kabobs"
+        ],
+        [
+          "Armenian Spinach Plum Salad"
+        ],
+        [
+          "Honey Sesame Dressing"
+        ],
+        [
+          "Mushrooms Oriental"
+        ],
+        [
+          "Chinese Broccoli and Almonds"
+        ],
+        [
+          "Tangy Strawberry Soup"
+        ],
+        [
+          "Dilled Rice Salad"
+        ],
+        [
+          "St. Tropez Vegetables in Parchment"
+        ],
+        [
+          "Squash and Pepper Salad"
+        ],
+        [
+          "Sunshine Salad"
+        ],
+        [
+          "Texas Cabbage Fruit Salad"
+        ],
+        [
+          "Black and White Bean Salad"
+        ],
+        [
+          "Creamy Vegetable Dip"
+        ],
+        [
+          "Tangy Cucumber Salad"
+        ],
+        [
+          "Yogurt Potato Salad"
+        ],
+        [
+          "Artichoke Rice Salad"
+        ],
+        [
+          "Steamed Sweet Potatoes"
+        ],
+        [
+          "Zucchini"
+        ],
+        [
+          "Provencale Tomato and Potato Soup"
+        ],
+        [
+          "Butternut Squash Souffle"
+        ],
+        [
+          "Mixed Sweet Bell Peppper & California Avocado Salad"
+        ],
+        [
+          "Fruit Soup"
+        ],
+        [
+          "Citrus Salad with California Avocado"
+        ],
+        [
+          "Pistachio-Stuffed Baked Apples"
+        ],
+        [
+          "Oriental Curry Veggies"
+        ],
+        [
+          "California Avocado and Mushroom Salad"
+        ],
+        [
+          "Green Beans with Mushrooms"
+        ],
+        [
+          "Tomato Stuffed Potatoes"
+        ],
+        [
+          "Very Berry Salad"
+        ],
+        [
+          "Western Spinach Salad"
+        ],
+        [
+          "Fast Pea Soup"
+        ],
+        [
+          "Potato Vegetable Salad"
+        ],
+        [
+          "Green Bean Almond Rice"
+        ],
+        [
+          "Lowfat Date Yogurt Shake"
+        ],
+        [
+          "Fresh Tomato Sauce"
+        ],
+        [
+          "Slim Spud Slices"
+        ],
+        [
+          "Spinach Balls"
+        ],
+        [
+          "Greek Stuffed Potato"
+        ],
+        [
+          "Apple-Grape Salad"
+        ],
+        [
+          "Green Apple-Tomatillo Sauce"
+        ],
+        [
+          "Warm Broccoli-Potato Salad"
+        ],
+        [
+          "Red Cabbage"
+        ],
+        [
+          "Cherry-Berry Conserve"
+        ],
+        [
+          "Cherry Ambrosia Salad"
+        ],
+        [
+          "Microwave Sweet Potato Chips"
+        ],
+        [
+          "Tropical Date Shake"
+        ],
+        [
+          "Moist Golden Cornbread"
+        ],
+        [
+          "Oven Fries"
+        ],
+        [
+          "Red Onion Potato Salad"
+        ],
+        [
+          "Cream of Broccoli Soup"
+        ],
+        [
+          "East Meets West Salad"
+        ],
+        [
+          "Apricot and Walnut Brown Rice Stuffing"
+        ],
+        [
+          "French Potato Salad"
+        ],
+        [
+          "Orange Spaghetti Squash"
+        ],
+        [
+          "Cherry Smoothie"
+        ],
+        [
+          "Slimline Blue Cheese Dressing and Dip"
+        ],
+        [
+          "Squash Rolls"
+        ],
+        [
+          "California Marinated Salad"
+        ],
+        [
+          "Ratatouille"
+        ],
+        [
+          "Pear-Yogurt Shake"
+        ],
+        [
+          " Kiwi Fruit, Orange and Avocado Salad "
+        ],
+        [
+          "Steamed Pears"
+        ],
+        [
+          "Texas Barbecue Potatoes"
+        ],
+        [
+          "Pistachio Fruits and Fun"
+        ],
+        [
+          " Microwave Glazed Carrots, Apples and Zucchini "
+        ],
+        [
+          "Honeydew Melon Shake"
+        ],
+        [
+          "Tomato Pilaf"
+        ],
+        [
+          "Strawberry-Banana Shake"
+        ],
+        [
+          "Herbed Vegetable Combo"
+        ],
+        [
+          "Puree of Potatoes and Parsnips"
+        ],
+        [
+          "Pepper Relish"
+        ],
+        [
+          "Mint-Glazed Carrots and Snow Peas"
+        ],
+        [
+          "Vegetable Packets"
+        ],
+        [
+          "Brown Rice Royal"
+        ],
+        [
+          "Lite 'n Lovely Gelatin Salad"
+        ],
+        [
+          "Steamed Carrots with Apricots"
+        ],
+        [
+          "Confetti Potato Salad"
+        ],
+        [
+          "Cherry Sweet Potatoes"
+        ],
+        [
+          "Acorn Squash and Apple Puree"
+        ],
+        [
+          "Harvest Rice"
+        ],
+        [
+          "Tote-Along Dressing"
+        ],
+        [
+          "Beef Brisket"
+        ],
+        [
+          "Beef and Two Pepper Stew"
+        ],
+        [
+          "Sherried Steak Strips"
+        ],
+        [
+          "Steak and Pepper Sandwiches"
+        ],
+        [
+          "Lamb Stew Provencal"
+        ],
+        [
+          "Butterflied Lamb Leg"
+        ],
+        [
+          "Quick Spanish Rice"
+        ],
+        [
+          "Zesty Lamb Taco Casserole"
+        ],
+        [
+          "Quick Lamb and Pasta Dinner Skillet"
+        ],
+        [
+          "Microwavable Savory Lamb Potatoes"
+        ],
+        [
+          "Warm Moroccan Potato Lamb Salad"
+        ],
+        [
+          "Mesa Lamb and Bean Salad"
+        ],
+        [
+          "Mandarin Lamb with Oriental Noodles"
+        ],
+        [
+          "Lamb Tortellini Minestrone"
+        ],
+        [
+          "Stir Fry Vegetables"
+        ],
+        [
+          "Boonville Baked Beans"
+        ],
+        [
+          "Baja Beef and Pistachio Plate"
+        ],
+        [
+          "Italian-Style Pistachio Pasta"
+        ],
+        [
+          "Middle Eastern Meatballs"
+        ],
+        [
+          "Spinach Salad with Fruit and Beef"
+        ],
+        [
+          "Thai-Style Beef Salad"
+        ],
+        [
+          "Mediterranean Beef Stew"
+        ],
+        [
+          "Beef Fajitas"
+        ],
+        [
+          "Beef Pizza"
+        ],
+        [
+          "Beef and Spinach Pita Pockets"
+        ],
+        [
+          "Ginger-Orange Barbecued Beef Back Ribs"
+        ],
+        [
+          "Roast Beef Pita Bread Sandwich"
+        ],
+        [
+          "Soft Taco"
+        ],
+        [
+          "Sesame Potato Sticks with Oriental Beef and Peppers"
+        ],
+        [
+          "Potato Sticks with Glazed Pork and Cabbage"
+        ],
+        [
+          "Western Pork Barbecue Supper"
+        ],
+        [
+          "Beef Jambalaya"
+        ],
+        [
+          "Spicy Beef Tortillas"
+        ],
+        [
+          "Summertime Beef Salad"
+        ],
+        [
+          "Apricot Relish Steak"
+        ],
+        [
+          "Meatball-Rice Soup"
+        ],
+        [
+          "Light and Colorful Stuffed Peppers"
+        ],
+        [
+          "Citrus Beef Ribbons"
+        ],
+        [
+          "Ranch-Style Beans"
+        ],
+        [
+          "Mushroom and Beef Stir-Up"
+        ],
+        [
+          "Sweet Potato-Sausage Casserole"
+        ],
+        [
+          "Summer Beef Salad"
+        ],
+        [
+          "Oriental Pork and Beans"
+        ],
+        [
+          "Southwestern Black Beans and Rice"
+        ],
+        [
+          "Strawberry-Pork Salad"
+        ],
+        [
+          "Italian Brunch Rice"
+        ],
+        [
+          "Kabobs with Thyme Rice"
+        ],
+        [
+          "Spiced Pork and Apples"
+        ],
+        [
+          "Gingered Beef Stir Fry"
+        ],
+        [
+          "Five-Spice Fried Rice"
+        ],
+        [
+          "Vegetable Pork Stir-Fry"
+        ],
+        [
+          "Sherried Beef"
+        ],
+        [
+          "Holiday Stuffed Pork Roast"
+        ],
+        [
+          "Hot Hoppin' John Salad"
+        ],
+        [
+          "Peach Pita Sandwiches"
+        ],
+        [
+          "Sweet'N'Sour Pot Roast"
+        ],
+        [
+          "Mock Enchilada Casserole"
+        ],
+        [
+          "Ham Hock and Lima Bean Soup"
+        ],
+        [
+          "Ham and Bean Soup"
+        ],
+        [
+          "Hearty Ribs and Bean Bake"
+        ],
+        [
+          "Greek-Style Beans and Lamb"
+        ],
+        [
+          "Hoppin' John"
+        ],
+        [
+          "Pioneer Bean Pot"
+        ],
+        [
+          "Mexican-Style Bean Sandwiches"
+        ],
+        [
+          "Bean Soup Romana"
+        ],
+        [
+          "Stir-Fry Pork and Apricots"
+        ],
+        [
+          "Peppered Beef Tenderloin Bundles"
+        ],
+        [
+          " Tomato, Pork and Pepper Kabob "
+        ],
+        [
+          "Oriental Pork"
+        ],
+        [
+          "Hazelnut Beef Stir Fry"
+        ],
+        [
+          "Noodle-Crusted Quiche Noel"
+        ],
+        [
+          "Sweet and Sour Cherry Ham Salad"
+        ],
+        [
+          "Pears and Ribs in Honey Sauce"
+        ],
+        [
+          " Hearty Roast Beef, Pear and Pea Pod Salad "
+        ],
+        [
+          "Lime-Basted Lamb Kabobs"
+        ],
+        [
+          "Tandoori Pork Saute"
+        ],
+        [
+          "Nectarine Beef Saute"
+        ],
+        [
+          "Southwest Spaghetti Pie"
+        ],
+        [
+          "German Egg Noodle and Meatball Soup"
+        ],
+        [
+          "Orzo and Pumpkin Soup with Sage"
+        ],
+        [
+          "Fettuccine with Lamb and Mint"
+        ],
+        [
+          "Texas Chili 'n Pasta"
+        ],
+        [
+          "Baked Beans"
+        ],
+        [
+          "Sweet and Sour Barbecue Sauce"
+        ],
+        [
+          "Western Beans and Rice"
+        ],
+        [
+          "Moroccan Egg Salad"
+        ],
+        [
+          "Three Cheese Potatoes"
+        ],
+        [
+          "Asparagus Mushroom Frittata"
+        ],
+        [
+          "Hot or Cold Layered Potato Salad"
+        ],
+        [
+          "Pasta and Walnut Fruit Salad"
+        ],
+        [
+          "Springsweet Texas Onion Caviar"
+        ],
+        [
+          "Spaghetti Squash"
+        ],
+        [
+          "Pear Waldorf Salad"
+        ],
+        [
+          "Plum Wild Rice"
+        ],
+        [
+          "Greek Beans 'n Eggs"
+        ],
+        [
+          "Spicy Vegetarian Chili"
+        ],
+        [
+          "Fettuccine with Walnuts and California Avocado"
+        ],
+        [
+          "Pasta-Veggie Scramble"
+        ],
+        [
+          "Rice Primavera"
+        ],
+        [
+          "Apple Stuffed Squash"
+        ],
+        [
+          "Basil Tomato Salad"
+        ],
+        [
+          "Pasta Pizza"
+        ],
+        [
+          "Avocado Pizza Pie"
+        ],
+        [
+          "Cheese Stuffed Tomatoes"
+        ],
+        [
+          "California Quesadilla"
+        ],
+        [
+          "California Sunshine Salad"
+        ],
+        [
+          "Homemade Corn Tortillas"
+        ],
+        [
+          "Brunch Rice"
+        ],
+        [
+          "Sherried Black Bean Soup"
+        ],
+        [
+          "Italian Stuffed Tomato Salad"
+        ],
+        [
+          "California Tree Fruit Salad with Honey-Vanilla Dressing"
+        ],
+        [
+          "Deep Dish Vegetable Pizza"
+        ],
+        [
+          "Broccoli Amandine"
+        ],
+        [
+          "Mushroom and Spinach Lasagne"
+        ],
+        [
+          "Brown Rice and Lentil Stew"
+        ],
+        [
+          "Warm Tomato-Pepper Pasta"
+        ],
+        [
+          "Curried Bean and Rice Salad"
+        ],
+        [
+          "Lasagne-Spinach Spirals"
+        ],
+        [
+          "Mama's Macaroni and Cheese"
+        ],
+        [
+          "Party-Fare Pistachio Pasta"
+        ],
+        [
+          "Rice Gazpacho"
+        ],
+        [
+          "Squash Stuffed with Rice"
+        ],
+        [
+          "Cheese and Chili Skins"
+        ],
+        [
+          "Stewed Tomatoes with Chickpeas"
+        ],
+        [
+          "Meatless Chili"
+        ],
+        [
+          "Santa Fe Salad"
+        ],
+        [
+          "Ratatouille Pasta"
+        ],
+        [
+          "Frijoles Rancheros"
+        ],
+        [
+          "Tuscan Bean Salad"
+        ],
+        [
+          "Bryani"
+        ],
+        [
+          "Fresh Greens with Honey and Oranges"
+        ],
+        [
+          "Pear Brown Rice"
+        ],
+        [
+          "Bake Mine Vegetarian"
+        ],
+        [
+          "Fresh Greens with Pasta"
+        ],
+        [
+          "Mixed Bean Salad"
+        ],
+        [
+          "V-Egg-ie Good Pocket Sandwich"
+        ],
+        [
+          "Spring Butterflies"
+        ],
+        [
+          "Summer Vegetable Paella"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives "
+        ],
+        [
+          "Star-Studded Tomatoes"
+        ],
+        [
+          "Cheery Cherry Pasta Salad"
+        ],
+        [
+          "Double Corn Brunch Bake"
+        ],
+        [
+          "Slenderized Vichyssoise"
+        ],
+        [
+          "Peach Spinach Salad"
+        ],
+        [
+          "Gruyere Sauced Potatoes"
+        ],
+        [
+          "Spaghetti with Eggplant Sauce"
+        ],
+        [
+          "Bean Burritos"
+        ],
+        [
+          "6 Bean Soup"
+        ],
+        [
+          "Keep 'em Low-Cal Topping"
+        ],
+        [
+          "Tofu Baked Ziti"
+        ],
+        [
+          "Mexican Fiesta Quiche"
+        ],
+        [
+          "Corn Chowder"
+        ],
+        [
+          "Plum Ratatouille"
+        ],
+        [
+          " White Bean, Olive and Tomato Salad "
+        ],
+        [
+          "Apple Brown Rice Stuffing"
+        ],
+        [
+          "Top Hat Pizza"
+        ],
+        [
+          "Snappy Bean Dip"
+        ],
+        [
+          "Artichoke and Mushroom Phyllo Pockets"
+        ],
+        [
+          "Crunchy Wild Rice Pilaf"
+        ],
+        [
+          "Three-Peas-in-a-Pasta"
+        ],
+        [
+          "Hazelnut Stuffed French Bread"
+        ],
+        [
+          "Stuffed Baked Potato"
+        ],
+        [
+          "Springtime Pasta"
+        ],
+        [
+          "Tortellini and Artichokes in Garlic Cream Sauce"
+        ],
+        [
+          "Fresh Tomato and Red Pepper Sauce"
+        ],
+        [
+          "Lentil and Rice Salad"
+        ],
+        [
+          "Hazelnut Medley"
+        ],
+        [
+          "Sheepherder's Hearty Soup"
+        ],
+        [
+          "Pasta Stuffed Tomatoes"
+        ],
+        [
+          "Oriental Stuffed Tomatoes"
+        ],
+        [
+          "Black Bean and Rice Salad"
+        ],
+        [
+          "Asparagus and Herb-Scrambled Egg"
+        ],
+        [
+          "White Bean Pistachio Salad Vinaigrette"
+        ],
+        [
+          "Sicilian Deep Dish Pizza"
+        ],
+        [
+          "New Zealand Brown Rice Salad"
+        ],
+        [
+          "Pizza in a Tomato Shell"
+        ],
+        [
+          "-Sauteed Mushrooms-"
+        ],
+        [
+          "-Steamed Broccoli-"
+        ],
+        [
+          "-Green Beans and New Potatoes-"
+        ],
+        [
+          "-Steamed or Sauteed Zucchini-"
+        ],
+        [
+          "-Corn on the Cob-"
+        ],
+        [
+          "-Baked Potatoes-"
+        ],
+        [
+          "-Boiled or Mashed Potatoes-"
+        ],
+        [
+          "-Baked Sweet Potatoes-"
+        ],
+        [
+          "-Boiled or Mashed Sweet Potato-"
+        ],
+        [
+          "-Fresh Green Peas-"
+        ],
+        [
+          "-Boiled Fresh Snow Peas-"
+        ],
+        [
+          "-Asparagus Spears-"
+        ],
+        [
+          "-Beets-"
+        ],
+        [
+          "-Brussels Sprouts-"
+        ],
+        [
+          "-Cooked Cabbage-"
+        ],
+        [
+          "-Cooked Carrots-"
+        ],
+        [
+          "-Cauliflower-"
+        ],
+        [
+          "-Swiss Chard-"
+        ],
+        [
+          "-Broiled Eggplant-"
+        ],
+        [
+          "-Jicama-"
+        ],
+        [
+          "-Kale-"
+        ],
+        [
+          "-Frozen Lima Beans-"
+        ],
+        [
+          "-Creamed Corn-"
+        ],
+        [
+          "-Steamed Okra-"
+        ],
+        [
+          "-Boiled Onions-"
+        ],
+        [
+          "-Boiled Parsnips-"
+        ],
+        [
+          "-Sauteed Green Peppers-"
+        ],
+        [
+          "-Boiled Rutabaga-"
+        ],
+        [
+          "-Spinach-"
+        ],
+        [
+          "-Fresh Tomatoes-"
+        ],
+        [
+          "-Turnips-"
+        ],
+        [
+          "-Turnip Greens-"
+        ],
+        [
+          "-Cucumbers-"
+        ],
+        [
+          "-Iceberg Lettuce-"
+        ],
+        [
+          "-Celery Sticks-"
+        ],
+        [
+          "-Carrot Sticks-"
+        ],
+        [
+          "Applesauce"
+        ],
+        [
+          "-Bananas-"
+        ],
+        [
+          "-Apples-"
+        ],
+        [
+          "-Apricots-"
+        ],
+        [
+          "-Avocados-"
+        ],
+        [
+          "-Berries-"
+        ],
+        [
+          "-Blueberries-"
+        ],
+        [
+          "-Strawberries-"
+        ],
+        [
+          "-Cranberries-"
+        ],
+        [
+          "-Raspberries-"
+        ],
+        [
+          "-Sweet Cherries-"
+        ],
+        [
+          "-Figs-"
+        ],
+        [
+          "-Grapefruit-"
+        ],
+        [
+          "-Grapes-"
+        ],
+        [
+          "-Kiwi Fruit-"
+        ],
+        [
+          "-Kumquats-"
+        ],
+        [
+          "-Cantaloupe-"
+        ],
+        [
+          "-Casaba Melon-"
+        ],
+        [
+          "-Honeydew Melon-"
+        ],
+        [
+          "-Watermelon-"
+        ],
+        [
+          "-Nectarines-"
+        ],
+        [
+          "-Oranges-"
+        ],
+        [
+          "-Papayas-"
+        ],
+        [
+          "-Peaches-"
+        ],
+        [
+          "-Pears-"
+        ],
+        [
+          "-Persimmons-"
+        ],
+        [
+          "-Fresh Pineapple-"
+        ],
+        [
+          "-Plums-"
+        ],
+        [
+          "-Pomegranates-"
+        ],
+        [
+          "-Stewed Rhubarb-"
+        ],
+        [
+          "-Tangerines-"
+        ],
+        [
+          "-Dates-"
+        ],
+        [
+          "-Raisins-"
+        ],
+        [
+          "-Stewed Prunes-"
+        ],
+        [
+          "-Mangoes-"
+        ],
+        [
+          "-Asian Pears-"
+        ],
+        [
+          "-Steamed Artichokes-"
+        ],
+        [
+          "-Steamed Bok Choy-"
+        ],
+        [
+          "-Canned Peaches-"
+        ],
+        [
+          "-Canned Pears-"
+        ],
+        [
+          "-Unsweetened Canned Pineapple-"
+        ],
+        [
+          "-Canned Fruit Cocktail-"
+        ],
+        [
+          "-Canned Plums-"
+        ],
+        [
+          "-Canned Apricots-"
+        ],
+        [
+          "-Canned Sweet Cherries-"
+        ],
+        [
+          "-Canned Mandarin Oranges-"
+        ],
+        [
+          "-Canned Grapefruit Slices-"
+        ],
+        [
+          "-Canned Cranberry Sauce-"
+        ],
+        [
+          "-Canned Blueberries-"
+        ],
+        [
+          "-Canned Blackberries-"
+        ],
+        [
+          "-Canned Peas-"
+        ],
+        [
+          "-Canned Cut Green Beans-"
+        ],
+        [
+          "-Canned French Green Beans-"
+        ],
+        [
+          "-Canned Corn-"
+        ],
+        [
+          "-Canned Beets-"
+        ],
+        [
+          "-Canned Yams-"
+        ],
+        [
+          "-Canned Asparagus-"
+        ],
+        [
+          "-Canned Lima Beans-"
+        ],
+        [
+          "-Canned Spinach-"
+        ],
+        [
+          "-Canned Carrots-"
+        ],
+        [
+          "-Canned Tomatoes-"
+        ],
+        [
+          "-Brown Rice-"
+        ],
+        [
+          "-White Rice-"
+        ],
+        [
+          "-Polenta-"
+        ],
+        [
+          "-Steamed Barley-"
+        ],
+        [
+          "-Hominy Grits-"
+        ],
+        [
+          "-Whole Hominy-"
+        ],
+        [
+          "-Millet-"
+        ],
+        [
+          "-Rolled Oats-"
+        ],
+        [
+          "-Pasta-"
+        ],
+        [
+          "-Noodles-"
+        ],
+        [
+          "-Macaroni-"
+        ],
+        [
+          "-Wild Rice-"
+        ],
+        [
+          "-Whole Wheat Bread-"
+        ],
+        [
+          "-Enriched White Bread-"
+        ],
+        [
+          "-French Bread-"
+        ],
+        [
+          "-Italian Bread-"
+        ],
+        [
+          "-Rye Bread-"
+        ],
+        [
+          "-Soda Crackers-"
+        ],
+        [
+          "-Wheat Thins Crackers-"
+        ],
+        [
+          "-Ritz Crackers-"
+        ],
+        [
+          "-Butter Crackers-"
+        ],
+        [
+          "-Cheese Crackers-"
+        ],
+        [
+          "-Oyster Crackers-"
+        ],
+        [
+          "-Graham Crackers-"
+        ],
+        [
+          "-Animal Crackers-"
+        ],
+        [
+          "-Flour Tortillas-"
+        ],
+        [
+          "-Corn Tortillas-"
+        ],
+        [
+          "-Bagels-"
+        ],
+        [
+          "-Pumpernickel Bread-"
+        ],
+        [
+          "-Malt-O-Meal-"
+        ],
+        [
+          "-Cream of Wheat-"
+        ],
+        [
+          "-Hot Oat Bran Cereal-"
+        ],
+        [
+          "-Black Beans-"
+        ],
+        [
+          "-Baby Lima Beans-"
+        ],
+        [
+          "-Great Northern Beans-"
+        ],
+        [
+          "-Black-Eyed Peas-"
+        ],
+        [
+          "-Garbanzo Beans-"
+        ],
+        [
+          "-Kidney Beans-"
+        ],
+        [
+          "-Lentils-"
+        ],
+        [
+          "-Pinto Beans-"
+        ],
+        [
+          "-Navy Beans-"
+        ],
+        [
+          "-Split Peas-"
+        ],
+        [
+          "-Tea-"
+        ],
+        [
+          "-Coffee-"
+        ],
+        [
+          "-Cappuccino-"
+        ],
+        [
+          "-Cafe Mocha-"
+        ],
+        [
+          "-Herb Tea-"
+        ],
+        [
+          "-Orange Juice-"
+        ],
+        [
+          "-Apple Juice-"
+        ],
+        [
+          "-Grapefruit Juice-"
+        ],
+        [
+          "-Lemonade-"
+        ],
+        [
+          "-Limeade-"
+        ],
+        [
+          "-Cranberry Juice Cocktail-"
+        ],
+        [
+          "-Grape Juice-"
+        ],
+        [
+          "-Buttermilk-"
+        ],
+        [
+          "-Whole Milk-"
+        ],
+        [
+          "-2% Lowfat Milk-"
+        ],
+        [
+          "-1% Lowfat Milk-"
+        ],
+        [
+          "-Skim Milk-"
+        ],
+        [
+          "-Chocolate Milk Shake-"
+        ],
+        [
+          "-Vanilla Milk Shake-"
+        ],
+        [
+          "-Hot Chocolate-"
+        ],
+        [
+          "-Chocolate Milk-"
+        ],
+        [
+          "-Cola Drink-"
+        ],
+        [
+          "-Diet Soda Drink-"
+        ],
+        [
+          "-Club Soda-"
+        ],
+        [
+          "-Lemon-Lime Soda-"
+        ],
+        [
+          "-Lowfat Fruit Yogurt-"
+        ],
+        [
+          "-Nonfat Yogurt with Fruit-"
+        ],
+        [
+          "-Catsup-"
+        ],
+        [
+          "-Prepared Horseradish-"
+        ],
+        [
+          "-Prepared Mustard-"
+        ],
+        [
+          "-Dill Pickle-"
+        ],
+        [
+          "-Sweet Pickle-"
+        ],
+        [
+          "-Barbecue Sauce-"
+        ],
+        [
+          "-Soy Sauce-"
+        ],
+        [
+          "-Teriyaki Sauce-"
+        ],
+        [
+          "-Honey-"
+        ],
+        [
+          "-Jam-"
+        ],
+        [
+          "-Brown Sugar-"
+        ],
+        [
+          "-White Granulated Sugar-"
+        ],
+        [
+          "-Maple Flavored Syrup-"
+        ],
+        [
+          "-Blackstrap Molasses-"
+        ],
+        [
+          "-Peanut Butter-"
+        ],
+        [
+          "-Mayonnaise-"
+        ],
+        [
+          "-Low-Calorie Mayonnaise-"
+        ],
+        [
+          "-Blue Cheese Salad Dressing-"
+        ],
+        [
+          "-Low-Calorie Blue Cheese Salad Dressing-"
+        ],
+        [
+          "-French Salad Dressing-"
+        ],
+        [
+          "-Low-Calorie French Salad Dressing-"
+        ],
+        [
+          "-Italian Salad Dressing-"
+        ],
+        [
+          "-Low-Calorie Italian Salad Dressing-"
+        ],
+        [
+          "-Thousand Island Salad Dressing-"
+        ],
+        [
+          "-Low-Cal Thousand Island Salad Dressing-"
+        ],
+        [
+          "-Ranch Style Salad Dressing-"
+        ],
+        [
+          "-Low-Calorie Ranch Style Salad Dressing-"
+        ],
+        [
+          "-Steak Sauce-"
+        ],
+        [
+          "-Lowfat Cottage Cheese-"
+        ],
+        [
+          "-Dry Curd Cottage Cheese-"
+        ],
+        [
+          "-Whole Dry Roasted Almonds-"
+        ],
+        [
+          "-Whole Unsalted Cashew Nuts-"
+        ],
+        [
+          " -Dry Roasted, Salted Mixed Nuts- "
+        ],
+        [
+          " -Roasted, Salted Peanuts- "
+        ],
+        [
+          " -Dry Roasted, Unsalted Peanuts- "
+        ],
+        [
+          " -Dried, Unsalted Pecan Halves- "
+        ],
+        [
+          " -Dried, Unshelled Pistachio Nuts- "
+        ],
+        [
+          "-Dry Roasted Sunflower Seeds-"
+        ],
+        [
+          "-Corn Chips-"
+        ],
+        [
+          "-Tortilla Chips-"
+        ],
+        [
+          "-Pretzel Twists-"
+        ],
+        [
+          "-Potato Chips-"
+        ],
+        [
+          "-All-Bran Cereal-"
+        ],
+        [
+          "-Cheerios Cereal-"
+        ],
+        [
+          "-Corn Flakes Cereal-"
+        ],
+        [
+          "-Raisin Bran Cereal-"
+        ],
+        [
+          "-Grape Nuts Cereal-"
+        ],
+        [
+          "-Special K Cereal-"
+        ],
+        [
+          "-Shredded Wheat Cereal-"
+        ],
+        [
+          "-Wheaties Cereal-"
+        ],
+        [
+          "-Cheddar Cheese-"
+        ],
+        [
+          "-Swiss Cheese-"
+        ],
+        [
+          "-Mozzarella Cheese-"
+        ],
+        [
+          "-Monterey Jack Cheese-"
+        ],
+        [
+          "-American Processed Cheese-"
+        ],
+        [
+          "-Cream Cheese-"
+        ],
+        [
+          "-Parmesan Cheese-"
+        ],
+        [
+          "-Turkey Bologna-"
+        ],
+        [
+          "-Sliced Beef Lunchmeat-"
+        ],
+        [
+          "-Sliced Ham-"
+        ],
+        [
+          "-Hamburger Patty-"
+        ],
+        [
+          "Healthclub Chicken Salad"
+        ],
+        [
+          "Saffron Rice Salad"
+        ],
+        [
+          "Turkey Pot Roast"
+        ],
+        [
+          "Pop's Crusty Chicken"
+        ],
+        [
+          "Turkey with Orange"
+        ],
+        [
+          "Tart and Tasty Stuffing"
+        ],
+        [
+          "Turkey Citrus Salad"
+        ],
+        [
+          "Chicken-Pistachio Roll-Ups"
+        ],
+        [
+          "Warm Chinese Chicken Salad"
+        ],
+        [
+          "Chicken Lentil Salad"
+        ],
+        [
+          "Tropical Stuffed Cornish Hens"
+        ],
+        [
+          "Turkey Ring Meatloaf"
+        ],
+        [
+          "Apple-Stuffed Turkey Tenderloins"
+        ],
+        [
+          "Chicken and Rice Casserole with Summer Vegetables"
+        ],
+        [
+          "Turkey Spaghetti Pie"
+        ],
+        [
+          "Smoked Chicken Pizza"
+        ],
+        [
+          "Gourmet Chicken Bake"
+        ],
+        [
+          "Chicken Chutney Salad"
+        ],
+        [
+          "Brown Rice Waldorf Salad"
+        ],
+        [
+          "Idaho Potato Supreme"
+        ],
+        [
+          "Turkey Pockets Al Greco"
+        ],
+        [
+          "Chicken Spiral Pasta Salad"
+        ],
+        [
+          "Chicken Paprika"
+        ],
+        [
+          "Chicken Nachos"
+        ],
+        [
+          "Chicken Zucchini Stew"
+        ],
+        [
+          "Apple Pie Turkey Salad"
+        ],
+        [
+          "Turkey Parmigiana"
+        ],
+        [
+          "Polynesian Pineapple Turkey"
+        ],
+        [
+          "Tomato Cajun Chicken Salad"
+        ],
+        [
+          "Chicken Provencale"
+        ],
+        [
+          "Chicken Parmiagiana Spud"
+        ],
+        [
+          "Lemon Rice"
+        ],
+        [
+          "Southern Sweet Potato Chicken"
+        ],
+        [
+          "Jambalaya"
+        ],
+        [
+          "Poached Turkey Tenderloins with Tarragon Sauce"
+        ],
+        [
+          "Chunky Chicken and Cucumber Salad"
+        ],
+        [
+          "Breast of Chicken Italian"
+        ],
+        [
+          "Poached Turkey Normandy"
+        ],
+        [
+          "Hawaiian Turkey Salad"
+        ],
+        [
+          "Dad's Favorite Turkey Kebabs"
+        ],
+        [
+          "New England Turkey Chowder"
+        ],
+        [
+          "Red Square Pistachio Stir Fry"
+        ],
+        [
+          "Savory Grilled Peaches"
+        ],
+        [
+          "Scandinavian Chicken Soup"
+        ],
+        [
+          "Easy Skillet Chicken"
+        ],
+        [
+          "Chicken Rice Medley"
+        ],
+        [
+          "Turkey Kabobs"
+        ],
+        [
+          "Turkey Ham Strata"
+        ],
+        [
+          "Barbecued Chicken on a Bun"
+        ],
+        [
+          "Pistachio Turkey Taco Salad"
+        ],
+        [
+          "Turkey Rice Burgers"
+        ],
+        [
+          "Oriental Stir-Fry"
+        ],
+        [
+          "Peruvian Chicken with Plums"
+        ],
+        [
+          "Chicken Pocket Sandwich"
+        ],
+        [
+          "Turkey Rolls Italian Style"
+        ],
+        [
+          "Brown Rice Chicken Bake"
+        ],
+        [
+          "Lemon Chicken and Rice"
+        ],
+        [
+          "Turkey Topper"
+        ],
+        [
+          "Chicken Mushroom Soup"
+        ],
+        [
+          "Chicken Pasta Salad"
+        ],
+        [
+          "Turkey Waldorf Sandwich"
+        ],
+        [
+          "Chicken-Cabbage Stir-Fry"
+        ],
+        [
+          "Hearty Healthy Chicken Salad"
+        ],
+        [
+          "Turkey Sausage Patties"
+        ],
+        [
+          "California-Style Turkey Burger"
+        ],
+        [
+          "Tomato-Turkey Noodle Bake"
+        ],
+        [
+          "Dilly Turkey Stuffed Tomatoes"
+        ],
+        [
+          "Simply Deluxe Microwave Chicken"
+        ],
+        [
+          "Layered Chicken Salad"
+        ],
+        [
+          "Grilled Chicken Salad"
+        ],
+        [
+          "Turkey and Pineapple on Skewers"
+        ],
+        [
+          "Turkey Pastrami and Swiss in Rye"
+        ],
+        [
+          "Turkey Potato Salad"
+        ],
+        [
+          "Turkey Medallions Piccata"
+        ],
+        [
+          "Turkey Yakitori"
+        ],
+        [
+          "Basic Turkey Burger Plus"
+        ],
+        [
+          "Chicken Italian"
+        ],
+        [
+          "Turkey Tarragon Pitas"
+        ],
+        [
+          "Stuffed Chicken Breasts"
+        ],
+        [
+          "Autumn Medley Stew"
+        ],
+        [
+          "Pasta Shells A La Turkey Waldorf"
+        ],
+        [
+          "Turkey Fajitas"
+        ],
+        [
+          "Sesame Chicken Salad"
+        ],
+        [
+          "Ginger Turkey Stir-Fry"
+        ],
+        [
+          "Garlic Lime Chicken"
+        ],
+        [
+          "Fresh Shrimp Sandwich"
+        ],
+        [
+          "Dilled Potato Rounds Fish Fillets"
+        ],
+        [
+          " Pacific Chicken, Shrimp and Kiwifruit Kabobs "
+        ],
+        [
+          "Blue Crab Salad"
+        ],
+        [
+          "Shrimp-Stuffed Shells"
+        ],
+        [
+          "Poached Fish with Horseradish Sauce"
+        ],
+        [
+          "Shrimp Marinara Pasta"
+        ],
+        [
+          "Seafood Risotto"
+        ],
+        [
+          " Fish Baked with Summer Squash, Onion and Herbs "
+        ],
+        [
+          "Tropical Date Sauce for Fish"
+        ],
+        [
+          "Bell Peppers Stuffed with Shrimp"
+        ],
+        [
+          "Simply Snapper"
+        ],
+        [
+          "Steamed Fish"
+        ],
+        [
+          "Stir-Fry Shrimp Scramble"
+        ],
+        [
+          "Sandlapper Salad"
+        ],
+        [
+          "Gulf Coast Stir-Fry"
+        ],
+        [
+          "Baked Tilapia with Mustard"
+        ],
+        [
+          "Risotto Con Frutti Di Mare"
+        ],
+        [
+          "Orange-Currant Couscous"
+        ],
+        [
+          "Fish Florentine"
+        ],
+        [
+          "Fish Chowder"
+        ],
+        [
+          "Swordfish Skewers with Pears"
+        ],
+        [
+          "Sheepshead Bay Sea Bass"
+        ],
+        [
+          "Summer Seafood Salad"
+        ],
+        [
+          "Seafood Marinara with Pasta"
+        ],
+        [
+          "Chinese Steamed Fish"
+        ],
+        [
+          "Mariner Bean Salad Plate"
+        ],
+        [
+          "Shrimp-Pear Pasta Salad"
+        ],
+        [
+          "Shrimp Stir-Fry"
+        ],
+        [
+          "Moroccan Catfish Couscous"
+        ],
+        [
+          "Native American Catfish"
+        ],
+        [
+          "Stuffed Fish Turbans"
+        ],
+        [
+          "Fish with Pear Jardiniere"
+        ],
+        [
+          "Smoky Broiled Catfish"
+        ],
+        [
+          "Shrimp Fried Rice"
+        ],
+        [
+          "Seafood Jambalaya"
+        ],
+        [
+          "Spanish Clams and Rice"
+        ],
+        [
+          "Crunchy Tuna Salad"
+        ],
+        [
+          "Chinese Seafood Salad"
+        ],
+        [
+          "Garlic-Soy Dipping Sauce"
+        ],
+        [
+          "Shrimp Provencal"
+        ],
+        [
+          "Grilled Fish with Veracruz Sauce"
+        ],
+        [
+          "Poached Shark"
+        ],
+        [
+          "Fish and Vegetables in Foil"
+        ],
+        [
+          "Quick Crawfish Jambalaya"
+        ],
+        [
+          "Microwaved Fish with Italian Flair"
+        ],
+        [
+          "Linguine with Clam Sauce"
+        ],
+        [
+          "Basic Poached Fish"
+        ],
+        [
+          "The 'T and T Deluxe'"
+        ],
+        [
+          "Crab Mousse"
+        ],
+        [
+          "Red Snapper Orlando"
+        ],
+        [
+          "Microwave Trout Amandine"
+        ],
+        [
+          "Fruitful Sole and Nectarines Remoulade"
+        ],
+        [
+          "Baked Fish"
+        ],
+        [
+          "Clam Chowder"
+        ],
+        [
+          "Salmon Yakatori with Peaches"
+        ],
+        [
+          "Basil Baked Cod Fillets"
+        ],
+        [
+          "Green and Gold Fettuccine"
+        ],
+        [
+          "Microwaved Oriental Swordfish Steaks"
+        ],
+        [
+          "Sweet-Sour Shrimp"
+        ],
+        [
+          "Molded Crabmeat Mousse"
+        ],
+        [
+          "Cracked Wheat and Seafood Casserole"
+        ],
+        [
+          "Wisconsin Berry Celebration Shrimp Salad"
+        ],
+        [
+          "Soy Barbecued Shrimp"
+        ],
+        [
+          "Catfish and Wild Rice Soup"
+        ],
+        [
+          "Halibut in Tarragon"
+        ],
+        [
+          "Fish and Tomato Zucchini Saffron Coulis"
+        ],
+        [
+          "Broiled Baby Snapper"
+        ],
+        [
+          "Deviled Crab"
+        ],
+        [
+          "Soy-Mustard Vinegar Dipping Sauce"
+        ],
+        [
+          "Long Island Fisherman Stew"
+        ],
+        [
+          "Baked Sole Pacifica"
+        ],
+        [
+          "Seafood Seasoning"
+        ],
+        [
+          "Broiled Scallops"
+        ],
+        [
+          "Mesquite Grilled Shrimp"
+        ],
+        [
+          "Texas Shrimp Slaw"
+        ],
+        [
+          "Grilled Tuna Steaks"
+        ],
+        [
+          "Herbs and Orange Grilled Chicken"
+        ],
+        [
+          "Easy Whole Salmon"
+        ],
+        [
+          "Grilled Whole Salmon"
+        ],
+        [
+          "Iceberg Salad Athena"
+        ],
+        [
+          "Fruit and Green Salad"
+        ],
+        [
+          "Mushroom-Orange Toss"
+        ],
+        [
+          "Pineapple-Mushroom Salad"
+        ],
+        [
+          "Creamy Mushroom Salad"
+        ],
+        [
+          "Avocado Raspberry Spice Salad"
+        ],
+        [
+          "Freeze and Bake Pie Crust"
+        ],
+        [
+          "French Apple Pie"
+        ],
+        [
+          "Pat-In-The-Pan Nut Cookie Crust"
+        ],
+        [
+          "-Garlic Bread-"
+        ],
+        [
+          "Chocolate Snack Cake"
+        ],
+        [
+          "Marinated Flank Steak"
+        ],
+        [
+          "Dijon Vinaigrette"
+        ],
+        [
+          "Fresh Citrus Dressing"
+        ],
+        [
+          "Refreshing Mint Dressing"
+        ],
+        [
+          "Herb-Marinated Beef Steak"
+        ],
+        [
+          "Peppercorn Beef Kabobs"
+        ],
+        [
+          "Caribbean Style Steak"
+        ],
+        [
+          "Salsa Flavored Beef Steak"
+        ],
+        [
+          "Orange-Rosemary Steaks"
+        ],
+        [
+          "Sunshine Valley Salad"
+        ],
+        [
+          "Darvish Dressing"
+        ],
+        [
+          "Dill-Parsley Dressing"
+        ],
+        [
+          "Lemon-Mint Dressing"
+        ],
+        [
+          "Honey Dressing"
+        ],
+        [
+          "Hazelnut Bleu Cheese Dressing"
+        ],
+        [
+          "Sweet and Sour Dressing"
+        ],
+        [
+          "Raspberry Walnut Dressing"
+        ],
+        [
+          "Caesar Salad Dressing"
+        ],
+        [
+          "Yogurt-Honey Dressing"
+        ],
+        [
+          "Oriental Ginger-Nut Dressing"
+        ],
+        [
+          "Creamy Dressing"
+        ],
+        [
+          "Honey Lime Dressing"
+        ],
+        [
+          "Fudge Brownie Pie"
+        ],
+        [
+          "Chocolate Banana Cream Pie"
+        ],
+        [
+          "No-Bake Chocolate Cheesecake"
+        ],
+        [
+          "Mexican Cocoa Torte"
+        ],
+        [
+          " Endive, Apple and Walnut Trio "
+        ],
+        [
+          "-Quinoa-"
+        ],
+        [
+          "-Cooked Wheat Berries-"
+        ],
+        [
+          "-Triticale-"
+        ],
+        [
+          "-Pancakes-"
+        ],
+        [
+          "-Waffles-"
+        ],
+        [
+          "-French Toast-"
+        ],
+        [
+          "-Mixed Green Salad-"
+        ],
+        [
+          "Curried Chicken Livers Topped Spud"
+        ],
+        [
+          "T.B.P.B. Smoothie"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 2,
+      "uuid": "ec134bf7bda5-bade8cc81968",
+      "query": "Among the recipes whose source is the National Potato Board, which recipe has the highest calories?",
+      "sql": "SELECT r.title FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE r.source='National Potato Board' AND n.calories=(SELECT MAX(n2.calories) FROM Recipe r2 JOIN Nutrition n2 USING(recipe_id) WHERE r2.source='National Potato Board')",
+      "columns": [
+        "title"
+      ],
+      "answer_rows": [
+        [
+          "Potato Sticks with Glazed Pork and Cabbage"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 3,
+      "uuid": "ec134bf7bda5-982d9425d9e4",
+      "query": "How many baking product ingredients are there in the No-Bake Chocolate Cheesecake?",
+      "sql": "SELECT COUNT(DISTINCT q.ingredient_id) FROM Recipe r JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE r.title='No-Bake Chocolate Cheesecake' AND i.category='baking products'",
+      "columns": [
+        "COUNT(DISTINCT q.ingredient_id)"
+      ],
+      "answer_rows": [
+        [
+          2
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 4,
+      "uuid": "ec134bf7bda5-1011b856b367",
+      "query": "How much fat does the Raspberry Chiffon Pie have?",
+      "sql": "SELECT n.total_fat FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE r.title='Raspberry Chiffon Pie'",
+      "columns": [
+        "total_fat"
+      ],
+      "answer_rows": [
+        [
+          11.53
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 5,
+      "uuid": "ec134bf7bda5-537cccd2783b",
+      "query": "Describe the ingredients in the recipe with the highest vitamin that helps vision in dim light.",
+      "sql": "SELECT DISTINCT r.title,i.name FROM Recipe r JOIN Nutrition n USING(recipe_id) JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE n.vitamin_a=(SELECT MAX(vitamin_a) FROM Nutrition) ORDER BY r.title,i.name",
+      "columns": [
+        "title",
+        "name"
+      ],
+      "answer_rows": [
+        [
+          "Steamed Sweet Potatoes",
+          "black pepper"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "dill"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "fresh lemon juice"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "margarine"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "onion"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "paprika"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "plain nonfat yogurt"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "salt"
+        ],
+        [
+          "Steamed Sweet Potatoes",
+          "sweet potato"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Interpret vision-in-dim-light vitamin as vitamin A. Return all ingredients of every tied highest-vitamin-A recipe; recipe title is auxiliary context."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 6,
+      "uuid": "ec134bf7bda5-10e58f0006b9",
+      "query": "List the ingredients which measure in slices.",
+      "sql": "SELECT DISTINCT i.name FROM Ingredient i JOIN Quantity q USING(ingredient_id) WHERE q.unit='slice(s)' ORDER BY i.name",
+      "columns": [
+        "name"
+      ],
+      "answer_rows": [
+        [
+          "Italian bread"
+        ],
+        [
+          "bacon"
+        ],
+        [
+          "beef lunchmeat"
+        ],
+        [
+          "bologna"
+        ],
+        [
+          "bread"
+        ],
+        [
+          "pumpernickel bread"
+        ],
+        [
+          "red bell pepper"
+        ],
+        [
+          "rye bread"
+        ],
+        [
+          "tomato"
+        ],
+        [
+          "white bread"
+        ],
+        [
+          "whole wheat bread"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 7,
+      "uuid": "ec134bf7bda5-eca8886ccfb0",
+      "query": "What is the title of the recipe that is most likely to gain weight?",
+      "sql": "SELECT r.title FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE n.calories=(SELECT MAX(calories) FROM Nutrition)",
+      "columns": [
+        "title"
+      ],
+      "answer_rows": [
+        [
+          "Ginger-Orange Barbecued Beef Back Ribs"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Most likely to gain weight does not uniquely define maximum calories or a dietary outcome; fixed SQL uses maximum reported calories.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 8,
+      "uuid": "ec134bf7bda5-07fb2facaba4",
+      "query": "How many calories does the recipe \"Raspberry Chiffon Pie\" contain?",
+      "sql": "SELECT n.calories FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE r.title='Raspberry Chiffon Pie'",
+      "columns": [
+        "calories"
+      ],
+      "answer_rows": [
+        [
+          290.79
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 9,
+      "uuid": "ec134bf7bda5-582bd1f32c89",
+      "query": "How many ingredients are required to make the Raspberry Chiffon Pie?",
+      "sql": "SELECT COUNT(DISTINCT q.ingredient_id) FROM Recipe r JOIN Quantity q USING(recipe_id) WHERE r.title='Raspberry Chiffon Pie'",
+      "columns": [
+        "COUNT(DISTINCT q.ingredient_id)"
+      ],
+      "answer_rows": [
+        [
+          8
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Required ingredients may exclude optional rows, or count all listed ingredients; fixed SQL counts distinct listed ingredient IDs.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 10,
+      "uuid": "ec134bf7bda5-ca1de2e0240f",
+      "query": "How many cups of almonds do you need for a chicken pocket sandwich?",
+      "sql": "SELECT i.name,q.min_qty,q.max_qty,q.unit FROM Recipe r JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE r.title='Chicken Pocket Sandwich' AND lower(i.name) LIKE '%almond%' AND q.unit='cup(s)'",
+      "columns": [
+        "name",
+        "min_qty",
+        "max_qty",
+        "unit"
+      ],
+      "answer_rows": [
+        [
+          "almonds",
+          0.5,
+          0.5,
+          "cup(s)"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require matching almonds, cups and quantity; equal minimum/maximum can be reported as one number."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 11,
+      "uuid": "ec134bf7bda5-b10f8154ccac",
+      "query": "How many calories on average does a recipe that comes from \"Produce for Better Health Foundation and 5 a Day\" contain?",
+      "sql": "SELECT AVG(n.calories) FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE r.source='Produce for Better Health Foundation and 5 a Day'",
+      "columns": [
+        "AVG(n.calories)"
+      ],
+      "answer_rows": [
+        [
+          167.23030303030305
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 12,
+      "uuid": "ec134bf7bda5-e7dc4aeee090",
+      "query": "State the name of the optional ingredient of no.1397 recipe.",
+      "sql": "SELECT DISTINCT i.name FROM Quantity q JOIN Ingredient i USING(ingredient_id) WHERE q.recipe_id=1397 AND q.optional='TRUE' ORDER BY i.name",
+      "columns": [
+        "name"
+      ],
+      "answer_rows": [
+        [
+          "anchovy paste"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 13,
+      "uuid": "ec134bf7bda5-8a501e6101b8",
+      "query": "Which recipe has the highest calories?",
+      "sql": "SELECT r.title FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE n.calories=(SELECT MAX(calories) FROM Nutrition)",
+      "columns": [
+        "title"
+      ],
+      "answer_rows": [
+        [
+          "Ginger-Orange Barbecued Beef Back Ribs"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 14,
+      "uuid": "ec134bf7bda5-9e1a038d7893",
+      "query": "Name the recipe with the most Vitamin C.",
+      "sql": "SELECT r.title FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE n.vitamin_c=(SELECT MAX(vitamin_c) FROM Nutrition)",
+      "columns": [
+        "title"
+      ],
+      "answer_rows": [
+        [
+          "-Kale-"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 15,
+      "uuid": "ec134bf7bda5-58edfd6495e1",
+      "query": "What ingredients does the longest cooking time recipe have?",
+      "sql": "SELECT DISTINCT r.title,i.name FROM Recipe r JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE r.cook_min=(SELECT MAX(cook_min) FROM Recipe) ORDER BY r.title,i.name",
+      "columns": [
+        "title",
+        "name"
+      ],
+      "answer_rows": [
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "brown rice"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "butter or margarine"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "ground cinnamon"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "ground cumin"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "hot water"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "lemon juice"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "pine nuts"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "ripe olives"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "salt"
+        ],
+        [
+          " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+          "yellow onion"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Cooking time means cook_min, not prep_min+stnd_min+cook_min. Preserve every tied recipe and all ingredient names."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 16,
+      "uuid": "ec134bf7bda5-a5599b1a398c",
+      "query": "How many dairy recipes can serve more than 10 people?",
+      "sql": "SELECT COUNT(DISTINCT r.recipe_id) FROM Recipe r JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE r.servings>10 AND i.category='dairy'",
+      "columns": [
+        "COUNT(DISTINCT r.recipe_id)"
+      ],
+      "answer_rows": [
+        [
+          33
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Dairy recipe is not a stored recipe category; fixed SQL means at least one ingredient explicitly categorized dairy, not cheese/canned/frozen dairy.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 17,
+      "uuid": "ec134bf7bda5-9e5d85f41df0",
+      "query": "How many ingredients are there in Apricot Yogurt Parfaits?",
+      "sql": "SELECT COUNT(DISTINCT q.ingredient_id) FROM Recipe r JOIN Quantity q USING(recipe_id) WHERE r.title='Apricot Yogurt Parfaits'",
+      "columns": [
+        "COUNT(DISTINCT q.ingredient_id)"
+      ],
+      "answer_rows": [
+        [
+          6
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 18,
+      "uuid": "ec134bf7bda5-a6f458e57aa7",
+      "query": "Among the recipes with alcohol content over 10, which recipe takes the longest to prepare?",
+      "sql": "SELECT r.title FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE n.alcohol>10 AND r.prep_min=(SELECT MAX(r2.prep_min) FROM Recipe r2 JOIN Nutrition n2 USING(recipe_id) WHERE n2.alcohol>10)",
+      "columns": [
+        "title"
+      ],
+      "answer_rows": [
+        [
+          "Pistachio Berry Vineyard Pears"
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Preparation time means prep_min in this specified interpretation; alcohol threshold is applied before maximum."
+    },
+    {
+      "domain": "cookbook",
+      "task_index": 19,
+      "uuid": "ec134bf7bda5-ca41d01e3687",
+      "query": "How many calories from fat are there in the recipe \"Raspberry Chiffon Pie\"?",
+      "sql": "SELECT n.calories*n.pcnt_cal_fat/100.0 FROM Recipe r JOIN Nutrition n USING(recipe_id) WHERE r.title='Raspberry Chiffon Pie'",
+      "columns": [
+        "n.calories*n.pcnt_cal_fat/100.0"
+      ],
+      "answer_rows": [
+        [
+          103.75387200000002
+        ]
+      ],
+      "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Calories from fat is an energy amount, while pcnt_cal_fat is a percentage. Fixed SQL computes calories times percent / 100; grams of total fat times 9 gives a rounded alternative.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 0,
+      "uuid": "34a533dfd727-fdd5b0e943a7",
+      "query": "How many movies did Wolfgang Reitherman direct?",
+      "sql": "SELECT COUNT(*) FROM director WHERE director='Wolfgang Reitherman'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          7
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 1,
+      "uuid": "34a533dfd727-03a08ac84ca2",
+      "query": "Among the movies directed by Wolfgang Reitherman, which one of them was the most popular?",
+      "sql": "SELECT m.movie_title FROM movies_total_gross m JOIN director d ON d.name=m.movie_title WHERE d.director='Wolfgang Reitherman' AND CAST(REPLACE(REPLACE(m.total_gross,'$',''),',','') AS REAL)=(SELECT MAX(CAST(REPLACE(REPLACE(m2.total_gross,'$',''),',','') AS REAL)) FROM movies_total_gross m2 JOIN director d2 ON d2.name=m2.movie_title WHERE d2.director='Wolfgang Reitherman')",
+      "columns": [
+        "movie_title"
+      ],
+      "answer_rows": [
+        [
+          "The Jungle Book"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Most popular has no unique metric; fixed SQL uses numeric nominal total gross rather than inflation-adjusted gross.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 2,
+      "uuid": "34a533dfd727-1bd5ad982571",
+      "query": "How many horror movies are there?",
+      "sql": "SELECT COUNT(*) FROM movies_total_gross WHERE genre='Horror'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          6
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 3,
+      "uuid": "34a533dfd727-c0fb51d1e703",
+      "query": "What is the Motion Picture Association of America rating for the movie featuring a villain named Turbo?",
+      "sql": "SELECT DISTINCT m.MPAA_rating FROM characters c JOIN movies_total_gross m USING(movie_title) WHERE c.villian='Turbo'",
+      "columns": [
+        "MPAA_rating"
+      ],
+      "answer_rows": [
+        [
+          "PG"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 4,
+      "uuid": "34a533dfd727-c9b00cbda527",
+      "query": "Who is the hero character of the Disney movie directed by Will Finn?",
+      "sql": "SELECT c.hero FROM characters c JOIN director d ON c.movie_title=d.name WHERE d.director='Will Finn'",
+      "columns": [
+        "hero"
+      ],
+      "answer_rows": [
+        [
+          "Maggie"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 5,
+      "uuid": "34a533dfd727-dfaa807317f7",
+      "query": "Who is the director of the movie Pinocchio?",
+      "sql": "SELECT director FROM director WHERE name='Pinocchio'",
+      "columns": [
+        "director"
+      ],
+      "answer_rows": [
+        [
+          "Ben Sharpsteen"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 6,
+      "uuid": "34a533dfd727-585fc36cc9c6",
+      "query": "How much is the total gross of the movie with a song titled \"Little Wonders\"?",
+      "sql": "SELECT m.total_gross FROM characters c JOIN movies_total_gross m USING(movie_title) WHERE c.song='Little Wonders'",
+      "columns": [
+        "total_gross"
+      ],
+      "answer_rows": [
+        [
+          "$97,822,171"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 7,
+      "uuid": "34a533dfd727-bdca886a5f4f",
+      "query": "Please list the movies directed by Wolfgang Reitherman that can be watched by the general audience.",
+      "sql": "SELECT DISTINCT m.movie_title FROM director d JOIN movies_total_gross m ON m.movie_title=d.name WHERE d.director='Wolfgang Reitherman' AND m.MPAA_rating='G' ORDER BY m.movie_title",
+      "columns": [
+        "movie_title"
+      ],
+      "answer_rows": [
+        [
+          "101 Dalmatians"
+        ],
+        [
+          "The Aristocats"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 8,
+      "uuid": "34a533dfd727-8e9434bbcc3f",
+      "query": "Who is the hero character of the movie whose total gross was $222,527,828?",
+      "sql": "SELECT c.hero FROM characters c JOIN movies_total_gross m USING(movie_title) WHERE m.total_gross='$222,527,828'",
+      "columns": [
+        "hero"
+      ],
+      "answer_rows": [
+        [
+          "Hiro Hamada"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 9,
+      "uuid": "34a533dfd727-51ddf26f6a96",
+      "query": "Provide the name of the song from the movie directed by Ben Sharpsteen.",
+      "sql": "SELECT c.song FROM characters c JOIN director d ON c.movie_title=d.name WHERE d.director='Ben Sharpsteen'",
+      "columns": [
+        "song"
+      ],
+      "answer_rows": [
+        [
+          "When You Wish upon a Star"
+        ],
+        [
+          "Baby Mine"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 10,
+      "uuid": "34a533dfd727-21513bce4a10",
+      "query": "What is the genre of the movie whose villain is Commander Rourke?",
+      "sql": "SELECT DISTINCT m.genre FROM characters c JOIN movies_total_gross m USING(movie_title) WHERE c.villian='Commander Rourke'",
+      "columns": [
+        "genre"
+      ],
+      "answer_rows": [
+        [
+          "Adventure"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 11,
+      "uuid": "34a533dfd727-667fe456f4a6",
+      "query": "Describe the hero, director, and the release date of Mulan.",
+      "sql": "SELECT c.hero,d.director,c.release_date FROM characters c JOIN director d ON c.movie_title=d.name WHERE c.movie_title='Mulan'",
+      "columns": [
+        "hero",
+        "director",
+        "release_date"
+      ],
+      "answer_rows": [
+        [
+          "Mulan",
+          "Barry Cook",
+          "19-Jun-98"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Normalize textual date format only; hero, director and date must all match."
+    },
+    {
+      "domain": "disney",
+      "task_index": 12,
+      "uuid": "34a533dfd727-af5556147a53",
+      "query": "How many PG adventure movies did Ron Clements direct?",
+      "sql": "SELECT COUNT(DISTINCT m.movie_title) FROM director d JOIN movies_total_gross m ON m.movie_title=d.name WHERE d.director='Ron Clements' AND m.genre='Adventure' AND m.MPAA_rating='PG'",
+      "columns": [
+        "COUNT(DISTINCT m.movie_title)"
+      ],
+      "answer_rows": [
+        [
+          2
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 13,
+      "uuid": "34a533dfd727-f1c6994b7ed9",
+      "query": "Who is the director of the adventure movie which was released on 2007/3/30?",
+      "sql": "SELECT d.director FROM director d JOIN movies_total_gross m ON m.movie_title=d.name WHERE m.genre='Adventure' AND m.release_date='Mar 30, 2007'",
+      "columns": [
+        "director"
+      ],
+      "answer_rows": [
+        [
+          "Stephen J. Anderson"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 14,
+      "uuid": "34a533dfd727-fdd9457bce2a",
+      "query": "Which character is the villain of the most popular movie?",
+      "sql": "SELECT c.villian FROM characters c JOIN movies_total_gross m USING(movie_title) WHERE CAST(REPLACE(REPLACE(m.total_gross,'$',''),',','') AS REAL)=(SELECT MAX(CAST(REPLACE(REPLACE(total_gross,'$',''),',','') AS REAL)) FROM movies_total_gross)",
+      "columns": [
+        "villian"
+      ],
+      "answer_rows": [],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Most popular has no unique metric; fixed SQL uses global numeric nominal total gross and then joins the character table, without restricting the maximum to joinable movies.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 15,
+      "uuid": "34a533dfd727-30444c866c6d",
+      "query": "Indicate the release date of the film The Lion King directed by Roger Allers.",
+      "sql": "SELECT c.release_date FROM characters c JOIN director d ON c.movie_title=d.name WHERE c.movie_title='The Lion King' AND d.director='Roger Allers'",
+      "columns": [
+        "release_date"
+      ],
+      "answer_rows": [
+        [
+          "24-Jun-94"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Normalize textual date format only, including the two-digit historical year."
+    },
+    {
+      "domain": "disney",
+      "task_index": 16,
+      "uuid": "34a533dfd727-4f24103e8871",
+      "query": "Which movies of director Wolfgang Reitherman do not have villain?",
+      "sql": "SELECT c.movie_title FROM characters c JOIN director d ON c.movie_title=d.name WHERE d.director='Wolfgang Reitherman' AND c.villian IS NULL ORDER BY c.movie_title",
+      "columns": [
+        "movie_title"
+      ],
+      "answer_rows": [
+        [
+          "The Many Adventures of Winnie the Pooh"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 17,
+      "uuid": "34a533dfd727-5ddf6e60c7cb",
+      "query": "What genre of movie has Taran as the main character?",
+      "sql": "SELECT DISTINCT m.genre FROM characters c JOIN movies_total_gross m USING(movie_title) WHERE c.hero='Taran'",
+      "columns": [
+        "genre"
+      ],
+      "answer_rows": [
+        [
+          "Adventure"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "disney",
+      "task_index": 18,
+      "uuid": "34a533dfd727-7ab1eb405866",
+      "query": "Please list the villains of all the movies directed by Wolfgang Reitherman.",
+      "sql": "SELECT DISTINCT c.villian FROM characters c JOIN director d ON c.movie_title=d.name WHERE d.director='Wolfgang Reitherman' AND c.villian IS NOT NULL ORDER BY c.villian",
+      "columns": [
+        "villian"
+      ],
+      "answer_rows": [
+        [
+          "Edgar Balthazar"
+        ],
+        [
+          "Kaa and Shere Khan"
+        ],
+        [
+          "Madam Mim"
+        ],
+        [
+          "Madame Medusa"
+        ],
+        [
+          "Prince John"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "List actual non-null villain names; a note that other movies have no villain is allowed."
+    },
+    {
+      "domain": "disney",
+      "task_index": 19,
+      "uuid": "34a533dfd727-7478b02e4420",
+      "query": "Give the name of the movie which the song \"I Thought I Lost You\" is associated with.",
+      "sql": "SELECT movie_title FROM characters WHERE song='I Thought I Lost You'",
+      "columns": [
+        "movie_title"
+      ],
+      "answer_rows": [
+        [
+          "Bolt"
+        ]
+      ],
+      "database_sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 0,
+      "uuid": "912d5f84749d-d2c0982ba770",
+      "query": "For the genes that are located in the plasma membrane, please list their number of chromosomes.",
+      "sql": "SELECT DISTINCT Chromosome FROM Genes WHERE Localization='plasma membrane' ORDER BY Chromosome",
+      "columns": [
+        "Chromosome"
+      ],
+      "answer_rows": [
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Question says number of chromosomes while Chromosome plausibly denotes an index; fixed SQL returns stored chromosome values.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 1,
+      "uuid": "912d5f84749d-c59a6f6623dc",
+      "query": "What type of interactions occurs in genes whose function is cellular transport and transport medicine and are classified as non-essential?",
+      "sql": "SELECT DISTINCT i.Type FROM Interactions i WHERE EXISTS(SELECT 1 FROM Genes g WHERE (g.GeneID=i.GeneID1 OR g.GeneID=i.GeneID2) AND g.Essential='Non-Essential' AND g.Function='CELLULAR TRANSPORT AND TRANSPORTMECHANISMS') ORDER BY i.Type",
+      "columns": [
+        "Type"
+      ],
+      "answer_rows": [
+        [
+          "Genetic"
+        ],
+        [
+          "Genetic-Physical"
+        ],
+        [
+          "Physical"
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Transport medicine has no exact database category, and endpoints satisfying the gene restriction are underspecified. Fixed SQL interprets transport mechanisms and at least one qualifying endpoint.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 2,
+      "uuid": "912d5f84749d-2cae827e21f0",
+      "query": "Please list the location of the genes that have the most chromosomes.",
+      "sql": "SELECT DISTINCT Localization FROM Genes WHERE Chromosome=(SELECT MAX(Chromosome) FROM Genes) ORDER BY Localization",
+      "columns": [
+        "Localization"
+      ],
+      "answer_rows": [
+        [
+          "ER"
+        ],
+        [
+          "cytoplasm"
+        ],
+        [
+          "cytoskeleton"
+        ],
+        [
+          "golgi"
+        ],
+        [
+          "mitochondria"
+        ],
+        [
+          "nucleus"
+        ],
+        [
+          "transport vesicles"
+        ],
+        [
+          "vacuole"
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Most chromosomes confuses chromosome count with the stored Chromosome field; fixed SQL uses maximum stored value.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 3,
+      "uuid": "912d5f84749d-1850a2b13bd5",
+      "query": "Lists all genes by identifier number located in the cytoplasm and whose function is metabolism.",
+      "sql": "SELECT DISTINCT GeneID FROM Genes WHERE Localization='cytoplasm' AND Function='METABOLISM' ORDER BY GeneID",
+      "columns": [
+        "GeneID"
+      ],
+      "answer_rows": [
+        [
+          "G234108"
+        ],
+        [
+          "G234368"
+        ],
+        [
+          "G234737"
+        ],
+        [
+          "G234959"
+        ],
+        [
+          "G235101"
+        ],
+        [
+          "G235143"
+        ],
+        [
+          "G235173"
+        ],
+        [
+          "G235204"
+        ],
+        [
+          "G235379"
+        ],
+        [
+          "G235380"
+        ],
+        [
+          "G235403"
+        ],
+        [
+          "G235436"
+        ],
+        [
+          "G235467"
+        ],
+        [
+          "G235479"
+        ],
+        [
+          "G235485"
+        ],
+        [
+          "G235514"
+        ],
+        [
+          "G235515"
+        ],
+        [
+          "G235561"
+        ],
+        [
+          "G235690"
+        ],
+        [
+          "G235741"
+        ],
+        [
+          "G235859"
+        ],
+        [
+          "G235885"
+        ],
+        [
+          "G235899"
+        ],
+        [
+          "G236047"
+        ],
+        [
+          "G236152"
+        ],
+        [
+          "G236161"
+        ],
+        [
+          "G236206"
+        ],
+        [
+          "G236607"
+        ],
+        [
+          "G236683"
+        ],
+        [
+          "G237617"
+        ],
+        [
+          "G237661"
+        ],
+        [
+          "G237896"
+        ],
+        [
+          "G237945"
+        ],
+        [
+          "G237982"
+        ],
+        [
+          "G238387"
+        ],
+        [
+          "G238448"
+        ],
+        [
+          "G238885"
+        ],
+        [
+          "G238895"
+        ],
+        [
+          "G239101"
+        ],
+        [
+          "G239223"
+        ],
+        [
+          "G239247"
+        ],
+        [
+          "G239536"
+        ],
+        [
+          "G239544"
+        ],
+        [
+          "G239673"
+        ],
+        [
+          "G239770"
+        ],
+        [
+          "G239789"
+        ],
+        [
+          "G239832"
+        ],
+        [
+          "G240099"
+        ],
+        [
+          "G240292"
+        ],
+        [
+          "G240468"
+        ],
+        [
+          "G240494"
+        ],
+        [
+          "G240504"
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Distinct GeneID, not duplicate annotation rows."
+    },
+    {
+      "domain": "genes",
+      "task_index": 4,
+      "uuid": "912d5f84749d-312780d3b08b",
+      "query": "How many non-essential genes are located in the nucleus?",
+      "sql": "SELECT COUNT(DISTINCT GeneID) FROM Genes WHERE Localization='nucleus' AND Essential='Non-Essential'",
+      "columns": [
+        "COUNT(DISTINCT GeneID)"
+      ],
+      "answer_rows": [
+        [
+          184
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Count distinct genes, not duplicate function/class annotation rows."
+    },
+    {
+      "domain": "genes",
+      "task_index": 5,
+      "uuid": "912d5f84749d-18ae4d00c552",
+      "query": "For the pairs of genes both from the class ATPases, what is the average expression correlation score?",
+      "sql": "SELECT AVG(i.Expression_Corr) FROM Interactions i WHERE EXISTS(SELECT 1 FROM Genes g WHERE g.GeneID=i.GeneID1 AND g.Class='ATPases') AND EXISTS(SELECT 1 FROM Genes g WHERE g.GeneID=i.GeneID2 AND g.Class='ATPases')",
+      "columns": [
+        "AVG(i.Expression_Corr)"
+      ],
+      "answer_rows": [
+        [
+          0.45683281983333335
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Interactions contains reciprocal endpoint rows. Fixed SQL averages recorded ordered interactions once each; unordered-pair averaging may differ.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 6,
+      "uuid": "912d5f84749d-71ab404b0168",
+      "query": "Please list the motif of the genes that are located in the cytoplasm and have 7 chromosomes.",
+      "sql": "SELECT DISTINCT Motif FROM Genes WHERE Localization='cytoplasm' AND Chromosome=7 ORDER BY Motif",
+      "columns": [
+        "Motif"
+      ],
+      "answer_rows": [
+        [
+          "?"
+        ],
+        [
+          "PS00167"
+        ],
+        [
+          "PS00168"
+        ],
+        [
+          "PS00433"
+        ],
+        [
+          "PS00581"
+        ],
+        [
+          "PS00709"
+        ],
+        [
+          "PS00733"
+        ],
+        [
+          "PS00993"
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Seven chromosomes versus chromosome 7 is underspecified; fixed SQL uses Chromosome=7.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 7,
+      "uuid": "912d5f84749d-1c4e380e14a8",
+      "query": "What are the functions of the pair of genes that have the lowest expression correlation score?a",
+      "sql": "SELECT DISTINCT g.GeneID,g.Function FROM Genes g JOIN Interactions i ON g.GeneID=i.GeneID1 OR g.GeneID=i.GeneID2 WHERE i.Expression_Corr=(SELECT MIN(Expression_Corr) FROM Interactions) ORDER BY g.GeneID,g.Function",
+      "columns": [
+        "GeneID",
+        "Function"
+      ],
+      "answer_rows": [
+        [
+          "G235331",
+          "CELLULAR ORGANIZATION (proteins are localized to the corresponding organelle)"
+        ],
+        [
+          "G235331",
+          "PROTEIN SYNTHESIS"
+        ],
+        [
+          "G237467",
+          "CELLULAR TRANSPORT AND TRANSPORTMECHANISMS"
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Functions for both endpoints of every minimum-correlation interaction; grouping by GeneID or an unambiguous complete union accepted."
+    },
+    {
+      "domain": "genes",
+      "task_index": 8,
+      "uuid": "912d5f84749d-0dde410e1733",
+      "query": "How many pairs of positively correlated genes are both non-essential?",
+      "sql": "SELECT COUNT(*) FROM Interactions i WHERE i.Expression_Corr>0 AND EXISTS(SELECT 1 FROM Genes g WHERE g.GeneID=i.GeneID1 AND g.Essential='Non-Essential') AND EXISTS(SELECT 1 FROM Genes g WHERE g.GeneID=i.GeneID2 AND g.Essential='Non-Essential')",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          228
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Pair counting could mean ordered interaction records or distinct unordered pairs; fixed SQL counts records and avoids Genes annotation join multiplicity.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "genes",
+      "task_index": 9,
+      "uuid": "912d5f84749d-012dca6e2ef4",
+      "query": "Among the pairs of genes that are not from the class of motorproteins, how many of them are negatively correlated?",
+      "sql": "SELECT COUNT(*) FROM Interactions i WHERE i.Expression_Corr<0 AND NOT EXISTS(SELECT 1 FROM Genes g WHERE g.GeneID=i.GeneID1 AND g.Class='Motorproteins') AND NOT EXISTS(SELECT 1 FROM Genes g WHERE g.GeneID=i.GeneID2 AND g.Class='Motorproteins')",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          200
+        ]
+      ],
+      "database_sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Pair counting orientation and both-endpoint restriction are not explicit. Fixed SQL counts records with neither endpoint annotated Motorproteins.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 0,
+      "uuid": "d0d7be63ebc2-778e84fced89",
+      "query": "List out the name of players who weight 190 lbs.",
+      "sql": "SELECT p.PlayerName FROM PlayerInfo p JOIN weight_info w ON w.weight_id=p.weight WHERE w.weight_in_lbs=190 ORDER BY p.ELITEID",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Bjorn Nord"
+        ],
+        [
+          "Mika Hannula"
+        ],
+        [
+          "Frans Nielsen"
+        ],
+        [
+          "Jonas Almtorp"
+        ],
+        [
+          "Daniel Sedin"
+        ],
+        [
+          "Frantisek Kaberle"
+        ],
+        [
+          "Tom Wandell"
+        ],
+        [
+          "Mikko Eloranta"
+        ],
+        [
+          "Arto Tukio"
+        ],
+        [
+          "Jarkko Immonen"
+        ],
+        [
+          "Tommi Hannus"
+        ],
+        [
+          "Juha-Pekka Ketola"
+        ],
+        [
+          "Marek Zidlicky"
+        ],
+        [
+          "Patric Hornqvist"
+        ],
+        [
+          "Sami Lepisto"
+        ],
+        [
+          "Petteri Nokelainen"
+        ],
+        [
+          "Anton Stralman"
+        ],
+        [
+          "Oscar Moller"
+        ],
+        [
+          "Jim Slater"
+        ],
+        [
+          "Tomas Plihal"
+        ],
+        [
+          "Pavel Datsyuk"
+        ],
+        [
+          "Vaclav Nedorost"
+        ],
+        [
+          "Petr Taticek"
+        ],
+        [
+          "Jamie Lundmark"
+        ],
+        [
+          "Stephen Weiss"
+        ],
+        [
+          "Steve Ott"
+        ],
+        [
+          "T.J. Oshie"
+        ],
+        [
+          "Petr Pohl"
+        ],
+        [
+          "Zdenek Bahensky"
+        ],
+        [
+          "Yuri Alexandrov"
+        ],
+        [
+          "Alexander Vasyunov"
+        ],
+        [
+          "Cade Fairchild"
+        ],
+        [
+          "Kevin Montgomery"
+        ],
+        [
+          "Mike Ratchuk"
+        ],
+        [
+          "Joey Crabb"
+        ],
+        [
+          "Brian Mcconnell"
+        ],
+        [
+          "T.J. Hensick"
+        ],
+        [
+          "Nate Hagemo"
+        ],
+        [
+          "Liam Reddox"
+        ],
+        [
+          "Aaron Gagnon"
+        ],
+        [
+          "Alexander Bumagin"
+        ],
+        [
+          "Ondrej Fiala"
+        ],
+        [
+          "Andrej Nedorost"
+        ],
+        [
+          "Keith Yandle"
+        ],
+        [
+          "Noah Clarke"
+        ],
+        [
+          "Codey Burki"
+        ],
+        [
+          "John Laliberte"
+        ],
+        [
+          "Nathan Barrett"
+        ],
+        [
+          "Reto Von Arx"
+        ],
+        [
+          "Ben Walter"
+        ],
+        [
+          "Bryan Young"
+        ],
+        [
+          "Riley Holzapfel"
+        ],
+        [
+          "Bobby Sanguinetti"
+        ],
+        [
+          "Anthony Nigro"
+        ],
+        [
+          "Kyle Turris"
+        ],
+        [
+          "Mike Santorelli"
+        ],
+        [
+          "Torrey Mitchell"
+        ],
+        [
+          "Travis Morin"
+        ],
+        [
+          "John Albert"
+        ],
+        [
+          "Patrick White"
+        ],
+        [
+          "Brad Schell"
+        ],
+        [
+          "Matt Demarchi"
+        ],
+        [
+          "Tyler Spurgeon"
+        ],
+        [
+          "Jekabs Redlihs"
+        ],
+        [
+          "Thomas Hickey"
+        ],
+        [
+          "Brady Calla"
+        ],
+        [
+          "Bryce Swan"
+        ],
+        [
+          "P.J. Atherton"
+        ],
+        [
+          "Cam Paddock"
+        ],
+        [
+          "Benjamin Breault"
+        ],
+        [
+          "Joey Ryan"
+        ],
+        [
+          "Kyle Medvec"
+        ],
+        [
+          "Derek Peltier"
+        ],
+        [
+          "Andrew Macdonald"
+        ],
+        [
+          "Mathieu Aubin"
+        ],
+        [
+          "Maxime Macenauer"
+        ],
+        [
+          "Jason Gregoire"
+        ],
+        [
+          "Ben Ryan"
+        ],
+        [
+          "Nathan Martz"
+        ],
+        [
+          "Thomas Ziegler"
+        ],
+        [
+          "Severin Blindenbacher"
+        ],
+        [
+          "Marco Rosa"
+        ],
+        [
+          "Kaleb Betts"
+        ],
+        [
+          "Andrew Mcpherson"
+        ],
+        [
+          "Andrew Conboy"
+        ],
+        [
+          "Scott Kishel"
+        ],
+        [
+          "John Lee"
+        ],
+        [
+          "Justin Maiser"
+        ],
+        [
+          "Colin Long"
+        ],
+        [
+          "Jeff Miles"
+        ],
+        [
+          "Brandon Mcmillan"
+        ],
+        [
+          "Mike Walsh"
+        ],
+        [
+          "Chris Vandevelde"
+        ],
+        [
+          "Rob Bellamy"
+        ],
+        [
+          "Brent Regner"
+        ],
+        [
+          "Matthew Glasser"
+        ],
+        [
+          "Matt Clackson"
+        ],
+        [
+          "Steven Zalewski"
+        ],
+        [
+          "Max Nicastro"
+        ],
+        [
+          "Prab Rai"
+        ],
+        [
+          "Garrett Prosofsky"
+        ],
+        [
+          "Jamie Chamberlain"
+        ],
+        [
+          "Jim Henkel"
+        ],
+        [
+          "Robbie Czarnik"
+        ],
+        [
+          "Corey Trivino"
+        ],
+        [
+          "Josh Meyers"
+        ],
+        [
+          "Brian Ihnacak"
+        ],
+        [
+          "Brandon Burlon"
+        ],
+        [
+          "Nick Larson"
+        ],
+        [
+          "Nicholas Tremblay"
+        ],
+        [
+          "Samuel Morneau"
+        ],
+        [
+          "Alexander Seluyanov"
+        ],
+        [
+          "Braden Birch"
+        ],
+        [
+          "Jeff Bateman"
+        ],
+        [
+          "Michal Vondrka"
+        ],
+        [
+          "Marek Dubec"
+        ],
+        [
+          "Peter Polcik"
+        ],
+        [
+          "Petr Dvorak"
+        ],
+        [
+          "Marcus Smith"
+        ],
+        [
+          "Peter Reynolds"
+        ],
+        [
+          "Bill Cass"
+        ],
+        [
+          "Ryan Lauzon"
+        ],
+        [
+          "Dan Hulak"
+        ],
+        [
+          "Chris Legg"
+        ],
+        [
+          "Jay Dardis"
+        ],
+        [
+          "Bret Dececco"
+        ],
+        [
+          "Sergei Skrobot"
+        ],
+        [
+          "Curtis Valentine"
+        ],
+        [
+          "Mark Mcrae"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 1,
+      "uuid": "d0d7be63ebc2-63835e742d17",
+      "query": "What is the name of the tallest player?",
+      "sql": "SELECT p.PlayerName FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height WHERE h.height_in_cm=(SELECT MAX(h2.height_in_cm) FROM PlayerInfo p2 JOIN height_info h2 ON h2.height_id=p2.height)",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Lane Manson"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 2,
+      "uuid": "d0d7be63ebc2-beca7a5257a8",
+      "query": "What is the weight in kilograms of the player with the highest number of goal differential of all time?",
+      "sql": "SELECT DISTINCT p.PlayerName,w.weight_in_kg FROM PlayerInfo p JOIN weight_info w ON w.weight_id=p.weight JOIN SeasonStatus s USING(ELITEID) WHERE s.PLUSMINUS=(SELECT MAX(PLUSMINUS) FROM SeasonStatus)",
+      "columns": [
+        "PlayerName",
+        "weight_in_kg"
+      ],
+      "answer_rows": [
+        [
+          "Sidney Crosby",
+          91
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "All-time goal differential may mean cumulative career value; fixed SQL uses maximum recorded season PLUSMINUS and preserves ties.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 3,
+      "uuid": "d0d7be63ebc2-3838aca46ae6",
+      "query": "Indicate the height of all players from team Oshawa Generals in inches.",
+      "sql": "SELECT DISTINCT p.PlayerName,h.height_in_inch FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height JOIN SeasonStatus s USING(ELITEID) WHERE s.TEAM='Oshawa Generals' ORDER BY p.PlayerName",
+      "columns": [
+        "PlayerName",
+        "height_in_inch"
+      ],
+      "answer_rows": [
+        [
+          "Adam Berti",
+          "6'3\""
+        ],
+        [
+          "Andrew Archer",
+          "6'4\""
+        ],
+        [
+          "Andrew Peters",
+          "6'4\""
+        ],
+        [
+          "Ben Eager",
+          "6'2\""
+        ],
+        [
+          "Brad Ralph",
+          "6'2\""
+        ],
+        [
+          "Brandon Coalter",
+          "6'2\""
+        ],
+        [
+          "Bret Nasby",
+          "6'3\""
+        ],
+        [
+          "Brett Maclean",
+          "6'2\""
+        ],
+        [
+          "Brian Passmore",
+          "5'11\""
+        ],
+        [
+          "Bryan Allen",
+          "6'5\""
+        ],
+        [
+          "Cal Clutterbuck",
+          "5'11\""
+        ],
+        [
+          "Chris Petrow",
+          "6'3\""
+        ],
+        [
+          "Dale Mitchell",
+          "5'9\""
+        ],
+        [
+          "James Delory",
+          "6'0\""
+        ],
+        [
+          "Jeff Macmillan",
+          "6'2\""
+        ],
+        [
+          "Jim Baxter",
+          "6'3\""
+        ],
+        [
+          "Kory Nagy",
+          "5'10\""
+        ],
+        [
+          "Michael Del Zotto",
+          "6'0\""
+        ],
+        [
+          "Paul Ranger",
+          "6'4\""
+        ],
+        [
+          "Scott Todd",
+          "6'4\""
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "All distinct matching players and corresponding heights; no duplicate season rows. Numeric inch conversion equivalent to stored feet/inch string accepted."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 4,
+      "uuid": "d0d7be63ebc2-b9965c45b7fe",
+      "query": "Among the Italian players, who has the shortest height?",
+      "sql": "SELECT p.PlayerName FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height WHERE p.nation='Italy' AND h.height_in_cm=(SELECT MIN(h2.height_in_cm) FROM PlayerInfo p2 JOIN height_info h2 ON h2.height_id=p2.height WHERE p2.nation='Italy')",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Anthony Aquino"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 5,
+      "uuid": "d0d7be63ebc2-e8645030ed93",
+      "query": "What is the birthplace of Aaron Gagnon?",
+      "sql": "SELECT birthplace FROM PlayerInfo WHERE PlayerName='Aaron Gagnon'",
+      "columns": [
+        "birthplace"
+      ],
+      "answer_rows": [
+        [
+          "Armstrong, BC, CAN"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 6,
+      "uuid": "d0d7be63ebc2-008141f3490a",
+      "query": "How many players weigh more than 90 kg?",
+      "sql": "SELECT COUNT(*) FROM PlayerInfo p JOIN weight_info w ON w.weight_id=p.weight WHERE w.weight_in_kg>90",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          1209
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 7,
+      "uuid": "d0d7be63ebc2-515feaea408d",
+      "query": "List out the seasons that Niklas Eckerblom played.",
+      "sql": "SELECT DISTINCT s.SEASON FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE p.PlayerName='Niklas Eckerblom' ORDER BY s.SEASON",
+      "columns": [
+        "SEASON"
+      ],
+      "answer_rows": [
+        [
+          "2001-2002"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 8,
+      "uuid": "d0d7be63ebc2-d60121090e94",
+      "query": "Who among the players drafted by Arizona Coyotes in 2000 has committed the highest rule violations?",
+      "sql": "SELECT DISTINCT p.PlayerName FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE p.overallby='Arizona Coyotes' AND p.draftyear=2000 AND s.PIM=(SELECT MAX(s2.PIM) FROM PlayerInfo p2 JOIN SeasonStatus s2 USING(ELITEID) WHERE p2.overallby='Arizona Coyotes' AND p2.draftyear=2000)",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Ramzi Abid"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Rule violations could mean count or penalty minutes and single-season versus cumulative. Fixed SQL uses maximum recorded season PIM in the stated player pool.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 9,
+      "uuid": "d0d7be63ebc2-f467c8ea44a0",
+      "query": "How many right-shooted players have a height of 5'7''?",
+      "sql": "SELECT COUNT(*) FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height WHERE p.shoots='R' AND h.height_id=67",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          2
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "height_id 67 is the stored 5-foot-7 height key, verified against height_info before freezing."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 10,
+      "uuid": "d0d7be63ebc2-e36b927124b8",
+      "query": "List the names of all players from Avangard Omsk who played in the 2000-2001 season of the International league that have no goals in draft year.",
+      "sql": "SELECT DISTINCT p.PlayerName FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE s.TEAM='Avangard Omsk' AND s.SEASON='2000-2001' AND s.LEAGUE='International' AND s.G=0 ORDER BY p.PlayerName",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "International league and draft-year qualifiers conflict with available team-season rows. Fixed SQL applies the literal International league and season with G=0, without inventing a draft-year conversion.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 11,
+      "uuid": "d0d7be63ebc2-9ce449e8941d",
+      "query": "What is the height in centimeter of the tallest player born in Edmonton, Alberta, Canada?",
+      "sql": "SELECT MAX(h.height_in_cm) FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height WHERE p.birthplace='Edmonton, AB, CAN'",
+      "columns": [
+        "MAX(h.height_in_cm)"
+      ],
+      "answer_rows": [
+        [
+          193
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 12,
+      "uuid": "d0d7be63ebc2-84be12829fa3",
+      "query": "Who is the oldest player who played for Avangard Omsk during the regular season in 2000-2001?",
+      "sql": "SELECT DISTINCT p.PlayerName FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE s.TEAM='Avangard Omsk' AND s.SEASON='2000-2001' AND s.GAMETYPE='Regular Season' AND p.birthdate=(SELECT MIN(p2.birthdate) FROM PlayerInfo p2 JOIN SeasonStatus s2 USING(ELITEID) WHERE s2.TEAM='Avangard Omsk' AND s2.SEASON='2000-2001' AND s2.GAMETYPE='Regular Season')",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Yegor Shastin"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Oldest means minimum full ISO birthdate in the specified team-season-gametype pool, including ties."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 13,
+      "uuid": "d0d7be63ebc2-3c637838c96c",
+      "query": "Among all players drafted by the Toronto Maple Leafs in 2008, identify the player with the highest prospects for the draft.",
+      "sql": "SELECT PlayerName FROM PlayerInfo WHERE overallby='Toronto Maple Leafs' AND draftyear=2008 AND CSS_rank=(SELECT MIN(CSS_rank) FROM PlayerInfo WHERE overallby='Toronto Maple Leafs' AND draftyear=2008)",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Luke Schenn"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Highest prospects is not an explicit numeric metric. Fixed SQL interprets lower CSS_rank as better; it does not take the largest rank number.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 14,
+      "uuid": "d0d7be63ebc2-b7cff310082f",
+      "query": "How many players were born in 1982 and have a height above 182cm?",
+      "sql": "SELECT COUNT(*) FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height WHERE p.birthyear=1982 AND h.height_in_cm>182",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "answer_rows": [
+        [
+          150
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 15,
+      "uuid": "d0d7be63ebc2-243866e7be3b",
+      "query": "Which team does Andreas Jamtin belong to?",
+      "sql": "SELECT DISTINCT s.TEAM FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE p.PlayerName='Andreas Jamtin' ORDER BY s.TEAM",
+      "columns": [
+        "TEAM"
+      ],
+      "answer_rows": [
+        [
+          "Farjestad BK"
+        ],
+        [
+          "Farjestad BK J18"
+        ],
+        [
+          "Farjestad BK J20"
+        ],
+        [
+          "Sweden U18"
+        ],
+        [
+          "Sweden U18 (all)"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Belong to has no season/current-team qualifier. Fixed SQL lists every distinct recorded historical team.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 16,
+      "uuid": "d0d7be63ebc2-2984bcb9f6c2",
+      "query": "What is the height of David Bornhammar in inches?",
+      "sql": "SELECT h.height_in_inch FROM PlayerInfo p JOIN height_info h ON h.height_id=p.height WHERE p.PlayerName='David Bornhammar'",
+      "columns": [
+        "height_in_inch"
+      ],
+      "answer_rows": [
+        [
+          "6'1\""
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "specified_sql_interpretation",
+      "ambiguity": null,
+      "acceptance_note": "Numeric inches or equivalent feet/inch string accepted."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 17,
+      "uuid": "d0d7be63ebc2-9d464b384280",
+      "query": "Among the players whose total NHL games played in their first 7 years of NHL career is no less than 500, what is the name of the player who committed the most rule violations?",
+      "sql": "SELECT DISTINCT p.PlayerName FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE p.sum_7yr_GP>=500 AND s.PIM=(SELECT MAX(s2.PIM) FROM PlayerInfo p2 JOIN SeasonStatus s2 USING(ELITEID) WHERE p2.sum_7yr_GP>=500)",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [
+        [
+          "Drew Doughty"
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Most rule violations may mean career sum rather than maximum recorded season PIM; fixed SQL uses the latter within the stated first-seven-year GP pool.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 18,
+      "uuid": "d0d7be63ebc2-1d02732fa592",
+      "query": "Among the players who played 72 games, how many are left-shooters?",
+      "sql": "SELECT COUNT(DISTINCT p.ELITEID) FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE s.GP=72 AND p.shoots='L'",
+      "columns": [
+        "COUNT(DISTINCT p.ELITEID)"
+      ],
+      "answer_rows": [
+        [
+          34
+        ]
+      ],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Played 72 games may refer to a season or career total. Fixed SQL uses a recorded SeasonStatus.GP=72 and counts distinct players.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "task_index": 19,
+      "uuid": "d0d7be63ebc2-fe7eab9789f6",
+      "query": "Name the Chilliwack Chiefs players who have scored 100 points or more in the NHL.",
+      "sql": "SELECT DISTINCT p.PlayerName FROM PlayerInfo p JOIN SeasonStatus s USING(ELITEID) WHERE trim(s.TEAM)='Chilliwack Chiefs' AND s.LEAGUE='NHL' AND s.P>=100 ORDER BY p.PlayerName",
+      "columns": [
+        "PlayerName"
+      ],
+      "answer_rows": [],
+      "database_sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+      "interpretation_stratum": "ambiguous",
+      "ambiguity": "Question requests NHL points for Chilliwack Chiefs, but the database has no NHL league rows. Literal fixed SQL yields empty; removing NHL or treating points as career totals changes the question.",
+      "acceptance_note": "Require all requested values. Ignore row order where no ordering is requested; preserve ties and entity identity. Do not accept a procedure without an answer."
+    }
+  ],
+  "numeric_tolerance": "Accept faithful rounding within half of the last reported decimal place; do not conflate percentages with amounts. Counts are exact.",
+  "score_policy": "Primary SQL-interpretation subtotal excludes only the ambiguity keys already listed here, retaining all seventy tasks in execution accounting. Report ambiguous outcomes separately. Absent final answers count incorrect. Correctness does not imply trace grounding. Later ambiguities are disclosed without retrospective denominator changes.",
+  "limitations": "Assistant-authored interpretations, not independent human consensus, official VAKRA score or biomedical/historical factual claims. Public training-split tasks newly held out from this development process."
+}

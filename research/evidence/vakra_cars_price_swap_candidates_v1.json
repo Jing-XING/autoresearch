@@ -1,0 +1,5359 @@
+{
+  "purpose": "Audit known car episodes under an explicit marginal-preserving price contract.\n\nThis post-outcome development audit never treats bounded search as a certificate.\nCandidates depend on database and frozen SQL only, never on a model's trace.\n",
+  "database_sha256": "0338e4d6f3c7bb90748b6a1971c0d18f301166b77f2ca9984c197a0f20d7f67e",
+  "cards_sha256": "50e71d927ed7666a3c68f751324ff8d5cf056af40f7a4642b42d377715c05e60",
+  "source_sha256": "43d5ebe58f7a50ede29c92629197d81823ea26988a7b313429d71fa33a872100",
+  "mutation_source_sha256": "a8c0651d8c69b4550eac5d8269c6114650b3b9e9cf9537e3bd3522b6c2903cdf",
+  "rows": [
+    {
+      "task_index": 0,
+      "uuid": "1f58b1e965af-4c0c5ef5f800",
+      "query": "Among the cars with 8 cylinders, what is the name of the one that's the most expensive?",
+      "target_sql": "SELECT d.car_name FROM data d JOIN price p USING(ID) WHERE d.cylinders=8 AND p.price=(SELECT MAX(p2.price) FROM data d2 JOIN price p2 USING(ID) WHERE d2.cylinders=8)",
+      "search": {
+        "seed": "0e46abefa344cb828f313e98881df0777cc569a916e1987061a5a7fbbc1211ff",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 1656,
+        "unchanged_answers": 1631,
+        "duplicate_proposals": 17,
+        "original_answer": [
+          [
+            "plymouth fury gran sedan"
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 16,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    312
+                  ],
+                  "before": 8400.696736,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 8400.696736
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          },
+          {
+            "draw": 286,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    48
+                  ],
+                  "before": 20000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          },
+          {
+            "draw": 636,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    333
+                  ],
+                  "before": 30000.0,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          },
+          {
+            "draw": 687,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    311
+                  ],
+                  "before": 20000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          },
+          {
+            "draw": 1112,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    265
+                  ],
+                  "before": 35375.46418,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 35375.46418
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford futura"
+              ]
+            ]
+          },
+          {
+            "draw": 1190,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    257
+                  ],
+                  "before": 30000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          },
+          {
+            "draw": 1293,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    277
+                  ],
+                  "before": 47597.90265,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 47597.90265
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          },
+          {
+            "draw": 1655,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    337
+                  ],
+                  "before": 24749.73654,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 24749.73654
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 1,
+      "uuid": "1f58b1e965af-c8c0ee76f1fe",
+      "query": "Among the cars over 3000lbs, how many of them cost less than $30000?",
+      "target_sql": "SELECT COUNT(*) FROM data d JOIN price p USING(ID) WHERE d.weight>3000 AND p.price<30000",
+      "search": {
+        "seed": "f42411f8fedbfe312bad18124bc8a4302f84c91d6edffc7c6d139179a41d3ce8",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 23,
+        "unchanged_answers": 15,
+        "duplicate_proposals": 0,
+        "original_answer": [
+          [
+            78
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 0,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    224
+                  ],
+                  "before": 40000.0,
+                  "after": 27234.66428
+                },
+                {
+                  "key": [
+                    368
+                  ],
+                  "before": 27234.66428,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                79
+              ]
+            ]
+          },
+          {
+            "draw": 1,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    52
+                  ],
+                  "before": 36587.11859,
+                  "after": 26090.2785
+                },
+                {
+                  "key": [
+                    202
+                  ],
+                  "before": 26090.2785,
+                  "after": 36587.11859
+                }
+              ]
+            },
+            "answer": [
+              [
+                77
+              ]
+            ]
+          },
+          {
+            "draw": 3,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    182
+                  ],
+                  "before": 25436.92235,
+                  "after": 50306.15305
+                },
+                {
+                  "key": [
+                    89
+                  ],
+                  "before": 50306.15305,
+                  "after": 25436.92235
+                }
+              ]
+            },
+            "answer": [
+              [
+                79
+              ]
+            ]
+          },
+          {
+            "draw": 7,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    273
+                  ],
+                  "before": 30000.0,
+                  "after": 24937.67586
+                },
+                {
+                  "key": [
+                    212
+                  ],
+                  "before": 24937.67586,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                77
+              ]
+            ]
+          },
+          {
+            "draw": 10,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    164
+                  ],
+                  "before": 30000.0,
+                  "after": 26414.50827
+                },
+                {
+                  "key": [
+                    151
+                  ],
+                  "before": 26414.50827,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                79
+              ]
+            ]
+          },
+          {
+            "draw": 12,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    72
+                  ],
+                  "before": 25558.0312,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    366
+                  ],
+                  "before": 30000.0,
+                  "after": 25558.0312
+                }
+              ]
+            },
+            "answer": [
+              [
+                79
+              ]
+            ]
+          },
+          {
+            "draw": 14,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    171
+                  ],
+                  "before": 30000.0,
+                  "after": 16330.96319
+                },
+                {
+                  "key": [
+                    230
+                  ],
+                  "before": 16330.96319,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                77
+              ]
+            ]
+          },
+          {
+            "draw": 22,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    69
+                  ],
+                  "before": 5975.709529,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    248
+                  ],
+                  "before": 40000.0,
+                  "after": 5975.709529
+                }
+              ]
+            },
+            "answer": [
+              [
+                77
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 2,
+      "uuid": "1f58b1e965af-49f2b72eddcb",
+      "query": "What is the acceleration of the most expensive car?",
+      "target_sql": "SELECT d.acceleration FROM data d JOIN price p USING(ID) WHERE p.price=(SELECT MAX(price) FROM price)",
+      "search": {
+        "seed": "b804ddd1265b3d7851906e178cbb955fa3b17dc14dc1e1e47aef74e9ccaa2083",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 1123,
+        "unchanged_answers": 1105,
+        "duplicate_proposals": 10,
+        "original_answer": [
+          [
+            14.5
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 9,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 45923.53551
+                },
+                {
+                  "key": [
+                    308
+                  ],
+                  "before": 45923.53551,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                12.9
+              ]
+            ]
+          },
+          {
+            "draw": 200,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    247
+                  ],
+                  "before": 32914.19287,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 32914.19287
+                }
+              ]
+            },
+            "answer": [
+              [
+                19.4
+              ]
+            ]
+          },
+          {
+            "draw": 421,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    360
+                  ],
+                  "before": 20000.0,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                20.4
+              ]
+            ]
+          },
+          {
+            "draw": 774,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    102
+                  ],
+                  "before": 25211.02753,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 25211.02753
+                }
+              ]
+            },
+            "answer": [
+              [
+                16.0
+              ]
+            ]
+          },
+          {
+            "draw": 820,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 26417.43542
+                },
+                {
+                  "key": [
+                    33
+                  ],
+                  "before": 26417.43542,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                19.0
+              ]
+            ]
+          },
+          {
+            "draw": 996,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 36556.74415
+                },
+                {
+                  "key": [
+                    82
+                  ],
+                  "before": 36556.74415,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                17.0
+              ]
+            ]
+          },
+          {
+            "draw": 1096,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    150
+                  ],
+                  "before": 30000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                15.0
+              ]
+            ]
+          },
+          {
+            "draw": 1122,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    176
+                  ],
+                  "before": 23555.60639,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 23555.60639
+                }
+              ]
+            },
+            "answer": [
+              [
+                14.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 3,
+      "uuid": "1f58b1e965af-01d20bb1cfe7",
+      "query": "How much US dollars does a Ford Torino cost?",
+      "target_sql": "SELECT p.price FROM data d JOIN price p USING(ID) WHERE lower(d.car_name)='ford torino'",
+      "search": {
+        "seed": "6774d008cc04dd8a5af1307dce7b4bc76843a567293ecd41008c17b0e78485db",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 1235,
+        "unchanged_answers": 1218,
+        "duplicate_proposals": 9,
+        "original_answer": [
+          [
+            20000.0
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 197,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    245
+                  ],
+                  "before": 30000.0,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                30000.0
+              ]
+            ]
+          },
+          {
+            "draw": 340,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    297
+                  ],
+                  "before": 40000.0,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                40000.0
+              ]
+            ]
+          },
+          {
+            "draw": 375,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    93
+                  ],
+                  "before": 36489.40106,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 36489.40106
+                }
+              ]
+            },
+            "answer": [
+              [
+                36489.40106
+              ]
+            ]
+          },
+          {
+            "draw": 428,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    199
+                  ],
+                  "before": 40000.0,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                40000.0
+              ]
+            ]
+          },
+          {
+            "draw": 461,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    246
+                  ],
+                  "before": 30000.0,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                30000.0
+              ]
+            ]
+          },
+          {
+            "draw": 665,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    25
+                  ],
+                  "before": 14045.89513,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 14045.89513
+                }
+              ]
+            },
+            "answer": [
+              [
+                14045.89513
+              ]
+            ]
+          },
+          {
+            "draw": 829,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    177
+                  ],
+                  "before": 25780.19772,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 25780.19772
+                }
+              ]
+            },
+            "answer": [
+              [
+                25780.19772
+              ]
+            ]
+          },
+          {
+            "draw": 1234,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    279
+                  ],
+                  "before": 30000.0,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    5
+                  ],
+                  "before": 20000.0,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                30000.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 4,
+      "uuid": "1f58b1e965af-02b30c2e311f",
+      "query": "What was the origin country of the car model ford torino produced in 1970?",
+      "target_sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE lower(d.car_name)='ford torino' AND pr.model_year=1970",
+      "search": {
+        "seed": "a103a8c05d2414c446f1c19fe896ad9dcd48a8504966132004f3171549659f84",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2029,
+        "duplicate_proposals": 19,
+        "original_answer": [
+          [
+            "USA"
+          ]
+        ],
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 5,
+      "uuid": "1f58b1e965af-1856a4298798",
+      "query": "Among the car models introduced in the market in 1970, how many of them have the USA as their origin country?",
+      "target_sql": "SELECT COUNT(DISTINCT pr.ID) FROM production pr JOIN country c ON c.origin=pr.country WHERE pr.model_year=1970 AND c.country='USA'",
+      "search": {
+        "seed": "20a1fb6863694b6926d6d9e417aa2fd8578ad017ed4a1bdcc6d5dc6575da7864",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2015,
+        "duplicate_proposals": 33,
+        "original_answer": [
+          [
+            45
+          ]
+        ],
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 6,
+      "uuid": "1f58b1e965af-8f8d0031e0a1",
+      "query": "Please list the names of all the car models whose origin country is the USA.",
+      "target_sql": "SELECT DISTINCT d.car_name FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE c.country='USA' ORDER BY d.car_name",
+      "search": {
+        "seed": "4f2a966d8c9214cbd797b12a8a37613ae0a7f43553d529300ab7df73f19cd5a7",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2022,
+        "duplicate_proposals": 26,
+        "original_answer": [
+          [
+            "amc ambassador brougham"
+          ],
+          [
+            "amc ambassador dpl"
+          ],
+          [
+            "amc ambassador sst"
+          ],
+          [
+            "amc concord d/l"
+          ],
+          [
+            "amc concord dl 6"
+          ],
+          [
+            "amc concord dl"
+          ],
+          [
+            "amc concord"
+          ],
+          [
+            "amc gremlin"
+          ],
+          [
+            "amc hornet sportabout (sw)"
+          ],
+          [
+            "amc hornet"
+          ],
+          [
+            "amc matador (sw)"
+          ],
+          [
+            "amc matador"
+          ],
+          [
+            "amc pacer d/l"
+          ],
+          [
+            "amc pacer"
+          ],
+          [
+            "amc rebel sst"
+          ],
+          [
+            "amc spirit dl"
+          ],
+          [
+            "buick century 350"
+          ],
+          [
+            "buick century limited"
+          ],
+          [
+            "buick century luxus (sw)"
+          ],
+          [
+            "buick century special"
+          ],
+          [
+            "buick century"
+          ],
+          [
+            "buick electra 225 custom"
+          ],
+          [
+            "buick estate wagon (sw)"
+          ],
+          [
+            "buick lesabre custom"
+          ],
+          [
+            "buick opel isuzu deluxe"
+          ],
+          [
+            "buick regal sport coupe (turbo)"
+          ],
+          [
+            "buick skyhawk"
+          ],
+          [
+            "buick skylark 320"
+          ],
+          [
+            "buick skylark limited"
+          ],
+          [
+            "buick skylark"
+          ],
+          [
+            "cadillac eldorado"
+          ],
+          [
+            "cadillac seville"
+          ],
+          [
+            "capri ii"
+          ],
+          [
+            "chevroelt chevelle malibu"
+          ],
+          [
+            "chevrolet bel air"
+          ],
+          [
+            "chevrolet camaro"
+          ],
+          [
+            "chevrolet caprice classic"
+          ],
+          [
+            "chevrolet cavalier 2-door"
+          ],
+          [
+            "chevrolet cavalier wagon"
+          ],
+          [
+            "chevrolet cavalier"
+          ],
+          [
+            "chevrolet chevelle concours (sw)"
+          ],
+          [
+            "chevrolet chevelle malibu classic"
+          ],
+          [
+            "chevrolet chevelle malibu"
+          ],
+          [
+            "chevrolet chevette"
+          ],
+          [
+            "chevrolet citation"
+          ],
+          [
+            "chevrolet concours"
+          ],
+          [
+            "chevrolet impala"
+          ],
+          [
+            "chevrolet malibu classic (sw)"
+          ],
+          [
+            "chevrolet malibu"
+          ],
+          [
+            "chevrolet monte carlo landau"
+          ],
+          [
+            "chevrolet monte carlo s"
+          ],
+          [
+            "chevrolet monte carlo"
+          ],
+          [
+            "chevrolet monza 2+2"
+          ],
+          [
+            "chevrolet nova custom"
+          ],
+          [
+            "chevrolet nova"
+          ],
+          [
+            "chevrolet vega (sw)"
+          ],
+          [
+            "chevrolet vega 2300"
+          ],
+          [
+            "chevrolet vega"
+          ],
+          [
+            "chevrolet woody"
+          ],
+          [
+            "chevy c10"
+          ],
+          [
+            "chevy c20"
+          ],
+          [
+            "chevy s-10"
+          ],
+          [
+            "chrysler cordoba"
+          ],
+          [
+            "chrysler lebaron medallion"
+          ],
+          [
+            "chrysler lebaron salon"
+          ],
+          [
+            "chrysler lebaron town @ country (sw)"
+          ],
+          [
+            "chrysler new yorker brougham"
+          ],
+          [
+            "chrysler newport royal"
+          ],
+          [
+            "dodge aries se"
+          ],
+          [
+            "dodge aries wagon (sw)"
+          ],
+          [
+            "dodge aspen 6"
+          ],
+          [
+            "dodge aspen se"
+          ],
+          [
+            "dodge aspen"
+          ],
+          [
+            "dodge challenger se"
+          ],
+          [
+            "dodge charger 2.2"
+          ],
+          [
+            "dodge colt (sw)"
+          ],
+          [
+            "dodge colt hardtop"
+          ],
+          [
+            "dodge colt hatchback custom"
+          ],
+          [
+            "dodge colt m/m"
+          ],
+          [
+            "dodge colt"
+          ],
+          [
+            "dodge coronet brougham"
+          ],
+          [
+            "dodge coronet custom (sw)"
+          ],
+          [
+            "dodge coronet custom"
+          ],
+          [
+            "dodge d100"
+          ],
+          [
+            "dodge d200"
+          ],
+          [
+            "dodge dart custom"
+          ],
+          [
+            "dodge diplomat"
+          ],
+          [
+            "dodge magnum xe"
+          ],
+          [
+            "dodge monaco (sw)"
+          ],
+          [
+            "dodge monaco brougham"
+          ],
+          [
+            "dodge omni"
+          ],
+          [
+            "dodge rampage"
+          ],
+          [
+            "dodge st. regis"
+          ],
+          [
+            "ford country squire (sw)"
+          ],
+          [
+            "ford country"
+          ],
+          [
+            "ford escort 2h"
+          ],
+          [
+            "ford escort 4w"
+          ],
+          [
+            "ford f108"
+          ],
+          [
+            "ford f250"
+          ],
+          [
+            "ford fairmont (auto)"
+          ],
+          [
+            "ford fairmont (man)"
+          ],
+          [
+            "ford fairmont 4"
+          ],
+          [
+            "ford fairmont futura"
+          ],
+          [
+            "ford fairmont"
+          ],
+          [
+            "ford fiesta"
+          ],
+          [
+            "ford futura"
+          ],
+          [
+            "ford galaxie 500"
+          ],
+          [
+            "ford gran torino (sw)"
+          ],
+          [
+            "ford gran torino"
+          ],
+          [
+            "ford granada ghia"
+          ],
+          [
+            "ford granada gl"
+          ],
+          [
+            "ford granada l"
+          ],
+          [
+            "ford granada"
+          ],
+          [
+            "ford ltd landau"
+          ],
+          [
+            "ford ltd"
+          ],
+          [
+            "ford maverick"
+          ],
+          [
+            "ford mustang cobra"
+          ],
+          [
+            "ford mustang gl"
+          ],
+          [
+            "ford mustang ii 2+2"
+          ],
+          [
+            "ford mustang ii"
+          ],
+          [
+            "ford mustang"
+          ],
+          [
+            "ford pinto (sw)"
+          ],
+          [
+            "ford pinto runabout"
+          ],
+          [
+            "ford pinto"
+          ],
+          [
+            "ford ranger"
+          ],
+          [
+            "ford thunderbird"
+          ],
+          [
+            "ford torino 500"
+          ],
+          [
+            "ford torino"
+          ],
+          [
+            "hi 1200d"
+          ],
+          [
+            "mercury capri 2000"
+          ],
+          [
+            "mercury capri v6"
+          ],
+          [
+            "mercury cougar brougham"
+          ],
+          [
+            "mercury grand marquis"
+          ],
+          [
+            "mercury lynx l"
+          ],
+          [
+            "mercury marquis brougham"
+          ],
+          [
+            "mercury marquis"
+          ],
+          [
+            "mercury monarch ghia"
+          ],
+          [
+            "mercury monarch"
+          ],
+          [
+            "mercury zephyr 6"
+          ],
+          [
+            "mercury zephyr"
+          ],
+          [
+            "oldsmobile cutlass ciera (diesel)"
+          ],
+          [
+            "oldsmobile cutlass ls"
+          ],
+          [
+            "oldsmobile cutlass salon brougham"
+          ],
+          [
+            "oldsmobile cutlass supreme"
+          ],
+          [
+            "oldsmobile delta 88 royale"
+          ],
+          [
+            "oldsmobile omega brougham"
+          ],
+          [
+            "oldsmobile omega"
+          ],
+          [
+            "oldsmobile starfire sx"
+          ],
+          [
+            "oldsmobile vista cruiser"
+          ],
+          [
+            "plymouth 'cuda 340"
+          ],
+          [
+            "plymouth arrow gs"
+          ],
+          [
+            "plymouth champ"
+          ],
+          [
+            "plymouth cricket"
+          ],
+          [
+            "plymouth custom suburb"
+          ],
+          [
+            "plymouth duster"
+          ],
+          [
+            "plymouth fury gran sedan"
+          ],
+          [
+            "plymouth fury iii"
+          ],
+          [
+            "plymouth fury"
+          ],
+          [
+            "plymouth grand fury"
+          ],
+          [
+            "plymouth horizon 4"
+          ],
+          [
+            "plymouth horizon miser"
+          ],
+          [
+            "plymouth horizon tc3"
+          ],
+          [
+            "plymouth horizon"
+          ],
+          [
+            "plymouth reliant"
+          ],
+          [
+            "plymouth sapporo"
+          ],
+          [
+            "plymouth satellite custom (sw)"
+          ],
+          [
+            "plymouth satellite custom"
+          ],
+          [
+            "plymouth satellite sebring"
+          ],
+          [
+            "plymouth satellite"
+          ],
+          [
+            "plymouth valiant custom"
+          ],
+          [
+            "plymouth valiant"
+          ],
+          [
+            "plymouth volare custom"
+          ],
+          [
+            "plymouth volare premier v8"
+          ],
+          [
+            "plymouth volare"
+          ],
+          [
+            "pontiac astro"
+          ],
+          [
+            "pontiac catalina brougham"
+          ],
+          [
+            "pontiac catalina"
+          ],
+          [
+            "pontiac firebird"
+          ],
+          [
+            "pontiac grand prix lj"
+          ],
+          [
+            "pontiac grand prix"
+          ],
+          [
+            "pontiac j2000 se hatchback"
+          ],
+          [
+            "pontiac lemans v6"
+          ],
+          [
+            "pontiac phoenix lj"
+          ],
+          [
+            "pontiac phoenix"
+          ],
+          [
+            "pontiac safari (sw)"
+          ],
+          [
+            "pontiac sunbird coupe"
+          ],
+          [
+            "pontiac ventura sj"
+          ]
+        ],
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 7,
+      "uuid": "1f58b1e965af-a14daed69e42",
+      "query": "Please list the names of the top 3 most expensive cars.",
+      "target_sql": "SELECT d.car_name,p.price FROM data d JOIN price p USING(ID) ORDER BY p.price DESC,d.ID LIMIT 3",
+      "search": {
+        "seed": "d03df5cc321c2636d669da45d28893b91ef8df5f637f45a8f744d3c60f0013f2",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 642,
+        "unchanged_answers": 632,
+        "duplicate_proposals": 2,
+        "original_answer": [
+          [
+            "dodge colt",
+            52035.83362
+          ],
+          [
+            "ford ltd landau",
+            52480.06755
+          ],
+          [
+            "plymouth fury gran sedan",
+            53745.93806
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 69,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    268
+                  ],
+                  "before": 30000.0,
+                  "after": 52035.83362
+                },
+                {
+                  "key": [
+                    324
+                  ],
+                  "before": 52035.83362,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "ford ltd landau",
+                52480.06755
+              ],
+              [
+                "plymouth fury gran sedan",
+                53745.93806
+              ],
+              [
+                "toyota corona",
+                52035.83362
+              ]
+            ]
+          },
+          {
+            "draw": 85,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    324
+                  ],
+                  "before": 52035.83362,
+                  "after": 23414.4171
+                },
+                {
+                  "key": [
+                    43
+                  ],
+                  "before": 23414.4171,
+                  "after": 52035.83362
+                }
+              ]
+            },
+            "answer": [
+              [
+                "dodge monaco (sw)",
+                52035.83362
+              ],
+              [
+                "ford ltd landau",
+                52480.06755
+              ],
+              [
+                "plymouth fury gran sedan",
+                53745.93806
+              ]
+            ]
+          },
+          {
+            "draw": 132,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    287
+                  ],
+                  "before": 52480.06755,
+                  "after": 27206.13784
+                },
+                {
+                  "key": [
+                    320
+                  ],
+                  "before": 27206.13784,
+                  "after": 52480.06755
+                }
+              ]
+            },
+            "answer": [
+              [
+                "dodge colt",
+                52035.83362
+              ],
+              [
+                "mazda 626",
+                52480.06755
+              ],
+              [
+                "plymouth fury gran sedan",
+                53745.93806
+              ]
+            ]
+          },
+          {
+            "draw": 143,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    365
+                  ],
+                  "before": 30000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "dodge colt",
+                52035.83362
+              ],
+              [
+                "ford ltd landau",
+                52480.06755
+              ],
+              [
+                "oldsmobile cutlass ls",
+                53745.93806
+              ]
+            ]
+          },
+          {
+            "draw": 227,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    115
+                  ],
+                  "before": 20000.0,
+                  "after": 52035.83362
+                },
+                {
+                  "key": [
+                    324
+                  ],
+                  "before": 52035.83362,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "fiat 124 sport coupe",
+                52035.83362
+              ],
+              [
+                "ford ltd landau",
+                52480.06755
+              ],
+              [
+                "plymouth fury gran sedan",
+                53745.93806
+              ]
+            ]
+          },
+          {
+            "draw": 450,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    287
+                  ],
+                  "before": 52480.06755,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    57
+                  ],
+                  "before": 40000.0,
+                  "after": 52480.06755
+                }
+              ]
+            },
+            "answer": [
+              [
+                "dodge colt",
+                52035.83362
+              ],
+              [
+                "plymouth cricket",
+                52480.06755
+              ],
+              [
+                "plymouth fury gran sedan",
+                53745.93806
+              ]
+            ]
+          },
+          {
+            "draw": 628,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    368
+                  ],
+                  "before": 27234.66428,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 27234.66428
+                }
+              ]
+            },
+            "answer": [
+              [
+                "chevrolet cavalier",
+                53745.93806
+              ],
+              [
+                "dodge colt",
+                52035.83362
+              ],
+              [
+                "ford ltd landau",
+                52480.06755
+              ]
+            ]
+          },
+          {
+            "draw": 641,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    324
+                  ],
+                  "before": 52035.83362,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    99
+                  ],
+                  "before": 30000.0,
+                  "after": 52035.83362
+                }
+              ]
+            },
+            "answer": [
+              [
+                "chevrolet nova custom",
+                52035.83362
+              ],
+              [
+                "ford ltd landau",
+                52480.06755
+              ],
+              [
+                "plymouth fury gran sedan",
+                53745.93806
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 8,
+      "uuid": "1f58b1e965af-d8965b97188e",
+      "query": "Please list all the years in which the car model Chevrolet Impala was introduced in the market.",
+      "target_sql": "SELECT DISTINCT pr.model_year FROM data d JOIN production pr USING(ID) WHERE lower(d.car_name)='chevrolet impala' ORDER BY pr.model_year",
+      "search": {
+        "seed": "dd32f952fb6a74c22e5d7a12baca4012d148e8174baa53c61875055f90360421",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2023,
+        "duplicate_proposals": 25,
+        "original_answer": [
+          [
+            1970
+          ],
+          [
+            1971
+          ],
+          [
+            1972
+          ],
+          [
+            1973
+          ]
+        ],
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 9,
+      "uuid": "1f58b1e965af-7e6b6c110247",
+      "query": "Please list the weights of all the cars with the price over $40000.",
+      "target_sql": "SELECT d.weight FROM data d JOIN price p USING(ID) WHERE p.price>40000 ORDER BY d.ID",
+      "search": {
+        "seed": "c7a6bba3070174ec153970047b739c3431ad3e29800aa7e2fd321ab09fccf580",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 38,
+        "unchanged_answers": 30,
+        "duplicate_proposals": 0,
+        "original_answer": [
+          [
+            1836
+          ],
+          [
+            1915
+          ],
+          [
+            1940
+          ],
+          [
+            1985
+          ],
+          [
+            2025
+          ],
+          [
+            2050
+          ],
+          [
+            2085
+          ],
+          [
+            2124
+          ],
+          [
+            2125
+          ],
+          [
+            2144
+          ],
+          [
+            2155
+          ],
+          [
+            2189
+          ],
+          [
+            2295
+          ],
+          [
+            2401
+          ],
+          [
+            2405
+          ],
+          [
+            2420
+          ],
+          [
+            2434
+          ],
+          [
+            2490
+          ],
+          [
+            2556
+          ],
+          [
+            2625
+          ],
+          [
+            2640
+          ],
+          [
+            2700
+          ],
+          [
+            2795
+          ],
+          [
+            2800
+          ],
+          [
+            2815
+          ],
+          [
+            2830
+          ],
+          [
+            2865
+          ],
+          [
+            2950
+          ],
+          [
+            3012
+          ],
+          [
+            3140
+          ],
+          [
+            3353
+          ],
+          [
+            3425
+          ],
+          [
+            3439
+          ],
+          [
+            3725
+          ],
+          [
+            3900
+          ],
+          [
+            3907
+          ],
+          [
+            4042
+          ],
+          [
+            4215
+          ],
+          [
+            4237
+          ],
+          [
+            4638
+          ],
+          [
+            4732
+          ],
+          [
+            4746
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 2,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    193
+                  ],
+                  "before": 44633.99433,
+                  "after": 33838.41277
+                },
+                {
+                  "key": [
+                    343
+                  ],
+                  "before": 33838.41277,
+                  "after": 44633.99433
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2385
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 4,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    326
+                  ],
+                  "before": 51239.14421,
+                  "after": 26414.50827
+                },
+                {
+                  "key": [
+                    151
+                  ],
+                  "before": 26414.50827,
+                  "after": 51239.14421
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2391
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 5,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    294
+                  ],
+                  "before": 40000.0,
+                  "after": 42666.91377
+                },
+                {
+                  "key": [
+                    369
+                  ],
+                  "before": 42666.91377,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1925
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 12,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    119
+                  ],
+                  "before": 30000.0,
+                  "after": 44607.86606
+                },
+                {
+                  "key": [
+                    377
+                  ],
+                  "before": 44607.86606,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2158
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 13,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    170
+                  ],
+                  "before": 22601.17848,
+                  "after": 47897.3504
+                },
+                {
+                  "key": [
+                    112
+                  ],
+                  "before": 47897.3504,
+                  "after": 22601.17848
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2914
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 29,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    258
+                  ],
+                  "before": 30000.0,
+                  "after": 47697.07716
+                },
+                {
+                  "key": [
+                    321
+                  ],
+                  "before": 47697.07716,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3210
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 31,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    335
+                  ],
+                  "before": 44730.24616,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    386
+                  ],
+                  "before": 30000.0,
+                  "after": 44730.24616
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                1995
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2815
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          },
+          {
+            "draw": 37,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    242
+                  ],
+                  "before": 42883.25641,
+                  "after": 34088.83024
+                },
+                {
+                  "key": [
+                    252
+                  ],
+                  "before": 34088.83024,
+                  "after": 42883.25641
+                }
+              ]
+            },
+            "answer": [
+              [
+                1836
+              ],
+              [
+                1915
+              ],
+              [
+                1940
+              ],
+              [
+                1985
+              ],
+              [
+                2025
+              ],
+              [
+                2050
+              ],
+              [
+                2085
+              ],
+              [
+                2124
+              ],
+              [
+                2125
+              ],
+              [
+                2144
+              ],
+              [
+                2155
+              ],
+              [
+                2189
+              ],
+              [
+                2295
+              ],
+              [
+                2401
+              ],
+              [
+                2405
+              ],
+              [
+                2420
+              ],
+              [
+                2434
+              ],
+              [
+                2490
+              ],
+              [
+                2556
+              ],
+              [
+                2625
+              ],
+              [
+                2640
+              ],
+              [
+                2700
+              ],
+              [
+                2795
+              ],
+              [
+                2800
+              ],
+              [
+                2830
+              ],
+              [
+                2865
+              ],
+              [
+                2950
+              ],
+              [
+                3012
+              ],
+              [
+                3140
+              ],
+              [
+                3353
+              ],
+              [
+                3425
+              ],
+              [
+                3439
+              ],
+              [
+                3570
+              ],
+              [
+                3725
+              ],
+              [
+                3900
+              ],
+              [
+                3907
+              ],
+              [
+                4042
+              ],
+              [
+                4215
+              ],
+              [
+                4237
+              ],
+              [
+                4638
+              ],
+              [
+                4732
+              ],
+              [
+                4746
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 10,
+      "uuid": "1f58b1e965af-f4c4d2aa8bd6",
+      "query": "What is the maximum acceleration of a car with price over $40000?",
+      "target_sql": "SELECT MAX(d.acceleration) FROM data d JOIN price p USING(ID) WHERE p.price>40000",
+      "search": {
+        "seed": "087d784c9c5738e96b12699ccb2d51ddd7932cf9db5034c2b78d0cfa55a65b1e",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 1339,
+        "unchanged_answers": 1314,
+        "duplicate_proposals": 17,
+        "original_answer": [
+          [
+            21.7
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 36,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    242
+                  ],
+                  "before": 42883.25641,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    327
+                  ],
+                  "before": 40000.0,
+                  "after": 42883.25641
+                }
+              ]
+            },
+            "answer": [
+              [
+                23.7
+              ]
+            ]
+          },
+          {
+            "draw": 84,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    321
+                  ],
+                  "before": 47697.07716,
+                  "after": 37000.0
+                },
+                {
+                  "key": [
+                    395
+                  ],
+                  "before": 37000.0,
+                  "after": 47697.07716
+                }
+              ]
+            },
+            "answer": [
+              [
+                24.6
+              ]
+            ]
+          },
+          {
+            "draw": 177,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    326
+                  ],
+                  "before": 51239.14421,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    286
+                  ],
+                  "before": 30000.0,
+                  "after": 51239.14421
+                }
+              ]
+            },
+            "answer": [
+              [
+                21.0
+              ]
+            ]
+          },
+          {
+            "draw": 480,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    15
+                  ],
+                  "before": 36927.0666,
+                  "after": 51239.14421
+                },
+                {
+                  "key": [
+                    326
+                  ],
+                  "before": 51239.14421,
+                  "after": 36927.0666
+                }
+              ]
+            },
+            "answer": [
+              [
+                21.0
+              ]
+            ]
+          },
+          {
+            "draw": 754,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 51239.14421
+                },
+                {
+                  "key": [
+                    326
+                  ],
+                  "before": 51239.14421,
+                  "after": 32650.65157
+                }
+              ]
+            },
+            "answer": [
+              [
+                21.0
+              ]
+            ]
+          },
+          {
+            "draw": 1120,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    385
+                  ],
+                  "before": 30000.0,
+                  "after": 51239.14421
+                },
+                {
+                  "key": [
+                    326
+                  ],
+                  "before": 51239.14421,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                21.0
+              ]
+            ]
+          },
+          {
+            "draw": 1191,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    300
+                  ],
+                  "before": 24639.37404,
+                  "after": 49548.62273
+                },
+                {
+                  "key": [
+                    309
+                  ],
+                  "before": 49548.62273,
+                  "after": 24639.37404
+                }
+              ]
+            },
+            "answer": [
+              [
+                24.8
+              ]
+            ]
+          },
+          {
+            "draw": 1338,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    196
+                  ],
+                  "before": 40000.0,
+                  "after": 50430.44287
+                },
+                {
+                  "key": [
+                    132
+                  ],
+                  "before": 50430.44287,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                22.2
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 11,
+      "uuid": "1f58b1e965af-e5ab95182474",
+      "query": "What is the average price of cars with 8 cylinders?",
+      "target_sql": "SELECT AVG(p.price) FROM data d JOIN price p USING(ID) WHERE d.cylinders=8",
+      "search": {
+        "seed": "4ed3c7db59f53a3d06bb6284df58fcb3e36715c22ebd07354551d6b8ac1aa07d",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 30,
+        "unchanged_answers": 22,
+        "duplicate_proposals": 0,
+        "original_answer": [
+          [
+            28982.184051757282
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 1,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    71
+                  ],
+                  "before": 33048.80117,
+                  "after": 14228.30388
+                },
+                {
+                  "key": [
+                    18
+                  ],
+                  "before": 14228.30388,
+                  "after": 33048.80117
+                }
+              ]
+            },
+            "answer": [
+              [
+                28799.460777097087
+              ]
+            ]
+          },
+          {
+            "draw": 5,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    96
+                  ],
+                  "before": 26260.63473,
+                  "after": 36359.77243
+                },
+                {
+                  "key": [
+                    148
+                  ],
+                  "before": 36359.77243,
+                  "after": 26260.63473
+                }
+              ]
+            },
+            "answer": [
+              [
+                29080.23393233981
+              ]
+            ]
+          },
+          {
+            "draw": 6,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    93
+                  ],
+                  "before": 36489.40106,
+                  "after": 27392.70399
+                },
+                {
+                  "key": [
+                    142
+                  ],
+                  "before": 27392.70399,
+                  "after": 36489.40106
+                }
+              ]
+            },
+            "answer": [
+              [
+                28893.86660447573
+              ]
+            ]
+          },
+          {
+            "draw": 15,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    139
+                  ],
+                  "before": 30000.0,
+                  "after": 22601.17848
+                },
+                {
+                  "key": [
+                    170
+                  ],
+                  "before": 22601.17848,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                28910.350833116507
+              ]
+            ]
+          },
+          {
+            "draw": 16,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    104
+                  ],
+                  "before": 24794.07439,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    259
+                  ],
+                  "before": 40000.0,
+                  "after": 24794.07439
+                }
+              ]
+            },
+            "answer": [
+              [
+                29129.81439748544
+              ]
+            ]
+          },
+          {
+            "draw": 20,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    251
+                  ],
+                  "before": 40000.0,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    322
+                  ],
+                  "before": 30000.0,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                28885.096673116503
+              ]
+            ]
+          },
+          {
+            "draw": 26,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    2
+                  ],
+                  "before": 24221.42273,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    370
+                  ],
+                  "before": 40000.0,
+                  "after": 24221.42273
+                }
+              ]
+            },
+            "answer": [
+              [
+                29135.374122339806
+              ]
+            ]
+          },
+          {
+            "draw": 29,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    367
+                  ],
+                  "before": 23723.77532,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    75
+                  ],
+                  "before": 30000.0,
+                  "after": 23723.77532
+                }
+              ]
+            },
+            "answer": [
+              [
+                28921.249831563106
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 12,
+      "uuid": "1f58b1e965af-90d36f78b725",
+      "query": "How many cars in the database are originated from Europe?",
+      "target_sql": "SELECT COUNT(DISTINCT pr.ID) FROM production pr JOIN country c ON c.origin=pr.country WHERE c.country='Europe'",
+      "search": {
+        "seed": "eb39786c61af3eddc54267bd7922da7fa655794f98d627e16c26950bed5ea35b",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2020,
+        "duplicate_proposals": 28,
+        "original_answer": [
+          [
+            70
+          ]
+        ],
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 13,
+      "uuid": "1f58b1e965af-29698d7878a1",
+      "query": "Show the origin country of Chevrolet Malibu.",
+      "target_sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE lower(d.car_name)='chevrolet malibu'",
+      "search": {
+        "seed": "19da4527df7fc44499e98e8bb9e316ec392026669bed30c9d82756aff12becbd",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2014,
+        "duplicate_proposals": 34,
+        "original_answer": [
+          [
+            "USA"
+          ]
+        ],
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 14,
+      "uuid": "1f58b1e965af-76785f95349f",
+      "query": "What are the miles per gallon of the most expensive car?",
+      "target_sql": "SELECT d.mpg FROM data d JOIN price p USING(ID) WHERE p.price=(SELECT MAX(price) FROM price)",
+      "search": {
+        "seed": "fd831f9ee9b4d12789ce5c9f625da19fc16145acc8689ad516e84d48c28db4d8",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 1624,
+        "unchanged_answers": 1597,
+        "duplicate_proposals": 19,
+        "original_answer": [
+          [
+            14.0
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 112,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    251
+                  ],
+                  "before": 40000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                19.4
+              ]
+            ]
+          },
+          {
+            "draw": 448,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 25780.19772
+                },
+                {
+                  "key": [
+                    177
+                  ],
+                  "before": 25780.19772,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                19.0
+              ]
+            ]
+          },
+          {
+            "draw": 693,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 24928.42041
+                },
+                {
+                  "key": [
+                    28
+                  ],
+                  "before": 24928.42041,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                11.0
+              ]
+            ]
+          },
+          {
+            "draw": 1069,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    71
+                  ],
+                  "before": 33048.80117,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 33048.80117
+                }
+              ]
+            },
+            "answer": [
+              [
+                13.0
+              ]
+            ]
+          },
+          {
+            "draw": 1198,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    346
+                  ],
+                  "before": 26717.10084,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 26717.10084
+                }
+              ]
+            },
+            "answer": [
+              [
+                35.1
+              ]
+            ]
+          },
+          {
+            "draw": 1354,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 33726.80756
+                },
+                {
+                  "key": [
+                    101
+                  ],
+                  "before": 33726.80756,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                18.0
+              ]
+            ]
+          },
+          {
+            "draw": 1419,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    84
+                  ],
+                  "before": 20000.0,
+                  "after": 53745.93806
+                },
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                28.0
+              ]
+            ]
+          },
+          {
+            "draw": 1623,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    94
+                  ],
+                  "before": 53745.93806,
+                  "after": 44274.40748
+                },
+                {
+                  "key": [
+                    299
+                  ],
+                  "before": 44274.40748,
+                  "after": 53745.93806
+                }
+              ]
+            },
+            "answer": [
+              [
+                23.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 15,
+      "uuid": "1f58b1e965af-ecae01ec3f57",
+      "query": "Which is the origin country of the $44274.40748 car?",
+      "target_sql": "SELECT DISTINCT c.country FROM price p JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE ROUND(p.price,5)=44274.40748",
+      "search": {
+        "seed": "3cea1de0f0e99e3b6f9174d911ac9d61c595c44e8f53c3bbff41990be6c38d1f",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2018,
+        "duplicate_proposals": 25,
+        "original_answer": [
+          [
+            "USA"
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 332,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    299
+                  ],
+                  "before": 44274.40748,
+                  "after": 16905.84258
+                },
+                {
+                  "key": [
+                    23
+                  ],
+                  "before": 16905.84258,
+                  "after": 44274.40748
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Europe"
+              ]
+            ]
+          },
+          {
+            "draw": 407,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    332
+                  ],
+                  "before": 35335.98307,
+                  "after": 44274.40748
+                },
+                {
+                  "key": [
+                    299
+                  ],
+                  "before": 44274.40748,
+                  "after": 35335.98307
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Japan"
+              ]
+            ]
+          },
+          {
+            "draw": 1072,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    299
+                  ],
+                  "before": 44274.40748,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    54
+                  ],
+                  "before": 30000.0,
+                  "after": 44274.40748
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Japan"
+              ]
+            ]
+          },
+          {
+            "draw": 1238,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    348
+                  ],
+                  "before": 17268.17018,
+                  "after": 44274.40748
+                },
+                {
+                  "key": [
+                    299
+                  ],
+                  "before": 44274.40748,
+                  "after": 17268.17018
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Japan"
+              ]
+            ]
+          },
+          {
+            "draw": 1952,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    299
+                  ],
+                  "before": 44274.40748,
+                  "after": 32735.65751
+                },
+                {
+                  "key": [
+                    240
+                  ],
+                  "before": 32735.65751,
+                  "after": 44274.40748
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Japan"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 16,
+      "uuid": "1f58b1e965af-1bff98ba02a8",
+      "query": "How much is the Volkswagen Dasher with 14.1 mph acceleration?",
+      "target_sql": "SELECT p.price FROM data d JOIN price p USING(ID) WHERE lower(d.car_name)='volkswagen dasher' AND d.acceleration=14.1",
+      "search": {
+        "seed": "8a3877e82e9f40f2cead2a44671b360276fbfb60750de8b664abfcf171dc4274",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2016,
+        "duplicate_proposals": 26,
+        "original_answer": [
+          [
+            20000.0
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 271,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    52
+                  ],
+                  "before": 36587.11859,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    241
+                  ],
+                  "before": 20000.0,
+                  "after": 36587.11859
+                }
+              ]
+            },
+            "answer": [
+              [
+                36587.11859
+              ]
+            ]
+          },
+          {
+            "draw": 352,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    241
+                  ],
+                  "before": 20000.0,
+                  "after": 27104.01182
+                },
+                {
+                  "key": [
+                    117
+                  ],
+                  "before": 27104.01182,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                27104.01182
+              ]
+            ]
+          },
+          {
+            "draw": 834,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    241
+                  ],
+                  "before": 20000.0,
+                  "after": 9006.648949
+                },
+                {
+                  "key": [
+                    125
+                  ],
+                  "before": 9006.648949,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                9006.648949
+              ]
+            ]
+          },
+          {
+            "draw": 1264,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    175
+                  ],
+                  "before": 40000.0,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    241
+                  ],
+                  "before": 20000.0,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                40000.0
+              ]
+            ]
+          },
+          {
+            "draw": 1283,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    241
+                  ],
+                  "before": 20000.0,
+                  "after": 33684.96888
+                },
+                {
+                  "key": [
+                    4
+                  ],
+                  "before": 33684.96888,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                33684.96888
+              ]
+            ]
+          },
+          {
+            "draw": 1968,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    241
+                  ],
+                  "before": 20000.0,
+                  "after": 40000.0
+                },
+                {
+                  "key": [
+                    180
+                  ],
+                  "before": 40000.0,
+                  "after": 20000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                40000.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 17,
+      "uuid": "1f58b1e965af-a11c6689e23f",
+      "query": "Provide the engine displacement status of the $37443.85589 car.",
+      "target_sql": "SELECT d.displacement FROM data d JOIN price p USING(ID) WHERE ROUND(p.price,5)=37443.85589",
+      "search": {
+        "seed": "108a1babe6c6d2f58a86d255fa68d0af3c49c2d568bb6b49d823ba7f26605a88",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 1212,
+        "unchanged_answers": 1196,
+        "duplicate_proposals": 8,
+        "original_answer": [
+          [
+            200.0
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 145,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    176
+                  ],
+                  "before": 23555.60639,
+                  "after": 37443.85589
+                },
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 23555.60639
+                }
+              ]
+            },
+            "answer": [
+              [
+                90.0
+              ]
+            ]
+          },
+          {
+            "draw": 273,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    23
+                  ],
+                  "before": 16905.84258,
+                  "after": 37443.85589
+                },
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 16905.84258
+                }
+              ]
+            },
+            "answer": [
+              [
+                104.0
+              ]
+            ]
+          },
+          {
+            "draw": 337,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    39
+                  ],
+                  "before": 40000.0,
+                  "after": 37443.85589
+                },
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                350.0
+              ]
+            ]
+          },
+          {
+            "draw": 495,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    11
+                  ],
+                  "before": 30000.0,
+                  "after": 37443.85589
+                }
+              ]
+            },
+            "answer": [
+              [
+                383.0
+              ]
+            ]
+          },
+          {
+            "draw": 587,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    220
+                  ],
+                  "before": 30000.0,
+                  "after": 37443.85589
+                }
+              ]
+            },
+            "answer": [
+              [
+                122.0
+              ]
+            ]
+          },
+          {
+            "draw": 1051,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    170
+                  ],
+                  "before": 22601.17848,
+                  "after": 37443.85589
+                },
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 22601.17848
+                }
+              ]
+            },
+            "answer": [
+              [
+                232.0
+              ]
+            ]
+          },
+          {
+            "draw": 1093,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    284
+                  ],
+                  "before": 12840.57863,
+                  "after": 37443.85589
+                },
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 12840.57863
+                }
+              ]
+            },
+            "answer": [
+              [
+                232.0
+              ]
+            ]
+          },
+          {
+            "draw": 1211,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    49
+                  ],
+                  "before": 40000.0,
+                  "after": 37443.85589
+                },
+                {
+                  "key": [
+                    282
+                  ],
+                  "before": 37443.85589,
+                  "after": 40000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                250.0
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 18,
+      "uuid": "1f58b1e965af-5f6e00f521b2",
+      "query": "When was the $32650.65157 car introduced to the market? State the year.",
+      "target_sql": "SELECT d.model,pr.model_year FROM data d JOIN price p USING(ID) JOIN production pr USING(ID) WHERE ROUND(p.price,5)=32650.65157",
+      "search": {
+        "seed": "e21e9d8b6c4046094e0bcb85b847ad3385b94ddef6f254ba9308b726bad3edd4",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 972,
+        "unchanged_answers": 960,
+        "duplicate_proposals": 4,
+        "original_answer": [
+          [
+            80,
+            1980
+          ]
+        ],
+        "candidates": [
+          {
+            "draw": 44,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    14
+                  ],
+                  "before": 26608.32842,
+                  "after": 32650.65157
+                },
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 26608.32842
+                }
+              ]
+            },
+            "answer": [
+              [
+                70,
+                1970
+              ],
+              [
+                70,
+                1979
+              ]
+            ]
+          },
+          {
+            "draw": 123,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    11
+                  ],
+                  "before": 30000.0,
+                  "after": 32650.65157
+                },
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 30000.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                70,
+                1970
+              ]
+            ]
+          },
+          {
+            "draw": 418,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    52
+                  ],
+                  "before": 36587.11859,
+                  "after": 32650.65157
+                },
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 36587.11859
+                }
+              ]
+            },
+            "answer": [
+              [
+                71,
+                1971
+              ]
+            ]
+          },
+          {
+            "draw": 589,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    245
+                  ],
+                  "before": 30000.0,
+                  "after": 32650.65157
+                }
+              ]
+            },
+            "answer": [
+              [
+                78,
+                1978
+              ]
+            ]
+          },
+          {
+            "draw": 598,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    274
+                  ],
+                  "before": 47709.82064,
+                  "after": 32650.65157
+                },
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 47709.82064
+                }
+              ]
+            },
+            "answer": [
+              [
+                78,
+                1978
+              ]
+            ]
+          },
+          {
+            "draw": 699,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 20000.0
+                },
+                {
+                  "key": [
+                    59
+                  ],
+                  "before": 20000.0,
+                  "after": 32650.65157
+                }
+              ]
+            },
+            "answer": [
+              [
+                72,
+                1972
+              ]
+            ]
+          },
+          {
+            "draw": 834,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 30000.0
+                },
+                {
+                  "key": [
+                    385
+                  ],
+                  "before": 30000.0,
+                  "after": 32650.65157
+                }
+              ]
+            },
+            "answer": [
+              [
+                82,
+                1982
+              ]
+            ]
+          },
+          {
+            "draw": 971,
+            "mutation": {
+              "table": "price",
+              "column": "price",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_existing_positive_prices",
+              "changes": [
+                {
+                  "key": [
+                    349
+                  ],
+                  "before": 50475.68786,
+                  "after": 32650.65157
+                },
+                {
+                  "key": [
+                    331
+                  ],
+                  "before": 32650.65157,
+                  "after": 50475.68786
+                }
+              ]
+            },
+            "answer": [
+              [
+                81,
+                1981
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 19,
+      "uuid": "1f58b1e965af-c8f230c04d16",
+      "query": "State the origin country of the fastest car in the database.",
+      "target_sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE d.horsepower=(SELECT MAX(horsepower) FROM data)",
+      "search": {
+        "seed": "ddf0590fc28aaf2565fcf8438631082c2672021fef2b072b92fd7a14099ae446",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "draws": 2048,
+        "unchanged_answers": 2023,
+        "duplicate_proposals": 25,
+        "original_answer": [
+          [
+            "USA"
+          ]
+        ],
+        "candidates": []
+      }
+    }
+  ],
+  "scope": "Post-outcome development on all twenty known car tasks, retaining all four Qwen sequential-executor model/prompt arms regardless of answer correctness. Admissible synthetic worlds exchange prices of two existing car IDs and fix every other cell. Positive price values and their full multiset, all declared keys/foreign keys, and row counts are preserved. Price-car associations may change by explicit assumption; this is not a claim about historical markets. Per task, propose up to 2048 seeded distinct-or-duplicate pairs and retain the first eight SQL-answer-changing candidates. Model traces and answers are not used to generate candidates. Stop replay at first full target-observation-preserving witness. No witness means unknown. Existing SQL interpretation ambiguities remain; no general natural-language failure prevalence or model rerun."
+}

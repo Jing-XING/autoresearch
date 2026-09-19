@@ -1,0 +1,162 @@
+{
+  "registration_sha256": "276d65aad2d63a641ca586727515cd9b1f7f30fe4dff98c662da5518c7595167",
+  "files": [
+    {
+      "path": "train/capability_1_bi_apis/input/cookbook.json",
+      "bytes": 9015,
+      "sha256": "b9a154ad92b3f74009d8963eae533b2aa4b54f8d6b0f13ddb194580d192f6a30"
+    },
+    {
+      "path": "train/capability_1_bi_apis/output/cookbook.json",
+      "bytes": 78259,
+      "sha256": "6746014bf3c620726e6c3c959992e52a9f829c124ab932c4446dd9f3f99d5bd2"
+    },
+    {
+      "path": "databases/cookbook/cookbook.sqlite",
+      "bytes": 1220608,
+      "sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da"
+    },
+    {
+      "path": "train/capability_1_bi_apis/input/disney.json",
+      "bytes": 6417,
+      "sha256": "1f61cf47fcdf50c177ce5d7ef35e27a1c6dbe025c2accdc242edc7010cc438fc"
+    },
+    {
+      "path": "train/capability_1_bi_apis/output/disney.json",
+      "bytes": 25352,
+      "sha256": "2fc1e902393c22ecb63e00ba6cff88bbf5a5aea4eb087807eea18afa7979c1de"
+    },
+    {
+      "path": "databases/disney/disney.sqlite",
+      "bytes": 258048,
+      "sha256": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25"
+    },
+    {
+      "path": "train/capability_1_bi_apis/input/genes.json",
+      "bytes": 3007,
+      "sha256": "351614b2d41ccedd820ea14a4a5f6a0888d2d12a3c1104a15595f5d58ce1fa26"
+    },
+    {
+      "path": "train/capability_1_bi_apis/output/genes.json",
+      "bytes": 37678,
+      "sha256": "03d187680804a856d432c9d13a1d17fcc1844d555dafb8c9ddb03e929ae81153"
+    },
+    {
+      "path": "databases/genes/genes.sqlite",
+      "bytes": 1527808,
+      "sha256": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5"
+    },
+    {
+      "path": "train/capability_1_bi_apis/input/ice_hockey_draft.json",
+      "bytes": 14319,
+      "sha256": "e9699e42e285f4d3078c3cfd0557dc1967368eadd208a1f92b9e1c2e6ec37016"
+    },
+    {
+      "path": "train/capability_1_bi_apis/output/ice_hockey_draft.json",
+      "bytes": 127574,
+      "sha256": "1be7c60fc3156778078cb2bc3297f94619c63df680cdb806580fa6442ab4ac38"
+    },
+    {
+      "path": "databases/ice_hockey_draft/ice_hockey_draft.sqlite",
+      "bytes": 1028096,
+      "sha256": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18"
+    }
+  ],
+  "selection": [
+    {
+      "domain": "cookbook",
+      "available": 32,
+      "selected_uuids": [
+        "ec134bf7bda5-b3edb4cc82cf",
+        "ec134bf7bda5-0e705a585aa7",
+        "ec134bf7bda5-bade8cc81968",
+        "ec134bf7bda5-982d9425d9e4",
+        "ec134bf7bda5-1011b856b367",
+        "ec134bf7bda5-537cccd2783b",
+        "ec134bf7bda5-10e58f0006b9",
+        "ec134bf7bda5-eca8886ccfb0",
+        "ec134bf7bda5-07fb2facaba4",
+        "ec134bf7bda5-582bd1f32c89",
+        "ec134bf7bda5-ca1de2e0240f",
+        "ec134bf7bda5-b10f8154ccac",
+        "ec134bf7bda5-e7dc4aeee090",
+        "ec134bf7bda5-8a501e6101b8",
+        "ec134bf7bda5-9e1a038d7893",
+        "ec134bf7bda5-58edfd6495e1",
+        "ec134bf7bda5-a5599b1a398c",
+        "ec134bf7bda5-9e5d85f41df0",
+        "ec134bf7bda5-a6f458e57aa7",
+        "ec134bf7bda5-ca41d01e3687"
+      ]
+    },
+    {
+      "domain": "disney",
+      "available": 23,
+      "selected_uuids": [
+        "34a533dfd727-fdd5b0e943a7",
+        "34a533dfd727-03a08ac84ca2",
+        "34a533dfd727-1bd5ad982571",
+        "34a533dfd727-c0fb51d1e703",
+        "34a533dfd727-c9b00cbda527",
+        "34a533dfd727-dfaa807317f7",
+        "34a533dfd727-585fc36cc9c6",
+        "34a533dfd727-bdca886a5f4f",
+        "34a533dfd727-8e9434bbcc3f",
+        "34a533dfd727-51ddf26f6a96",
+        "34a533dfd727-21513bce4a10",
+        "34a533dfd727-667fe456f4a6",
+        "34a533dfd727-af5556147a53",
+        "34a533dfd727-f1c6994b7ed9",
+        "34a533dfd727-fdd9457bce2a",
+        "34a533dfd727-30444c866c6d",
+        "34a533dfd727-4f24103e8871",
+        "34a533dfd727-5ddf6e60c7cb",
+        "34a533dfd727-7ab1eb405866",
+        "34a533dfd727-7478b02e4420"
+      ]
+    },
+    {
+      "domain": "genes",
+      "available": 10,
+      "selected_uuids": [
+        "912d5f84749d-d2c0982ba770",
+        "912d5f84749d-c59a6f6623dc",
+        "912d5f84749d-2cae827e21f0",
+        "912d5f84749d-1850a2b13bd5",
+        "912d5f84749d-312780d3b08b",
+        "912d5f84749d-18ae4d00c552",
+        "912d5f84749d-71ab404b0168",
+        "912d5f84749d-1c4e380e14a8",
+        "912d5f84749d-0dde410e1733",
+        "912d5f84749d-012dca6e2ef4"
+      ]
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "available": 48,
+      "selected_uuids": [
+        "d0d7be63ebc2-778e84fced89",
+        "d0d7be63ebc2-63835e742d17",
+        "d0d7be63ebc2-beca7a5257a8",
+        "d0d7be63ebc2-3838aca46ae6",
+        "d0d7be63ebc2-b9965c45b7fe",
+        "d0d7be63ebc2-e8645030ed93",
+        "d0d7be63ebc2-008141f3490a",
+        "d0d7be63ebc2-515feaea408d",
+        "d0d7be63ebc2-d60121090e94",
+        "d0d7be63ebc2-f467c8ea44a0",
+        "d0d7be63ebc2-e36b927124b8",
+        "d0d7be63ebc2-9ce449e8941d",
+        "d0d7be63ebc2-84be12829fa3",
+        "d0d7be63ebc2-3c637838c96c",
+        "d0d7be63ebc2-b7cff310082f",
+        "d0d7be63ebc2-243866e7be3b",
+        "d0d7be63ebc2-2984bcb9f6c2",
+        "d0d7be63ebc2-9d464b384280",
+        "d0d7be63ebc2-1d02732fa592",
+        "d0d7be63ebc2-fe7eab9789f6"
+      ]
+    }
+  ],
+  "registered_model_episodes": 420
+}

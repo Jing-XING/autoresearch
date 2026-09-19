@@ -1,0 +1,197 @@
+{
+  "purpose": "Freeze a prospective domain expansion using metadata, then retrieve public data.",
+  "dataset_revision": "1388b9f1aaed887a73957eba651a6c2034010476",
+  "metadata_sha256": "16811f175366471eea19478179935ca21778da2bb0f4324d380b432e0be26bb0",
+  "database_tree_sha256": "060dfa56bfde99b356ea0c8d78a9b9728cdb261d14b68dce36954a021e50e6a6",
+  "selection": "Exclude all four previously used domains; SQLite size <= 5000000 bytes; rank by SHA256 of seed plus domain; first four. No answer-dependent replacement.",
+  "seed": "domain-expansion-20260919:",
+  "eligible_ranked": [
+    {
+      "type": "file",
+      "oid": "8fcc4c069a3d11f17ed99a36a53b97a6fb86d320",
+      "size": 1220608,
+      "lfs": {
+        "oid": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+        "size": 1220608,
+        "pointerSize": 132
+      },
+      "xetHash": "9d8d9b73dfc5c4d497e41d11ac1db9bd214b594f1089aa2b9aa1a52153c85e8e",
+      "path": "databases/cookbook/cookbook.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "66817ee7d7fd385514fcf4e41066ce0fa3434dd8",
+      "size": 258048,
+      "lfs": {
+        "oid": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+        "size": 258048,
+        "pointerSize": 131
+      },
+      "xetHash": "f1be0590242f7b03b8a95e7d17d9f56475b9ea39f41b692869cac7981687792e",
+      "path": "databases/disney/disney.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "76112b1e95374acf1e9187325fe68e371841cf29",
+      "size": 1527808,
+      "lfs": {
+        "oid": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+        "size": 1527808,
+        "pointerSize": 132
+      },
+      "xetHash": "dc3341215ca1387b3b512170319b5ccd908453c940977d9c2be0f377d7cbc6d7",
+      "path": "databases/genes/genes.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "e984ce1a3f5fba983c3af28bce9ef938993ca273",
+      "size": 1028096,
+      "lfs": {
+        "oid": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+        "size": 1028096,
+        "pointerSize": 132
+      },
+      "xetHash": "a14dd4af62779140b14fd80f8fce50c60105e96868ac3f2053ed11d03c0d1bad",
+      "path": "databases/ice_hockey_draft/ice_hockey_draft.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "c1f305a78e245d9305b5c96187df34bd7941246f",
+      "size": 548864,
+      "lfs": {
+        "oid": "164ae73150ba2f081931fcca583aafc51f319c239eab3e0005ac1a08e6f95fc7",
+        "size": 548864,
+        "pointerSize": 131
+      },
+      "xetHash": "800bc1ec2aa3d169fa641d2a4e677c943c283b56f77802ebf5b70f924ed7c0e8",
+      "path": "databases/law_episode/law_episode.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "736f88465ae0cac6f770811968ad39f4139f55d6",
+      "size": 4337664,
+      "lfs": {
+        "oid": "8b34bb9752cb1550a622945e1b814b5978cd9435a00ab037c2758b552a7f856e",
+        "size": 4337664,
+        "pointerSize": 132
+      },
+      "xetHash": "4426e15edfc3e7e3876cc1cfc2e929dffa047d575206c5204f97dfc97a2508b5",
+      "path": "databases/books/books.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "e4e096933db2b2820c591d6145873a0144a37589",
+      "size": 806912,
+      "lfs": {
+        "oid": "39dbaf39bf244e1062e50d3be9dfd952320bd12e8471a58ae93db6ff83d57504",
+        "size": 806912,
+        "pointerSize": 131
+      },
+      "xetHash": "c2c90fe909235757a7338dcec550401745dcc69a1db1cc4d5263a4fd86df1b42",
+      "path": "databases/restaurant/restaurant.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "7dc608aa3e41f17aa236e45cc5b900c107b9495a",
+      "size": 2113536,
+      "lfs": {
+        "oid": "02e71c23c27973be373e0c110600b4f12c77904c7594f3e345310511fe8b8d63",
+        "size": 2113536,
+        "pointerSize": 132
+      },
+      "xetHash": "fcf78cc7b2cad96f42e520d9b5ebc7c7303711ab384e35d92e91651d40792747",
+      "path": "databases/mondial_geo/mondial_geo.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "878b3b1106eb60ad340e3230d1c412c365101316",
+      "size": 991232,
+      "lfs": {
+        "oid": "3cf815ded995e8bec52d59b4763f8229054556f171a4eeb7b53f86535b94bc19",
+        "size": 991232,
+        "pointerSize": 131
+      },
+      "xetHash": "4382833aa1d047b1bb113bc428666240123ef903c0dac4e331d477c58e17dcb0",
+      "path": "databases/beer_factory/beer_factory.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "3bb8fe1f29d508b1141fa9f3e41480994384da02",
+      "size": 630784,
+      "lfs": {
+        "oid": "295afab81225bea2df72f5b779e4da0b6c5fb691ff8f7e9f448ed20e54555e18",
+        "size": 630784,
+        "pointerSize": 131
+      },
+      "xetHash": "743ff332309f0fdd575403f1f027e9ac5e5c155e6194dcb32702bd3b4be928b1",
+      "path": "databases/university/university.sqlite"
+    }
+  ],
+  "selected_databases": [
+    {
+      "type": "file",
+      "oid": "8fcc4c069a3d11f17ed99a36a53b97a6fb86d320",
+      "size": 1220608,
+      "lfs": {
+        "oid": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+        "size": 1220608,
+        "pointerSize": 132
+      },
+      "xetHash": "9d8d9b73dfc5c4d497e41d11ac1db9bd214b594f1089aa2b9aa1a52153c85e8e",
+      "path": "databases/cookbook/cookbook.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "66817ee7d7fd385514fcf4e41066ce0fa3434dd8",
+      "size": 258048,
+      "lfs": {
+        "oid": "0356fc508607fa20da3c94dc785705f05a4b8a9455bb4ac02fb1271fe3bd5c25",
+        "size": 258048,
+        "pointerSize": 131
+      },
+      "xetHash": "f1be0590242f7b03b8a95e7d17d9f56475b9ea39f41b692869cac7981687792e",
+      "path": "databases/disney/disney.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "76112b1e95374acf1e9187325fe68e371841cf29",
+      "size": 1527808,
+      "lfs": {
+        "oid": "726f142a9281a90cb36a6969b08be51d03a7ba2a58d30dfa02bdb766993fe6b5",
+        "size": 1527808,
+        "pointerSize": 132
+      },
+      "xetHash": "dc3341215ca1387b3b512170319b5ccd908453c940977d9c2be0f377d7cbc6d7",
+      "path": "databases/genes/genes.sqlite"
+    },
+    {
+      "type": "file",
+      "oid": "e984ce1a3f5fba983c3af28bce9ef938993ca273",
+      "size": 1028096,
+      "lfs": {
+        "oid": "4b297d4b7f8c0ff3b751a4017c4d2355aa8eeb11159cf258600995a56f53bf18",
+        "size": 1028096,
+        "pointerSize": 132
+      },
+      "xetHash": "a14dd4af62779140b14fd80f8fce50c60105e96868ac3f2053ed11d03c0d1bad",
+      "path": "databases/ice_hockey_draft/ice_hockey_draft.sqlite"
+    }
+  ],
+  "task_selection": "Within each domain, rank all UUIDs by SHA256 of task-expansion-20260919: plus UUID and retain the first min(20, available). Preserve deterministic rank order in execution.",
+  "evaluation": "Fresh domains relative to this development work, still public training split; not guaranteed absent from model pretraining. Freeze SQL interpretations before model outputs. Retain interpretation ambiguities and execution failures.",
+  "models": [
+    "qwen3",
+    "qwen25",
+    "qwen30b"
+  ],
+  "prompts": [
+    "original",
+    "coverage_check"
+  ],
+  "executor": "sequential",
+  "max_steps": 20,
+  "max_tool_calls": 20,
+  "max_new_tokens": 512,
+  "max_input_tokens": 32768,
+  "registration_stage": "Before downloading task contents or observing model answers"
+}
