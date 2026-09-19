@@ -1,0 +1,38 @@
+{
+  "observed_at": "2026-09-19T23:06:39",
+  "batch": "hotpot-pilot-v1",
+  "revision": "hotpot-pilot-v1",
+  "supervisor_pid": 18283,
+  "registered_episodes": 48,
+  "status": "waiting_for_dependencies",
+  "workers": 0,
+  "case_files": 0,
+  "predecessor": "tau-nk-test40-v2",
+  "live_process_command_verified": true,
+  "archive_sha256": "17d98a8db2563ad0044c5a7fc84fd7f691b20504d72391473fe12a5468ec1cdf",
+  "receipt_sha256": "f6af33710e117d25b2c2216cae3829bc241ffe63063006636fcb97ba0058d9ee",
+  "files_verified": 18,
+  "local_packaged_tests": 3,
+  "local_packaged_tests_exit_code": 0,
+  "remote_tests": 3,
+  "remote_tests_exit_code": 0,
+  "local_preflight_sha256": "cb9129a0730259c6f2205eefd5d5d58fcf6ea49889d8eb925e332da4bac1a665",
+  "remote_preflight_log": "/xingjing/autoresearch-agent-papers/logs/hotpot-pilot-v1-preflight.log",
+  "remote_launch_record": "/xingjing/autoresearch-agent-papers/logs/hotpot-pilot-v1-launch.json",
+  "remote_grid_manifest": "/xingjing/autoresearch-agent-papers/runs/hotpot-pilot-v1/grid_manifest.json",
+  "model_outcomes_available": false,
+  "evaluation40_deployed": false,
+  "gold_labels_deployed": false,
+  "prior_queue_unchanged": true,
+  "observed_prior_expansion": {
+    "case_files": 280,
+    "worker_records": 18,
+    "successful_worker_exits": 16,
+    "completed_worker_counts_by_domain": {
+      "cookbook": 6,
+      "disney": 6,
+      "genes": 4
+    }
+  },
+  "limits": "Successful package transfer, scripted tests and live waiting supervisor are deployment evidence, not completed neural experiments."
+}

@@ -71,8 +71,13 @@ The adapter provides fixed task identity, stable public retrieval content,
 separate gold labels and replayable authoritative state. These address concrete
 confounds identified in the original live/replayed analysis paths. A future
 model study can compare baseline, shared and isolated simulation on the same
-questions while retaining every failure. It still needs a frozen model/protocol
-definition and real generation; no GPU job has been added for this direction.
+questions while retaining every failure. At the preparation stage, no GPU job
+had been added. The subsequent [pilot protocol](../hotpot_pilot_protocol_v1.md)
+now fixes 48 episodes on the eight pilot tasks under two checkpoints and three
+conditions. Its deployed supervisor waits behind the existing five-stage queue;
+`hotpot_pilot_deployment_v1.json` records three successful remote scripted tests
+and the live waiting process. No pilot neural result is yet available, and the
+forty evaluation tasks and all gold labels were excluded from its package.
 The current adapter is a controlled distractor-context setting, so it cannot
 directly reproduce published full-Wikipedia quality or latency numbers.
 
