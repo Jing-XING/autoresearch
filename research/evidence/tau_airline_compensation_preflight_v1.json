@@ -1,0 +1,1178 @@
+{
+  "script_sha256": "2cf2f0284947d2de21ae84a44f1066b5257aa177f3185ea4280941bb95e025ee",
+  "cases": [
+    {
+      "metadata": {
+        "tau_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+        "tau_canonical_manifest": "d07cc342f43894f866d1fd151fdd1ed996976cb194299e2d87913bc5bc8ee349",
+        "source_files_verified": 302,
+        "fixture_sha256": "3c2c621f7fae1117903ce84dc11abbbd0136118de51a297276422e70f263cc6d",
+        "profile": "single_card",
+        "profile_selection": "official single-flight card fixture; declared two-leg mixed-payment extension",
+        "packages": {
+          "tau2": "1.0.1",
+          "pydantic": "2.13.5",
+          "loguru": "0.7.3",
+          "mcp": "1.30.0",
+          "litellm": "1.82.6"
+        }
+      },
+      "booking": {
+        "user_id": "mia_li_3668",
+        "origin": "PHL",
+        "destination": "LGA",
+        "flight_type": "one_way",
+        "cabin": "economy",
+        "flights": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16"
+          }
+        ],
+        "passengers": [
+          {
+            "first_name": "Noah",
+            "last_name": "Brown",
+            "dob": "1990-01-01"
+          }
+        ],
+        "payment_methods": [
+          {
+            "payment_id": "credit_card_4421486",
+            "amount": 122
+          }
+        ],
+        "total_baggages": 2,
+        "nonfree_baggages": 0,
+        "insurance": "no"
+      },
+      "reservation_id": "HATHAT",
+      "before": {
+        "flights": {
+          "HAT001": {
+            "flight_number": "HAT001",
+            "origin": "PHL",
+            "destination": "LGA",
+            "scheduled_departure_time_est": "06:00:00",
+            "scheduled_arrival_time_est": "07:00:00",
+            "dates": {
+              "2024-05-14": {
+                "status": "cancelled"
+              },
+              "2024-05-15": {
+                "status": "landed",
+                "actual_departure_time_est": "2024-05-15T06:04:00",
+                "actual_arrival_time_est": "2024-05-15T07:30:00"
+              },
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 10,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          },
+          "HAT002": {
+            "flight_number": "HAT002",
+            "origin": "LGA",
+            "destination": "LAX",
+            "scheduled_departure_time_est": "08:00:00",
+            "scheduled_arrival_time_est": "09:00:00",
+            "dates": {
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 10,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          }
+        },
+        "users": {
+          "mia_li_3668": {
+            "user_id": "mia_li_3668",
+            "name": {
+              "first_name": "Mia",
+              "last_name": "Li"
+            },
+            "address": {
+              "address1": "975 Sunset Drive",
+              "address2": "Suite 217",
+              "city": "Austin",
+              "country": "USA",
+              "state": "TX",
+              "zip": "78750"
+            },
+            "email": "mia.li3818@example.com",
+            "dob": "1990-04-05",
+            "payment_methods": {
+              "credit_card_4421486": {
+                "source": "credit_card",
+                "id": "credit_card_4421486",
+                "brand": "visa",
+                "last_four": "7447"
+              },
+              "certificate_4856383": {
+                "source": "certificate",
+                "id": "certificate_4856383",
+                "amount": 100.0
+              }
+            },
+            "saved_passengers": [
+              {
+                "first_name": "Amelia",
+                "last_name": "Ahmed",
+                "dob": "1957-03-21"
+              }
+            ],
+            "membership": "gold",
+            "reservations": [
+              "NO6JO3",
+              "AIXC49",
+              "HKEG34"
+            ]
+          }
+        },
+        "reservations": {
+          "4WQ150": {
+            "reservation_id": "4WQ150",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Chen",
+                "last_name": "Jackson",
+                "dob": "1956-07-07"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Smith",
+                "dob": "1967-04-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 500
+              }
+            ],
+            "created_at": "2024-05-02T03:10:19",
+            "total_baggages": 5,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          }
+        }
+      },
+      "booked": {
+        "flights": {
+          "HAT001": {
+            "flight_number": "HAT001",
+            "origin": "PHL",
+            "destination": "LGA",
+            "scheduled_departure_time_est": "06:00:00",
+            "scheduled_arrival_time_est": "07:00:00",
+            "dates": {
+              "2024-05-14": {
+                "status": "cancelled"
+              },
+              "2024-05-15": {
+                "status": "landed",
+                "actual_departure_time_est": "2024-05-15T06:04:00",
+                "actual_arrival_time_est": "2024-05-15T07:30:00"
+              },
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 9,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          },
+          "HAT002": {
+            "flight_number": "HAT002",
+            "origin": "LGA",
+            "destination": "LAX",
+            "scheduled_departure_time_est": "08:00:00",
+            "scheduled_arrival_time_est": "09:00:00",
+            "dates": {
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 10,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          }
+        },
+        "users": {
+          "mia_li_3668": {
+            "user_id": "mia_li_3668",
+            "name": {
+              "first_name": "Mia",
+              "last_name": "Li"
+            },
+            "address": {
+              "address1": "975 Sunset Drive",
+              "address2": "Suite 217",
+              "city": "Austin",
+              "country": "USA",
+              "state": "TX",
+              "zip": "78750"
+            },
+            "email": "mia.li3818@example.com",
+            "dob": "1990-04-05",
+            "payment_methods": {
+              "credit_card_4421486": {
+                "source": "credit_card",
+                "id": "credit_card_4421486",
+                "brand": "visa",
+                "last_four": "7447"
+              },
+              "certificate_4856383": {
+                "source": "certificate",
+                "id": "certificate_4856383",
+                "amount": 100.0
+              }
+            },
+            "saved_passengers": [
+              {
+                "first_name": "Amelia",
+                "last_name": "Ahmed",
+                "dob": "1957-03-21"
+              }
+            ],
+            "membership": "gold",
+            "reservations": [
+              "NO6JO3",
+              "AIXC49",
+              "HKEG34",
+              "HATHAT"
+            ]
+          }
+        },
+        "reservations": {
+          "4WQ150": {
+            "reservation_id": "4WQ150",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Chen",
+                "last_name": "Jackson",
+                "dob": "1956-07-07"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Smith",
+                "dob": "1967-04-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 500
+              }
+            ],
+            "created_at": "2024-05-02T03:10:19",
+            "total_baggages": 5,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          },
+          "HATHAT": {
+            "reservation_id": "HATHAT",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Noah",
+                "last_name": "Brown",
+                "dob": "1990-01-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 122
+              }
+            ],
+            "created_at": "2024-05-15T15:00:00",
+            "total_baggages": 2,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          }
+        }
+      },
+      "after": {
+        "flights": {
+          "HAT001": {
+            "flight_number": "HAT001",
+            "origin": "PHL",
+            "destination": "LGA",
+            "scheduled_departure_time_est": "06:00:00",
+            "scheduled_arrival_time_est": "07:00:00",
+            "dates": {
+              "2024-05-14": {
+                "status": "cancelled"
+              },
+              "2024-05-15": {
+                "status": "landed",
+                "actual_departure_time_est": "2024-05-15T06:04:00",
+                "actual_arrival_time_est": "2024-05-15T07:30:00"
+              },
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 9,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          },
+          "HAT002": {
+            "flight_number": "HAT002",
+            "origin": "LGA",
+            "destination": "LAX",
+            "scheduled_departure_time_est": "08:00:00",
+            "scheduled_arrival_time_est": "09:00:00",
+            "dates": {
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 10,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          }
+        },
+        "users": {
+          "mia_li_3668": {
+            "user_id": "mia_li_3668",
+            "name": {
+              "first_name": "Mia",
+              "last_name": "Li"
+            },
+            "address": {
+              "address1": "975 Sunset Drive",
+              "address2": "Suite 217",
+              "city": "Austin",
+              "country": "USA",
+              "state": "TX",
+              "zip": "78750"
+            },
+            "email": "mia.li3818@example.com",
+            "dob": "1990-04-05",
+            "payment_methods": {
+              "credit_card_4421486": {
+                "source": "credit_card",
+                "id": "credit_card_4421486",
+                "brand": "visa",
+                "last_four": "7447"
+              },
+              "certificate_4856383": {
+                "source": "certificate",
+                "id": "certificate_4856383",
+                "amount": 100.0
+              }
+            },
+            "saved_passengers": [
+              {
+                "first_name": "Amelia",
+                "last_name": "Ahmed",
+                "dob": "1957-03-21"
+              }
+            ],
+            "membership": "gold",
+            "reservations": [
+              "NO6JO3",
+              "AIXC49",
+              "HKEG34",
+              "HATHAT"
+            ]
+          }
+        },
+        "reservations": {
+          "4WQ150": {
+            "reservation_id": "4WQ150",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Chen",
+                "last_name": "Jackson",
+                "dob": "1956-07-07"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Smith",
+                "dob": "1967-04-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 500
+              }
+            ],
+            "created_at": "2024-05-02T03:10:19",
+            "total_baggages": 5,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          },
+          "HATHAT": {
+            "reservation_id": "HATHAT",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Noah",
+                "last_name": "Brown",
+                "dob": "1990-01-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 122
+              },
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": -122
+              }
+            ],
+            "created_at": "2024-05-15T15:00:00",
+            "total_baggages": 2,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": "cancelled"
+          }
+        }
+      },
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      }
+    },
+    {
+      "metadata": {
+        "tau_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+        "tau_canonical_manifest": "d07cc342f43894f866d1fd151fdd1ed996976cb194299e2d87913bc5bc8ee349",
+        "source_files_verified": 302,
+        "fixture_sha256": "3c2c621f7fae1117903ce84dc11abbbd0136118de51a297276422e70f263cc6d",
+        "profile": "two_leg_mixed",
+        "profile_selection": "official single-flight card fixture; declared two-leg mixed-payment extension",
+        "packages": {
+          "tau2": "1.0.1",
+          "pydantic": "2.13.5",
+          "loguru": "0.7.3",
+          "mcp": "1.30.0",
+          "litellm": "1.82.6"
+        }
+      },
+      "booking": {
+        "user_id": "mia_li_3668",
+        "origin": "PHL",
+        "destination": "LAX",
+        "flight_type": "one_way",
+        "cabin": "economy",
+        "flights": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16"
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16"
+          }
+        ],
+        "passengers": [
+          {
+            "first_name": "Noah",
+            "last_name": "Brown",
+            "dob": "1990-01-01"
+          }
+        ],
+        "payment_methods": [
+          {
+            "payment_id": "certificate_4856383",
+            "amount": 100
+          },
+          {
+            "payment_id": "credit_card_4421486",
+            "amount": 144
+          }
+        ],
+        "total_baggages": 2,
+        "nonfree_baggages": 0,
+        "insurance": "no"
+      },
+      "reservation_id": "HATHAT",
+      "before": {
+        "flights": {
+          "HAT001": {
+            "flight_number": "HAT001",
+            "origin": "PHL",
+            "destination": "LGA",
+            "scheduled_departure_time_est": "06:00:00",
+            "scheduled_arrival_time_est": "07:00:00",
+            "dates": {
+              "2024-05-14": {
+                "status": "cancelled"
+              },
+              "2024-05-15": {
+                "status": "landed",
+                "actual_departure_time_est": "2024-05-15T06:04:00",
+                "actual_arrival_time_est": "2024-05-15T07:30:00"
+              },
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 10,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          },
+          "HAT002": {
+            "flight_number": "HAT002",
+            "origin": "LGA",
+            "destination": "LAX",
+            "scheduled_departure_time_est": "08:00:00",
+            "scheduled_arrival_time_est": "09:00:00",
+            "dates": {
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 10,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          }
+        },
+        "users": {
+          "mia_li_3668": {
+            "user_id": "mia_li_3668",
+            "name": {
+              "first_name": "Mia",
+              "last_name": "Li"
+            },
+            "address": {
+              "address1": "975 Sunset Drive",
+              "address2": "Suite 217",
+              "city": "Austin",
+              "country": "USA",
+              "state": "TX",
+              "zip": "78750"
+            },
+            "email": "mia.li3818@example.com",
+            "dob": "1990-04-05",
+            "payment_methods": {
+              "credit_card_4421486": {
+                "source": "credit_card",
+                "id": "credit_card_4421486",
+                "brand": "visa",
+                "last_four": "7447"
+              },
+              "certificate_4856383": {
+                "source": "certificate",
+                "id": "certificate_4856383",
+                "amount": 100.0
+              }
+            },
+            "saved_passengers": [
+              {
+                "first_name": "Amelia",
+                "last_name": "Ahmed",
+                "dob": "1957-03-21"
+              }
+            ],
+            "membership": "gold",
+            "reservations": [
+              "NO6JO3",
+              "AIXC49",
+              "HKEG34"
+            ]
+          }
+        },
+        "reservations": {
+          "4WQ150": {
+            "reservation_id": "4WQ150",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Chen",
+                "last_name": "Jackson",
+                "dob": "1956-07-07"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Smith",
+                "dob": "1967-04-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 500
+              }
+            ],
+            "created_at": "2024-05-02T03:10:19",
+            "total_baggages": 5,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          }
+        }
+      },
+      "booked": {
+        "flights": {
+          "HAT001": {
+            "flight_number": "HAT001",
+            "origin": "PHL",
+            "destination": "LGA",
+            "scheduled_departure_time_est": "06:00:00",
+            "scheduled_arrival_time_est": "07:00:00",
+            "dates": {
+              "2024-05-14": {
+                "status": "cancelled"
+              },
+              "2024-05-15": {
+                "status": "landed",
+                "actual_departure_time_est": "2024-05-15T06:04:00",
+                "actual_arrival_time_est": "2024-05-15T07:30:00"
+              },
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 9,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          },
+          "HAT002": {
+            "flight_number": "HAT002",
+            "origin": "LGA",
+            "destination": "LAX",
+            "scheduled_departure_time_est": "08:00:00",
+            "scheduled_arrival_time_est": "09:00:00",
+            "dates": {
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 9,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          }
+        },
+        "users": {
+          "mia_li_3668": {
+            "user_id": "mia_li_3668",
+            "name": {
+              "first_name": "Mia",
+              "last_name": "Li"
+            },
+            "address": {
+              "address1": "975 Sunset Drive",
+              "address2": "Suite 217",
+              "city": "Austin",
+              "country": "USA",
+              "state": "TX",
+              "zip": "78750"
+            },
+            "email": "mia.li3818@example.com",
+            "dob": "1990-04-05",
+            "payment_methods": {
+              "credit_card_4421486": {
+                "source": "credit_card",
+                "id": "credit_card_4421486",
+                "brand": "visa",
+                "last_four": "7447"
+              }
+            },
+            "saved_passengers": [
+              {
+                "first_name": "Amelia",
+                "last_name": "Ahmed",
+                "dob": "1957-03-21"
+              }
+            ],
+            "membership": "gold",
+            "reservations": [
+              "NO6JO3",
+              "AIXC49",
+              "HKEG34",
+              "HATHAT"
+            ]
+          }
+        },
+        "reservations": {
+          "4WQ150": {
+            "reservation_id": "4WQ150",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Chen",
+                "last_name": "Jackson",
+                "dob": "1956-07-07"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Smith",
+                "dob": "1967-04-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 500
+              }
+            ],
+            "created_at": "2024-05-02T03:10:19",
+            "total_baggages": 5,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          },
+          "HATHAT": {
+            "reservation_id": "HATHAT",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LAX",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              },
+              {
+                "flight_number": "HAT002",
+                "origin": "LGA",
+                "destination": "LAX",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Noah",
+                "last_name": "Brown",
+                "dob": "1990-01-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "certificate_4856383",
+                "amount": 100
+              },
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 144
+              }
+            ],
+            "created_at": "2024-05-15T15:00:00",
+            "total_baggages": 2,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          }
+        }
+      },
+      "after": {
+        "flights": {
+          "HAT001": {
+            "flight_number": "HAT001",
+            "origin": "PHL",
+            "destination": "LGA",
+            "scheduled_departure_time_est": "06:00:00",
+            "scheduled_arrival_time_est": "07:00:00",
+            "dates": {
+              "2024-05-14": {
+                "status": "cancelled"
+              },
+              "2024-05-15": {
+                "status": "landed",
+                "actual_departure_time_est": "2024-05-15T06:04:00",
+                "actual_arrival_time_est": "2024-05-15T07:30:00"
+              },
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 9,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          },
+          "HAT002": {
+            "flight_number": "HAT002",
+            "origin": "LGA",
+            "destination": "LAX",
+            "scheduled_departure_time_est": "08:00:00",
+            "scheduled_arrival_time_est": "09:00:00",
+            "dates": {
+              "2024-05-16": {
+                "status": "available",
+                "available_seats": {
+                  "basic_economy": 16,
+                  "economy": 9,
+                  "business": 13
+                },
+                "prices": {
+                  "basic_economy": 87,
+                  "economy": 122,
+                  "business": 471
+                }
+              }
+            }
+          }
+        },
+        "users": {
+          "mia_li_3668": {
+            "user_id": "mia_li_3668",
+            "name": {
+              "first_name": "Mia",
+              "last_name": "Li"
+            },
+            "address": {
+              "address1": "975 Sunset Drive",
+              "address2": "Suite 217",
+              "city": "Austin",
+              "country": "USA",
+              "state": "TX",
+              "zip": "78750"
+            },
+            "email": "mia.li3818@example.com",
+            "dob": "1990-04-05",
+            "payment_methods": {
+              "credit_card_4421486": {
+                "source": "credit_card",
+                "id": "credit_card_4421486",
+                "brand": "visa",
+                "last_four": "7447"
+              }
+            },
+            "saved_passengers": [
+              {
+                "first_name": "Amelia",
+                "last_name": "Ahmed",
+                "dob": "1957-03-21"
+              }
+            ],
+            "membership": "gold",
+            "reservations": [
+              "NO6JO3",
+              "AIXC49",
+              "HKEG34",
+              "HATHAT"
+            ]
+          }
+        },
+        "reservations": {
+          "4WQ150": {
+            "reservation_id": "4WQ150",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LGA",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Chen",
+                "last_name": "Jackson",
+                "dob": "1956-07-07"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Smith",
+                "dob": "1967-04-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 500
+              }
+            ],
+            "created_at": "2024-05-02T03:10:19",
+            "total_baggages": 5,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": null
+          },
+          "HATHAT": {
+            "reservation_id": "HATHAT",
+            "user_id": "mia_li_3668",
+            "origin": "PHL",
+            "destination": "LAX",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT001",
+                "origin": "PHL",
+                "destination": "LGA",
+                "date": "2024-05-16",
+                "price": 122
+              },
+              {
+                "flight_number": "HAT002",
+                "origin": "LGA",
+                "destination": "LAX",
+                "date": "2024-05-16",
+                "price": 122
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Noah",
+                "last_name": "Brown",
+                "dob": "1990-01-01"
+              }
+            ],
+            "payment_history": [
+              {
+                "payment_id": "certificate_4856383",
+                "amount": 100
+              },
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": 144
+              },
+              {
+                "payment_id": "certificate_4856383",
+                "amount": -100
+              },
+              {
+                "payment_id": "credit_card_4421486",
+                "amount": -144
+              }
+            ],
+            "created_at": "2024-05-15T15:00:00",
+            "total_baggages": 2,
+            "nonfree_baggages": 0,
+            "insurance": "no",
+            "status": "cancelled"
+          }
+        }
+      },
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      }
+    }
+  ],
+  "model_calls": 0
+}

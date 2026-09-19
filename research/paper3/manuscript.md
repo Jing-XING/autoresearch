@@ -23,6 +23,9 @@ errors as failures on the same fixture, while silent no-ops remain undetected.
 SagaLLM coordinator controls separately expose its exception-based completion
 convention. These comparisons delimit the diagnosed mechanisms rather than
 establishing a general framework ranking.
+Twenty-five native airline-tool controls extend the diagnosis to reservation
+and payment-ledger state, distinguishing a declared cancellation contract from
+full database restoration and errors after completed effects.
 Separately, an audit of all 280 JSON files in the published archive identifies
 duplicate aggregate records and nested progress snapshots; a conservative
 structured-status screen finds no observed instance of the constructed
@@ -209,7 +212,7 @@ the remaining packages are still current, and the newer default was released
 after the paper. Attributing this MCP-specific behavior retrospectively to
 the original reported model experiments would be unwarranted.
 
-### 5.3 Independent native MCP transport control
+### 5.4 Independent native MCP transport control
 
 [agent-saga](https://github.com/thomasjgeorge23/agent-saga/tree/4310ff570e60c42c081ae216e87a1ccb093525d4)
 provides a useful positive control. Its stdio transport raises on an MCP
@@ -235,7 +238,7 @@ correct error propagation addresses one boundary without proving an external
 postcondition. The comparison does not test crash recovery, connector services,
 automatic pair discovery or overall framework reliability.
 
-### 5.4 An exception-based coordinator interface
+### 5.5 An exception-based coordinator interface
 
 The independent [SagaLLM coordinator](https://github.com/genglongling/SagaLLM/blob/2781c33edc4005b066671d5dc3cad157fae14f11/src/multi_agent/saga.py)
 calls rollback on agents whose forward calls returned before a subsequent
@@ -254,6 +257,69 @@ SagaLLM's model benchmark. The contrast with agent-saga's explicit `UNKNOWN`
 state illustrates why a failed return and an absent effect are different
 facts. This distinction is established in prior recovery work and is not a
 new algorithmic contribution here.
+
+### 5.6 Native reservation and payment-ledger state
+
+The preceding binary booking fixture makes transport behavior inspectable,
+but does not exercise a business tool's coupled state. We therefore add
+unchanged [tau2 airline tools](https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/domains/airline/tools.py)
+on the official unit-test database. One input is its single-flight/card-payment
+fixture; the other is an explicitly constructed two-flight extension paid
+with a certificate and a card. Source hashes and fixture bytes are pinned.
+These are selected workflow controls, not sampled official tasks or an
+evaluation of an autonomous airline agent.
+
+We define the cancellation contract as cancelled reservation status and
+zero net amount in the reservation payment ledger. Full database equality
+is unsuitable: cancellation retains the reservation and refund entries, and
+the pinned implementation explicitly omits seat release. We report inventory
+and payment-instrument restoration separately without counting these omitted
+effects as violations of our narrower declared contract.
+
+Actual stdio MCP exposes the native tool schemas and methods. Four imposed
+conditions locate the failure before or after the relevant effect: normal
+cancellation; a native invalid-ID exception; cancellation on a disposable
+database copy; and an acknowledgement exception after cancellation of the
+actual database. Equal native return payloads are serialized for the normal
+and copy-only conditions. We compare RAC's default adapter, its diagnostic
+raising configuration, and agent-saga, giving 24 executions across two inputs.
+
+The result ID is obtained from the actual booking output. RAC's stored result
+wraps this adapter's content list in a Python-literal `raw` string; the main
+matrix therefore explicitly supplies a bounded decoder in the developer
+mapper. agent-saga uses its configured structured-content path. A twenty-fifth
+control omits the RAC stored-result adaptation: it reports COMPENSATED/success,
+but no native cancellation invocation occurs and the reservation remains
+uncancelled. The adapted normal control completes cancellation. This contrast
+exposes a result-storage boundary without crediting our adaptation as automatic
+parameter extraction.
+
+Both booking profiles produce the following outcomes:
+
+| Imposed cancellation condition | RAC default | RAC raising control | agent-saga | Native cancellation contract |
+|---|---|---|---|---|
+| Normal | Success | Success | Clean | Satisfied |
+| Native error before effect | Success | Raises CriticalFailure | Incomplete | Unsatisfied |
+| Disposable-copy effect | Success | Success | Clean | Unsatisfied |
+| Error after actual effect | Success | Raises CriticalFailure | Incomplete | Satisfied |
+
+RAC's raising condition leaves the action COMPLETED and supplies no returned
+rollback report; we retain the exception and do not turn absence of a report
+into a measured boolean. agent-saga records COMPENSATION_FAILED on the error
+conditions. Failure after the actual effect illustrates why an error flag
+cannot establish that compensation did not occur; conservative uncertainty
+is not classified as a defect.
+
+Independent state recomputation within our research process validates all
+25 saved databases and eight WAL files. Each of the eight input/fault groups
+has exactly equal final database states across clients. For six matched
+input/client normal-versus-copy comparisons, native cancellation payloads
+are equal while persisted database states differ. Thus these controls
+separate correct error transport from verification of the requested effect.
+They establish neither an error prevalence estimate nor a novel general
+isolation or postcondition-verification algorithm. Both partial setup attempts
+and their causes are retained, and repeated cases are not counted as extra
+independent observations.
 
 ## 6. What the released experiment archive shows
 
@@ -290,11 +356,13 @@ artifact likewise includes controlled tool faults and effect oracles.
 Our controlled failures do not establish novelty for fault injection,
 typed errors, postcondition verification or framework bug taxonomies.
 
-Most evidence remains concentrated in RAC. The two independent implementations
+The evidence remains concentrated in a small set of chosen interfaces. The two independent implementations
 add narrowly selected coordinator and transport controls, not a representative
 sample of recovery systems or matched end-to-end tasks. The operations are constructed, the declarations
 and failure modes are selected, and the experiments contain no autonomous
-model decisions. An external effect oracle is available by construction.
+model decisions. Native airline tools add coupled business state but only two
+chosen input profiles. Their status/ledger contract is narrower than full
+restoration, and no official airline task success rate is reported. An external effect oracle is available by construction.
 These conditions make the mechanisms inspectable but limit deployment claims.
 
 ## 8. Provisional conclusion
@@ -305,7 +373,10 @@ show why recording the complete dependency combination matters: an adapter's
 error-delivery default changes the same constructed workflow's recovery result.
 The independent transport control shows that explicit MCP errors can be
 propagated consistently with recovery status; the no-op control separates
-that property from verified restoration. The archival analysis prevents these
+that property from verified restoration. Native airline controls extend the
+distinction to a coupled reservation/payment ledger: equal successful payloads
+can accompany different persisted states, and exceptions can follow completed
+cancellations. The archival analysis prevents these
 findings from being misrepresented as observed benchmark failures. Broader
 realistic workflows and submission-quality positioning remain necessary before
 this working manuscript can support a publication claim.

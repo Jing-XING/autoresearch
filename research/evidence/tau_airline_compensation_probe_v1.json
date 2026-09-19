@@ -1,0 +1,2103 @@
+{
+  "purpose": "Compare recovery records with native airline cancellation state over real MCP.\n\nTwo declared workflow fixtures x four fault placements x three client conditions.\nNo models, official task rewards, service credentials, or airline service calls.\n",
+  "cases": [
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "rac_unadapted_mapper",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "actual returned reservation JSON parser without raw-record adaptation",
+      "decoded_stored_result_repr": false,
+      "action_record": {
+        "id": "78425810-5182-4410-aece-920c5d14bf10",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_1df0f72f-cdac-42f9-ac76-d9c318e8c8c7'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826604.9273381,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-normal-rac_unadapted_mapper.json",
+      "raw_state_sha256": "6e33f2e1dcf9fca2c4e29747c9090dab28e9ab90d57bd6413ba79b92f28a5c93"
+    },
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "59d2eb87-16c2-4c20-93c0-d73ed8d4a40c",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_95e856ab-6899-418c-b5de-1ea67992e63b'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826614.4862177,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-normal-rac_default.json",
+      "raw_state_sha256": "10b39c2736995cf6acf40ea74b57e4dd24094ea3ff03a917b0010edb8cb7394a"
+    },
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "fb4eb5de-18b5-446d-a3e8-e946afdddbac",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_32f3d839-9aaf-45aa-bb6b-fd101d7d736e'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826627.0922806,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-normal-rac_raise_control.json",
+      "raw_state_sha256": "10b39c2736995cf6acf40ea74b57e4dd24094ea3ff03a917b0010edb8cb7394a"
+    },
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-normal-agent_saga.wal.jsonl",
+      "wal_sha256": "17f2a808325922e571c215274f1e2a32a68f08878ab8d1bc7e014e7722afa5e4",
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-normal-agent_saga.json",
+      "raw_state_sha256": "10b39c2736995cf6acf40ea74b57e4dd24094ea3ff03a917b0010edb8cb7394a"
+    },
+    {
+      "profile": "single_card",
+      "fault": "native_error_before_effect",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "3615865b-be0b-40ad-97d8-ca0d36fd5e3e",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_fcd70556-a26d-4932-a057-53a08dcd6d10'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826639.4563093,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-native_error_before_effect-rac_default.json",
+      "raw_state_sha256": "40686f25db4019d482df02641a5446413986fd94a61f1d4589adb74a7c1e1887"
+    },
+    {
+      "profile": "single_card",
+      "fault": "native_error_before_effect",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPLETED"
+      ],
+      "rollback_report": {
+        "success": null
+      },
+      "rollback_exception": {
+        "type": "CriticalFailure",
+        "message": "Compensation failed immediately: Reservation EXPERIMENTALLY_MISSING_ID not found"
+      },
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "2e0d9698-c55a-4149-9a9e-c4c0472e298c",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_e5f6ae97-849b-43ab-8c9c-677566fbc2d9'}]"
+        },
+        "status": "COMPLETED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826652.099456,
+        "agent_id": null,
+        "compensated": false
+      },
+      "marked_compensated": false,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-native_error_before_effect-rac_raise_control.json",
+      "raw_state_sha256": "40686f25db4019d482df02641a5446413986fd94a61f1d4589adb74a7c1e1887"
+    },
+    {
+      "profile": "single_card",
+      "fault": "native_error_before_effect",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATION_FAILED"
+      ],
+      "rollback_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-native_error_before_effect-agent_saga.wal.jsonl",
+      "wal_sha256": "c89e4a8d388eed76ac209c8a4122f7e4696ab32ac08524756960b440ed294604",
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-native_error_before_effect-agent_saga.json",
+      "raw_state_sha256": "40686f25db4019d482df02641a5446413986fd94a61f1d4589adb74a7c1e1887"
+    },
+    {
+      "profile": "single_card",
+      "fault": "shadow_only",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "d68cac24-c19f-4ef5-929c-18f743cd1895",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_0e971244-e113-4ab7-bfd5-4965bc5094b6'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826664.4870634,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-shadow_only-rac_default.json",
+      "raw_state_sha256": "cc0686bb11bff9c3f0ec8defb4dff2cdb55f164a14b67fa3681ec2cb2322e988"
+    },
+    {
+      "profile": "single_card",
+      "fault": "shadow_only",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "a555862e-7b1b-466e-99d3-7c367ac1bc69",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_64f42fe2-540e-4022-b5b2-c713ced2293d'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826677.2836869,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-shadow_only-rac_raise_control.json",
+      "raw_state_sha256": "cc0686bb11bff9c3f0ec8defb4dff2cdb55f164a14b67fa3681ec2cb2322e988"
+    },
+    {
+      "profile": "single_card",
+      "fault": "shadow_only",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-shadow_only-agent_saga.wal.jsonl",
+      "wal_sha256": "56a615eee46e4b921ab95caedd4d059b6f2de87a8cfbdeb3f23114ae9a5a092b",
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 122,
+        "payment_ledger_entries": 1,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-shadow_only-agent_saga.json",
+      "raw_state_sha256": "cc0686bb11bff9c3f0ec8defb4dff2cdb55f164a14b67fa3681ec2cb2322e988"
+    },
+    {
+      "profile": "single_card",
+      "fault": "error_after_effect",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "b71b0a30-c9e9-4410-be7c-06ae95c8719b",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_ad7d83a1-1a1c-4ed7-910b-0ed18d707585'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826689.5726924,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-error_after_effect-rac_default.json",
+      "raw_state_sha256": "0c5268022df792ad19f182eb783bdc1174cf9c51d369187d0f062a7fb4af7908"
+    },
+    {
+      "profile": "single_card",
+      "fault": "error_after_effect",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPLETED"
+      ],
+      "rollback_report": {
+        "success": null
+      },
+      "rollback_exception": {
+        "type": "CriticalFailure",
+        "message": "Compensation failed immediately: Constructed acknowledgement error after native cancellation committed"
+      },
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "c1392d27-0ca5-406d-b64d-e0e0a0a53fd9",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 122
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"credit_card_4421486\", \"amount\": 122}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_202bbf8e-9ec1-41f1-8ea3-81aa35b89572'}]"
+        },
+        "status": "COMPLETED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826702.0186288,
+        "agent_id": null,
+        "compensated": false
+      },
+      "marked_compensated": false,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-error_after_effect-rac_raise_control.json",
+      "raw_state_sha256": "0c5268022df792ad19f182eb783bdc1174cf9c51d369187d0f062a7fb4af7908"
+    },
+    {
+      "profile": "single_card",
+      "fault": "error_after_effect",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATION_FAILED"
+      ],
+      "rollback_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-error_after_effect-agent_saga.wal.jsonl",
+      "wal_sha256": "36c250fef02c885ead5cd75d87817c80fd0f4079701d66c5b7b08e928ee5df6f",
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": true,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\single_card-error_after_effect-agent_saga.json",
+      "raw_state_sha256": "0c5268022df792ad19f182eb783bdc1174cf9c51d369187d0f062a7fb4af7908"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "normal",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "2e74d7d5-3429-42a6-8e66-9e2a91c8baf4",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_e24ecfa7-edaa-405c-8fa1-ab1800f5a7b4'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826714.1121774,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-normal-rac_default.json",
+      "raw_state_sha256": "3a2339352b69993854fc997f1217fdfd7569c65c4db4011b3cb7facf810eaa46"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "normal",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "dcffabbc-83b3-4e4b-8691-c3236eacb6aa",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_552a2468-0fbf-4a1a-8ad8-5047102d4897'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826726.6820776,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-normal-rac_raise_control.json",
+      "raw_state_sha256": "3a2339352b69993854fc997f1217fdfd7569c65c4db4011b3cb7facf810eaa46"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "normal",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-normal-agent_saga.wal.jsonl",
+      "wal_sha256": "48a96e91732ba6ab5dc7801181b21a9b03fe28deb7c018ef2f380a3546f97a65",
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-normal-agent_saga.json",
+      "raw_state_sha256": "3a2339352b69993854fc997f1217fdfd7569c65c4db4011b3cb7facf810eaa46"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "native_error_before_effect",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "2011601a-1527-4ab0-9df0-3e0dfdc391db",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_c81f4180-ab3f-4cfa-855a-d57919b852da'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826738.8633635,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 244,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-native_error_before_effect-rac_default.json",
+      "raw_state_sha256": "3d618af7ed819b57506aea031a840449b2c84283e434081410507bb2dc2cbde0"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "native_error_before_effect",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPLETED"
+      ],
+      "rollback_report": {
+        "success": null
+      },
+      "rollback_exception": {
+        "type": "CriticalFailure",
+        "message": "Compensation failed immediately: Reservation EXPERIMENTALLY_MISSING_ID not found"
+      },
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "b4e54bb7-a739-4b2c-81a4-d07f24ec7bb0",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_9c40101c-be35-406d-834e-a9fe11663982'}]"
+        },
+        "status": "COMPLETED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826751.652481,
+        "agent_id": null,
+        "compensated": false
+      },
+      "marked_compensated": false,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 244,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-native_error_before_effect-rac_raise_control.json",
+      "raw_state_sha256": "3d618af7ed819b57506aea031a840449b2c84283e434081410507bb2dc2cbde0"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "native_error_before_effect",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATION_FAILED"
+      ],
+      "rollback_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-native_error_before_effect-agent_saga.wal.jsonl",
+      "wal_sha256": "4eb73589868790bfc1857e39c7281b62eaa36bceaf148cfc3c635abf35d08874",
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 244,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-native_error_before_effect-agent_saga.json",
+      "raw_state_sha256": "3d618af7ed819b57506aea031a840449b2c84283e434081410507bb2dc2cbde0"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "shadow_only",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "bfa0bc11-aeff-4465-94f0-677ef60d1f81",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_a64cdac2-8ade-46e9-9154-c8101c3b3f11'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826763.9278781,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 244,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-shadow_only-rac_default.json",
+      "raw_state_sha256": "0f4beb3dfc73a7046a02c9ad5d1b25cb9e7e5234b687f7e296fa936565583cf9"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "shadow_only",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "d42881aa-afb2-4101-a3c1-b5ae5a662744",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_f9a8d2dc-3736-4e75-8900-21518bae5305'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826776.5235972,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 244,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-shadow_only-rac_raise_control.json",
+      "raw_state_sha256": "0f4beb3dfc73a7046a02c9ad5d1b25cb9e7e5234b687f7e296fa936565583cf9"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "shadow_only",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-shadow_only-agent_saga.wal.jsonl",
+      "wal_sha256": "a1cb87f75920f7632654a4924ce413dbefa6987f4beb03e08a7dd27301ca14e7",
+      "oracle": {
+        "reservation_status": null,
+        "payment_ledger_net": 244,
+        "payment_ledger_entries": 2,
+        "cancellation_contract_met": false,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-shadow_only-agent_saga.json",
+      "raw_state_sha256": "0f4beb3dfc73a7046a02c9ad5d1b25cb9e7e5234b687f7e296fa936565583cf9"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "error_after_effect",
+      "condition": "rac_default",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPENSATED"
+      ],
+      "rollback_report": {
+        "success": true
+      },
+      "rollback_exception": null,
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "ede40fea-b40e-4766-9b5d-ddbc222ac05e",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_ea4fef35-72f8-473a-ae55-e83de0977a48'}]"
+        },
+        "status": "COMPENSATED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826788.7973824,
+        "agent_id": null,
+        "compensated": true
+      },
+      "marked_compensated": true,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-error_after_effect-rac_default.json",
+      "raw_state_sha256": "5108708376b2a230417d447d515cca5356e613e69fdfb9cd404d46729a4dcc7f"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "error_after_effect",
+      "condition": "rac_raise_control",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMPLETED"
+      ],
+      "states_after": [
+        "COMPLETED"
+      ],
+      "rollback_report": {
+        "success": null
+      },
+      "rollback_exception": {
+        "type": "CriticalFailure",
+        "message": "Compensation failed immediately: Constructed acknowledgement error after native cancellation committed"
+      },
+      "explicitly_added_pair": true,
+      "discovered_pairs": {},
+      "compensation_id_source": "parsed actual returned reservation JSON; stored raw Python-literal representation decoded",
+      "decoded_stored_result_repr": true,
+      "action_record": {
+        "id": "fc39be3d-5192-40e6-87a4-1b3d7a3f3643",
+        "action": "book_reservation",
+        "params": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LAX",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-16"
+            },
+            {
+              "flight_number": "HAT002",
+              "date": "2024-05-16"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Noah",
+              "last_name": "Brown",
+              "dob": "1990-01-01"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "certificate_4856383",
+              "amount": 100
+            },
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 144
+            }
+          ],
+          "total_baggages": 2,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "result": {
+          "raw": "[{'type': 'text', 'text': '{\"reservation_id\": \"HATHAT\", \"user_id\": \"mia_li_3668\", \"origin\": \"PHL\", \"destination\": \"LAX\", \"flight_type\": \"one_way\", \"cabin\": \"economy\", \"flights\": [{\"flight_number\": \"HAT001\", \"origin\": \"PHL\", \"destination\": \"LGA\", \"date\": \"2024-05-16\", \"price\": 122}, {\"flight_number\": \"HAT002\", \"origin\": \"LGA\", \"destination\": \"LAX\", \"date\": \"2024-05-16\", \"price\": 122}], \"passengers\": [{\"first_name\": \"Noah\", \"last_name\": \"Brown\", \"dob\": \"1990-01-01\"}], \"payment_history\": [{\"payment_id\": \"certificate_4856383\", \"amount\": 100}, {\"payment_id\": \"credit_card_4421486\", \"amount\": 144}], \"created_at\": \"2024-05-15T15:00:00\", \"total_baggages\": 2, \"nonfree_baggages\": 0, \"insurance\": \"no\", \"status\": null}', 'id': 'lc_34a72ba4-7b85-4d67-9595-d93c3bb61e16'}]"
+        },
+        "status": "COMPLETED",
+        "compensator": "cancel_reservation",
+        "depends_on": [],
+        "timestamp": 1789826801.4655328,
+        "agent_id": null,
+        "compensated": false
+      },
+      "marked_compensated": false,
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-error_after_effect-rac_raise_control.json",
+      "raw_state_sha256": "5108708376b2a230417d447d515cca5356e613e69fdfb9cd404d46729a4dcc7f"
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "error_after_effect",
+      "condition": "agent_saga",
+      "reservation_id": "HATHAT",
+      "states_before": [
+        "COMMITTED"
+      ],
+      "states_after": [
+        "COMPENSATION_FAILED"
+      ],
+      "rollback_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      },
+      "compensation_id_source": "$.structuredContent.reservation_id",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-error_after_effect-agent_saga.wal.jsonl",
+      "wal_sha256": "44351b536078d7121424771c192fff11bfe02bf4b19fcb57edaaff04c4e5af31",
+      "oracle": {
+        "reservation_status": "cancelled",
+        "payment_ledger_net": 0,
+        "payment_ledger_entries": 4,
+        "cancellation_contract_met": true,
+        "seat_counts": [
+          {
+            "flight_number": "HAT001",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          },
+          {
+            "flight_number": "HAT002",
+            "date": "2024-05-16",
+            "before": 10,
+            "after": 9
+          }
+        ],
+        "seat_inventory_restored": false,
+        "payment_instruments_restored": false,
+        "full_database_restored": false,
+        "existing_reservations_unchanged": true,
+        "oracle_scope": "cancelled status plus zero net reservation payment ledger; inventory/payment-instrument restoration reported separately, not required by the declared cancellation contract"
+      },
+      "raw_state_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4\\two_leg_mixed-error_after_effect-agent_saga.json",
+      "raw_state_sha256": "5108708376b2a230417d447d515cca5356e613e69fdfb9cd404d46729a4dcc7f"
+    }
+  ],
+  "rac_revision": "068c327ab3f9b79a86a39503946e26320b74b97a",
+  "rac_source_sha256": {
+    "src/react_agent_compensation/__init__.py": "65d02a90a308349e76d6adcb583e3414dc99200f6b2b48ae594332051876606a",
+    "src/react_agent_compensation/core/__init__.py": "8007bbb97ccfccb390f6b66651ae98bd12d7ae625abe371f6f0c4865b7df051a",
+    "src/react_agent_compensation/core/batch/__init__.py": "a840edceb2918257f1201e4ac38678d4766f21e06b46deb21d824b60b860901f",
+    "src/react_agent_compensation/core/batch/context.py": "c5a9acf9c51d0111da019c56f06bb8c8a3e5bb7307ce0a8ca42d900dbf0b1644",
+    "src/react_agent_compensation/core/batch/detector.py": "19b0bacc5475e587769bb55de983dc82b9d57a1f6db6e51c49cb6e9bf66cafac",
+    "src/react_agent_compensation/core/batch/lock.py": "06d1932b51e2933a2c04566d695f605021a946087caabd3a3e3fec85e6a0a0ac",
+    "src/react_agent_compensation/core/batch/manager.py": "bfb1d25e84c9e883e4fdf84bc5b27a17081451b1a78c83e8253974bffef6ef48",
+    "src/react_agent_compensation/core/config.py": "75160159eb5c2155ad22f0468c19a74973ef2fd21ac3cd82dcb7e756b66b7667",
+    "src/react_agent_compensation/core/errors/__init__.py": "e74587b172cbc69bb70a9ef7f045f94152392dffe40849e8e1897cc26e95c22f",
+    "src/react_agent_compensation/core/errors/base.py": "bda3e900273976afcf5c2823c389f5bf56ab26d5d6e65db2027652d1306c6ece",
+    "src/react_agent_compensation/core/errors/composite.py": "f4420352b3cc694ec7e8a44153ad79146cc30dcce32c792284dfef533f9603df",
+    "src/react_agent_compensation/core/errors/content.py": "1d4b9d1eee22c8c77149f944e6decd0931921f2608193504452be1e3d48ef288",
+    "src/react_agent_compensation/core/errors/exception.py": "80a36a6e388d23aa42d3e1f359c181cc9df02937d243eda4f5479666dfc9ded0",
+    "src/react_agent_compensation/core/errors/explicit.py": "58394b0c66538bf78638dc7d64fe60d0ef50f857b484c1c80ffadadb4cbed955",
+    "src/react_agent_compensation/core/errors/permanent.py": "fc418c3d46cdd14b7bf16175a0abf8748d816d47f927e74004daf1a54ef5f79b",
+    "src/react_agent_compensation/core/exceptions.py": "198cc26bf815e8ec3af6cb22761e8d82d4e43c19fe764aba9fec53c87eea3a08",
+    "src/react_agent_compensation/core/extraction/__init__.py": "472cbc1dee25cc16d4a37578db80be7ffff0ba9596e3ca38108921969967cf20",
+    "src/react_agent_compensation/core/extraction/base.py": "0dd585c4e18e5d2b9507cbe66dadc6269cb2f5f55c08b4a7a19660b8e109a0d4",
+    "src/react_agent_compensation/core/extraction/composite.py": "846be1900e8cb4b1fc3a68e1e0ce1c0fb18f870c21869a320c4e9d74199314d2",
+    "src/react_agent_compensation/core/extraction/heuristic.py": "09f85e4e69962cc4dc0285c3c25c2e26382044864b449b6d96b2a500fb51f725",
+    "src/react_agent_compensation/core/extraction/mcp_reversible.py": "d6612a62761410ada1423aaeee7a20e35678637a34359c9b8513672bc09bd07e",
+    "src/react_agent_compensation/core/extraction/passthrough.py": "806f9bb374773b42e0b041476797d358f8ca13a565d92d716f0b22c66dc9e859",
+    "src/react_agent_compensation/core/extraction/path_resolver.py": "d0605efd934266e0057c3ff2dcc510e6b1aba694813cb4b5c1f81c0de00ebe10",
+    "src/react_agent_compensation/core/extraction/recursive.py": "bece0b0b1e26a6bd3528b21ed9a356511166b47626d0bcb8f3144a742e4337c6",
+    "src/react_agent_compensation/core/extraction/schema.py": "835f40c73a58979fe4ae5c10d59efd8b512d6a3296aa20b3a86c23891f4ef036",
+    "src/react_agent_compensation/core/extraction/state_mappers.py": "7da3469349ac312e0287928e7fe51438f4b6f34835ec68469c4bdfaad0742591",
+    "src/react_agent_compensation/core/mcp/__init__.py": "29db06dcf18b83c1f8ec7bea6045b8abf458e5544cfed50b818c4e039867a713",
+    "src/react_agent_compensation/core/mcp/client.py": "2a941969a8aab54440629a98d94c42e6f6d33d58c51ff83600c77767bd8087bc",
+    "src/react_agent_compensation/core/mcp/metadata.py": "dfc853955c99ef1c5fdb29f57b07c67073d57cf17bc8be6cee4aee9667c2679f",
+    "src/react_agent_compensation/core/mcp/parser.py": "46eaf1709445f373a8dd0c8054d1dd6523b8dbc4e375aa7590ad51455a044431",
+    "src/react_agent_compensation/core/mcp/tools.py": "b285d847f9d22e45acf110be2866f5995d57e60086f63e7f24497a8957f1ef6a",
+    "src/react_agent_compensation/core/models.py": "2fd949ff6c7ed30b7ea8887bef707ad7a04a2871ff03139c720b398ea21b1a55",
+    "src/react_agent_compensation/core/protocols.py": "d2a25cfda9e1eb6766ed5602fd4c0366a55cf79f5ad11d791a219a5e5e83a141",
+    "src/react_agent_compensation/core/recovery_manager.py": "7e0035677dd75b003c18775561433546ee0b1e7e0cda8746d89c8824b9fd355d",
+    "src/react_agent_compensation/core/retry/__init__.py": "4ffa6a50b89763f4a4726f3e58dbf32fa8d9269391c49e6d9dd0169cc5c929d8",
+    "src/react_agent_compensation/core/retry/base.py": "cb85714156e3f06eb524bac60acd61aecdeaab835b94185d42ac521802bd290e",
+    "src/react_agent_compensation/core/retry/exponential.py": "ac4261dd3e454ee0edd2800b60049b4b5232e15afda366f729a7948c94849616",
+    "src/react_agent_compensation/core/retry/no_retry.py": "146d2237e47a93a7b6a7830b89504bcc8f94262814bb682490f2ac85fd949402",
+    "src/react_agent_compensation/core/transaction_log.py": "8a879f8a261922b184187273e8398414ac7e100d11a35ee954007ddc9a8c01df",
+    "src/react_agent_compensation/crewai_adaptor/__init__.py": "f7ed937a3304d0042deb2847b3c2244f7aa4a1ec0e928b09f93340a350ad18e0",
+    "src/react_agent_compensation/crewai_adaptor/adapters.py": "b8bd66eb8b91501fa7244fa1211a3bf6ea235436705208dde67bf1a75dc72f3c",
+    "src/react_agent_compensation/crewai_adaptor/factory.py": "559ba9c3d7f4e7262e749140d626fbd507dddb0895041a4a086a120b8ea432ec",
+    "src/react_agent_compensation/crewai_adaptor/hooks.py": "124aae0426254597887644442c85c4f8eeb172cde586d3c0128d97ad9b50749c",
+    "src/react_agent_compensation/crewai_adaptor/middleware.py": "4793c1bc30bdbee9f9bff7db53538baf01ac8d103a7a346d6abcd95db5110290",
+    "src/react_agent_compensation/crewai_adaptor/state.py": "cb4cf68f68006554d67f1ea63c15555ebddf81ee1ac60eb9c771dae7e892ef8b",
+    "src/react_agent_compensation/crewai_adaptor/tool_wrapper.py": "c3bd21e248dc5c08ffdb4793bcd8b778b682882915f9c65c0d886fb78d312314",
+    "src/react_agent_compensation/langchain_adaptor/__init__.py": "f57d374d5e1484c7453e4228deb8beb9fcdc916dc328c885d53c07c0f636b091",
+    "src/react_agent_compensation/langchain_adaptor/adapters.py": "49e214bbc275d5f94b4a11027302cf16eec69d1c08f29cc83997cc008683447c",
+    "src/react_agent_compensation/langchain_adaptor/agent.py": "2be9b54ce2654505ba5c29eadc2ce35d6ea03d5c80b5e2879db3744a16d8e6a6",
+    "src/react_agent_compensation/langchain_adaptor/interceptors.py": "e1517a35e4b74b0b74a6efc14d155e2bc047946c1b3b5574ad7863157dcfc6f2",
+    "src/react_agent_compensation/langchain_adaptor/mcp.py": "453805c8f52e1b24d93509581c0189bbedcc1d7cf770791b813da34cf7fef7c4",
+    "src/react_agent_compensation/langchain_adaptor/middleware.py": "ef7ab6b5c6385ef81354c8e8ec1ddf6d6e001d7ccae8d386567f822eef9cab69",
+    "src/react_agent_compensation/langchain_adaptor/state.py": "1b3e19e46301cb8898b77a063a9e27535f0dc763a311ac62a7f0957b93f9f315",
+    "src/react_agent_compensation/llm/__init__.py": "75520217a76f0c5dd565d831dc6074871a5f68f7ddf260a9fba690b4d94e0b65",
+    "src/react_agent_compensation/llm/extraction.py": "a37a39a6d4e11decf447cde184ab9f1588337cf1af8873b91a09944abf206447",
+    "src/react_agent_compensation/llm/matching.py": "def2a404c5ba05f5ad8c2851d2086719292a0c63471a1d8308d43ac0a96cb703",
+    "src/react_agent_compensation/strands_adaptor/__init__.py": "fb2260f0ef5d2b6e8172ae0a0c4c1261ef427ea512427bb8ab75e188f4b64c51",
+    "src/react_agent_compensation/strands_adaptor/adapters.py": "2b0900cb0dbb370e0db4dd67bd49fdb029c47171844879ff17d827b593e0e058",
+    "src/react_agent_compensation/strands_adaptor/agent.py": "5d3398939b214f02d09505023cdabb66eef96f3b5eebac0e0caecfab3223a6d4",
+    "src/react_agent_compensation/strands_adaptor/hooks.py": "86ed2dae47272389a0a09c653d20aa7724381c60416401771a809c40b60beab5",
+    "src/react_agent_compensation/strands_adaptor/interrupts.py": "baff3c62f55ec416784b45052e42da602369423fa937b3ede23c908b24fc548e",
+    "src/react_agent_compensation/strands_adaptor/state.py": "7db4bf696da21d8681f4f79c2da0abfa14c535307cb64f7acb6360ed46b4aba3"
+  },
+  "agent_saga_source_manifest": {
+    "repository": "thomasjgeorge23/agent-saga",
+    "commit": "4310ff570e60c42c081ae216e87a1ccb093525d4",
+    "tree_sha256": "108443abc43876916450442a0bbd4b3b9e69b8d0ca2f46ed05a1974d100a5176",
+    "files": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "MANUAL.md": "475fd9c477809d81adb52cd72d585019cc32b67da0460b85de78785bc4ca9a1e",
+      "README.md": "687e18a669353d19e309116aa689433eb75df9854b2231ecebac73fb79dd128c",
+      "agent_saga/__init__.py": "e11644e2c954d20cc79c8784e9ed39f74d8466eae4cf69bddaddcf573d84c32c",
+      "agent_saga/adapters/__init__.py": "231c5a821ed8693b1d45ec50d5957875fd337099bed58ea303e552d094bef687",
+      "agent_saga/adapters/_common.py": "aa0f34444de8c7818fc275745229f085d6f19f50586895db273fa0c3cde35667",
+      "agent_saga/adapters/autogen.py": "6943965a6f9445851208febe6b672df81b9d9fa9255abbaca424fd20986fbc63",
+      "agent_saga/adapters/base_db.py": "281357f258b2e45a6587ee74380b901e337c4c448107f287dc1079e028f0c970",
+      "agent_saga/adapters/crewai.py": "c043e651448ab780a1243700be0c93463912d0798f28714c1bd63060b397c5a4",
+      "agent_saga/adapters/langgraph.py": "79bfe097415df71c99bbb2065ee75a7ea75de8b6e365a8b9f6f8d2a78c2c880a",
+      "agent_saga/adapters/llamaindex.py": "8a5b9a3e3cc7d89e59b094f4e897c11ec3e4fa9a59e2d206452caafc77711619",
+      "agent_saga/adapters/openai_agents.py": "ab075ed5fb14d3e3e493bde4e604375c5c763324424f6185195aa48aaf4c87e1",
+      "agent_saga/adapters/sqlalchemy.py": "78099f472f57a835638c4ab01b2559446b7c56b51f60c600c426dcc64216ab96",
+      "agent_saga/adapters/supabase.py": "28387cd238d96b7543dbb671cd2f8e769b8b6be6825dde637c1dd5e360fbcdfc",
+      "agent_saga/approvals.py": "114d245da3c2c60858251d24eacd7dc069f065e0f8c4650828a32103b0066e4e",
+      "agent_saga/cli.py": "5bbdbfd88e0f2e90be67a3ca7177dd2fc09c41b5ee2f535505c4374e4c5fbc4a",
+      "agent_saga/connectors/__init__.py": "8adc4632249679073af0e9fe58f8658e05a87cf919c457dfff50b2b31360874f",
+      "agent_saga/connectors/_secrets.py": "9bfcd33fbf1e4aaf9fa288c0dd604d0694b3b4d8994bb4a4a1636e32c65f6dc6",
+      "agent_saga/connectors/postgres.py": "ef8ba147f3a171357590647ac5b9ef2138ad3a550f2e03484e6823ab2c50430f",
+      "agent_saga/connectors/salesforce.py": "e5da9254ec6c0162f68468ed55ea52283ab408466101ce40d709a1c3705eeaa8",
+      "agent_saga/connectors/stripe.py": "22edf2d4254a27f2b9c0d889c933922cc453f8c27ee9005ef8890def3560f472",
+      "agent_saga/context.py": "076125c1b4532ca4b11d20131459778124054996c77d99034a7de934ddfda1cb",
+      "agent_saga/decorator.py": "a959bb244ccfe7c313205a07f64a3ea204470f4534d7e59a1c0c7bf0a9176135",
+      "agent_saga/durable.py": "6039b553f267d64034e05c8890a58293df6a4af44644eec8c3a0769425c6f48e",
+      "agent_saga/encryption.py": "bd9ff7b26af01a9cdfbae2edcdacf5c7dc8d0b1d04d7fb5c2d3b96395c6b1c48",
+      "agent_saga/executors.py": "2572db5b90e8c4edbfbb9e91af1681738fbcc304d3d380c3e87d22b11a3994ba",
+      "agent_saga/frameworks/__init__.py": "c5414f70097edfbc7ae399d7376415539fe8d03d3a883ff8169e70fa04a76247",
+      "agent_saga/frameworks/fastapi.py": "171b2799289b321cb44cd367f04a2490f5f5ae82761a3ea1b73d0c4ebd7127a1",
+      "agent_saga/gate.py": "792eedc766b01ec3609ac7cdb86d06cf8cdd7f00560948ec4c61c524abe47acc",
+      "agent_saga/gc.py": "2ff452ebe4e0af1cdea73c3820945e4931ef0a9358d9ddc3f417e863f9fc59e8",
+      "agent_saga/idempotency.py": "d3fd87c94bbc1fa125f6e110940bc647914e80aa65d0c55283eff297bb9ddfe9",
+      "agent_saga/integrity.py": "60f5c57d851e133c5e2531c3b6343fa5f8eaec9af9770681c54b81f90706a365",
+      "agent_saga/ledger.py": "d26548408c2692384a2c4654e597371238f71c3bf7a0038f8c47826f6933f1c3",
+      "agent_saga/limits.py": "7d75a4283febce03a24d1884e699a37cbf1ffb3afb7c38eeace17ade4f6cfa9f",
+      "agent_saga/locks.py": "2fe99db3f8e0d2362a135dcd250c7fcfbd9151a01e699d46ba447a60af9c2d51",
+      "agent_saga/mcp/__init__.py": "f95f8e2380dec2f4e6b4783065f184449b9afc805552cf8194e1b2543db46f93",
+      "agent_saga/mcp/policy.py": "3f607f156bc580697e50b3d01c5c3ab20ead4f7b6b43d2cf397c2a6e10ed7060",
+      "agent_saga/mcp/proxy.py": "f908edc1c1b8e8743f501f3bd7162319acdb89cddd67d416bca3de174fd82cbe",
+      "agent_saga/mcp/stdio.py": "e53777446fd903bac3db136db1115896b7e76c4e36be6aade39cc86f844d6224",
+      "agent_saga/observability/__init__.py": "cade5836b232c07b389ae3d893e5c1607015ac6d59ac3c65e70108436490d74c",
+      "agent_saga/observability/otel.py": "35570fa3fbcd4db44689687c7886c98d29e7b3f3a258aa4bc995a096069c09e6",
+      "agent_saga/patterns/__init__.py": "dc9db7d5f618a9e6c7990e31458a5a01c16fbe8223d8207a4345b5e3e3b02dec",
+      "agent_saga/patterns/tentative.py": "47dc3b52d713a04d2e79e8911e7d165a1c768d1a336d4e55f6bedbbd04a26b9b",
+      "agent_saga/recovery.py": "f0b5c4994a04fe8980f176bb07204190c34c696d36334cc06594652181253a9c",
+      "agent_saga/registry.py": "52b284038d2b00c886981288d9e4708ec1cf3019b16a347dc552afa644c18f66",
+      "agent_saga/retry.py": "372b782f422c844a04e95053119e4a63543001be1487c17e293d5b6dd029fc21",
+      "agent_saga/semantics.py": "14fc177a58ee630dac3cff5c108b2f74bcdf814091388582858770775a377ece",
+      "agent_saga/serialization.py": "d68146aa16795dd947f76158d4582804a3f9d1cab5a16698a30988e44a9c3f54",
+      "agent_saga/snapshot.py": "bbae63f1bdb504e501f8ec618926293a6864400142744d29c9cda7fab6b27c0b",
+      "agent_saga/ui/__init__.py": "ce8a0d758e581033320467431c162a993cf324991e2af4202986eebfaf59eb92",
+      "agent_saga/ui/__main__.py": "ca51b2ded6687ba59a72605598c8607fcfb9aeb79aa3438bb5a86aff1ed28311",
+      "agent_saga/ui/reader.py": "36885c3f837300d406f84df162ef939e0f3c11df9f46264e3e5ffa89d23e0036",
+      "agent_saga/ui/server.py": "f964af6fc13560edd0d367937544014819cfee7af97b40c0d6a37faa3d383b80",
+      "agent_saga/wal/__init__.py": "16475c089a6d19c4d2e8a5a87b52eda3f056bf5ee0330e49529403aedfa1beb7",
+      "agent_saga/wal/base.py": "14238241064e40769bd69e283b426914686ace34b20718253ebdd274c19cdb06",
+      "agent_saga/wal/file_wal.py": "9517dd3bb62f204b8f2d7958851134f596395243546d38df3bc93240cedd032d",
+      "agent_saga/wal/postgres_wal.py": "b7b4e0b0252e208af39cba10a3b13a16f7498d3c27da7f88479efbad8c4e6257",
+      "agent_saga/wal/redis_wal.py": "d36ae28486409ab60618379140aa2629126776f2f0966b3c00d2634d54873bbe",
+      "pyproject.toml": "fdc462ab1b123e59943ce10bacc66ab00bc719839e48e3374399aba7f1607317"
+    },
+    "executed": false
+  },
+  "parent_packages": {
+    "langchain-mcp-adapters": "0.3.2",
+    "langchain-core": "1.6.3",
+    "mcp": "1.30.0",
+    "pydantic": "2.13.5"
+  },
+  "raw_directory": "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\tau-airline-mcp\\native-hossudv4",
+  "child_python": "C:\\Users\\xingjing\\AppData\\Local\\Temp\\tau2-research-env\\Scripts\\python.exe",
+  "scripts_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\scripts\\probe_tau_airline_compensation.py": "e6af3ad1fa65a943f963d7a6bb8ddf003c4e602e13e7fda6ab2fd35d23c37c30",
+    "scripts\\tau_airline_mcp_server.py": "a1063d614a33aa3a0b26bde1315ace441328272e5339419527f07e5d18088d32",
+    "scripts\\tau_airline_compensation_fixture.py": "2cf2f0284947d2de21ae84a44f1066b5257aa177f3185ea4280941bb95e025ee"
+  },
+  "preflight_sha256": "805435958cde4b3781700bb8df2a9354dca14adea6ce06fe319861364c028fcc",
+  "parent_external_connection_attempts": [],
+  "allowed_stdlib_socketpairs": 17,
+  "child_external_network_blocked": true,
+  "model_calls": 0,
+  "initial_attempt": {
+    "script_snapshot": "results/probes/tau-airline-mcp/probe_initial_attempt.py",
+    "sha256": "009a4d25b6a4f547139067f5b54ae40f4011b10681ef87e21a6e42495f795293",
+    "raw_directory": "results/probes/tau-airline-mcp/native-8teh6zte",
+    "reason": "Strict intended-call assertion failed after one real booking: mapper expected actual adapter result, while RAC stored it as a raw string representation. Initial artifacts retained. Final grid adds an unadapted control and explicitly disclosed stored-result representation decoder; no upstream source patched."
+  },
+  "second_attempt": {
+    "script_snapshot": "results/probes/tau-airline-mcp/probe_second_attempt.py",
+    "sha256": "fc200be4639b158718dafcc36d4122bb5d99bed1db9e23285084430b51e03dae",
+    "raw_directory": "results/probes/tau-airline-mcp/native-s9ukg969",
+    "reason": "Harness did not catch the RAC raising-control CriticalFailure at rollback. Preserve exception/raw states; final harness records this as an exception outcome rather than assuming every rollback returns a report. Repeated controls are not extra observations."
+  },
+  "limitations": [
+    "Two constructed profiles on an official unit-test database, not a sampled task benchmark.",
+    "Fault placement is imposed; no prevalence or model efficacy estimate.",
+    "Cancellation contract is weaker than full database restoration; omitted seat release is documented upstream.",
+    "RAC pairs and agent-saga compensation policy are explicitly configured and disclosed.",
+    "RAC raising condition replaces its raw adapter client; it is a diagnostic control.",
+    "The outer agent-saga serve_stdio client loop is not used."
+  ]
+}

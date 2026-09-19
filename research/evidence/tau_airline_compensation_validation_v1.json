@@ -1,0 +1,394 @@
+{
+  "evidence_sha256": "b777f361f644f8c66b9013858d2b758b848e57793d0388ce98f46480d78f80d5",
+  "validated_cases": 25,
+  "validated_wal_files": 8,
+  "cross_client_groups_with_identical_database_states": 8,
+  "same_response_different_state_controls": [
+    {
+      "profile": "single_card",
+      "condition": "rac_default",
+      "returned_native_payload_sha256": "2f236a11852d38ac39433905f953260923bc9275cf559951590901090bc7e653",
+      "normal_and_shadow_response_equal": true,
+      "database_states_differ": true
+    },
+    {
+      "profile": "single_card",
+      "condition": "rac_raise_control",
+      "returned_native_payload_sha256": "2f236a11852d38ac39433905f953260923bc9275cf559951590901090bc7e653",
+      "normal_and_shadow_response_equal": true,
+      "database_states_differ": true
+    },
+    {
+      "profile": "single_card",
+      "condition": "agent_saga",
+      "returned_native_payload_sha256": "2f236a11852d38ac39433905f953260923bc9275cf559951590901090bc7e653",
+      "normal_and_shadow_response_equal": true,
+      "database_states_differ": true
+    },
+    {
+      "profile": "two_leg_mixed",
+      "condition": "rac_default",
+      "returned_native_payload_sha256": "1f3a23423332141e63c9bf0602f2d3579844d3dbca869beaea4629ecfea6dda9",
+      "normal_and_shadow_response_equal": true,
+      "database_states_differ": true
+    },
+    {
+      "profile": "two_leg_mixed",
+      "condition": "rac_raise_control",
+      "returned_native_payload_sha256": "1f3a23423332141e63c9bf0602f2d3579844d3dbca869beaea4629ecfea6dda9",
+      "normal_and_shadow_response_equal": true,
+      "database_states_differ": true
+    },
+    {
+      "profile": "two_leg_mixed",
+      "condition": "agent_saga",
+      "returned_native_payload_sha256": "1f3a23423332141e63c9bf0602f2d3579844d3dbca869beaea4629ecfea6dda9",
+      "normal_and_shadow_response_equal": true,
+      "database_states_differ": true
+    }
+  ],
+  "case_findings": [
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "rac_unadapted_mapper",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "rac_default",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "normal",
+      "condition": "agent_saga",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "native_error_before_effect",
+      "condition": "rac_default",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "native_error_before_effect",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPLETED"
+      ],
+      "framework_report": {
+        "success": null
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "native_error_before_effect",
+      "condition": "agent_saga",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATION_FAILED"
+      ],
+      "framework_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "shadow_only",
+      "condition": "rac_default",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "shadow_only",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "shadow_only",
+      "condition": "agent_saga",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "error_after_effect",
+      "condition": "rac_default",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "error_after_effect",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPLETED"
+      ],
+      "framework_report": {
+        "success": null
+      }
+    },
+    {
+      "profile": "single_card",
+      "fault": "error_after_effect",
+      "condition": "agent_saga",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATION_FAILED"
+      ],
+      "framework_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "normal",
+      "condition": "rac_default",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "normal",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "normal",
+      "condition": "agent_saga",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "native_error_before_effect",
+      "condition": "rac_default",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "native_error_before_effect",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPLETED"
+      ],
+      "framework_report": {
+        "success": null
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "native_error_before_effect",
+      "condition": "agent_saga",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATION_FAILED"
+      ],
+      "framework_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "shadow_only",
+      "condition": "rac_default",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "shadow_only",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "shadow_only",
+      "condition": "agent_saga",
+      "cancellation_contract_met": false,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "error_after_effect",
+      "condition": "rac_default",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATED"
+      ],
+      "framework_report": {
+        "success": true
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "error_after_effect",
+      "condition": "rac_raise_control",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPLETED"
+      ],
+      "framework_report": {
+        "success": null
+      }
+    },
+    {
+      "profile": "two_leg_mixed",
+      "fault": "error_after_effect",
+      "condition": "agent_saga",
+      "cancellation_contract_met": true,
+      "framework_states": [
+        "COMPENSATION_FAILED"
+      ],
+      "framework_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+        "orphaned": [],
+        "failed": [
+          "book_reservation"
+        ]
+      }
+    }
+  ],
+  "scope": "independent arithmetic/state recomputation by the same research process; not independent human review",
+  "script_sha256": "b4c313c909b7a16b39ad5b7bb9dba4aa7878dcd07f5c15f41fd554e34095a4a7"
+}
