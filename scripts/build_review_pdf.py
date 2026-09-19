@@ -16,7 +16,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image, KeepTogether
 from pypdf import PdfReader
 
 
@@ -77,6 +77,8 @@ def build(paper, output, review_date):
     story = []
     lines = text.splitlines()
     i, tables, paragraphs = 0, 0, []
+    figures, in_references = {}, False
+    explicit_references = '## References' in lines
     while i < len(lines):
         line = lines[i].strip()
         if not line:
@@ -86,7 +88,30 @@ def build(paper, output, review_date):
             level = len(line)-len(line.lstrip('#'))
             assert level in (1, 2, 3)
             story.append(Paragraph(inline(line[level:].strip()), {1:h1, 2:h2, 3:h3}[level]))
+            in_references = line == '## References'
             i += 1
+            continue
+        if line.startswith('!['):
+            match = re.fullmatch(r'!\[([^\]]+)\]\(([^)]+)\)', line)
+            assert match, 'Expected a standalone local figure'
+            figure_path = (paper / match.group(2)).resolve()
+            assert figure_path.is_relative_to(paper.resolve()) and figure_path.is_file()
+            figure = Image(str(figure_path))
+            scale = min(doc.width / figure.imageWidth, doc.height * .42 / figure.imageHeight)
+            figure.drawWidth, figure.drawHeight = figure.imageWidth * scale, figure.imageHeight * scale
+            figures[match.group(2)] = hashlib.sha256(figure_path.read_bytes()).hexdigest()
+            i += 1
+            while i < len(lines) and not lines[i].strip():
+                i += 1
+            caption_lines = []
+            while i < len(lines) and lines[i].strip():
+                caption_lines.append(lines[i].strip())
+                i += 1
+            figure_caption = ' '.join(caption_lines)
+            assert re.match(r'\*Figure \d+\.', figure_caption), 'Figure needs its own caption'
+            figure_style = ParagraphStyle('FigureCaption', parent=caption, keepWithNext=False)
+            story.extend([KeepTogether([figure, Spacer(1, 4),
+                          Paragraph(inline(figure_caption), figure_style)]), Spacer(1, 8)])
             continue
         if line.startswith('|'):
             rows = []
@@ -119,12 +144,15 @@ def build(paper, output, review_date):
             i += 1
         paragraph = ' '.join(chunks)
         paragraphs.append(paragraph)
-        style = (caption if re.match(r'\*\*Table \d+\.', paragraph) else
+        style = (refs if in_references else caption if re.match(r'\*\*Table \d+\.', paragraph) else
                  literal_body if re.search(r'\b[0-9a-f]{40,64}\b', paragraph) else body)
         story.append(Paragraph(inline(paragraph), style))
-    story.extend([Spacer(1, 12), Paragraph('References', h2)])
     records = bib_records(bibliography.read_text(encoding='utf-8'))
-    for number, (key, fields) in enumerate(records, 1):
+    if explicit_references:
+        assert text.split('## References\n')[1].count('[Source](') == len(records)
+    else:
+        story.extend([Spacer(1, 12), Paragraph('References', h2)])
+    for number, (key, fields) in enumerate([] if explicit_references else records, 1):
         author = fields.get('author', '').replace(' and ', '; ')
         lead = f'[{number}] '+'. '.join(v for v in [author, fields.get('year'), fields['title']] if v)+'.'
         venue = fields.get('journal', '')
@@ -163,6 +191,7 @@ def build(paper, output, review_date):
         'builder_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'output': output.as_posix(), 'pdf_sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
         'pages': len(pdf.pages), 'tables': tables, 'reference_records': len(records), 'review_date': review_date.isoformat(),
+        'figure_sha256': figures, 'explicit_references': explicit_references,
         'packages': {n: importlib.metadata.version(n) for n in ('reportlab', 'pypdf')},
         'publication_ready': False, 'visual_review': 'pending'}
     output.with_suffix('.build.json').write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8')

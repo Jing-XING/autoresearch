@@ -1,0 +1,35 @@
+{
+  "source": "research/paper1/manuscript.md",
+  "source_sha256": "bc1bce48e9b6f5cd8b0c31858abab25fdc64cc6c072b482ed6a3a40972993b2d",
+  "bibliography_sha256": "f2285492a708054c0009cfab04547477fb9a77b11ade5e22f5f8d3b3dab1c8e5",
+  "builder_sha256": "3758d7a8eaf7e7b01fb0523fdfc2ca9956f4002a80d51ef409d3747d020a179b",
+  "output": "output/pdf/paper1-interrupted-memory-review-v1.pdf",
+  "pdf_sha256": "fddea46eda3ab45e183c0e83fec9d0551b52c0d04bc73aaab5ac0767faf55745",
+  "pages": 10,
+  "tables": 2,
+  "reference_records": 7,
+  "review_date": "2026-09-20",
+  "figure_sha256": {
+    "figures/memory_transfer_development.png": "15e71fc0750eb299750d1943ebfb3c8e09cc37e357a07b61eff6a8ea60f686b5"
+  },
+  "explicit_references": true,
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0"
+  },
+  "publication_ready": false,
+  "visual_review": "passed: all ten pages inspected; final page4 rechecked, other final PNGs byte-identical to earlier inspected versions",
+  "result_table_rows_verified": 8,
+  "plot_bars_verified": 10,
+  "embedded_images": 1,
+  "out_of_bounds_characters": 0,
+  "main_words": 5588,
+  "abstract_words": 248,
+  "test_outcomes_included": false,
+  "notes": [
+    "No experimental outcomes or labels changed.",
+    "Source-cutoff table recomputed from the retained join; transfer table and plot counts checked against the complete 200-episode development analysis.",
+    "Builder now embeds the local figure and preserves the manuscript bibliography without appending a duplicate.",
+    "The registered560testgrid and160NKextension are not reported in this developmental review PDF."
+  ]
+}

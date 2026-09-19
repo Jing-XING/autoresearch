@@ -234,6 +234,8 @@ from an unfinished task state within the constructed prefixes. It does not
 contradict the absence of satisfied-but-unsuccessful full recorded episodes.
 The same join across cuts is shown below; its rows reuse the same sources.
 
+**Table 1. State satisfaction and observed continuations at three source cutoffs.**
+
 | Generation cutoff | Externally cut / 74 | Already satisfied among cut prefixes | Unsatisfied at cut, recorded continuation succeeds |
 |---|---:|---:|---:|
 | 4 | 74 | 0 | 14 |
@@ -257,6 +259,8 @@ the complete condition coverage, source/target identity separation, bank and
 task hashes, checkpoint and package manifests, and the selected source for
 every model-task-condition combination before calculating the comparisons.
 
+**Table 2. Completed developmental transfer grid with errors retained.**
+
 | Memory condition | Qwen3 success / 20 | Qwen2.5 success / 20 | Qwen2.5 protocol exceptions |
 |---|---:|---:|---:|
 | None | 13 | 7 | 0 |
@@ -274,12 +278,11 @@ boundary instruction therefore shows no demonstrated benefit in this grid.
 This does not prove that every treatment effect is zero, nor that boundary
 information is universally harmful.
 
-Relative to no memory, raw and full-metadata experience each give Qwen2.5
-five gains and one loss. Qwen3 instead loses two tasks with raw experience and
-three with each curated arm, without gains. These are checkpoint-dependent
-development observations, conditional on the same four retrieved memories.
-They do not establish a general memory improvement. In particular, four
-outcome-only exceptions cannot be removed to improve that condition's rate.
+Against no memory, raw and full-metadata experience each give Qwen2.5
+five gains and one loss. Qwen3 loses two tasks with raw experience and three
+with each curated arm, without gains. These development observations concern
+two checkpoints and four retrieved memories. They do not establish general
+improvement, and the four outcome-only exceptions remain unsuccessful.
 
 ![Developmental memory-transfer outcomes](figures/memory_transfer_development.png)
 
