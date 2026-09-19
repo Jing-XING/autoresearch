@@ -1,0 +1,60 @@
+{
+  "source": "research/paper3/manuscript.md",
+  "source_sha256": "c64136837d599b9fc51468e25b0754ced8fa400555f18f855befda76ddd5f874",
+  "bibliography_sha256": "df0e84f67c3f5b754c88b9ff0da749186c2ef60f898b6e29c31ce7489a1871c3",
+  "builder_sha256": "ea00ad22824c92eba8ac1eb51c7978daa46ca9a59ee73c73f6c040670f78bbb7",
+  "output": "output/pdf/paper3-recovery-interfaces-review.pdf",
+  "pdf_sha256": "919f0d28eea13ef0e7b6f80bbc9ee32b85ec195d4c13d9d21cfb1d2400744e3b",
+  "pages": 8,
+  "tables": 4,
+  "reference_records": 9,
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0"
+  },
+  "publication_ready": false,
+  "visual_review": "All eight pages inspected; references placed on a separate page, no observed clipping, overlap or missing glyphs. Final pages 7-8 rechecked after reference layout change.",
+  "geometry_checks": [
+    {
+      "page": 1,
+      "characters": 3794,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 2,
+      "characters": 4075,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 3,
+      "characters": 3327,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 4,
+      "characters": 3915,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 5,
+      "characters": 3667,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 6,
+      "characters": 4045,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 7,
+      "characters": 2989,
+      "out_of_bounds": 0
+    },
+    {
+      "page": 8,
+      "characters": 1555,
+      "out_of_bounds": 0
+    }
+  ],
+  "final_full_render_matches_inspected_pages": true
+}
