@@ -1,0 +1,41 @@
+{
+  "status": "deployed_waiting_for_dependencies",
+  "observation_method": "Read-only browser terminal screenshot, including /proc/<pid>/cmdline; remote full receipt not downloaded",
+  "batch": "research-unit-pilot-v1",
+  "supervisor_pid": 27671,
+  "supervisor_command": "/xingjing/autoresearch-agent-papers/.venv/bin/python /xingjing/autoresearch-agent-papers/revisions/research-unit-pilot-v1/scripts/run_research_unit_pilot_v1.py",
+  "deployment_commit": "a4a18d8",
+  "preparation_freeze_commit": "2ae508f",
+  "registered_responses": 30,
+  "archive_sha256": "a6137255dad6ff0ad7f50a8c80c1da42f6a03b3da061f64cf69e10f700fc006f",
+  "archive_bytes": 33248,
+  "payload_files_verified_on_host": 13,
+  "preflight_returncode": 0,
+  "preflight": "python -m autolab.research_unit_pilot --help",
+  "predecessor": "hotpot-pilot-v1",
+  "workers_started_at_observation": 0,
+  "model_responses_at_observation": 0,
+  "gold_deployed": false,
+  "transfer": "Single fixed-file HTTP GET returned 200; helper exited after transfer",
+  "remote_receipt": "/xingjing/autoresearch-agent-papers/artifacts/research-unit-pilot-v1-deployment.json",
+  "predecessor_observation": {
+    "hotpot-pilot-v1": {
+      "pid": 18283,
+      "exact_command_live": true,
+      "status": "waiting_for_dependencies",
+      "workers": 0
+    },
+    "tau-nk-test40-v2": {
+      "pid": 11898,
+      "exact_command_live": true,
+      "status": "waiting_for_dependencies",
+      "workers": 0
+    },
+    "nk-prefix-curation-v2": {
+      "pid": 11897,
+      "exact_command_live": true,
+      "grid_status": "Not read: curation grid is not under runs/"
+    }
+  },
+  "scope": "Queued static public-development audit only; no fifth-paper contribution or completed model run"
+}
