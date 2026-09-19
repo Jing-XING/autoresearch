@@ -1,0 +1,536 @@
+{
+  "schema": "autolab.nk_prefix_target_selection.v1",
+  "status": "source_choices_frozen_before_curation; target execution not yet registered",
+  "preparation_manifest_sha256": "01dd8d5b05cc45a2e0dfe0eec088527aad636f58d8233a6914271823e90cc0bb",
+  "original_source_bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "source_pool_size": 70,
+  "selected_source_ids": [
+    "001cad7a4dfa5c36c0c8a9c6",
+    "01975cd2a2b65e65e14b16ba",
+    "0aa55a6c320e474975080725",
+    "0e9df92ba04e18336ad7762b",
+    "11784cd203d6e316c6847da9",
+    "12403621a4da5d614219a538",
+    "14d66e03fb405ea9c6b50af8",
+    "1b5e949dd9843154e1da561f",
+    "2673c1064f552da7a4d91598",
+    "28e515cea04da15a770bebbe",
+    "2af171140cb6cd95f983779e",
+    "3353119127fcbf374e6a9c09",
+    "356f2909e2472ab38853e211",
+    "3576eb70c95c7873eeb40615",
+    "371ac26d92ebb0bc0770e493",
+    "398f97ae273fe335791fc20e",
+    "3ec59140f0fcd61c8d648730",
+    "404dc732d771eebd21153415",
+    "4743305ca49eb8efe6ac7b6a",
+    "4ab6ad9b7c3241e7b9082d2b",
+    "4b469157883d7d57adf0fe7f",
+    "4c56fa7cd5bcb810ee3bbc56",
+    "4c8055eabe39140bca1fbc7a",
+    "4e9d3bedee70ce78226886a3",
+    "50dd30a362344f71c56d4fa8",
+    "52688a3a15162f2d20ee702b",
+    "55baaf10c9915ed195d08a03",
+    "5bea7b986745d3ddc29ea843",
+    "5e2a600b62de6cf67f2ca790",
+    "673a629dd5b18b47e8d55114",
+    "697cb793b01ab5e996f1e71c",
+    "6bd3585c66dbfdf8cdd06781",
+    "6d459e6138af59c838656f80",
+    "6f853126357d5d0bf6f671d3",
+    "6fc77f6db1e25d8c83e86611",
+    "7299fc95df1cbf13b6e325f7",
+    "73bbfa1dab82d63fa9c02865",
+    "79b4d1931635abbbc6d2fe3c",
+    "7c52048bd8ac91e76a2b77b9",
+    "7fc1b04efd9396c700554936",
+    "828eedc4fc0a920580c20e6c",
+    "82acc71d08f621ce8bf98cb7",
+    "83ebfaa6e9ebffbf04f7e475",
+    "8fd77816f255ec3970bc4904",
+    "92af1d18869a6a6f60a4f1a2",
+    "96f9da9323b7856a850b8dde",
+    "972f83b5c905b0256cfdbe3c",
+    "990cb6f8e2ed78c8e2e4c877",
+    "9db6882b9aab192c04f85adb",
+    "9fc5a56f85a8013d8789ac69",
+    "a00e717b13586094d7879774",
+    "a3e382fe4c1f7ef130a4fb14",
+    "ab70fa4407facb03ef17b2de",
+    "b2b8a0bbc0bd4c9f62744e93",
+    "b2dd00b32679b0eb67aee3b8",
+    "b339e256f165478400de33e7",
+    "b74de8406bf6665da0993fee",
+    "b94ced041957bc13ba93f937",
+    "ba8355a4be56bf5ad849deab",
+    "c2129d8d06f7e8edfc5590b1",
+    "c5782cbd10403b0bcd7f6f12",
+    "c686b7018761e290b0c9dce9",
+    "cb92b1ebeff3ca069ffeff98",
+    "cd613f70f09eebdeb98fa0e6",
+    "d49cac35c51280ab22fef299",
+    "d5c593332bd8c8a9c9de8652",
+    "d99936ebbfbea15bc513d4d9",
+    "dad6b0ba87881a59ebd1232e",
+    "de63ff3d31af70def3d87fe6",
+    "fd25e6174e05d32ef315d92d"
+  ],
+  "original_test_registration_sha256": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb",
+  "tasks_file_sha256": "20793073500dba5761f76d038dd32a343903985af442b3eae7eeb3a4e0d5d75d",
+  "target_count": 40,
+  "target_outputs_seen": false,
+  "curation_outputs_seen": false,
+  "retrieval": "visible ticket TF-IDF cosine; top-1; record-id tie break; shared eligible pool",
+  "rows": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+      "ticket_sha256": "b2622dd1f33485e05becef5d32d2f5758bbeea5e5b459e936616cba30c5c1326",
+      "source_choice": {
+        "record_id": "01975cd2a2b65e65e14b16ba",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 11,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "01975cd2a2b65e65e14b16ba"
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+      "ticket_sha256": "b2622dd1f33485e05becef5d32d2f5758bbeea5e5b459e936616cba30c5c1326",
+      "source_choice": {
+        "record_id": "01975cd2a2b65e65e14b16ba",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 11,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "01975cd2a2b65e65e14b16ba"
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "source_choice": {
+        "record_id": "001cad7a4dfa5c36c0c8a9c6",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 22,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "001cad7a4dfa5c36c0c8a9c6"
+    },
+    {
+      "task_id": "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+      "ticket_sha256": "b2622dd1f33485e05becef5d32d2f5758bbeea5e5b459e936616cba30c5c1326",
+      "source_choice": {
+        "record_id": "01975cd2a2b65e65e14b16ba",
+        "similarity": 0.9999999999999999,
+        "tied_candidates": 11,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "01975cd2a2b65e65e14b16ba"
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+      "ticket_sha256": "dc7c37d803737287de27ba23eec3d4c0452fc5cbf90cf8acac7bee13a66b681f",
+      "source_choice": {
+        "record_id": "3576eb70c95c7873eeb40615",
+        "similarity": 1.0,
+        "tied_candidates": 4,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "09060edd04ee056725e696c1"
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "source_choice": {
+        "record_id": "356f2909e2472ab38853e211",
+        "similarity": 1.0000000000000002,
+        "tied_candidates": 19,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "356f2909e2472ab38853e211"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    },
+    {
+      "task_id": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "source_choice": {
+        "record_id": "12403621a4da5d614219a538",
+        "similarity": 1.0,
+        "tied_candidates": 14,
+        "pool_size": 70
+      },
+      "original_74_source_choice": "12403621a4da5d614219a538"
+    }
+  ],
+  "source_use_counts": {
+    "001cad7a4dfa5c36c0c8a9c6": 13,
+    "01975cd2a2b65e65e14b16ba": 3,
+    "356f2909e2472ab38853e211": 8,
+    "3576eb70c95c7873eeb40615": 1,
+    "12403621a4da5d614219a538": 15
+  },
+  "changed_source_choices": 1,
+  "invalid_curation_policy": "retain source choice and inject empty experience under common wrapper; no replacement"
+}

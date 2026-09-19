@@ -1,0 +1,29 @@
+{
+  "purpose": "Deployment evidence, not curation or target results",
+  "batch": "nk-prefix-curation-v1",
+  "observed_date": "2026-09-19",
+  "supervisor_pid": 10949,
+  "live_process_identity_verified": true,
+  "state_observed": "waiting_for_dependencies",
+  "registered_sources": 70,
+  "registered_curations": 140,
+  "target_episodes": 0,
+  "remote_preflight_tests_passed": 8,
+  "remote_prepared_input_preflight": "passed; no model loaded",
+  "local_curation_and_bank_tests_passed": 13,
+  "archive_bytes": 1493186,
+  "archive_members": 203,
+  "archive_sha256": "d14757ed8580f726ab8f33b16b1e95479b357d741c4d44fca9066fc6e0cfe2c9",
+  "receipt_sha256": "ed9e7a1f14bbf3e7821028146af5fc291ef06bbc882b869a5a06fc30b29c3202",
+  "revision": "/xingjing/autoresearch-agent-papers/revisions/nk-prefix-curation-v1",
+  "output": "/xingjing/autoresearch-agent-papers/curations/nk-prefix-curation-v1",
+  "dependency": "tau-memory-test40-ties-v1 successful termination and idle GPUs",
+  "execution_limit_seconds": 7200,
+  "wait_limit_seconds": 43200,
+  "bank_builder_deployed": false,
+  "notes": [
+    "Bank builder is local analysis code and has only synthetic execution tests",
+    "No model inference from this curation batch observed",
+    "Existing queued experiments were not restarted or modified"
+  ]
+}
