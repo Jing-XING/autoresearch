@@ -1,0 +1,3294 @@
+{
+  "purpose": "Freeze all test tasks and three tied-source choices without target outcomes.",
+  "batch": "tau-memory-test40-ties-v1",
+  "source_bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "source_record_count": 74,
+  "source_cutoff": 8,
+  "tasks_file_sha256": "20793073500dba5761f76d038dd32a343903985af442b3eae7eeb3a4e0d5d75d",
+  "splits_file_sha256": "b862e473e8e9b25a0774d811cd9264790aa4560e620ad794e3f57bd9fd7c54e0",
+  "target_split": "test",
+  "selected_task_ids": [
+    "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+    "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+    "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+    "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+    "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+    "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+    "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+    "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+    "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+    "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+    "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+    "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+    "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+    "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+    "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+    "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+    "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+    "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+    "[mobile_data_issue]bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+    "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+    "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+    "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+    "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+    "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+    "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]",
+    "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+    "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+    "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+    "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]",
+    "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+    "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+    "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+    "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+    "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]",
+    "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]"
+  ],
+  "target_count": 40,
+  "models": [
+    "qwen3",
+    "qwen25"
+  ],
+  "tie_orders": [
+    "record_id",
+    "alternative_1",
+    "alternative_2"
+  ],
+  "tie_seed": "memory-tie-sensitivity-20260919:",
+  "memory_conditions": [
+    "full_metadata",
+    "boundary_aware"
+  ],
+  "no_memory_baseline_once_per_model": true,
+  "registered_episodes": 560,
+  "target_outputs_seen": false,
+  "rows": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+      "ticket_sha256": "b2622dd1f33485e05becef5d32d2f5758bbeea5e5b459e936616cba30c5c1326",
+      "choices": {
+        "record_id": {
+          "record_id": "01975cd2a2b65e65e14b16ba",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "9fc5a56f85a8013d8789ac69",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "2673c1064f552da7a4d91598",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+      "ticket_sha256": "b2622dd1f33485e05becef5d32d2f5758bbeea5e5b459e936616cba30c5c1326",
+      "choices": {
+        "record_id": {
+          "record_id": "01975cd2a2b65e65e14b16ba",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "9fc5a56f85a8013d8789ac69",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "2673c1064f552da7a4d91598",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "ticket_sha256": "e347f4f6e7c6c4d44bde925cfabc7256bb8068113a1d19bd6b9ae578c5679f52",
+      "choices": {
+        "record_id": {
+          "record_id": "001cad7a4dfa5c36c0c8a9c6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "cd613f70f09eebdeb98fa0e6",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "83ebfaa6e9ebffbf04f7e475",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 22,
+          "tied_record_ids": [
+            "001cad7a4dfa5c36c0c8a9c6",
+            "0aa55a6c320e474975080725",
+            "0e9df92ba04e18336ad7762b",
+            "14d66e03fb405ea9c6b50af8",
+            "1b5e949dd9843154e1da561f",
+            "28e515cea04da15a770bebbe",
+            "398f97ae273fe335791fc20e",
+            "5e2a600b62de6cf67f2ca790",
+            "6bd3585c66dbfdf8cdd06781",
+            "82acc71d08f621ce8bf98cb7",
+            "83ebfaa6e9ebffbf04f7e475",
+            "96f9da9323b7856a850b8dde",
+            "990cb6f8e2ed78c8e2e4c877",
+            "ab70fa4407facb03ef17b2de",
+            "b2dd00b32679b0eb67aee3b8",
+            "b339e256f165478400de33e7",
+            "c2129d8d06f7e8edfc5590b1",
+            "c5782cbd10403b0bcd7f6f12",
+            "c686b7018761e290b0c9dce9",
+            "cd613f70f09eebdeb98fa0e6",
+            "d5c593332bd8c8a9c9de8652",
+            "fd25e6174e05d32ef315d92d"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+      "ticket_sha256": "b2622dd1f33485e05becef5d32d2f5758bbeea5e5b459e936616cba30c5c1326",
+      "choices": {
+        "record_id": {
+          "record_id": "01975cd2a2b65e65e14b16ba",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "9fc5a56f85a8013d8789ac69",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "2673c1064f552da7a4d91598",
+          "similarity": 1.0000000000000002,
+          "tied_candidates": 11,
+          "tied_record_ids": [
+            "01975cd2a2b65e65e14b16ba",
+            "11784cd203d6e316c6847da9",
+            "2673c1064f552da7a4d91598",
+            "4b469157883d7d57adf0fe7f",
+            "55baaf10c9915ed195d08a03",
+            "79b4d1931635abbbc6d2fe3c",
+            "972f83b5c905b0256cfdbe3c",
+            "9fc5a56f85a8013d8789ac69",
+            "a3e382fe4c1f7ef130a4fb14",
+            "d49cac35c51280ab22fef299",
+            "dad6b0ba87881a59ebd1232e"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+      "ticket_sha256": "dc7c37d803737287de27ba23eec3d4c0452fc5cbf90cf8acac7bee13a66b681f",
+      "choices": {
+        "record_id": {
+          "record_id": "09060edd04ee056725e696c1",
+          "similarity": 1.0,
+          "tied_candidates": 6,
+          "tied_record_ids": [
+            "09060edd04ee056725e696c1",
+            "28685250e103b91dab68f65e",
+            "3576eb70c95c7873eeb40615",
+            "9db6882b9aab192c04f85adb",
+            "a00e717b13586094d7879774",
+            "b74de8406bf6665da0993fee"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "a00e717b13586094d7879774",
+          "similarity": 1.0,
+          "tied_candidates": 6,
+          "tied_record_ids": [
+            "09060edd04ee056725e696c1",
+            "28685250e103b91dab68f65e",
+            "3576eb70c95c7873eeb40615",
+            "9db6882b9aab192c04f85adb",
+            "a00e717b13586094d7879774",
+            "b74de8406bf6665da0993fee"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "28685250e103b91dab68f65e",
+          "similarity": 1.0,
+          "tied_candidates": 6,
+          "tied_record_ids": [
+            "09060edd04ee056725e696c1",
+            "28685250e103b91dab68f65e",
+            "3576eb70c95c7873eeb40615",
+            "9db6882b9aab192c04f85adb",
+            "a00e717b13586094d7879774",
+            "b74de8406bf6665da0993fee"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "ticket_sha256": "2c9dfddf909b3383d482313fc80c168ec7bdc1ee722031b44c1900a6ac1a74b0",
+      "choices": {
+        "record_id": {
+          "record_id": "356f2909e2472ab38853e211",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "b2b8a0bbc0bd4c9f62744e93",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "673a629dd5b18b47e8d55114",
+          "similarity": 0.9999999999999999,
+          "tied_candidates": 21,
+          "tied_record_ids": [
+            "356f2909e2472ab38853e211",
+            "371ac26d92ebb0bc0770e493",
+            "3ec59140f0fcd61c8d648730",
+            "404dc732d771eebd21153415",
+            "4ab6ad9b7c3241e7b9082d2b",
+            "4c56fa7cd5bcb810ee3bbc56",
+            "50dd30a362344f71c56d4fa8",
+            "5bea7b986745d3ddc29ea843",
+            "5d91821ff9e2f95b6a8924fc",
+            "673a629dd5b18b47e8d55114",
+            "6d459e6138af59c838656f80",
+            "6f853126357d5d0bf6f671d3",
+            "7299fc95df1cbf13b6e325f7",
+            "74d18ca8b1298cd881dfd617",
+            "7c52048bd8ac91e76a2b77b9",
+            "7fc1b04efd9396c700554936",
+            "828eedc4fc0a920580c20e6c",
+            "b2b8a0bbc0bd4c9f62744e93",
+            "ba8355a4be56bf5ad849deab",
+            "d99936ebbfbea15bc513d4d9",
+            "de63ff3d31af70def3d87fe6"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "ticket_sha256": "2030cf27695d7fe8ee4bc52ed138d49167781b9a99b44b8d8fd22a7687fc735e",
+      "choices": {
+        "record_id": {
+          "record_id": "12403621a4da5d614219a538",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_1": {
+          "record_id": "4e9d3bedee70ce78226886a3",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        },
+        "alternative_2": {
+          "record_id": "73bbfa1dab82d63fa9c02865",
+          "similarity": 1.0,
+          "tied_candidates": 14,
+          "tied_record_ids": [
+            "12403621a4da5d614219a538",
+            "2af171140cb6cd95f983779e",
+            "3353119127fcbf374e6a9c09",
+            "4743305ca49eb8efe6ac7b6a",
+            "4c8055eabe39140bca1fbc7a",
+            "4e9d3bedee70ce78226886a3",
+            "52688a3a15162f2d20ee702b",
+            "697cb793b01ab5e996f1e71c",
+            "6fc77f6db1e25d8c83e86611",
+            "73bbfa1dab82d63fa9c02865",
+            "8fd77816f255ec3970bc4904",
+            "92af1d18869a6a6f60a4f1a2",
+            "b94ced041957bc13ba93f937",
+            "cb92b1ebeff3ca069ffeff98"
+          ]
+        }
+      }
+    }
+  ],
+  "distinct_sources": {
+    "record_id": 5,
+    "alternative_1": 5,
+    "alternative_2": 5
+  },
+  "source_use_counts": {
+    "record_id": {
+      "001cad7a4dfa5c36c0c8a9c6": 13,
+      "01975cd2a2b65e65e14b16ba": 3,
+      "356f2909e2472ab38853e211": 8,
+      "09060edd04ee056725e696c1": 1,
+      "12403621a4da5d614219a538": 15
+    },
+    "alternative_1": {
+      "cd613f70f09eebdeb98fa0e6": 13,
+      "9fc5a56f85a8013d8789ac69": 3,
+      "b2b8a0bbc0bd4c9f62744e93": 8,
+      "a00e717b13586094d7879774": 1,
+      "4e9d3bedee70ce78226886a3": 15
+    },
+    "alternative_2": {
+      "83ebfaa6e9ebffbf04f7e475": 13,
+      "2673c1064f552da7a4d91598": 3,
+      "673a629dd5b18b47e8d55114": 8,
+      "28685250e103b91dab68f65e": 1,
+      "73bbfa1dab82d63fa9c02865": 15
+    }
+  },
+  "source_files_sha256": {
+    "autolab/experience_memory_bank.py": "37566407d0c7ce58f3450ab5feceec95ee8961410ea784e69f93f8b60ac9cbac",
+    "autolab/experience_tie_audit.py": "26542f7b5e44ea37f9e515b43c88b8809c5c57763753fb5151aba4ea248cee43"
+  },
+  "limits": "Fixed-bank, fixed-curator sensitivity. Alternatives are two hash-ranked exact ties excluding the original choice, not an improved retrieval method, independent memory seeds or random source-population estimate."
+}

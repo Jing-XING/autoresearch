@@ -1,0 +1,33 @@
+{
+  "purpose": "Deployment and preflight record, not model results",
+  "batch": "tau-memory-test40-ties-v1",
+  "revision": "tau-memory-test40-ties-code-v2",
+  "supervisor_pid": 6395,
+  "registered_episodes": 560,
+  "distinct_targets": 40,
+  "source_bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "source_archive_bytes": 100289,
+  "source_archive_members": 53,
+  "source_archive_sha256": "d7a23dbe7876d5bcc0d70738ef147c6b17908e39552d4ad7b6286980905f8b3a",
+  "receipt_sha256": "4c8e5cba6ab3468fcfa85df92646d40ae153dcbd74f6b1b66436f593d8ecdad4",
+  "remote_tests_passed": 27,
+  "remote_official_tasks_verified": 40,
+  "remote_source_choices_verified": 240,
+  "source_target_disjoint": true,
+  "preflight_observed": "2026-09-19 19:15 CST",
+  "launch_observed": "2026-09-19 19:15 CST",
+  "dependency": "vakra-output-budget-v1 reaches a recorded terminal completion state and GPUs idle",
+  "inference_results_available": false,
+  "preserved_failed_revision": {
+    "revision": "tau-memory-test40-ties-v1",
+    "archive_bytes": 100152,
+    "archive_members": 53,
+    "archive_sha256": "c414b9f08ee12ca28b21059b9df6f6f19d236371bea03e07a79f87749c00fb8c",
+    "receipt_sha256": "001f0a50c02b8a90c1c202b44134641844ce9d99a321af94d0554ee00959c802",
+    "tests_passed": 27,
+    "failure": "Official task loader order differed from the frozen split-list order",
+    "model_inference_started": false,
+    "repair": "Verify exact task identity set and explicitly restore the unchanged registered order before sharding",
+    "original_logs_retained": true
+  }
+}
