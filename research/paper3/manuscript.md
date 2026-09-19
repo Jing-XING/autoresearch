@@ -1,4 +1,4 @@
-# When Tool Errors Survive but Recovery Records Do Not: Auditing Agent Compensation Interfaces
+# When Recovery Reports Disagree with Effects: A Contract-Based Audit of Agent Tool Interfaces
 
 **Working manuscript, incomplete.** The results below are executed software
 probes and an archival artifact audit. They are not model-task performance
@@ -7,30 +7,31 @@ new recovery algorithm. The evidence is not yet sufficient for submission.
 
 ## Abstract
 
-Agent recovery components must distinguish tool execution, reported status and
-persisted effects. We audit these agreements in a pinned release of
-RobustAgentCompensation (RAC), using controlled native integrations and a
-separate audit of its published artifact. Normally returned error messages
-can coexist with completed recovery records, and a schema-declared
-compensation pair is not automatically discovered. Matched MCP adapter
-versions isolate an error-delivery difference, while independent agent-saga
-and SagaLLM controls delimit transport and coordinator behavior. Twenty-five
-native airline cases distinguish failed effects from errors after completed
-cancellation. A census of 2,000 reservations shows that repeated cancellation
-preserves a narrow status/net contract while changing ledger history. In a
-second native environment, all 423 direct retail cancellations satisfy the
-declared accounting contract, whereas 120 payment-change/cancellation paths
-across 102 orders return normally with cancelled status but unbalanced
-per-method ledgers. An independent offline verifier recomputes the saved
-states and accounting results. Separately, all 280 JSON files in the released
-RAC archive are audited for duplicate records and explicit structured-status
-contradictions; none of the latter are observed under the fixed screen.
-These findings identify reproducible integration and composition failures,
-without attributing constructed failures to the published benchmark. The
-experiments contain no autonomous model decisions and establish neither
-framework-wide rankings, deployed failure prevalence nor external financial
-harm. They support explicit effect contracts and versioned recovery evidence,
-not a new general recovery algorithm.
+Agent recovery reports summarize control flow, but their relationship to
+persisted effects depends on adapters and business contracts. We examine
+three questions: when error status survives conversion but is ignored by
+recovery bookkeeping, when normally returned operations violate an effect
+contract, and whether published trajectories corroborate these mechanisms.
+Controlled executions of pinned RAC code, MCP adapters, agent-saga and
+SagaLLM separate error propagation from postcondition checking. A matched
+adapter-version change alters explicit-error handling without repairing a
+silent no-op. Twenty-five native airline cases show both identical successful
+payloads with different persisted effects and errors after completed
+cancellation. Across 2,000 initial reservations, repeated cancellation
+preserves a status/net contract while changing ledger history. In retail,
+all 423 direct cancellations meet the declared accounting contract, whereas
+120 payment-change/cancellation paths across 102 orders return normally but
+leave incorrect per-method ledgers. Two archival screens delimit these
+findings: 280 released RAC JSON files contain no contradiction under a fixed
+structured-status screen, and 1,824 published retail simulations contain no
+same-order payment-change/cancellation sequence. All 433 scorable cancellation
+payloads in the latter have balanced ledgers. Offline verifiers recompute
+saved states, selection and accounting without executing the measured tools.
+The contribution is a reproducible empirical account of disagreements among
+execution status, recovery records and declared effects. Source-selected
+diagnostics establish neither deployed prevalence nor autonomous-agent
+performance; the historical runs do not corroborate the constructed failures.
+We claim no new recovery algorithm or external financial harm.
 
 ## 1. Introduction
 
@@ -58,6 +59,25 @@ whether the released experimental traces independently show those failures.
 Separating these questions prevents a unit-level counterexample from becoming
 an unsupported claim about benchmark performance or deployed reliability.
 
+The study is organized around three research questions. **RQ1:** under which
+tested conversions does an explicit tool error cease to control the recovery
+record? Sections 4 and 5.1-5.5 isolate returned values, exception conventions,
+schema discovery and an adapter-version change. **RQ2:** which declared
+effect properties remain unestablished even when an operation returns
+normally? Sections 5.6-5.8 compare saved native states under acknowledgement
+faults, retries and ordinary operation composition. **RQ3:** do existing
+published traces show the diagnosed mechanisms? Section 6 supplies separate
+archive screens, including their negative findings.
+
+Our empirical contribution is the connection between these observations
+within exact, executable configurations. The controls distinguish a broken
+error-consumption path from a successful error path whose observations are
+insufficient to certify a business effect. The finite native censuses then
+distinguish accounting failure from harmlessness under a deliberately narrower
+contract. Finally, the archive screens prevent this diagnostic evidence from
+being represented as a correction to published agent success rates. These
+are bounded case-study results, not a representative survey of frameworks.
+
 ## 2. Observational distinctions
 
 We record four separate properties of an operation: whether invocation raises,
@@ -80,6 +100,22 @@ a run that actually attempts the declared compensation, reports success and
 leaves the flag active. We describe failed automatic discovery separately.
 The latter returns an accurate description of its empty recorded plan, while
 failing to track the workflow's schema-declared compensatable operation.
+
+For clarity, let C denote a predicate on the persisted post-state and, where
+needed, its initial state. A normal return, a positive returned status and a
+completed recovery record are observations about other variables. We test
+their agreement with C rather than define C from them. A raised error with
+C true is therefore different from a positive recovery record with C false.
+When the post-state is unobserved, C remains unmeasured; we do not infer its
+value from a response or an archive's task reward.
+
+The contracts vary explicitly by study. The binary fixture requires clearing
+one flag. Airline cancellation requires cancelled status and zero total
+signed payment net; byte equality to the initial state is not required.
+Retail additionally requires zero net separately for each instrument and the
+specified gift-card balance. These predicates are not interchangeable.
+Their differences are part of the measurement design, not evidence that
+one framework is universally safer than another.
 
 ## 3. Subject, versions and experimental method
 
@@ -502,7 +538,49 @@ This negative screen does not corroborate occurrence of our constructed
 composition failure in these published runs. It also cannot certify the
 absence of failures in unobserved workflows or implementations.
 
-## 7. Related work and limits
+## 7. Discussion and relation to prior work
+
+### 7.1 What each observation establishes
+
+The results answer the research questions at different levels. For RQ1,
+the matched adapter comparison shows that the same server error can reach
+the recovery component as a normal value or an exception, with different
+bookkeeping outcomes. This is a local causal control over one dependency
+version, not a comparison of complete historical environments. For RQ2,
+even correct error propagation cannot distinguish a silent no-op from a
+completed effect without an additional state observation. The retail census
+goes further: no error injection is required for a normally returning
+composition to violate the declared accounting predicate. For RQ3, neither
+archive screen corroborates the constructed mechanism in the inspected
+historical runs. That negative evidence is retained alongside the positive
+diagnostic findings.
+
+The contrast between the two native censuses makes the contract choice
+consequential. In airline, the implementation appends the negation of each
+existing entry. For a ledger L, the resulting ledger is L followed by -L,
+so its total signed net is zero while its length doubles. Repeating this
+operation changes history without violating the selected status/net
+predicate. In retail, the observed sequence for an original instrument o
+and new instrument n is (o,+A), (n,+A), (o,-A), followed by refunds
+(o,-A), (n,-A), (o,-A). The old instrument consequently has net -2A,
+while the new instrument has net zero. The latter is an accounting-contract
+failure, not merely an inequality between two valid ledger histories.
+These expressions explain the measured transition rules; they are not
+proofs about tools outside the pinned implementations.
+
+Table 7 summarizes the resulting evidence boundaries. Each row refers to a
+distinct study population or configuration; the rows cannot be pooled into
+one failure rate.
+
+| Observation | Strongest supported inference | Unestablished inference |
+|---|---|---|
+| Error ToolMessage with completed record | Tested consumer ignores an available error signal | Deployed prevalence or every dependency combination |
+| Same native response, different saved state | That response alone does not identify the declared effect | Every successful response is unreliable |
+| Airline retry: net preserved, history changed | Strict state idempotence and the narrow contract differ | Duplicate external refunds or a violated idempotency promise |
+| Retail composition: old-instrument net -2A | The selected normal-return sequence violates the accounting contract | Its occurrence in autonomous agent workloads |
+| No qualifying sequence in the retail archive | The inspected historical runs do not corroborate that composition | Zero risk in other workflows or versions |
+
+### 7.2 Closest related work
 
 [RAC](https://arxiv.org/abs/2605.03409v1) is the subject of the audit and already
 studies compensation in agent workflows. [Verified Tool Calls](https://arxiv.org/abs/2608.02645)
@@ -512,6 +590,28 @@ and explicitly motivates version-aware API-sequence testing. The [Agent Crash Te
 artifact likewise includes controlled tool faults and effect oracles.
 Our controlled failures do not establish novelty for fault injection,
 typed errors, postcondition verification or framework bug taxonomies.
+
+In particular, Verified Tool Calls already supplies a wrapper with
+postcondition checks, idempotency keys and verification before retry, and
+discusses true, false and unknown verifier outcomes. It also identifies
+verifier quality as a limitation. Our read-before-retry control is therefore
+a diagnostic use of an established idea. The additional evidence here is
+about exact recovery-interface compositions and the distinction between
+two explicit accounting contracts in unchanged public native tools.
+We do not claim to outperform that wrapper or to solve general verifier
+construction. Where Agent Frameworks Fall Short motivates version-aware
+API-sequence testing from issue evidence; our work executes selected
+sequences with saved post-states. These different evidence types support
+different conclusions, rather than an absence of prior interface research.
+
+We also inspected [RAC version 2](https://arxiv.org/html/2605.03409v2), which
+reports model experiments on predictable and dynamic failures. Our
+constructed component executions do not reproduce those evaluation
+conditions or replace their reported task results. The current and archived
+source branches, dependency combinations, and published traces retain
+separate identities throughout this study.
+
+### 7.3 Threats to validity
 
 The evidence remains concentrated in a small set of chosen interfaces. The two independent implementations
 add narrowly selected coordinator and transport controls, not a representative
@@ -528,6 +628,17 @@ pair observations independent. These status/ledger contracts are narrower
 than full restoration, and no official airline or retail task success rate
 is reported. A state oracle is accessible by construction.
 These conditions make the mechanisms inspectable but limit deployment claims.
+
+The censuses exhaust their stated finite initial populations, so their
+counts are exact descriptions of those populations. Repeated paths share
+tools, initial orders and source-derived mechanisms. Treating them as
+independent Bernoulli samples and attaching a confidence interval for a
+general deployed defect rate would be unjustified. Likewise, the archived
+retail trials reuse task IDs and the RAC snapshots reuse records. We report
+these dependencies instead of converting file counts to effective sample
+sizes. Independent reanalysis means a separate implementation of arithmetic
+and selection within this research process, not an independent research
+team, human adjudication or original runtime reproduction.
 
 ## 8. Offline evidence and reproducibility scope
 
@@ -564,7 +675,15 @@ reanalysis; the older packages' scope is unchanged. Complete final retail
 database restoration is represented by the runtime assertion and equal
 recorded hashes, rather than an archived full final database.
 
-## 9. Provisional conclusion
+The later historical retail screen has a separate self-contained package,
+`retail-archive-composition-v1.zip`. It contains the four original result
+files, fixed protocol, extraction output, source-provenance evidence and
+its arithmetic verifier. The retained integrated v3 package predates that
+screen and this revised manuscript; its manifest continues to identify
+its historical contents. A new review PDF accompanies the present text,
+but does not retroactively change any prior package or experiment receipt.
+
+## 9. Conclusion
 
 The executed probes demonstrate specific inconsistencies between returned
 tool errors, automatic compensation discovery and recovery records. They also
@@ -580,6 +699,19 @@ contract from exact state idempotence, without inferring financial harm from
 ledger growth. The retail composition census additionally finds normally
 returning cancellations with an incorrect per-method ledger, despite every
 direct-cancellation control meeting the declared contract. The archival analysis prevents these
-findings from being misrepresented as observed benchmark failures. Broader
-realistic workflows and submission-quality positioning remain necessary before
-this working manuscript can support a publication claim.
+findings from being misrepresented as observed benchmark failures: neither
+archival screen corroborates the constructed mechanism under its stated
+definition. Together, the results justify checking error consumption and
+declaring effect predicates separately when assessing recovery integrations.
+They support a bounded empirical diagnosis rather than a universal recovery
+guarantee, autonomous-agent improvement or new recovery algorithm.
+
+## Research-process disclosure
+
+An AI assistant performed the source inspection, experiment implementation,
+execution orchestration, analysis and drafting in this research workspace.
+The experiments and archives are identified by retained artifacts; no human
+annotation agreement or independent external replication is claimed. Author
+identities, affiliations, funding and publication declarations have not been
+supplied. This remains an incomplete review manuscript pending final
+scientific and authorship review, venue formatting and submission checks.

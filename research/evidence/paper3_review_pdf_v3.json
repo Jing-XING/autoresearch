@@ -1,0 +1,28 @@
+{
+  "source": "research/paper3/manuscript.md",
+  "source_sha256": "56c7dd58e4616392997f87c609f07bfe3b031204026911763f8700d0baf01b64",
+  "bibliography_sha256": "2dd68e00bd10606573ff8a8ad18cded6ee239d6e3727f1dde62e0d418a6a2c45",
+  "builder_sha256": "f42da3f91d4d679f94e7d43d1b35749200c1753c0db07ac2e2ef5c49c65cabd6",
+  "output": "output/pdf/paper3-recovery-interfaces-review-v3.pdf",
+  "pdf_sha256": "166ce87811c6e715b9bd661d133b09cb85916fc8f4e61ae81702362bb69c6534",
+  "pages": 12,
+  "tables": 7,
+  "reference_records": 9,
+  "review_date": "2026-09-20",
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0"
+  },
+  "publication_ready": false,
+  "visual_review": "All 12 pages visually inspected at 100 dpi; final LF-only source normalization and rebuild produced 12 byte-identical page PNGs.",
+  "abstract_words": 232,
+  "manuscript_words": 6154,
+  "geometry_outliers": 0,
+  "incomplete_footers": 12,
+  "pdf_bytes": 48186,
+  "prior_six_tables_unchanged": true,
+  "retail_table_rows_match_saved_counts": 6,
+  "airline_census_totals_match": true,
+  "preserved_study_record_sha256": "96da71e0ddc2e80c5053941ce505c93087eb583cb12b88d0ef3f9d2a6e76a03a",
+  "scope": "Scientific synthesis and historical retail screen added; no new experiments; not publication-ready."
+}

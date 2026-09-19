@@ -4,6 +4,24 @@ This accompanies an **incomplete working manuscript**. It supports byte-level
 inspection and offline reanalysis. It is not a new experiment, a reproduction
 of published model scores, or a certificate of publication readiness.
 
+## Current review manuscript
+
+The updated PDF is `output/pdf/paper3-recovery-interfaces-review-v3.pdf`.
+It includes the historical retail screen and the three-question scientific
+synthesis. Its twelve pages, seven tables and nine references were visually
+checked; the source and output hashes are recorded in
+`research/evidence/paper3_review_pdf_v3.json`. The prior manuscript is retained
+as `research/paper3/study_record_v1.md`. Rebuild the current review PDF with:
+
+```text
+python scripts/build_review_pdf.py --paper research/paper3 --output output/pdf/paper3-recovery-interfaces-review-v3.pdf --date 2026-09-20
+```
+
+The integrated offline artifact described below retains its original v3
+contents. It does not include the later historical screen, which has a
+separate self-contained artifact, or the current revised manuscript/PDF.
+The two artifact version numbers do not imply identical coverage.
+
 ## One-command reanalysis
 
 Use Python 3.10 or later, with no additional packages, GPU or network access.

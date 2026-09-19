@@ -2,6 +2,33 @@
 
 This is a working paper, not a completed submission or a new-method claim.
 
+## Current manuscript synthesis and review PDF
+
+The 20 September revision states three research questions concerning error
+consumption, persisted effects and archival corroboration. Its abstract now
+includes the complete negative historical retail screen. Section 7 separates
+these answers, gives the signed-ledger transition explanation, compares
+the contribution with the closest prior work, and explains why finite
+source-selected censuses do not yield deployed defect-rate intervals.
+No experiment, label, reward or earlier numerical table is changed.
+
+The previous complete manuscript is preserved in `study_record_v1.md`,
+SHA256 `96da71e0ddc2e80c5053941ce505c93087eb583cb12b88d0ef3f9d2a6e76a03a`.
+All six earlier tables have identical text after newline normalization;
+the new seventh table is a qualitative synthesis, not new observations.
+The retail tables' six rows were checked against retained summaries and
+the airline census totals against its report. This editorial verification
+does not replace the separate raw-state reanalysis.
+
+`../evidence/paper3_review_pdf_v3.json` identifies the new twelve-page PDF,
+seven tables, nine bibliography records, 232-word abstract and full visual
+inspection. Unlike the retained nine-page PDF, this version includes section
+6.2 and the revised discussion. The older integrated offline v3 ZIP remains
+unchanged and still predates those additions; archive version and PDF version
+are separate histories. The current manuscript is still not submission-ready.
+
+## Historical evidence ledger
+
 | Observation | Executed evidence | Boundaries |
 |---|---|---|
 | Core rollback ignores a normally returned error result. | `../evidence/rac_compensation_status_probe_v2.json` | Twelve constructed controls; not model-task outcomes. |
