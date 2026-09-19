@@ -495,6 +495,78 @@ under investigation is the interpretation of an imposed execution boundary
 when compressing otherwise matched experience. Whether that variable supports
 a useful method or a general empirical finding remains to be tested.
 
+## 7. Discussion
+
+### 7.1 Completion labels constrain claims, not recommendations by themselves
+
+The cutoff audit separates three questions: whether the evaluator awards
+completion, whether the task's state and action checks are already satisfied,
+and whether the recorded continuation eventually succeeds. These variables
+cannot be substituted for one another. In particular, zero completion at an
+imposed cutoff does not identify an ineffective action. Conversely, eventual
+success does not validate every action in the preceding prefix. A lesson can
+accurately describe an unsuccessful intermediate test and still recommend a
+reasonable next step. Our selected-source review includes such cases; it does
+not support a universal conversion from zero reward to negative advice.
+
+Boundary metadata resolves the origin of the supplied label, but it supplies
+no missing environment observation. A curator told that execution was cut
+short still cannot know the unobserved result of a final intervention. This
+explains the logical limitation of the treatment without claiming to explain
+its observed target losses causally. The qualitative review finds temporal
+overstatement in some boundary-aware lessons, but the experiment does not
+intervene on those individual statements while keeping all other words fixed.
+It therefore cannot attribute a particular failed target to a particular
+unsupported sentence.
+
+### 7.2 Source fidelity and target utility require separate evidence
+
+A lesson may faithfully describe one source and remain inapplicable to a
+different target state. An unsupported lesson can also coincide with a useful
+target action. Thus neither target reward nor a source quotation alone is a
+complete measure of memory quality. Our experiment measures official target
+reward and provides selected source-level examples separately. It does not
+combine them into an unvalidated quality score. The 17 reviewed examples are
+illustrations selected after reading all 45 test-selected lessons, not an
+exhaustive annotation of atomic claims or a factual-error percentage.
+
+Holding source identity fixed makes the instruction contrast interpretable
+within the current pipeline, but does not isolate a universal mechanism of
+boundary reasoning. The instruction may change wording, length, selected facts
+and recommended actions simultaneously. Greedy curation supplies one lesson
+per source and condition, not a distribution of possible lessons. The current
+results consequently concern these concrete memories produced by this curator.
+A claim about memory algorithms generally would require additional curators,
+matched content controls and other environments.
+
+### 7.3 Retrieval dependence limits the effective diversity
+
+Task counts do not describe the full diversity of a memory-transfer study.
+All development targets share only four selected source records; the test
+extension uses five under each rule. Literal duplicate lessons further reduce
+the number of different interventions. Repeating an identical lesson under a
+different source ID is useful for detecting execution instability, but cannot
+establish robustness to new experience content. The frozen analyses preserve
+each task and each rule while reporting this reuse explicitly.
+
+The test extension addresses previously unused task identities and selected
+source-choice sensitivity. It does not remove dependence between related
+telecom tasks, provide an independent human review, or compare the complete
+procedures of the closest memory methods. Those are limits on the scientific
+claim, even if a future completed comparison were to show positive counts.
+
+## 8. Provisional conclusion
+
+The completed development experiment provides no evidence of a general
+advantage from adding a boundary-aware instruction to the same curation
+evidence. The source audit nevertheless demonstrates why a recorded completion
+label is insufficient to justify claims about action effectiveness, and why
+boundary metadata cannot replace missing observations. The principal supported
+lesson is methodological: report source evidence, termination origin, retrieval
+reuse and downstream task outcomes separately. The registered test extension
+is still pending, so this conclusion is limited to the completed development
+study and the descriptive source audit.
+
 ## References to integrate into the final bibliography
 
 - tau2-Bench: Evaluating Conversational Agents in a Dual-Control Environment.
@@ -502,5 +574,5 @@ a useful method or a general empirical finding remains to be tested.
 - Reflexion: Language Agents with Verbal Reinforcement Learning.
   https://arxiv.org/abs/2303.11366
 
-The complete related-work section, independently confirmed results, discussion,
-appendices, complete bibliography and publication formatting remain unfinished.
+Independent confirmation, stronger method comparisons, complete appendices,
+bibliography integration and publication formatting remain unfinished.

@@ -675,3 +675,75 @@ independent human annotation study. It uses hidden answers only offline.
 Further experiments require a fixed method, additional task families, full
 cost accounting, stronger controls and uncertainty estimates appropriate to
 the actual number of independent tasks.
+
+## 12. Discussion
+
+### 12.1 Three distinct evaluation questions
+
+The experiments answer separate questions about an episode: did the agent
+complete a valid interaction, did its answer match the fixed task interpretation,
+and did the recorded observations determine that answer within the admitted
+worlds? Improvements on one axis need not establish improvements on another.
+Permitting sequential batches increases Qwen2.5's final-response count by
+twelve while adding only one SQL-compatible answer. The two complete-history
+counterexamples instead begin with correct answers and show an evidential
+distinction invisible to the answer label. Neither observation licenses
+replacing task success with a trace-based score.
+
+The coverage reminder changes a policy's acquisition decisions as well as its
+final response. Its mixed domain effects cannot be attributed exclusively to
+preview handling. In publishing, complete retrieval of the output columns
+coexists with an incorrect predicate. The repaired filter used in our CPU
+diagnostic establishes an available distinguishing action, but does not show
+that an agent can reliably choose it. A practical controller would need to
+address this semantic choice and its cost, beyond detecting an incomplete
+preview.
+
+### 12.2 Counterexamples are local audit evidence
+
+A replay witness is useful because its claim can be checked against complete
+recorded inputs, actual tool semantics and an explicit database intervention.
+It does not require interpreting the model's hidden reasoning. This benefit
+depends on faithfully defining the admissible alternatives. The failed broad
+search illustrates the cost of ignoring background constraints: a syntactically
+valid database edit can invalidate the natural-language interpretation used
+to score the answer. We retain these rejected candidates to distinguish a
+debugging discovery from evidence eligible for the scientific claim.
+
+The two retained correct-answer witnesses establish existence under their
+declared intervention classes. Their post-hoc selection, the bounded searches
+and the failed car-domain extension preclude a prevalence estimate. Equally,
+the absence of a found witness is not evidence that the remaining answers
+were identified. The tool is an audit instrument that produces inspectable
+counterexamples, not a complete verifier. Mechanically generated evidence
+should preserve these limits rather than turn search failure into a positive
+grounding certificate.
+
+### 12.3 Practical implications within the tested setting
+
+Evaluation records should retain execution outcomes and costs for every
+registered task, including ambiguous tasks whose answer interpretation is
+reported separately. They should also state whether a resource limit can
+constrain answer expression, whether initialization uses a reference-derived
+scope, and whether a local adapter restricts otherwise legal tool sequences.
+The present controls show that these choices affect the meaning of a reported
+result. They do not establish a universally optimal executor, prompt or budget.
+
+The forthcoming capacity and domain extensions were frozen to examine some
+of these limits. Until those runs and their complete answer audits finish,
+they supply no additional empirical support. Even then, larger sample counts
+will not by themselves resolve assistant annotation bias, identify the cause
+of a prompt effect, or demonstrate a new method's superiority.
+
+## 13. Provisional conclusion
+
+In the completed small-database studies, successful calls, correct answers
+and sufficient observed evidence are empirically distinct. A fixed reminder
+has mixed effects, relaxing one executor restriction mainly improves response
+completion, and the third checkpoint performs near the scoring floor. Two
+fully replayed examples show that a correct original answer can remain
+unidentified under an explicit admissible intervention, including after full
+output-column retrieval. These findings support more explicit evaluation and
+auditing of relational tool use. They do not yet establish a general evidence
+controller, a benchmark-wide failure rate or confirmatory benefits on the
+pending extensions.
