@@ -11,21 +11,44 @@ import time
 from autolab.tool_agent import Budget, InventorySmokeEnvironment, ModelReply, run_episode, write_episode
 
 
+def loading_options(profile, visible_devices):
+    if profile == "single_gpu":
+        return {"device_map": "cuda:0"}
+    if profile == "two_gpu_balanced":
+        if visible_devices != 2:
+            raise ValueError("The two-GPU profile requires exactly two visible GPUs")
+        return {"device_map": "balanced", "max_memory": {0: "36GiB", 1: "36GiB", "cpu": 0}}
+    raise ValueError("Unknown device profile")
+
+
 class LocalTransformersModel:
-    def __init__(self, model_path: Path):
+    def __init__(self, model_path: Path, device_profile="single_gpu"):
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
         if not torch.cuda.is_available():
             raise RuntimeError("GPU smoke requires a CUDA-enabled PyTorch installation")
         torch.manual_seed(20260919)
         self.torch = torch
+        options = loading_options(device_profile, torch.cuda.device_count())
+        self.cuda_devices = (0, 1) if device_profile == "two_gpu_balanced" else (0,)
         self.tokenizer = AutoTokenizer.from_pretrained(
             model_path, local_files_only=True, trust_remote_code=False
         )
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path, local_files_only=True, trust_remote_code=False,
-            use_safetensors=True, torch_dtype=torch.bfloat16, device_map="cuda:0"
+            use_safetensors=True, torch_dtype=torch.bfloat16, **options
         ).eval()
+        actual = getattr(self.model, "hf_device_map", {})
+        if device_profile == "two_gpu_balanced":
+            used = {str(x).removeprefix("cuda:") for x in actual.values()}
+            if used != {"0", "1"}:
+                raise RuntimeError("Expected GPU-only placement on both devices: " + repr(actual))
+        self.runtime_placement = {"profile": device_profile, "hf_device_map": actual,
+                                  "visible_device_names": [torch.cuda.get_device_name(i) for i in self.cuda_devices]}
+
+    def synchronize(self):
+        for device in self.cuda_devices:
+            self.torch.cuda.synchronize(device)
 
     def generate(self, messages, max_new_tokens):
         tensors = self.tokenizer.apply_chat_template(
@@ -33,14 +56,14 @@ class LocalTransformersModel:
             return_tensors="pt", return_dict=True
         ).to(self.model.device)
         n_input = tensors["input_ids"].shape[-1]
-        self.torch.cuda.synchronize()
+        self.synchronize()
         started = time.monotonic()
         with self.torch.inference_mode():
             result = self.model.generate(
                 **tensors, max_new_tokens=max_new_tokens, do_sample=False,
                 pad_token_id=self.tokenizer.eos_token_id
             )
-        self.torch.cuda.synchronize()
+        self.synchronize()
         output = result[0, n_input:]
         return ModelReply(
             text=self.tokenizer.decode(output, skip_special_tokens=True),

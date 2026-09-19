@@ -21,7 +21,8 @@ def main():
     manifest = json.loads(raw)
     assert manifest['mirror'].startswith('https://modelscope.cn/models/')
     assert all(Path(r['name']).name == r['name'] and '/' not in r['name'] and '\\' not in r['name']
-               and r['name'].endswith(('.json', '.jinja', '.safetensors')) for r in manifest['files'])
+               and (r['name'].endswith(('.json', '.jinja', '.safetensors')) or r['name'] == 'merges.txt')
+               for r in manifest['files'])
     assert shutil.disk_usage(a.output.parent).free > 2.2 * sum(r['bytes'] for r in manifest['files'])
     a.output.mkdir(exist_ok=False)
     report = {'status': 'running', 'started': time.time(), 'model_id': manifest['model_id'],

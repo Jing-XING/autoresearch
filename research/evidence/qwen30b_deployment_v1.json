@@ -1,0 +1,27 @@
+{
+  "purpose": "Deployment record, not benchmark results",
+  "model_id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "revision": "0d7cf23991f47feeb3a57ecb4c9cee8ea4a17bfe",
+  "model_bytes": 61084157319,
+  "model_files": 23,
+  "download_pid": 5385,
+  "supervisor_pid": 5416,
+  "batch": "vakra-qwen30b-v1",
+  "registered_episodes": 120,
+  "source_archive_bytes": 343784,
+  "source_archive_members": 129,
+  "source_archive_sha256": "9d4bfabd959a02a0c72aca3fc054d7f028aa34403bcbbef391ecd147080b9d1f",
+  "download_archive_sha256": "93e285291f0c5aa62c3794dbbb39186703b63aa13e114158a36e5490fcc26192",
+  "local_tests": {
+    "passed": 65,
+    "skipped_optional": 8
+  },
+  "remote_adapter_tests": {
+    "passed": 17,
+    "skipped": 0
+  },
+  "last_observed": "2026-09-19 18:23 CST; model download running, 3 of 23 files verified; supervisor launched to wait for dependency completion and empty GPUs",
+  "actual_multigpu_generation_verified": false,
+  "actual_benchmark_results_available": false,
+  "artifacts_exclude_credentials": true
+}

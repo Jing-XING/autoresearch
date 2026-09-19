@@ -49,9 +49,9 @@ def template_options(tools, profile="standard", template_date="2026-09-19"):
 
 class NativeTransformersModel(LocalTransformersModel):
     def __init__(self, model_path, tool_prefix=False, max_input_tokens=None,
-                 template_profile="standard", template_date="2026-09-19"):
+                 template_profile="standard", template_date="2026-09-19", device_profile="single_gpu"):
         template_options([], template_profile, template_date)
-        super().__init__(model_path)
+        super().__init__(model_path, device_profile=device_profile)
         self.tool_prefix = tool_prefix
         self.max_input_tokens = max_input_tokens
         self.template_profile = template_profile
@@ -74,12 +74,12 @@ class NativeTransformersModel(LocalTransformersModel):
         if limit is not None and n_input > limit:
             raise InputBudgetExceeded(f"Input has {n_input} tokens; registered maximum is {limit}")
         tensors = tensors.to(self.model.device)
-        self.torch.cuda.synchronize()
+        self.synchronize()
         started = time.monotonic()
         with self.torch.inference_mode():
             result = self.model.generate(**tensors, max_new_tokens=max_new_tokens,
                                          do_sample=False, pad_token_id=self.tokenizer.eos_token_id)
-        self.torch.cuda.synchronize()
+        self.synchronize()
         output = result[0, n_input:]
         completion = self.tokenizer.decode(output, skip_special_tokens=True)
         return NativeModelReply(prefix + completion, n_input, len(output), time.monotonic() - started,
