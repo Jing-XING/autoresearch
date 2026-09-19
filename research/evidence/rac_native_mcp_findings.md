@@ -86,6 +86,25 @@ must not be described as thirteen independent defects.
 
 ## Runtime and inference limits
 
+A separate six-case comparison installs the official `0.2.2` adapter wheel
+into an isolated import overlay while holding the server, RAC source,
+LangChain core, MCP SDK and Pydantic versions fixed. With that older adapter's
+default behavior, both cancellation-error modes raise CriticalFailure and
+both forward-error invocation forms are marked FAILED. Actual cancellation
+and silent-no-op behavior remain unchanged. Automatic pair discovery still
+fails. This agrees with the exception-mode diagnostic, but now the manipulated
+variable is an actual package version rather than a runtime flag. Evidence:
+`rac_mcp_adapter_version_probe_v1.json` and
+`scripts/probe_rac_mcp_adapter_version.py`; all six checks pass. The initial
+overlay import was blocked by local directory permissions before a tool ran;
+the successful run reads the same official installation with the required
+local filesystem access. It does not alter the `0.3.2` environment.
+
+This comparison does not establish the dependency versions used by the RAC
+authors. In particular, the other dependencies remain current. Neither the
+native MCP wrapper mismatch nor the change in its default error path should
+be retrospectively attributed to the paper's original model experiments.
+
 No model or external service is called. The parent audit observes zero
 non-stdlib connection attempts. Eight Windows asyncio loopback socket pairs
 are explicitly allowed only at the standard library's socketpair call site;

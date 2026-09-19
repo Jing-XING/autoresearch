@@ -1,0 +1,266 @@
+{
+  "purpose": "Isolate the adapter-version change using real MCP and unchanged other dependencies.",
+  "packages": {
+    "langchain-mcp-adapters": "0.2.2",
+    "langchain-core": "1.6.3",
+    "mcp": "1.30.0",
+    "pydantic": "2.13.5"
+  },
+  "rac_revision": "068c327ab3f9b79a86a39503946e26320b74b97a",
+  "prior_probe_sha256": "62557d21ad00992a4ee3d5b35defb5f71166edd479de3ecf6e5c4d7b186cd61d",
+  "server_sha256": "7bccfe884ffe8f6f84f417e479b96d121cb63337ca6db7a35390a4f18702a714",
+  "script_sha256": "ef5a399d3c5da44b139cc9bb3959a5a48db9f1011ae017d21daaef875d11d1ad",
+  "adapter_source_sha256": "cf481d5fdce74dcc639c0a701b892f41fce87d9b110be2c3da0308a90b0460a9",
+  "install_report_sha256": "125aaf9693a00187737f83b39a87bcdadbb877acdaf2919eb8dfd18c0587ca5e",
+  "cases": [
+    {
+      "route": "rollback",
+      "behavior": "success",
+      "discovered_pairs": {},
+      "explicitly_added_pair": true,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "rollback_reported_success": true,
+      "exception": null,
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "forward_result_type": "list",
+      "state_sha256": "845c07c6e4250021e0a6735a13dc036ade59d5f20c8b7f241456f4da85f4066b",
+      "default_032_comparison": {
+        "record_status": "COMPENSATED",
+        "marked_compensated": true,
+        "rollback_reported_success": true,
+        "exception": null
+      }
+    },
+    {
+      "route": "rollback",
+      "behavior": "explicit_error",
+      "discovered_pairs": {},
+      "explicitly_added_pair": true,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "rollback_reported_success": null,
+      "exception": {
+        "type": "CriticalFailure",
+        "message": "Compensation failed immediately: {\"error\": \"Fixture operation unavailable\"}"
+      },
+      "fixture_state": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "explicit_error",
+            "is_error": true,
+            "active_after": true
+          }
+        ]
+      },
+      "forward_result_type": "list",
+      "state_sha256": "b6b21daefe5a8f4b62a30797105b26ccef33fef6c6dd3036cec1a7511b631e31",
+      "default_032_comparison": {
+        "record_status": "COMPENSATED",
+        "marked_compensated": true,
+        "rollback_reported_success": true,
+        "exception": null
+      }
+    },
+    {
+      "route": "rollback",
+      "behavior": "server_exception",
+      "discovered_pairs": {},
+      "explicitly_added_pair": true,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "rollback_reported_success": null,
+      "exception": {
+        "type": "CriticalFailure",
+        "message": "Compensation failed immediately: Fixture operation unavailable"
+      },
+      "fixture_state": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "server_exception",
+            "is_error": true,
+            "active_after": true
+          }
+        ]
+      },
+      "forward_result_type": "list",
+      "state_sha256": "479a22c9a5398ebb618797192916fb854ec0a18a85adf8bf93fc7fca097b698b",
+      "default_032_comparison": {
+        "record_status": "COMPENSATED",
+        "marked_compensated": true,
+        "rollback_reported_success": true,
+        "exception": null
+      }
+    },
+    {
+      "route": "rollback",
+      "behavior": "silent_noop",
+      "discovered_pairs": {},
+      "explicitly_added_pair": true,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "rollback_reported_success": true,
+      "exception": null,
+      "fixture_state": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "silent_noop",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "forward_result_type": "list",
+      "state_sha256": "927ef43aa67e1b9ee39083a8144ed2685d02a1634ab7e2ecd9d6579c41077e3f",
+      "default_032_comparison": {
+        "record_status": "COMPENSATED",
+        "marked_compensated": true,
+        "rollback_reported_success": true,
+        "exception": null
+      }
+    },
+    {
+      "route": "forward_args",
+      "behavior": "explicit_error",
+      "discovered_pairs": {},
+      "explicitly_added_pair": true,
+      "record_status": "FAILED",
+      "marked_compensated": false,
+      "rollback_reported_success": null,
+      "exception": {
+        "type": "ToolException",
+        "message": "{\"error\": \"Fixture operation unavailable\"}"
+      },
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "explicit_error",
+            "is_error": true,
+            "active_after": false
+          }
+        ]
+      },
+      "forward_result_type": "NoneType",
+      "state_sha256": "bc62cc2dc0b9ba86d5420c0976fd446b227fd12a78420b51eb93aff28457cf39",
+      "default_032_comparison": {
+        "record_status": "COMPLETED",
+        "marked_compensated": false,
+        "rollback_reported_success": null,
+        "exception": null
+      }
+    },
+    {
+      "route": "forward_tool_call",
+      "behavior": "explicit_error",
+      "discovered_pairs": {},
+      "explicitly_added_pair": true,
+      "record_status": "FAILED",
+      "marked_compensated": false,
+      "rollback_reported_success": null,
+      "exception": {
+        "type": "ToolException",
+        "message": "{\"error\": \"Fixture operation unavailable\"}"
+      },
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "explicit_error",
+            "is_error": true,
+            "active_after": false
+          }
+        ]
+      },
+      "forward_result_type": "NoneType",
+      "state_sha256": "bc62cc2dc0b9ba86d5420c0976fd446b227fd12a78420b51eb93aff28457cf39",
+      "default_032_comparison": {
+        "record_status": "COMPLETED",
+        "marked_compensated": false,
+        "rollback_reported_success": null,
+        "exception": null
+      }
+    }
+  ],
+  "controls_passed": true,
+  "external_connection_attempts": 0,
+  "allowed_stdlib_socketpairs": 4,
+  "model_calls": 0,
+  "limits": [
+    "Only adapter version changes; other packages remain current. This is not the original paper environment.",
+    "Six matched constructed protocol executions, not model tasks or estimates of defect prevalence.",
+    "Automatic discovery fails in both tested combinations; registration is explicitly added to isolate execution behavior."
+  ]
+}
