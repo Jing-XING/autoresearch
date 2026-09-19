@@ -10,3 +10,21 @@ The concrete unresolved question is whether the observed negative
 boundary-instruction result persists on all forty unused telecom test tasks
 and under fixed, outcome-independent alternative top-tie choices. This narrow
 empirical question does not establish publishability by itself.
+
+Additional primary-source checks:
+
+- [How Memory Management Impacts LLM Agents](https://aclanthology.org/2026.acl-long.27/),
+  official PDF sections 3.1–3.4 and 4.2–4.3: feedback-based addition/deletion
+  and harmful reuse are already studied. The strict evaluator is simulated
+  from ground truth in these experiments; do not describe it as collected
+  human annotation. No reproduction performed here.
+- [On the Structural Memory of LLM Agents](https://arxiv.org/html/2412.15266v1),
+  section 3: chunks, triples, atomic facts, summaries and retrieval procedures
+  are compared. A change from free text to structured memories is not itself
+  a new contribution.
+- [Agent Zero Memory](https://arxiv.org/html/2608.29606v1), section 3.1–3.4:
+  temporal provenance and citation-constrained reading are explicit prior
+  mechanisms. Definition 2 requires both opened citations and claim support;
+  pointer membership alone does not establish the latter. We have inspected
+  the formulation, not verified the system's claimed semantic guarantee or
+  reproduced its benchmark results.

@@ -462,6 +462,16 @@ No claim of being the first budget-sensitive agent-memory study is warranted.
 
 ## 6. Relation to existing memory methods
 
+[How Memory Management Impacts LLM Agents](https://aclanthology.org/2026.acl-long.27/)
+already studies harmful experience reuse, error propagation and memory
+selection using subsequent task feedback. Its fixed-memory and deletion
+comparisons show that source-record quality and downstream usefulness need
+not coincide. Our observation of unhelpful transfer from a source-supported
+lesson therefore does not introduce that distinction. The narrower variable
+here is the treatment of a researcher-imposed execution boundary while
+holding the source record and retrieval choice fixed. We have not reproduced
+the prior work's adaptive deletion procedure or established superiority over it.
+
 [Negative Knowledge](https://arxiv.org/html/2606.21024v1) represents failures
 with typed layers, scope, evidential degree and recommended actions, and asks
 downstream agents to justify adoption or rejection. Its schema already allows
