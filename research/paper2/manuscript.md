@@ -1,8 +1,9 @@
 # Successful Calls, Insufficient Evidence: Scope and Coverage in Tool-Using Agents
 
 **Research manuscript; not submission-ready.** The empirical studies reported
-here are complete. Independent answer adjudication, a complete distributable
-artifact and submission-format verification remain unfinished. The preceding
+here are complete. The saved-record artifact has passed Windows and Linux
+reanalysis; independent answer adjudication, public artifact release and
+submission-format verification remain unfinished. The preceding
 manuscript is preserved verbatim in `study_record.md` as a detailed study record.
 
 ## Abstract
@@ -245,6 +246,33 @@ three corresponding conditional intervals still include zero. These checks
 restrict the aggregate prompt-benefit interpretation. They do not establish
 prompt equivalence or erase the within-domain gains and losses.
 
+A separate post-hoc calculation addresses label sensitivity rather than
+task resampling. We group exact final-answer text within the same question,
+across prompts and checkpoints, and require one shared requested-value
+judgment for every such group. The 364 present responses form 348 distinct
+question/text groups; fifteen repeated groups cover 31 executions, with no
+conflicting labels. This consistency check does not adjudicate correctness.
+Missing final answers remain fixed failures. Flipping a group's binary
+judgment changes all its occurrences together. Under this deliberately
+hypothetical model, Qwen2.5's one-answer gain can be reduced to a tie by one
+changed judgment and reversed by two; Qwen30B's two-answer gain requires two
+and three changes, respectively. Qwen3's four-answer loss requires four
+changes to reach a tie and five to reverse. These are minimum hypothetical
+changes, not discovered annotation mistakes, error probabilities or a second
+reviewer's decisions. Per-checkpoint extremal assignments need not be
+simultaneously attainable across checkpoints.
+
+The 21 ambiguous questions create a different boundary. For a hypothetical
+70-question score, hold all 49 primary-task labels fixed and allow arbitrary
+binary labels only for present ambiguous answers, tying exact duplicate text
+and keeping absent answers unsuccessful. The resulting reminder-minus-original
+net-difference envelopes are [-21, 13], [-15, 17] and [-10, 18] for Qwen3,
+Qwen2.5 and Qwen30B. These are conservative label-relaxation envelopes,
+not population intervals or sharp bounds over coherent SQL interpretations;
+some extremal label assignments may have no common semantic interpretation.
+They leave the original denominator and labels unchanged and reinforce that
+the reported conditional 49-task comparison is not a score for all 70 tasks.
+
 Forty-three expansion episodes terminate at the input ceiling, all in ice
 hockey. Saved attempted-input counters range from 32,849 to 161,160 tokens,
 after one to four successful generations. These are trace counters, not
@@ -483,6 +511,9 @@ credited answers have faulty explanations. After the earlier student-domain
 review, an additional ambiguity between employee ID and job level was noticed;
 the frozen job-level interpretation was retained and disclosed. The Disney
 sensitivity examines eight specific judgments, not all possible label errors.
+The additional label-flip and ambiguity envelopes expose sensitivity under
+explicit hypothetical assignments; they neither estimate annotation error
+rates nor replace independent adjudication.
 Hash agreement verifies provenance, not semantic truth.
 
 Replay examples are post-hoc and conditional on synthetic status changes.

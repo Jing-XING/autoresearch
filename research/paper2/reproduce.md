@@ -31,6 +31,10 @@ line endings. The receipt retains both hashes and the transfer outcome.
 
 ## Individual analyses and review PDF
 
+The recorded nine-page review PDF and offline-v4 ZIP predate the annotation
+sensitivity extension below. They remain immutable historical artifacts;
+their verification receipts do not cover the extended manuscript or analysis.
+
 To check the reorganized manuscript's four result tables against the retained
 evidence, run `python scripts/check_paper2_manuscript_tables.py`. To rebuild
 the review PDF with ReportLab and pypdf installed, run:
@@ -46,9 +50,44 @@ bibliographic records. Rendering is not evidence of publication readiness.
 This entry covers manuscript section 4 and the integrated 420-run answer
 analysis, followed by the section 5.2 generation-budget control. The detailed
 preceding manuscript is preserved verbatim in `study_record.md`; its sections
-10.8–10.10 supply the former numbering. This is not yet a single portable
-reproduction of every study. Earlier studies retain their scripts and
+10.8–10.10 supply the former numbering. The offline-v4 package above covers
+its recorded 17 saved-record checks; the later annotation sensitivity is a
+separate repository analysis. Earlier studies retain their scripts and
 evidence references in `claim_to_evidence.md`.
+
+## Annotation sensitivity extension
+
+From the repository root, with the original expansion ZIP and committed
+evidence present, run the following into a previously nonexistent output:
+
+```sh
+python scripts/analyze_expansion_annotation_bounds_v1.py \
+  --output annotation-bounds-recomputed.json
+python -m pytest tests/test_expansion_annotation_bounds.py -q
+```
+
+The analysis itself uses only the Python standard library. It verifies the
+original raw ZIP and episode bytes, frozen cards and annotations, and
+recomputes the original paired scores. It then groups identical final text
+within each question across checkpoints and prompts. A hypothetical label
+flip affects every occurrence in that group, while missing finals stay
+unsuccessful. It reports exact per-checkpoint envelopes for at most zero
+through five changed judgments, minimum changes to a tie and sign reversal,
+and hypothetical witness groups. These are not discovered mistakes or error
+probabilities. Per-checkpoint extrema need not be jointly attainable.
+
+A separate all-70-task envelope fixes the 49 scored tasks and relaxes binary
+labels on 21 ambiguous tasks, tying identical text and keeping absent answers
+at zero. It does not assert that all endpoint assignments arise from coherent
+SQL interpretations. No labels, ambiguity mask or primary scores change.
+The recorded output is
+`research/evidence/vakra_expansion_annotation_bounds_v1.json`; its hashes tie
+the report to the source code and inputs. Three tests check exhaustive small
+cases, repeated judgments and missing-answer constraints. The actual report
+finds zero conflicts among 15 repeated groups (31 executions), and tie/sign
+reversal thresholds of 4/5, 1/2 and 2/3 judgments for Qwen3, Qwen2.5 and
+Qwen30B respectively. This supplements the eight-answer Disney sensitivity,
+without supplying independent semantic adjudication.
 
 ## Inputs
 

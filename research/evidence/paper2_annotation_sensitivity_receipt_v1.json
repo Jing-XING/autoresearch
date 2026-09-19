@@ -1,0 +1,33 @@
+{
+  "scope": "Post-outcome annotation sensitivity, not independent adjudication or new inference",
+  "files_sha256": {
+    "scripts/analyze_expansion_annotation_bounds_v1.py": "03975953a1bdadf83661a10926ecd77e11c61825a44ad3d72203255b85512d78",
+    "tests/test_expansion_annotation_bounds.py": "3694bc5fa1e0b9e341924abb7a614e0046d052adc1f6bccef52c60e490c12de5",
+    "research/evidence/vakra_expansion_annotation_bounds_v1.json": "e3f99e47bcd9708e8c120b3ffe7ea3c6ee6b5db5ebb4222af0ebcfd8edfe8b4d",
+    "research/paper2/manuscript.md": "e5274ba5123766187adba000afd9dcaa3b93a4f0b6364f3f11a2a1493d82b103"
+  },
+  "exact_text_consistency": {
+    "present_executions": 364,
+    "distinct_task_text_judgments": 348,
+    "repeated_judgment_groups": 15,
+    "executions_in_repeated_groups": 31,
+    "conflicting_label_groups": 0
+  },
+  "tests": {
+    "command": "results/venvs/research-eval/Scripts/python.exe -m pytest tests/test_expansion_annotation_bounds.py -q",
+    "passed": 3,
+    "elapsed_seconds": 0.03,
+    "scope": "Exhaustive synthetic label assignments and equality/missing-answer constraints"
+  },
+  "manuscript_check": {
+    "command": "python scripts/check_paper2_manuscript_tables.py",
+    "result_rows_checked": 18,
+    "exact_prompt": true,
+    "prior_manuscript_bytes_preserved": true
+  },
+  "main_word_count": 4835,
+  "historical_pdf_includes_extension": false,
+  "historical_offline_v4_includes_extension": false,
+  "primary_labels_changed": false,
+  "independent_adjudication": false
+}

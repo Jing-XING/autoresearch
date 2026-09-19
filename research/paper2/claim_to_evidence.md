@@ -2,6 +2,37 @@
 
 This is an incomplete development manuscript, not a completed paper.
 
+## Annotation sensitivity extension, 20 September 2026
+
+Section 4 now separates sampling uncertainty from hypothetical annotation
+changes. `vakra_expansion_annotation_bounds_v1.json` verifies the original
+420-record ZIP, frozen cards and annotations, and recomputes the primary
+counts before analyzing sensitivity. The 364 present responses form 348
+distinct question/text judgments; 15 repeated groups cover 31 executions,
+with no conflicting labels. This is consistency, not correctness validation.
+
+| Checkpoint | Observed reminder-minus-original correct answers | Judgment changes to tie / reverse | All-70-task label-relaxation envelope |
+|---|---:|---:|---:|
+| Qwen3 | -4 | 4 / 5 | [-21, 13] |
+| Qwen2.5 | +1 | 1 / 2 | [-15, 17] |
+| Qwen30B | +2 | 2 / 3 | [-10, 18] |
+
+Each hypothetical change flips all identical question/text occurrences
+together, including occurrences across checkpoints; absent answers remain
+unsuccessful. Per-checkpoint extrema need not be jointly attainable. Witness
+groups are chosen mechanically, not identified as actual annotation errors.
+The last column fixes the 49 scored-task labels and relaxes binary labels on
+the 21 ambiguous tasks, respecting exact-text equality and absent answers.
+These are conservative label-assignment envelopes, not confidence intervals
+or sharp bounds over coherent SQL interpretations. No primary label or task
+mask changes. Three tests check exhaustive small cases and shared-label
+constraints; the existing manuscript checker still verifies all 18 result
+rows and the exact reminder. Neither test suite supplies independent labels.
+
+The existing nine-page PDF and offline-v4 ZIP predate this extension. Their
+historical checks remain valid for their recorded bytes; they do not verify
+or contain these new paragraphs, analysis code or evidence.
+
 ## Main-paper reorganization, 20 September 2026
 
 The main manuscript now organizes the completed evidence around three research
