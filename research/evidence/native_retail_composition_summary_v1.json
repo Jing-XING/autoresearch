@@ -1,0 +1,47 @@
+{
+  "scope": "Direct native composition diagnostic on public synthetic state; no agents, external payments, MCP transport or benchmark scores.",
+  "tau_revision": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "source_files_verified": 304,
+  "counts": {
+    "native_calls": 663,
+    "cancel_only": 423,
+    "cancel_only_contract_met": 423,
+    "cancel_only_normal_return": 423,
+    "cancel_only_cancelled": 423,
+    "change_then_cancel": 120,
+    "change_then_cancel_contract_met": 0,
+    "change_then_cancel_normal_return": 120,
+    "change_then_cancel_cancelled": 120
+  },
+  "payment_type_pairs": {
+    "gift_card->paypal": 26,
+    "credit_card->gift_card": 1,
+    "paypal->credit_card": 32,
+    "credit_card->paypal": 20,
+    "credit_card->credit_card": 8,
+    "gift_card->credit_card": 33
+  },
+  "initial_orders": 1000,
+  "eligible_orders": 423,
+  "eligible_orders_with_alternatives": 102,
+  "excluded_by_reason": {
+    "not_pending": 577
+  },
+  "database_restored": true,
+  "initial_database_sha256": "3ca5bd70e621602e23d909c87f26224a1a486e75955d8a6da53721ec224b23dc",
+  "restored_database_sha256": "3ca5bd70e621602e23d909c87f26224a1a486e75955d8a6da53721ec224b23dc",
+  "python": "3.13.5 (main, Jun 12 2025, 22:46:40) [GCC 12.2.0]",
+  "packages": {
+    "pydantic": "2.13.5",
+    "loguru": "0.7.3",
+    "litellm": "1.82.6"
+  },
+  "script_sha256": "aa5cd48864960f93732f260e2554524cac7b4f50700c65ac68bc895f07c0440c",
+  "protocol_sha256": "afe27768bd3668c51f12fa69820d15fd51169db0548b84f3e81cbacf6a41a297",
+  "database_sha256": "dbde692e380bb4ad17f9f7841172cf1e69bebad2daa405628ccdc52a42b3b9b0",
+  "policy_sha256": "4313d3fef8acf919f555fa17fbce929cc3ed1cef2dd8f0d35ff5c8c3364de176",
+  "records_sha256": "0e3724e48aea83800b24877ec4c6e0d3ede77c92190d467cdf7b97c3f9fc85c1",
+  "selection_sha256": "9234f0b418e379b467e3d40fb04d534d6b4663f0f4a5218d8ff8b33903b90258",
+  "model_calls": 0,
+  "external_connection_attempts": []
+}

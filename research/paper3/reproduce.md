@@ -76,3 +76,30 @@ prevalence. The native cancellation contract is cancelled status plus zero
 signed ledger net, not restoration of every field or proof of an external
 refund. The original archive screen examines explicit immediate structured
 status only. It cannot rule out missing, textual or silent failures.
+
+## Later native retail composition extension
+
+The v2 offline artifact above predates manuscript section 5.8. The separate
+source package `results/deploy/native-retail-composition-v1.zip` contains all
+302 pinned tau2 source files, public retail database/policy, upstream license,
+source manifest, frozen protocol, probe and measurement tests. On the designated
+server the existing Python environment executed, from the extracted package:
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python scripts/probe_tau_retail_payment_cancel_v1.py --output run
+```
+
+The output directory must not exist. Python 3.13.5, pydantic 2.13.5, loguru
+0.7.3 and litellm 1.82.6 were recorded; other tau2 dependencies are required.
+This is not a clean-environment dependency installer. The actual launch had a
+120-second outer subprocess limit and completed in about 4.57 seconds.
+
+The separate nine-member raw result archive, deployment receipt and execution
+logs are pinned in `native_retail_composition_reanalysis_v1.json`. The repository
+script `scripts/verify_tau_retail_composition_v1.py` recomputes its selection,
+ledger and affected-state results without running native tools. It currently
+expects the original source-data paths in this workspace; unlike the earlier
+artifact verifier, it is not yet a standalone relocated package entry point.
+Its existing report files are created exclusively. Do not overwrite them or
+count another audit as a new native experiment.

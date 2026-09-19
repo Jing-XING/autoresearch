@@ -49,3 +49,30 @@ SagaLLM from nine labelled RAC and states that repeated snapshots preclude
 interpreting them as distinct actions. This exposed and corrected the
 manuscript's previously omitted RAC qualifier, not a changed experimental
 outcome or a new framework performance comparison.
+
+## Native retail composition extension
+
+`native_retail_composition_summary_v1.json` is the byte-identical designated-host
+report; `native_retail_composition_reanalysis_v1.json` independently verifies
+the full finite selection and every saved state/ledger transition. The frozen
+protocol/source commit is `91b9e0c`, before any native retail mutation. Source
+inspection motivated the hypothesis. The public database has 1000 orders:
+423 eligible pending orders, 577 excluded by status, and 102 eligible orders
+with 120 valid alternative-payment pairs. All 423 direct cancellations meet
+the declared per-method ledger and gift-balance contract. All 120 composed
+paths return normally and end cancelled, but have old-method net -2A and
+new-method net zero. The 59 original-gift-card paths additionally overshoot
+the expected gift balance by 2A. No native exceptions, injected faults,
+model calls or external connections occur in 663 native calls.
+
+Raw archive `results/remote/native-retail-composition-v1-results.zip` has nine
+entries, 178355 bytes, SHA256
+`2586fb106a936211f5c6140f6da7271d91a40c4aabc663a17986df1a95397da5`.
+The independent verifier checks the actual original database, source package,
+selected pairs, full affected states and normal-return payloads. The runtime's
+whole-database restoration is represented by equal hashes and the executed
+assertion; the full final database is not separately archived for reanalysis.
+This is an explicit composition diagnostic, not a representative autonomous
+agent workload, external financial harm, framework comparison or official
+retail score. The older P3 portable artifact and rendered PDF predate this
+extension and must not be described as covering the updated manuscript.

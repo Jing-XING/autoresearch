@@ -40,3 +40,22 @@ trials on the designated host. Uniform, surrogate-only and standard
 difference-estimator ratios are 1, 28.308671 and 0.851889. This supplies
 tested task infrastructure and established controls, not an Agent-policy
 result or a novel statistical estimator. Hidden grading remains untouched.
+
+## Additional closest-work check, 19 September 2026
+
+[RoboPhD, v1](https://arxiv.org/html/2604.04347v1), sections 3.2--3.5,
+already compares Elo competition, a two-candidate variant, generalized
+autoresearch and GEPA under matched evaluation budgets. Its candidates share
+fresh evaluation examples within a round, and the same evaluations supply
+comparative diagnostics for later proposals. Thus fresh paired evaluation,
+less validation, and tournament selection cannot be claimed as new on their
+own. The paper also discloses differences in sampling and model access across
+engines. We read the method and comparison design; we have not reproduced its
+source or reported results.
+
+Decision: the existing risk-task controls support infrastructure only. Do not
+launch a large Agent experiment whose sole proposed contribution is choosing
+between the above established allocation patterns. A narrower causal question
+and a faithful strong baseline are still required. Meanwhile, strengthen the
+separate recovery-interface study using native composition controls, where a
+specific source-derived hypothesis can be tested without new model calls.

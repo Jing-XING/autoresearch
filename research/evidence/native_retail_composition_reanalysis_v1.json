@@ -1,0 +1,105 @@
+{
+  "status": "independently-recomputed",
+  "counts": {
+    "native_calls": 663,
+    "cancel_only": 423,
+    "cancel_only_contract_met": 423,
+    "cancel_only_normal_return": 423,
+    "cancel_only_cancelled": 423,
+    "change_then_cancel": 120,
+    "change_then_cancel_contract_met": 0,
+    "change_then_cancel_normal_return": 120,
+    "change_then_cancel_cancelled": 120,
+    "composition_gift_balance_mismatch": 59
+  },
+  "unique_orders": 423,
+  "unique_orders_with_alternatives": 102,
+  "payment_type_pairs": {
+    "gift_card->paypal": 26,
+    "credit_card->gift_card": 1,
+    "paypal->credit_card": 32,
+    "credit_card->paypal": 20,
+    "credit_card->credit_card": 8,
+    "gift_card->credit_card": 33
+  },
+  "examples": [
+    {
+      "order_id": "#W1068289",
+      "old_payment_type": "gift_card",
+      "new_payment_type": "paypal",
+      "initial_amount": "3453.28",
+      "final_signed_net": {
+        "gift_card_9105630": "-6906.56",
+        "paypal_5398626": "0.00"
+      }
+    },
+    {
+      "order_id": "#W1080318",
+      "old_payment_type": "credit_card",
+      "new_payment_type": "gift_card",
+      "initial_amount": "53.43",
+      "final_signed_net": {
+        "credit_card_3577130": "-106.86",
+        "gift_card_3749819": "0.00"
+      }
+    }
+  ],
+  "archive_bytes": 178355,
+  "archive_sha256": "2586fb106a936211f5c6140f6da7271d91a40c4aabc663a17986df1a95397da5",
+  "freeze_commit": "91b9e0c",
+  "execution": [
+    {
+      "name": "tests",
+      "returncode": 0,
+      "seconds": 0.11479103937745094,
+      "timeout": false
+    },
+    {
+      "name": "census",
+      "returncode": 0,
+      "seconds": 4.571300821378827,
+      "timeout": false
+    }
+  ],
+  "source_sha256": "0912061e20bed764f2a0c25f53f4d44fbd1178d431f33daa6af29e087de1b0cf",
+  "members": {
+    "deployment_manifest.json": {
+      "bytes": 51218,
+      "sha256": "9a116bb386639e31c35a2717517944d387a5dccc40e16e271689c8afa44088ce"
+    },
+    "execution.json": {
+      "bytes": 218,
+      "sha256": "6674e5734317244447dab91c205434ad20b7f4df2e3bf17f463246e417cd0158"
+    },
+    "tests.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tests.stderr.txt": {
+      "bytes": 596,
+      "sha256": "bece64042053ed9b1ccf71ee42e2a4017760462a3cc3e6571ccb89f178992c02"
+    },
+    "census.stdout.txt": {
+      "bytes": 511,
+      "sha256": "54cf4b0e36d94c44c04b6b49a446746011090b21a1a1b1a9f682a2396cdae885"
+    },
+    "census.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run/summary.json": {
+      "bytes": 1919,
+      "sha256": "b7c5f20b0209e724a94fcad64ccc152c43dedd01255e372c52ae09fe167231d3"
+    },
+    "run/records.jsonl": {
+      "bytes": 2769162,
+      "sha256": "0e3724e48aea83800b24877ec4c6e0d3ede77c92190d467cdf7b97c3f9fc85c1"
+    },
+    "run/selection.json": {
+      "bytes": 76052,
+      "sha256": "9234f0b418e379b467e3d40fb04d534d6b4663f0f4a5218d8ff8b33903b90258"
+    }
+  },
+  "scope": "Exact offline ledger/state audit of native records, not native reexecution. Runtime reported whole-database restoration; its full final database is not in this archive.",
+  "deployment_note": "First UI command failed parsing before execution; corrected string quoting, then one completed native census."
+}

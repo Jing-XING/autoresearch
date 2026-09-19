@@ -26,6 +26,9 @@ establishing a general framework ranking.
 Twenty-five native airline controls and a 2,000-reservation direct-call census
 distinguish cancellation contracts, strict state idempotence and errors after
 completed effects.
+An additional native retail census finds that 423 direct cancellations meet
+the declared ledger contract, whereas 120 payment-change/cancellation
+compositions return normally with cancelled status but an unbalanced ledger.
 Separately, an audit of all 280 JSON files in the published archive identifies
 duplicate aggregate records and nested progress snapshots; a conservative
 structured-status screen finds no observed instance of the constructed
@@ -369,6 +372,66 @@ initial shared database hash is restored after all per-record resets. A ZIP
 path-handling correction is retained separately from the unchanged raw run;
 it does not create additional observations.
 
+### 5.8 Normal returns can conceal a composition-level ledger failure
+
+The previous controls distinguish transport errors from completed effects.
+A further diagnostic asks whether even two ordinary, normally returning
+native calls can leave a cancelled order outside an explicit accounting
+contract. We use the unchanged [retail tools](https://github.com/sierra-research/tau2-bench/blob/b7ea9074c1cba482b30687fecdb5c8425fd6f619/src/tau2/domains/retail/tools.py)
+and complete public synthetic retail database at the same tau2 revision.
+Its policy allows a payment-method change to retain pending status and
+allows pending orders to be cancelled. This probe assumes authorization for
+both operations; it does not evaluate an agent's authentication or dialogue.
+
+The protocol was frozen after source inspection and before mutation. That
+inspection already suggested the mechanism: payment change appends a new
+payment and an original-method refund, while cancellation subsequently
+appends a refund for every existing ledger entry, including refunds. Thus
+the experiment is a source-derived composition diagnostic, not a blind
+discovery or estimate of failures in realistic customer conversations.
+
+All 423 initially pending orders have one positive initial payment and a
+known payment method, satisfying the fixed eligibility rules. The other
+577 orders are excluded for their initial status. We execute one direct
+cancellation for each eligible order, independently resetting the affected
+state. Of those orders, 102 admit at least one different stored payment
+method under the native preconditions. All 120 eligible order/alternative
+pairs receive payment change followed by cancellation from the initial state.
+These pairs are not 120 independent initial orders.
+
+The cancellation contract requires cancelled status, zero signed ledger
+net for each payment method, and the gift-card balances implied by refunding
+the original payment exactly once. Payments and refunds have opposite signs;
+an aggregate net alone is insufficient because opposite errors on different
+instruments could cancel. The contract does not require erasing payment
+history or proving an external refund.
+
+| Native path | Paths | Normal return and cancelled status | Ledger/balance contract met |
+|---|---:|---:|---:|
+| Direct cancellation | 423 | 423 | 423 |
+| Change payment, then cancel | 120 | 120 | 0 |
+
+The 663 native calls raise no exceptions. After each payment change, the
+old method's signed net is zero and the new method carries the original
+amount A. After cancellation, the new method's net is zero, but the old
+method's net is minus 2A. Every composed path has six ledger entries,
+compared with two in its direct-cancellation control. The 59 compositions
+starting with a gift card also leave its balance 2A above the declared
+cancellation target. The remaining 61 compositions still fail the ledger
+component. We observed all six eligible original/new payment-type pairings;
+no favorable pair was selected for the reported counts.
+
+An independent offline verifier recomputes eligibility, every transition,
+per-method net, and gift-card balance from the original database and saved
+records without importing the native tools or original measurement function.
+The runtime also verifies restoration of the full model database after all
+per-path resets. This census contains no injected acknowledgement faults,
+MCP adapters, compensation framework or autonomous model decisions. It shows
+why a status-only recovery check is insufficient in this native composition;
+it does not attribute the behavior to RAC or revise a published benchmark
+success rate. Synthetic ledger imbalances are not evidence of real financial
+loss. The selected sequence and single pinned implementation limit its scope.
+
 ## 6. What the released experiment archive shows
 
 We separately inspect all 280 JSON files in the published archive. The audit
@@ -414,8 +477,12 @@ model decisions. Native MCP airline controls add coupled business state but
 only two chosen booking profiles. The separate 2,000-record retry census
 covers the full public initial reservation population, whose ledger structures
 are homogeneous; it adds no autonomous decisions or framework comparison.
-Their status/ledger contract is narrower than full
-restoration, and no official airline task success rate is reported. An external effect oracle is available by construction.
+The retail extension covers a second native environment and every eligible
+initial order/payment alternative for one source-selected composition. It
+does not make the sequence representative of actual agent behavior or the
+pair observations independent. These status/ledger contracts are narrower
+than full restoration, and no official airline or retail task success rate
+is reported. A state oracle is accessible by construction.
 These conditions make the mechanisms inspectable but limit deployment claims.
 
 ## 8. Offline evidence and reproducibility scope
@@ -444,6 +511,9 @@ Windows interpreter paths, which must be adapted to another machine. We
 therefore distinguish portable offline reanalysis from an environment-portable
 end-to-end launcher. The artifact adds reproducibility support for the
 reported diagnostic observations; it adds no new experimental observations.
+That versioned offline bundle predates section 5.8. The later retail census
+has a separate pinned raw archive, source package, protocol and offline
+verifier; it is not silently included in the older package's coverage claim.
 
 ## 9. Provisional conclusion
 
@@ -458,7 +528,9 @@ distinction to a coupled reservation/payment ledger: equal successful payloads
 can accompany different persisted states, and exceptions can follow completed
 cancellations. The native retry census further separates a preserved status/net
 contract from exact state idempotence, without inferring financial harm from
-ledger growth. The archival analysis prevents these
+ledger growth. The retail composition census additionally finds normally
+returning cancellations with an incorrect per-method ledger, despite every
+direct-cancellation control meeting the declared contract. The archival analysis prevents these
 findings from being misrepresented as observed benchmark failures. Broader
 realistic workflows and submission-quality positioning remain necessary before
 this working manuscript can support a publication claim.
