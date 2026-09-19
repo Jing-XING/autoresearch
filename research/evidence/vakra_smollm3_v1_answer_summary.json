@@ -1,0 +1,421 @@
+{
+  "purpose": "Join complete third-model execution and literal answer reviews.",
+  "episodes": 240,
+  "distinct_tasks": 60,
+  "execution_summary_sha256": "e2c5f02fcceec6c2e1f98929b4ce6d83565a3e8abb79229ccd8317880d9967c6",
+  "annotations_sha256": "e3d1fe1e7845c4690736ad61f359da4c8fe88f0d7dceb69de5d9437347da9d25",
+  "groups": [
+    {
+      "domain": "all",
+      "call_policy": "single",
+      "condition": "original",
+      "all_n": 60,
+      "sql_subtotal_n": 55,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 54,
+      "final_at_token_ceiling": 12,
+      "terminations": {
+        "agent_finished": 54,
+        "protocol_error_limit": 5,
+        "max_steps": 1
+      },
+      "usage": {
+        "model_calls": 162,
+        "tool_calls": 43,
+        "input_tokens": 1395569,
+        "output_tokens": 50831,
+        "generation_seconds": 1241.3972130473703,
+        "protocol_errors": 65
+      }
+    },
+    {
+      "domain": "all",
+      "call_policy": "single",
+      "condition": "coverage_check",
+      "all_n": 60,
+      "sql_subtotal_n": 55,
+      "correct": 1,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 58,
+      "final_at_token_ceiling": 21,
+      "terminations": {
+        "agent_finished": 58,
+        "protocol_error_limit": 2
+      },
+      "usage": {
+        "model_calls": 126,
+        "tool_calls": 6,
+        "input_tokens": 1068327,
+        "output_tokens": 37370,
+        "generation_seconds": 899.7174725010991,
+        "protocol_errors": 62
+      }
+    },
+    {
+      "domain": "all",
+      "call_policy": "sequential",
+      "condition": "original",
+      "all_n": 60,
+      "sql_subtotal_n": 55,
+      "correct": 1,
+      "correct_excluding_qualified_answers": 1,
+      "final_answers": 54,
+      "final_at_token_ceiling": 15,
+      "terminations": {
+        "agent_finished": 54,
+        "tool_budget_exceeded": 2,
+        "protocol_error_limit": 4
+      },
+      "usage": {
+        "model_calls": 180,
+        "tool_calls": 172,
+        "input_tokens": 1750788,
+        "output_tokens": 57213,
+        "generation_seconds": 1416.304017642513,
+        "protocol_errors": 47
+      }
+    },
+    {
+      "domain": "all",
+      "call_policy": "sequential",
+      "condition": "coverage_check",
+      "all_n": 60,
+      "sql_subtotal_n": 55,
+      "correct": 4,
+      "correct_excluding_qualified_answers": 3,
+      "final_answers": 55,
+      "final_at_token_ceiling": 18,
+      "terminations": {
+        "agent_finished": 55,
+        "tool_budget_exceeded": 3,
+        "protocol_error_limit": 1,
+        "max_steps": 1
+      },
+      "usage": {
+        "model_calls": 168,
+        "tool_calls": 135,
+        "input_tokens": 1657648,
+        "output_tokens": 45564,
+        "generation_seconds": 1154.1287907827646,
+        "protocol_errors": 26
+      }
+    },
+    {
+      "domain": "computer_student",
+      "call_policy": "single",
+      "condition": "original",
+      "all_n": 20,
+      "sql_subtotal_n": 17,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 17,
+      "final_at_token_ceiling": 3,
+      "terminations": {
+        "agent_finished": 17,
+        "max_steps": 1,
+        "protocol_error_limit": 2
+      },
+      "usage": {
+        "model_calls": 84,
+        "tool_calls": 36,
+        "input_tokens": 424095,
+        "output_tokens": 24419,
+        "generation_seconds": 567.1608454175293,
+        "protocol_errors": 31
+      }
+    },
+    {
+      "domain": "computer_student",
+      "call_policy": "single",
+      "condition": "coverage_check",
+      "all_n": 20,
+      "sql_subtotal_n": 17,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 19,
+      "final_at_token_ceiling": 9,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "usage": {
+        "model_calls": 54,
+        "tool_calls": 3,
+        "input_tokens": 216004,
+        "output_tokens": 16676,
+        "generation_seconds": 371.9363120812923,
+        "protocol_errors": 32
+      }
+    },
+    {
+      "domain": "computer_student",
+      "call_policy": "sequential",
+      "condition": "original",
+      "all_n": 20,
+      "sql_subtotal_n": 17,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 19,
+      "final_at_token_ceiling": 6,
+      "terminations": {
+        "tool_budget_exceeded": 1,
+        "agent_finished": 19
+      },
+      "usage": {
+        "model_calls": 79,
+        "tool_calls": 82,
+        "input_tokens": 357030,
+        "output_tokens": 21432,
+        "generation_seconds": 481.24199249595404,
+        "protocol_errors": 12
+      }
+    },
+    {
+      "domain": "computer_student",
+      "call_policy": "sequential",
+      "condition": "coverage_check",
+      "all_n": 20,
+      "sql_subtotal_n": 17,
+      "correct": 1,
+      "correct_excluding_qualified_answers": 1,
+      "final_answers": 18,
+      "final_at_token_ceiling": 6,
+      "terminations": {
+        "agent_finished": 18,
+        "tool_budget_exceeded": 2
+      },
+      "usage": {
+        "model_calls": 72,
+        "tool_calls": 81,
+        "input_tokens": 346769,
+        "output_tokens": 16487,
+        "generation_seconds": 375.621040020138,
+        "protocol_errors": 5
+      }
+    },
+    {
+      "domain": "cars",
+      "call_policy": "single",
+      "condition": "original",
+      "all_n": 20,
+      "sql_subtotal_n": 18,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 19,
+      "final_at_token_ceiling": 6,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "usage": {
+        "model_calls": 40,
+        "tool_calls": 6,
+        "input_tokens": 387576,
+        "output_tokens": 13942,
+        "generation_seconds": 334.52843859419227,
+        "protocol_errors": 15
+      }
+    },
+    {
+      "domain": "cars",
+      "call_policy": "single",
+      "condition": "coverage_check",
+      "all_n": 20,
+      "sql_subtotal_n": 18,
+      "correct": 1,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 19,
+      "final_at_token_ceiling": 4,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "usage": {
+        "model_calls": 43,
+        "tool_calls": 2,
+        "input_tokens": 419802,
+        "output_tokens": 11348,
+        "generation_seconds": 276.1213619057089,
+        "protocol_errors": 22
+      }
+    },
+    {
+      "domain": "cars",
+      "call_policy": "sequential",
+      "condition": "original",
+      "all_n": 20,
+      "sql_subtotal_n": 18,
+      "correct": 1,
+      "correct_excluding_qualified_answers": 1,
+      "final_answers": 18,
+      "final_at_token_ceiling": 4,
+      "terminations": {
+        "agent_finished": 18,
+        "protocol_error_limit": 2
+      },
+      "usage": {
+        "model_calls": 50,
+        "tool_calls": 55,
+        "input_tokens": 596218,
+        "output_tokens": 17471,
+        "generation_seconds": 439.6932748518884,
+        "protocol_errors": 14
+      }
+    },
+    {
+      "domain": "cars",
+      "call_policy": "sequential",
+      "condition": "coverage_check",
+      "all_n": 20,
+      "sql_subtotal_n": 18,
+      "correct": 3,
+      "correct_excluding_qualified_answers": 2,
+      "final_answers": 19,
+      "final_at_token_ceiling": 3,
+      "terminations": {
+        "agent_finished": 19,
+        "max_steps": 1
+      },
+      "usage": {
+        "model_calls": 56,
+        "tool_calls": 32,
+        "input_tokens": 700913,
+        "output_tokens": 15935,
+        "generation_seconds": 422.6229134928435,
+        "protocol_errors": 11
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "call_policy": "single",
+      "condition": "original",
+      "all_n": 20,
+      "sql_subtotal_n": 20,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 18,
+      "final_at_token_ceiling": 3,
+      "terminations": {
+        "agent_finished": 18,
+        "protocol_error_limit": 2
+      },
+      "usage": {
+        "model_calls": 38,
+        "tool_calls": 1,
+        "input_tokens": 583898,
+        "output_tokens": 12470,
+        "generation_seconds": 339.7079290356487,
+        "protocol_errors": 19
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "call_policy": "single",
+      "condition": "coverage_check",
+      "all_n": 20,
+      "sql_subtotal_n": 20,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 20,
+      "final_at_token_ceiling": 8,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "usage": {
+        "model_calls": 29,
+        "tool_calls": 1,
+        "input_tokens": 432521,
+        "output_tokens": 9346,
+        "generation_seconds": 251.65979851409793,
+        "protocol_errors": 8
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "call_policy": "sequential",
+      "condition": "original",
+      "all_n": 20,
+      "sql_subtotal_n": 20,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 17,
+      "final_at_token_ceiling": 5,
+      "terminations": {
+        "agent_finished": 17,
+        "tool_budget_exceeded": 1,
+        "protocol_error_limit": 2
+      },
+      "usage": {
+        "model_calls": 51,
+        "tool_calls": 35,
+        "input_tokens": 797540,
+        "output_tokens": 18310,
+        "generation_seconds": 495.36875029467046,
+        "protocol_errors": 21
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "call_policy": "sequential",
+      "condition": "coverage_check",
+      "all_n": 20,
+      "sql_subtotal_n": 20,
+      "correct": 0,
+      "correct_excluding_qualified_answers": 0,
+      "final_answers": 18,
+      "final_at_token_ceiling": 9,
+      "terminations": {
+        "agent_finished": 18,
+        "tool_budget_exceeded": 1,
+        "protocol_error_limit": 1
+      },
+      "usage": {
+        "model_calls": 40,
+        "tool_calls": 22,
+        "input_tokens": 609966,
+        "output_tokens": 13142,
+        "generation_seconds": 355.884837269783,
+        "protocol_errors": 10
+      }
+    }
+  ],
+  "prompt_pairs": [
+    {
+      "call_policy": "single",
+      "wins": [
+        {
+          "domain": "cars",
+          "task_index": 4
+        }
+      ],
+      "losses": [],
+      "ties": 54
+    },
+    {
+      "call_policy": "sequential",
+      "wins": [
+        {
+          "domain": "cars",
+          "task_index": 4
+        },
+        {
+          "domain": "cars",
+          "task_index": 15
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 6
+        }
+      ],
+      "losses": [],
+      "ties": 52
+    }
+  ],
+  "answer_labels": {
+    "incorrect": 214,
+    "correct": 6,
+    "ambiguous": 20
+  },
+  "limits": "Assistant qualitative SQL audit, not official scoring. Two USA predictions are explicitly qualified; both credited and excluded sensitivity totals provided. Known tasks, single run per cell, native-profile/resource-specific floor performance, not a general model ranking."
+}

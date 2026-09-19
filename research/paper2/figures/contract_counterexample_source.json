@@ -1,0 +1,13 @@
+{
+  "inputs_sha256": {
+    "vakra_publishing_contract_audit_v1.json": "5d25a2a929260e74d63b362eae67902bc71ef20551bb69303cd0e1f61c4b170c",
+    "vakra_publishing_contract_repair_v1.json": "a9b60b8318ed660c4e3fde5d2b02e8be3a5c303e5a87df6f80f1cade8c1dbe81"
+  },
+  "episode": "original/qwen3/shard-0/case-007.json",
+  "answer_counts": [
+    17,
+    16
+  ],
+  "observation_sha256": "0cc820efe2baec2fa152c62d9519e32ac6d52a6b4aec3efa4e2e14e58dca1e14",
+  "limits": "Post-outcome synthetic binary-status intervention; repair is evaluator-authored, not model success."
+}

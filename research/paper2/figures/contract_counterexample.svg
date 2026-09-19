@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="763.2pt" height="381.6pt" viewBox="0 0 763.2 381.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-19T18:26:18.301888</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 381.6
+L 763.2 381.6
+L 763.2 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 18.216 77.8464
+L 356.904 77.8464
+Q 361.1376 77.8464 361.1376 73.656
+L 361.1376 17.784
+Q 361.1376 13.5936 356.904 13.5936
+L 18.216 13.5936
+Q 13.9824 13.5936 13.9824 17.784
+L 13.9824 73.656
+Q 13.9824 77.8464 18.216 77.8464
+z
+" clip-path="url(#pcce9aa518d)" style="fill: #edf2f8; stroke: #526176; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 406.296 77.8464
+L 744.984 77.8464
+Q 749.2176 77.8464 749.2176 73.656
+L 749.2176 17.784
+Q 749.2176 13.5936 744.984 13.5936
+L 406.296 13.5936
+Q 402.0624 13.5936 402.0624 17.784
+L 402.0624 73.656
+Q 402.0624 77.8464 406.296 77.8464
+z
+" clip-path="url(#pcce9aa518d)" style="fill: #fff0df; stroke: #526176; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 18.216 194.4792
+L 744.984 194.4792
+Q 749.2176 194.4792 749.2176 190.2888
+L 749.2176 128.8296
+Q 749.2176 124.6392 744.984 124.6392
+L 18.216 124.6392
+Q 13.9824 124.6392 13.9824 128.8296
+L 13.9824 190.2888
+Q 13.9824 194.4792 18.216 194.4792
+z
+" clip-path="url(#pcce9aa518d)" style="fill: #f0f3f5; stroke: #526176; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 18.216 280.3824
+L 744.984 280.3824
+Q 749.2176 280.3824 749.2176 276.192
+L 749.2176 222.4152
+Q 749.2176 218.2248 744.984 218.2248
+L 18.216 218.2248
+Q 13.9824 218.2248 13.9824 222.4152
+L 13.9824 276.192
+Q 13.9824 280.3824 18.216 280.3824
+z
+" clip-path="url(#pcce9aa518d)" style="fill: #fff0df; stroke: #526176; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 18.216 357.2064
+L 744.984 357.2064
+Q 749.2176 357.2064 749.2176 353.016
+L 749.2176 297.144
+Q 749.2176 292.9536 744.984 292.9536
+L 18.216 292.9536
+Q 13.9824 292.9536 13.9824 297.144
+L 13.9824 353.016
+Q 13.9824 357.2064 18.216 357.2064
+z
+" clip-path="url(#pcce9aa518d)" style="fill: #eaf5ec; stroke: #526176; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(150.892031 41.940656)">Original world</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(119.971172 55.294031)">23 authors: contract = '0'</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(520.523203 41.940656)">Counterfactual world</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(480.912773 55.294031)">One later author's contract: '0' → '1'</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="381.6" y="98.1" transform="rotate(-0 381.6 98.1)">All other database cells fixed; target initialization is identical</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 187.56 81.240912
+Q 187.56 101.940126 187.56 121.297699
+" style="fill: none; stroke: #526176; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 189.56 117.297699
+L 187.56 121.297699
+L 185.56 117.297699
+" style="fill: none; stroke: #526176; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 575.64 81.240912
+Q 575.64 101.940126 575.64 121.297699
+" style="fill: none; stroke: #526176; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 577.64 117.297699
+L 575.64 121.297699
+L 573.64 117.297699
+" style="fill: none; stroke: #526176; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(287.725078 155.779856)">Recorded agent calls in both worlds</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(218.900859 169.133231)">Filter contract ≠ 'Y'; retrieve complete title and sales columns</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 381.6 196.476358
+Q 381.6 206.351032 381.6 214.884065
+" style="fill: none; stroke: #526176; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 383.6 210.884065
+L 381.6 214.884065
+L 379.6 210.884065
+" style="fill: none; stroke: #526176; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(213.427734 245.524256)">Identical full tool observations; recorded agent answer: 17 pairs</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(196.561289 258.877631)">Required answer: 17 pairs in original world; 16 in counterfactual world</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(201.523438 321.480625)">Evaluator-authored diagnostic: replace only the filter with contract = '0'</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif" transform="translate(197.8875 334.198125)">Same getters now return 17 versus 16 pairs, matching both SQL answers</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pcce9aa518d">
+   <rect x="7.632" y="3.816" width="747.936" height="370.152"/>
+  </clipPath>
+ </defs>
+</svg>
