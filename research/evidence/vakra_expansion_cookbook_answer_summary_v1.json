@@ -1,0 +1,423 @@
+{
+  "purpose": "Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring",
+  "complete_batch": false,
+  "review_scope": "cookbook",
+  "executions": 120,
+  "distinct_tasks": 20,
+  "groups": [
+    {
+      "domain": "cookbook",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 9,
+      "labels": {
+        "incorrect": 7,
+        "correct": 9,
+        "ambiguous": 4
+      },
+      "accuracy": 0.5625,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 59,
+        "tool_calls": 39,
+        "input_tokens": 270514,
+        "output_tokens": 7895,
+        "generation_seconds": 260.0156577769667,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 8,
+      "labels": {
+        "incorrect": 8,
+        "correct": 8,
+        "ambiguous": 4
+      },
+      "accuracy": 0.5,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 67,
+        "tool_calls": 47,
+        "input_tokens": 326905,
+        "output_tokens": 8183,
+        "generation_seconds": 280.2319805715233,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 7,
+      "labels": {
+        "incorrect": 9,
+        "correct": 7,
+        "ambiguous": 4
+      },
+      "accuracy": 0.4375,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 77,
+        "tool_calls": 67,
+        "input_tokens": 433842,
+        "output_tokens": 7192,
+        "generation_seconds": 300.48750060237944,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 7,
+      "labels": {
+        "incorrect": 9,
+        "correct": 7,
+        "ambiguous": 4
+      },
+      "accuracy": 0.4375,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 74,
+        "tool_calls": 55,
+        "input_tokens": 376204,
+        "output_tokens": 5834,
+        "generation_seconds": 242.51733382605016,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 11,
+      "labels": {
+        "correct": 11,
+        "incorrect": 5,
+        "ambiguous": 4
+      },
+      "accuracy": 0.6875,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 81,
+        "tool_calls": 61,
+        "input_tokens": 401019,
+        "output_tokens": 7828,
+        "generation_seconds": 1389.801783947274,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 11,
+      "labels": {
+        "correct": 11,
+        "incorrect": 5,
+        "ambiguous": 4
+      },
+      "accuracy": 0.6875,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 79,
+        "tool_calls": 59,
+        "input_tokens": 398698,
+        "output_tokens": 8159,
+        "generation_seconds": 1437.8085884209722,
+        "protocol_errors": 0
+      }
+    }
+  ],
+  "paired": [
+    {
+      "domain": "cookbook",
+      "model": "qwen3",
+      "scored_tasks": 16,
+      "gains": [],
+      "losses": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        }
+      ],
+      "difference_percentage_points": -6.25
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen25",
+      "scored_tasks": 16,
+      "gains": [],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen30b",
+      "scored_tasks": 16,
+      "gains": [],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    }
+  ],
+  "limits": [
+    "Failures remain in the fixed scored-task denominators.",
+    "Ambiguous tasks retain their executions and costs but do not enter answer accuracy.",
+    "Task pairs and checkpoints are not independent population samples.",
+    "No evidence-sufficiency or causal mechanism score is inferred from answer correctness."
+  ],
+  "kind": "expansion",
+  "execution_summary_sha256": "90744fd9c11637bec7b4dbc38ef086f9e7699b6a9ca15d290e2253a1b66e7e05",
+  "annotations_sha256": "2b65bfcc7f4c786f3779e5f2a1d5f8542ab59640eac5dbf1c497718034149619",
+  "audit_cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "audit_policy_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "analysis_source_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\scripts\\summarize_vakra_registered_answers.py": "f2ad3c3ff4b19be04dcb84940503a0e2b44b2054fe3d2285155d583fd709fb4f",
+    "autolab\\vakra_review_summary.py": "a3ae66ec03df54d5cb5962dae76ce4636e29f746cf2b86375317dff96ce53a0b"
+  }
+}

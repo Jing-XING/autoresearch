@@ -17,6 +17,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('root', 'summary', 'annotations', 'output'):
         parser.add_argument('--' + name, type=Path, required=True)
+    parser.add_argument('--closed-domain', help='Summarize only an explicitly completed domain, without a whole-grid claim')
     args = parser.parse_args()
     summary, annotations = [json.loads(p.read_bytes()) for p in (args.summary, args.annotations)]
     evidence = Path('research/evidence')
@@ -32,6 +33,12 @@ def main():
         expected_n, expected_tasks, scored_n = 420, 70, 49
     else:
         raise ValueError('Unknown registered grid')
+    if args.closed_domain:
+        assert summary['kind'] == 'expansion' and summary['closed_domain'] == args.closed_domain
+        rules = [r for r in rules if r['domain'] == args.closed_domain]
+        expected_tasks = len(rules)
+        expected_n = expected_tasks * len(summary['models']) * 2
+        scored_n = sum(r['interpretation_stratum'] != 'ambiguous' for r in rules)
     for field, path in [('execution_summary_sha256', args.summary),
                         ('audit_cards_sha256', cards), ('audit_policy_sha256', policy)]:
         assert annotations[field] == sha(path), field
@@ -40,9 +47,10 @@ def main():
         path = (root / row['source']).resolve()
         assert path.is_relative_to(root)
         assert sha(path) == summary['input_sha256'][row['source']]
-    result = summarize_review(summary, annotations, rules)
+    result = summarize_review(summary, annotations, rules, allow_closed_domain=bool(args.closed_domain))
     assert (result['executions'], result['distinct_tasks']) == (expected_n, expected_tasks)
-    assert all(r['scored_tasks'] == scored_n for r in result['groups'] if r['domain'] == 'all')
+    total_domain = args.closed_domain or 'all'
+    assert all(r['scored_tasks'] == scored_n for r in result['groups'] if r['domain'] == total_domain)
     result.update(kind=summary['kind'], execution_summary_sha256=sha(args.summary),
                   annotations_sha256=sha(args.annotations), audit_cards_sha256=sha(cards),
                   audit_policy_sha256=sha(policy),
@@ -52,7 +60,7 @@ def main():
         json.dump(result, stream, ensure_ascii=False, indent=2)
         stream.write('\n')
     print(json.dumps(dict(executions=expected_n, distinct_tasks=expected_tasks,
-                         totals=[r for r in result['groups'] if r['domain'] == 'all'])))
+                         totals=[r for r in result['groups'] if r['domain'] == total_domain])))
 
 
 if __name__ == '__main__':

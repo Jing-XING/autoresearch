@@ -37,6 +37,13 @@ experimental claims and coverage of committed runs. Complete-run accounting
 and hashes in this repository support reproducibility but are not an
 independent scientific contribution.
 
+[EG-VAR v1](https://arxiv.org/html/2607.12650v1), Junyu Ren, 14 July 2026,
+already combines tool attestation, source-specific trusted lifts and Lean 4
+kernel checking. Its content-edited tabular counterfactuals alter visible
+evidence; our diagnostic instead holds the observed trace fixed. This target
+difference alone is not novelty. Trusted formalization remains a separate
+failure boundary. Method and scope read; code and benchmark not reproduced.
+
 ## Additional validity boundary found during development
 
 A schema-valid counterfactual is not necessarily consistent with the natural

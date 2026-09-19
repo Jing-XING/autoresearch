@@ -1,0 +1,122 @@
+{
+  "purpose": "Post-review illustrative extraction, not a new execution, counterfactual replay, prevalence estimate or formal grounding score.",
+  "raw_path": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/coverage_check/qwen30b/shard-0/case-015.json",
+  "raw_sha256": "3f80aee99e9401d00c2c7b785beb81c0bcf21486e650c6a68dac780722f94981",
+  "cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "uuid": "ec134bf7bda5-58edfd6495e1",
+  "query": {
+    "uuid": "ec134bf7bda5-58edfd6495e1",
+    "domain": "cookbook",
+    "num_turns": 1,
+    "dialogue": {
+      "turns": [
+        {
+          "turn_id": 0,
+          "query": "What ingredients does the longest cooking time recipe have?"
+        }
+      ]
+    }
+  },
+  "step": 8,
+  "helper_call": {
+    "tool_call": {
+      "name": "select_unique_values",
+      "arguments": {
+        "unique_array": [
+          "brown rice",
+          "yellow onion",
+          "salt",
+          "olive oil",
+          "black pepper",
+          "cumin",
+          "cinnamon",
+          "turmeric",
+          "garlic",
+          "parsley"
+        ]
+      }
+    },
+    "tool_result": {
+      "meta": null,
+      "content": [
+        {
+          "type": "text",
+          "text": "[\"brown rice\", \"yellow onion\", \"salt\", \"olive oil\", \"black pepper\", \"cumin\", \"cinnamon\", \"turmeric\", \"garlic\", \"parsley\"]",
+          "annotations": null,
+          "meta": null
+        }
+      ],
+      "structuredContent": null,
+      "isError": false
+    }
+  },
+  "final_answer": "Based on the data I've retrieved, the recipe with the longest cooking time (900 minutes) contains the following ingredients:\n\n- brown rice\n- yellow onion\n- salt\n- olive oil\n- black pepper\n- cumin\n- cinnamon\n- turmeric\n- garlic\n- parsley\n\nThese are the complete ingredients for the recipe with the longest cooking time.",
+  "reference_card": {
+    "domain": "cookbook",
+    "task_index": 15,
+    "uuid": "ec134bf7bda5-58edfd6495e1",
+    "query": "What ingredients does the longest cooking time recipe have?",
+    "sql": "SELECT DISTINCT r.title,i.name FROM Recipe r JOIN Quantity q USING(recipe_id) JOIN Ingredient i USING(ingredient_id) WHERE r.cook_min=(SELECT MAX(cook_min) FROM Recipe) ORDER BY r.title,i.name",
+    "columns": [
+      "title",
+      "name"
+    ],
+    "answer_rows": [
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "brown rice"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "butter or margarine"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "ground cinnamon"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "ground cumin"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "hot water"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "lemon juice"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "pine nuts"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "ripe olives"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "salt"
+      ],
+      [
+        " Middle Eastern \"Sweet Spice\" Brown Rice with Olives ",
+        "yellow onion"
+      ]
+    ],
+    "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+    "interpretation_stratum": "specified_sql_interpretation",
+    "ambiguity": null,
+    "acceptance_note": "Cooking time means cook_min, not prep_min+stnd_min+cook_min. Preserve every tied recipe and all ingredient names."
+  },
+  "helper_source_path": "results/vakra-domain-expansion-v1/cookbook/runtime/environment/m3/python_tools/tools/slot_filling_tools.py",
+  "helper_source_sha256": "34f5548b3302418557a9c7eb643f6fa705d2282c04cdb17bb9ec0ab15e59a0a7",
+  "helper_source": "def select_unique_values(unique_array: list) -> list:\n    \"\"\"Return only the distinct elements from the input list.\n\n    Args:\n        unique_array (list): A list of input data\n\n    Returns:\n        list: The distinct elements of the input list\n    \"\"\"\n\n    return list(dict.fromkeys(unique_array))",
+  "server_source_sha256": "336490e38bea462c45b93c69096aade5727f9d719a15841b0130399e7bb12c83",
+  "checks": {
+    "successful_helper_output_equals_agent_input": true,
+    "final_repeats_all_ten_helper_values": true,
+    "literal_set_differs_from_reference": true
+  },
+  "interpretation": "This helper deduplicates the agent-supplied array. Its successful response adds no independent database retrieval. Even allowing cumin/cinnamon aliases, several substituted ingredients and missing reference ingredients make the answer incorrect.",
+  "limits": "No claim that all supplied values are absent from all earlier prose, no hidden-reasoning attribution, no claim that the interface makes every complete-list task impossible. Cookbook retrieve_data returns a handle/preview and must not be equated with the prior publishing domain's full-column getter."
+}

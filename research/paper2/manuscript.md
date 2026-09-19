@@ -4,7 +4,8 @@
 question from the historical proposal in this directory. Eight initial model
 episodes, 48 matched development episodes, 240 fixed-prompt replication
 episodes, 240 executor-sensitivity episodes, 240 third-model sensitivity
-episodes and 120 larger-checkpoint episodes support the present observations.
+episodes, 120 larger-checkpoint episodes and the first completed 120-episode
+domain of a registered expansion support the present observations.
 A novel method and independently confirmed benefit are not established.
 
 ## Abstract
@@ -663,6 +664,51 @@ output-budget sensitivity, not isolate final-answer space or demonstrate a
 new evidence-acquisition method. Complete results and pairing checks remain
 pending.
 
+### 10.4 Completed cookbook slice of the registered expansion
+
+The six cookbook workers completed all twenty tasks under both prompts and
+all three checkpoints. We extracted this complete domain while the other
+registered domains were still running. The archive contains all 120 episodes,
+six successful worker exits and a snapshot of the still-running grid manifest.
+The offline analyzer explicitly marks this as a closed domain, not a completed
+420-episode experiment. Selection, prompts and budgets were unchanged; all
+sixty within-checkpoint task pairs have matching initial inputs apart from the
+registered reminder. No subsequent prompt or task selection uses these answers.
+
+| Checkpoint | Original correct | Reminder correct | Gains | Losses |
+|---|---:|---:|---:|---:|
+| Qwen3-4B | 9/16 | 8/16 | 0 | 1 |
+| Qwen2.5-7B | 7/16 | 7/16 | 0 | 0 |
+| Qwen3-30B-A3B | 11/16 | 11/16 | 0 | 0 |
+
+The four premarked ambiguous tasks remain excluded only from accuracy. All
+120 executions finish with a final answer, with no protocol errors or final
+generation at the 512-token ceiling. The full qualitative review records 53
+correct, 43 incorrect and 24 ambiguous executions. It is a single unblinded
+assistant review against the frozen SQL cards, not independent human annotation.
+There is no observed benefit in this small domain, and these checkpoint
+differences do not isolate model size. We do not pool repeated task executions
+as independent examples or extrapolate sixteen scored tasks to all databases.
+
+Task 001 requires 791 recipe names under the reference interpretation. Every
+arm returns only three examples. The absence of a ceiling-length final does
+not establish that a larger generation allowance would have no effect; the
+separately registered matched budget rerun remains pending.
+
+The slot-filling interface also matters. In task 015, the larger checkpoint
+under the reminder repeatedly retrieves an ingredient column but receives a
+handle with ten records and three preview values. It then supplies its own
+ten-name array to `select_unique_values`. The tool returns that array without
+error, and the final response repeats it as the complete retrieved list.
+Inspection of the unchanged helper shows that it only deduplicates the input
+array. Several entries disagree with the reference ingredients even after
+allowing cumin/cinnamon aliases. A successful helper response therefore adds
+no independent database observation in this case. This post-review illustration
+is not a formal grounding score or an estimate of failure prevalence. Unlike
+the publishing getter in section 8.1, cookbook `retrieve_data` itself returns
+a preview; we have not established that all complete-list tasks are impossible
+through other available tool sequences.
+
 ## 11. Related work and limits
 
 [Agents Don't Paginate](https://arxiv.org/html/2608.26130v1) studies first-chunk
@@ -700,6 +746,13 @@ interventions and separates visible from oracle information. The intended
 relational-data audit therefore requires empirical and operational value
 beyond generic trace checking or counterfactual terminology.
 
+[EG-VAR](https://arxiv.org/html/2607.12650v1) derives Lean-checked claims from
+attested tool payloads through trusted source-specific formalization. Its
+trust boundary separates kernel acceptance from errors in the data-to-logic
+translation. Thus proof-backed tool grounding is already occupied; our
+trace-preserving database audit does not introduce that idea. We have read
+the method and scope but have not reproduced its implementation.
+
 [Semantic Evaluation for Text-to-SQL with Distilled Test Suites](https://aclanthology.org/2020.emnlp-main.29/)
 already addresses accidental agreement on a single database by evaluating
 queries on multiple databases. An interactive trace-preserving witness has
@@ -707,8 +760,9 @@ a different target from a fixed SQL-program comparison, but neither data
 mutation nor distinguishing accidental correctness is new by itself.
 
 The evidence comprises development on one database and fixed-prompt
-comparisons on three deliberately small databases, with two Qwen checkpoints
-and SmolLM3. The third checkpoint is near floor, and the six paired prompt
+comparisons on three deliberately small databases, with three Qwen checkpoints
+and SmolLM3, plus the completed cookbook slice of a larger registered expansion.
+SmolLM3 is near floor, and the six earlier paired prompt
 comparisons have descriptive intervals that include zero. Broad
 generalization, a formal semantic verifier and an official VAKRA score are
 not established. The

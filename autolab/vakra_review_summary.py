@@ -2,14 +2,23 @@
 from collections import Counter
 
 
-def summarize_review(summary, annotations, rules):
+def summarize_review(summary, annotations, rules, *, allow_closed_domain=False):
     """Validate a complete qualitative review; do not assign semantic labels."""
     def require(ok, message):
         if not ok:
             raise ValueError(message)
 
-    require(summary.get('complete') is True and annotations.get('complete_batch') is True,
-            'Both execution and annotation batches must be complete')
+    partial = allow_closed_domain
+    if partial:
+        require(summary.get('complete') is False and annotations.get('complete_batch') is False,
+                'A closed-domain review must not claim whole-batch completion')
+        require(summary.get('closed_domain_complete') is True and annotations.get('complete_domain') is True,
+                'Closed-domain execution and annotation must both be complete')
+        require(summary['domains'] == [summary.get('closed_domain')] and
+                annotations.get('review_scope') == summary['closed_domain'], 'Closed-domain scope mismatch')
+    else:
+        require(summary.get('complete') is True and annotations.get('complete_batch') is True,
+                'Both execution and annotation batches must be complete')
     fields = ('domain', 'uuid', 'model', 'condition')
     key = lambda row: tuple(row[k] for k in fields)
     expected = {key(r): r for r in summary['rows']}
@@ -46,7 +55,7 @@ def summarize_review(summary, annotations, rules):
                           interpretation_stratum=rule['interpretation_stratum'])
     require(set(reviewed) == grid, 'Missing annotations')
     groups, pairs = [], []
-    for domain in [*summary['domains'], 'all']:
+    for domain in (summary['domains'] if partial else [*summary['domains'], 'all']):
         pool = [r for r in rules if domain == 'all' or r['domain'] == domain]
         scored = [r for r in pool if r['interpretation_stratum'] != 'ambiguous']
         for model in summary['models']:
@@ -72,6 +81,7 @@ def summarize_review(summary, annotations, rules):
             pairs.append(dict(domain=domain, model=model, scored_tasks=len(scored), **buckets,
                 difference_percentage_points=100*(len(buckets['gains'])-len(buckets['losses']))/len(scored) if scored else None))
     return dict(purpose='Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring',
+                complete_batch=not partial, review_scope=summary.get('closed_domain') if partial else 'full_registered_grid',
                 executions=len(expected), distinct_tasks=len(rules), groups=groups, paired=pairs,
                 limits=['Failures remain in the fixed scored-task denominators.',
                         'Ambiguous tasks retain their executions and costs but do not enter answer accuracy.',

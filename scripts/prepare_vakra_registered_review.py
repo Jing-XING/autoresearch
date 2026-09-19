@@ -15,15 +15,20 @@ def main():
     p.add_argument('--output', type=Path, required=True)
     a = p.parse_args()
     summary = json.loads(a.summary.read_bytes())
-    assert summary['complete'] and summary['kind'] in ('capacity', 'expansion')
+    partial = summary.get('closed_domain_complete', False)
+    assert (summary['complete'] or partial) and summary['kind'] in ('capacity', 'expansion')
+    assert not partial or (not summary['complete'] and summary['domains'] == [summary['closed_domain']])
     ev = Path('research/evidence')
     if summary['kind'] == 'expansion':
         cp = ev / 'vakra_domain_expansion_sql_cards_v1.json'
         cards = json.loads(cp.read_bytes())['cards']
         policies = {(r['domain'], r['uuid']): r for r in cards}
         policy_hash = sha(cp)
-        assert len(cards) == 70 and len(summary['rows']) == 420
+        assert len(cards) == 70
         assert sum(r['interpretation_stratum'] == 'ambiguous' for r in cards) == 21
+        if partial:
+            cards = [r for r in cards if r['domain'] == summary['closed_domain']]
+        assert len(summary['rows']) == len(cards) * 6
     else:
         cp = ev / 'vakra_crossdomain_sql_cards_v1.json'
         pp = ev / 'vakra_crossdomain_answer_audit_policy_v1.json'
@@ -55,7 +60,8 @@ def main():
         (a.output / (domain + '.json')).write_text(json.dumps(packet, ensure_ascii=False, indent=2), encoding='utf-8')
     assert len(labels) == len(summary['rows'])
     template = {'purpose': 'Assistant qualitative review against frozen SQL interpretations; not official scoring or independent human labels',
-                'complete_batch': False, 'execution_summary_sha256': sha(a.summary),
+                'complete_batch': False, 'review_scope': summary.get('closed_domain') or 'full_registered_grid',
+                'execution_summary_sha256': sha(a.summary),
                 'audit_cards_sha256': sha(cp), 'audit_policy_sha256': policy_hash, 'rows': labels}
     (a.output / 'annotation_template.json').write_text(json.dumps(template, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps({'episodes': len(labels), 'labels_pending': True}))

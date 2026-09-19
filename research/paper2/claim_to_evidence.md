@@ -80,7 +80,8 @@ tasks per model/prompt. Registration is not a completed experiment or proof
 of benchmark/pretraining independence. The 12 preregistered output-budget
 replays additionally require exactly matching initial model input and previews.
 Their deployment record reports 22 actual remote preflight tests, not neural
-results. Neither batch contributes to manuscript result counts yet.
+results. The completed cookbook slice now contributes the explicitly partial
+result below; the remaining domains and budget rerun are not reported as complete.
 
 ## Conditional uncertainty
 
@@ -116,3 +117,23 @@ archive, and `research_queue_restart_amendment_v2.json` links unchanged
 registrations to new run identifiers and a metadata-only serialization fix.
 `research_queue_restart_deployment_v2.json` verifies actual startup recovery.
 Those operational checks add no task-answer result to this manuscript.
+
+## Closed cookbook-domain result
+
+`vakra_expansion_cookbook_closed_grid_v1.json` verifies all 120 executions,
+six successful worker exits, immutable source/model identity and sixty matched
+initial prompt pairs. It explicitly records `complete=false` for the full
+420-episode batch and `closed_domain_complete=true` for cookbook. All finals
+were read; `vakra_expansion_cookbook_annotations_v1.json` and the joined answer
+summary retain four frozen ambiguous tasks and give original/reminder counts
+9/16 to 8/16, 7/16 to 7/16, and 11/16 to 11/16. This is a single unblinded
+assistant audit, not a grounding score, human agreement study or broad null
+effect. All 120 finals, zero protocol errors and all resource use are retained.
+The raw archive receipt records the exact 145-entry package and hashes.
+
+`vakra_cookbook_helper_trace_v1.json` extracts the larger-checkpoint reminder
+task 015: a successful `select_unique_values` call returns the agent-supplied
+ten-name list unchanged; the final repeats it despite reference disagreement.
+The native helper only deduplicates input. This post-outcome illustration
+does not establish failure prevalence or impossibility under other tool
+sequences. The cookbook retrieval handle is not a full-column observation.

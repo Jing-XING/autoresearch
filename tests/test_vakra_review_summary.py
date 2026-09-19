@@ -69,6 +69,30 @@ class ReviewSummaryTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             summarize_review(summary, labels, rules)
 
+    def test_closed_domain_requires_opt_in_and_never_claims_complete_batch(self):
+        summary, labels, rules = self.fixture()
+        summary.update(complete=False, closed_domain='d', closed_domain_complete=True)
+        labels.update(complete_batch=False, complete_domain=True, review_scope='d')
+        with self.assertRaises(ValueError):
+            summarize_review(summary, labels, rules)
+        result = summarize_review(summary, labels, rules, allow_closed_domain=True)
+        self.assertFalse(result['complete_batch'])
+        self.assertEqual({r['domain'] for r in result['groups']}, {'d'})
+        self.assertEqual(result['executions'], 6)
+        labels['complete_batch'] = True
+        with self.assertRaises(ValueError):
+            summarize_review(summary, labels, rules, allow_closed_domain=True)
+
+    def test_closed_domain_cannot_hide_missing_review_or_scope_mismatch(self):
+        summary, labels, rules = self.fixture()
+        summary.update(complete=False, closed_domain='d', closed_domain_complete=True)
+        labels.update(complete_batch=False, complete_domain=True, review_scope='d')
+        for changed in (dict(labels, rows=labels['rows'][:-1]),
+                        dict(labels, review_scope='another-domain'),
+                        dict(labels, complete_domain=False)):
+            with self.assertRaises(ValueError):
+                summarize_review(summary, changed, rules, allow_closed_domain=True)
+
 
 if __name__ == '__main__':
     unittest.main()

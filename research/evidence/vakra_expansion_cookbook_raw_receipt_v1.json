@@ -1,0 +1,21 @@
+{
+  "scope": "First fully completed domain of the registered 420-episode expansion; full batch incomplete at extraction.",
+  "complete_batch": false,
+  "complete_domain": true,
+  "domain": "cookbook",
+  "episodes": 120,
+  "distinct_tasks": 20,
+  "successful_worker_exits": 6,
+  "archive": "results/remote/vakra-expansion-v2-cookbook-complete.zip",
+  "archive_bytes": 1058590,
+  "archive_entries": 145,
+  "archive_sha256": "a90bdb22b55df407cebc722d1f8635820d1c1e2a8a8981cc9142e8f301cec0b7",
+  "deployment_archive_sha256": "b254562e1969a6bff4299bee152777dc86d29f2489a93455956ef97766ef0961",
+  "review": "All 120 finals reviewed by one unblinded assistant; four frozen ambiguous tasks remain excluded from accuracy, not resource accounting.",
+  "evidence_sha256": {
+    "vakra_expansion_cookbook_closed_grid_v1.json": "90744fd9c11637bec7b4dbc38ef086f9e7699b6a9ca15d290e2253a1b66e7e05",
+    "vakra_expansion_cookbook_annotations_v1.json": "2b65bfcc7f4c786f3779e5f2a1d5f8542ab59640eac5dbf1c497718034149619",
+    "vakra_expansion_cookbook_answer_summary_v1.json": "08612ac741dab4458329c748f286bc03f55efee9f1e05f4e8aa7493599bb391f"
+  },
+  "script_sha256": "4d466ea083a32ff3a38d2baecee1ed8607a2a7a126f2c63dfe13cd82511960ce"
+}

@@ -20,7 +20,7 @@ def stable(value):
     return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=True)
 
 
-def audit(root, archive, kind):
+def audit(root, archive, kind, closed_domain=None):
     expected_archives = {
         'capacity': {'9d4bfabd959a02a0c72aca3fc054d7f028aa34403bcbbef391ecd147080b9d1f'},
         'expansion': {
@@ -43,17 +43,26 @@ def audit(root, archive, kind):
             blob = z.read(prefix + 'preparation_manifest.json')
             assert hashlib.sha256(blob).hexdigest() == d['preparation_sha256']
             preparations[d['domain']] = json.loads(blob)
-    gp = root / 'grid_manifest.json'
+    assert closed_domain is None or kind == 'expansion'
+    gp = root / ('grid_manifest.json' if closed_domain is None else
+                 f'grid_manifest.{closed_domain}_snapshot.json')
     grid = json.loads(gp.read_bytes())
     expected_n = 120 if kind == 'capacity' else 420
-    assert grid['status'] == 'complete' and grid['registered_episodes'] == expected_n
+    assert grid['registered_episodes'] == expected_n
+    assert grid['status'] == 'complete' if closed_domain is None else grid['status'] in ('running', 'complete')
     assert grid['selection'] == selection
     domains = {d['domain']: d for d in selection['domains']}
+    registered_n = expected_n
+    if closed_domain is not None:
+        assert closed_domain in domains
+        domains = {closed_domain: domains[closed_domain]}
+        expected_n = len(domains[closed_domain]['selected_task_ids']) * 6
     models = ['qwen30b'] if kind == 'capacity' else ['qwen3', 'qwen25', 'qwen30b']
     arms = {(d, c, m) for d in domains for c in ('original', 'coverage_check') for m in models}
-    worker_arms = {(w['domain'], w['condition'], w.get('model', 'qwen30b')) for w in grid['workers']}
-    assert len(grid['workers']) == len(arms) and worker_arms == arms
-    assert all(w['exit_code'] == 0 for w in grid['workers']), 'Failed worker'
+    workers = grid['workers'] if closed_domain is None else [w for w in grid['workers'] if w['domain'] == closed_domain]
+    worker_arms = {(w['domain'], w['condition'], w.get('model', 'qwen30b')) for w in workers}
+    assert len(workers) == len(arms) and worker_arms == arms
+    assert all(w.get('exit_code') == 0 for w in workers), 'Failed or unfinished worker'
     pinned = json.loads(Path('research/evidence/qwen30b_download_manifest.json').read_bytes())
     reference = {}
     if kind == 'expansion':
@@ -150,11 +159,14 @@ def audit(root, archive, kind):
                        'terminations': dict(Counter(r['termination'] for r in pool)),
                        'final_answers': sum(r['final_answer'] is not None for r in pool),
                        'usage': {k: sum(r['usage'].get(k, 0) for r in pool) for k in ('model_calls', 'tool_calls', 'input_tokens', 'output_tokens', 'generation_seconds', 'protocol_errors')}})
-    return {'purpose': __doc__, 'complete': True, 'kind': kind, 'registered_episodes': expected_n,
+    return {'purpose': __doc__, 'complete': closed_domain is None, 'kind': kind, 'registered_episodes': registered_n,
+            'closed_domain': closed_domain, 'closed_domain_complete': closed_domain is not None,
+            'audited_episodes': expected_n,
             'distinct_tasks': sum(len(d['selected_task_ids']) for d in domains.values()),
             'domains': list(domains), 'models': models, 'deployment_archive_sha256': expected_archive,
             'grid_manifest_sha256': sha(gp), 'input_sha256': hashes, 'rows': rows, 'groups': groups,
-            'prompt_pairs': pairs, 'batch_wall_seconds': grid['finished'] - grid['started'],
+            'prompt_pairs': pairs, 'batch_wall_seconds': (grid['finished'] - grid['started']) if closed_domain is None else None,
+            'scope_wall_seconds': max(w['finished'] for w in workers) - min(w['started'] for w in workers),
             'model_reference_manifests': {k: v['manifest_sha256'] for k, v in reference.items()}}
 
 
@@ -164,8 +176,10 @@ def main():
     p.add_argument('--archive', type=Path, required=True)
     p.add_argument('--kind', choices=('capacity', 'expansion'), required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--closed-domain', help='Audit a fully exited domain only; never mark the whole batch complete')
     a = p.parse_args()
-    report = audit(a.root, a.archive, a.kind)
+    report = audit(a.root, a.archive, a.kind, a.closed_domain)
+    report['analysis_source_sha256'] = sha(Path(__file__))
     with a.output.open('x', encoding='utf-8') as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     print(json.dumps({'episodes': len(report['rows']), 'groups': report['groups'],
