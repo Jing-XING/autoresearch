@@ -1,0 +1,34 @@
+{
+  "scope": "Third completed domain of the registered expansion; hockey and full420 remain incomplete at extraction.",
+  "complete_batch": false,
+  "complete_domain": true,
+  "domain": "genes",
+  "episodes": 60,
+  "distinct_tasks": 10,
+  "successful_worker_exits": 6,
+  "archive": "results/remote/vakra-expansion-v2-genes-complete.zip",
+  "archive_bytes": 534302,
+  "archive_entries": 85,
+  "archive_sha256": "994a33d9cfeb6516798a109ae264cdac4c4f3796bd1044343e3d0d0214938ac0",
+  "all_extracted_files_byte_match_archive": true,
+  "deployment_archive_sha256": "b254562e1969a6bff4299bee152777dc86d29f2489a93455956ef97766ef0961",
+  "initial_prompt_pairs": 30,
+  "labels": {
+    "ambiguous": 42,
+    "incorrect": 18
+  },
+  "final_answers": 54,
+  "final_at_generation_ceiling": 0,
+  "terminations": {
+    "agent_finished": 54,
+    "protocol_error_limit": 1,
+    "max_steps": 5
+  },
+  "evidence_sha256": {
+    "vakra_expansion_genes_closed_grid_v1.json": "17c24db5819c0b7665df589ecc19c27455aea53bf23ed8d77d94505e0d15117f",
+    "vakra_expansion_genes_annotations_v1.json": "e0a48902bac030f6396d30c2b4125e4c4b71a48e6a1171073ba7ee401276e418",
+    "vakra_expansion_genes_answer_summary_v1.json": "b97ffed201decca3114542fcc0ffaa744e13a6e35096eaf1a3bb30268f1965db"
+  },
+  "script_sha256": "639026fff01d62c953ea683dbc8e14fd991d04b71ed0bd410f6644c99dbe04d9",
+  "limits": "Three scored tasks per condition, all zero correct. This floor cannot establish equivalence or general prompt ineffectiveness. One unblinded assistant review; no independent adjudication."
+}

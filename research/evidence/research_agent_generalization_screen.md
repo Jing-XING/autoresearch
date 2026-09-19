@@ -33,3 +33,10 @@ interfaces. The designated host executed public array/schema checks and
 48 calls to the unchanged CI generator. No hidden evaluator, task reward or
 adaptive research-agent loop was run. Current container has neither Docker
 CLI nor daemon socket; original task runtime parity remains unverified.
+
+The next public development control is now executed and independently
+audited: [risk controls](risk_development_controls_findings_v1.md), 2304
+trials on the designated host. Uniform, surrogate-only and standard
+difference-estimator ratios are 1, 28.308671 and 0.851889. This supplies
+tested task infrastructure and established controls, not an Agent-policy
+result or a novel statistical estimator. Hidden grading remains untouched.

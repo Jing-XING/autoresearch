@@ -1,0 +1,260 @@
+{
+  "purpose": "Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring",
+  "complete_batch": false,
+  "review_scope": "genes",
+  "executions": 60,
+  "distinct_tasks": 10,
+  "groups": [
+    {
+      "domain": "genes",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 40,
+        "tool_calls": 29,
+        "input_tokens": 179577,
+        "output_tokens": 5635,
+        "generation_seconds": 194.50768974423409,
+        "protocol_errors": 1
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 41,
+        "tool_calls": 31,
+        "input_tokens": 191053,
+        "output_tokens": 6213,
+        "generation_seconds": 217.27225492708385,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 45,
+        "tool_calls": 38,
+        "input_tokens": 228301,
+        "output_tokens": 5196,
+        "generation_seconds": 202.4779340736568,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 35,
+        "tool_calls": 28,
+        "input_tokens": 157010,
+        "output_tokens": 3167,
+        "generation_seconds": 124.87764602154493,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 7,
+      "terminations": {
+        "agent_finished": 7,
+        "max_steps": 3
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 99,
+        "tool_calls": 89,
+        "input_tokens": 638442,
+        "output_tokens": 12434,
+        "generation_seconds": 2211.965669406578,
+        "protocol_errors": 3
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 7,
+      "terminations": {
+        "protocol_error_limit": 1,
+        "agent_finished": 7,
+        "max_steps": 2
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 80,
+        "tool_calls": 67,
+        "input_tokens": 478063,
+        "output_tokens": 11155,
+        "generation_seconds": 1939.3435900565237,
+        "protocol_errors": 6
+      }
+    }
+  ],
+  "paired": [
+    {
+      "domain": "genes",
+      "model": "qwen3",
+      "scored_tasks": 3,
+      "gains": [],
+      "losses": [],
+      "both_correct": [],
+      "both_unsuccessful": [
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "genes",
+      "model": "qwen25",
+      "scored_tasks": 3,
+      "gains": [],
+      "losses": [],
+      "both_correct": [],
+      "both_unsuccessful": [
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "genes",
+      "model": "qwen30b",
+      "scored_tasks": 3,
+      "gains": [],
+      "losses": [],
+      "both_correct": [],
+      "both_unsuccessful": [
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    }
+  ],
+  "limits": [
+    "Failures remain in the fixed scored-task denominators.",
+    "Ambiguous tasks retain their executions and costs but do not enter answer accuracy.",
+    "Task pairs and checkpoints are not independent population samples.",
+    "No evidence-sufficiency or causal mechanism score is inferred from answer correctness."
+  ],
+  "kind": "expansion",
+  "execution_summary_sha256": "17c24db5819c0b7665df589ecc19c27455aea53bf23ed8d77d94505e0d15117f",
+  "annotations_sha256": "e0a48902bac030f6396d30c2b4125e4c4b71a48e6a1171073ba7ee401276e418",
+  "audit_cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "audit_policy_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "analysis_source_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\scripts\\summarize_vakra_registered_answers.py": "f2ad3c3ff4b19be04dcb84940503a0e2b44b2054fe3d2285155d583fd709fb4f",
+    "autolab\\vakra_review_summary.py": "a3ae66ec03df54d5cb5962dae76ce4636e29f746cf2b86375317dff96ce53a0b"
+  }
+}

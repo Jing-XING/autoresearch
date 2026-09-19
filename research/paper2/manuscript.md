@@ -4,8 +4,9 @@
 question from the historical proposal in this directory. Eight initial model
 episodes, 48 matched development episodes, 240 fixed-prompt replication
 episodes, 240 executor-sensitivity episodes, 240 third-model sensitivity
-episodes, 120 larger-checkpoint episodes and two completed 120-episode
-domains of a registered expansion support the present observations.
+episodes, 120 larger-checkpoint episodes and three completed domains
+(120 cookbook, 120 Disney and 60 genes episodes) of a registered expansion
+support the present observations.
 A novel method and independently confirmed benefit are not established.
 
 ## Abstract
@@ -793,9 +794,38 @@ different response-level standard would change the reported counts.
 Disney therefore adds a negative Qwen3 comparison and positive Qwen2.5 and
 Qwen30B comparisons under both disclosed readings. Twenty tasks from one
 database, with a fixed eighteen-task denominator, do not establish a
-population prompt effect or identify its mechanism. Genes, ice hockey and
-the separate output-budget control are not incorporated as completed
-results here.
+population prompt effect or identify its mechanism. Ice hockey and the
+separate output-budget control are not incorporated as completed results here.
+
+### 10.7 Completed genes slice and scoring-floor limits
+
+All six genes workers completed the ten-task grid, and all thirty matched
+initial prompt pairs passed the immutable input checks. The sixty executions
+produced fifty-four final answers, five step-limit terminations and one
+protocol-error-limit termination. Ten protocol errors occurred in total;
+none of the final answers reached the 512-token generation ceiling. All
+six missing finals belong to the seven tasks classified as ambiguous before
+model execution. Their forty-two executions and costs remain in the record,
+while answer accuracy has the fixed denominator of three tasks per arm.
+
+Both prompts score 0/3 for each of Qwen3, Qwen2.5 and Qwen30B. All eighteen
+scored executions have final answers, so this result is not caused by
+missing responses. For the complete-list question, responses either deny
+matching genes or name only two distinct identifiers and an unspecified
+remainder, whereas the fixed SQL returns fifty-two distinct GeneIDs. For
+the nucleus question, responses report 954 or 1034 rather than the required
+184 distinct non-essential genes. For the minimum-correlation pair, every
+response omits at least one required gene function; several name the two
+genes and two functions but omit the additional PROTEIN SYNTHESIS function.
+
+These are failures under the declared requested-value interpretation,
+assigned after reading all complete responses by one unblinded assistant.
+They do not certify a causal explanation from the tool traces. Three scored
+tasks at a common zero floor cannot establish equivalence between prompts,
+general ineffectiveness, or a population failure rate. The high pre-run
+ambiguity fraction further limits this domain's role in generalization.
+We retain this result without changing interpretations or replacing tasks
+after observing answers. The full registered expansion remains incomplete.
 
 ## 11. Related work and limits
 
@@ -849,7 +879,7 @@ mutation nor distinguishing accidental correctness is new by itself.
 
 The evidence comprises development on one database and fixed-prompt
 comparisons on three deliberately small databases, with three Qwen checkpoints
-and SmolLM3, plus completed cookbook and Disney slices of a larger registered expansion.
+and SmolLM3, plus completed cookbook, Disney and genes slices of a larger registered expansion.
 SmolLM3 is near floor, and the six earlier paired prompt
 comparisons have descriptive intervals that include zero. Broad
 generalization, a formal semantic verifier and an official VAKRA score are
@@ -918,8 +948,9 @@ the known tasks but leaves its conditional prompt-effect interval overlapping
 zero. The completed cookbook slice shows no prompt benefit; its acquisition
 control demonstrates one feasible complete retrieval, without a model repair
 claim. Disney has mixed checkpoint-specific prompt effects, including under
-the disclosed conservative answer-review sensitivity. The other registered
-domains and output-budget extension remain pending.
+the disclosed conservative answer-review sensitivity. Genes is at zero on
+all three scored tasks for every arm, limiting comparison at that floor.
+Ice hockey and the output-budget extension remain pending.
 Larger sample counts
 will not by themselves resolve assistant annotation bias, identify the cause
 of a prompt effect, or demonstrate a new method's superiority.
@@ -932,7 +963,8 @@ has mixed effects, relaxing one executor restriction mainly improves response
 completion, and SmolLM3 performs near the scoring floor. A larger Qwen3
 checkpoint improves absolute scores on the known tasks, while its paired
 reminder comparison remains inconclusive. Cookbook shows no reminder gain,
-and Disney has mixed checkpoint-specific effects. A selected cookbook control retrieves all required
+and Disney has mixed checkpoint-specific effects; genes yields no correct
+answers on its three scored tasks in any arm. A selected cookbook control retrieves all required
 values through existing tools within budget, limiting an interface-impossibility
 interpretation. Two
 fully replayed examples show that a correct original answer can remain

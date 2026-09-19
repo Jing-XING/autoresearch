@@ -1,0 +1,1016 @@
+{
+  "trials": 2304,
+  "cells": [
+    {
+      "pool": "dev00",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.0035940384618650093,
+        "surrogate_only": 0.02175803785939719,
+        "difference": 0.0034339883899983364
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 6.053924600491494,
+        "difference": 0.9554679023152078
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev00",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.00113275280821316,
+        "surrogate_only": 0.02175803785939719,
+        "difference": 0.0009720552838558035
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 19.208107630930535,
+        "difference": 0.8581353997163373
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev00",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0002706186069658358,
+        "surrogate_only": 0.02175803785939719,
+        "difference": 0.0003880526726194395
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 80.40111544194014,
+        "difference": 1.433946752480435
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev00",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.00022716498421509508,
+        "surrogate_only": 0.02175803785939719,
+        "difference": 0.00019813307708068918
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 95.78077332021918,
+        "difference": 0.872199022068839
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev01",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.00032000444581933065,
+        "surrogate_only": 0.01631502011335288,
+        "difference": 9.862070337362714e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 50.98372952782061,
+        "difference": 0.3081854163654551
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev01",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0003165306915600165,
+        "surrogate_only": 0.01631502011335288,
+        "difference": 0.00013799454265164794
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 51.54324856444271,
+        "difference": 0.4359594387878914
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev01",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.00018064036674753705,
+        "surrogate_only": 0.01631502011335288,
+        "difference": 8.0007182868597e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 90.31768705471434,
+        "difference": 0.4429086605011992
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev01",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 4.499246050642608e-05,
+        "surrogate_only": 0.01631502011335288,
+        "difference": 3.391241390049818e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 362.61675689025,
+        "difference": 0.7537354818737823
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev02",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.0011708273449484911,
+        "surrogate_only": 0.015335792601934028,
+        "difference": 0.0006271466875761615
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 13.098252844964689,
+        "difference": 0.5356440386210418
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev02",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.00022133972088308714,
+        "surrogate_only": 0.015335792601934028,
+        "difference": 0.00019062766792971549
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 69.28622002751362,
+        "difference": 0.8612447290037294
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev02",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.00010508003168054392,
+        "surrogate_only": 0.015335792601934028,
+        "difference": 3.0684674860213556e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 145.94392822945375,
+        "difference": 0.29201242490579654
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev02",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 4.0181995514684644e-05,
+        "surrogate_only": 0.015335792601934028,
+        "difference": 2.441904235572667e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 381.65831252281913,
+        "difference": 0.6077110417973803
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev03",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.03683125422095076,
+        "surrogate_only": 0.3484955354268005,
+        "difference": 0.02482633435394788
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 9.461951345348577,
+        "difference": 0.6740561753616822
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev03",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.02181561516421685,
+        "surrogate_only": 0.3484955354268005,
+        "difference": 0.0123944900479668
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 15.974591264262019,
+        "difference": 0.5681476297902849
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev03",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0032858498560380065,
+        "surrogate_only": 0.3484955354268005,
+        "difference": 0.003452166835417516
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 106.05948253734499,
+        "difference": 1.0506161226672877
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev03",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.005131757457147891,
+        "surrogate_only": 0.3484955354268005,
+        "difference": 0.004487233527647309
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 67.90958815510467,
+        "difference": 0.8744048340392935
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev04",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.005242721021951507,
+        "surrogate_only": 0.032571665331471045,
+        "difference": 0.004926951243209387
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 6.212740520636522,
+        "difference": 0.9397698680856796
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev04",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0014695470068266515,
+        "surrogate_only": 0.032571665331471045,
+        "difference": 0.0014556657851831217
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 22.164425622428023,
+        "difference": 0.9905540812379285
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev04",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0002334073039196674,
+        "surrogate_only": 0.032571665331471045,
+        "difference": 0.00028976359646002656
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 139.5486121663157,
+        "difference": 1.2414504241896196
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev04",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.0001972164088789636,
+        "surrogate_only": 0.032571665331471045,
+        "difference": 0.00016677463597879574
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 165.1569740906349,
+        "difference": 0.8456427988258791
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev05",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.009367173914632937,
+        "surrogate_only": 0.08110691244714265,
+        "difference": 0.004079487657334799
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 8.658632068359639,
+        "difference": 0.4355089053019529
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev05",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0016033100205068266,
+        "surrogate_only": 0.08110691244714265,
+        "difference": 0.0011431110595871937
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 50.58716742848256,
+        "difference": 0.7129694475593945
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev05",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0006815966358610503,
+        "surrogate_only": 0.08110691244714265,
+        "difference": 0.0010446410882018883
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 118.99547060510585,
+        "difference": 1.5326382690874196
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev05",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.0024052272210720745,
+        "surrogate_only": 0.08110691244714265,
+        "difference": 0.0012196416285716214
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 33.72110199675485,
+        "difference": 0.5070795881097647
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev06",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.004531320384761141,
+        "surrogate_only": 0.08137819474485218,
+        "difference": 0.0038126756182387312
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 17.959046775533146,
+        "difference": 0.8414049977708007
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev06",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.003554216553566235,
+        "surrogate_only": 0.08137819474485218,
+        "difference": 0.0023297432580147003
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 22.896239865631937,
+        "difference": 0.6554871440450298
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev06",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0014322089760358614,
+        "surrogate_only": 0.08137819474485218,
+        "difference": 0.001208612252512941
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 56.820056365024854,
+        "difference": 0.8438798197300771
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev06",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.0006915588316078742,
+        "surrogate_only": 0.08137819474485218,
+        "difference": 0.0008339845603998269
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 117.6735673458871,
+        "difference": 1.2059488250056944
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev07",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.0099835739900689,
+        "surrogate_only": 0.05479710036939467,
+        "difference": 0.006408640852272114
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 5.488725823427939,
+        "difference": 0.6419185011947697
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev07",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0015293558831481863,
+        "surrogate_only": 0.05479710036939467,
+        "difference": 0.0007670631870838132
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 35.83018247956426,
+        "difference": 0.501559640588566
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev07",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0006065043351381509,
+        "surrogate_only": 0.05479710036939467,
+        "difference": 0.0006985821164786844
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 90.34906627157557,
+        "difference": 1.151817185807188
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev07",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.0007678305738100194,
+        "surrogate_only": 0.05479710036939467,
+        "difference": 0.0007539163318328873
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 71.36613497622048,
+        "difference": 0.9818784996954617
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev08",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.002208917488023884,
+        "surrogate_only": 0.016698876167262844,
+        "difference": 0.0027333977359719156
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 7.5597555172609905,
+        "difference": 1.237437681937697
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev08",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0010032837916220086,
+        "surrogate_only": 0.016698876167262844,
+        "difference": 0.0009107618644688263
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 16.6442200170161,
+        "difference": 0.9077809011510072
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev08",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.00028712724875059004,
+        "surrogate_only": 0.016698876167262844,
+        "difference": 0.0003589873913429548
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 58.158451487717,
+        "difference": 1.2502728072833842
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev08",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.00012366789237120373,
+        "surrogate_only": 0.016698876167262844,
+        "difference": 0.00010988755499337919
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 135.03000533994063,
+        "difference": 0.888569804873352
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev09",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.0006602595538878981,
+        "surrogate_only": 0.0031165510191645384,
+        "difference": 0.0009243460287673476
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 4.720190720168937,
+        "difference": 1.399973727490034
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev09",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0005561096726745883,
+        "surrogate_only": 0.0031165510191645384,
+        "difference": 0.00039407713802990695
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 5.604202142673773,
+        "difference": 0.7086320511826525
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev09",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.00026617989297478273,
+        "surrogate_only": 0.0031165510191645384,
+        "difference": 0.000274715097772306
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 11.708438922018026,
+        "difference": 1.0320655504896905
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev09",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 3.857949788270403e-05,
+        "surrogate_only": 0.0031165510191645384,
+        "difference": 4.621120165323496e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 80.78257080068819,
+        "difference": 1.1978176023372347
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev10",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.0013342827330920341,
+        "surrogate_only": 3.848557557108321e-05,
+        "difference": 0.0010589996710352744
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 0.02884364356713039,
+        "difference": 0.793684610293333
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev10",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0007293227368199565,
+        "surrogate_only": 3.848557557108321e-05,
+        "difference": 0.00042723272976800497
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 0.05276892331492458,
+        "difference": 0.5857937894968895
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev10",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.0001730915915918385,
+        "surrogate_only": 3.848557557108321e-05,
+        "difference": 0.00034224410661061027
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 0.2223422594774838,
+        "difference": 1.9772428196145118
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev10",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 0.00015304467197702442,
+        "surrogate_only": 3.848557557108321e-05,
+        "difference": 0.00013510730594557763
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 0.25146628807085025,
+        "difference": 0.8827965338503283
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev11",
+      "budget": 50,
+      "median_squared_error": {
+        "uniform": 0.0004107755232233086,
+        "surrogate_only": 0.00044242116476908165,
+        "difference": 0.00018384335072220778
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 1.0770387711941873,
+        "difference": 0.4475518630701509
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev11",
+      "budget": 100,
+      "median_squared_error": {
+        "uniform": 0.0002197667865889523,
+        "surrogate_only": 0.00044242116476908165,
+        "difference": 0.0002621133946051553
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 2.013139344830017,
+        "difference": 1.1926888438124517
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev11",
+      "budget": 200,
+      "median_squared_error": {
+        "uniform": 0.00015019499955618352,
+        "surrogate_only": 0.00044242116476908165,
+        "difference": 6.490559471890843e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 2.945645101876943,
+        "difference": 0.43214218123572856
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    },
+    {
+      "pool": "dev11",
+      "budget": 400,
+      "median_squared_error": {
+        "uniform": 8.246721869528627e-05,
+        "surrogate_only": 0.00044242116476908165,
+        "difference": 6.296607532668314e-05
+      },
+      "ratios": {
+        "uniform": 1.0,
+        "surrogate_only": 5.364812488751605,
+        "difference": 0.7635285428909732
+      },
+      "failures": {
+        "uniform": 0,
+        "surrogate_only": 0,
+        "difference": 0
+      }
+    }
+  ],
+  "median_cell_ratio": {
+    "uniform": 1.0,
+    "surrogate_only": 28.30867093119339,
+    "difference": 0.8518890992711082
+  },
+  "failures": 0,
+  "scope": "Public development baselines only; not official benchmark rewards or an Agent-method result.",
+  "source_revision": "7758e84af55f7666cbdcdd7192959f45b09827af",
+  "python": "3.13.5",
+  "numpy": "2.5.3",
+  "seeds": [
+    2026091900,
+    2026091901,
+    2026091902,
+    2026091903,
+    2026091904,
+    2026091905,
+    2026091906,
+    2026091907,
+    2026091908,
+    2026091909,
+    2026091910,
+    2026091911,
+    2026091912,
+    2026091913,
+    2026091914,
+    2026091915
+  ],
+  "budgets": [
+    50,
+    100,
+    200,
+    400
+  ],
+  "public_input_sha256": {
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/meta.json": "bdfe94a5439a2f43d457508db43baec3fa6fd01ce2d6acf348928818aa7e592e",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/target_probs.npy": "9cd3c28d0b3e4da7b8c8db02d85b800e7c69fadf69d9041434a3ef3c96babf04",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/labels.npy": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/meta.json": "fbd09bd017ebdc5fb7d020f7bc589074d9c6ca0356867600bae0967a80edb99a",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/surrogate_probs.npy": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/target_probs.npy": "8b891313ce930ce9af1de3350984da342e82f69218592649004c1dbd86d78fc7",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/labels.npy": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/meta.json": "a8c3d3d7b32a9a7e10dbab73a30d32fa73d3a68a06a18c358238bb315b700cfa",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/surrogate_probs.npy": "a65d8681fef80d00e930f6755c159fde6e07e6e4db174f9416c8b7bcf5688c04",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/target_probs.npy": "dc8b82b8d786e50e41a6aba916f45e6a6518865fbd9ce1c003f246669d133852",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/labels.npy": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/meta.json": "eceee8941dbfd4981d98c0007cd14b2ece7d5eef6655667cc0c8d0d1f81ca41d",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/surrogate_probs.npy": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/target_probs.npy": "f444d80995573f54be8b268fa8a265cf7b405125c79d846f0a215b2a3fec2095",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/meta.json": "6508d5fa5bb30682f9878ace2a0a8ffe7c673ba5041f05929f39965f862d7bb1",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/target_probs.npy": "39f928ca736748d528f7b5474eb581d3095d7b6219a56c693f4420ad3d3ce33f",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/labels.npy": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/meta.json": "db746ac36195cf64db4617d7a1d71bc0fde577821c287e1dbee38e1c1deab204",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/surrogate_probs.npy": "c8e5dfc910f9be543e0950caabd2dfb9aa3d08fbee5ab2ade6dfd99509350c22",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/target_probs.npy": "aa23a111886cc85b63860304deff19f5a5aefa5c5177169bf78a53d977b9c89f",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/labels.npy": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/meta.json": "911cc1db918020cc35a31dfd48a342641e9d912bf383c2c0de07e3713687e978",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/surrogate_probs.npy": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/target_probs.npy": "1173ead7517353f57d2671de4399859a948d5aa8da8db9fc46bc3f26bd292a5b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/labels.npy": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/meta.json": "0098addb35cbcdc882283744144a2acf2aa911388cb2b1a1cba56c0210e757f0",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/surrogate_probs.npy": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/target_probs.npy": "97f92fbc42573621f1bd7664bad18da71b33b79f2bc72ba2616c8087254cca7c",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/meta.json": "2250a6484a08780a3afaefc9e04dc1c3f10635fd2a3dec85ae7721fbdf151d25",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/target_probs.npy": "1ff62cb368e45f9ebb592e20e0ad6e899c9a5599db2085f7b828a82ee5bce30e",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/meta.json": "b3bfb0c400a6d15af6df5bfac75e422a6754475141f5e0d66599178bf0f7c1b8",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/target_probs.npy": "4af1c3f51551fe94e28bb84485067edc4cf355e7fa9543d936f3b3580a02bde1",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/labels.npy": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/meta.json": "324f1bf0d0dd172d05b11ec87028ae0fefbc5f597de623586fb1b4cab384fcd8",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/surrogate_probs.npy": "a5974111e511d6df53b8aba9761c336907db1f9f6a003267e355e3998cb59722",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/target_probs.npy": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/labels.npy": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/meta.json": "12242516e77b89c6f3f30af3eaf3d8f1cf77c9b47aee384c935954eb6d673ffd",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/surrogate_probs.npy": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/target_probs.npy": "6c9ce87a1c22d18c1a4d597346fa933551e54c363ae182a8fae938f5c198a136"
+  },
+  "external_connection_attempts": [],
+  "model_calls": 0,
+  "hidden_grader_calls": 0,
+  "thread_settings": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "source_sha256": {
+    "scripts/run_risk_development_controls.py": "52e29565b77ab4b80fb326fc903e74b5d39275a7b2041c6619236d0e619cdc6e",
+    "autolab/risk_development.py": "f8c59a0672ec5fea43f5fb6d1bfe44fa127b7d69d70206dfc3bad3ef1b2b45e9",
+    "research/risk_development_controls_v1.md": "d5df4f4fe269b101083b79992f886c9b9dfe30129f36faada3ec2c4d8bdd9223",
+    "research/evidence/autoresearch_exam_public_assets_v1.json": "3db1504bf169d989773f221d37a3aad732946d0d03a2b64be858f6396a0e1695"
+  },
+  "raw_trials_sha256": "abfdaa80fd0fb4e71117590d53c112fd8e9173a728c4f42d5fb972465c291508"
+}

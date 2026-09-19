@@ -184,3 +184,26 @@ a preregistered second metric nor independent adjudication. The audit
 scores requested values, not all explanatory propositions or trace-level
 identification. No pooled all-domain result, population superiority claim,
 causal explanation or official VAKRA score follows from this partial grid.
+
+## Closed genes domain of the registered expansion
+
+`vakra_expansion_genes_closed_grid_v1.json` verifies sixty episodes, six
+successful worker exits and thirty identical initial prompt pairs against
+the unchanged deployment. The byte-verified raw archive has 85 entries,
+534302 bytes and SHA256
+`994a33d9cfeb6516798a109ae264cdac4c4f3796bd1044343e3d0d0214938ac0`.
+`vakra_expansion_genes_raw_receipt_v1.json` links derived hashes. This is the
+third closed domain, not completion of the full 420-episode experiment.
+
+All sixty complete finals or absences were read. The annotations preserve
+the pre-run ambiguous tasks 0,1,2,5,6,8,9: forty-two executions remain in cost
+and termination reporting but outside answer accuracy. All eighteen scored
+responses are incorrect under the frozen distinct-ID/count/complete-function
+interpretations. Each model/prompt arm scores 0/3; there are no missing
+scored finals. Across the full domain there are fifty-four finals, five
+step limits, one protocol-error limit, ten protocol errors and no final
+at the generation ceiling. The summary retains all six arms and costs.
+
+The review is by one unblinded assistant, with no independent human
+adjudication. The three-task zero floor does not establish prompt equivalence,
+general ineffectiveness, a causal trace mechanism or a population failure rate.

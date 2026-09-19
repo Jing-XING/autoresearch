@@ -1,0 +1,76 @@
+{
+  "status": "independently-recomputed",
+  "archive_sha256": "3fb82164e58c6cc0c23818dae6071a0b939c7d5b3b4387f8d22df85518a997f4",
+  "archive_bytes": 1176665,
+  "archive_entries": 8,
+  "trials": 2304,
+  "label_calls": 432000,
+  "failures": 0,
+  "median_cell_ratio": {
+    "uniform": 1.0,
+    "surrogate_only": 28.30867093119341,
+    "difference": 0.851889099271107
+  },
+  "difference_cells_below_uniform": 35,
+  "difference_cell_ratio_range": [
+    0.29201242490579954,
+    1.9772428196145195
+  ],
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.5.3",
+    "execution": [
+      {
+        "name": "tests",
+        "returncode": 0,
+        "seconds": 0.2153287511318922,
+        "timeout": false
+      },
+      {
+        "name": "controls",
+        "returncode": 0,
+        "seconds": 2.268721589818597,
+        "timeout": false
+      }
+    ]
+  },
+  "freeze_commit": "eae5e2f",
+  "package_sha256": "14e1e49d47e0debadda2bf361cb691b285854c18302df6d92d8c3671d55c946a",
+  "verifier_sha256": "0baf0cb240ec8455bf214f8e69a5bdc73edc308244619a61548c37ce3c730fc9",
+  "members": {
+    "deployment_manifest.json": {
+      "bytes": 13473,
+      "sha256": "2231b3d9b85515e4522826859606a5ef185a0abfdcbb7449c21259ad70d36fb9"
+    },
+    "execution.json": {
+      "bytes": 219,
+      "sha256": "573ce4f008fd99dc696ce8431946805495920aee7b27c82a0038b183c401c792"
+    },
+    "tests.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tests.stderr.txt": {
+      "bytes": 686,
+      "sha256": "a9ff1bd1b6796ff7ef4615499eb96d53b273cbb002d41914a8b52bebfe24d837"
+    },
+    "controls.stdout.txt": {
+      "bytes": 142,
+      "sha256": "4d70a20cbcb974ce2152ad52b303179ae3704f8e96edabcb0d0fe7827c9a4950"
+    },
+    "controls.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run/summary.json": {
+      "bytes": 31450,
+      "sha256": "097ed04a58c99c5208a8c1c379eba6106b4651190b57d61b8c6553a155834e17"
+    },
+    "run/trials.jsonl": {
+      "bytes": 20671671,
+      "sha256": "abfdaa80fd0fb4e71117590d53c112fd8e9173a728c4f42d5fb972465c291508"
+    }
+  },
+  "scope": "Scalar offline audit of fixed public development controls. No new run, hidden benchmark reward, Agent result or novel estimator.",
+  "deployment_note": "First UI command failed Python parsing before any execution; quoting corrected before the sole actual deployment/run."
+}
