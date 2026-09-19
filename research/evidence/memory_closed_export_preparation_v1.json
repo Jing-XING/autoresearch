@@ -1,0 +1,44 @@
+{
+  "status": "prepared_and_deployed_waiting",
+  "code_commit": "2e9637b",
+  "source_sha256": {
+    "scripts/archive_memory_test40_v1.py": "98757e117fa731972fdb2acab67b00d044e2dbeca1c10d41d2deb08a6ad93da5",
+    "scripts/unpack_memory_test40_v1.py": "ea0a20cee53f11b35a2522612bfec9d4cdfa1fe7f4a8cf681b586d5041d82575",
+    "tests/test_memory_closed_export.py": "883a2f49dced23bfe8aa082a1299605bb896a641c268606c9b8131e86c6f5fd2"
+  },
+  "synthetic_validation": {
+    "tests": 1,
+    "seconds": 2.857,
+    "workers": 28,
+    "statuses": 560,
+    "audits": 560,
+    "simulations": 532,
+    "actual_experiment_outcomes_read": 0
+  },
+  "code_archive": {
+    "bytes": 2589,
+    "sha256": "4a06a51865df94fb39858be8afa1e9f24e129605704ba55f35441b263ac00fbf"
+  },
+  "deployment": {
+    "supervisor_pid": 27862,
+    "priority": "nice +10",
+    "preflight_exit": 0,
+    "wait_seconds": 7200,
+    "script_sha256": "98757e117fa731972fdb2acab67b00d044e2dbeca1c10d41d2deb08a6ad93da5",
+    "exact_process_command_verified": true,
+    "observation_method": "Browser terminal /proc/<pid>/cmdline and file-existence metadata; remote deployment receipt not downloaded",
+    "archive_exists": false,
+    "receipt_exists": false,
+    "log_bytes": 0,
+    "code_transfer_http_status": 200,
+    "local_transfer_helper_exited": true
+  },
+  "original_run_observation": {
+    "exact_result_count": 532,
+    "status_and_audit_counts_equal": true,
+    "supervisor_pid": 11896,
+    "exact_command_live": true,
+    "outcomes_read": false
+  },
+  "scope": "Export readiness only; not a completed experiment or new scientific result"
+}

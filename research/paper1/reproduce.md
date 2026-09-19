@@ -5,6 +5,52 @@ its source analyses are retained; the 560-episode registered test study is
 still running. Do not analyze its current partial results as a complete
 study or treat the checks below as evidence of its eventual outcome.
 
+## Closed-run export and relocation
+
+The scientific analyzer below still requires a complete grid. A separate
+standard-library exporter, `scripts/archive_memory_test40_v1.py`, has been
+deployed as a low-priority process on the designated host. It waits for all
+28 registered workers to exit successfully and for the final grid to agree
+with the supervisor completion marker. Only then does it read worker payloads.
+A transient partial JSON read while the supervisor rewrites its grid is a
+pending observation, not a reason to restart the experiment.
+
+The exporter preserves every worker manifest, configuration, summary, status,
+model audit and available simulation. It requires all 560 status/audit pairs
+but does not invent a simulation for a run that failed before one was saved.
+Extra files, changed source bytes and symlinks are rejected. An export manifest
+records every payload's length and SHA-256; the external receipt records the
+whole ZIP digest and final completion-marker digest. This is byte collection,
+not validation of rewards, memory selection or the scientific comparison.
+
+The server destination is
+`artifacts/tau-memory-test40-ties-v2-complete.zip`, with receipt
+`artifacts/tau-memory-test40-ties-v2-export.json`. As of the deployment check,
+these files do not yet exist and the original study is still running. After
+they exist, retrieve the exact archive and receipt, then verify and relocate
+into a new local directory:
+
+```sh
+python -m scripts.unpack_memory_test40_v1 \
+  --archive results/remote/tau-memory-test40-ties-v2-complete.zip \
+  --sha256 DIGEST_FROM_THE_COMPLETED_EXPORT_RECEIPT \
+  --destination results/remote/memory-test40-closed-v1 \
+  --receipt results/audits/memory-test40-unpack-v1.json
+```
+
+Pass `results/remote/memory-test40-closed-v1/runs/tau-memory-test40-ties-v2`
+as `--root` to the scientific analysis command below. A successful extraction
+alone is insufficient: that analyzer separately verifies exact model inputs,
+source choices, code and checkpoint provenance, rewards and all paired cells.
+
+The synthetic export test covers all 28 worker directories and 560 status/
+audit pairs, with 28 deliberately absent simulations. It verifies exact
+byte restoration, unfinished-grid refusal, extra-member refusal, exclusive
+outputs and corruption rejection even when the outer ZIP digest is updated.
+Its 532 simulation fixtures are invented data, not results of the real run.
+Deployment and test evidence are in
+`research/evidence/memory_closed_export_preparation_v1.json`.
+
 ## Restart provenance
 
 The registration identifies `tau-memory-test40-ties-v1`; its worker manifests
