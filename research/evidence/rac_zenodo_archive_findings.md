@@ -84,3 +84,25 @@ The author-linked anonymous airline repository was also opened in Chrome on
 September 19. Its page explicitly reports that the repository is expired.
 We did not access its benchmark runner or infer its unavailable evaluator
 semantics from the archive's summary fields.
+
+## Subsequent execution of the archived recovery source
+
+`probe_rac_archived_rollback.py` separately extracts and verifies the archive's
+62 Python source files and exercises its unchanged recovery manager and
+LangChain adapter. Fourteen local fixtures cover a direct protocol executor
+and the author adapter, each with normal completion, raw exceptions, handled
+exceptions, structured errors and silent no-op behavior. The normal
+compensation actually removes the local booking. A directly raised exception
+correctly fails rollback; the author adapter converts it to a result that the
+manager still treats as compensated. Explicit error results also reproduce
+the false-clean report. All controls pass with zero network attempts.
+
+This is new execution evidence for the published source version, recorded in
+`rac_archived_rollback_probe_v1.json`; it is not inferred from the later Git
+revision. The same isolated langchain-core 1.6.3 and pydantic 2.13.5 are used.
+The archive has dependency lower bounds in pyproject.toml and no uv, Poetry
+or requirements lock file in its inventory, so this does not reconstruct the
+authors' historical package environment. It also does not establish that the
+bug occurred in any recorded model run: the negative trace finding above
+remains unchanged. These fixtures cover the same mechanism and do not count
+as fourteen independent bugs or a model-performance replication.
