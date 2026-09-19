@@ -1,0 +1,1212 @@
+{
+  "scope": "complete paired normalobs/simobs slice under hotpotqa/run_metrics, not all repository artifacts or full benchmark",
+  "repository": "naimengye/speculative-action",
+  "commit": "dc938b9ef7474caf07fe4ad16549c1fa8c7d268c",
+  "manifest_sha256": "2c845a25efae456177c2b3614be319a6fc5799f80f47f730ee0100297c5aec3d",
+  "script_sha256": "ca455835282d7f33d5199f13602034cb8cf319e784f07c38085bd84e2375c2a1",
+  "counts": {
+    "search": 227,
+    "simulated_action_string_steps": 147,
+    "finish": 79,
+    "eligible_nonsearch_steps": 109,
+    "sim_obs_exact_repeat_previous": 109,
+    "trajectory_pairs": 94,
+    "steps": 336,
+    "lookup": 30,
+    "simulated_action_list_steps": 189
+  },
+  "unique_question_text_hashes": 94,
+  "unique_folder_ids": 34,
+  "folder_ids_with_multiple_question_hashes": 21,
+  "folder_question_hashes": {
+    "1248": [
+      "5b7180a025d5f004b8084f0ab9442628f18fb1a6dc70b673c0256bf8de9a5c97",
+      "62a5da53dfea1c398cd505e515e6e342782433381f0225d42df34967f6113e55",
+      "71a5a8657282fda0e0e7bea9fd1705029a2d73d5dcd9ee04e9161585c14f6f62",
+      "e133e9cbe1166e068e4f9a2cc60bba4e5c3b80f99a9eeb1b6bcddcf9cf5d519a",
+      "e6d3c471f6a73b14e02a6ddf9dc5fd8fcf9132e7aa66e16943d91dcaadafa122",
+      "f24cae757241ed39044695d34381b2b490bd6785f05b32e42ca1b9fafcf120b7"
+    ],
+    "1267": [
+      "6cc15aae25ef6d327242e53e2ad0aed9ec373bdaaa02b1d522b3748ebe1a7b58",
+      "b4ac51c12837592a9afad2746bb2469d05475f1b1d7ac61fe9cdb4a063c82682",
+      "c4b67ea3f49139fc2d7565094233c946f66f239cd085412ce935b271fb7fbe61",
+      "d0356b624c2b2dd97909ff32a03dec44a5e044d6fc527dda954144be6d042eab"
+    ],
+    "1354": [
+      "345dec4b926f3e69587140791ebea68155ac2715a0a7ff25d622250cc20662ac",
+      "bf9dfbf6993a5c3cbce2beaa585223e5d8e73763febdf17f47ce43d3c156e78b"
+    ],
+    "1477": [
+      "31cac540115176d8897619b07ccd42458ac76d6af831f7ba7e29b05690665f5c",
+      "5031e9f197855ab8fc6ff1e41328faf69b6a64c9369ad74a9e2978c1f902b88b",
+      "571036bc46a780b4fd6f961b7ab62d88b45dbf5026992b1458608b15181927cf",
+      "99377fb8599672d1a226dc7ac089380405a7db43da218f581be62d8e5a4dd4d3",
+      "aab2fe333b0480a7156b9e2db19d98db1e20d032b4c3830d820709443bb34847",
+      "e1ee8d6c830753987ef50fc15f719eadf64b955043036bcabf9e4753258f3bd7"
+    ],
+    "190": [
+      "13387331be76b71de5ce25f46bc14530a7798c932640a1ae0b9b03db25fe7a5d",
+      "39e43237a154448a3d6672c6ee05376ca902c6dda0a67676a2711389614b955f"
+    ],
+    "191": [
+      "35e85ee6e186888972c3b3854f929718ced46f3a968b71dcf547396be8100281"
+    ],
+    "2038": [
+      "26b84534d49428796ea94f77e66b9e37ed5f56c75c64786e7b77bc04a1a6c7b4",
+      "2f1d86d1543d88b2c0e6715efc9cf586dcadd9dd665305cb8354e5bb8db4a6e1",
+      "53617edd44fb131cdbc31d980a74d2e606b6070f1a98b677e32e2a0375328bae"
+    ],
+    "211": [
+      "15c9a18121f86643714c4d493869b1f90a803b4ac7f864607689693db12764f7"
+    ],
+    "2316": [
+      "46c74297026223bc5b485eff1da6801654fa2d271572b9e87c42b87e81b0b28a",
+      "7266b2e4089d2a642f7f0b3b3ea7ffaeb5bbd743051275d9e8714c51be2a529e",
+      "bae0a3f6d3e7081ba5a212de09db1ee6fd9a46ffa06c92afad853c0f296b517f"
+    ],
+    "245": [
+      "3bb9c500a59bec3f5369ce0737ff84d91a06fc0590fd9bc27f47272e5754e5e9",
+      "6e6819a95ba492876fbe885ad5d140e69048f457d895d3e158dd472bad405dc7"
+    ],
+    "2465": [
+      "7d3cbb2c9e39064a556a1cbb560891061746b3459b7f8658500921cbca3cb769"
+    ],
+    "2527": [
+      "0f9e741d5feab611221d4bc0cd5c099bc3e9fb1a3ff3bc4ee23f01697165119f",
+      "1551dd90b254c45474d71ae7d98bb68e32b354353cbedb230c93ed4d5ff43e19"
+    ],
+    "2817": [
+      "23a7f6c81cc401f64a821f2c315cf25be0e1e39d548cba03db8549514cc20eea",
+      "fa1f745ec497c18c7d493430ceaeda25d1d7784c43d8305fb3ac3abf9b564032"
+    ],
+    "2861": [
+      "14b63a7da522c9c8711419677617751025718ff4035678232f113bb011ec3efe",
+      "db820e35bbbf813a3c0dce04db9088e9903af63753166c2f84ab180931a77281"
+    ],
+    "2885": [
+      "603e023b903dcf5e2db4f5e479ea6600b8bd785f07c1535d676e29f1b0b4e7d4",
+      "60d673d570fe27ab4c8cb3e2c4cb1f4847ad325366fd3d061797cb983cc00eec",
+      "966f1740bccb2f3631affa7428c2e12ff0a50721228f774a747361011554a10e",
+      "a87caa77367f0d95a2e476f5c9c67e0012fe7946ef1eb89f8e76d66af1624628"
+    ],
+    "3021": [
+      "b6a661907ac4cb2c05d7d43dcc06ee093f924a2d55c31cc7d0d54c06d490b7ce"
+    ],
+    "373": [
+      "77ba112fe0adf4ffcf24103828e4a7b29ee2021602fc45b6cf1e453babe70128"
+    ],
+    "3908": [
+      "4f91c83f36b139afa9797bc8bd80c17cb5e7ac1e02062aac1e3e1f0a4a0b193b"
+    ],
+    "3954": [
+      "63f272c6b960e885f5fb8e680405bb36b2db03e48b15a64baed2070ff2083d45"
+    ],
+    "4164": [
+      "3ed5d0f2d786de8c61a8ebd048b796b62dc817028db2f651c3580a7c8403654f"
+    ],
+    "4202": [
+      "19cf385961d8e41ecb8a7fb941c0457ceb7b53b7fa05043d7a55a2a899fb3ba4",
+      "26a4d80de8be6a6ee55660da49b36cff4f53ac297e7eb4621b204f9209e24079",
+      "757a34ae51e964a348d46a1a6cffa9e963653f18eca1ba56a264d9a101b2483b",
+      "9e1ae1aa8121b36213212da64e4e453e9fe737b81dc980b73c28ee9c43922bcb",
+      "b366a41cdcee73413e79a681573667c4d33b6ebeaa902142f3b0949f55ddff93"
+    ],
+    "4212": [
+      "566b27b51d629d9cfd3a639b553c7dde24669195209e8c29bf7a596d6700dfc7"
+    ],
+    "4349": [
+      "00d24f9aca2133a8697a21b2c5e9bea8e40548872dd1219b44bb3f2ad69d97f4",
+      "39f0f67783a7568cb6d21283740e443d5ff23a9fd136419cb511d18cf6b147ea",
+      "54d24d24bc62f4b187b155f6b5128f177ffb5398b4ec68fa18a2a1634c121cc8"
+    ],
+    "4975": [
+      "6a268c04149094919d5580d1e5ff19f8c0633df53aa772a1d1102d186a94e97e"
+    ],
+    "5619": [
+      "0e767cac010bb22aaefb8d89926025559ec3b9f74b8d6bfaf26706a27147218a",
+      "464355d974c1a947439ff5266bd933b6b05189abd453d0eb064e2c3a52f44e40",
+      "565ce3597e97f4765c1c584dda7fc1bd60a57e8bf5b6791eebbfd42d1d9f54ed",
+      "b1bc387a84670ddb4c4eefae96f6e16f61e0915d79ed4a9b3274028e43b2c18b",
+      "dfae3c16588cb5e86651430e592246d167afff2843e56301c921de2a58be7291"
+    ],
+    "5890": [
+      "8ad1f0c1f47543dc95702203d49dc4b6782edda3c395995f4d750653524b92b1"
+    ],
+    "6": [
+      "1ca9faffa0ed30244c11e72b1acf6d9da479f2364acec6922604bc65397ed369",
+      "7e17bd7e245616f3468263f9cdb52f0a92655cbae6b400c7ca994d8ff5ef1318",
+      "de24007d4ec1e8fb1505746ab0c135c6b726fb1864e07320661578795aa72949",
+      "e8016cbb7e71c781dd79d00fc556ef9baa9c9f88f1a5356e94800daa15935792",
+      "f34b2c7373b7a248a57f4a323e18722775e64c2121ffc2437c74b33907a93848",
+      "f87adb22e35fd7b2f92bd2ff7d4a8cc9a7933b6ce61c25e2834b5e9f90607e47"
+    ],
+    "6031": [
+      "c468b27b8af12a935f5e34e9d89ea1e3a8fcbd2e58e390bec7308045757afdcd"
+    ],
+    "656": [
+      "2ac53d58d6c677dc4648fd09ddbe5624ac34c1e31adbe392ab2e717c3367bfcd",
+      "d2e28bccd860ca13a3945192168dc45b76759d4a08022026e6ac18317d87369a"
+    ],
+    "6904": [
+      "0f2cf3b7111131313d09dc362074fc2d67bc117a0b7e79c45519dcf695abc0d6",
+      "602ad7f4be3fd069cc5fc48e26afa4b52fb12543a915829db11a4b35de56ee2d",
+      "ec4ba7f55174d30d2a049d6ea3f072e29c01add4c532bc71fba8b0bf8dab4829"
+    ],
+    "7090": [
+      "1850ecdc17f5004131beb7a6d218a7218986dc4f0da86d84c10ba5bee12b044d",
+      "69d53ed1271ae4f8dd48f0750cc653fb1cd04a29bca439037a74c5ea1038de17",
+      "748cfdcae5ffc8b624272284565fbb482fb7bb51c04ff738712b5b009301ae7d",
+      "90d8f57817f9e12b810fe007eeae2cd64cdcdc3d33352d25840aee1b9c461758",
+      "92289310ad2c7d7434be78584c9e2eeb6896fd5cc531059eb9ac966606170e6d",
+      "d0072545f96ccaec963396f2f2785d028ec66fe86e1d1e926076bbf6d84526e7"
+    ],
+    "7107": [
+      "008b741b1351fcff8bf7d08d768f54f8c38e81b021ae74f2dcfaa261774ba522",
+      "15b54e2ad86211088c2a95579437d7ecbbb03e42d21f42468a073058c0fb7d4a",
+      "2e57405fe712dad1f1046b69d18c41a7dbc9e70962e8fe5979979166d880c2bc",
+      "3d652af273276c523ca9030c2540fb3e466a2a83304f57202143fa7e84474588",
+      "3e6c4bab3e51c06572d1a37af75cd951b491eaf7c9a7af7c3f55098ab359991a",
+      "51d128c8676d0bb48bed509ee5225c6220a465e716b5e299f3bb3eadb9ce1636",
+      "79133a4e8f145e510f5711d3c67721126ea17db4161d81ace80c6942e301b6cf"
+    ],
+    "7356": [
+      "2d61274beb8d45466c223c05fecf7a4b6c7e703590d521eae6301df3141b7c4e",
+      "566847a5926e26bc8aec464bef11043fac110b4428c1a8591a4d374cb9d466d3",
+      "5c32c70b10eb6fcd592031e4f4f7b2273c7110371079e10a748410d6675acd93",
+      "77f44f0155ca7cc95b16416426f30d917ebb492752db84b3bb542ee9df8a6c32",
+      "9aefabc3ca87adbde4860771a70ce70c5a071c85a91faf8281510f2f8dafaa08",
+      "fa1eee11843ce6f878696b5b7f73db2c4c0116026c3a4a1874f972a669140e9b"
+    ],
+    "753": [
+      "d570714126377d86f6799e9fa4115010bbd9083d74b8ecea040b58d8999ab5a2"
+    ]
+  },
+  "lookup_result_count": 4,
+  "lookup_result_previous_sim_substring_count": 4,
+  "lookup_result_any_logged_normal_search_substring_count": 0,
+  "wrapper_reset_control": {
+    "source": "hotpotqa/src/wrappers.py",
+    "source_sha256": "32e8d2b892d8463f12343ed085bdbdea5cf1de5853289d1f99de26a9226e00f3",
+    "method": "HistoryWrapper.reset",
+    "line": 75,
+    "end_line": 79,
+    "ast_sha256": "d57280fdee5b22320b58ace431658f9b4ed854a7ea6ce613b4340f2b2b84492e",
+    "requested_idx": 42,
+    "forwarded_calls": [
+      {
+        "seed": null,
+        "return_info": false,
+        "options": null,
+        "idx": null
+      }
+    ],
+    "scope": "exact extracted forwarding method with recording environment, no Gym/data or RNG execution"
+  },
+  "trajectories": [
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/2465",
+      "folder_id": "2465",
+      "question_sha256": "7d3cbb2c9e39064a556a1cbb560891061746b3459b7f8658500921cbca3cb769",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/2527",
+      "folder_id": "2527",
+      "question_sha256": "1551dd90b254c45474d71ae7d98bb68e32b354353cbedb230c93ed4d5ff43e19",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/6",
+      "folder_id": "6",
+      "question_sha256": "de24007d4ec1e8fb1505746ab0c135c6b726fb1864e07320661578795aa72949",
+      "steps": 7,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/7090",
+      "folder_id": "7090",
+      "question_sha256": "69d53ed1271ae4f8dd48f0750cc653fb1cd04a29bca439037a74c5ea1038de17",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/245",
+      "folder_id": "245",
+      "question_sha256": "3bb9c500a59bec3f5369ce0737ff84d91a06fc0590fd9bc27f47272e5754e5e9",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/2817",
+      "folder_id": "2817",
+      "question_sha256": "fa1f745ec497c18c7d493430ceaeda25d1d7784c43d8305fb3ac3abf9b564032",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/4164",
+      "folder_id": "4164",
+      "question_sha256": "3ed5d0f2d786de8c61a8ebd048b796b62dc817028db2f651c3580a7c8403654f",
+      "steps": 4,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/6031",
+      "folder_id": "6031",
+      "question_sha256": "c468b27b8af12a935f5e34e9d89ea1e3a8fcbd2e58e390bec7308045757afdcd",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/191",
+      "folder_id": "191",
+      "question_sha256": "35e85ee6e186888972c3b3854f929718ced46f3a968b71dcf547396be8100281",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/2817",
+      "folder_id": "2817",
+      "question_sha256": "23a7f6c81cc401f64a821f2c315cf25be0e1e39d548cba03db8549514cc20eea",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/3954",
+      "folder_id": "3954",
+      "question_sha256": "63f272c6b960e885f5fb8e680405bb36b2db03e48b15a64baed2070ff2083d45",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/5890",
+      "folder_id": "5890",
+      "question_sha256": "8ad1f0c1f47543dc95702203d49dc4b6782edda3c395995f4d750653524b92b1",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/2861",
+      "folder_id": "2861",
+      "question_sha256": "db820e35bbbf813a3c0dce04db9088e9903af63753166c2f84ab180931a77281",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/3908",
+      "folder_id": "3908",
+      "question_sha256": "4f91c83f36b139afa9797bc8bd80c17cb5e7ac1e02062aac1e3e1f0a4a0b193b",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/4212",
+      "folder_id": "4212",
+      "question_sha256": "566b27b51d629d9cfd3a639b553c7dde24669195209e8c29bf7a596d6700dfc7",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/7107",
+      "folder_id": "7107",
+      "question_sha256": "51d128c8676d0bb48bed509ee5225c6220a465e716b5e299f3bb3eadb9ce1636",
+      "steps": 7,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-5-nano/5619",
+      "folder_id": "5619",
+      "question_sha256": "dfae3c16588cb5e86651430e592246d167afff2843e56301c921de2a58be7291",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-5-nano/7107",
+      "folder_id": "7107",
+      "question_sha256": "2e57405fe712dad1f1046b69d18c41a7dbc9e70962e8fe5979979166d880c2bc",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/1267",
+      "folder_id": "1267",
+      "question_sha256": "6cc15aae25ef6d327242e53e2ad0aed9ec373bdaaa02b1d522b3748ebe1a7b58",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/2038",
+      "folder_id": "2038",
+      "question_sha256": "53617edd44fb131cdbc31d980a74d2e606b6070f1a98b677e32e2a0375328bae",
+      "steps": 6,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/4202",
+      "folder_id": "4202",
+      "question_sha256": "9e1ae1aa8121b36213212da64e4e453e9fe737b81dc980b73c28ee9c43922bcb",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/5619",
+      "folder_id": "5619",
+      "question_sha256": "0e767cac010bb22aaefb8d89926025559ec3b9f74b8d6bfaf26706a27147218a",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/1248",
+      "folder_id": "1248",
+      "question_sha256": "e6d3c471f6a73b14e02a6ddf9dc5fd8fcf9132e7aa66e16943d91dcaadafa122",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/5619",
+      "folder_id": "5619",
+      "question_sha256": "464355d974c1a947439ff5266bd933b6b05189abd453d0eb064e2c3a52f44e40",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/6",
+      "folder_id": "6",
+      "question_sha256": "e8016cbb7e71c781dd79d00fc556ef9baa9c9f88f1a5356e94800daa15935792",
+      "steps": 5,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/7090",
+      "folder_id": "7090",
+      "question_sha256": "748cfdcae5ffc8b624272284565fbb482fb7bb51c04ff738712b5b009301ae7d",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/1477",
+      "folder_id": "1477",
+      "question_sha256": "99377fb8599672d1a226dc7ac089380405a7db43da218f581be62d8e5a4dd4d3",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/2038",
+      "folder_id": "2038",
+      "question_sha256": "2f1d86d1543d88b2c0e6715efc9cf586dcadd9dd665305cb8354e5bb8db4a6e1",
+      "steps": 5,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/2316",
+      "folder_id": "2316",
+      "question_sha256": "bae0a3f6d3e7081ba5a212de09db1ee6fd9a46ffa06c92afad853c0f296b517f",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/5619",
+      "folder_id": "5619",
+      "question_sha256": "565ce3597e97f4765c1c584dda7fc1bd60a57e8bf5b6791eebbfd42d1d9f54ed",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/2885",
+      "folder_id": "2885",
+      "question_sha256": "603e023b903dcf5e2db4f5e479ea6600b8bd785f07c1535d676e29f1b0b4e7d4",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4202",
+      "folder_id": "4202",
+      "question_sha256": "b366a41cdcee73413e79a681573667c4d33b6ebeaa902142f3b0949f55ddff93",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4349",
+      "folder_id": "4349",
+      "question_sha256": "39f0f67783a7568cb6d21283740e443d5ff23a9fd136419cb511d18cf6b147ea",
+      "steps": 5,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/6",
+      "folder_id": "6",
+      "question_sha256": "f34b2c7373b7a248a57f4a323e18722775e64c2121ffc2437c74b33907a93848",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/1248",
+      "folder_id": "1248",
+      "question_sha256": "62a5da53dfea1c398cd505e515e6e342782433381f0225d42df34967f6113e55",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/1477",
+      "folder_id": "1477",
+      "question_sha256": "31cac540115176d8897619b07ccd42458ac76d6af831f7ba7e29b05690665f5c",
+      "steps": 4,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/2885",
+      "folder_id": "2885",
+      "question_sha256": "966f1740bccb2f3631affa7428c2e12ff0a50721228f774a747361011554a10e",
+      "steps": 6,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/7090",
+      "folder_id": "7090",
+      "question_sha256": "92289310ad2c7d7434be78584c9e2eeb6896fd5cc531059eb9ac966606170e6d",
+      "steps": 7,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/190",
+      "folder_id": "190",
+      "question_sha256": "13387331be76b71de5ce25f46bc14530a7798c932640a1ae0b9b03db25fe7a5d",
+      "steps": 4,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/211",
+      "folder_id": "211",
+      "question_sha256": "15c9a18121f86643714c4d493869b1f90a803b4ac7f864607689693db12764f7",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/245",
+      "folder_id": "245",
+      "question_sha256": "6e6819a95ba492876fbe885ad5d140e69048f457d895d3e158dd472bad405dc7",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/753",
+      "folder_id": "753",
+      "question_sha256": "d570714126377d86f6799e9fa4115010bbd9083d74b8ecea040b58d8999ab5a2",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/190",
+      "folder_id": "190",
+      "question_sha256": "39e43237a154448a3d6672c6ee05376ca902c6dda0a67676a2711389614b955f",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/4975",
+      "folder_id": "4975",
+      "question_sha256": "6a268c04149094919d5580d1e5ff19f8c0633df53aa772a1d1102d186a94e97e",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/656",
+      "folder_id": "656",
+      "question_sha256": "d2e28bccd860ca13a3945192168dc45b76759d4a08022026e6ac18317d87369a",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/7090",
+      "folder_id": "7090",
+      "question_sha256": "90d8f57817f9e12b810fe007eeae2cd64cdcdc3d33352d25840aee1b9c461758",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/1248",
+      "folder_id": "1248",
+      "question_sha256": "5b7180a025d5f004b8084f0ab9442628f18fb1a6dc70b673c0256bf8de9a5c97",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/1267",
+      "folder_id": "1267",
+      "question_sha256": "d0356b624c2b2dd97909ff32a03dec44a5e044d6fc527dda954144be6d042eab",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/656",
+      "folder_id": "656",
+      "question_sha256": "2ac53d58d6c677dc4648fd09ddbe5624ac34c1e31adbe392ab2e717c3367bfcd",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/7090",
+      "folder_id": "7090",
+      "question_sha256": "1850ecdc17f5004131beb7a6d218a7218986dc4f0da86d84c10ba5bee12b044d",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/2861",
+      "folder_id": "2861",
+      "question_sha256": "14b63a7da522c9c8711419677617751025718ff4035678232f113bb011ec3efe",
+      "steps": 6,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/2885",
+      "folder_id": "2885",
+      "question_sha256": "a87caa77367f0d95a2e476f5c9c67e0012fe7946ef1eb89f8e76d66af1624628",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/4202",
+      "folder_id": "4202",
+      "question_sha256": "19cf385961d8e41ecb8a7fb941c0457ceb7b53b7fa05043d7a55a2a899fb3ba4",
+      "steps": 6,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/6",
+      "folder_id": "6",
+      "question_sha256": "1ca9faffa0ed30244c11e72b1acf6d9da479f2364acec6922604bc65397ed369",
+      "steps": 5,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1354",
+      "folder_id": "1354",
+      "question_sha256": "345dec4b926f3e69587140791ebea68155ac2715a0a7ff25d622250cc20662ac",
+      "steps": 7,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1477",
+      "folder_id": "1477",
+      "question_sha256": "e1ee8d6c830753987ef50fc15f719eadf64b955043036bcabf9e4753258f3bd7",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/2038",
+      "folder_id": "2038",
+      "question_sha256": "26b84534d49428796ea94f77e66b9e37ed5f56c75c64786e7b77bc04a1a6c7b4",
+      "steps": 7
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/7356",
+      "folder_id": "7356",
+      "question_sha256": "2d61274beb8d45466c223c05fecf7a4b6c7e703590d521eae6301df3141b7c4e",
+      "steps": 4,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1248",
+      "folder_id": "1248",
+      "question_sha256": "71a5a8657282fda0e0e7bea9fd1705029a2d73d5dcd9ee04e9161585c14f6f62",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1267",
+      "folder_id": "1267",
+      "question_sha256": "b4ac51c12837592a9afad2746bb2469d05475f1b1d7ac61fe9cdb4a063c82682",
+      "steps": 7,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1354",
+      "folder_id": "1354",
+      "question_sha256": "bf9dfbf6993a5c3cbce2beaa585223e5d8e73763febdf17f47ce43d3c156e78b",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477",
+      "folder_id": "1477",
+      "question_sha256": "aab2fe333b0480a7156b9e2db19d98db1e20d032b4c3830d820709443bb34847",
+      "steps": 7,
+      "eligible_nonsearch_steps": 5,
+      "sim_obs_exact_repeat_previous": 5
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/1477",
+      "folder_id": "1477",
+      "question_sha256": "5031e9f197855ab8fc6ff1e41328faf69b6a64c9369ad74a9e2978c1f902b88b",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/6904",
+      "folder_id": "6904",
+      "question_sha256": "0f2cf3b7111131313d09dc362074fc2d67bc117a0b7e79c45519dcf695abc0d6",
+      "steps": 5,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/7107",
+      "folder_id": "7107",
+      "question_sha256": "79133a4e8f145e510f5711d3c67721126ea17db4161d81ace80c6942e301b6cf",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/7356",
+      "folder_id": "7356",
+      "question_sha256": "fa1eee11843ce6f878696b5b7f73db2c4c0116026c3a4a1874f972a669140e9b",
+      "steps": 4,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/1477",
+      "folder_id": "1477",
+      "question_sha256": "571036bc46a780b4fd6f961b7ab62d88b45dbf5026992b1458608b15181927cf",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/2885",
+      "folder_id": "2885",
+      "question_sha256": "60d673d570fe27ab4c8cb3e2c4cb1f4847ad325366fd3d061797cb983cc00eec",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/4349",
+      "folder_id": "4349",
+      "question_sha256": "00d24f9aca2133a8697a21b2c5e9bea8e40548872dd1219b44bb3f2ad69d97f4",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/5619",
+      "folder_id": "5619",
+      "question_sha256": "b1bc387a84670ddb4c4eefae96f6e16f61e0915d79ed4a9b3274028e43b2c18b",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1248",
+      "folder_id": "1248",
+      "question_sha256": "e133e9cbe1166e068e4f9a2cc60bba4e5c3b80f99a9eeb1b6bcddcf9cf5d519a",
+      "steps": 7,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1267",
+      "folder_id": "1267",
+      "question_sha256": "c4b67ea3f49139fc2d7565094233c946f66f239cd085412ce935b271fb7fbe61",
+      "steps": 4,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/2527",
+      "folder_id": "2527",
+      "question_sha256": "0f9e741d5feab611221d4bc0cd5c099bc3e9fb1a3ff3bc4ee23f01697165119f",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/7356",
+      "folder_id": "7356",
+      "question_sha256": "77f44f0155ca7cc95b16416426f30d917ebb492752db84b3bb542ee9df8a6c32",
+      "steps": 7,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/3021",
+      "folder_id": "3021",
+      "question_sha256": "b6a661907ac4cb2c05d7d43dcc06ee093f924a2d55c31cc7d0d54c06d490b7ce",
+      "steps": 3,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4202",
+      "folder_id": "4202",
+      "question_sha256": "757a34ae51e964a348d46a1a6cffa9e963653f18eca1ba56a264d9a101b2483b",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4349",
+      "folder_id": "4349",
+      "question_sha256": "54d24d24bc62f4b187b155f6b5128f177ffb5398b4ec68fa18a2a1634c121cc8",
+      "steps": 5,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/6",
+      "folder_id": "6",
+      "question_sha256": "f87adb22e35fd7b2f92bd2ff7d4a8cc9a7933b6ce61c25e2834b5e9f90607e47",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/2316",
+      "folder_id": "2316",
+      "question_sha256": "46c74297026223bc5b485eff1da6801654fa2d271572b9e87c42b87e81b0b28a",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/6",
+      "folder_id": "6",
+      "question_sha256": "7e17bd7e245616f3468263f9cdb52f0a92655cbae6b400c7ca994d8ff5ef1318",
+      "steps": 0
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/6904",
+      "folder_id": "6904",
+      "question_sha256": "602ad7f4be3fd069cc5fc48e26afa4b52fb12543a915829db11a4b35de56ee2d",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/7107",
+      "folder_id": "7107",
+      "question_sha256": "3e6c4bab3e51c06572d1a37af75cd951b491eaf7c9a7af7c3f55098ab359991a",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/373",
+      "folder_id": "373",
+      "question_sha256": "77ba112fe0adf4ffcf24103828e4a7b29ee2021602fc45b6cf1e453babe70128",
+      "steps": 5,
+      "eligible_nonsearch_steps": 3,
+      "sim_obs_exact_repeat_previous": 3
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/6904",
+      "folder_id": "6904",
+      "question_sha256": "ec4ba7f55174d30d2a049d6ea3f072e29c01add4c532bc71fba8b0bf8dab4829",
+      "steps": 5,
+      "eligible_nonsearch_steps": 3,
+      "sim_obs_exact_repeat_previous": 3
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7107",
+      "folder_id": "7107",
+      "question_sha256": "15b54e2ad86211088c2a95579437d7ecbbb03e42d21f42468a073058c0fb7d4a",
+      "steps": 4,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7356",
+      "folder_id": "7356",
+      "question_sha256": "5c32c70b10eb6fcd592031e4f4f7b2273c7110371079e10a748410d6675acd93",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/2316",
+      "folder_id": "2316",
+      "question_sha256": "7266b2e4089d2a642f7f0b3b3ea7ffaeb5bbd743051275d9e8714c51be2a529e",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/4202",
+      "folder_id": "4202",
+      "question_sha256": "26a4d80de8be6a6ee55660da49b36cff4f53ac297e7eb4621b204f9209e24079",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/7107",
+      "folder_id": "7107",
+      "question_sha256": "3d652af273276c523ca9030c2540fb3e466a2a83304f57202143fa7e84474588",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/7356",
+      "folder_id": "7356",
+      "question_sha256": "566847a5926e26bc8aec464bef11043fac110b4428c1a8591a4d374cb9d466d3",
+      "steps": 3
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/1248",
+      "folder_id": "1248",
+      "question_sha256": "f24cae757241ed39044695d34381b2b490bd6785f05b32e42ca1b9fafcf120b7",
+      "steps": 2,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7090",
+      "folder_id": "7090",
+      "question_sha256": "d0072545f96ccaec963396f2f2785d028ec66fe86e1d1e926076bbf6d84526e7",
+      "steps": 3,
+      "eligible_nonsearch_steps": 1,
+      "sim_obs_exact_repeat_previous": 1
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7107",
+      "folder_id": "7107",
+      "question_sha256": "008b741b1351fcff8bf7d08d768f54f8c38e81b021ae74f2dcfaa261774ba522",
+      "steps": 3,
+      "eligible_nonsearch_steps": 2,
+      "sim_obs_exact_repeat_previous": 2
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7356",
+      "folder_id": "7356",
+      "question_sha256": "9aefabc3ca87adbde4860771a70ce70c5a071c85a91faf8281510f2f8dafaa08",
+      "steps": 3
+    }
+  ],
+  "lookup_records": [
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/6",
+      "step_zero_based": 1,
+      "action_sha256": "591f79b147ea9eec56f2a947bdb553b949086b7c79936e7f81e7d3f7b97b4446",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/7107",
+      "step_zero_based": 2,
+      "action_sha256": "7e22e220d386386234d1aa4f0a8e0fc3ffe7254fb47df85c9ef6d619f58d410c",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4349",
+      "step_zero_based": 2,
+      "action_sha256": "e20de5992926d9552a517c10a5bd8236d8e890edaf0a8f0c6c4113783b81ada6",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/7090",
+      "step_zero_based": 4,
+      "action_sha256": "89b4ac425a675cd58368e7d9a080795b0ffc4f455f76224ada010dae50af9bbb",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/7090",
+      "step_zero_based": 6,
+      "action_sha256": "601b538034ff5a2dc3fe06e845012ab3c2d4bef21dfea67d9ac9a67c92eb8488",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/4202",
+      "step_zero_based": 1,
+      "action_sha256": "23b37ada75e339793ac8df8d651f7d774ecb51e495db0dc4905e59d4721e62b4",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1354",
+      "step_zero_based": 1,
+      "action_sha256": "4f4a509bd993c64fa730a962111d564c83245d9b1f51b5f98a84e5919634a087",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/7356",
+      "step_zero_based": 1,
+      "action_sha256": "7236655b52cd835ec82d8e324093ef0dc19a42457079327d39116818e408209b",
+      "normal_observation_sha256": "513441ac1f86845ff6974040b073607eb8d4d88fcb06f20193e803a2553fde6a",
+      "has_result": true,
+      "explicit_no_more_results": false,
+      "result_body_sha256": "7985c4805338b9fe65d6e92e2880f58ce83105b650c9140efe0a26491186efb6",
+      "body_exact_substring_previous_simulated_observation": true,
+      "body_exact_substring_any_earlier_logged_normal_search_observation": false
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1267",
+      "step_zero_based": 1,
+      "action_sha256": "e0718878bf46c04fa7d96f5c8e8062a4b58822dec332fdd95a290824a5320189",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1267",
+      "step_zero_based": 4,
+      "action_sha256": "bd90153b240c9faecef43539bf16569ef94c02e8e43df4c73065e908145d581e",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477",
+      "step_zero_based": 2,
+      "action_sha256": "eb7a05d1d289bd64904fa7f6f0b72b3de7bb1977cd3d030a7d7ff60ced0c4895",
+      "normal_observation_sha256": "fc0594db4dfeaff74125aa4ca945032e2a404489419ab1759fb3b1506aeaefad",
+      "has_result": true,
+      "explicit_no_more_results": false,
+      "result_body_sha256": "e1e4201c20b431cd00151861a83977da2f9f54dc89eb07eb662c71cbc73b6634",
+      "body_exact_substring_previous_simulated_observation": true,
+      "body_exact_substring_any_earlier_logged_normal_search_observation": false
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477",
+      "step_zero_based": 3,
+      "action_sha256": "f849d359d13cb6a996777d772ebb93d8b9f0ca089dacfed0e453e3e396de55f7",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477",
+      "step_zero_based": 4,
+      "action_sha256": "958443cd8f0aa39f77481e5d3fdd17a2b0e8997bcf2d20e491050ed8517928a9",
+      "normal_observation_sha256": "333d7e9dd6c02ef27ad986c59a3275781fa653319303c5630f54675496d8135f",
+      "has_result": true,
+      "explicit_no_more_results": false,
+      "result_body_sha256": "599c611c05bb04572273a149586f2d55efc5e7e2a3cc8b02e1e03a8d5fd17bd8",
+      "body_exact_substring_previous_simulated_observation": true,
+      "body_exact_substring_any_earlier_logged_normal_search_observation": false
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477",
+      "step_zero_based": 5,
+      "action_sha256": "034d7ab7d70e21e357448c1c2a53d72488ef47093f718d7742b495a788ba8fe3",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/6904",
+      "step_zero_based": 2,
+      "action_sha256": "6635187311daa6f221d50649d4518944dcd9fc9d8fb5766a7bbddd47a6c0a8ec",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1248",
+      "step_zero_based": 2,
+      "action_sha256": "b31fbdd14e20f7d6252d90a165edadd82ee53c409004ced1c41ac4dd797ffce0",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/7356",
+      "step_zero_based": 2,
+      "action_sha256": "e78e777fef9c4f48198c21be7bfa8cae338b9107f2cfb3cc59ec83b98b4ca59a",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/7356",
+      "step_zero_based": 3,
+      "action_sha256": "804c986e7cb80b97f460b2b6aeecc59c0171ac8fe0cd1778618f8f82c6952246",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/3021",
+      "step_zero_based": 1,
+      "action_sha256": "72c6c29b26fd340a35247ae540eaa895f3bec4d1c07359ebf45953026fdb0fef",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/3021",
+      "step_zero_based": 2,
+      "action_sha256": "7b2d98faa2b60329803522c14d95dd41f8e393982697df257c07af9e92689b8f",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4349",
+      "step_zero_based": 2,
+      "action_sha256": "a024595a36426248ce9683d745238cf2f8e260f0e44d32d93267542f328bfddf",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4349",
+      "step_zero_based": 4,
+      "action_sha256": "a378d6b039bb6f644cdfea128909cb16fb461419622b1238a10843d0b74b60de",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/373",
+      "step_zero_based": 1,
+      "action_sha256": "25cd4c83543f83109bfe0e1afee701810803ac404f5a65eb4015d0b01c086017",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/373",
+      "step_zero_based": 3,
+      "action_sha256": "309a5cd4eab4cb63bffbb063f1161cbc7286afc6a85ca1f1ab4d5a172d7bc448",
+      "normal_observation_sha256": "ba14fe74b61997f96406bcb259c039c2f54e63169084c87a43330f55e4df2e64",
+      "has_result": true,
+      "explicit_no_more_results": false,
+      "result_body_sha256": "7688b7cf8dece08a8b28d38627e22bf45484b031e7e1b5c8b6bf5933ff4cf8b7",
+      "body_exact_substring_previous_simulated_observation": true,
+      "body_exact_substring_any_earlier_logged_normal_search_observation": false
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/6904",
+      "step_zero_based": 1,
+      "action_sha256": "a22c395b72d3e39c7feccaec925c9326d40e1c63d3b2296a552d0d26969c0985",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/6904",
+      "step_zero_based": 3,
+      "action_sha256": "ef2f3f1bf8b7e2689e3cc448e1cb1030c11769212e6a6b2fcdf32219e728e880",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/6904",
+      "step_zero_based": 4,
+      "action_sha256": "bf857da29351e7a1a6a35a26dec3a4711353e3d73200b702708083d9c0d604b9",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7107",
+      "step_zero_based": 1,
+      "action_sha256": "d5765e4b6aa090ae4646990a289af1cd3e2f7f7f8f848ad4d66cbe7f9bf7b237",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7107",
+      "step_zero_based": 1,
+      "action_sha256": "db73ae005892b2ef0c48cda5c59202d97128b99849e123cc5ce4542bcbd53a19",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    },
+    {
+      "path": "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7107",
+      "step_zero_based": 2,
+      "action_sha256": "5dc2b32395d7e05bb13c8f4df7110d72bfa8674cf73a05e6af15c482d5f54bfc",
+      "normal_observation_sha256": "de469c686c949a5baf4cfc7737daee726788c3ddc5b123d50e2ae1141b52ca5c",
+      "has_result": false,
+      "explicit_no_more_results": true
+    }
+  ],
+  "limitations": [
+    "Archive README identifies illustrative samples; selection and generating source revision are not established.",
+    "Logged normal search observations are truncated summaries, not full page states.",
+    "Text overlap alone does not establish provenance or the counterfactual answer/reward.",
+    "No action accuracy, latency or success contrast is claimed from unmatched question sets."
+  ]
+}

@@ -1,0 +1,949 @@
+{
+  "repository": "naimengye/speculative-action",
+  "commit": "dc938b9ef7474caf07fe4ad16549c1fa8c7d268c",
+  "tree_sha256": "d5e7f73c09500a5cc09eebf8abb50221f3c023ceab9f4eb0ccb7ef74bdf9fa95",
+  "selection": "all normalobs.json and simobs.json files below hotpotqa/run_metrics at the pinned commit",
+  "files": {
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/2465/normalobs.json": {
+      "sha256": "252201b1efb38c9a3f5bff14e6615ef7cf58a3070b71effd20c87335998b9e81",
+      "git_blob": "71bbf840ef6f1dafcfd7a8969c87f2237ee3390a",
+      "bytes": 8789
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/2465/simobs.json": {
+      "sha256": "dec830f5690ae8bc4db2136fbccf3412d57bbcba796608f33542959fddf18085",
+      "git_blob": "0967efffc2c8336daae541f747b1f1e00ebfb4a7",
+      "bytes": 8419
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/2527/normalobs.json": {
+      "sha256": "4036b9e6a42af101c6777aafabd8abed6981da17eaf842744c8b5e41dc2c3d4f",
+      "git_blob": "1c363fb0369715dd2df16996a003ddf38fa88809",
+      "bytes": 8692
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/2527/simobs.json": {
+      "sha256": "83ee59b9478c581ce11ee55bc929f124244da96fc9425d5e852ae2a044533ae8",
+      "git_blob": "4433e8a2520f5e291a0d03d32c0165513d6cc088",
+      "bytes": 8331
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/6/normalobs.json": {
+      "sha256": "49fb95a551b5f588df22ef891eef99d393a952bb2c0e98356d8553b146be9f51",
+      "git_blob": "f21123fafa394e71244f7003b28201f876f476e6",
+      "bytes": 9739
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/6/simobs.json": {
+      "sha256": "01cc2c044ff469689599460bd687080596d64dddde5b73a0ac403bd4c3a07c95",
+      "git_blob": "f9877619a3916d39bbf8ae09a9661e176d31d32f",
+      "bytes": 10813
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/7090/normalobs.json": {
+      "sha256": "c6929421098d7772676eb6c5b2f5bd816452508a090187273993b3acc7201476",
+      "git_blob": "a2a6e8a83a1bd19a6958f02fe3eb14b2250c36ae",
+      "bytes": 8601
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash-lite/7090/simobs.json": {
+      "sha256": "ee3ed36bc9fb1617a8ec151ee0ea5fa0311cb02fdbe31588f34c3ba5ab5e2e53",
+      "git_blob": "aa02bdd9bba439f04e12e95dcba43b911531a047",
+      "bytes": 8292
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/245/normalobs.json": {
+      "sha256": "72749f998138eb6f0f14196be4d6d240f1372e9649a027be29f233ae797f80fa",
+      "git_blob": "faac38f9388b649757c7feff84f3c09b5e14f6b8",
+      "bytes": 9204
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/245/simobs.json": {
+      "sha256": "3b8f7b4d7a15c83d9fada7a4f37e805a250758fcdf918f11073955863ade5926",
+      "git_blob": "0637e6c1a2d4a285bc6bf3c842ff4393e7d8906b",
+      "bytes": 8611
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/2817/normalobs.json": {
+      "sha256": "1f684f330039a24f73290d2be006350d457da13f7d341a041be0c2ab7ba1ca22",
+      "git_blob": "09b37bc0c655e5cc8861804fd3cb2632444ca37e",
+      "bytes": 8121
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/2817/simobs.json": {
+      "sha256": "2ae85f36c1ffb2e74f8f37e39d4b5645f37da5fff8ef99f916e5b426891cc64e",
+      "git_blob": "105d28e134f6bddb45feb389927c4dd61cd0a99c",
+      "bytes": 8044
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/4164/normalobs.json": {
+      "sha256": "22552d619a3e1b25039c42f0b9029b78bd0eb3472be9c45b0ac49f9300cb2c6a",
+      "git_blob": "1d0807536bdbd63e7b2ac60e5a8b421fa698700e",
+      "bytes": 9192
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/4164/simobs.json": {
+      "sha256": "188746ab7cfa7ea8a042ffd207ec6ae665d63e6d3145f63704983b9bb0576235",
+      "git_blob": "070723c00b76e59dabc76495f3029084a58d357a",
+      "bytes": 8727
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/6031/normalobs.json": {
+      "sha256": "2f1f792ca9a6f08df28f270230e1c3faeec832d54593180c19c5164c784494b0",
+      "git_blob": "905e63e86fb2b94e9e9f1c2e033f059a592ff736",
+      "bytes": 8474
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gemini-2.5-flash/6031/simobs.json": {
+      "sha256": "98478fec4618d7d30c5408455c4e68ecf5083a564f6192395acc5ed57ff46d18",
+      "git_blob": "c6944612159d3d79972477f3038b39124f65142e",
+      "bytes": 8658
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/191/normalobs.json": {
+      "sha256": "e0df53b46a903082a7ccc9abe845235ef1cb48ca6fb87a5e32e17b633c00f25e",
+      "git_blob": "2b0d29408a2c2d31d176ead25452735b465f93ec",
+      "bytes": 9809
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/191/simobs.json": {
+      "sha256": "060aa3beda749ea43693dbe770793ac501193b5d23c5bad5f9abc6f9c81e6c5f",
+      "git_blob": "891a8345677a0c4a70bcdcd1f2e619d07438b417",
+      "bytes": 8680
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/2817/normalobs.json": {
+      "sha256": "ca4e66b4151044d8b1a7af509b97e438d98c65c705ef783a153c90db5683f91a",
+      "git_blob": "a70cc0afd0ac1e1a90f01f6eb7ed1d879cf075f6",
+      "bytes": 8766
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/2817/simobs.json": {
+      "sha256": "03a38664da1e633dc83247878826e4097bd3892921c32299b073530549e03874",
+      "git_blob": "27c2f939659475c0cf310994ab7e76dd75eb4bb1",
+      "bytes": 8233
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/3954/normalobs.json": {
+      "sha256": "428b5f4a8f0ca7e81a4af1c6e56a6066ca862649af6cf78f168d6b415e40446d",
+      "git_blob": "78d40c02a9c30e3a7299a2f144e44ea6fd9ab8b3",
+      "bytes": 8839
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/3954/simobs.json": {
+      "sha256": "90f9a7e7996902235e86105d18358ff4a18d0657d0a51f6536df0ab7004b77dd",
+      "git_blob": "0b8f3e5aeac915ffb6f23e21e6b6ae7ea6bf76fe",
+      "bytes": 8550
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/5890/normalobs.json": {
+      "sha256": "6bdf8336caf9a9f7c1ee287eaa491a441d3dfc97be36d99e39e8425fbd0ac944",
+      "git_blob": "be9cdd70eeab3a16cb3bcaa1951465aabefe8209",
+      "bytes": 8107
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-3.5-turbo/5890/simobs.json": {
+      "sha256": "828717273a291a7979a352dbacbc3bf20f807874404129ef0033d48fba2a4579",
+      "git_blob": "0bbc1190d4a15d397dc0de6b7be001f9dc57834e",
+      "bytes": 8092
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/2861/normalobs.json": {
+      "sha256": "c67f1c1b2cef8fc9c8ec292d4947937fc53b39a94f781fc7ded7e445a99bd10e",
+      "git_blob": "c2efd80713b95d223b0b6a2a927685bb337c8552",
+      "bytes": 9394
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/2861/simobs.json": {
+      "sha256": "d92ad812746bd9382ecccf6a2a9a68c98868145b015793068208409101beea4b",
+      "git_blob": "9631083d164bb2b28ba4e2af72799e364db38b6b",
+      "bytes": 8738
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/3908/normalobs.json": {
+      "sha256": "2298f2c4de8a7951bb263efea8d11442ae568019d1bbf2dbe7f8b1cc73911136",
+      "git_blob": "3b89e434cf2fb864e30c3fef7abdd0d5272cc47e",
+      "bytes": 9124
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/3908/simobs.json": {
+      "sha256": "61d475f1aa7bbbbc8f2868eecd6dacfacf6f9dee4cc83df1cbd8749cf66dacd9",
+      "git_blob": "ce8cf4d7833a9e3ff58ce0431bbdd4dd078ad229",
+      "bytes": 8789
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/4212/normalobs.json": {
+      "sha256": "a4a9875587292ba9a6992281b88fb4be3d9032ed3572e48c8ddeb5ff2a055808",
+      "git_blob": "7005458dff404e1f1048459c0c43ac89516ae7b4",
+      "bytes": 8137
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/4212/simobs.json": {
+      "sha256": "4ba0f614b09919cc02741005047f6e73187ab9c3ac8697fd50432603a8de3c81",
+      "git_blob": "7f315dfc7278cc28563a0a4f2d7b7899aee7dd3d",
+      "bytes": 8304
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/7107/normalobs.json": {
+      "sha256": "6d5cc5f0659641509cd37c3ca18c3ef9c1fcd90e3264d306f72fbd7b69cf58d3",
+      "git_blob": "1332befa10137926e40f2f8ef0fd14d534417771",
+      "bytes": 9698
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-4.1-nano/7107/simobs.json": {
+      "sha256": "fef708e74eba0f74cd6e64e54f35af2e60d81836cdd59cd7988b8d70161a2b62",
+      "git_blob": "f2acfe293b3b981bd7250ef8739e61af59754c52",
+      "bytes": 10513
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-5-nano/5619/normalobs.json": {
+      "sha256": "1c0b2b10758c9d546b531de3fba0e28a6d7b34b8ca8a2211f465e716b04ff9e4",
+      "git_blob": "c565e818202ddd8519e84d6f523aa743edfaa326",
+      "bytes": 9885
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-5-nano/5619/simobs.json": {
+      "sha256": "a6deaac7f7478ef0ffb972f83894487603f2f19b14530288c05b4335d6063635",
+      "git_blob": "ff536bf20cb478fa56099663605454d337ae845b",
+      "bytes": 7714
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-5-nano/7107/normalobs.json": {
+      "sha256": "d9175c05f09b21b2b4c046a45e9993f0cfef90d2b4c38150643e5d0a6e4ab096",
+      "git_blob": "a129440e0e290d734db58f624de53b9a734a5266",
+      "bytes": 9243
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top1/trajs_gpt-5-nano/7107/simobs.json": {
+      "sha256": "ed32528fcf58ed1b2a2c45279a0382ed81bf9425cff739f411c16c282a040218",
+      "git_blob": "9037f1887188e5b902316d6354f73f157f907b70",
+      "bytes": 7674
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/1267/normalobs.json": {
+      "sha256": "f1fde4335b09104b5005fda5dcbe44bfe40d3b8caa3c894586a75fb8dcff9508",
+      "git_blob": "5efee441bb5df598b76045dcde6af7e11a6895cd",
+      "bytes": 8011
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/1267/simobs.json": {
+      "sha256": "d95833c14878ff2e2da1210319bc22c710cd95c2bab62c02a484a4d4848af8e6",
+      "git_blob": "7df85708d21555db5ab825e2291552339143e069",
+      "bytes": 8680
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/2038/normalobs.json": {
+      "sha256": "50d5204868f27d281d73380cfa5aa6b5742e7345c68e7e3fe5d2fba375b9b803",
+      "git_blob": "e6bea37904b1d8c7d8cf6e1213e3d82759c97725",
+      "bytes": 12393
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/2038/simobs.json": {
+      "sha256": "622fcc152a9496678d572d85c049a64b5b99a1e606a3765cd86e5d3dbe605e14",
+      "git_blob": "f3f850305dbf1f67683f5c37afb84b02f8da55c5",
+      "bytes": 12008
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/4202/normalobs.json": {
+      "sha256": "5dfb60e1eb815a2e987a25d03d3e97d810a84d27b8effc9fb9a41846ed195fdf",
+      "git_blob": "70f11918a33ec71c62487b7343c2323eae80dd18",
+      "bytes": 8516
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/4202/simobs.json": {
+      "sha256": "66f1cf96e86afabf515807627bea121a4610925388ec54721b5ab7e5d1b0d5bb",
+      "git_blob": "771b10f04d96d2e2d4a9518b64174fc4427b8954",
+      "bytes": 8975
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/5619/normalobs.json": {
+      "sha256": "07ec270d7d530aadff8b88cccff9b09b1a41359a2ff4c242161c8affbdb7ec52",
+      "git_blob": "252e0e6c7273dce4f0040c63878805d6cafbc46e",
+      "bytes": 9836
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash-lite/5619/simobs.json": {
+      "sha256": "cad4db8655de3e60fe6700ec72aecbb920b10bd58e7b1c37380e0d58259f124c",
+      "git_blob": "874a77fd763ef381252c54894d86409b4541d3f8",
+      "bytes": 10019
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/1248/normalobs.json": {
+      "sha256": "755398b1fddc942cd570c6bd9f5c081143bc5e6b388303a4e20088975ab7eb78",
+      "git_blob": "3edb4d55f862a719dcbee7de21ad28d8a14ddd44",
+      "bytes": 8842
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/1248/simobs.json": {
+      "sha256": "f79d5b74d118b36b45d81ebff3339cd885cba5822c60bbbde3193709999d4666",
+      "git_blob": "de9520d44f49b40e49e853a52c77da25e509a64a",
+      "bytes": 9426
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/5619/normalobs.json": {
+      "sha256": "2c68d0095f51dd8fffd7e3823be242aa7418edb685e8a01a945698aeb1268d33",
+      "git_blob": "46329d6b32b029fe687c9778b687dea2bca203d5",
+      "bytes": 9216
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/5619/simobs.json": {
+      "sha256": "f3718feb5f44ffe2a68c486885e1b665651062176c5efb4ecb48fdac746d321a",
+      "git_blob": "61cf577d7805c63f81690519b3233b41a3932b6d",
+      "bytes": 9427
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/6/normalobs.json": {
+      "sha256": "ffbd3cecc9a10aae383f9e90051724113a57d0e12c5ef064e38f7e69ca461fe1",
+      "git_blob": "daeeca23182b7ccb419a13c67646868b22cba448",
+      "bytes": 9885
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/6/simobs.json": {
+      "sha256": "c82514467a14e35be19975ef85cdc8bca87118556cf070f0f3f584989a51bcee",
+      "git_blob": "cca94b7dc45e288526b1cc96d4bafc667340a6dc",
+      "bytes": 10389
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/7090/normalobs.json": {
+      "sha256": "57155cb98d66df2b1bc20896c0fee30f1e1e75402742604c5b21beecc3cc1172",
+      "git_blob": "ef21d49b03588768b8469c7ef679747723fdbb65",
+      "bytes": 7976
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gemini-2.5-flash/7090/simobs.json": {
+      "sha256": "4d288219d2db7e2a620e012202471dcfb75b56e7d769b027dba0a5a67d2db138",
+      "git_blob": "aceabdcff114c6b606d06db49a3531a719a054fe",
+      "bytes": 8444
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/1477/normalobs.json": {
+      "sha256": "0536615aeb6757d249f5f055ddbaa21cbe63b87eb4504b3c4c3d7b234262f2a1",
+      "git_blob": "5eb0f3651c80bde4b2ac69509d52cc09704df30f",
+      "bytes": 8685
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/1477/simobs.json": {
+      "sha256": "38aa32dc5d9ec1ac6efd866ebd9bac9933fd045f3cd176c3e1ad00f80e73bd58",
+      "git_blob": "3a6edad44e3858ec70d493c276dc2245c6b5b818",
+      "bytes": 8722
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/2038/normalobs.json": {
+      "sha256": "d51a959fc17428f51209604c6c02f2e92c6921852c4d94e547a99920581929c1",
+      "git_blob": "687d0a985dec5dfe5bc0d3ffda771df7d5ecf937",
+      "bytes": 13917
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/2038/simobs.json": {
+      "sha256": "d03d51d00bf6c36bf4f94c2878fad992b133ccbb71391144960d01d4ade9ed18",
+      "git_blob": "c451fb1d922c460d4ebc7aa45f66de0176b3afd2",
+      "bytes": 11875
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/2316/normalobs.json": {
+      "sha256": "485e3e50e27b19a38e8c4b0e63905959adf33a2b3438bab2f2bbfe22c16557e6",
+      "git_blob": "20f18fafc0241ce1412a7763e741c475bca5631c",
+      "bytes": 8490
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/2316/simobs.json": {
+      "sha256": "79533e031fa2e8e253dcf7d7ef54a34cb6231b28fe6a1d7cfb15eac49434c26d",
+      "git_blob": "2c88397cefb1ca4573954bd8b5ef72d0ad11c13d",
+      "bytes": 8486
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/5619/normalobs.json": {
+      "sha256": "e7e86a161bba27eef93670084c15155bb0e913c89ab6dd25628ed218964bc91a",
+      "git_blob": "552034bea4cef486a01d00c593fd8d4357377a7d",
+      "bytes": 9307
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-3.5-turbo/5619/simobs.json": {
+      "sha256": "99f95c846895b1cdc154f729dde0adfdc4fc70bfb4e00c17fb32a6d516fc5139",
+      "git_blob": "97b39f826b83e3d2dec62f893e7a3b976243ac3d",
+      "bytes": 9139
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/2885/normalobs.json": {
+      "sha256": "74ca676634f0c21a829b628adeffcf3877d394ad5ea5e83cff67d6d5aa80ac42",
+      "git_blob": "1c2585532f5c9e44830773cc6881a1c5a9f3526d",
+      "bytes": 8759
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/2885/simobs.json": {
+      "sha256": "82a710193077edc3ad22087787a720b10b4704bee69a2fb975debdc914f5c383",
+      "git_blob": "190dc4287116d63876cb5bdf040d85639823b735",
+      "bytes": 9628
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4202/normalobs.json": {
+      "sha256": "57e3b67ceb4d25b650d664d63741bd15b34d3367bb5a681199e6a1cf96e479cc",
+      "git_blob": "969305728e8fddd1a9ecd112e0509b9c1350f253",
+      "bytes": 9792
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4202/simobs.json": {
+      "sha256": "fbcd11a3e05e5ac93374fdec74a631cbf1e6931fcbc49b8383c863de693ccfdc",
+      "git_blob": "7f556e1f6c53620ce87624ac29a93770037da556",
+      "bytes": 10248
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4349/normalobs.json": {
+      "sha256": "7080eeb16a6c3c3bf03c2d12f9fb0ad3a371feda3ddc2460bf64141797eecb72",
+      "git_blob": "e7fe9c319d8cf4f8ba4671cc7aab342927690156",
+      "bytes": 10719
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/4349/simobs.json": {
+      "sha256": "acd53fa51730de8786c266f2f929a88d753283a3f46b44539cf2784ec6296bd5",
+      "git_blob": "a2b30330d841f98988a828d9525b55e31edd85da",
+      "bytes": 11608
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/6/normalobs.json": {
+      "sha256": "bc00c61cba814a78871a701a58b131d67eed5509f64a8431ee57add9262780c5",
+      "git_blob": "f7358763d25a4b514a4d32502b0aa75e8e45fee6",
+      "bytes": 9020
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-4.1-nano/6/simobs.json": {
+      "sha256": "8dcc0ef7d86ce37e10d304d34932055384d9ff868405d45ad9173153499af0cc",
+      "git_blob": "0f230d30cc8225edce94a2475fd3092a650a5429",
+      "bytes": 9259
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/1248/normalobs.json": {
+      "sha256": "8d7c392d13dd52546a8bda1b3c5d379adac4f41cbd1f655369a8b0f1f1912222",
+      "git_blob": "1e75f6f1ecf22fc472a940577af0c6c7296dc043",
+      "bytes": 9568
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/1248/simobs.json": {
+      "sha256": "e70b73238d682c44adaaec51999dfff9c5baa7dcf61ac5a0aa3638b9dab7e5b3",
+      "git_blob": "500ec80f4e7979c9fd79042d490d96cd12309519",
+      "bytes": 8354
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/1477/normalobs.json": {
+      "sha256": "635670b162cff1a60bc231fe9cde088ebbafa000c6bf3b903acf5a0f514f1b91",
+      "git_blob": "34049542467391f71e87bf13c20abf6aabf47b60",
+      "bytes": 9969
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/1477/simobs.json": {
+      "sha256": "df01f4052d79aedac0426a08bae727842ca7a293768a92cacc1915edf707c04f",
+      "git_blob": "600d281c9a6c7fad47c7688cb257d8c28f8d7b54",
+      "bytes": 8902
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/2885/normalobs.json": {
+      "sha256": "7c52d139d2588fdd6bb2f6b8d04a7afbd76c9922aa06a79b20f52e7eb6b45ac2",
+      "git_blob": "04fa5b0e521dfcf7addd1356361fd82c4ac4a652",
+      "bytes": 13073
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/2885/simobs.json": {
+      "sha256": "2997076e088440b74e0d7323fc83c76f03cc0cf51f52d34142e2c9dffb36d99d",
+      "git_blob": "93eb0113ce5ed2afd37e9c95a4708df4e7de61f1",
+      "bytes": 9965
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/7090/normalobs.json": {
+      "sha256": "5d94ce89b22d938cda179734308708ff92d1ca0632aa2d09005ff3aafc010884",
+      "git_blob": "e342f73fc565a4dc4a6486fc64ca5a6d62617b67",
+      "bytes": 14786
+    },
+    "hotpotqa/run_metrics/agent_gemini-2.5-flash_top3/trajs_gpt-5-nano/7090/simobs.json": {
+      "sha256": "8a3f52164dc664844927069fb3934e8b43b629ec809c31c7ca63cbfe62a5be56",
+      "git_blob": "2ce9e85e4527b722f40503e53ea361aee6b2890b",
+      "bytes": 10544
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/190/normalobs.json": {
+      "sha256": "46df5caa1e63d62749fb60f0a2238085da4c1a695fb036f2a55352c022c2269b",
+      "git_blob": "db19bdead1ea3d8a6085cecdaec2ca37f61aa20d",
+      "bytes": 9254
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/190/simobs.json": {
+      "sha256": "ece75ff5cfbf04cbc9cc7798ace23dad12a88a1f75daf5c90bf37967e0b13dc9",
+      "git_blob": "f0c61187f1ea49be5b9e786b78ad3646c254ee80",
+      "bytes": 8904
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/211/normalobs.json": {
+      "sha256": "bfe6f4ac9f2d297bab7ce24b6c35bbcf7fdd5015074fe32c67f0d5bce3fa9b9c",
+      "git_blob": "cfd65b96cfac4a50ccc6d0d721f5e6bd74afb840",
+      "bytes": 9350
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/211/simobs.json": {
+      "sha256": "a4f48e770beb873e08808315cc2ef8da7208578c1e7f504d2e1fc746a0bbde90",
+      "git_blob": "ffb5748e5d7e28910dc01c1ee9a3b6dd93bdaa5b",
+      "bytes": 8325
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/245/normalobs.json": {
+      "sha256": "b3a4806d2024182ca9d4a6c6449f77c4409f2d9afca5e12f4eb9a115d8928a89",
+      "git_blob": "cf7714fcdf3798d493a451093939f72120f14a44",
+      "bytes": 9025
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/245/simobs.json": {
+      "sha256": "14f968e583525c920a2acc4324f9f70b372f0b8b37cfbd3557df34743261cc82",
+      "git_blob": "47a7ab948b254eca25e863a2e5522a063431d47f",
+      "bytes": 8483
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/753/normalobs.json": {
+      "sha256": "4d99c96ca54c2b233ee2f31cfcee8f38af8170822b15c1cc2c7a32a8bd1b5671",
+      "git_blob": "1c3f0bf8f3ee51f5b51fe1a097e19fca31675d62",
+      "bytes": 9094
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash-lite/753/simobs.json": {
+      "sha256": "01c41b3828e8f76d7317eb87eaad1dfdb1bb6c8bb5b82fc73e2e1652d9d0de16",
+      "git_blob": "4b847b197550a3882f30cc12bc76a37306e7de3e",
+      "bytes": 8490
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/190/normalobs.json": {
+      "sha256": "e0c496110d60e8f1940c4cf2f3ed55d80561e9f088dfba6be89a1207ca2b9c04",
+      "git_blob": "3242d6b2a857990793ef87cf72525259733cbbe3",
+      "bytes": 7807
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/190/simobs.json": {
+      "sha256": "137774d62b3ab24a459f794eb249a40c131e3127bbfaf9a15f616adc2fcc878d",
+      "git_blob": "626e3093bdd102d192e54f369d5b74922f1bac73",
+      "bytes": 7740
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/4975/normalobs.json": {
+      "sha256": "d6a5dd4309cd12f9b8a8b1ae1fea23d6e4399a6b8f45c88ef5a1bf556799f00f",
+      "git_blob": "311a10df9f8acd0fdeb4e10e77a26017588963e9",
+      "bytes": 8879
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/4975/simobs.json": {
+      "sha256": "bbcc4ec36a6e9b32dcbddcca3cb47074fd0312d5e684ca5bf331f9b055f1fc86",
+      "git_blob": "97bb5af4e0bf772b54559c5ebe813b638f08bbe7",
+      "bytes": 8396
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/656/normalobs.json": {
+      "sha256": "cea7736558ffd7abad9b42ab33be7c0d485ce2dd240891da496dcccdebf0da8d",
+      "git_blob": "c257a08f30445691bf54223c8ed58b7ef4696e5e",
+      "bytes": 9046
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/656/simobs.json": {
+      "sha256": "dc6d494dc03f317f462a81476008397bd1055d445a3f7e5c0b794dfbb146f14d",
+      "git_blob": "32934107c10b86f2fe3e2d6d01b4a76e29b2fb36",
+      "bytes": 7946
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/7090/normalobs.json": {
+      "sha256": "61b0f2ad7c7f5c271d50cebf55fe5a82c29388737c13969b01701f57e415f502",
+      "git_blob": "37c9015981f36dab7495aee9aff64e2ebe142ce3",
+      "bytes": 8910
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gemini-2.5-flash/7090/simobs.json": {
+      "sha256": "0dfbd95c09c6ed45c729f77729db1a702046032083e22ac7ff69041330c9da8a",
+      "git_blob": "b33847ed384e2f188b3c76d77688fc2065684ebd",
+      "bytes": 8467
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/1248/normalobs.json": {
+      "sha256": "d1ad76864da4358072032a2c476762040611150550af4c6c5cd0ec6cdd81c3ac",
+      "git_blob": "174f52b6a2e66062cb28c1b5d52f764b29e94026",
+      "bytes": 8070
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/1248/simobs.json": {
+      "sha256": "02a805eaf866c2e8cf7fc94d0f9ef5611a5e0483b136fe800c65fc9278247c31",
+      "git_blob": "a2f40a33a145274618af3ae903b8f0773deb5fe3",
+      "bytes": 7963
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/1267/normalobs.json": {
+      "sha256": "5434aef88452cf192acf42224bc2f16a4f96968e516e80164c2e85a2e30308ad",
+      "git_blob": "ff23d3ad0c228f37d577393a5f78aba2d8c1e7e4",
+      "bytes": 7861
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/1267/simobs.json": {
+      "sha256": "555af6a00c5519c477c73bb19a305a4ebc60f94e5fd996614e8d10b07a4b860b",
+      "git_blob": "62e9ca639e060357599d1519d02609d8079448a3",
+      "bytes": 8409
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/656/normalobs.json": {
+      "sha256": "8e99a0dfb1fa9fc77be226dba6c6d6856bc6dae90703c7a378efb23c8de40287",
+      "git_blob": "b1da33176f089cd819d2ccabbd06cc4f9545b86e",
+      "bytes": 9017
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/656/simobs.json": {
+      "sha256": "4e82970f0077b2c6788633e7d42bece746d5c86ebc6f2437f9b538e91f2ed3d2",
+      "git_blob": "b5b355f21a9f6f4fdb5059c5f7cebf62af8d6a58",
+      "bytes": 8672
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/7090/normalobs.json": {
+      "sha256": "c5cec5dc3252ebd9ba2af0dc358692a922831ed8a3710c7cb312a6c1448ebfac",
+      "git_blob": "575ce4b1f1be0e6500c0273b00a38d209afdd338",
+      "bytes": 9424
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-3.5-turbo/7090/simobs.json": {
+      "sha256": "cbdefb0bb723e2cb7e64fcc691755f65329441780da116e9b2925d2f9bdefb93",
+      "git_blob": "d718063ec6c49e5cb7c7c7617c97fc92b4084aa8",
+      "bytes": 8672
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/2861/normalobs.json": {
+      "sha256": "9f0868c0e76b7f5deb661d38aad4ba1aa8fa3e60934a77684819cc0c419e1d11",
+      "git_blob": "d6a4922591fa76292fb55c08223105b46796b51f",
+      "bytes": 9890
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/2861/simobs.json": {
+      "sha256": "ac4ce2770fbf23528f2bf7e9dd8a31433ef633b9364fab3f851ce6b48db09450",
+      "git_blob": "758a0b06a5ef3dbccb980af95a10c659f2b7f74f",
+      "bytes": 10971
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/2885/normalobs.json": {
+      "sha256": "ac22b4757f0f04ae072060b3a39f2469aa89deea1c336194639ee92c31c99321",
+      "git_blob": "32d154821094b6394a3b17448e57a227b5e4a829",
+      "bytes": 8862
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/2885/simobs.json": {
+      "sha256": "3e76caf911c281c4960647f7c44904ecc037bfde101d07af5d358725d964a9cb",
+      "git_blob": "ac2101c8cfee82b0a452b02b43e55955199bb4ff",
+      "bytes": 8650
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/4202/normalobs.json": {
+      "sha256": "4333eac513cf7de8b0eb0e63c8771ed4ad445a93de6db852a7a7d05f9cfdba1c",
+      "git_blob": "9b522ad699ffd4682a4e423c8cab207918fdd692",
+      "bytes": 9604
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/4202/simobs.json": {
+      "sha256": "d9af237ba4c41f0a7d7c0c397cf8f914ac53dbae536def3f1dd9ceeefd9e1d4a",
+      "git_blob": "e962101cc3689e2cc04031ed5c118002e7a80508",
+      "bytes": 10748
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/6/normalobs.json": {
+      "sha256": "c514b5bd674f41e4a17e2faa1e1797846ce858bd366363eba5a972ea91de13c3",
+      "git_blob": "bd738fa696046b652fb68dab7a84a78d46a3aab5",
+      "bytes": 9397
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top1/trajs_gpt-4.1-nano/6/simobs.json": {
+      "sha256": "f265b38e5f1e9cb0fdc26ee110ea451950e9c31e443cadd2e0ea9b2d02728ca8",
+      "git_blob": "228338c725f3c642baddc4fb0fca02e7e701c908",
+      "bytes": 10497
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1354/normalobs.json": {
+      "sha256": "0eaa0b14094466143da7de91d895d875554a4a8437cca82dc9867c98509825f8",
+      "git_blob": "fb27528490acf962bd1cd6e3919e3110106e2a1d",
+      "bytes": 12817
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1354/simobs.json": {
+      "sha256": "497a7d2de1d0fde20f9221ff9b2e4a9e6e0a27096dfc31e2f012bb9292ea4943",
+      "git_blob": "8acc59646275b7d480c1d2e0b252fcc5c96b9c15",
+      "bytes": 13066
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1477/normalobs.json": {
+      "sha256": "935c4b8053e2fe6c8fb8e29455208e4ba0350cc9756bef8a512b481ad9fe752a",
+      "git_blob": "906d0718b7e63b3e1ab0620dedb500068188991c",
+      "bytes": 9442
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/1477/simobs.json": {
+      "sha256": "b8fb636a8511b309a6e5bbcea0be0bd798016616c1bb9ff4c65de92569ece913",
+      "git_blob": "e9e0bd77bf00d01777f2fa0c73e60ed18c817a81",
+      "bytes": 9464
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/2038/normalobs.json": {
+      "sha256": "b355acedd1cb4fe084af77add997bbbdab6c3ebbab1476845090d8bd72c716be",
+      "git_blob": "6d405e3dfb6c50961250c16ee161b87c2cbc48ac",
+      "bytes": 13153
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/2038/simobs.json": {
+      "sha256": "3513c7ee5b8e13f01dece6b1f4527a4d05f5f60fb7094b4d73f97f993b5dbfdf",
+      "git_blob": "ed7817a5f3e1a170213f7abbaf491b8f6c551a1d",
+      "bytes": 15382
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/7356/normalobs.json": {
+      "sha256": "4964b2c027926f4792b6648e0a61654519b724875f5e09b07d265b696c0923f8",
+      "git_blob": "0481b057747fabbd940ec1dcbacff65854a14667",
+      "bytes": 8567
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash-lite/7356/simobs.json": {
+      "sha256": "83047bbf9a5f11d905a5ad561ddf7887668cbf3876a5d56d245ca841577dbcfd",
+      "git_blob": "9b7583196cebfdd446cf15803ec9b27e3062b782",
+      "bytes": 9954
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1248/normalobs.json": {
+      "sha256": "1087128c564ca62d4cfdde674cc38d8a3587e165310a6b27d2318a4494087269",
+      "git_blob": "4340aaf313e2840caea24deebaf9cd461823af16",
+      "bytes": 10150
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1248/simobs.json": {
+      "sha256": "0999032e8d2700c9762a4d195f9d48152ab1832877f29a821de017c4e346b6e0",
+      "git_blob": "d766325eda292dad1bf1343767cb0f0480c60520",
+      "bytes": 9539
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1267/normalobs.json": {
+      "sha256": "ba10beeacb38ef131a33f45eb7e346848374bb1bf6723409234d0d3ed1fdd71d",
+      "git_blob": "6accad3023d52a16b824b90c9740f73a3bd4c4c7",
+      "bytes": 11663
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1267/simobs.json": {
+      "sha256": "9ef21a104ef2a19945e69de0d882390a6c79089448ee077c86d8f03d84b233af",
+      "git_blob": "8efd848450d3cec08adbb0508b56433a8728bcce",
+      "bytes": 13732
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1354/normalobs.json": {
+      "sha256": "d75c261913bc6f00a113b460cda6132216dc4162803b64c8232c592756e4471f",
+      "git_blob": "246d3251ac16d1494def5739528f973ffe15d1a6",
+      "bytes": 8505
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1354/simobs.json": {
+      "sha256": "536a92173f08e7a682fff47506fcbcd211834212c29c37cf6c9c972b55c5e39c",
+      "git_blob": "911de3e7b3d0ce64a179ebdb7c00b26284d3ed9b",
+      "bytes": 9301
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477/normalobs.json": {
+      "sha256": "1803c334af401a1818630a6f996ac224eb3f9e5e441f5f63b3cf1ab85cf862d2",
+      "git_blob": "5571acddcc0fd2d7cdfd299d492ee56f87070210",
+      "bytes": 10649
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gemini-2.5-flash/1477/simobs.json": {
+      "sha256": "cc6bd478ff9a26d42625183259815e77d63c273e69dd7ef8c4bbf791fd20fdb5",
+      "git_blob": "f782fbe0d59565b64e722ab402df25434651bc7e",
+      "bytes": 13569
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/1477/normalobs.json": {
+      "sha256": "4f557c4717c70591704cd72261556f08328166843f8b6879686ea4d390a81091",
+      "git_blob": "b233e8448d32ffba52a840d9ab775f760fe66b99",
+      "bytes": 9542
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/1477/simobs.json": {
+      "sha256": "26ec6fd2272bb3f4f2b96643b9189708c08c0f5171411be6ce501baa276e8ca6",
+      "git_blob": "7b36122a2e9463eea53cba3064615e76ac3e39f0",
+      "bytes": 9498
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/6904/normalobs.json": {
+      "sha256": "b73b8a3a33ceae234dd89b4bda14d0a571da134f8edaa8c491cd2f17f56cdefd",
+      "git_blob": "eb566aaa2454dc60abfc3059183e9b688ae7dc2f",
+      "bytes": 11138
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/6904/simobs.json": {
+      "sha256": "ec9142debe4e614bf8590f839a49faee9d7e635b713daf7c812f9073e33421d9",
+      "git_blob": "e29a657363bd5e3b46af2d6426b1bb64d52346f2",
+      "bytes": 11689
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/7107/normalobs.json": {
+      "sha256": "32214389aea690f2feabffebf28ae4cd68eb059308e0385c80c53c9994751dd8",
+      "git_blob": "d417b72394d211b5dc9a988081a0eb05f2715e7a",
+      "bytes": 9195
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/7107/simobs.json": {
+      "sha256": "6191538e2fa6ac05758e65bbb060f66d8dca2d0ad39283a898a08a4572e3e3b1",
+      "git_blob": "4a641d073afa975eefb2ab7dab37cf2cd2b22153",
+      "bytes": 9233
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/7356/normalobs.json": {
+      "sha256": "7443f7892a192b5800a5e771d90ec73bae005c6075f4c3c1d8c92de094648d5d",
+      "git_blob": "bee3e904160a22b0f5d4eba09c6c9453d598ddd4",
+      "bytes": 9605
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-3.5-turbo/7356/simobs.json": {
+      "sha256": "02affe4878d111b5f4bb5d8fee974366e61bb879c4b62aa08046d4b1973be310",
+      "git_blob": "a6f14dee09d08f64f3536e78bd53ca077e0c5c27",
+      "bytes": 10868
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/1477/normalobs.json": {
+      "sha256": "22a7ab674de360e68742fb1f79c68adec95551eac2d242c5f5087e5766a2ce89",
+      "git_blob": "f212e6ca8f5705e3e18de073034b9a9dd96d31e1",
+      "bytes": 8812
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/1477/simobs.json": {
+      "sha256": "b6393b5607eaae2a5c912f2697b729670eef1aa5909897fd3dfd72e76a5bd480",
+      "git_blob": "5e937eff5118b6e0c570b79f4ac44cb71f9f3ef5",
+      "bytes": 9475
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/2885/normalobs.json": {
+      "sha256": "72a8de770fbf6f59325e00ae473ac33a36c4d7d902f7d301640617ae8e0bb9f3",
+      "git_blob": "fc2c534087f6396af7e72a42fc687c2231ec071c",
+      "bytes": 9876
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/2885/simobs.json": {
+      "sha256": "fc28b30d1b173b54e00b05f26c1145a95c2caa4ed13844fb218bc95e4132a114",
+      "git_blob": "1d33bfb33ed17304e5f36ffa59556ace867fc320",
+      "bytes": 9717
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/4349/normalobs.json": {
+      "sha256": "4f9a192dfaf6d7db0a3bbaedff7b08d12fd479c09c72d8deb55478651b005c4e",
+      "git_blob": "18c250b77068792a169f4d0ec63afb4858453b45",
+      "bytes": 8781
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/4349/simobs.json": {
+      "sha256": "0235ed2231645dfe589e1a4e42c49739e88fb65cd4f04c4679237984aa0eaeb6",
+      "git_blob": "ce9f488e54bdb2ce362bb87684b8b20568c194de",
+      "bytes": 9804
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/5619/normalobs.json": {
+      "sha256": "fdf45b1dc7c85d06a9e4dcabfcd8a733e7deab0b9c53c9b72de88752b223e10a",
+      "git_blob": "5289c0917b09cbd3821a0845aa33efd59aa7c1fc",
+      "bytes": 8699
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-4.1-nano/5619/simobs.json": {
+      "sha256": "a0ece56c2afcd7b16437473eb3987691df6e8d5f6822c8b85a39b7a533d1e628",
+      "git_blob": "a501bdd8b399187d91c63acdead27104a28647c6",
+      "bytes": 9283
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1248/normalobs.json": {
+      "sha256": "bfeaf18e5df2194d0aec03991b67c227b02797f0966561ee3d9df15d6a32a4b9",
+      "git_blob": "d910f1a792def67838288e246bbbd1a1d9487fd6",
+      "bytes": 10594
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1248/simobs.json": {
+      "sha256": "b942233c139d066ba73eb32cb80237a44927a776122196f0166f0c0f326ab77e",
+      "git_blob": "25d33bdc832cda219516e512dea3bf02c71d081d",
+      "bytes": 10239
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1267/normalobs.json": {
+      "sha256": "058c52e69cc52d847acd416a87bd0cef3dfd099155c64c30b135437626d35b34",
+      "git_blob": "0739e341ca232bee46f3cd60bf43d7b2b3dab3a2",
+      "bytes": 9819
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/1267/simobs.json": {
+      "sha256": "c84fffae6af01857c2cb3ecfe04c24fae0d1989e9d60b9aeb8b42cc38b75cc7f",
+      "git_blob": "65439c3627d925db6c46692c820aad4abb954b5f",
+      "bytes": 8555
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/2527/normalobs.json": {
+      "sha256": "0bfd6b62397aa670a9d71f3da204da1e1bc8c0579c48a7a2aa41d69cfbed129f",
+      "git_blob": "62f690a39321af5696f1549a99440eae34484b37",
+      "bytes": 9139
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/2527/simobs.json": {
+      "sha256": "23447339c69e9f95f50fab507f3b04e03d0261288db1e16648338c542bc8ae5c",
+      "git_blob": "1b189c34a6c975337d14347af5b6e9a4f12cbd93",
+      "bytes": 8293
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/7356/normalobs.json": {
+      "sha256": "5a5c8296c71d7bcf517f5485c3dab116adf958ddf266eb3242acb1d86f901c79",
+      "git_blob": "521b1729391ff63ed56642c29db0ef853ce9b649",
+      "bytes": 12135
+    },
+    "hotpotqa/run_metrics/agent_gpt-4_top3/trajs_gpt-5-nano/7356/simobs.json": {
+      "sha256": "10516cc6e047e4be96cc3712fa68f653e922a83b27650b70f4cf8097289dbda1",
+      "git_blob": "c98ef1c3080b76c2c84839368dcd506b350e3cf7",
+      "bytes": 10513
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/3021/normalobs.json": {
+      "sha256": "be5b98700cf4bd208110982de9e8d9de6a6a0be235f012c1f22feb35649d1bce",
+      "git_blob": "6860904222512c3632bfcb529a4df1b4c1d8db40",
+      "bytes": 8131
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/3021/simobs.json": {
+      "sha256": "8948ca91a50b90a62b231a93b2cf054dea2167ed460f9ae30ff642b83a2dfb30",
+      "git_blob": "441a05fadb04ec780961301488fec88f2a27370a",
+      "bytes": 8856
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4202/normalobs.json": {
+      "sha256": "8ca36030af3cac60d0b9b46fba42461c32df532f2a89022c4ce46617e2e09f8f",
+      "git_blob": "cf702fffbdec3bbb4aa2a88bec5f0e55b9031f64",
+      "bytes": 8864
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4202/simobs.json": {
+      "sha256": "ebe536536240bcf72b9a80595610714fdd66213fd25ca8fa76ded269c442a02b",
+      "git_blob": "05a8a67e3dbab1541307500d2868c97404697c38",
+      "bytes": 8995
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4349/normalobs.json": {
+      "sha256": "b405dc56a5be7e70b553302e9067aae490954df0801c2c1847029926b2f85883",
+      "git_blob": "233e0e1842dee385d9307d9ebbdcc9db697699fb",
+      "bytes": 9533
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/4349/simobs.json": {
+      "sha256": "28bc14a95cc4cbef214128465db4822fea00a9f514ec51eb0f987c147fa48fc7",
+      "git_blob": "e29bf909bc4631e2a9a95fe12eb0544b6d1b3d81",
+      "bytes": 9975
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/6/normalobs.json": {
+      "sha256": "8c07fa3b58dd0fa2f389ffc16015a41775b6327d4daf47d8cb81f73c4ba4c62c",
+      "git_blob": "b62b2e934c7d438788fa66856fd6c37a2362736f",
+      "bytes": 8171
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gemini-2.5-flash-lite/6/simobs.json": {
+      "sha256": "646db9b9d3b54eca711361e3f52bf586d38dd5454dd908ee9a160d8f3f53ead0",
+      "git_blob": "6f59522fa44c48027993129ae5d5547291d36353",
+      "bytes": 8854
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/2316/normalobs.json": {
+      "sha256": "d962a31fd91862337bc6d6e085607f5684d511789c93d09ac9939bdcc8e87f29",
+      "git_blob": "6f94ff821bf107279748f724f30a21b69eb9614b",
+      "bytes": 9297
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/2316/simobs.json": {
+      "sha256": "3cc1ffd7be11c8b8f3ca946c48c36b424334ecdbdbcd0666145e4e5d9c07b961",
+      "git_blob": "d43e1dfd516579052d2724fed3abc869c3fbff04",
+      "bytes": 9051
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/6/normalobs.json": {
+      "sha256": "f177bbab65c99baaa09c8a40bcb0589951d5b2507c2b7ef6453ed01adb96120e",
+      "git_blob": "5b018d30c6fdfcf7cb88540e36534e041c2c904d",
+      "bytes": 6942
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/6/simobs.json": {
+      "sha256": "f177bbab65c99baaa09c8a40bcb0589951d5b2507c2b7ef6453ed01adb96120e",
+      "git_blob": "5b018d30c6fdfcf7cb88540e36534e041c2c904d",
+      "bytes": 6942
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/6904/normalobs.json": {
+      "sha256": "f43dcc89ffcd5c2762a060d3054efd98228d0cfe54f74539386084cb804a63c1",
+      "git_blob": "b885f0b3cc3556d3eb13911d404481c7f58a0f23",
+      "bytes": 8201
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/6904/simobs.json": {
+      "sha256": "b8a070e0068ec5ae82da56f43cd52c1897d23034772505a61212abec35ac617b",
+      "git_blob": "27b8b1067586a1d21d6b3eb52f7880b6f24871cf",
+      "bytes": 8297
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/7107/normalobs.json": {
+      "sha256": "b73d62853273bf9421f0469679cc978c4d7b46904e3e6690a72455ffa12d2aac",
+      "git_blob": "8104caf65b226d6a146de93c755fa3a2b11a98fb",
+      "bytes": 9087
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-3.5-turbo/7107/simobs.json": {
+      "sha256": "315928c458f63fa90056a253034245e96f0e5a67ba695acf738d24a0d8012e6a",
+      "git_blob": "3685276609f88145f66c5eeae7fe3ae818fe9405",
+      "bytes": 9249
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/373/normalobs.json": {
+      "sha256": "7e6ba5b96d52e838fb749d7936e6a20da83010aad69ea649e82fafce51cddfa6",
+      "git_blob": "06c56e0a52ebde93cf20a787b0feba4f09c9fa5a",
+      "bytes": 9307
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/373/simobs.json": {
+      "sha256": "51f012d272fa8e4fb059c43bd09d1445b39a8f718e8fd6ef8137488fb79b4f55",
+      "git_blob": "fd0e33fb85d52fe968c9b17829fbc15368433429",
+      "bytes": 10594
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/6904/normalobs.json": {
+      "sha256": "0b86c9d3cd31ba9f9629b0379599be445e00f57845a82f84962c99ad4798e6dd",
+      "git_blob": "109df7935cecc00b65b225d56ccf9235f3d4155d",
+      "bytes": 10091
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/6904/simobs.json": {
+      "sha256": "cf8e1fc947e6aabf4706f9d76f144fdea3b49c007ef81a83e6378415f2f1e4a5",
+      "git_blob": "9aabb723e3c0e114dfe78473c6f2a7c879ba8692",
+      "bytes": 10130
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7107/normalobs.json": {
+      "sha256": "0b937a2943646675860af1d18dab5aa4dbf37b213daf16c31388471022ceff0c",
+      "git_blob": "acc81cf67acb34a2514ec3d118613a325b53a352",
+      "bytes": 9842
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7107/simobs.json": {
+      "sha256": "370899a7b96e5543174776e56c3f37ed2ca28f80afea78e0f5c977b9b457a2f2",
+      "git_blob": "9d0e3565368bd3e0d3d695e1c390fc71f969bb9c",
+      "bytes": 9910
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7356/normalobs.json": {
+      "sha256": "7d87203133a9907d05aedd406bb633116ec4104c08abf5cddf0bc7eb5f7769a1",
+      "git_blob": "1f04013ede3103ae189b8e955ef6325f16d7b3c9",
+      "bytes": 8573
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top1/trajs_gpt-4.1-nano/7356/simobs.json": {
+      "sha256": "d94503a53ca84e8ae50a5f8ed9f4e06298af9554f989685dafabf9cbf3553e71",
+      "git_blob": "49be098fb47db2f608fc406a9a5db2a0487e74f1",
+      "bytes": 8929
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/2316/normalobs.json": {
+      "sha256": "7460a1defd454fcd374eb519d3afda614836ed437d474846c0b271f348dc0c54",
+      "git_blob": "e0f46e379618f127cd49d8408fe0b12f138d9599",
+      "bytes": 9590
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/2316/simobs.json": {
+      "sha256": "3845bc44fb298b84640d7e742a3f64506122d2ea59d3231c8fad36d4ae7b4478",
+      "git_blob": "370f4d6eacd9b6f1fc0e039bcd4be52ac889e45a",
+      "bytes": 8681
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/4202/normalobs.json": {
+      "sha256": "9f1c86d9a44310597f6e1aafdebc3f47155863015ffba725aa48d49ace851ee9",
+      "git_blob": "5331b44fcce8c816d61cb156280bf6838bbf5af8",
+      "bytes": 8255
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/4202/simobs.json": {
+      "sha256": "5ebe5b26a7e1bed4bd5ad75a8a4bb21a34c7d9fce0f022c81bbb23eb34ccc4ac",
+      "git_blob": "bfba30db16be83f1e36ed5cc8b020c46f079216b",
+      "bytes": 8524
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/7107/normalobs.json": {
+      "sha256": "46d561bd4e4180938efdba375ee41fe7c8274e2b15c112606f2a46ff9b4588db",
+      "git_blob": "37197137dd9e53c3601a1c3c28385b3f8b22f844",
+      "bytes": 9311
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/7107/simobs.json": {
+      "sha256": "975c2af1965cacca4adcb8c5ca6839538a8a15a039ccef057ff5923333aec67e",
+      "git_blob": "0b63170361c108d0cf98ee9b7f274ad69054c381",
+      "bytes": 8955
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/7356/normalobs.json": {
+      "sha256": "7020df4a4c334889c5f23c000685ab51ad33c1567e526a802afc879a3cbd6948",
+      "git_blob": "42f6e77dc9c123a0b54da31dc58c821648522e52",
+      "bytes": 9814
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gemini-2.5-flash-lite/7356/simobs.json": {
+      "sha256": "8ca54851dc18276d09258bfc2126632504673b2f31187aced5b1a63b7110a201",
+      "git_blob": "57a3f8859b99a55d368d8d93df6133aad4850509",
+      "bytes": 8979
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/1248/normalobs.json": {
+      "sha256": "1760aea33f9b5140daacbb9b800ad0035e85b603088e4396a96a132e76268bb6",
+      "git_blob": "f0b264fcee92263c4efb23449e796c5be3118edd",
+      "bytes": 8179
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/1248/simobs.json": {
+      "sha256": "2709dcdc204e6eda87e33acab9532a025d809c958bc3ae5fe91f87b04b02e89f",
+      "git_blob": "c7c9e4bd1a4d4786b8734d9d145163b0103838c4",
+      "bytes": 8687
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7090/normalobs.json": {
+      "sha256": "96c712ade33e41e2d0673b60a2e1f410b3afc3ac4daf65f89c6d6cd64073f987",
+      "git_blob": "2b8020b47a0fbd4f4506025c9ca2a5489800c599",
+      "bytes": 9398
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7090/simobs.json": {
+      "sha256": "a9acd62c357a7b465f73f39638c2ceac1c7231a884e46f3045d1ddfec4af9e58",
+      "git_blob": "f7d724464a571a40ee3c856e29a51ecf22fde9c1",
+      "bytes": 9881
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7107/normalobs.json": {
+      "sha256": "ef989af30b6dd2d3dada377950f5733a0bdae86ee044740b377b308113310908",
+      "git_blob": "f5c138874eebb7a90aaf9debd221251da4c64a11",
+      "bytes": 8443
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7107/simobs.json": {
+      "sha256": "9864c9fa8ee721fa96362e14415fd57c90464737356fca895466fe29b2abf1c5",
+      "git_blob": "1ab8ba37a111d668d6bf671f9d8b035472b6a516",
+      "bytes": 9089
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7356/normalobs.json": {
+      "sha256": "7090c3594103002515a50e31125217afe166c0f254ca7c00c0366ad3a2f1fc70",
+      "git_blob": "b963b1ce985ea907ab02bd80d18b91d49fe0d789",
+      "bytes": 9697
+    },
+    "hotpotqa/run_metrics/agent_gpt-5_top3/trajs_gpt-4.1-nano/7356/simobs.json": {
+      "sha256": "cf9bb91c33383c191654c7d473007699f879eb8ad5ee622db6095e04d463c6d1",
+      "git_blob": "692ed8c63978d7fc635083e69a6592ffaf44e0f4",
+      "bytes": 9610
+    }
+  },
+  "bytes": 1771046
+}

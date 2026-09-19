@@ -95,3 +95,9 @@ already appear in the closest literature. Before a fourth paper can be
 claimed, this question needs a wider independent evaluation and a distinct
 contribution beyond repairing this implementation. Do not spend the GPU
 queue on a generic async-clarification method on the strength of this probe.
+
+The subsequent [complete paired-trajectory slice audit](speculative_action_archive_findings_v1.md)
+checks 94 public pairs. It finds signatures consistent with the inspected
+state flow and separately establishes that cross-configuration folder
+identifiers do not preserve question identity. Its provenance and causal
+limits are stated explicitly; it is not a full benchmark reproduction.
