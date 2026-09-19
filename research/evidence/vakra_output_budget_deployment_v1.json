@@ -1,0 +1,24 @@
+{
+  "purpose": "Deployment and preflight record, not model results",
+  "batch": "vakra-output-budget-v1",
+  "supervisor_pid": 5620,
+  "registered_episodes": 12,
+  "targets": [
+    {"domain": "cookbook", "task_index": 1, "uuid": "ec134bf7bda5-0e705a585aa7"},
+    {"domain": "ice_hockey_draft", "task_index": 0, "uuid": "d0d7be63ebc2-778e84fced89"}
+  ],
+  "models": ["qwen3", "qwen25", "qwen30b"],
+  "conditions": ["original", "coverage_check"],
+  "max_new_tokens": 8192,
+  "other_budgets": "unchanged from corresponding primary worker manifest",
+  "source_archive_bytes": 1490865,
+  "source_archive_members": 159,
+  "source_archive_sha256": "d86b61d89bd7cf0004311d27c8d0e0ae924eb48822ef5d29b687227404b90bd9",
+  "receipt_sha256": "054e2b747952026aa5493ec3c3ece3b81c94acfe0e6742d3526e9b35f2412740",
+  "remote_tests_passed": 22,
+  "preflight_observed": "2026-09-19 19:01 CST",
+  "launch_observed": "2026-09-19 19:02 CST",
+  "dependency": "vakra-expansion-v1 complete and GPUs idle",
+  "exact_input_guard": "Reject changed initial messages, ordered schemas or full initial preview before generation",
+  "inference_results_available": false
+}
