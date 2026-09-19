@@ -1,0 +1,510 @@
+{
+  "purpose": "Exercise pinned RAC with real StructuredTool and ToolMessage classes, no LLM.",
+  "revision": "068c327ab3f9b79a86a39503946e26320b74b97a",
+  "source_tree_sha256": "753fdb17e2565c53e708ff9badb7e4cd5196277c4e69765e49ee04a222e82490",
+  "source_files_sha256": {
+    "src/react_agent_compensation/__init__.py": "65d02a90a308349e76d6adcb583e3414dc99200f6b2b48ae594332051876606a",
+    "src/react_agent_compensation/core/__init__.py": "8007bbb97ccfccb390f6b66651ae98bd12d7ae625abe371f6f0c4865b7df051a",
+    "src/react_agent_compensation/core/batch/__init__.py": "a840edceb2918257f1201e4ac38678d4766f21e06b46deb21d824b60b860901f",
+    "src/react_agent_compensation/core/batch/context.py": "c5a9acf9c51d0111da019c56f06bb8c8a3e5bb7307ce0a8ca42d900dbf0b1644",
+    "src/react_agent_compensation/core/batch/detector.py": "19b0bacc5475e587769bb55de983dc82b9d57a1f6db6e51c49cb6e9bf66cafac",
+    "src/react_agent_compensation/core/batch/lock.py": "06d1932b51e2933a2c04566d695f605021a946087caabd3a3e3fec85e6a0a0ac",
+    "src/react_agent_compensation/core/batch/manager.py": "bfb1d25e84c9e883e4fdf84bc5b27a17081451b1a78c83e8253974bffef6ef48",
+    "src/react_agent_compensation/core/config.py": "75160159eb5c2155ad22f0468c19a74973ef2fd21ac3cd82dcb7e756b66b7667",
+    "src/react_agent_compensation/core/errors/__init__.py": "e74587b172cbc69bb70a9ef7f045f94152392dffe40849e8e1897cc26e95c22f",
+    "src/react_agent_compensation/core/errors/base.py": "bda3e900273976afcf5c2823c389f5bf56ab26d5d6e65db2027652d1306c6ece",
+    "src/react_agent_compensation/core/errors/composite.py": "f4420352b3cc694ec7e8a44153ad79146cc30dcce32c792284dfef533f9603df",
+    "src/react_agent_compensation/core/errors/content.py": "1d4b9d1eee22c8c77149f944e6decd0931921f2608193504452be1e3d48ef288",
+    "src/react_agent_compensation/core/errors/exception.py": "80a36a6e388d23aa42d3e1f359c181cc9df02937d243eda4f5479666dfc9ded0",
+    "src/react_agent_compensation/core/errors/explicit.py": "58394b0c66538bf78638dc7d64fe60d0ef50f857b484c1c80ffadadb4cbed955",
+    "src/react_agent_compensation/core/errors/permanent.py": "fc418c3d46cdd14b7bf16175a0abf8748d816d47f927e74004daf1a54ef5f79b",
+    "src/react_agent_compensation/core/exceptions.py": "198cc26bf815e8ec3af6cb22761e8d82d4e43c19fe764aba9fec53c87eea3a08",
+    "src/react_agent_compensation/core/extraction/__init__.py": "472cbc1dee25cc16d4a37578db80be7ffff0ba9596e3ca38108921969967cf20",
+    "src/react_agent_compensation/core/extraction/base.py": "0dd585c4e18e5d2b9507cbe66dadc6269cb2f5f55c08b4a7a19660b8e109a0d4",
+    "src/react_agent_compensation/core/extraction/composite.py": "846be1900e8cb4b1fc3a68e1e0ce1c0fb18f870c21869a320c4e9d74199314d2",
+    "src/react_agent_compensation/core/extraction/heuristic.py": "09f85e4e69962cc4dc0285c3c25c2e26382044864b449b6d96b2a500fb51f725",
+    "src/react_agent_compensation/core/extraction/mcp_reversible.py": "d6612a62761410ada1423aaeee7a20e35678637a34359c9b8513672bc09bd07e",
+    "src/react_agent_compensation/core/extraction/passthrough.py": "806f9bb374773b42e0b041476797d358f8ca13a565d92d716f0b22c66dc9e859",
+    "src/react_agent_compensation/core/extraction/path_resolver.py": "d0605efd934266e0057c3ff2dcc510e6b1aba694813cb4b5c1f81c0de00ebe10",
+    "src/react_agent_compensation/core/extraction/recursive.py": "bece0b0b1e26a6bd3528b21ed9a356511166b47626d0bcb8f3144a742e4337c6",
+    "src/react_agent_compensation/core/extraction/schema.py": "835f40c73a58979fe4ae5c10d59efd8b512d6a3296aa20b3a86c23891f4ef036",
+    "src/react_agent_compensation/core/extraction/state_mappers.py": "7da3469349ac312e0287928e7fe51438f4b6f34835ec68469c4bdfaad0742591",
+    "src/react_agent_compensation/core/mcp/__init__.py": "29db06dcf18b83c1f8ec7bea6045b8abf458e5544cfed50b818c4e039867a713",
+    "src/react_agent_compensation/core/mcp/client.py": "2a941969a8aab54440629a98d94c42e6f6d33d58c51ff83600c77767bd8087bc",
+    "src/react_agent_compensation/core/mcp/metadata.py": "dfc853955c99ef1c5fdb29f57b07c67073d57cf17bc8be6cee4aee9667c2679f",
+    "src/react_agent_compensation/core/mcp/parser.py": "46eaf1709445f373a8dd0c8054d1dd6523b8dbc4e375aa7590ad51455a044431",
+    "src/react_agent_compensation/core/mcp/tools.py": "b285d847f9d22e45acf110be2866f5995d57e60086f63e7f24497a8957f1ef6a",
+    "src/react_agent_compensation/core/models.py": "2fd949ff6c7ed30b7ea8887bef707ad7a04a2871ff03139c720b398ea21b1a55",
+    "src/react_agent_compensation/core/protocols.py": "d2a25cfda9e1eb6766ed5602fd4c0366a55cf79f5ad11d791a219a5e5e83a141",
+    "src/react_agent_compensation/core/recovery_manager.py": "7e0035677dd75b003c18775561433546ee0b1e7e0cda8746d89c8824b9fd355d",
+    "src/react_agent_compensation/core/retry/__init__.py": "4ffa6a50b89763f4a4726f3e58dbf32fa8d9269391c49e6d9dd0169cc5c929d8",
+    "src/react_agent_compensation/core/retry/base.py": "cb85714156e3f06eb524bac60acd61aecdeaab835b94185d42ac521802bd290e",
+    "src/react_agent_compensation/core/retry/exponential.py": "ac4261dd3e454ee0edd2800b60049b4b5232e15afda366f729a7948c94849616",
+    "src/react_agent_compensation/core/retry/no_retry.py": "146d2237e47a93a7b6a7830b89504bcc8f94262814bb682490f2ac85fd949402",
+    "src/react_agent_compensation/core/transaction_log.py": "8a879f8a261922b184187273e8398414ac7e100d11a35ee954007ddc9a8c01df",
+    "src/react_agent_compensation/crewai_adaptor/__init__.py": "f7ed937a3304d0042deb2847b3c2244f7aa4a1ec0e928b09f93340a350ad18e0",
+    "src/react_agent_compensation/crewai_adaptor/adapters.py": "b8bd66eb8b91501fa7244fa1211a3bf6ea235436705208dde67bf1a75dc72f3c",
+    "src/react_agent_compensation/crewai_adaptor/factory.py": "559ba9c3d7f4e7262e749140d626fbd507dddb0895041a4a086a120b8ea432ec",
+    "src/react_agent_compensation/crewai_adaptor/hooks.py": "124aae0426254597887644442c85c4f8eeb172cde586d3c0128d97ad9b50749c",
+    "src/react_agent_compensation/crewai_adaptor/middleware.py": "4793c1bc30bdbee9f9bff7db53538baf01ac8d103a7a346d6abcd95db5110290",
+    "src/react_agent_compensation/crewai_adaptor/state.py": "cb4cf68f68006554d67f1ea63c15555ebddf81ee1ac60eb9c771dae7e892ef8b",
+    "src/react_agent_compensation/crewai_adaptor/tool_wrapper.py": "c3bd21e248dc5c08ffdb4793bcd8b778b682882915f9c65c0d886fb78d312314",
+    "src/react_agent_compensation/langchain_adaptor/__init__.py": "f57d374d5e1484c7453e4228deb8beb9fcdc916dc328c885d53c07c0f636b091",
+    "src/react_agent_compensation/langchain_adaptor/adapters.py": "49e214bbc275d5f94b4a11027302cf16eec69d1c08f29cc83997cc008683447c",
+    "src/react_agent_compensation/langchain_adaptor/agent.py": "2be9b54ce2654505ba5c29eadc2ce35d6ea03d5c80b5e2879db3744a16d8e6a6",
+    "src/react_agent_compensation/langchain_adaptor/interceptors.py": "e1517a35e4b74b0b74a6efc14d155e2bc047946c1b3b5574ad7863157dcfc6f2",
+    "src/react_agent_compensation/langchain_adaptor/mcp.py": "453805c8f52e1b24d93509581c0189bbedcc1d7cf770791b813da34cf7fef7c4",
+    "src/react_agent_compensation/langchain_adaptor/middleware.py": "ef7ab6b5c6385ef81354c8e8ec1ddf6d6e001d7ccae8d386567f822eef9cab69",
+    "src/react_agent_compensation/langchain_adaptor/state.py": "1b3e19e46301cb8898b77a063a9e27535f0dc763a311ac62a7f0957b93f9f315",
+    "src/react_agent_compensation/llm/__init__.py": "75520217a76f0c5dd565d831dc6074871a5f68f7ddf260a9fba690b4d94e0b65",
+    "src/react_agent_compensation/llm/extraction.py": "a37a39a6d4e11decf447cde184ab9f1588337cf1af8873b91a09944abf206447",
+    "src/react_agent_compensation/llm/matching.py": "def2a404c5ba05f5ad8c2851d2086719292a0c63471a1d8308d43ac0a96cb703",
+    "src/react_agent_compensation/strands_adaptor/__init__.py": "fb2260f0ef5d2b6e8172ae0a0c4c1261ef427ea512427bb8ab75e188f4b64c51",
+    "src/react_agent_compensation/strands_adaptor/adapters.py": "2b0900cb0dbb370e0db4dd67bd49fdb029c47171844879ff17d827b593e0e058",
+    "src/react_agent_compensation/strands_adaptor/agent.py": "5d3398939b214f02d09505023cdabb66eef96f3b5eebac0e0caecfab3223a6d4",
+    "src/react_agent_compensation/strands_adaptor/hooks.py": "86ed2dae47272389a0a09c653d20aa7724381c60416401771a809c40b60beab5",
+    "src/react_agent_compensation/strands_adaptor/interrupts.py": "baff3c62f55ec416784b45052e42da602369423fa937b3ede23c908b24fc548e",
+    "src/react_agent_compensation/strands_adaptor/state.py": "7db4bf696da21d8681f4f79c2da0abfa14c535307cb64f7acb6360ed46b4aba3"
+  },
+  "script_sha256": "df2563ef855d6edc9d45458902dc78fd76e9c78b44c487987bfa0818a9eb3fc3",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "installed_wheels": {
+    "langchain-core": {
+      "version": "1.6.3",
+      "sha256": "114fe1868c9ed60606662b9dd0074bf3152cc6b0b1522ba37cbd6b04f55ca77d"
+    },
+    "pydantic": {
+      "version": "2.13.5",
+      "sha256": "346a034f080da3755d8e9cb5e00e8b07de1d39e4f6e2c87d8ab7cafa0b269a73"
+    },
+    "pydantic_core": {
+      "version": "2.46.5",
+      "sha256": "5e81740c09e310f5aa5cbd3e434a01c154d4bef93241c7877b39f211d2b78ba8"
+    },
+    "annotated-types": {
+      "version": "0.8.0",
+      "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"
+    },
+    "httpx": {
+      "version": "0.28.1",
+      "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+    },
+    "httpcore": {
+      "version": "1.0.9",
+      "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+    },
+    "jsonpatch": {
+      "version": "1.33",
+      "sha256": "0ae28c0cd062bbd8b8ecc26d7d164fbbea9652a1a3693f3b956c1eae5145dade"
+    },
+    "langchain-protocol": {
+      "version": "0.0.19",
+      "sha256": "4cdf879a492a35980fd859ae792d3c65458ccaae504e183c9a10d7eac1f0720f"
+    },
+    "langsmith": {
+      "version": "0.13.0",
+      "sha256": "89d53d01dcdd0ff4064b425a0476ce51ecca5453d7284313ca4d8c64d326257c"
+    },
+    "packaging": {
+      "version": "26.3",
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    "PyYAML": {
+      "version": "6.0.3",
+      "sha256": "5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b"
+    },
+    "tenacity": {
+      "version": "9.1.4",
+      "sha256": "6095a360c919085f28c6527de529e76a06ad89b23659fa881ae0649b867a9d55"
+    },
+    "typing_extensions": {
+      "version": "4.16.0",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    },
+    "typing-inspection": {
+      "version": "0.4.4",
+      "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147"
+    },
+    "uuid_utils": {
+      "version": "0.17.1",
+      "sha256": "3d6ccaebaa3b2ff2e59d11d70c64e97ba572120162a00c25d6f8e5e0c1004b9a"
+    },
+    "anyio": {
+      "version": "4.15.1",
+      "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+    },
+    "distro": {
+      "version": "1.9.0",
+      "sha256": "7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"
+    },
+    "httpx2": {
+      "version": "2.13.0",
+      "sha256": "fc12720cedf72faa26cca6b4ca394e05c894e7d7933fc45cafe767960804e49a"
+    },
+    "httpcore2": {
+      "version": "2.13.0",
+      "sha256": "35ae5be347aa40467b4a5dc032ac67ebb6d27189fc97e8cebcf99616f6a1bb9e"
+    },
+    "idna": {
+      "version": "3.20",
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    "jsonpointer": {
+      "version": "3.1.1",
+      "sha256": "8ff8b95779d071ba472cf5bc913028df06031797532f08a7d5b602d8b2a488ca"
+    },
+    "orjson": {
+      "version": "3.12.0",
+      "sha256": "010811c1b69773450a01cef97727a67b223242f350b77d4ca000e59a9ef2155a"
+    },
+    "requests": {
+      "version": "2.34.2",
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    "certifi": {
+      "version": "2026.7.22",
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+    },
+    "requests-toolbelt": {
+      "version": "1.0.0",
+      "sha256": "cccfdd665f0a24fcf4726e690f65639d272bb0637b9b92dfd91a5568ccf6bd06"
+    },
+    "sniffio": {
+      "version": "1.3.1",
+      "sha256": "2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2"
+    },
+    "websockets": {
+      "version": "17.1",
+      "sha256": "617243e19a0992095956f406ee9cd3bc4ba92862d83cb1d83bb59ce574412bec"
+    },
+    "xxhash": {
+      "version": "4.0.1",
+      "sha256": "5c2d525a3afabcd8e3549d85fc7e111fde6bc302d06a1893fe73adb79823415e"
+    },
+    "zstandard": {
+      "version": "0.25.0",
+      "sha256": "ffef5a74088f1e09947aecf91011136665152e0b4b359c42be3373897fb39b01"
+    },
+    "charset-normalizer": {
+      "version": "3.5.1",
+      "sha256": "3617ac3cfd8b9888f145ad89dd6e692285834b0201c6074a5eeaad3fd4d668c2"
+    },
+    "h11": {
+      "version": "0.16.0",
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+    },
+    "truststore": {
+      "version": "0.10.4",
+      "sha256": "adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981"
+    },
+    "urllib3": {
+      "version": "2.8.0",
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    }
+  },
+  "cases": [
+    {
+      "route": "rollback",
+      "behavior": "success",
+      "handle_tool_error": false,
+      "effect_occurred": true,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": false
+    },
+    {
+      "route": "rollback",
+      "behavior": "runtime_exception",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "tool_exception",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "handled_tool_exception",
+      "handle_tool_error": true,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "error_message",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "error_payload",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "silent_noop",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": null,
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPENSATED",
+      "marked_compensated": true,
+      "false_success": true
+    },
+    {
+      "route": "retry",
+      "behavior": "success",
+      "handle_tool_error": false,
+      "effect_occurred": true,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": false
+    },
+    {
+      "route": "retry",
+      "behavior": "runtime_exception",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": false,
+      "converted_tool_message_status": "error",
+      "nested_result_status": null,
+      "error": "timeout: initial action did not take effect",
+      "record_status": "FAILED",
+      "marked_compensated": false,
+      "false_success": false
+    },
+    {
+      "route": "retry",
+      "behavior": "tool_exception",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": false,
+      "converted_tool_message_status": "error",
+      "nested_result_status": null,
+      "error": "timeout: initial action did not take effect",
+      "record_status": "FAILED",
+      "marked_compensated": false,
+      "false_success": false
+    },
+    {
+      "route": "retry",
+      "behavior": "handled_tool_exception",
+      "handle_tool_error": true,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "retry",
+      "behavior": "error_message",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": "error",
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "retry",
+      "behavior": "error_payload",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "retry",
+      "behavior": "silent_noop",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "alternative",
+      "behavior": "success",
+      "handle_tool_error": false,
+      "effect_occurred": true,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": false
+    },
+    {
+      "route": "alternative",
+      "behavior": "runtime_exception",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": false,
+      "converted_tool_message_status": "error",
+      "nested_result_status": null,
+      "error": "timeout: initial action did not take effect",
+      "record_status": "FAILED",
+      "marked_compensated": false,
+      "false_success": false
+    },
+    {
+      "route": "alternative",
+      "behavior": "tool_exception",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": false,
+      "converted_tool_message_status": "error",
+      "nested_result_status": null,
+      "error": "timeout: initial action did not take effect",
+      "record_status": "FAILED",
+      "marked_compensated": false,
+      "false_success": false
+    },
+    {
+      "route": "alternative",
+      "behavior": "handled_tool_exception",
+      "handle_tool_error": true,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "alternative",
+      "behavior": "error_message",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": "error",
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "alternative",
+      "behavior": "error_payload",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    },
+    {
+      "route": "alternative",
+      "behavior": "silent_noop",
+      "handle_tool_error": false,
+      "effect_occurred": false,
+      "calls": 1,
+      "reported_success": true,
+      "converted_tool_message_status": "success",
+      "nested_result_status": null,
+      "error": null,
+      "record_status": "COMPLETED",
+      "marked_compensated": false,
+      "false_success": true
+    }
+  ],
+  "fixture_controls_passed": true,
+  "model_calls": 0,
+  "attempted_network_connections": 0,
+  "limits": [
+    "Actual langchain-core tools/messages; no full LangGraph agent or external service",
+    "Twenty-one selected fixtures within one RAC revision, not independent framework samples",
+    "Same error-semantics mechanism as earlier probes, not 21 new discovered bugs",
+    "LangChain handles ToolException by design; the tested integration must preserve its meaning"
+  ]
+}
