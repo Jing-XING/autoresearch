@@ -4,12 +4,15 @@ This accompanies an **incomplete working manuscript**. It supports byte-level
 inspection and offline reanalysis. It is not a new experiment, a reproduction
 of published model scores, or a certificate of publication readiness.
 
-## Latest source extension and historical review PDF
+## Current review PDF and refund-intervention evidence
 
-The current manuscript adds section 5.9's matched refund-iterator intervention
-and two foundational references. The twelve-page v3 PDF described below
-predates these changes. It remains an identified historical rendering, not
-the current source rendered as a submission file.
+The current review is `output/pdf/paper3-recovery-interfaces-review-v4.pdf`:
+thirteen pages, eight numbered tables and eleven references, including
+section 5.9's matched refund-iterator intervention and its two foundational
+references. Source/output hashes and full-page visual review are recorded in
+`research/evidence/paper3_review_pdf_v4.json`. It is an incomplete review
+manuscript, not a publisher-template submission. The twelve-page v3 PDF
+described below remains an unchanged historical rendering.
 
 For the new saved-state reanalysis, keep the original retail census ZIP and
 public retail database at their repository-relative paths, then run:
@@ -35,10 +38,11 @@ It includes the historical retail screen and the three-question scientific
 synthesis. Its twelve pages, seven tables and nine references were visually
 checked; the source and output hashes are recorded in
 `research/evidence/paper3_review_pdf_v3.json`. The prior manuscript is retained
-as `research/paper3/study_record_v1.md`. Rebuild the current review PDF with:
+as `research/paper3/study_record_v1.md`. Rebuild the current source into a
+separate output, preserving the identified PDFs, with:
 
 ```text
-python scripts/build_review_pdf.py --paper research/paper3 --output output/pdf/paper3-recovery-interfaces-review-v3.pdf --date 2026-09-20
+python scripts/build_review_pdf.py --paper research/paper3 --output output/pdf/paper3-recovery-interfaces-review-v4-rebuilt.pdf --date 2026-09-20
 ```
 
 The integrated offline artifact described below retains its original v3
@@ -177,5 +181,6 @@ with `--output extraction-new.json`. Outputs must not already exist. The
 registration preserves the original local CRLF bytes; the verifier independently
 checks that newline-normalized contents match upstream Git objects. This is
 an archive analysis, not replay of historical models/tools or an observation
-of persisted final states. The earlier v3 integrated package and review PDF
-do not cover this later manuscript section 6.2.
+of persisted final states. The integrated v3 package predates section 6.2. Both the v3 and v4 review
+PDFs cover that section; only v4 also covers section 5.9. PDF and package
+version numbers identify separate histories.

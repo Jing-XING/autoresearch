@@ -74,8 +74,8 @@ Our empirical contribution is the connection between these observations
 within exact, executable configurations. The controls distinguish a broken
 error-consumption path from a successful error path whose observations are
 insufficient to certify a business effect. The finite native censuses then
-distinguish accounting failure from harmlessness under a deliberately narrower
-contract. Finally, the archive screens prevent this diagnostic evidence from
+distinguish accounting failure from satisfaction of a deliberately narrower
+contract. Satisfaction of that predicate does not establish harmlessness. Finally, the archive screens prevent this diagnostic evidence from
 being represented as a correction to published agent success rates. These
 are bounded case-study results, not a representative survey of frameworks.
 
@@ -125,7 +125,9 @@ The current RAC source is fixed at commit
 the pinned Git tree before import. The published Zenodo archive is separately
 verified by its released MD5, a recorded SHA-256 and ZIP integrity checks.
 Archived Python files are extracted without modification and tested separately.
-No probe rewrites the third-party implementation.
+The RAC probes leave the third-party implementation unchanged. The later
+retail intervention in section 5.9 explicitly substitutes one expression in
+research copies; its native control retains the original implementation.
 
 The real LangChain experiments use `langchain-core==1.6.3`. Native MCP tests
 add `mcp==1.30.0`, `langchain-mcp-adapters==0.3.2` and `pydantic==2.13.5` in an
@@ -134,8 +136,9 @@ isolated environment. A further comparison changes only the adapter to
 configurations, not reconstructions of the authors' original dependency set.
 The archive does not supply a complete dependency lock for that reconstruction.
 
-All tests use local constructed tools, without a model or a live booking
-service. Connection guards prohibit external network access. The native MCP
+The framework probes use local constructed tools, without a model or a live
+booking service. Sections 5.6-5.9 additionally execute pinned native airline
+and retail tools against their public synthetic databases. Connection guards prohibit external network access. The native MCP
 fixture uses actual stdio subprocesses, SDK initialization, schema exchange
 and tool invocation. Its state file persists across the adapter's per-call
 server sessions. Windows event-loop socket pairs are recorded separately from
@@ -186,7 +189,7 @@ result can be ignored. The dependency environment remains current, so this
 is evidence about execution of the archived branch under the stated setup;
 it is not evidence that a corresponding error occurred in a published trial.
 
-## 5. Native MCP boundaries
+## 5. Error boundaries and native effect contracts
 
 ### 5.1 Automatic pair discovery
 
@@ -214,6 +217,8 @@ using the manager's public method. This disclosed diagnostic intervention
 isolates execution semantics after discovery; it is not counted as successful
 automatic discovery. The client, wrapper, executor and recovery manager remain
 unchanged.
+
+**Table 1. Constructed MCP behaviors under two error-delivery modes.**
 
 | Constructed behavior | Default adapter | Exception-raising diagnostic |
 |---|---|---|
@@ -256,6 +261,8 @@ provides a useful positive control. Its stdio transport raises on an MCP
 behaviors as the RAC default-adapter study produces the following observations.
 The validation checks raw fixture-state equality across implementations and
 consistency between agent-saga's report and persisted log.
+
+**Table 2. Matched binary-state controls in two recovery integrations.**
 
 | Compensation behavior | Residual booking | RAC default reports success | agent-saga reports clean |
 |---|---|---|---|
@@ -332,6 +339,8 @@ parameter extraction.
 
 Both booking profiles produce the following outcomes:
 
+**Table 3. Native airline cancellation under four imposed conditions.**
+
 | Imposed cancellation condition | RAC default | RAC raising control | agent-saga | Native cancellation contract |
 |---|---|---|---|---|
 | Normal | Success | Success | Clean | Satisfied |
@@ -375,6 +384,8 @@ native `get_reservation_details` and stops if cancelled status and zero signed
 ledger net are observed. These calls execute unchanged native methods directly;
 they do not pass through MCP or a recovery framework. We do not attribute
 the chosen retry behavior to RAC or agent-saga.
+
+**Table 4. Retry policies across all 2,000 initial reservations.**
 
 | Policy | Cancels / reads per reservation | Final ledger entries | Cancellation contract satisfied | State equal to single cancellation |
 |---|---:|---:|---:|---:|
@@ -439,6 +450,8 @@ an aggregate net alone is insufficient because opposite errors on different
 instruments could cancel. The contract does not require erasing payment
 history or proving an external refund.
 
+**Table 5. Native retail paths and the declared accounting contract.**
+
 | Native path | Paths | Normal return and cancelled status | Ledger/balance contract met |
 |---|---:|---:|---:|
 | Direct cancellation | 423 | 423 | 423 |
@@ -487,6 +500,8 @@ and cancellation status remain unchanged. Reverting the replaced expression
 recovers the original abstract syntax tree exactly; the original source files
 and class method are preserved. The payment-only variant is an intentionally
 incomplete repair control, not an attributed literature baseline.
+
+**Table 6. Matched refund-iterator interventions; A is the original payment.**
 
 | Cancellation implementation | Direct contract passes | Composed contract passes | Old-method net after composition | Composed ledger entries |
 |---|---:|---:|---:|---:|
@@ -565,6 +580,8 @@ response to payment change before a later cancellation of the same order,
 followed by a successful cancelled-order response. Same-message calls cannot
 establish this response-before-call ordering and are counted separately.
 
+**Table 7. Published retail trajectories inspected in the archival screen.**
+
 | Archived agent | Simulations | Payment-change calls | Cancellation calls | Scorable cancelled-order payloads |
 |---|---:|---:|---:|---:|
 | Claude 3.7 Sonnet | 456 | 4 | 117 | 116 |
@@ -628,6 +645,8 @@ proofs about tools outside the pinned implementations.
 Table 8 summarizes the resulting evidence boundaries. Each row refers to a
 distinct study population or configuration; the rows cannot be pooled into
 one failure rate.
+
+**Table 8. Supported inferences and their principal limits.**
 
 | Observation | Strongest supported inference | Unestablished inference |
 |---|---|---|
@@ -756,15 +775,15 @@ The later historical retail screen has a separate self-contained package,
 files, fixed protocol, extraction output, source-provenance evidence and
 its arithmetic verifier. The retained integrated v3 package predates that
 screen and this revised manuscript; its manifest continues to identify
-its historical contents. A new review PDF accompanies the present text,
+its historical contents. The v4 review PDF accompanies the present text,
 but does not retroactively change any prior package or experiment receipt.
 
 The later refund-iterator intervention has its own immutable result archive,
 `retail-refund-interventions-v2-results.zip`, with code, frozen protocol, exact
 deployment metadata, execution status and all 1,629 records. Its separate
 standard-library verifier checks the original native-arm match, unchanged
-prefixes and reconstructed cancellation effects. Neither the integrated v3
-artifact nor the earlier twelve-page review PDF includes this extension.
+prefixes and reconstructed cancellation effects. The integrated v3 artifact and earlier twelve-page v3 review PDF predate
+this extension. The v4 PDF includes it; the integrated archive is unchanged.
 
 ## 9. Conclusion
 

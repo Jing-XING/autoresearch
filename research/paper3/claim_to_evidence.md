@@ -2,6 +2,22 @@
 
 This is a working paper, not a completed submission or a new-method claim.
 
+## Current review rendering and scope audit
+
+The v4 PDF renders the current 7,036-word source with eight numbered tables,
+eleven references and a 233-word abstract. All thirteen pages were inspected.
+The eight table bodies are unchanged from the prior source; the intervention
+counts and ledger signatures agree with its saved report and independent
+reanalysis. The bibliography rendering now preserves journal, volume, issue
+and technical-report institution/number fields.
+
+The method section distinguishes unchanged RAC probes from disclosed research
+copies in the retail intervention, and constructed fixtures from native tools.
+The introduction no longer equates satisfaction of a narrow predicate with
+harmlessness. These are claim-scope corrections, not new observations. The
+retained v3 PDF and all historical study records are unchanged. This remains
+an incomplete research manuscript, without a new-method or acceptance claim.
+
 ## Current extension: matched refund-iterator intervention
 
 Section 5.9 adds actual designated-host executions, after freezing the protocol
@@ -25,8 +41,9 @@ paths, not independent agent tasks or a production-repair guarantee.
 The main source now has eight tables and eleven bibliography records,
 including verified Sagas and test-oracle foundations. Its 233-word abstract
 includes the intervention. The retained twelve-page v3 PDF predates this
-extension and is not a rendering of the current source. The integrated
-offline v3 archive also remains a historical snapshot.
+extension. The current thirteen-page v4 PDF includes it and is pinned by
+`../evidence/paper3_review_pdf_v4.json`. The integrated offline v3 archive
+remains a historical snapshot.
 
 ## Earlier manuscript synthesis and review PDF
 

@@ -61,8 +61,8 @@ def build(paper, output, review_date):
     doc = SimpleDocTemplate(str(output), pagesize=A4, rightMargin=51, leftMargin=51,
         topMargin=49, bottomMargin=49, title=text.splitlines()[0].removeprefix('# '),
         author='', subject='Incomplete research manuscript for review')
-    body = ParagraphStyle('Body', fontName='Times-Roman', fontSize=10.5, leading=14,
-                          spaceAfter=7, alignment=TA_JUSTIFY)
+    body = ParagraphStyle('Body', fontName='Times-Roman', fontSize=10.5, leading=13.5,
+                          spaceAfter=6, alignment=TA_JUSTIFY)
     literal_body = ParagraphStyle('LiteralBody', parent=body, alignment=0)
     h1 = ParagraphStyle('Title', parent=body, fontName='Times-Bold', fontSize=19,
                         leading=23, spaceAfter=14, alignment=0, keepWithNext=True)
@@ -72,6 +72,8 @@ def build(paper, output, review_date):
     cell = ParagraphStyle('Cell', parent=body, fontName='Helvetica', fontSize=8,
                           leading=10, spaceAfter=0, alignment=0)
     refs = ParagraphStyle('Reference', parent=body, fontSize=9, leading=12, alignment=0)
+    caption = ParagraphStyle('Caption', parent=body, fontSize=9, leading=12,
+                             alignment=0, keepWithNext=True, spaceBefore=5)
     story = []
     lines = text.splitlines()
     i, tables, paragraphs = 0, 0, []
@@ -107,7 +109,7 @@ def build(paper, output, review_date):
                 ('LINEBELOW', (0,-1), (-1,-1), .7, colors.HexColor('#455969')),
                 ('LEFTPADDING', (0,0), (-1,-1), 5), ('RIGHTPADDING', (0,0), (-1,-1), 5),
                 ('TOPPADDING', (0,0), (-1,-1), 6), ('BOTTOMPADDING', (0,0), (-1,-1), 6)]))
-            story.extend([Spacer(1,4), table, Spacer(1,10)])
+            story.extend([table, Spacer(1,10)])
             tables += 1
             continue
         chunks = []
@@ -117,14 +119,22 @@ def build(paper, output, review_date):
             i += 1
         paragraph = ' '.join(chunks)
         paragraphs.append(paragraph)
-        style = literal_body if re.search(r'\b[0-9a-f]{40,64}\b', paragraph) else body
+        style = (caption if re.match(r'\*\*Table \d+\.', paragraph) else
+                 literal_body if re.search(r'\b[0-9a-f]{40,64}\b', paragraph) else body)
         story.append(Paragraph(inline(paragraph), style))
     story.extend([Spacer(1, 12), Paragraph('References', h2)])
     records = bib_records(bibliography.read_text(encoding='utf-8'))
     for number, (key, fields) in enumerate(records, 1):
         author = fields.get('author', '').replace(' and ', '; ')
         lead = f'[{number}] '+'. '.join(v for v in [author, fields.get('year'), fields['title']] if v)+'.'
-        tail = ' '.join(fields.get(k, '') for k in ('booktitle', 'howpublished', 'publisher', 'note'))
+        venue = fields.get('journal', '')
+        if fields.get('volume'):
+            venue += ' '+fields['volume']
+        if fields.get('number'):
+            venue += ('('+fields['number']+')' if fields.get('journal')
+                      else ' '+fields['number'])
+        tail = ' '.join(v for v in [venue] + [fields.get(k, '') for k in
+                       ('booktitle', 'institution', 'howpublished', 'publisher', 'note')] if v)
         if fields.get('pages'):
             tail += ' pp. '+fields['pages'].replace('--', '-')+'.'
         if fields.get('doi'):

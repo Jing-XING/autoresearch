@@ -1,0 +1,29 @@
+{
+  "source": "research/paper3/manuscript.md",
+  "source_sha256": "75b96c8d1c6ab528eb18abcb4f938aad8efda4e985f00b6721d96ca62fa0d7a0",
+  "bibliography_sha256": "7f8cc088de13da9990fa0eb6dfed06cef215033c24053873d33dcc814b50a550",
+  "builder_sha256": "bb8adbc6f66bbb6d83acce6a772f222c1648be010ecde4e288fa791f283bace3",
+  "output": "output/pdf/paper3-recovery-interfaces-review-v4.pdf",
+  "pdf_sha256": "f4043c0495c5abcbd70415b4cb026abaccdaf0673e4c1e9ea42eec2dd4d44d21",
+  "pages": 13,
+  "tables": 8,
+  "reference_records": 11,
+  "review_date": "2026-09-20",
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0"
+  },
+  "publication_ready": false,
+  "visual_review": "All 13 final pages visually inspected at 90 dpi; captions stay with table headers; no clipping, overlap or missing glyphs observed.",
+  "abstract_words": 233,
+  "manuscript_words": 7036,
+  "geometry_outliers": 0,
+  "incomplete_footers": 13,
+  "pdf_bytes": 54763,
+  "eight_table_bodies_unchanged": true,
+  "intervention_arms_matched_to_saved_summary": 3,
+  "intervention_summary_equals_saved_reanalysis": true,
+  "preserved_study_record_sha256": "96da71e0ddc2e80c5053941ce505c93087eb583cb12b88d0ef3f9d2a6e76a03a",
+  "scope": "Editorial claim-scope audit and current review rendering including the previously executed refund intervention. No new experimental observations; not submission-ready.",
+  "rendering_note": "Poppler emitted startup substitution warnings for unrelated system fonts; all final pages were visually inspected."
+}
