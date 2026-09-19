@@ -1,0 +1,2224 @@
+{
+  "purpose": "development-only bounded counterfactual candidate generation, not model score or complete determinacy test",
+  "database_sha256": "813faade795b875f6d46cf81d9651e2400524b414a407aa9d473aa9a8c142861",
+  "audit_cards_sha256": "fbfa98c02ea8a320d5c6564063427cec5fb1b7a1d50619f76880883cbeffdc4b",
+  "mutation_source_sha256": "a8c0651d8c69b4550eac5d8269c6114650b3b9e9cf9537e3bd3522b6c2903cdf",
+  "source_sha256": "b5c8659a74b65508352f924814715ba3b737cdc1555ff0687f4915ec2a694ca7",
+  "rows": [
+    {
+      "task_index": 1,
+      "uuid": "486ea46224d1-674a4702614a",
+      "query": "How many cities are there in England?",
+      "target_sql": "SELECT COUNT(*) FROM City WHERE District='England'",
+      "search": {
+        "seed": "e8dc76faff25755a4899c202e7e16d428594ae9f074934cc5dd1279d79690d92",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "District",
+            "keys": [
+              "ID"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            71
+          ]
+        ],
+        "draws": 257,
+        "unchanged_answers": 249,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 60,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    519
+                  ],
+                  "before": "England",
+                  "after": "Gujarat"
+                }
+              ]
+            },
+            "answer": [
+              [
+                70
+              ]
+            ]
+          },
+          {
+            "draw": 103,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    1700
+                  ],
+                  "before": "Ehime",
+                  "after": "England"
+                }
+              ]
+            },
+            "answer": [
+              [
+                72
+              ]
+            ]
+          },
+          {
+            "draw": 164,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    3947
+                  ],
+                  "before": "Florida",
+                  "after": "England"
+                }
+              ]
+            },
+            "answer": [
+              [
+                72
+              ]
+            ]
+          },
+          {
+            "draw": 170,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    530
+                  ],
+                  "before": "England",
+                  "after": "Hainaut"
+                }
+              ]
+            },
+            "answer": [
+              [
+                70
+              ]
+            ]
+          },
+          {
+            "draw": 218,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    3178
+                  ],
+                  "before": "Mekka",
+                  "after": "England"
+                }
+              ]
+            },
+            "answer": [
+              [
+                72
+              ]
+            ]
+          },
+          {
+            "draw": 221,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    525
+                  ],
+                  "before": "England",
+                  "after": "al-Hasaka"
+                }
+              ]
+            },
+            "answer": [
+              [
+                70
+              ]
+            ]
+          },
+          {
+            "draw": 243,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    464
+                  ],
+                  "before": "England",
+                  "after": "Valencia"
+                }
+              ]
+            },
+            "answer": [
+              [
+                70
+              ]
+            ]
+          },
+          {
+            "draw": 256,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    519
+                  ],
+                  "before": "England",
+                  "after": "Hessen"
+                }
+              ]
+            },
+            "answer": [
+              [
+                70
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 2,
+      "uuid": "486ea46224d1-74c57403a8e6",
+      "query": "List the languages used in Turkmenistan.",
+      "target_sql": "SELECT Language FROM CountryLanguage WHERE CountryCode='TKM' ORDER BY Language",
+      "search": {
+        "seed": "d122b4ec82b5fb576476e9ecb7f2e632d58ac107890045eeb21e78233df847ac",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [],
+        "original_answer": [
+          [
+            "Kazakh"
+          ],
+          [
+            "Russian"
+          ],
+          [
+            "Turkmenian"
+          ],
+          [
+            "Uzbek"
+          ]
+        ],
+        "draws": 0,
+        "unchanged_answers": 0,
+        "constraint_rejections": 0,
+        "candidates": []
+      }
+    },
+    {
+      "task_index": 3,
+      "uuid": "486ea46224d1-9bae74dab965",
+      "query": "Provide the name, capital city and its official language of the country with the highest life expectancy.",
+      "target_sql": "SELECT c.Name,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+      "search": {
+        "seed": "89071c277c21c6286f41539e796393136c08661d0a62e6835348fda855c12bee",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "Name",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "Capital",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "LifeExpectancy",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "Name",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "CountryLanguage",
+            "column": "IsOfficial",
+            "keys": [
+              "CountryCode",
+              "Language"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ]
+        ],
+        "draws": 1938,
+        "unchanged_answers": 1677,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 197,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": 83.5,
+                  "after": 68.0
+                },
+                {
+                  "key": [
+                    "IDN"
+                  ],
+                  "before": 68.0,
+                  "after": 83.5
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Indonesia",
+                "Jakarta",
+                "Malay"
+              ]
+            ]
+          },
+          {
+            "draw": 502,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": 83.5,
+                  "after": 69.7
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Macao",
+                "Macao",
+                "Portuguese"
+              ]
+            ]
+          },
+          {
+            "draw": 966,
+            "mutation": {
+              "table": "Country",
+              "column": "Capital",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": 55,
+                  "after": 56
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Luanda",
+                "Catalan"
+              ]
+            ]
+          },
+          {
+            "draw": 1297,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "CUB"
+                  ],
+                  "before": 76.2,
+                  "after": 83.5
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "Catalan"
+              ],
+              [
+                "Cuba",
+                "La Habana",
+                "Spanish"
+              ]
+            ]
+          },
+          {
+            "draw": 1381,
+            "mutation": {
+              "table": "Country",
+              "column": "Capital",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": 55,
+                  "after": 2256
+                },
+                {
+                  "key": [
+                    "KIR"
+                  ],
+                  "before": 2256,
+                  "after": 55
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Bairiki",
+                "Catalan"
+              ]
+            ]
+          },
+          {
+            "draw": 1698,
+            "mutation": {
+              "table": "Country",
+              "column": "Name",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "BLR"
+                  ],
+                  "before": "Belarus",
+                  "after": "Andorra"
+                },
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": "Andorra",
+                  "after": "Belarus"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Belarus",
+                "Andorra la Vella",
+                "Catalan"
+              ]
+            ]
+          },
+          {
+            "draw": 1741,
+            "mutation": {
+              "table": "Country",
+              "column": "Capital",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": 55,
+                  "after": 2464
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Kuala Lumpur",
+                "Catalan"
+              ]
+            ]
+          },
+          {
+            "draw": 1937,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "AND"
+                  ],
+                  "before": 83.5,
+                  "after": 67.2
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Macao",
+                "Macao",
+                "Portuguese"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 4,
+      "uuid": "486ea46224d1-27cb99545c51",
+      "query": "Among the languages used in Baltic Countries, provide the languages which are used by over 80%.\n\n",
+      "target_sql": "SELECT DISTINCT l.Language FROM Country c JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.Region='Baltic Countries' AND l.Percentage>80 ORDER BY l.Language",
+      "search": {
+        "seed": "c2ab8c77a886fc15bc29388aa2a73999ee72fb43dcc5855df02f91485e9b6da6",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "Country",
+            "column": "Region",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "CountryLanguage",
+            "column": "Percentage",
+            "keys": [
+              "CountryCode",
+              "Language"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Lithuanian"
+          ]
+        ],
+        "draws": 694,
+        "unchanged_answers": 666,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 18,
+            "mutation": {
+              "table": "Country",
+              "column": "Region",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "VCT"
+                  ],
+                  "before": "Caribbean",
+                  "after": "Baltic Countries"
+                },
+                {
+                  "key": [
+                    "LTU"
+                  ],
+                  "before": "Baltic Countries",
+                  "after": "Caribbean"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Creole English"
+              ]
+            ]
+          },
+          {
+            "draw": 376,
+            "mutation": {
+              "table": "Country",
+              "column": "Region",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "LTU"
+                  ],
+                  "before": "Baltic Countries",
+                  "after": "Western Europe"
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 400,
+            "mutation": {
+              "table": "Country",
+              "column": "Region",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "RWA"
+                  ],
+                  "before": "Eastern Africa",
+                  "after": "Baltic Countries"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Lithuanian"
+              ],
+              [
+                "Rwanda"
+              ]
+            ]
+          },
+          {
+            "draw": 435,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "Percentage",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "LVA",
+                    "Belorussian"
+                  ],
+                  "before": 4.1,
+                  "after": 96.8
+                },
+                {
+                  "key": [
+                    "ARG",
+                    "Spanish"
+                  ],
+                  "before": 96.8,
+                  "after": 4.1
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Belorussian"
+              ],
+              [
+                "Lithuanian"
+              ]
+            ]
+          },
+          {
+            "draw": 473,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "Percentage",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "LTU",
+                    "Lithuanian"
+                  ],
+                  "before": 81.6,
+                  "after": 1.4
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 500,
+            "mutation": {
+              "table": "Country",
+              "column": "Region",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "BRB"
+                  ],
+                  "before": "Caribbean",
+                  "after": "Baltic Countries"
+                },
+                {
+                  "key": [
+                    "LVA"
+                  ],
+                  "before": "Baltic Countries",
+                  "after": "Caribbean"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Bajan"
+              ],
+              [
+                "Lithuanian"
+              ]
+            ]
+          },
+          {
+            "draw": 588,
+            "mutation": {
+              "table": "Country",
+              "column": "Region",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "CMR"
+                  ],
+                  "before": "Central Africa",
+                  "after": "Baltic Countries"
+                },
+                {
+                  "key": [
+                    "LTU"
+                  ],
+                  "before": "Baltic Countries",
+                  "after": "Central Africa"
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 693,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "Percentage",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "LTU",
+                    "Russian"
+                  ],
+                  "before": 8.1,
+                  "after": 100.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Lithuanian"
+              ],
+              [
+                "Russian"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 5,
+      "uuid": "486ea46224d1-aff4c9603f4d",
+      "query": "Provide the name, located country, and life expectancy of the most populated city",
+      "target_sql": "SELECT city.Name,c.Name,c.LifeExpectancy FROM City city JOIN Country c ON c.Code=city.CountryCode WHERE city.Population=(SELECT MAX(Population) FROM City)",
+      "search": {
+        "seed": "4068f7d3545226f8c14319efb61ecc79f11d99bc0f4156993af6832c5aa8fd7f",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "Name",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "City",
+            "column": "Population",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "LifeExpectancy",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "Name",
+            "keys": [
+              "Code"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Mumbai (Bombay)",
+            "India",
+            62.5
+          ]
+        ],
+        "draws": 1835,
+        "unchanged_answers": 1825,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 302,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "BIH"
+                  ],
+                  "before": 71.5,
+                  "after": 62.5
+                },
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": 62.5,
+                  "after": 71.5
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "India",
+                71.5
+              ]
+            ]
+          },
+          {
+            "draw": 554,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": 62.5,
+                  "after": 76.9
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "India",
+                76.9
+              ]
+            ]
+          },
+          {
+            "draw": 843,
+            "mutation": {
+              "table": "Country",
+              "column": "Name",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "India",
+                  "after": "Cyprus"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "Cyprus",
+                62.5
+              ]
+            ]
+          },
+          {
+            "draw": 847,
+            "mutation": {
+              "table": "Country",
+              "column": "Name",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "India",
+                  "after": "Northern Mariana Islands"
+                },
+                {
+                  "key": [
+                    "MNP"
+                  ],
+                  "before": "Northern Mariana Islands",
+                  "after": "India"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "Northern Mariana Islands",
+                62.5
+              ]
+            ]
+          },
+          {
+            "draw": 1355,
+            "mutation": {
+              "table": "Country",
+              "column": "Name",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "India",
+                  "after": "Lebanon"
+                },
+                {
+                  "key": [
+                    "LBN"
+                  ],
+                  "before": "Lebanon",
+                  "after": "India"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "Lebanon",
+                62.5
+              ]
+            ]
+          },
+          {
+            "draw": 1731,
+            "mutation": {
+              "table": "Country",
+              "column": "Name",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "REU"
+                  ],
+                  "before": "Réunion",
+                  "after": "India"
+                },
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "India",
+                  "after": "Réunion"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "Réunion",
+                62.5
+              ]
+            ]
+          },
+          {
+            "draw": 1774,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": 62.5,
+                  "after": 77.1
+                },
+                {
+                  "key": [
+                    "USA"
+                  ],
+                  "before": 77.1,
+                  "after": 62.5
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "India",
+                77.1
+              ]
+            ]
+          },
+          {
+            "draw": 1834,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "AIA"
+                  ],
+                  "before": 76.1,
+                  "after": 62.5
+                },
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": 62.5,
+                  "after": 76.1
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mumbai (Bombay)",
+                "India",
+                76.1
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 6,
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "query": "Provide the country, population, capital city, and official language of the country with the smallest surface area.",
+      "target_sql": "SELECT c.Name,c.Population,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country) AND l.IsOfficial='T'",
+      "search": {
+        "seed": "28e70884593b05f62fb34b0eb13cbff1763b6447360d53e26e85bc20345b9eaa",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "Name",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "Capital",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "Name",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "Population",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "SurfaceArea",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "CountryLanguage",
+            "column": "IsOfficial",
+            "keys": [
+              "CountryCode",
+              "Language"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Holy See (Vatican City State)",
+            1000,
+            "Città del Vaticano",
+            "Italian"
+          ]
+        ],
+        "draws": 2048,
+        "unchanged_answers": 1821,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 645,
+            "mutation": {
+              "table": "Country",
+              "column": "Population",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 1000,
+                  "after": 2542000
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Holy See (Vatican City State)",
+                2542000,
+                "Città del Vaticano",
+                "Italian"
+              ]
+            ]
+          },
+          {
+            "draw": 1131,
+            "mutation": {
+              "table": "Country",
+              "column": "Population",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "BLR"
+                  ],
+                  "before": 10236000,
+                  "after": 1000
+                },
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 1000,
+                  "after": 10236000
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Holy See (Vatican City State)",
+                10236000,
+                "Città del Vaticano",
+                "Italian"
+              ]
+            ]
+          },
+          {
+            "draw": 1384,
+            "mutation": {
+              "table": "Country",
+              "column": "SurfaceArea",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "MTQ"
+                  ],
+                  "before": 1102.0,
+                  "after": 0.4
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Holy See (Vatican City State)",
+                1000,
+                "Città del Vaticano",
+                "Italian"
+              ],
+              [
+                "Martinique",
+                395000,
+                "Fort-de-France",
+                "French"
+              ]
+            ]
+          },
+          {
+            "draw": 1492,
+            "mutation": {
+              "table": "Country",
+              "column": "SurfaceArea",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "GUF"
+                  ],
+                  "before": 90000.0,
+                  "after": 0.4
+                },
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 0.4,
+                  "after": 90000.0
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 1515,
+            "mutation": {
+              "table": "Country",
+              "column": "Population",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 1000,
+                  "after": 94000
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Holy See (Vatican City State)",
+                94000,
+                "Città del Vaticano",
+                "Italian"
+              ]
+            ]
+          },
+          {
+            "draw": 1693,
+            "mutation": {
+              "table": "Country",
+              "column": "Capital",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 3538,
+                  "after": 33
+                },
+                {
+                  "key": [
+                    "ANT"
+                  ],
+                  "before": 33,
+                  "after": 3538
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Holy See (Vatican City State)",
+                1000,
+                "Willemstad",
+                "Italian"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 7,
+      "uuid": "486ea46224d1-65e39fac89be",
+      "query": "List the district name of the city with the smallest population.",
+      "target_sql": "SELECT District FROM City WHERE Population=(SELECT MIN(Population) FROM City)",
+      "search": {
+        "seed": "c2a50516b4e02391f6a6a84336a6fa0c4feb534a322a3fcfd2c827c89a744e58",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "District",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "City",
+            "column": "Population",
+            "keys": [
+              "ID"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "–"
+          ]
+        ],
+        "draws": 2048,
+        "unchanged_answers": 2045,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 880,
+            "mutation": {
+              "table": "City",
+              "column": "District",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    2912
+                  ],
+                  "before": "–",
+                  "after": "Sverdlovsk"
+                },
+                {
+                  "key": [
+                    3584
+                  ],
+                  "before": "Sverdlovsk",
+                  "after": "–"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Sverdlovsk"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 8,
+      "uuid": "486ea46224d1-cd809c9ef7fa",
+      "query": "In which continent does the country with the smallest surface area belongs?",
+      "target_sql": "SELECT Continent FROM Country WHERE SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country)",
+      "search": {
+        "seed": "869f4a38e280813e67dceee3f45637f23801c846dfbd8a21dedb0d59b0246ae1",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "Country",
+            "column": "Continent",
+            "keys": [
+              "Code"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "SurfaceArea",
+            "keys": [
+              "Code"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Europe"
+          ]
+        ],
+        "draws": 2048,
+        "unchanged_answers": 1767,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 11,
+            "mutation": {
+              "table": "Country",
+              "column": "SurfaceArea",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "CMR"
+                  ],
+                  "before": 475442.0,
+                  "after": 0.4
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Africa"
+              ],
+              [
+                "Europe"
+              ]
+            ]
+          },
+          {
+            "draw": 80,
+            "mutation": {
+              "table": "Country",
+              "column": "Continent",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": "Europe",
+                  "after": "Africa"
+                },
+                {
+                  "key": [
+                    "SYC"
+                  ],
+                  "before": "Africa",
+                  "after": "Europe"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Africa"
+              ]
+            ]
+          },
+          {
+            "draw": 97,
+            "mutation": {
+              "table": "Country",
+              "column": "SurfaceArea",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "MYS"
+                  ],
+                  "before": 329758.0,
+                  "after": 0.4
+                },
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 0.4,
+                  "after": 329758.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Asia"
+              ]
+            ]
+          },
+          {
+            "draw": 384,
+            "mutation": {
+              "table": "Country",
+              "column": "Continent",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": "Europe",
+                  "after": "North America"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "North America"
+              ]
+            ]
+          },
+          {
+            "draw": 1542,
+            "mutation": {
+              "table": "Country",
+              "column": "Continent",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "BHR"
+                  ],
+                  "before": "Asia",
+                  "after": "Europe"
+                },
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": "Europe",
+                  "after": "Asia"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Asia"
+              ]
+            ]
+          },
+          {
+            "draw": 1727,
+            "mutation": {
+              "table": "Country",
+              "column": "SurfaceArea",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "MYT"
+                  ],
+                  "before": 373.0,
+                  "after": 0.4
+                },
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": 0.4,
+                  "after": 373.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Africa"
+              ]
+            ]
+          },
+          {
+            "draw": 1778,
+            "mutation": {
+              "table": "Country",
+              "column": "Continent",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "VAT"
+                  ],
+                  "before": "Europe",
+                  "after": "Africa"
+                },
+                {
+                  "key": [
+                    "MDG"
+                  ],
+                  "before": "Africa",
+                  "after": "Europe"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Africa"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 9,
+      "uuid": "486ea46224d1-cd446461ab5d",
+      "query": "Who is the head of the state where the most crowded city belongs?",
+      "target_sql": "SELECT c.HeadOfState FROM City city JOIN Country c ON c.Code=city.CountryCode WHERE city.Population=(SELECT MAX(Population) FROM City)",
+      "search": {
+        "seed": "397d129dee4b661c9a5d5a43066e270357f32385b88df1efc665b801e8aec1ca",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "Population",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "HeadOfState",
+            "keys": [
+              "Code"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Kocheril Raman Narayanan"
+          ]
+        ],
+        "draws": 2048,
+        "unchanged_answers": 2016,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 85,
+            "mutation": {
+              "table": "Country",
+              "column": "HeadOfState",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "HKG"
+                  ],
+                  "before": "Jiang Zemin",
+                  "after": "Kocheril Raman Narayanan"
+                },
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "Kocheril Raman Narayanan",
+                  "after": "Jiang Zemin"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Jiang Zemin"
+              ]
+            ]
+          },
+          {
+            "draw": 583,
+            "mutation": {
+              "table": "Country",
+              "column": "HeadOfState",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "Kocheril Raman Narayanan",
+                  "after": "Miguel Trovoada"
+                },
+                {
+                  "key": [
+                    "STP"
+                  ],
+                  "before": "Miguel Trovoada",
+                  "after": "Kocheril Raman Narayanan"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Miguel Trovoada"
+              ]
+            ]
+          },
+          {
+            "draw": 593,
+            "mutation": {
+              "table": "Country",
+              "column": "HeadOfState",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "IND"
+                  ],
+                  "before": "Kocheril Raman Narayanan",
+                  "after": "Fidel Castro Ruz"
+                },
+                {
+                  "key": [
+                    "CUB"
+                  ],
+                  "before": "Fidel Castro Ruz",
+                  "after": "Kocheril Raman Narayanan"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Fidel Castro Ruz"
+              ]
+            ]
+          },
+          {
+            "draw": 1006,
+            "mutation": {
+              "table": "City",
+              "column": "Population",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    326
+                  ],
+                  "before": 177409,
+                  "after": 10500000
+                },
+                {
+                  "key": [
+                    1024
+                  ],
+                  "before": 10500000,
+                  "after": 177409
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Fernando Henrique Cardoso"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 11,
+      "uuid": "486ea46224d1-c859d649b4b5",
+      "query": "List down the cities that belong to the country with a life expectancy of 66.4.",
+      "target_sql": "SELECT city.Name FROM City city JOIN Country c ON c.Code=city.CountryCode WHERE c.LifeExpectancy=66.4 ORDER BY city.ID",
+      "search": {
+        "seed": "52117b319df0787d9390e5b9321450227d1fa46db1919fc282a7d96aefbdff8b",
+        "proposal_limit": 2048,
+        "retained_limit": 8,
+        "eligible_columns": [
+          {
+            "table": "City",
+            "column": "Name",
+            "keys": [
+              "ID"
+            ]
+          },
+          {
+            "table": "Country",
+            "column": "LifeExpectancy",
+            "keys": [
+              "Code"
+            ]
+          }
+        ],
+        "original_answer": [
+          [
+            "Gjumri"
+          ],
+          [
+            "Vanadzor"
+          ],
+          [
+            "Yerevan"
+          ]
+        ],
+        "draws": 1608,
+        "unchanged_answers": 1592,
+        "constraint_rejections": 0,
+        "candidates": [
+          {
+            "draw": 73,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "ARM"
+                  ],
+                  "before": 66.4,
+                  "after": 73.7
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 124,
+            "mutation": {
+              "table": "City",
+              "column": "Name",
+              "keys": [
+                "ID"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    3598
+                  ],
+                  "before": "Izevsk",
+                  "after": "Vanadzor"
+                },
+                {
+                  "key": [
+                    128
+                  ],
+                  "before": "Vanadzor",
+                  "after": "Izevsk"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Gjumri"
+              ],
+              [
+                "Izevsk"
+              ],
+              [
+                "Yerevan"
+              ]
+            ]
+          },
+          {
+            "draw": 167,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "ARM"
+                  ],
+                  "before": 66.4,
+                  "after": 69.7
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 371,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    "ARM"
+                  ],
+                  "before": 66.4,
+                  "after": 56.6
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 715,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "MYT"
+                  ],
+                  "before": 59.5,
+                  "after": 66.4
+                },
+                {
+                  "key": [
+                    "ARM"
+                  ],
+                  "before": 66.4,
+                  "after": 59.5
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Mamoutzou"
+              ]
+            ]
+          },
+          {
+            "draw": 749,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "BLR"
+                  ],
+                  "before": 68.0,
+                  "after": 66.4
+                },
+                {
+                  "key": [
+                    "ARM"
+                  ],
+                  "before": 66.4,
+                  "after": 68.0
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Baranovitši"
+              ],
+              [
+                "Bobruisk"
+              ],
+              [
+                "Borisov"
+              ],
+              [
+                "Brest"
+              ],
+              [
+                "Gomel"
+              ],
+              [
+                "Grodno"
+              ],
+              [
+                "Lida"
+              ],
+              [
+                "Minsk"
+              ],
+              [
+                "Mogiljov"
+              ],
+              [
+                "Molodetšno"
+              ],
+              [
+                "Mozyr"
+              ],
+              [
+                "Novopolotsk"
+              ],
+              [
+                "Orša"
+              ],
+              [
+                "Pinsk"
+              ],
+              [
+                "Soligorsk"
+              ],
+              [
+                "Vitebsk"
+              ]
+            ]
+          },
+          {
+            "draw": 1112,
+            "mutation": {
+              "table": "City",
+              "column": "Name",
+              "keys": [
+                "ID"
+              ],
+              "operator": "replace_observed_value",
+              "changes": [
+                {
+                  "key": [
+                    128
+                  ],
+                  "before": "Vanadzor",
+                  "after": "Cixi"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Cixi"
+              ],
+              [
+                "Gjumri"
+              ],
+              [
+                "Yerevan"
+              ]
+            ]
+          },
+          {
+            "draw": 1607,
+            "mutation": {
+              "table": "Country",
+              "column": "LifeExpectancy",
+              "keys": [
+                "Code"
+              ],
+              "operator": "swap_values",
+              "changes": [
+                {
+                  "key": [
+                    "QAT"
+                  ],
+                  "before": 72.4,
+                  "after": 66.4
+                },
+                {
+                  "key": [
+                    "ARM"
+                  ],
+                  "before": 66.4,
+                  "after": 72.4
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Doha"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "task_index": 0,
+      "reason": "Any five allows multiple valid answers; changing the full eligible set does not necessarily invalidate the requested answer."
+    },
+    {
+      "task_index": 10,
+      "reason": "Ambiguous highest-capital interpretation already documented."
+    }
+  ],
+  "scope": "SQL projections contain requested fields only, compared as bags. Ten known development tasks; all four original model/prompt traces eligible regardless of final outcome. Reuse same candidates across arms. Existing declared keys and foreign-key columns are excluded; donor values are same-column observations. Other semantic constraints are not certified. No failed search establishes sufficiency."
+}
