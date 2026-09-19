@@ -246,3 +246,36 @@ retokenization, causal tool diagnosis or failure exclusion is implied.
 hashes, provenance and the corrected transfer-hash transcription. The
 separate twelve-run generation-budget control was started automatically after
 the 420-run grid completed and is not included in these results.
+
+## Completed prospectively selected generation-budget control
+
+`vakra_output_budget_complete_analysis_v1.json` verifies all twelve pairs
+against the immutable v2 deployment and complete primary archive. Its
+49-member raw archive is 259852 bytes, SHA256
+`9ad8955cdf0c368412e1e57f1f2ae2b74aedbd4d63f1d79f956e4cf6f71f63d7`.
+All twelve worker exits are zero and exact initial messages, schemas and
+previews are independently compared. Replay script SHA256 is
+`f741737f1c6e430703675dd556afc8bd50811c10e45f9a190af124556879f963`.
+The full source, dependency and model configuration is the primary one;
+the new limit is 8192 and the input/tool/step limits remain unchanged.
+
+All twelve final responses were read. Four hockey answers (both prompts for
+Qwen3-4B and Qwen3-30B-A3B) become complete; exact parsing gives precisely
+the 129 frozen required names without omissions, extras or duplicates.
+Their final token counts change from 512 to 617/619 and 626/628 respectively.
+The six cookbook responses and two Qwen2.5 hockey responses remain byte-identical
+and incomplete, naming only three examples. The report records full primary
+and new final texts, reasons, token counts and all usage fields. The two
+name-parser tests reject omitted/repeated entities and unexpected formats.
+
+All twelve pairs have identical pre-final inputs and generated token IDs,
+ordered tool actions and response content/error flags, and final-generation
+inputs. Each primary final token sequence is an exact prefix of the new one.
+This supports a local output-cap explanation for the four recovered lists.
+The ceiling was changed on every generation, so identical earlier behavior
+is an observed property, not an assumed property of the intervention.
+No protocol, input-limit, step-limit or new output-ceiling event occurs.
+These are two selected tasks, not twelve independent task samples; the main
+420-run scores are retained unchanged. Runtime prefix-replay assertions are
+not represented as a second independently archived copy of each replayed
+response. One unblinded assistant review remains the annotation limitation.

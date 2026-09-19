@@ -5,7 +5,8 @@ question from the historical proposal in this directory. Eight initial model
 episodes, 48 matched development episodes, 240 fixed-prompt replication
 episodes, 240 executor-sensitivity episodes, 240 third-model sensitivity
 episodes, 120 larger-checkpoint episodes and a completed 420-episode
-registered expansion across four further databases
+registered expansion across four further databases, followed by twelve
+prospectively selected output-budget controls,
 support the present observations.
 A novel method and independently confirmed benefit are not established.
 
@@ -25,7 +26,9 @@ original/reminder counts of 24/49 versus 20/49, 14/49 versus 15/49, and
 27/49 versus 29/49 across three checkpoints. All conditional paired
 intervals include zero; omitting Disney reverses both positive aggregate
 differences. Forty-three input-budget failures and incomplete requested lists
-further delimit interpretation. Full-transcript database replays provide two
+further delimit interpretation. On two prospectively length-selected tasks,
+larger generation budgets complete four previously truncated answers but leave
+eight incomplete responses unchanged. Full-transcript database replays provide two
 examples where a correct original answer is not identified under an explicit
 admissible intervention. One retrieves every requested output value yet
 applies an incorrect predicate. A bounded price-swap search adds no
@@ -558,8 +561,8 @@ The performance floor of SmolLM3 and the small number of databases motivate
 two separately registered extensions. Their design was fixed after the
 developmental results above; they are not retroactively described as part of
 the original study. The known-task checkpoint extension is complete; the
-prospective domain extension is also complete; its separately registered
-output-budget control remains pending.
+prospective domain extension and its separately registered output-budget
+control are also complete.
 
 ### 10.1 A larger checkpoint on the known tasks
 
@@ -660,10 +663,10 @@ generation. A mismatch invalidates the matched comparison and is retained
 as a failure to pair. The original primary result remains unchanged.
 
 The changed ceiling applies to every generation in the target episode,
-including tool-call generation. Any improvement would therefore establish
-output-budget sensitivity, not isolate final-answer space or demonstrate a
-new evidence-acquisition method. Complete results and pairing checks remain
-pending.
+including tool-call generation. The registered intervention therefore tests
+output-budget sensitivity; attribution specifically to final-answer space
+requires comparing the actual preceding histories. Complete results and
+those comparisons are reported in section 10.10.
 
 ### 10.4 Completed cookbook slice of the registered expansion
 
@@ -694,7 +697,7 @@ as independent examples or extrapolate sixteen scored tasks to all databases.
 Task 001 requires 791 recipe names under the reference interpretation. Every
 arm returns only three examples. The absence of a ceiling-length final does
 not establish that a larger generation allowance would have no effect; the
-separately registered matched budget rerun remains pending.
+separately registered matched budget rerun is reported in section 10.10.
 
 The slot-filling interface also matters. In task 015, the larger checkpoint
 under the reminder repeatedly retrieves an ingredient column but receives a
@@ -794,7 +797,7 @@ Disney therefore adds a negative Qwen3 comparison and positive Qwen2.5 and
 Qwen30B comparisons under both disclosed readings. Twenty tasks from one
 database, with a fixed eighteen-task denominator, do not establish a
 population prompt effect or identify its mechanism. The separate
-output-budget control is not incorporated as a completed result here.
+output-budget control appears in section 10.10 without replacing these scores.
 
 ### 10.7 Completed genes slice and scoring-floor limits
 
@@ -859,7 +862,7 @@ heights is also not satisfied by a repeated list of season-row heights or a
 two-player sample. These outcomes retain the complete-answer rules fixed
 before generation. They do not prove that every semantically equivalent
 serialization must exceed the budget; the registered longer-output control
-will address one part of that question.
+below addresses one part of that question.
 
 Completion and correctness again differ. The larger checkpoint produces
 five more finals with the reminder but one fewer correct answer. Its
@@ -905,6 +908,58 @@ versus 19/49, 14/49 versus 14/49, and 25/49 versus 28/49 respectively; all
 three corresponding conditional intervals still include zero. These checks
 restrict the aggregate prompt-benefit interpretation. They do not establish
 prompt equivalence or erase the within-domain gains and losses.
+
+### 10.10 Larger generation budgets distinguish truncation from early stopping
+
+The twelve prospectively registered controls now complete, with every worker
+exiting successfully. The only configured budget change is 512 to 8,192 new
+tokens on every target generation. Source versions, packages, model files,
+templates, decoding, input limits and tool/step ceilings match the corresponding
+primary configurations. Before target generation, the runner replays each
+worker's warmup and preceding tool history without model inference and checks
+the initial messages, ordered tool schemas and preview against the primary
+record. Offline comparison independently confirms those initial inputs.
+All twelve runs produce final answers, without protocol, input-limit or
+step-limit terminations; none reaches the new generation ceiling.
+
+| Task / checkpoint | Primary complete answers, original / reminder | Larger-budget complete answers, original / reminder | Final tokens, larger-budget original / reminder |
+|---|---:|---:|---:|
+| 791 recipe names / Qwen3-4B | 0 / 0 | 0 / 0 | 55 / 94 |
+| 791 recipe names / Qwen2.5-7B | 0 / 0 | 0 / 0 | 60 / 86 |
+| 791 recipe names / Qwen3-30B-A3B | 0 / 0 | 0 / 0 | 81 / 85 |
+| 129 player names / Qwen3-4B | 0 / 0 | 1 / 1 | 617 / 619 |
+| 129 player names / Qwen2.5-7B | 0 / 0 | 0 / 0 | 33 / 54 |
+| 129 player names / Qwen3-30B-A3B | 0 / 0 | 1 / 1 | 626 / 628 |
+
+All four recovered player lists contain exactly the 129 requested names,
+checked by parsing their complete comma-separated bodies and comparing name
+multisets with the frozen SQL card. The corresponding short-budget answers
+end at 512 generated tokens and omit required names. The eight other final
+responses are byte-identical to their primary answers: they still provide
+only the first three entries, sometimes offering a future retrieval or
+mentioning the total. This is insufficient under the unchanged complete-list
+criterion. All twelve full responses are also read by the same unblinded
+assistant; the mechanical check is not an independent semantic adjudication.
+
+The observed match extends beyond initialization. All twelve pairs have
+identical pre-final model inputs and generated token-ID sequences, identical
+ordered tool names/arguments and response content/error flags, and identical
+inputs to the final generation. Each short final's token IDs are an exact
+prefix of the corresponding long final's IDs. Thus, in these four recovered
+cases, the larger allowance extends the same observed final generation after
+the same acquisition history. This supports a local attribution to the output
+cap, stronger than merely noticing a response at the ceiling. The intervention
+nevertheless changes all target generations; equivalent pre-final behavior
+is an observed result here, not a guarantee for other tasks or checkpoints.
+
+This contrast separates two limited explanations. Four player-list failures
+are relieved by a larger generation allowance, whereas the eight unchanged
+responses stop far below that allowance with incomplete lists. It does not
+identify why those agents stop, establish that all needed evidence was acquired,
+or demonstrate an autonomous acquisition repair. Two selected questions with
+six model/prompt arms are not twelve independent task samples. No confidence
+interval for a general recovery rate is inferred, and the twelve controls
+do not replace or rescore the primary 420-run experiment.
 
 ## 11. Related work and limits
 
@@ -1031,7 +1086,8 @@ the disclosed conservative answer-review sensitivity. Genes is at zero on
 all three scored tasks for every arm, limiting comparison at that floor.
 Ice hockey adds no net reminder benefit on any checkpoint. The complete
 four-database expansion retains mixed aggregate effects and conditional
-intervals that include zero; the output-budget extension remains pending.
+intervals that include zero. The completed output-budget control recovers four
+player-list answers but leaves eight incomplete responses unchanged.
 Larger sample counts
 will not by themselves resolve assistant annotation bias, identify the cause
 of a prompt effect, or demonstrate a new method's superiority.
@@ -1056,5 +1112,5 @@ fully replayed examples show that a correct original answer can remain
 unidentified under an explicit admissible intervention, including after full
 output-column retrieval. These findings support more explicit evaluation and
 auditing of relational tool use. They do not yet establish a general evidence
-controller, a benchmark-wide failure rate or confirmatory benefits on the
-pending output-budget control.
+controller, a benchmark-wide failure rate or a general benefit from increasing
+generation budgets beyond the two selected tasks.

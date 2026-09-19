@@ -55,3 +55,25 @@ Executing that script does not produce a second independent assessment.
 No failed run, missing answer, ambiguous task's execution cost, or output-limit
 case is silently removed. The separate larger-output experiment is a distinct
 registered artifact and must not be substituted for the 512-token primary run.
+
+## Twelve-run generation-budget comparison
+
+The completed additional archive is
+`results/remote/vakra-output-budget-v2-complete.zip`, 259852 bytes, 49 members,
+SHA256 `9ad8955cdf0c368412e1e57f1f2ae2b74aedbd4d63f1d79f956e4cf6f71f63d7`.
+Its deployment archive is `results/deploy/vakra-output-budget-v2.zip`, SHA256
+`7dea81ad419844bdb3f14c6386e5e6491eb64b0dc06af2e1f34afc86b8e851bd`.
+Extract the result under the archive basename, retaining its
+`runs/vakra-output-budget-v2` prefix. Keep the completed primary expansion
+archive, cards and annotations above available at their declared paths.
+
+`scripts/analyze_vakra_output_budget_complete_v1.py` verifies input identity,
+configuration/source hashes, tool histories, token-ID prefixes and all twelve
+complete responses. It records the already performed assistant review; it
+does not generate new independent labels. It also compares the four positive
+hockey name multisets directly with the fixed SQL cards. The output is
+`research/evidence/vakra_output_budget_complete_analysis_v1.json`.
+For regeneration, use an isolated reproduction copy without that generated
+receipt; the entry point refuses to overwrite an existing receipt. Run
+`python -m unittest tests.test_budget_complete_names` for the format and
+multiset checks. No model inference is needed for this analysis.
