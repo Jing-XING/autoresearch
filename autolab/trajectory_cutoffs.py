@@ -68,6 +68,7 @@ def main():
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cutoffs", type=int, nargs="+", default=[4, 8, 16])
+    parser.add_argument("--models", nargs="+", help="Explicit source-model subset; otherwise retain all models")
     args = parser.parse_args()
     if len(set(args.cutoffs)) != len(args.cutoffs) or min(args.cutoffs) < 1:
         parser.error("Unique positive cutoffs required")
@@ -76,6 +77,8 @@ def main():
         (args.output / name).mkdir()
     rows, excluded = [], []
     for status_path in sorted(args.root.glob("*/shard-*/case-*-status.json")):
+        if args.models and status_path.parent.parent.name not in args.models:
+            continue
         status = json.loads(status_path.read_bytes())
         identity = status_path.relative_to(args.root).as_posix()
         if status["reward"] is None:
@@ -97,7 +100,10 @@ def main():
     manifest = {"purpose": "development only; correlated prefixes are not independent tasks",
                 "intervention": "offline external generation cutoff; source policy input unchanged",
                 "evaluation_warning": "Later success does not imply every prefix action was correct, and cannot establish memory utility",
-                "cutoffs": args.cutoffs, "records": rows, "excluded": excluded}
+                "cutoffs": args.cutoffs, "source_models": args.models,
+                "records": rows, "excluded": excluded}
+    if not rows:
+        raise ValueError("No source records matched the registered selection")
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(json.dumps({"records": len(rows), "excluded_runs": len(excluded)}))
 

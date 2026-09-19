@@ -21,6 +21,7 @@ def summarize(root, expected_models=("qwen3", "qwen25")):
         reference = {k: manifest[k] for k in ("all_task_ids", "seed", "decoder",
                      "max_new_tokens", "max_steps", "max_errors", "tau_commit",
                      "tau_source_manifest_sha256", "source_sha256", "task_split")}
+        reference.update({k: manifest.get(k) for k in ("memory_bank_sha256", "memory_condition")})
         if references and reference != next(iter(references.values())):
             raise ValueError("Incompatible task, adapter or inference configuration across shards")
         references[model] = reference

@@ -43,14 +43,23 @@ def main():
     p.add_argument("--shard", type=int, default=0)
     p.add_argument("--shards", type=int, default=1)
     p.add_argument("--tool-prefix", action="store_true", help="Supply an opening tool-call marker; formatting baseline, not full grammar constraints")
+    p.add_argument("--memory-bank", type=Path)
+    p.add_argument("--memory-condition", choices=["raw", "outcome_only", "full_metadata", "boundary_aware"])
     args = p.parse_args()
     if args.count < 1 or args.shards < 1 or not 0 <= args.shard < args.shards:
         p.error("Invalid count/shard")
+    if bool(args.memory_bank) != bool(args.memory_condition):
+        p.error("Memory bank and condition must be provided together")
     tau_digest = verify_tau_source(args.tau_repo)
     args.output.mkdir(parents=True, exist_ok=False)
     tasks = get_tasks("telecom", task_split_name=args.split, num_tasks=args.count)
     if len(tasks) != args.count:
         raise ValueError("Requested task count unavailable")
+    memory_bank = None
+    if args.memory_bank:
+        from autolab.experience_memory_bank import FixedMemoryBank
+        memory_bank = FixedMemoryBank(json.loads(args.memory_bank.read_bytes()))
+        memory_bank.assert_disjoint([t.id for t in tasks])
     # This batch is explicitly development. Do not tune on a held-out split here.
     selected = tasks[args.shard::args.shards]
     manifest = {
@@ -60,11 +69,14 @@ def main():
         "seed": 20260919, "decoder": "greedy_native_template_tool_prefix" if args.tool_prefix else "greedy_native_template", "max_new_tokens": 512,
         "supplied_prefix": "<tool_call>\n" if args.tool_prefix else "",
         "max_steps": args.max_steps, "max_errors": 5,
+        "memory_bank_sha256": sha256_file(args.memory_bank) if args.memory_bank else None,
+        "memory_condition": args.memory_condition,
         "tau_commit": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
         "tau_source_manifest_sha256": tau_digest,
         "packages": {n: importlib.metadata.version(n) for n in ["torch", "transformers", "tau2", "litellm"]},
         "source_sha256": {n: sha256_file(Path(__file__).parent / n) for n in
-                          ["tau2_native_agent.py", "tau2_native_baseline.py", "native_tool_agent.py", "local_smoke.py"]},
+                          ["tau2_native_agent.py", "tau2_native_baseline.py", "native_tool_agent.py", "local_smoke.py",
+                           "experience_memory_bank.py", "experience_curator.py", "trajectory_cutoffs.py"]},
         "model_files_sha256": {p.name: sha256_file(p) for p in sorted(args.model_path.iterdir())
                                 if p.is_file() and (p.suffix in [".json", ".safetensors"] or p.name == "merges.txt")},
         "task_sha256": {t.id: hashlib.sha256(t.model_dump_json().encode()).hexdigest() for t in selected},
@@ -72,7 +84,7 @@ def main():
     write_episode(manifest, args.output, "manifest")
     model = NativeTransformersModel(args.model_path, tool_prefix=args.tool_prefix)
     audit = []
-    agent_name = register_native_solo(model, audit)
+    agent_name = register_native_solo(model, audit, memory_bank=memory_bank, memory_condition=args.memory_condition)
     config = TextRunConfig(domain="telecom", agent=agent_name, user=agent_name + "_dummy",
                            llm_agent=str(args.model_path), max_steps=args.max_steps,
                            max_errors=5, seed=20260919, enforce_communication_protocol=True)

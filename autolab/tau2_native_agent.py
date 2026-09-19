@@ -40,11 +40,27 @@ def native_messages(messages):
 
 
 class NativeSoloAgent(LLMSoloAgent):
-    def __init__(self, *, model, audit, max_new_tokens=512, **kwargs):
+    def __init__(self, *, model, audit, max_new_tokens=512, memory_selection=None, **kwargs):
         super().__init__(**kwargs)
         self.local_model = model
         self.audit = audit
         self.max_new_tokens = max_new_tokens
+        self.memory_selection = memory_selection
+
+    def get_init_state(self, message_history=None):
+        state = super().get_init_state(message_history)
+        if self.memory_selection is not None:
+            # Preserve the official policy/ticket, and expose only the lesson.
+            # Source task identities, outcomes and retrieval labels stay outside
+            # the model context. All treatment arms use this same wrapper.
+            state.system_messages[0].content += (
+                "\n\nPrior experience from a different task follows as quoted data. "
+                "It may be incomplete or inapplicable. The current policy, ticket "
+                "and observed tool results take precedence. Do not copy source "
+                "entity identifiers without checking the current environment.\n"
+                + json.dumps({"prior_experience": self.memory_selection["memory"]}, ensure_ascii=False)
+            )
+        return state
 
     def generate_next_message(self, message, state):
         if isinstance(message, UserMessage):
@@ -62,6 +78,8 @@ class NativeSoloAgent(LLMSoloAgent):
                  "input_sha256": hashlib.sha256(json.dumps(messages, sort_keys=True).encode()).hexdigest(),
                  "reply": asdict(reply)}
         self.audit.append(event)  # Retain invalid raw outputs as well as valid calls.
+        if event["step"] == 0 and self.memory_selection is not None:
+            event["memory_selection"] = {k: v for k, v in self.memory_selection.items() if k != "memory"}
         try:
             calls = parse_calls(reply.text)
             if not calls:
@@ -83,13 +101,18 @@ class NativeSoloAgent(LLMSoloAgent):
         return response, state
 
 
-def register_native_solo(model, audit, max_new_tokens=512, name="autolab_native_solo"):
+def register_native_solo(model, audit, max_new_tokens=512, name="autolab_native_solo",
+                         memory_bank=None, memory_condition=None):
     from tau2.registry import registry
 
     def factory(tools, domain_policy, task, llm, llm_args, **unused):
+        selection = None
+        if memory_bank is not None:
+            memory_bank.assert_disjoint([task.id])
+            selection = memory_bank.retrieve(task.ticket, memory_condition)
         return NativeSoloAgent(model=model, audit=audit, max_new_tokens=max_new_tokens,
                                tools=tools, domain_policy=domain_policy, task=task,
-                               llm=llm, llm_args=llm_args)
+                               llm=llm, llm_args=llm_args, memory_selection=selection)
 
     registry.register_agent_factory(factory, name,
                                     task_filter=LLMSoloAgent.check_valid_task,

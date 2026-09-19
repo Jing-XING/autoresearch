@@ -126,6 +126,27 @@ class Tau2NativeIntegrationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Incomplete tool-result"):
             audit_prefixes(broken, task)
 
+    def test_memory_wrapper_exposes_only_lesson_and_preserves_policy(self):
+        from tau2.runner.helpers import get_tasks
+        from autolab.tau2_native_agent import NativeSoloAgent
+        task = get_tasks("telecom", task_split_name="small", num_tasks=1)[0]
+        selection = {"record_id": "HIDDEN_SOURCE_ID", "memory": "Observe before retrying.",
+                     "similarity": 0.7, "condition": "full_metadata"}
+        audit = []
+        agent = NativeSoloAgent(model=ScriptedModel([call("done")]), audit=audit,
+                                tools=[], domain_policy="CURRENT_POLICY_CANARY", task=task,
+                                llm="scripted-test-only", memory_selection=selection)
+        state = agent.get_init_state()
+        text = state.system_messages[0].content
+        self.assertIn("CURRENT_POLICY_CANARY", text)
+        self.assertIn(task.ticket, text)
+        self.assertIn("Observe before retrying.", text)
+        self.assertNotIn("HIDDEN_SOURCE_ID", text)
+        self.assertNotIn("full_metadata", text)
+        agent.generate_next_message(None, state)
+        self.assertEqual(audit[0]["memory_selection"]["record_id"], "HIDDEN_SOURCE_ID")
+        self.assertNotIn("memory", audit[0]["memory_selection"])
+
 
 if __name__ == "__main__":
     unittest.main()
