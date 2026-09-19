@@ -382,8 +382,10 @@ A conservative screen asks whether a recorded successful event has an
 immediate structured result carrying an explicit contradictory error status.
 It decodes JSON-object strings but does not infer failure from arbitrary
 natural-language text, nested fields or an unobserved post-state. It finds
-zero instances under that definition. Nine compensation events are marked
-successful without an independent state-restoration observation. Thus the
+zero instances under that definition. Nine RAC compensation-event records are marked
+successful without an independent state-restoration observation. This count
+is restricted to records labelled `react_agent_compensation`; the other
+frameworks' repeated progress records are not pooled into it. Thus the
 archive neither corroborates the constructed mismatch's occurrence nor proves
 that all compensations achieved their intended effects.
 
@@ -416,7 +418,34 @@ Their status/ledger contract is narrower than full
 restoration, and no official airline task success rate is reported. An external effect oracle is available by construction.
 These conditions make the mechanisms inspectable but limit deployment claims.
 
-## 8. Provisional conclusion
+## 8. Offline evidence and reproducibility scope
+
+The accompanying offline artifact contains the immutable reports, selected
+raw state and WAL files, the public initial airline database, the original
+published RAC archive, the frozen retry protocol and inspection copies of
+the experiment scripts. A manifest records every member's byte length and
+SHA-256. The separate archive receipt pins the whole package. Original
+machine paths in records are preserved and mapped to packaged members;
+reanalysis does not require access to the original research machine.
+
+A standard-library-only Python entry point recomputes the 25-case airline
+state comparison, every transition and signed ledger net of the 2,000-record
+retry census, and the released archive's duplication, prefix-chain and
+structured-status results. It reads saved data rather than importing the
+native tool or the original measurement functions. It also rejects missing,
+extra or altered package members. The README states exactly which other
+probe reports are provided only for byte-verified inspection. Successful
+offline verification does not imply native framework reexecution, original
+model-benchmark reproduction, or independent human adjudication.
+
+Full reexecution requires the separately pinned upstream sources and runtime
+dependencies. Several original experimental launchers contain explicit
+Windows interpreter paths, which must be adapted to another machine. We
+therefore distinguish portable offline reanalysis from an environment-portable
+end-to-end launcher. The artifact adds reproducibility support for the
+reported diagnostic observations; it adds no new experimental observations.
+
+## 9. Provisional conclusion
 
 The executed probes demonstrate specific inconsistencies between returned
 tool errors, automatic compensation discovery and recovery records. They also

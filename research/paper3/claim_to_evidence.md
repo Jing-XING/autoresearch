@@ -29,3 +29,23 @@ benchmark sample size. Instructions and scope are detailed in
 |---|---|---|
 | In all 2,000 public initial reservations, repeated native cancellation gives ledger sizes 2/4/8 while maintaining cancelled status and zero signed net | `../evidence/tau_airline_retry_census_v1.json`, `../evidence/tau_airline_retry_census_validation_v2.json` | Direct native calls; homogeneous one-payment starting ledgers; no external payment harm or framework retry claim |
 | One authoritative native read after an imposed acknowledgement error avoids two further cancellation calls and matches single-cancel state | Same immutable census; raw receipt `../evidence/tau_airline_retry_census_receipt_v2.json` | Diagnostic policy supplied by experimenter; synchronous state, no concurrent writes, no new algorithm |
+
+## Portable offline evidence artifact
+
+`paper3_offline_artifact_receipt_v2.json` pins the ZIP, manuscript snapshot,
+manifest and standard-library verifier. `paper3_offline_reanalysis_v2.json`
+records reanalysis of the actual packaged data. The verifier recomputes the
+native airline matrix, complete retry census and original archive inventory;
+other probe reports are included for byte-verified inspection only. This
+does not reexecute framework code, model tasks or the original benchmark.
+`reproduce.md` documents the one-command workflow, attribution, source scope
+and limitations. The previously rendered review PDF predates this added
+artifact section and is not the current manuscript rendering.
+
+The initial v1 package and its successful reanalysis are retained. That
+reanalysis additionally counted 79,143 successful-compensation record
+occurrences across all REALM files; v2 explicitly separates 79,134 labelled
+SagaLLM from nine labelled RAC and states that repeated snapshots preclude
+interpreting them as distinct actions. This exposed and corrected the
+manuscript's previously omitted RAC qualifier, not a changed experimental
+outcome or a new framework performance comparison.

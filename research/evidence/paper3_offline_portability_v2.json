@@ -1,0 +1,36 @@
+{
+  "purpose": "Actual portable reanalysis from a fresh directory containing only the ZIP and packaged verifier, with original machine paths unused. No framework or model execution.",
+  "archive_sha256": "eee5262ea093a04e5e13c509b90a8b07f35e355fbb6c314a6f1c5b11f2951c30",
+  "verifier_sha256": "913f068ea5fa6409144f822d212b23d15c204d718a7ab9c25f96a0f1b353bb60",
+  "reanalysis_sha256": "139064d6a7d8a0cbef3677f16350985579ec9aa21de46da10fefb199591e87d7",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "isolated_directory": "results/audits/paper3-portable-v2",
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "verify.py",
+    "paper3-offline-evidence-v2.zip",
+    "--sha256",
+    "eee5262ea093a04e5e13c509b90a8b07f35e355fbb6c314a6f1c5b11f2951c30",
+    "--output",
+    "reanalysis.json"
+  ],
+  "exit_code": 0,
+  "stdlib_only": true,
+  "initial_inputs": [
+    "paper3-offline-evidence-v2.zip",
+    "verify.py"
+  ],
+  "integrity_tests": [
+    "changed record rejected",
+    "missing record rejected",
+    "parent path rejected without extraction",
+    "only declared original path alias resolved"
+  ],
+  "integrity_tests_passed": 4,
+  "native_airline_cases_recomputed": 25,
+  "retry_states_recomputed": 10000,
+  "archive_json_files_reanalyzed": 280,
+  "limits": "Executed on Windows Python3.12; not tested on Linux/macOS. Portability is supported by stdlib-only implementation and execution outside repository, not proven on every platform. Earlier v1 package/reanalysis retained; v2 adds framework-specific compensation occurrence counts and manuscript qualifier."
+}
