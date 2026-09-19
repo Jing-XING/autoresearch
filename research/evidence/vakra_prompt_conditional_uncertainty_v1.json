@@ -1,0 +1,200 @@
+{
+  "purpose": "Task-paired, domain-stratified resampling of existing prompt comparisons.\n\nThese are conditional descriptive intervals for fixed observed domains, not\nclaims about a randomly sampled benchmark population or model-seed variance.\nAll conditions/models of a task share its resampling multiplicity.\n",
+  "input_sha256": {
+    "vakra_crossdomain_v1_answer_annotations.json": "6b9bfcb31cf70f7db032d4d07a40a23ce63ed134986bce38dde71559e2799e84",
+    "vakra_permissive_v1_answer_annotations.json": "12c188b07dfb0a57eccb3a0dc655c0552a5de8f6f4826651abcdf32dfc001d18",
+    "vakra_smollm3_v1_answer_annotations.json": "e3d1fe1e7845c4690736ad61f359da4c8fe88f0d7dceb69de5d9437347da9d25"
+  },
+  "script_sha256": "f776018eb64c8f9302d35a32dd7ea4257a62949c2c221928e89028b456de7005",
+  "seed": 20260919,
+  "resamples": 10000,
+  "unit": "task; all six model/executor arms paired",
+  "strata": {
+    "book_publishing_company": 20,
+    "cars": 18,
+    "computer_student": 17
+  },
+  "rows": [
+    {
+      "model": "qwen25",
+      "call_policy": "sequential",
+      "n": 55,
+      "wins": 5,
+      "losses": 2,
+      "ties": 48,
+      "difference_percentage_points": 5.454545454545454,
+      "conditional_bootstrap_percentile_95": [
+        -3.6363636363636362,
+        14.545454545454545
+      ],
+      "leave_one_domain_out": [
+        {
+          "omitted_domain": "book_publishing_company",
+          "n": 35,
+          "difference_percentage_points": 5.714285714285714
+        },
+        {
+          "omitted_domain": "cars",
+          "n": 37,
+          "difference_percentage_points": 2.7027027027027026
+        },
+        {
+          "omitted_domain": "computer_student",
+          "n": 38,
+          "difference_percentage_points": 7.894736842105263
+        }
+      ]
+    },
+    {
+      "model": "qwen25",
+      "call_policy": "single",
+      "n": 55,
+      "wins": 4,
+      "losses": 2,
+      "ties": 49,
+      "difference_percentage_points": 3.6363636363636362,
+      "conditional_bootstrap_percentile_95": [
+        -5.454545454545454,
+        12.727272727272727
+      ],
+      "leave_one_domain_out": [
+        {
+          "omitted_domain": "book_publishing_company",
+          "n": 35,
+          "difference_percentage_points": 0.0
+        },
+        {
+          "omitted_domain": "cars",
+          "n": 37,
+          "difference_percentage_points": 5.405405405405405
+        },
+        {
+          "omitted_domain": "computer_student",
+          "n": 38,
+          "difference_percentage_points": 5.2631578947368425
+        }
+      ]
+    },
+    {
+      "model": "qwen3",
+      "call_policy": "sequential",
+      "n": 55,
+      "wins": 5,
+      "losses": 2,
+      "ties": 48,
+      "difference_percentage_points": 5.454545454545454,
+      "conditional_bootstrap_percentile_95": [
+        -3.6363636363636362,
+        12.727272727272727
+      ],
+      "leave_one_domain_out": [
+        {
+          "omitted_domain": "book_publishing_company",
+          "n": 35,
+          "difference_percentage_points": 14.285714285714286
+        },
+        {
+          "omitted_domain": "cars",
+          "n": 37,
+          "difference_percentage_points": -5.405405405405405
+        },
+        {
+          "omitted_domain": "computer_student",
+          "n": 38,
+          "difference_percentage_points": 7.894736842105263
+        }
+      ]
+    },
+    {
+      "model": "qwen3",
+      "call_policy": "single",
+      "n": 55,
+      "wins": 5,
+      "losses": 2,
+      "ties": 48,
+      "difference_percentage_points": 5.454545454545454,
+      "conditional_bootstrap_percentile_95": [
+        -3.6363636363636362,
+        12.727272727272727
+      ],
+      "leave_one_domain_out": [
+        {
+          "omitted_domain": "book_publishing_company",
+          "n": 35,
+          "difference_percentage_points": 14.285714285714286
+        },
+        {
+          "omitted_domain": "cars",
+          "n": 37,
+          "difference_percentage_points": -5.405405405405405
+        },
+        {
+          "omitted_domain": "computer_student",
+          "n": 38,
+          "difference_percentage_points": 7.894736842105263
+        }
+      ]
+    },
+    {
+      "model": "smollm3",
+      "call_policy": "sequential",
+      "n": 55,
+      "wins": 3,
+      "losses": 0,
+      "ties": 52,
+      "difference_percentage_points": 5.454545454545454,
+      "conditional_bootstrap_percentile_95": [
+        0.0,
+        12.727272727272727
+      ],
+      "leave_one_domain_out": [
+        {
+          "omitted_domain": "book_publishing_company",
+          "n": 35,
+          "difference_percentage_points": 8.571428571428571
+        },
+        {
+          "omitted_domain": "cars",
+          "n": 37,
+          "difference_percentage_points": 2.7027027027027026
+        },
+        {
+          "omitted_domain": "computer_student",
+          "n": 38,
+          "difference_percentage_points": 5.2631578947368425
+        }
+      ]
+    },
+    {
+      "model": "smollm3",
+      "call_policy": "single",
+      "n": 55,
+      "wins": 1,
+      "losses": 0,
+      "ties": 54,
+      "difference_percentage_points": 1.8181818181818181,
+      "conditional_bootstrap_percentile_95": [
+        0.0,
+        5.454545454545454
+      ],
+      "leave_one_domain_out": [
+        {
+          "omitted_domain": "book_publishing_company",
+          "n": 35,
+          "difference_percentage_points": 2.857142857142857
+        },
+        {
+          "omitted_domain": "cars",
+          "n": 37,
+          "difference_percentage_points": 0.0
+        },
+        {
+          "omitted_domain": "computer_student",
+          "n": 38,
+          "difference_percentage_points": 2.6315789473684212
+        }
+      ]
+    }
+  ],
+  "limits": "Fixed convenience domains; single deterministic run per cell; assistant labels treated as fixed. Does not cover annotation uncertainty, model-seed variance or unseen-domain variation. No hypothesis-test or population-significance claim."
+}
