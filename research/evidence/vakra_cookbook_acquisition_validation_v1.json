@@ -1,0 +1,92 @@
+{
+  "purpose": "Independently recompute the selected-task control from saved MCP responses.",
+  "validated": true,
+  "independent_tasks": 1,
+  "histories": [
+    {
+      "raw": "results/probes/cookbook-acquisition-v1/coverage_check-qwen25.json",
+      "sha256": "f6c1245aa1288029da147c2027b76b4982f31d979eb12e8589bb989688dff02e",
+      "target_calls": 6,
+      "additional_calls": 4,
+      "observed_complete_ingredients": 10,
+      "remaining_rows": [
+        10,
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "raw": "results/probes/cookbook-acquisition-v1/coverage_check-qwen3.json",
+      "sha256": "c10e5c7adf99a38a080035bf292255f458b425ae57867214a8509ae878265b29",
+      "target_calls": 6,
+      "additional_calls": 4,
+      "observed_complete_ingredients": 10,
+      "remaining_rows": [
+        10,
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "raw": "results/probes/cookbook-acquisition-v1/coverage_check-qwen30b.json",
+      "sha256": "4691213c8a067713e9ad95d36237076ed74c55c76982d54295b40c49c087fdbc",
+      "target_calls": 6,
+      "additional_calls": 4,
+      "observed_complete_ingredients": 10,
+      "remaining_rows": [
+        10,
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "raw": "results/probes/cookbook-acquisition-v1/original-qwen25.json",
+      "sha256": "62d56f1373bf220bcafa36f394dbfcb77b978aa4f5352bdf83949c7c40ac9135",
+      "target_calls": 7,
+      "additional_calls": 4,
+      "observed_complete_ingredients": 10,
+      "remaining_rows": [
+        10,
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "raw": "results/probes/cookbook-acquisition-v1/original-qwen3.json",
+      "sha256": "9a3002611a69ff2bb060c9ec816798a8c27f05bd6b390b8d9e64c3a5bc4d2960",
+      "target_calls": 7,
+      "additional_calls": 4,
+      "observed_complete_ingredients": 10,
+      "remaining_rows": [
+        10,
+        7,
+        4,
+        1
+      ]
+    },
+    {
+      "raw": "results/probes/cookbook-acquisition-v1/original-qwen30b.json",
+      "sha256": "a2b5460155e93ac1dcf88f92f8d68bfe3f9d7247bc727fc6309ff1b6ed7a31bb",
+      "target_calls": 6,
+      "additional_calls": 4,
+      "observed_complete_ingredients": 10,
+      "remaining_rows": [
+        10,
+        7,
+        4,
+        1
+      ]
+    }
+  ],
+  "report_sha256": "fc0df2f3ca7ac450ed4ce4dc79130cfbf982f192dd4be2254052771d1d6ec3d0",
+  "validator_sha256": "a5698e39eb385730cd50d7ddcb5e37ae187a32c612035d01853cd38df52fb4a7",
+  "archive": "results/remote/vakra-cookbook-acquisition-v1-evidence.zip",
+  "archive_bytes": 39185,
+  "archive_entries": 18,
+  "archive_sha256": "7264cfefdf4a2f0cf332b995292255c09c61bb2d6a5f87a39dcdfae5d2a1cfdc",
+  "limits": "Checks the saved native MCP trace, not an independent model run or proof for unseen data/tool semantics."
+}

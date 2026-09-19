@@ -137,3 +137,22 @@ ten-name list unchanged; the final repeats it despite reference disagreement.
 The native helper only deduplicates input. This post-outcome illustration
 does not establish failure prevalence or impossibility under other tool
 sequences. The cookbook retrieval handle is not a full-column observation.
+
+## Executed cookbook acquisition control
+
+`vakra_cookbook_acquisition_control_v1.json` records six real native MCP
+replays of the selected task 015. All worker warmups, 90 preceding independent
+episodes/224 tool calls, target initial previews, ordered schemas and selected
+prefix responses match their recorded observations. From each model's existing
+correct filter, an evaluator-authored keyset paginator obtains ten ingredients
+in four additional calls, for six or seven target calls in total. The controller
+uses no reference card or direct database read. The independent validator
+recomputes its result from saved responses and read-only SQL; all six match.
+`vakra_cookbook_acquisition_validation_v1.json` records the 18-entry raw archive.
+
+The protocol explicitly discloses selection after answer review. This is one
+question with six histories, an ordinary pagination control and no neural
+continuation. It rules out retrieval impossibility within the call budget in
+this example, not general interface limits, a cause of model behavior, or a
+model repair-success rate. Four unit tests separately cover duplicates, budget
+exhaustion, empty data and rejection of invalid/nonprogressing observations.

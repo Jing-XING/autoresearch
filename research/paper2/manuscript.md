@@ -707,7 +707,41 @@ no independent database observation in this case. This post-review illustration
 is not a formal grounding score or an estimate of failure prevalence. Unlike
 the publishing getter in section 8.1, cookbook `retrieve_data` itself returns
 a preview; we have not established that all complete-list tasks are impossible
-through other available tool sequences.
+through other available tool sequences. The following control tests that
+possibility for this selected task.
+
+### 10.5 An executable acquisition control within the existing budget
+
+We replayed all six task-015 histories through the unchanged native MCP
+implementation, including each worker's warmup and fifteen preceding independent
+episodes. All 224 preceding tool responses, the target initial observations,
+ordered schemas and target prefixes matched the recorded content and error
+flags. Each target prefix reaches the correct maximal-cooking-time filter;
+two prefixes include an earlier unsuccessful tool attempt.
+
+From that filtered handle, an evaluator-authored routine sorts by ingredient
+name and repeatedly filters to names greater than the last visible value.
+This is ordinary keyset pagination, not a new algorithm. The routine reads only
+tool responses and receives no reference answer. It requires stable data,
+non-null string values, consistent ordering and accurate row counts. Distinct
+names are collected until the remaining row count fits the preview. Budget
+exhaustion returns an explicitly incomplete result; malformed or nonprogressing
+observations fail rather than certify completion.
+
+All six controls obtain the ten reference ingredients in four added calls:
+one sort and three filters, with remaining row counts 10, 7, 4 and 1. Total
+target calls are six in four histories and seven in two, including unsuccessful
+prefix attempts, below the original twenty-call ceiling. A separate validator
+reconstructs the values from saved MCP responses and checks them against both
+the frozen card and read-only SQL. The database hash is unchanged.
+
+Thus the tested interface can expose the complete answer for this selected
+question within the call budget. The failure is not forced by an unavailable
+full-column getter alone. This does not isolate why the models failed: the
+evaluator chose the predicate checkpoint and output column after reviewing
+the answers, and no model continued from the repaired observations. Six
+histories of one question are not six independent tasks, and the control
+establishes neither a model success-rate gain nor general semantic sufficiency.
 
 ## 11. Related work and limits
 
@@ -827,8 +861,10 @@ result. They do not establish a universally optimal executor, prompt or budget.
 
 The completed larger-checkpoint extension improves absolute answer scores on
 the known tasks but leaves its conditional prompt-effect interval overlapping
-zero. The domain and output-budget extensions remain pending and supply no
-additional empirical support. Larger sample counts
+zero. The completed cookbook slice shows no prompt benefit; its acquisition
+control demonstrates one feasible complete retrieval, without a model repair
+claim. The other registered domains and output-budget extension remain pending.
+Larger sample counts
 will not by themselves resolve assistant annotation bias, identify the cause
 of a prompt effect, or demonstrate a new method's superiority.
 
@@ -839,7 +875,10 @@ and sufficient observed evidence are empirically distinct. A fixed reminder
 has mixed effects, relaxing one executor restriction mainly improves response
 completion, and SmolLM3 performs near the scoring floor. A larger Qwen3
 checkpoint improves absolute scores on the known tasks, while its paired
-reminder comparison remains inconclusive. Two
+reminder comparison remains inconclusive. The first completed fresh domain
+also shows no reminder gain. A selected cookbook control retrieves all required
+values through existing tools within budget, limiting an interface-impossibility
+interpretation. Two
 fully replayed examples show that a correct original answer can remain
 unidentified under an explicit admissible intervention, including after full
 output-column retrieval. These findings support more explicit evaluation and

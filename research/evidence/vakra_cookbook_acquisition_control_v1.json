@@ -1,0 +1,1248 @@
+{
+  "purpose": "Replay six histories of one selected task and run a public-tool cursor control.",
+  "complete": true,
+  "independent_tasks": 1,
+  "histories": 6,
+  "protocol_sha256": "2f0d390741fe2d1487fd8d9dfa47d1d9a1502d9c20cbd0a2b4bf621c8281b387",
+  "script_sha256": "8ebd6b6d6eb53d5f00ef768895655eb0bcf520d38ad4716b8dad4491a396a857",
+  "controller_sha256": "21a0fb0c8bfb2a9b227880253e5602e5a28e25482aaba17d93747bab3f42be96",
+  "preparation_sha256": "6e0ce75e465b5346ea1a72e51c530eb0fa6a41b4c22fe07bbe2bfd18e3da2c06",
+  "database_sha256": "bff5b9b84f633be89f7954eb4067e246f4ba7441ad4ffb33374ca8a8efe206da",
+  "database_unchanged": true,
+  "frozen_cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "required_values": [
+    "brown rice",
+    "butter or margarine",
+    "ground cinnamon",
+    "ground cumin",
+    "hot water",
+    "lemon juice",
+    "pine nuts",
+    "ripe olives",
+    "salt",
+    "yellow onion"
+  ],
+  "dependencies": {
+    "mcp": "1.30.0",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "pydantic": "2.13.5"
+  },
+  "rows": [
+    {
+      "source": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/coverage_check/qwen25/shard-0/case-015.json",
+      "source_sha256": "368a122c21c21d587bfd6643c456a26591ec57c6083089eb7f4ea7edb5381fa7",
+      "startup_sha256": "d0abe66a0412487ce4105358149dfcfa01f0254588e9fa78ea80beedd03bcee3",
+      "prior_sha256": {
+        "case-000.json": "b3bcea282fc862b6a335c4e414a07b9d77652e798e8bdc2e6b83d4cb94e05917",
+        "case-001.json": "62852499d5402b7ab23ca5a07e594fc939591c4962aa7eb3653df1eb32e119ce",
+        "case-002.json": "c2cfca66dc4c063e9341628dc97b3267a5648626a803cfa1db44177cf7d52887",
+        "case-003.json": "5c71b9798e08a49fdb39c17f65f0ad8af758439cbd9449882bcc5d113617eb8c",
+        "case-004.json": "aadc9e35b68818c352aabb65f69c737a70d98a6adc8a995790e743f086e89439",
+        "case-005.json": "8715d7a575b37ef54adb08d4cd2ca505e68a5c8a7669c82c60f2dcc6372efaff",
+        "case-006.json": "1a705de7f8b2303c72182c8fcc6f732715da14ae0650e7ccf2946da711f52ab3",
+        "case-007.json": "90fadd3eff0782e36fa6df7d754f3268e364f764afed09204793c7b5b62c2848",
+        "case-008.json": "b94e44935983311c305c9d8ab6877934164bb73e97119539a85bf6da5c477c7e",
+        "case-009.json": "ff098aa7bf331b31606b5b84307129971f05a4444d90941a80d160ba91d6850c",
+        "case-010.json": "6faaf2bacce112f3b388dcd89770a79b8e2aa695466a2f718aebbbfc64797625",
+        "case-011.json": "a7563d34f758dbfbf59167602626697f2dd9e609d91b3a7c873527d3da88c56e",
+        "case-012.json": "c26bd6f95e96028e18ac8fc31526204ddd00a29c4b74a1e9caca0a9083698243",
+        "case-013.json": "ee0eb71fbac3b53c869957e5f3e7134242311cc996892bfd48d9ff7b5a13a512",
+        "case-014.json": "c2a945d16f03ed6e7ebb7f116aeacdfb5fda1562feaa6316dd1c2bad58a12d95"
+      },
+      "exact_replay": {
+        "prior_episodes": 15,
+        "prior_calls": 40
+      },
+      "initial_and_ordered_schemas_match": true,
+      "target_prefix": [
+        {
+          "call": {
+            "name": "aggregate_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "aggregation_operation": "max"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "900.0",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": 900.0,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 2750, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"finely chopped\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"fresh vegetables\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"yellow onion\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"s\", NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "added_calls": [
+        {
+          "call": {
+            "name": "sort_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_1",
+              "key_name": "Ingredient_name",
+              "ascending": true
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"sorted_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 3550, 3385]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"tablespoon(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"dairy\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"butter or margarine\", \"ground cinnamon\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "sorted_Recipe_1",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "ground cinnamon"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_2\", \"num_records\": 7, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3549, 3070, 3074]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"teaspoon(s)\", \"cup(s)\", \"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"spices and seasonings\", \"beverages\", \"fruit juices\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"ground cumin\", \"hot water\", \"lemon juice\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_2",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "lemon juice"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_3\", \"num_records\": 4, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3551, 3072, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"California\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"nuts and seeds\", \"condiments/sauces\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"pine nuts\", \"ripe olives\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_3",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "salt"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_4\", \"num_records\": 1, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2750]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [\"finely chopped\"]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"fresh vegetables\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"yellow onion\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [\"s\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "control": {
+        "values": [
+          "brown rice",
+          "butter or margarine",
+          "ground cinnamon",
+          "ground cumin",
+          "hot water",
+          "lemon juice",
+          "pine nuts",
+          "ripe olives",
+          "salt",
+          "yellow onion"
+        ],
+        "complete": true,
+        "reason": "exhausted_sorted_relation",
+        "calls": 4
+      },
+      "target_calls_total": 6,
+      "model_continuation": false,
+      "matches_frozen_sql": true
+    },
+    {
+      "source": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/coverage_check/qwen3/shard-0/case-015.json",
+      "source_sha256": "4665679e0f5daeea177238cf0f8b56abbcf0a807228aed744c94283126dc8819",
+      "startup_sha256": "d0abe66a0412487ce4105358149dfcfa01f0254588e9fa78ea80beedd03bcee3",
+      "prior_sha256": {
+        "case-000.json": "5ee8052392f96619e93f90f77ba12c1a7f332faf51f9abd0940b8843eaf7c59c",
+        "case-001.json": "fcb6954050b55d30f6f177de44dc1c0ba636585f071003470e803aa896e50cdf",
+        "case-002.json": "39b70586fe5894eef683daf107ab2caafe6f451f36562b2c34aea36460c96a2a",
+        "case-003.json": "0730af60c8562c60d17e8aec666556d3fcb082b389df5413847493f88fae84d9",
+        "case-004.json": "27895fcebf8628e2d6fc9e1739ce3b92043a668550f52bfb02cd9906ea8d0d4c",
+        "case-005.json": "167ea5a026875e2879953227d36b800ebb941039c99a97cfc95808ff15de30e6",
+        "case-006.json": "ab2ddac038170783911220648e7abad5cfb06a806f608ef935756c1985246965",
+        "case-007.json": "06b7fbe9d917f3d84353a0ef525c2f445685556ef417ed7ff14ce7aa08635d73",
+        "case-008.json": "7dfc5b768b00890b1f245a5f411000794e527f48c67b703fd6da89c177fd496e",
+        "case-009.json": "2e8c652e35a120b274a29c87ec5a8a2dcae70b55e43f50cafcea84198566ae33",
+        "case-010.json": "f8a753752c06c9313f0255457cfd86e13288ee7f7ac3fdce695815697c693a02",
+        "case-011.json": "3fcf95e9a2d1b6a2a357aec13631069fef6b196fbfbd6636484cab9e89cca859",
+        "case-012.json": "fe2d7d863e78f43c16a52c455c42cd65d94d5a66a6ad99e8115d25ac072a9456",
+        "case-013.json": "72aa51b824b1e103822f89f2d521a05013cbe766df9fd974887b0ee8cfccddcf",
+        "case-014.json": "4490028b3b9cf64cf1b180963a707ab7a698f7411e5e514ad1c396391612c240"
+      },
+      "exact_replay": {
+        "prior_episodes": 15,
+        "prior_calls": 33
+      },
+      "initial_and_ordered_schemas_match": true,
+      "target_prefix": [
+        {
+          "call": {
+            "name": "aggregate_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "aggregation_operation": "max"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "900.0",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": 900,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 2750, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"finely chopped\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"fresh vegetables\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"yellow onion\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"s\", NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "added_calls": [
+        {
+          "call": {
+            "name": "sort_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_1",
+              "key_name": "Ingredient_name",
+              "ascending": true
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"sorted_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 3550, 3385]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"tablespoon(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"dairy\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"butter or margarine\", \"ground cinnamon\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "sorted_Recipe_1",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "ground cinnamon"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_2\", \"num_records\": 7, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3549, 3070, 3074]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"teaspoon(s)\", \"cup(s)\", \"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"spices and seasonings\", \"beverages\", \"fruit juices\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"ground cumin\", \"hot water\", \"lemon juice\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_2",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "lemon juice"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_3\", \"num_records\": 4, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3551, 3072, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"California\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"nuts and seeds\", \"condiments/sauces\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"pine nuts\", \"ripe olives\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_3",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "salt"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_4\", \"num_records\": 1, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2750]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [\"finely chopped\"]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"fresh vegetables\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"yellow onion\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [\"s\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "control": {
+        "values": [
+          "brown rice",
+          "butter or margarine",
+          "ground cinnamon",
+          "ground cumin",
+          "hot water",
+          "lemon juice",
+          "pine nuts",
+          "ripe olives",
+          "salt",
+          "yellow onion"
+        ],
+        "complete": true,
+        "reason": "exhausted_sorted_relation",
+        "calls": 4
+      },
+      "target_calls_total": 6,
+      "model_continuation": false,
+      "matches_frozen_sql": true
+    },
+    {
+      "source": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/coverage_check/qwen30b/shard-0/case-015.json",
+      "source_sha256": "3f80aee99e9401d00c2c7b785beb81c0bcf21486e650c6a68dac780722f94981",
+      "startup_sha256": "d0abe66a0412487ce4105358149dfcfa01f0254588e9fa78ea80beedd03bcee3",
+      "prior_sha256": {
+        "case-000.json": "4bea97d3c753e0dd23dfaac58858b599f23fcad06e1074e26ef04d12d1c9b03f",
+        "case-001.json": "aec01e27ef2ab1685eb5d10d29b0c18a10b79c5dea7cf79e33414e229a4c6ae3",
+        "case-002.json": "9b2512c135c5faad57da005d3104ad34bfb288c8f4a6027cd302813811297fd8",
+        "case-003.json": "715fa8715ee2a7907a0c0bc9abd2f6adcd8626b86b46f857c4050010fb45745c",
+        "case-004.json": "af757416a904fee7804e90a3ebd606c069f92d48de5e191be71c87bf6ef16264",
+        "case-005.json": "5545e935170c25699704077577f6f8180d30aaa7a0196698835b5971720fffa5",
+        "case-006.json": "496d7eeb85d7d7fc9d9f2c6f09af2ed18b5aabf2442a6beb251efb08953e5508",
+        "case-007.json": "1d004e8aa13e2418fd8733dbbf292916ed205e081dbbeb0f86423fb34369a187",
+        "case-008.json": "bc55aeacd40bdf491addfa1f931899641a0666e861966e01e5b48c0f003dba91",
+        "case-009.json": "02a059d346eccc5dfa58a15c3a1a1b3795e236c83b3b81e1eab478e5425247d8",
+        "case-010.json": "ccc86cd91a286066fe1dd5dfdfa45ce29b5741fb718c6f6ecc8f209f209952f4",
+        "case-011.json": "9bbe00958785a2655d97839b407f60e00dce953974a2f2d9cd22c510e0aaa568",
+        "case-012.json": "346a0bf8f153236888e373367975980f4c86d768c47c558f10b834e022326d77",
+        "case-013.json": "a4b64fe3ba8959d6565ba85bef9f6ff97a28b9012b40f45ce90e6730d030ed62",
+        "case-014.json": "5e144778aa9b09b27add9d5487355e7ff873d436a9bcf92773487fa642d4ba03"
+      },
+      "exact_replay": {
+        "prior_episodes": 15,
+        "prior_calls": 40
+      },
+      "initial_and_ordered_schemas_match": true,
+      "target_prefix": [
+        {
+          "call": {
+            "name": "aggregate_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "aggregation_operation": "max"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "900.0",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": 900,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 2750, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"finely chopped\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"fresh vegetables\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"yellow onion\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"s\", NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "added_calls": [
+        {
+          "call": {
+            "name": "sort_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_1",
+              "key_name": "Ingredient_name",
+              "ascending": true
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"sorted_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 3550, 3385]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"tablespoon(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"dairy\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"butter or margarine\", \"ground cinnamon\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "sorted_Recipe_1",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "ground cinnamon"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_2\", \"num_records\": 7, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3549, 3070, 3074]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"teaspoon(s)\", \"cup(s)\", \"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"spices and seasonings\", \"beverages\", \"fruit juices\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"ground cumin\", \"hot water\", \"lemon juice\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_2",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "lemon juice"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_3\", \"num_records\": 4, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3551, 3072, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"California\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"nuts and seeds\", \"condiments/sauces\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"pine nuts\", \"ripe olives\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_3",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "salt"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_4\", \"num_records\": 1, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2750]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [\"finely chopped\"]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"fresh vegetables\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"yellow onion\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [\"s\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "control": {
+        "values": [
+          "brown rice",
+          "butter or margarine",
+          "ground cinnamon",
+          "ground cumin",
+          "hot water",
+          "lemon juice",
+          "pine nuts",
+          "ripe olives",
+          "salt",
+          "yellow onion"
+        ],
+        "complete": true,
+        "reason": "exhausted_sorted_relation",
+        "calls": 4
+      },
+      "target_calls_total": 6,
+      "model_continuation": false,
+      "matches_frozen_sql": true
+    },
+    {
+      "source": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/original/qwen25/shard-0/case-015.json",
+      "source_sha256": "fe53397f9a8d3eafd9a8c1ef2ce60bbc29343f536592b9e643e952f83242c13e",
+      "startup_sha256": "d0abe66a0412487ce4105358149dfcfa01f0254588e9fa78ea80beedd03bcee3",
+      "prior_sha256": {
+        "case-000.json": "ac133283fb2d3e1ebf23403181d1347631107d0e232f139ae59e73ff9803b8e5",
+        "case-001.json": "97e371433dac5ab5d68ae06b1ff04297c183f361c72d24ae87c822472b6a9f68",
+        "case-002.json": "a557467f5ae9b5812c94250b8065338b1e590d9170d8f4af57dd0d70446d9691",
+        "case-003.json": "33311e1069c5d08e75e1c23dd24c509b4349f8691cf9b78350bbc66cee3408e3",
+        "case-004.json": "942b8677144a209c4efbfe809f648252d5108c622daaf43bb8d1f7deea9f3d4f",
+        "case-005.json": "72b0606a19d57909523e8e3647f3d1c368b6a3d7fdebe3324f81c4f64c5da5cb",
+        "case-006.json": "cda92a210ee0d59a809e1156edb548990ed0d6ee6e09e6570259d77a6628fe41",
+        "case-007.json": "e273ea2a7e7f1431ca1a5cdba344a4b97d15600dcfcd74da43089137df860bb3",
+        "case-008.json": "63b0b66a9ac2df19dfa4accb683bd89e5fef63ab53a90c181fcfea130a8e5f11",
+        "case-009.json": "3d369c9b51d4ddf1d5437212f8fa7d66a70b5d7f41af99f08722a4ef1777cefa",
+        "case-010.json": "94eb8f46d2e443bde62518e6b5757d32074fc4371ec387434439bd773847e6d1",
+        "case-011.json": "1d77e00da64ed35058846860e5f55b526cfe56f59cba86bed56c2bc9228a351e",
+        "case-012.json": "2c57de4afff27909288e34a4b17b6b1bb18cc6519f209f744ffa45583a9f8a99",
+        "case-013.json": "b58d6d014b4add8f098e1df660a0c9c7d22e15b363365699e18bfb93da6d25c4",
+        "case-014.json": "0466cd57d9922a3872f4464b45c7fae11efe163af740fc8b49a624d80732ebef"
+      },
+      "exact_replay": {
+        "prior_episodes": 15,
+        "prior_calls": 36
+      },
+      "initial_and_ordered_schemas_match": true,
+      "target_prefix": [
+        {
+          "call": {
+            "name": "aggregate_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "aggregation_operation": "max"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "900.0",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "retrieve_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": [
+                "Quantity_ingredient_id",
+                "Ingredient_name"
+              ],
+              "value": 900,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "Input validation error: Additional properties are not allowed ('condition', 'value' were unexpected)",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": true
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": 900,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 2750, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"finely chopped\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"fresh vegetables\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"yellow onion\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"s\", NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "added_calls": [
+        {
+          "call": {
+            "name": "sort_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_1",
+              "key_name": "Ingredient_name",
+              "ascending": true
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"sorted_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 3550, 3385]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"tablespoon(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"dairy\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"butter or margarine\", \"ground cinnamon\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "sorted_Recipe_1",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "ground cinnamon"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_2\", \"num_records\": 7, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3549, 3070, 3074]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"teaspoon(s)\", \"cup(s)\", \"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"spices and seasonings\", \"beverages\", \"fruit juices\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"ground cumin\", \"hot water\", \"lemon juice\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_2",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "lemon juice"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_3\", \"num_records\": 4, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3551, 3072, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"California\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"nuts and seeds\", \"condiments/sauces\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"pine nuts\", \"ripe olives\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_3",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "salt"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_4\", \"num_records\": 1, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2750]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [\"finely chopped\"]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"fresh vegetables\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"yellow onion\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [\"s\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "control": {
+        "values": [
+          "brown rice",
+          "butter or margarine",
+          "ground cinnamon",
+          "ground cumin",
+          "hot water",
+          "lemon juice",
+          "pine nuts",
+          "ripe olives",
+          "salt",
+          "yellow onion"
+        ],
+        "complete": true,
+        "reason": "exhausted_sorted_relation",
+        "calls": 4
+      },
+      "target_calls_total": 7,
+      "model_continuation": false,
+      "matches_frozen_sql": true
+    },
+    {
+      "source": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/original/qwen3/shard-0/case-015.json",
+      "source_sha256": "9f2cae2e3cb59da0ffc93619cdbe98f3b2cf7235c3be8201cea53fedf885723b",
+      "startup_sha256": "d0abe66a0412487ce4105358149dfcfa01f0254588e9fa78ea80beedd03bcee3",
+      "prior_sha256": {
+        "case-000.json": "c99a02924cfdb2cae2f24994c9b0b7e93aa7de285165e379a3b29bb228bab363",
+        "case-001.json": "1b5a4a52471167dcfa67f11e65843fdf542ad9273bf78863a6f05ffcecee77da",
+        "case-002.json": "a6293347b3337494e0e9e233ed1f095f717bd949dc4643958212656167264300",
+        "case-003.json": "3e058f869dd345e5e3fbc2cce3bf252b119cd67f8598721e0b44d667dc0e8d79",
+        "case-004.json": "838e696ec2f3249f4db565d7a63feef4a1da5903e384cc42c135d31d8399516f",
+        "case-005.json": "25ba66da02d8651767e0dd3304eff88f16b390fc3fa51bc4ce8b4675d7650d3a",
+        "case-006.json": "d22a5c3941e4f07aadc6e86cbebd6da7d61b11f82450997f1b3084144599bee1",
+        "case-007.json": "20cf43dfaaa3ff1089693e197c561d3e0e183de622ee36c8d12712ef5a6ebf30",
+        "case-008.json": "e0901638258e8d58dee49e183ec3f2268ada8916767c59bfbc63b642fbc530d4",
+        "case-009.json": "9fdcd0fb387da3c100cd6b853eeb0e6326776834f02601a88e46e30fb10fee1c",
+        "case-010.json": "7d64ca69daf968d318c3156d90307b032991eb1e37fee8667ee1becc427d9580",
+        "case-011.json": "1c359d3ad712ec6a6ed29396ee77bb0e12ca6c1fcf08e178c28e716ce42caccf",
+        "case-012.json": "b82bcc9cb46149b954efa6c9316a433ef3b30c58acc266bc71f88a4dd894d0a4",
+        "case-013.json": "7715f0317974d29a96f8b7e028fd53852bcc4cdf6cc8d55dedccaab014d1c34d",
+        "case-014.json": "afbc5e5cdc2892ab8de03c0c48ab65296b84e457fa38004b677845624efea6c4"
+      },
+      "exact_replay": {
+        "prior_episodes": 15,
+        "prior_calls": 25
+      },
+      "initial_and_ordered_schemas_match": true,
+      "target_prefix": [
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": "max",
+              "condition": "greater_than_equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "Input validation error: invalid literal for int() with base 10: 'max'",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "aggregate_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "aggregation_operation": "max"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "900.0",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": 900.0,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 2750, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"finely chopped\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"fresh vegetables\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"yellow onion\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"s\", NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "added_calls": [
+        {
+          "call": {
+            "name": "sort_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_1",
+              "key_name": "Ingredient_name",
+              "ascending": true
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"sorted_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 3550, 3385]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"tablespoon(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"dairy\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"butter or margarine\", \"ground cinnamon\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "sorted_Recipe_1",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "ground cinnamon"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_2\", \"num_records\": 7, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3549, 3070, 3074]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"teaspoon(s)\", \"cup(s)\", \"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"spices and seasonings\", \"beverages\", \"fruit juices\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"ground cumin\", \"hot water\", \"lemon juice\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_2",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "lemon juice"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_3\", \"num_records\": 4, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3551, 3072, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"California\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"nuts and seeds\", \"condiments/sauces\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"pine nuts\", \"ripe olives\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_3",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "salt"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_4\", \"num_records\": 1, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2750]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [\"finely chopped\"]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"fresh vegetables\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"yellow onion\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [\"s\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "control": {
+        "values": [
+          "brown rice",
+          "butter or margarine",
+          "ground cinnamon",
+          "ground cumin",
+          "hot water",
+          "lemon juice",
+          "pine nuts",
+          "ripe olives",
+          "salt",
+          "yellow onion"
+        ],
+        "complete": true,
+        "reason": "exhausted_sorted_relation",
+        "calls": 4
+      },
+      "target_calls_total": 7,
+      "model_continuation": false,
+      "matches_frozen_sql": true
+    },
+    {
+      "source": "results/remote/vakra-expansion-v2-cookbook-complete/runs/vakra-expansion-v2/cookbook/original/qwen30b/shard-0/case-015.json",
+      "source_sha256": "9145c16c6172af1593e37ba8961a9007bfabf75ef6b2126dc541b16b1a4e1b6e",
+      "startup_sha256": "d0abe66a0412487ce4105358149dfcfa01f0254588e9fa78ea80beedd03bcee3",
+      "prior_sha256": {
+        "case-000.json": "84e9f8911d6b2491f8d1ae8c56580136043f01535b542ce149602d045ed168fe",
+        "case-001.json": "33cd52dc8479ddf91ac1d2cc20b8f0cbb550c3952bd74b9bce8fd923469a3ea8",
+        "case-002.json": "6b4a3364c26642bf02eab8378d5216ac390fff05c189e0bafbe4efabbfe15666",
+        "case-003.json": "fbf0c8077d440a350e6c3c852bdfc0d2b24b4558006696aef4ac7643d0a72020",
+        "case-004.json": "b194a268b26c659f64f3fdbc83c4126d204634ff3dc818cc2ef7e3a133bd21da",
+        "case-005.json": "bdfeaff6c102ab2311c300f90956b097a481eb12760c2b1c6f6eb10766043b9b",
+        "case-006.json": "046e176e38f67630ad1796e27516ac8fb547cf764637d8d75138b9e2038d54ab",
+        "case-007.json": "3de214607d9f8842749f13688285ed0ab3e832742d353845e8c2181f457ab9ed",
+        "case-008.json": "fbdcfe95639d820c0c6964c12df7dcdb7fb3d4646800320d952d90e2b3606fbf",
+        "case-009.json": "20729ee53312234b6825a4d288bd722f1dec8a0f0906fc16c5ad688c60b245cb",
+        "case-010.json": "19baa27185897bb43eaf16a81f8e90147f640a4c97ae92b5a570268da61f1568",
+        "case-011.json": "702169a458effa6ebbfce4ad8c437cf4da57d35d0eb5e848dc0e41f070a712ab",
+        "case-012.json": "2edbbdf2fda8a27f7bcd944cf44e59ee3681f7b71e7b89e5ad3a94b92cd64116",
+        "case-013.json": "04d16981efb5f0d37e77883d5cea5e859e6cf4e973bb6aa1a361f077aa963484",
+        "case-014.json": "26de1be06e0a5e99d8e27f8b175efb2be6fc91fd00c7dc64c7e88f724e0eb0bb"
+      },
+      "exact_replay": {
+        "prior_episodes": 15,
+        "prior_calls": 50
+      },
+      "initial_and_ordered_schemas_match": true,
+      "target_prefix": [
+        {
+          "call": {
+            "name": "aggregate_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "aggregation_operation": "max"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "900.0",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "retrieved_Recipe_1",
+              "key_name": "Recipe_cook_min",
+              "value": 900,
+              "condition": "equal_to"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 2750, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 0.75, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"finely chopped\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 2304, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"fresh vegetables\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"yellow onion\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"s\", NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "added_calls": [
+        {
+          "call": {
+            "name": "sort_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_1",
+              "key_name": "Ingredient_name",
+              "ascending": true
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"sorted_Recipe_1\", \"num_records\": 10, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2749, 3550, 3385]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 1.0]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"tablespoon(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [347, 374, 1684]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"grains\", \"dairy\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"brown rice\", \"butter or margarine\", \"ground cinnamon\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "sorted_Recipe_1",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "ground cinnamon"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_2\", \"num_records\": 7, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3549, 3070, 3074]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [1.0, 2.0, 0.25]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"teaspoon(s)\", \"cup(s)\", \"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [1688, 1803, 2019]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"spices and seasonings\", \"beverages\", \"fruit juices\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"ground cumin\", \"hot water\", \"lemon juice\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_2",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "lemon juice"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_3\", \"num_records\": 4, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \", \" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4, 4, 4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0, 0, 0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900, 900, 900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100, 2100, 2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\", \"The California Olive Industry\", \"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\", \"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\", \"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [3551, 3072, 3069]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673, 673, 673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.25, 1.0, 0.5]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\", \"cup(s)\", \"teaspoon(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [NaN, \"California\", NaN]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\", \"FALSE\", \"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2634, 407, 3021]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"nuts and seeds\", \"condiments/sauces\", \"spices and seasonings\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"pine nuts\", \"ripe olives\", \"salt\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [NaN, NaN, NaN]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        },
+        {
+          "call": {
+            "name": "filter_data",
+            "arguments": {
+              "data_label": "filtered_Recipe_3",
+              "key_name": "Ingredient_name",
+              "condition": "greater_than",
+              "value": "salt"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_Recipe_4\", \"num_records\": 1, \"key_details\": [{\"name\": \"Recipe_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Recipe_title\", \"dtype\": \"str\", \"first_3_values\": [\" Middle Eastern \\\"Sweet Spice\\\" Brown Rice with Olives \"]}, {\"name\": \"Recipe_subtitle\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_servings\", \"dtype\": \"int64\", \"first_3_values\": [4]}, {\"name\": \"Recipe_yield_unit\", \"dtype\": \"float64\", \"first_3_values\": [NaN]}, {\"name\": \"Recipe_prep_min\", \"dtype\": \"int64\", \"first_3_values\": [0]}, {\"name\": \"Recipe_cook_min\", \"dtype\": \"int64\", \"first_3_values\": [900]}, {\"name\": \"Recipe_stnd_min\", \"dtype\": \"int64\", \"first_3_values\": [2100]}, {\"name\": \"Recipe_source\", \"dtype\": \"str\", \"first_3_values\": [\"The California Olive Industry\"]}, {\"name\": \"Recipe_intro\", \"dtype\": \"str\", \"first_3_values\": [\"A great spicy side dish for poultry or on its own.\"]}, {\"name\": \"Recipe_directions\", \"dtype\": \"str\", \"first_3_values\": [\"Cut olives in wedges. Combine rice, onion, salt and hot water in microwave-safe 3- or 4-quart baking dish. Cover and microwave at high power for 20 minutes or until liquid is absorbed and rice is tender. Add all remaining ingredients except for nuts. Cover and microwave at high power for 15 minutes longer or until hot and cooked. Mix in nuts. Serve with poultry.\"]}, {\"name\": \"Quantity_quantity_id\", \"dtype\": \"int64\", \"first_3_values\": [2750]}, {\"name\": \"Quantity_recipe_id\", \"dtype\": \"int64\", \"first_3_values\": [673]}, {\"name\": \"Quantity_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Quantity_max_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_min_qty\", \"dtype\": \"float64\", \"first_3_values\": [0.75]}, {\"name\": \"Quantity_unit\", \"dtype\": \"str\", \"first_3_values\": [\"cup(s)\"]}, {\"name\": \"Quantity_preparation\", \"dtype\": \"str\", \"first_3_values\": [\"finely chopped\"]}, {\"name\": \"Quantity_optional\", \"dtype\": \"str\", \"first_3_values\": [\"FALSE\"]}, {\"name\": \"Ingredient_ingredient_id\", \"dtype\": \"int64\", \"first_3_values\": [2304]}, {\"name\": \"Ingredient_category\", \"dtype\": \"str\", \"first_3_values\": [\"fresh vegetables\"]}, {\"name\": \"Ingredient_name\", \"dtype\": \"str\", \"first_3_values\": [\"yellow onion\"]}, {\"name\": \"Ingredient_plural\", \"dtype\": \"str\", \"first_3_values\": [\"s\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          }
+        }
+      ],
+      "control": {
+        "values": [
+          "brown rice",
+          "butter or margarine",
+          "ground cinnamon",
+          "ground cumin",
+          "hot water",
+          "lemon juice",
+          "pine nuts",
+          "ripe olives",
+          "salt",
+          "yellow onion"
+        ],
+        "complete": true,
+        "reason": "exhausted_sorted_relation",
+        "calls": 4
+      },
+      "target_calls_total": 6,
+      "model_continuation": false,
+      "matches_frozen_sql": true
+    }
+  ],
+  "limits": [
+    "Post-outcome evaluator-authored keyset pagination, not a new algorithm or model repair result.",
+    "Correct predicate and output column selected by evaluator; one task with six histories.",
+    "Non-null string, stable-state and matching order assumptions; not a general semantic certificate.",
+    "Warmup and previous independent tasks reproduce interface state, excluded from target twenty-call budget."
+  ]
+}

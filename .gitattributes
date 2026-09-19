@@ -7,3 +7,4 @@
 # This protocol is also pinned by an exact byte hash in its registration.
 research/nk_test40_protocol.md -text
 research/native_airline_retry_protocol.md -text
+research/cookbook_acquisition_control.md -text
