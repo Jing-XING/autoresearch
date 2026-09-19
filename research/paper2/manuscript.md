@@ -4,8 +4,8 @@
 question from the historical proposal in this directory. Eight initial model
 episodes, 48 matched development episodes, 240 fixed-prompt replication
 episodes, 240 executor-sensitivity episodes, 240 third-model sensitivity
-episodes, 120 larger-checkpoint episodes and the first completed 120-episode
-domain of a registered expansion support the present observations.
+episodes, 120 larger-checkpoint episodes and two completed 120-episode
+domains of a registered expansion support the present observations.
 A novel method and independently confirmed benefit are not established.
 
 ## Abstract
@@ -558,7 +558,8 @@ The performance floor of SmolLM3 and the small number of databases motivate
 two separately registered extensions. Their design was fixed after the
 developmental results above; they are not retroactively described as part of
 the original study. The known-task checkpoint extension is complete; the
-prospective domain extension remains pending.
+prospective domain extension has two closed domain slices, while the full
+registered grid remains incomplete.
 
 ### 10.1 A larger checkpoint on the known tasks
 
@@ -743,6 +744,59 @@ the answers, and no model continued from the repaired observations. Six
 histories of one question are not six independent tasks, and the control
 establishes neither a model success-rate gain nor general semantic sufficiency.
 
+### 10.6 Completed Disney slice and judgment sensitivity
+
+All six Disney workers also completed the registered twenty-task grid. The
+120 raw records, six successful worker exits and sixty matched initial
+prompt pairs pass the same source, model and protocol checks as cookbook.
+This is the second closed domain slice, not a claim that all 420 registered
+executions have completed. Tasks 001 and 014 retain their pre-run popularity
+ambiguity labels, leaving eighteen scored tasks per arm.
+
+| Checkpoint | Original correct / scored | Reminder correct / scored | Paired gains / losses | Finals, original / reminder |
+|---|---:|---:|---:|---:|
+| Qwen3-4B | 12/18 | 9/18 | 1 / 4 | 20 / 20 |
+| Qwen2.5-7B | 5/18 | 7/18 | 4 / 2 | 18 / 19 |
+| Qwen3-30B-A3B | 12/18 | 15/18 | 3 / 0 | 18 / 19 |
+
+These are requested-value matches against the frozen SQL interpretation,
+assigned by one unblinded assistant after reading every full response. The
+120 executions comprise sixty correct labels, forty-six incorrect labels,
+twelve ambiguous labels and two scored tasks without an answer. There are
+six absent final answers in total: four concern the ambiguous task 014 and
+remain recorded in execution accounting. Four episodes terminate at the
+protocol-error limit and two at the step limit. The complete records contain
+twenty-six protocol errors. Two final responses reach the 512-token ceiling,
+both under the original prompt; neither is silently discarded.
+
+Requested-value agreement can coexist with contradictory explanation. For
+task 012, both larger-checkpoint responses give the correct count of two
+while naming the wrong supporting films. For task 003, the original Qwen3
+response guesses the matching PG rating while attributing Turbo to the
+wrong movie, and ends at the generation ceiling. Three responses to task
+009 explicitly provide both required songs but subsequently emphasize one.
+The primary audit records these as requested-value matches, without a
+grounding or explanation-correctness claim. All such decisions are visible
+in the per-response annotation reasons.
+
+We additionally disclose a conservative, post-review sensitivity that
+relabels eight borderline responses as incorrect: the six just described,
+the title-list response that enumerates two release years for 101 Dalmatians,
+and a correct release-date response that earlier denies a matching record.
+With all eight changes applied together, the original/reminder counts become
+9/18 versus 8/18 for Qwen3, 5/18 versus 6/18 for Qwen2.5, and 10/18 versus
+14/18 for Qwen30B. The checkpoint-specific directions remain unchanged.
+This secondary reading does not replace the fixed audit, establish human
+agreement, or bound every possible adjudication. It exposes where a
+different response-level standard would change the reported counts.
+
+Disney therefore adds a negative Qwen3 comparison and positive Qwen2.5 and
+Qwen30B comparisons under both disclosed readings. Twenty tasks from one
+database, with a fixed eighteen-task denominator, do not establish a
+population prompt effect or identify its mechanism. Genes, ice hockey and
+the separate output-budget control are not incorporated as completed
+results here.
+
 ## 11. Related work and limits
 
 [Agents Don't Paginate](https://arxiv.org/html/2608.26130v1) studies first-chunk
@@ -795,7 +849,7 @@ mutation nor distinguishing accidental correctness is new by itself.
 
 The evidence comprises development on one database and fixed-prompt
 comparisons on three deliberately small databases, with three Qwen checkpoints
-and SmolLM3, plus the completed cookbook slice of a larger registered expansion.
+and SmolLM3, plus completed cookbook and Disney slices of a larger registered expansion.
 SmolLM3 is near floor, and the six earlier paired prompt
 comparisons have descriptive intervals that include zero. Broad
 generalization, a formal semantic verifier and an official VAKRA score are
@@ -863,7 +917,9 @@ The completed larger-checkpoint extension improves absolute answer scores on
 the known tasks but leaves its conditional prompt-effect interval overlapping
 zero. The completed cookbook slice shows no prompt benefit; its acquisition
 control demonstrates one feasible complete retrieval, without a model repair
-claim. The other registered domains and output-budget extension remain pending.
+claim. Disney has mixed checkpoint-specific prompt effects, including under
+the disclosed conservative answer-review sensitivity. The other registered
+domains and output-budget extension remain pending.
 Larger sample counts
 will not by themselves resolve assistant annotation bias, identify the cause
 of a prompt effect, or demonstrate a new method's superiority.
@@ -875,8 +931,8 @@ and sufficient observed evidence are empirically distinct. A fixed reminder
 has mixed effects, relaxing one executor restriction mainly improves response
 completion, and SmolLM3 performs near the scoring floor. A larger Qwen3
 checkpoint improves absolute scores on the known tasks, while its paired
-reminder comparison remains inconclusive. The first completed fresh domain
-also shows no reminder gain. A selected cookbook control retrieves all required
+reminder comparison remains inconclusive. Cookbook shows no reminder gain,
+and Disney has mixed checkpoint-specific effects. A selected cookbook control retrieves all required
 values through existing tools within budget, limiting an interface-impossibility
 interpretation. Two
 fully replayed examples show that a correct original answer can remain

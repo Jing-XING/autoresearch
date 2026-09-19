@@ -156,3 +156,31 @@ continuation. It rules out retrieval impossibility within the call budget in
 this example, not general interface limits, a cause of model behavior, or a
 model repair-success rate. Four unit tests separately cover duplicates, budget
 exhaustion, empty data and rejection of invalid/nonprogressing observations.
+
+## Closed Disney-domain result and disclosed review sensitivity
+
+`vakra_expansion_disney_closed_grid_v1.json` audits the second closed domain
+slice: 120 records, six worker exits zero, sixty identical initial prompt
+pairs and the unchanged registered sources/models. The complete 420 grid
+is still marked incomplete. The byte-verified 145-entry raw package is
+1,077,140 bytes, SHA256
+`291b6889a529231078d1afe3bedb827509608dc993f1ccea01af629fd97a100a`.
+`vakra_expansion_disney_raw_receipt_v1.json` links every derived artifact.
+
+All full responses/absence were read by one unblinded assistant. The
+annotations and answer summary retain frozen ambiguous tasks 001/014 and
+give original/reminder requested-value counts 12/18 to 9/18, 5/18 to 7/18,
+and 12/18 to 15/18 for Qwen3, Qwen2.5 and Qwen30B. Paired gains/losses are
+1/4, 4/2 and 3/0. All 120 costs, six missing finals, twenty-six protocol
+errors and two generation-ceiling finals remain recorded. Four missing
+finals are ambiguous; two scored missing finals stay in the denominator.
+
+`vakra_expansion_disney_review_sensitivity_v1.json` contains the full text
+and immutable source identity of eight borderline responses and recomputes
+all counts after changing those labels to incorrect together. Counts then
+become 9/18 to 8/18, 5/18 to 6/18 and 10/18 to 14/18. This post-review
+conservative reading preserves the three effect directions but is neither
+a preregistered second metric nor independent adjudication. The audit
+scores requested values, not all explanatory propositions or trace-level
+identification. No pooled all-domain result, population superiority claim,
+causal explanation or official VAKRA score follows from this partial grid.

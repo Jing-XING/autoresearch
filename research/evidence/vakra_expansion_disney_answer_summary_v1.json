@@ -1,0 +1,459 @@
+{
+  "purpose": "Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring",
+  "complete_batch": false,
+  "review_scope": "disney",
+  "executions": 120,
+  "distinct_tasks": 20,
+  "groups": [
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 12,
+      "labels": {
+        "correct": 12,
+        "ambiguous": 2,
+        "incorrect": 6
+      },
+      "accuracy": 0.6666666666666666,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 81,
+        "tool_calls": 61,
+        "input_tokens": 930401,
+        "output_tokens": 10060,
+        "generation_seconds": 441.5420827623457,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 9,
+      "labels": {
+        "correct": 9,
+        "ambiguous": 2,
+        "incorrect": 9
+      },
+      "accuracy": 0.5,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 71,
+        "tool_calls": 51,
+        "input_tokens": 820114,
+        "output_tokens": 8709,
+        "generation_seconds": 386.9006280936301,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 5,
+      "labels": {
+        "correct": 5,
+        "ambiguous": 2,
+        "no_answer": 1,
+        "incorrect": 12
+      },
+      "accuracy": 0.2777777777777778,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "protocol_error_limit": 1,
+        "max_steps": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 95,
+        "tool_calls": 88,
+        "input_tokens": 1162748,
+        "output_tokens": 9290,
+        "generation_seconds": 512.034708218649,
+        "protocol_errors": 6
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 7,
+      "labels": {
+        "correct": 7,
+        "ambiguous": 2,
+        "incorrect": 11
+      },
+      "accuracy": 0.3888888888888889,
+      "final_answers": 19,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 63,
+        "tool_calls": 46,
+        "input_tokens": 722090,
+        "output_tokens": 7577,
+        "generation_seconds": 374.5084846019745,
+        "protocol_errors": 5
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 12,
+      "labels": {
+        "correct": 12,
+        "ambiguous": 2,
+        "no_answer": 1,
+        "incorrect": 5
+      },
+      "accuracy": 0.6666666666666666,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "max_steps": 1,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 119,
+        "tool_calls": 92,
+        "input_tokens": 1470792,
+        "output_tokens": 18343,
+        "generation_seconds": 3279.4154854491353,
+        "protocol_errors": 9
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 15,
+      "labels": {
+        "correct": 15,
+        "ambiguous": 2,
+        "incorrect": 3
+      },
+      "accuracy": 0.8333333333333334,
+      "final_answers": 19,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 88,
+        "tool_calls": 63,
+        "input_tokens": 1013481,
+        "output_tokens": 11770,
+        "generation_seconds": 2118.561242993921,
+        "protocol_errors": 6
+      }
+    }
+  ],
+  "paired": [
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        }
+      ],
+      "difference_percentage_points": -16.666666666666668
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        }
+      ],
+      "difference_percentage_points": 11.11111111111111
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        }
+      ],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        }
+      ],
+      "difference_percentage_points": 16.666666666666668
+    }
+  ],
+  "limits": [
+    "Failures remain in the fixed scored-task denominators.",
+    "Ambiguous tasks retain their executions and costs but do not enter answer accuracy.",
+    "Task pairs and checkpoints are not independent population samples.",
+    "No evidence-sufficiency or causal mechanism score is inferred from answer correctness."
+  ],
+  "kind": "expansion",
+  "execution_summary_sha256": "692d9f6d36046cf35b89a2ade95fffb1a77f1212250893c187e0e52cd443e2bb",
+  "annotations_sha256": "9de153dd76b2f3b699867b1f4f156c703e4a69ae2b258ec4b293e14e5212c87c",
+  "audit_cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "audit_policy_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "analysis_source_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\scripts\\summarize_vakra_registered_answers.py": "f2ad3c3ff4b19be04dcb84940503a0e2b44b2054fe3d2285155d583fd709fb4f",
+    "autolab\\vakra_review_summary.py": "a3ae66ec03df54d5cb5962dae76ce4636e29f746cf2b86375317dff96ce53a0b"
+  }
+}

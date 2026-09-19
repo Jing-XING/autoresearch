@@ -1,0 +1,710 @@
+{
+  "purpose": "Post-review conservative sensitivity to eight disclosed response-level judgment calls. Not a replacement preregistered metric, blind adjudication, error prevalence estimate or formal grounding evaluation.",
+  "rule": "Change all eight disclosed borderline correct labels to incorrect simultaneously; retain every other label, denominator, ambiguous mask, source hash and execution cost.",
+  "primary_summary_sha256": "16c4d8885c097221209597338e681ed13d3e875e092e3d1cd1580882b468a7f7",
+  "cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "changed_answers": [
+    {
+      "task_index": 3,
+      "model": "qwen3",
+      "condition": "original",
+      "source": "disney/original/qwen3/shard-0/case-003.json",
+      "source_sha256": "4b5117b0687ec8e0f2721d1d4654e91bdd60cbe2249696f0ca97dcb06c4f0a6a",
+      "final_answer": "I need to find which movie has Turbo as its villain. Since I don't have a direct mapping between villain names and movie titles, I'll need to look for a way to correlate them.\n\nLooking at the data structure, I see that the \"characters_villian\" column contains villain names, and each row corresponds to a movie. Since I can't directly match \"Turbo\" to a movie title with the available functions, I'll need to use the fact that the data is structured as a table where each row has a movie title and its associated characters.\n\nI notice that \"Turbo\" appears in the villain list, and I can see that the movie titles include \"The Incredibles\" (which features Turbo as a villain). However, I don't have a direct function to get the MPAA rating for a specific movie by villain name.\n\nSince I can't directly match the villain to the movie title with the available functions, and I don't have a function to filter by villain name, I'll need to make an educated guess based on common knowledge that Turbo is a villain in \"The Incredibles\", which has a PG rating.\n\nHowever, since I need to be precise with the available data, let me check if there's a movie with \"Turbo\" in the title or if I can find the exact movie through another method.\n\nActually, looking at the movie titles, I don't see \"The Incredibles\" in the list. Let me check if there's any movie with \"Turbo\" in the title or if I can find the exact movie by another means.\n\nSince I don't have a function to filter by villain name, and I can't directly match the villain to the movie title, I'll need to conclude that with the available functions, I can't directly determine which movie has Turbo as its villain.\n\nBut let me try one more approach - I'll get the movie titles and villain names together to see if I can find the correlation:\n\nI already have the movie titles and villain names, but I don't have a function to combine them. \n\nGiven the constraints of the available functions, I can only provide the MPAA rating for the movie that has Turbo as a villain if I can identify which movie it is. Since I can't directly correlate the villain name to the movie title with the available functions, I'll need to make an educated guess.\n\nBased on common knowledge, Turbo is a villain in \"The Incredibles\", which has a PG rating. However, I need to verify if",
+      "stricter_reason": "Rating PG matches, but the truncated explanation attributes Turbo to The Incredibles and guesses."
+    },
+    {
+      "task_index": 7,
+      "model": "qwen3",
+      "condition": "original",
+      "source": "disney/original/qwen3/shard-0/case-007.json",
+      "source_sha256": "e90c64891b9005549cbc20ffdedbe4ce6f57f9cd06864166529c55c4a5e6baf5",
+      "final_answer": "I have successfully identified the movies directed by Wolfgang Reitherman that can be watched by the general audience (MPAA rating of G).\n\nFrom the filtered results, the movies are:\n1. 101 Dalmatians (released Jan 25, 1961)\n2. The Aristocats (released Apr 24, 1970)\n3. 101 Dalmatians (released Nov 27, 1996)\n\nNote: There are two entries for \"101 Dalmatians\" - one from 1961 and one from 1996. These are different films with the same title.\n\nTherefore, the movies directed by Wolfgang Reitherman that can be watched by the general audience are: 101 Dalmatians (1961), The Aristocats (1970), and 101 Dalmatians (1996).",
+      "stricter_reason": "Both distinct title values match; response separately enumerates two 101 Dalmatians release years."
+    },
+    {
+      "task_index": 9,
+      "model": "qwen3",
+      "condition": "original",
+      "source": "disney/original/qwen3/shard-0/case-009.json",
+      "source_sha256": "c27471c70f9f63af8f43b50d44694368f3a4b7179de63c935078fdd7147f8adf",
+      "final_answer": "Now I have the movies directed by Ben Sharpsteen. The filtered results show two movies: \"Pinocchio\" and \"Dumbo\". \n\nLooking at the data, I can see the songs for these movies:\n- For \"Pinocchio\": \"When You Wish upon a Star\"\n- For \"Dumbo\": \"Baby Mine\"\n\nSince the question asks for \"the song\" from the movie directed by Ben Sharpsteen (without specifying which one), and both movies were directed by Ben Sharpsteen, I should provide one of the songs. \n\nThe most well-known song from a Ben Sharpsteen-directed movie is \"When You Wish upon a Star\" from Pinocchio.\n\nTherefore, the name of the song from the movie directed by Ben Sharpsteen is \"When You Wish upon a Star\".",
+      "stricter_reason": "Both songs explicitly present, but conclusion selects only one."
+    },
+    {
+      "task_index": 9,
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "source": "disney/coverage_check/qwen3/shard-0/case-009.json",
+      "source_sha256": "621cb5ad31dcc5fa42ff612ec63211f6b091d3e7f2e7613706662ea7073a50dc",
+      "final_answer": "The movies directed by Ben Sharpsteen are Pinocchio and Dumbo, and the songs from these movies are:\n\n- Pinocchio: \"When You Wish upon a Star\"\n- Dumbo: \"Baby Mine\"\n\nSince the query asks for \"the song\" from the movie directed by Ben Sharpsteen (without specifying which one), and both movies were directed by Ben Sharpsteen, I should provide both songs.\n\nHowever, if I need to provide just one song, the most well-known song from a Ben Sharpsteen-directed movie is \"When You Wish upon a Star\" from Pinocchio.\n\nTherefore, the song from the movie directed by Ben Sharpsteen is \"When You Wish upon a Star\".",
+      "stricter_reason": "Both songs explicitly present, but conclusion selects only one."
+    },
+    {
+      "task_index": 9,
+      "model": "qwen30b",
+      "condition": "original",
+      "source": "disney/original/qwen30b/shard-0/case-009.json",
+      "source_sha256": "06f69c8b351af0a0f0482e43a75dc234a29e335ee07864f7ac5053c6f60f4255",
+      "final_answer": "The songs from the movies directed by Ben Sharpsteen are \"When You Wish upon a Star\" (from Pinocchio) and \"Baby Mine\" (from Dumbo). \n\nSince the question asks for \"the song\" (singular), I should provide the most notable song from Ben Sharpsteen's directed films. \"When You Wish upon a Star\" is the most iconic song from his work, particularly from Pinocchio, which is one of Disney's classic films.\n\nTherefore, the answer is: When You Wish upon a Star.",
+      "stricter_reason": "Both songs explicitly present, but conclusion selects only one."
+    },
+    {
+      "task_index": 12,
+      "model": "qwen30b",
+      "condition": "original",
+      "source": "disney/original/qwen30b/shard-0/case-012.json",
+      "source_sha256": "b56d5f6d5ead731e3c34af4c2bb8979ae1a58a1f93bdd85ff00b41d2db90e1a0",
+      "final_answer": "Now I have the genre and MPAA rating information for Ron Clements' movies. Let me identify which of his movies are both Adventure and PG.\n\nFrom the data:\n- The Great Mouse Detective: Adventure, (no rating)\n- The Little Mermaid: Adventure, G\n- Aladdin: Comedy, G\n- The Rescuers Down Under: Adventure, G\n- Hercules: Adventure, PG\n- Mulan: Adventure, G\n- Tarzan: Adventure, PG\n\nThe movies that are both Adventure and PG are:\n- Hercules (PG, Adventure)\n- Tarzan (PG, Adventure)\n\nSo there are 2 PG adventure movies directed by Ron Clements.",
+      "stricter_reason": "Count 2 matches, but supporting film names are wrong."
+    },
+    {
+      "task_index": 12,
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "source": "disney/coverage_check/qwen30b/shard-0/case-012.json",
+      "source_sha256": "bbf96a80366092b8792b7373f8a4f0058461b06d9f9f449bd02ca98218abe3b0",
+      "final_answer": "Now I have all the information needed. Let me analyze the movies directed by Ron Clements:\n\n1. The movies are:\n   - The Great Mouse Detective (Adventure, \"\")\n   - The Little Mermaid (Adventure, G)\n   - Aladdin (Comedy, G)\n   - The Rescuers Down Under (Adventure, G)\n   - Hercules (Adventure, PG)\n   - Mulan (Adventure, G)\n   - Tarzan (Adventure, PG)\n\n2. For a movie to be a PG adventure movie, it needs to be both:\n   - PG rated (not G or \"\")\n   - In the Adventure genre\n\n3. Looking at the data:\n   - The Great Mouse Detective: Adventure, \"\" (not PG)\n   - The Little Mermaid: Adventure, G (not PG)\n   - Aladdin: Comedy, G (not Adventure)\n   - The Rescuers Down Under: Adventure, G (not PG)\n   - Hercules: Adventure, PG (PG and Adventure) ✓\n   - Mulan: Adventure, G (not PG)\n   - Tarzan: Adventure, PG (PG and Adventure) ✓\n\nSo there are 2 PG adventure movies directed by Ron Clements: Hercules and Tarzan.\n\nTherefore, the answer is 2.",
+      "stricter_reason": "Count 2 matches, but supporting film names are wrong."
+    },
+    {
+      "task_index": 15,
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "source": "disney/coverage_check/qwen25/shard-0/case-015.json",
+      "source_sha256": "710bc22a9cf5050d3584dcffdfdd4f071f5a3495a82f11d2ac989e44dea89e53",
+      "final_answer": "Based on the provided data, there is no entry for a film directed by Roger Allers. The film \"The Lion King\" was directed by Roger Allers, but the release date associated with it in the given dataset is June 24, 1994. However, since we were looking for a film directed by Roger Allers and no such entry exists in the dataset, I can only provide the release date of \"The Lion King\" directed by him.\n\nThe release date of \"The Lion King\" directed by Roger Allers is June 24, 1994.",
+      "stricter_reason": "Correct explicit final date despite inconsistent earlier denial of a matching record."
+    }
+  ],
+  "primary_groups": [
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 12,
+      "labels": {
+        "correct": 12,
+        "ambiguous": 2,
+        "incorrect": 6
+      },
+      "accuracy": 0.6666666666666666,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 81,
+        "tool_calls": 61,
+        "input_tokens": 930401,
+        "output_tokens": 10060,
+        "generation_seconds": 441.5420827623457,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 9,
+      "labels": {
+        "correct": 9,
+        "ambiguous": 2,
+        "incorrect": 9
+      },
+      "accuracy": 0.5,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 71,
+        "tool_calls": 51,
+        "input_tokens": 820114,
+        "output_tokens": 8709,
+        "generation_seconds": 386.9006280936301,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 5,
+      "labels": {
+        "correct": 5,
+        "ambiguous": 2,
+        "no_answer": 1,
+        "incorrect": 12
+      },
+      "accuracy": 0.2777777777777778,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "protocol_error_limit": 1,
+        "max_steps": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 95,
+        "tool_calls": 88,
+        "input_tokens": 1162748,
+        "output_tokens": 9290,
+        "generation_seconds": 512.034708218649,
+        "protocol_errors": 6
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 7,
+      "labels": {
+        "correct": 7,
+        "ambiguous": 2,
+        "incorrect": 11
+      },
+      "accuracy": 0.3888888888888889,
+      "final_answers": 19,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 63,
+        "tool_calls": 46,
+        "input_tokens": 722090,
+        "output_tokens": 7577,
+        "generation_seconds": 374.5084846019745,
+        "protocol_errors": 5
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 12,
+      "labels": {
+        "correct": 12,
+        "ambiguous": 2,
+        "no_answer": 1,
+        "incorrect": 5
+      },
+      "accuracy": 0.6666666666666666,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "max_steps": 1,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 119,
+        "tool_calls": 92,
+        "input_tokens": 1470792,
+        "output_tokens": 18343,
+        "generation_seconds": 3279.4154854491353,
+        "protocol_errors": 9
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 15,
+      "labels": {
+        "correct": 15,
+        "ambiguous": 2,
+        "incorrect": 3
+      },
+      "accuracy": 0.8333333333333334,
+      "final_answers": 19,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 88,
+        "tool_calls": 63,
+        "input_tokens": 1013481,
+        "output_tokens": 11770,
+        "generation_seconds": 2118.561242993921,
+        "protocol_errors": 6
+      }
+    }
+  ],
+  "stricter_summary": {
+    "purpose": "Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring",
+    "complete_batch": false,
+    "review_scope": "disney",
+    "executions": 120,
+    "distinct_tasks": 20,
+    "groups": [
+      {
+        "domain": "disney",
+        "model": "qwen3",
+        "condition": "original",
+        "executions": 20,
+        "scored_tasks": 18,
+        "ambiguous_tasks": 2,
+        "correct": 9,
+        "labels": {
+          "correct": 9,
+          "ambiguous": 2,
+          "incorrect": 9
+        },
+        "accuracy": 0.5,
+        "final_answers": 20,
+        "terminations": {
+          "agent_finished": 20
+        },
+        "final_at_generation_token_ceiling": 1,
+        "all_execution_usage": {
+          "model_calls": 81,
+          "tool_calls": 61,
+          "input_tokens": 930401,
+          "output_tokens": 10060,
+          "generation_seconds": 441.5420827623457,
+          "protocol_errors": 0
+        }
+      },
+      {
+        "domain": "disney",
+        "model": "qwen3",
+        "condition": "coverage_check",
+        "executions": 20,
+        "scored_tasks": 18,
+        "ambiguous_tasks": 2,
+        "correct": 8,
+        "labels": {
+          "correct": 8,
+          "ambiguous": 2,
+          "incorrect": 10
+        },
+        "accuracy": 0.4444444444444444,
+        "final_answers": 20,
+        "terminations": {
+          "agent_finished": 20
+        },
+        "final_at_generation_token_ceiling": 0,
+        "all_execution_usage": {
+          "model_calls": 71,
+          "tool_calls": 51,
+          "input_tokens": 820114,
+          "output_tokens": 8709,
+          "generation_seconds": 386.9006280936301,
+          "protocol_errors": 0
+        }
+      },
+      {
+        "domain": "disney",
+        "model": "qwen25",
+        "condition": "original",
+        "executions": 20,
+        "scored_tasks": 18,
+        "ambiguous_tasks": 2,
+        "correct": 5,
+        "labels": {
+          "correct": 5,
+          "ambiguous": 2,
+          "no_answer": 1,
+          "incorrect": 12
+        },
+        "accuracy": 0.2777777777777778,
+        "final_answers": 18,
+        "terminations": {
+          "agent_finished": 18,
+          "protocol_error_limit": 1,
+          "max_steps": 1
+        },
+        "final_at_generation_token_ceiling": 0,
+        "all_execution_usage": {
+          "model_calls": 95,
+          "tool_calls": 88,
+          "input_tokens": 1162748,
+          "output_tokens": 9290,
+          "generation_seconds": 512.034708218649,
+          "protocol_errors": 6
+        }
+      },
+      {
+        "domain": "disney",
+        "model": "qwen25",
+        "condition": "coverage_check",
+        "executions": 20,
+        "scored_tasks": 18,
+        "ambiguous_tasks": 2,
+        "correct": 6,
+        "labels": {
+          "correct": 6,
+          "ambiguous": 2,
+          "incorrect": 12
+        },
+        "accuracy": 0.3333333333333333,
+        "final_answers": 19,
+        "terminations": {
+          "agent_finished": 19,
+          "protocol_error_limit": 1
+        },
+        "final_at_generation_token_ceiling": 0,
+        "all_execution_usage": {
+          "model_calls": 63,
+          "tool_calls": 46,
+          "input_tokens": 722090,
+          "output_tokens": 7577,
+          "generation_seconds": 374.5084846019745,
+          "protocol_errors": 5
+        }
+      },
+      {
+        "domain": "disney",
+        "model": "qwen30b",
+        "condition": "original",
+        "executions": 20,
+        "scored_tasks": 18,
+        "ambiguous_tasks": 2,
+        "correct": 10,
+        "labels": {
+          "correct": 10,
+          "ambiguous": 2,
+          "no_answer": 1,
+          "incorrect": 7
+        },
+        "accuracy": 0.5555555555555556,
+        "final_answers": 18,
+        "terminations": {
+          "agent_finished": 18,
+          "max_steps": 1,
+          "protocol_error_limit": 1
+        },
+        "final_at_generation_token_ceiling": 1,
+        "all_execution_usage": {
+          "model_calls": 119,
+          "tool_calls": 92,
+          "input_tokens": 1470792,
+          "output_tokens": 18343,
+          "generation_seconds": 3279.4154854491353,
+          "protocol_errors": 9
+        }
+      },
+      {
+        "domain": "disney",
+        "model": "qwen30b",
+        "condition": "coverage_check",
+        "executions": 20,
+        "scored_tasks": 18,
+        "ambiguous_tasks": 2,
+        "correct": 14,
+        "labels": {
+          "correct": 14,
+          "ambiguous": 2,
+          "incorrect": 4
+        },
+        "accuracy": 0.7777777777777778,
+        "final_answers": 19,
+        "terminations": {
+          "agent_finished": 19,
+          "protocol_error_limit": 1
+        },
+        "final_at_generation_token_ceiling": 0,
+        "all_execution_usage": {
+          "model_calls": 88,
+          "tool_calls": 63,
+          "input_tokens": 1013481,
+          "output_tokens": 11770,
+          "generation_seconds": 2118.561242993921,
+          "protocol_errors": 6
+        }
+      }
+    ],
+    "paired": [
+      {
+        "domain": "disney",
+        "model": "qwen3",
+        "scored_tasks": 18,
+        "gains": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-c0fb51d1e703"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-585fc36cc9c6"
+          }
+        ],
+        "losses": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-c9b00cbda527"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-667fe456f4a6"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-af5556147a53"
+          }
+        ],
+        "both_correct": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-fdd5b0e943a7"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-1bd5ad982571"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-dfaa807317f7"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-21513bce4a10"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-30444c866c6d"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-7ab1eb405866"
+          }
+        ],
+        "both_unsuccessful": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-bdca886a5f4f"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-8e9434bbcc3f"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-51ddf26f6a96"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-f1c6994b7ed9"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-4f24103e8871"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-5ddf6e60c7cb"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-7478b02e4420"
+          }
+        ],
+        "difference_percentage_points": -5.555555555555555
+      },
+      {
+        "domain": "disney",
+        "model": "qwen25",
+        "scored_tasks": 18,
+        "gains": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-c0fb51d1e703"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-585fc36cc9c6"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-667fe456f4a6"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-7ab1eb405866"
+          }
+        ],
+        "losses": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-1bd5ad982571"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-30444c866c6d"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-5ddf6e60c7cb"
+          }
+        ],
+        "both_correct": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-fdd5b0e943a7"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-21513bce4a10"
+          }
+        ],
+        "both_unsuccessful": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-c9b00cbda527"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-dfaa807317f7"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-bdca886a5f4f"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-8e9434bbcc3f"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-51ddf26f6a96"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-af5556147a53"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-f1c6994b7ed9"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-4f24103e8871"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-7478b02e4420"
+          }
+        ],
+        "difference_percentage_points": 5.555555555555555
+      },
+      {
+        "domain": "disney",
+        "model": "qwen30b",
+        "scored_tasks": 18,
+        "gains": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-c0fb51d1e703"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-c9b00cbda527"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-8e9434bbcc3f"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-51ddf26f6a96"
+          }
+        ],
+        "losses": [],
+        "both_correct": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-fdd5b0e943a7"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-1bd5ad982571"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-dfaa807317f7"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-585fc36cc9c6"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-21513bce4a10"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-667fe456f4a6"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-f1c6994b7ed9"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-4f24103e8871"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-5ddf6e60c7cb"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-7ab1eb405866"
+          }
+        ],
+        "both_unsuccessful": [
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-bdca886a5f4f"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-af5556147a53"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-30444c866c6d"
+          },
+          {
+            "domain": "disney",
+            "uuid": "34a533dfd727-7478b02e4420"
+          }
+        ],
+        "difference_percentage_points": 22.22222222222222
+      }
+    ],
+    "limits": [
+      "Failures remain in the fixed scored-task denominators.",
+      "Ambiguous tasks retain their executions and costs but do not enter answer accuracy.",
+      "Task pairs and checkpoints are not independent population samples.",
+      "No evidence-sufficiency or causal mechanism score is inferred from answer correctness."
+    ]
+  },
+  "limits": "Changing all selected cases together is not a bound over every possible human adjudication. Cases were identified by the same unblinded assistant during review; independent adjudication remains absent.",
+  "script_sha256": "9148e6a8ace7f81561ea01a1badd91e2dabb92a81079b5095fba55bb6bffa6d9"
+}

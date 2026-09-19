@@ -1,0 +1,30 @@
+{
+  "scope": "Second completed domain of the registered 420-episode expansion. Full batch incomplete at this extraction.",
+  "complete_batch": false,
+  "complete_domain": true,
+  "domain": "disney",
+  "episodes": 120,
+  "distinct_tasks": 20,
+  "successful_worker_exits": 6,
+  "archive": "results/remote/vakra-expansion-v2-disney-complete.zip",
+  "archive_bytes": 1077140,
+  "archive_entries": 145,
+  "archive_sha256": "291b6889a529231078d1afe3bedb827509608dc993f1ccea01af629fd97a100a",
+  "deployment_archive_sha256": "b254562e1969a6bff4299bee152777dc86d29f2489a93455956ef97766ef0961",
+  "all_120_extracted_records_byte_match_archive": true,
+  "review": "One unblinded assistant read all120 full finals/absence. Two premarked ambiguous tasks retain12 executions/costs and are excluded from correctness. Six no-final episodes include four on an ambiguous task; two remain unsuccessful in the108 scored executions.",
+  "labels": {
+    "correct": 60,
+    "ambiguous": 12,
+    "incorrect": 46,
+    "no_answer": 2
+  },
+  "evidence_sha256": {
+    "vakra_expansion_disney_closed_grid_v1.json": "692d9f6d36046cf35b89a2ade95fffb1a77f1212250893c187e0e52cd443e2bb",
+    "vakra_expansion_disney_annotations_v1.json": "9de153dd76b2f3b699867b1f4f156c703e4a69ae2b258ec4b293e14e5212c87c",
+    "vakra_expansion_disney_answer_summary_v1.json": "16c4d8885c097221209597338e681ed13d3e875e092e3d1cd1580882b468a7f7",
+    "vakra_expansion_disney_review_sensitivity_v1.json": "be0587aacdf13b43d93a027338afd6595752d3d557db713cfcccdeb6c6857d5d"
+  },
+  "script_sha256": "9148e6a8ace7f81561ea01a1badd91e2dabb92a81079b5095fba55bb6bffa6d9",
+  "execution_note": "Initial annotation materialization failed on a missing explanation-dictionary entry for task8, before writing any annotation file; fixed the dictionary and then materialized the same manually assigned labels. No new model run."
+}
