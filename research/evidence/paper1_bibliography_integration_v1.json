@@ -1,0 +1,26 @@
+{
+  "scope": "Bibliography integration and research disclosure, without experimental claim changes",
+  "source_sha256": "f150f9ecf8f4bae66a522042f2788ea88ef2163a09f02ffa2211e86468c1e3d4",
+  "bibliography_sha256": "f2285492a708054c0009cfab04547477fb9a77b11ade5e22f5f8d3b3dab1c8e5",
+  "primary_metadata_checked_on": "2026-09-20",
+  "sources": [
+    "https://arxiv.org/abs/2506.07982v1",
+    "https://arxiv.org/abs/2608.17684v1",
+    "https://arxiv.org/abs/2303.11366v4",
+    "https://arxiv.org/abs/2609.11060v1",
+    "https://arxiv.org/abs/2606.21024v1",
+    "https://arxiv.org/abs/2409.07429v1",
+    "https://aclanthology.org/2026.acl-long.27/"
+  ],
+  "checks": {
+    "references": 7,
+    "abstract_unchanged": true,
+    "all_existing_table_lines_unchanged": true,
+    "human_authorship_not_invented": true
+  },
+  "limits": [
+    "Metadata checked against primary abstract/landing records, not a new full-text review.",
+    "Six records explicitly cite inspected preprint versions; no inferred acceptance metadata.",
+    "Test transfer and NK results pending; manuscript remains incomplete."
+  ]
+}

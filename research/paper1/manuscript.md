@@ -176,7 +176,7 @@ Qwen2.5-7B-Instruct.
 
 ## 4. Evaluation protocol and observed baseline
 
-We pin tau2-bench to commit b7ea9074c1cba482b30687fecdb5c8425fd6f619 and verify
+We pin [tau2-bench](https://arxiv.org/abs/2506.07982v1) to commit b7ea9074c1cba482b30687fecdb5c8425fd6f619 and verify
 the imported implementation against a source-and-data manifest. We use the
 official solo telecom transitions and evaluator with 60 message steps and at
 most five environment errors. Native model chat templates receive the same
@@ -482,7 +482,7 @@ The current intervention is intentionally simple. Instruction-sensitive gains
 could reflect wording, lesson length or compression choices. A publishable
 method claim would require stronger memory baselines and controls addressing
 these alternatives. The static cross-task reflection control is not an exact
-reproduction of Reflexion, whose original protocol learns across repeated
+reproduction of [Reflexion](https://arxiv.org/abs/2303.11366v4), whose original protocol learns across repeated
 trials of a task and already includes action-limit-related reflection triggers.
 No claim of being the first budget-sensitive agent-memory study is warranted.
 
@@ -610,12 +610,59 @@ reuse and downstream task outcomes separately. The registered test extension
 is still pending, so this conclusion is limited to the completed development
 study and the descriptive source audit.
 
-## References to integrate into the final bibliography
+## Data, code and use of language models
 
-- tau2-Bench: Evaluating Conversational Agents in a Dual-Control Environment.
-  https://arxiv.org/abs/2506.07982
-- Reflexion: Language Agents with Verbal Reinforcement Learning.
-  https://arxiv.org/abs/2303.11366
+The code, frozen protocols and analysis programs are maintained on the
+`codex/agent-paper-research` branch of
+[Jing-XING/autoresearch](https://github.com/Jing-XING/autoresearch/tree/codex/agent-paper-research).
+`reproduce.md` specifies artifact identities and analysis commands;
+`claim_to_evidence.md` maps the completed developmental claims to their records.
+The raw execution archives are retained locally and are not yet a complete
+public release. The test and structured-curation registrations precede their
+outcome analysis. Their pending results must not be inferred from development.
 
-Independent confirmation, stronger method comparisons, complete appendices,
-bibliography integration and publication formatting remain unfinished.
+A language-model assistant performed literature retrieval, implementation,
+experiment operation, source-claim inspection, analysis and drafting.
+The qualitative source review was unblinded and has no independent human
+adjudication. Numerical development results derive from recorded executions
+and the pinned official evaluator. Author identities, affiliations, funding
+and accountability declarations remain to be supplied by the responsible
+human authors; they have not been invented by the assistant.
+
+## References
+
+Barres, Victor; Dong, Honghua; Ray, Soham; Si, Xujie; and Narasimhan, Karthik.
+2025. tau2-Bench: Evaluating Conversational Agents in a Dual-Control
+Environment. arXiv:2506.07982, preprint.
+[Source](https://arxiv.org/abs/2506.07982v1).
+
+Li, Jialong, and Zhu, Jialing. 2026. Auditing Self-Evolution in Financial
+Agents: Capability Gains, Security Drift, and Execution-Interface Mismatch.
+arXiv:2608.17684, version 1, preprint.
+[Source](https://arxiv.org/abs/2608.17684v1).
+
+Shinn, Noah; Cassano, Federico; Berman, Edward; Gopinath, Ashwin;
+Narasimhan, Karthik; and Yao, Shunyu. 2023. Reflexion: Language Agents with
+Verbal Reinforcement Learning. arXiv:2303.11366, version 4, preprint.
+[Source](https://arxiv.org/abs/2303.11366v4).
+
+Suresh, Susheel; Mak, Hazel; Bhatnagar, Sahil; Methani, Chhaya; and
+Gutierrez Munoz, Alejandro. 2026. Grounding Agent Memory:
+Environment-Probing Curation for Enterprise Agents. arXiv:2609.11060,
+version 1, preprint. [Source](https://arxiv.org/abs/2609.11060v1).
+
+Wang, Hanchun. 2026. Negative Knowledge as Failure-aware Shared Memory for
+AutoResearch. arXiv:2606.21024, version 1, preprint.
+[Source](https://arxiv.org/abs/2606.21024v1).
+
+Wang, Zora Zhiruo; Mao, Jiayuan; Fried, Daniel; and Neubig, Graham. 2024.
+Agent Workflow Memory. arXiv:2409.07429, version 1, preprint.
+[Source](https://arxiv.org/abs/2409.07429v1).
+
+Xiong, Zidi; Lin, Yuping; Xie, Wenya; He, Pengfei; Liu, Zirui; Tang,
+Jiliang; Lakkaraju, Himabindu; and Xiang, Zhen. 2026. How Memory Management
+Impacts LLM Agents: An Empirical Study of Experience-Following Behavior.
+Proceedings of the 64th Annual Meeting of the Association for Computational
+Linguistics, Volume 1: Long Papers, pages 623-645. Association for
+Computational Linguistics. DOI: 10.18653/v1/2026.acl-long.27.
+[Source](https://aclanthology.org/2026.acl-long.27/).
