@@ -133,3 +133,36 @@ remain failures in the retry and alternative controls.
 These executions close the earlier mock-interface limitation for the tested
 tool/message classes. They still do not run a complete LangGraph agent,
 evaluate recovery planning by an LLM, or measure real-service failure rates.
+# Invocation-format control and additional closest work
+
+The separately executed `langchain_error_envelope_probe_v1.json` contains
+eight local controls using the same installed langchain-core 1.6.3. Calling
+a StructuredTool with a plain argument dictionary returns the raw content of
+a handled ToolException; calling it with a complete ToolCall envelope returns
+a ToolMessage whose status is error. Normal success and unhandled exceptions
+provide controls. An arbitrary returned dictionary containing `status:error`
+remains application data and receives a success envelope. These behaviors
+match the installed library's documentation and implementation; they are not
+LangChain defects. The integration must preserve explicit error envelopes or
+apply its own declared result semantics. The constructed same-text fixture
+also shows that content alone need not identify the original status. It does
+not estimate how often ambiguous text occurs in real applications. All eight
+controls pass, with zero network attempts and no model calls.
+
+Additional primary sources inspected on 2026-09-19:
+
+- [Bugs in Modern LLM Agent Frameworks](https://arxiv.org/html/2602.21806v1),
+  sections 2–3, already studies framework bugs and interface/execution
+  incompatibility across CrewAI and LangChain. A generic framework-bug taxonomy
+  is therefore not a new contribution here. Its reported issue counts are
+  not reproduced by our probes.
+- [Agent Crash Test](https://github.com/pavloparaschakis/agent-crash-test),
+  README sections on contracts and mutations, already provides tool failure
+  injection, explicit effect observations, bounded mutations, and inconclusive
+  results when observations are missing. A new wrapper around these same
+  ideas would not establish novelty. Repository description inspected; code
+  not installed or executed.
+- [AgentDebugX](https://arxiv.org/html/2607.18754v1), sections 3.1–3.3,
+  already separates immutable traces from diagnosis and supports deterministic
+  detection, evidence-backed attribution and gated reruns. Our status-loss
+  reproducer is narrower; no comparison against its detector has been run.

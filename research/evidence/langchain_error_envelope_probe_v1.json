@@ -1,0 +1,107 @@
+{
+  "purpose": "Distinguish documented LangChain invocation envelopes from RAC integration failures.",
+  "package": "langchain-core",
+  "version": "1.6.3",
+  "library_base_sha256": "259da69b2ca5e171f4cc58acec2190352e7091f4d96a20158ce51feed4a78a02",
+  "script_sha256": "2140049b822cabbf75c461b3f98af6d1e09111a9339d11d3534e5315bf4f7166",
+  "cases": [
+    {
+      "mode": "success",
+      "tool_call_envelope": false,
+      "result_type": "str",
+      "result": "fixture diagnostic",
+      "exception": null
+    },
+    {
+      "mode": "success",
+      "tool_call_envelope": true,
+      "result_type": "ToolMessage",
+      "result": {
+        "content": "fixture diagnostic",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "tool",
+        "name": "operation",
+        "id": null,
+        "tool_call_id": "fixture-call",
+        "artifact": null,
+        "status": "success"
+      },
+      "exception": null
+    },
+    {
+      "mode": "handled_exception",
+      "tool_call_envelope": false,
+      "result_type": "str",
+      "result": "fixture diagnostic",
+      "exception": null
+    },
+    {
+      "mode": "handled_exception",
+      "tool_call_envelope": true,
+      "result_type": "ToolMessage",
+      "result": {
+        "content": "fixture diagnostic",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "tool",
+        "name": "operation",
+        "id": null,
+        "tool_call_id": "fixture-call",
+        "artifact": null,
+        "status": "error"
+      },
+      "exception": null
+    },
+    {
+      "mode": "unhandled_exception",
+      "tool_call_envelope": false,
+      "result_type": "ToolException",
+      "result": null,
+      "exception": "fixture diagnostic"
+    },
+    {
+      "mode": "unhandled_exception",
+      "tool_call_envelope": true,
+      "result_type": "ToolException",
+      "result": null,
+      "exception": "fixture diagnostic"
+    },
+    {
+      "mode": "error_payload",
+      "tool_call_envelope": false,
+      "result_type": "dict",
+      "result": {
+        "status": "error",
+        "reason": "fixture diagnostic"
+      },
+      "exception": null
+    },
+    {
+      "mode": "error_payload",
+      "tool_call_envelope": true,
+      "result_type": "ToolMessage",
+      "result": {
+        "content": "{\"status\": \"error\", \"reason\": \"fixture diagnostic\"}",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "tool",
+        "name": "operation",
+        "id": null,
+        "tool_call_id": "fixture-call",
+        "artifact": null,
+        "status": "success"
+      },
+      "exception": null
+    }
+  ],
+  "controls_passed": true,
+  "attempted_network_connections": 0,
+  "interpretation": [
+    "Plain argument invocation deliberately returns raw handled-error content. A ToolCall envelope preserves its error status.",
+    "The fixture gives successful and handled-error calls equal text to show content alone need not distinguish them. This is constructed, not a prevalence estimate.",
+    "An arbitrary returned dict containing status:error is application data; LangChain does not automatically interpret it as a ToolException.",
+    "These documented behaviors are not LangChain bugs. RAC must preserve and interpret the appropriate integration-level error signals.",
+    "No model, external service, full agent benchmark, or new independent framework defect was tested."
+  ]
+}
