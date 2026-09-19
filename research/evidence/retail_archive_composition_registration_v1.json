@@ -1,0 +1,27 @@
+{
+  "snapshot_revision": "b7ea9074c1cba482b30687fecdb5c8425fd6f619",
+  "scope": "Source-selected archived payload audit. Previous task/trial/reward summary known; composition/cancellation payload extraction not run before freeze.",
+  "archives": {
+    "claude-3-7-sonnet-20250219_retail_default_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 25297194,
+      "sha256": "8ed278ae09736e28cda92fc353cf5755e754b6ca0030bf6071444ef966748a66"
+    },
+    "gpt-4.1-2025-04-14_retail_default_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 22401800,
+      "sha256": "512df82cc0e95e655029c35f1452b6933aa1d27f9b14be3553b4c785eb484e71"
+    },
+    "gpt-4.1-mini-2025-04-14_retail_base_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 24082699,
+      "sha256": "a9d8827875713ce65899cb149bb30e9c27e3a16459816376032b81c0a8084222"
+    },
+    "o4-mini-2025-04-16_retail_default_gpt-4.1-2025-04-14_4trials.json": {
+      "bytes": 22439916,
+      "sha256": "e9287afa8b499b79cc7735a46d8a4fbee7c96497d67ef4f362b8e72cf9c62651"
+    }
+  },
+  "analysis_inputs": {
+    "research/retail_archive_composition_protocol_v1.md": "10ed07829e2ab41d03186fb511b7ed509b2c7b5449d95a49bd1010e5896f25d6",
+    "scripts/audit_retail_archive_composition_v1.py": "97e4bf072431f681ebf2fc534f428eaee0f1dbae14308bcf3cbd6fa824a90822",
+    "tests/test_retail_archive_composition.py": "5c42455a760a5bf18f068d4782924a448bb8d88488e071d3f943e74952723d02"
+  }
+}
