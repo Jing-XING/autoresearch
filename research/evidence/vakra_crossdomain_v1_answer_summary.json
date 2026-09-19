@@ -1,0 +1,1981 @@
+{
+  "purpose": "descriptive assistant-authored SQL audit, not official score or independent human labels",
+  "annotations_sha256": "6b9bfcb31cf70f7db032d4d07a40a23ce63ed134986bce38dde71559e2799e84",
+  "distinct_tasks": 60,
+  "executions": 240,
+  "groups": [
+    {
+      "domain": "computer_student",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "clear_interpretation_n": 17,
+      "correct": 4,
+      "labels": {
+        "correct": 4,
+        "incorrect": 13,
+        "ambiguous": 3
+      },
+      "reference_compatibility": {
+        "compatible": 4,
+        "incompatible": 16
+      }
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "clear_interpretation_n": 17,
+      "correct": 4,
+      "labels": {
+        "correct": 4,
+        "incorrect": 13,
+        "ambiguous": 3
+      },
+      "reference_compatibility": {
+        "compatible": 4,
+        "incompatible": 16
+      }
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "clear_interpretation_n": 17,
+      "correct": 4,
+      "labels": {
+        "correct": 4,
+        "incorrect": 13,
+        "ambiguous": 3
+      },
+      "reference_compatibility": {
+        "compatible": 4,
+        "incompatible": 16
+      }
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "clear_interpretation_n": 17,
+      "correct": 4,
+      "labels": {
+        "correct": 4,
+        "incorrect": 12,
+        "ambiguous": 3,
+        "no_answer": 1
+      },
+      "reference_compatibility": {
+        "compatible": 4,
+        "incompatible": 15,
+        "no_answer": 1
+      }
+    },
+    {
+      "domain": "cars",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "clear_interpretation_n": 18,
+      "correct": 10,
+      "labels": {
+        "incorrect": 8,
+        "correct": 10,
+        "ambiguous": 2
+      },
+      "reference_compatibility": {
+        "incompatible": 9,
+        "compatible": 11
+      }
+    },
+    {
+      "domain": "cars",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "clear_interpretation_n": 18,
+      "correct": 15,
+      "labels": {
+        "correct": 15,
+        "incorrect": 3,
+        "ambiguous": 2
+      },
+      "reference_compatibility": {
+        "compatible": 16,
+        "incompatible": 4
+      }
+    },
+    {
+      "domain": "cars",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "clear_interpretation_n": 18,
+      "correct": 9,
+      "labels": {
+        "correct": 9,
+        "incorrect": 5,
+        "no_answer": 4,
+        "ambiguous": 2
+      },
+      "reference_compatibility": {
+        "compatible": 10,
+        "incompatible": 5,
+        "no_answer": 5
+      }
+    },
+    {
+      "domain": "cars",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "clear_interpretation_n": 18,
+      "correct": 9,
+      "labels": {
+        "correct": 9,
+        "incorrect": 4,
+        "no_answer": 5,
+        "ambiguous": 2
+      },
+      "reference_compatibility": {
+        "compatible": 11,
+        "incompatible": 4,
+        "no_answer": 5
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "clear_interpretation_n": 20,
+      "correct": 15,
+      "labels": {
+        "correct": 15,
+        "incorrect": 5
+      },
+      "reference_compatibility": {
+        "compatible": 15,
+        "incompatible": 5
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "clear_interpretation_n": 20,
+      "correct": 13,
+      "labels": {
+        "correct": 13,
+        "incorrect": 7
+      },
+      "reference_compatibility": {
+        "compatible": 13,
+        "incompatible": 7
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "clear_interpretation_n": 20,
+      "correct": 6,
+      "labels": {
+        "incorrect": 10,
+        "no_answer": 4,
+        "correct": 6
+      },
+      "reference_compatibility": {
+        "incompatible": 10,
+        "no_answer": 4,
+        "compatible": 6
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "clear_interpretation_n": 20,
+      "correct": 8,
+      "labels": {
+        "no_answer": 5,
+        "incorrect": 7,
+        "correct": 8
+      },
+      "reference_compatibility": {
+        "no_answer": 5,
+        "incompatible": 8,
+        "compatible": 7
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 60,
+      "clear_interpretation_n": 55,
+      "correct": 29,
+      "labels": {
+        "correct": 29,
+        "incorrect": 26,
+        "ambiguous": 5
+      },
+      "reference_compatibility": {
+        "compatible": 30,
+        "incompatible": 30
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 60,
+      "clear_interpretation_n": 55,
+      "correct": 32,
+      "labels": {
+        "correct": 32,
+        "incorrect": 23,
+        "ambiguous": 5
+      },
+      "reference_compatibility": {
+        "compatible": 33,
+        "incompatible": 27
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 60,
+      "clear_interpretation_n": 55,
+      "correct": 19,
+      "labels": {
+        "correct": 19,
+        "incorrect": 28,
+        "ambiguous": 5,
+        "no_answer": 8
+      },
+      "reference_compatibility": {
+        "compatible": 20,
+        "incompatible": 31,
+        "no_answer": 9
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 60,
+      "clear_interpretation_n": 55,
+      "correct": 21,
+      "labels": {
+        "correct": 21,
+        "incorrect": 23,
+        "ambiguous": 5,
+        "no_answer": 11
+      },
+      "reference_compatibility": {
+        "compatible": 22,
+        "incompatible": 27,
+        "no_answer": 11
+      }
+    }
+  ],
+  "paired": [
+    {
+      "domain": "computer_student",
+      "model": "qwen3",
+      "n": 17,
+      "wins": [],
+      "losses": [],
+      "same_correct": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-333e7200668a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-839f3e3f08b0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dd1f0fd6952a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-69f4064c9895"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-c089830d9f27"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-362f022268de"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-178d76a262a8"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e88f2b619318"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-b174a579b40a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dce48035fac7"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e00e77fb7090"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-a223bf6c44c0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-0bf6f436491e"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-55b68ffc5625"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6237d41221b2"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-f6490a3e3217"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6516ae4cda2f"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen25",
+      "n": 17,
+      "wins": [],
+      "losses": [],
+      "same_correct": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-333e7200668a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-839f3e3f08b0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dd1f0fd6952a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-69f4064c9895"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-c089830d9f27"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-362f022268de"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-178d76a262a8"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e88f2b619318"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-b174a579b40a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dce48035fac7"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e00e77fb7090"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-a223bf6c44c0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-0bf6f436491e"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-55b68ffc5625"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6237d41221b2"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-f6490a3e3217"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6516ae4cda2f"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "cars",
+      "model": "qwen3",
+      "n": 18,
+      "wins": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-4c0c5ef5f800"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-49f2b72eddcb"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-d8965b97188e"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-76785f95349f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-ecae01ec3f57"
+        }
+      ],
+      "losses": [],
+      "same_correct": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-c8c0ee76f1fe"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-01d20bb1cfe7"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-02b30c2e311f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1856a4298798"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a14daed69e42"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-7e6b6c110247"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-f4c4d2aa8bd6"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-e5ab95182474"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-29698d7878a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a11c6689e23f"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-8f8d0031e0a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1bff98ba02a8"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-5f6e00f521b2"
+        }
+      ],
+      "difference_percentage_points": 27.77777777777778
+    },
+    {
+      "domain": "cars",
+      "model": "qwen25",
+      "n": 18,
+      "wins": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1bff98ba02a8"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-76785f95349f"
+        }
+      ],
+      "same_correct": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-4c0c5ef5f800"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-c8c0ee76f1fe"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-49f2b72eddcb"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-f4c4d2aa8bd6"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-e5ab95182474"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-ecae01ec3f57"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a11c6689e23f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-5f6e00f521b2"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-01d20bb1cfe7"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-02b30c2e311f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1856a4298798"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-8f8d0031e0a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a14daed69e42"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-d8965b97188e"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-7e6b6c110247"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-29698d7878a1"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen3",
+      "n": 20,
+      "wins": [],
+      "losses": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-8bebb64d620f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-4b2d539ed90b"
+        }
+      ],
+      "same_correct": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e6dd5c0c82b6"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-be77953010d5"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-dca022f3e041"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3db42fe063eb"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3f392d8766f8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-b5246332ef10"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-72dd7c7b022b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e54b4404190f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-7d126a36167d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-f4b1684d51e2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-ce6d88e92649"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-c0f31ebdd78f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-df184354abd3"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-a31f54d71ff8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3c3392e57062"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-0db47e6e47ec"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-9feeef14823d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-6bc4f635e23a"
+        }
+      ],
+      "difference_percentage_points": -10.0
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen25",
+      "n": 20,
+      "wins": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-dca022f3e041"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3c3392e57062"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-f4b1684d51e2"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-df184354abd3"
+        }
+      ],
+      "same_correct": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-72dd7c7b022b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e54b4404190f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-7d126a36167d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-9feeef14823d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-c0f31ebdd78f"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e6dd5c0c82b6"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-a31f54d71ff8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-be77953010d5"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-8bebb64d620f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3db42fe063eb"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-4b2d539ed90b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-0db47e6e47ec"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3f392d8766f8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-b5246332ef10"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-ce6d88e92649"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-6bc4f635e23a"
+        }
+      ],
+      "difference_percentage_points": 10.0
+    },
+    {
+      "domain": "all",
+      "model": "qwen3",
+      "n": 55,
+      "wins": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-4c0c5ef5f800"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-49f2b72eddcb"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-d8965b97188e"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-76785f95349f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-ecae01ec3f57"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-8bebb64d620f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-4b2d539ed90b"
+        }
+      ],
+      "same_correct": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-333e7200668a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-839f3e3f08b0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dd1f0fd6952a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-69f4064c9895"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-c8c0ee76f1fe"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-01d20bb1cfe7"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-02b30c2e311f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1856a4298798"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a14daed69e42"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-7e6b6c110247"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-f4c4d2aa8bd6"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-e5ab95182474"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-29698d7878a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a11c6689e23f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e6dd5c0c82b6"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-be77953010d5"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-dca022f3e041"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3db42fe063eb"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3f392d8766f8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-b5246332ef10"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-72dd7c7b022b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e54b4404190f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-7d126a36167d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-f4b1684d51e2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-ce6d88e92649"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-c0f31ebdd78f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-df184354abd3"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-c089830d9f27"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-362f022268de"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-178d76a262a8"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e88f2b619318"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-b174a579b40a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dce48035fac7"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e00e77fb7090"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-a223bf6c44c0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-0bf6f436491e"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-55b68ffc5625"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6237d41221b2"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-f6490a3e3217"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6516ae4cda2f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-8f8d0031e0a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1bff98ba02a8"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-5f6e00f521b2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-a31f54d71ff8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3c3392e57062"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-0db47e6e47ec"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-9feeef14823d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-6bc4f635e23a"
+        }
+      ],
+      "difference_percentage_points": 5.454545454545454
+    },
+    {
+      "domain": "all",
+      "model": "qwen25",
+      "n": 55,
+      "wins": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1bff98ba02a8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-dca022f3e041"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3c3392e57062"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-f4b1684d51e2"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-76785f95349f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-df184354abd3"
+        }
+      ],
+      "same_correct": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-333e7200668a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-839f3e3f08b0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dd1f0fd6952a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-69f4064c9895"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-4c0c5ef5f800"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-c8c0ee76f1fe"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-49f2b72eddcb"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-f4c4d2aa8bd6"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-e5ab95182474"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-ecae01ec3f57"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a11c6689e23f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-5f6e00f521b2"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-72dd7c7b022b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e54b4404190f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-7d126a36167d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-9feeef14823d"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-c0f31ebdd78f"
+        }
+      ],
+      "same_failed": [
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-c089830d9f27"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-362f022268de"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-178d76a262a8"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e88f2b619318"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-b174a579b40a"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-dce48035fac7"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-e00e77fb7090"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-a223bf6c44c0"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-0bf6f436491e"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-55b68ffc5625"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6237d41221b2"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-f6490a3e3217"
+        },
+        {
+          "domain": "computer_student",
+          "uuid": "39a28b2592a2-6516ae4cda2f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-01d20bb1cfe7"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-02b30c2e311f"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-1856a4298798"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-8f8d0031e0a1"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-a14daed69e42"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-d8965b97188e"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-7e6b6c110247"
+        },
+        {
+          "domain": "cars",
+          "uuid": "1f58b1e965af-29698d7878a1"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-e6dd5c0c82b6"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-a31f54d71ff8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-be77953010d5"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-8bebb64d620f"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3db42fe063eb"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-4b2d539ed90b"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-0db47e6e47ec"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-3f392d8766f8"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-b5246332ef10"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-ce6d88e92649"
+        },
+        {
+          "domain": "book_publishing_company",
+          "uuid": "5661cd917583-6bc4f635e23a"
+        }
+      ],
+      "difference_percentage_points": 3.6363636363636362
+    }
+  ],
+  "special_cases": [
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 3,
+        "uuid": "39a28b2592a2-43a91de74912",
+        "interpretation_stratum": "ambiguous",
+        "ambiguity": "Professor indicator glossary conflicts with stored usage; reference includes all teaching persons.",
+        "verified_reference_conflict": null,
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 3,
+          "uuid": "39a28b2592a2-43a91de74912",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-003.json",
+          "source_sha256": "fe4794ad43bfe1ca9bdeb5214f961546aa60a0b32043ecc6431bbb7a422b14b4",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified professor/teaching-scope ambiguity; none supplies the full reference ID set. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 3,
+          "uuid": "39a28b2592a2-43a91de74912",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-003.json",
+          "source_sha256": "023ca571af25cdbdf6dc72d9aebceb380e2cf0894f6f9d276f19c14e679c20d1",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified professor/teaching-scope ambiguity; none supplies the full reference ID set. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 3,
+          "uuid": "39a28b2592a2-43a91de74912",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-003.json",
+          "source_sha256": "4590473793ad798de9bb14fa9050f83645fe5e31107e9443b9fcf07dc472bacb",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified professor/teaching-scope ambiguity; none supplies the full reference ID set. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 3,
+          "uuid": "39a28b2592a2-43a91de74912",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-003.json",
+          "source_sha256": "03ad3826d6a5a89d04726d503279d794f9fa86dd1d214d5e92acfcb473b27e44",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified professor/teaching-scope ambiguity; none supplies the full reference ID set. No forced semantic label.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 4,
+        "uuid": "39a28b2592a2-178d76a262a8",
+        "interpretation_stratum": "specified_sql_interpretation",
+        "ambiguity": null,
+        "verified_reference_conflict": "Reference changes requested student 376 to 141 and follows wrong relationship.",
+        "task_local_initial_scope_witness": true,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 4,
+          "uuid": "39a28b2592a2-178d76a262a8",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-004.json",
+          "source_sha256": "96fe8b0e8124783ca2ef02337ea8f64bef7bd74542efda275701074ad288af2d",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not provide courses of the advisors of student 376. The task-local initialization witness limits attribution to the model.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 4,
+          "uuid": "39a28b2592a2-178d76a262a8",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-004.json",
+          "source_sha256": "631459b3a2cae6cb3ad035e4110cf5fe00cb86fb505d6f11c6c92954308cc28d",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not provide courses of the advisors of student 376. The task-local initialization witness limits attribution to the model.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 4,
+          "uuid": "39a28b2592a2-178d76a262a8",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-004.json",
+          "source_sha256": "af9bbfb76ae84fd9d91c275354acacb1892c6f43e34c02ab286b485792b0def7",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not provide courses of the advisors of student 376. The task-local initialization witness limits attribution to the model.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 4,
+          "uuid": "39a28b2592a2-178d76a262a8",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-004.json",
+          "source_sha256": "4281ab2f4e6f0a6d440c945a0889b7c0f51627d3d6ba1cd5005c7416186b3408",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not provide courses of the advisors of student 376. The task-local initialization witness limits attribution to the model.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 5,
+        "uuid": "39a28b2592a2-e88f2b619318",
+        "interpretation_stratum": "specified_sql_interpretation",
+        "ambiguity": null,
+        "verified_reference_conflict": "Reference returns student-side IDs instead of advisor-side IDs.",
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 5,
+          "uuid": "39a28b2592a2-e88f2b619318",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-005.json",
+          "source_sha256": "1ba2e7b9794bc1ab9c93efd42549434254f81a4f77fa6ca71caf1895dc4d7a7c",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Reports absence instead of the 13 advisor IDs. The reference itself incorrectly lists student-side IDs; neither list is supplied.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 5,
+          "uuid": "39a28b2592a2-e88f2b619318",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-005.json",
+          "source_sha256": "9f7bb9ec39d83b6cdba838007d428b48f03352a505579a318386001c8ddd160f",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Reports absence instead of the 13 advisor IDs. The reference itself incorrectly lists student-side IDs; neither list is supplied.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 5,
+          "uuid": "39a28b2592a2-e88f2b619318",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-005.json",
+          "source_sha256": "93021d5a77f7db6653a6a0eea0e444bdcec987954a0526822896fcb02027eec7",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Reports absence instead of the 13 advisor IDs. The reference itself incorrectly lists student-side IDs; neither list is supplied.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 5,
+          "uuid": "39a28b2592a2-e88f2b619318",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-005.json",
+          "source_sha256": "9ebc7bde1f825fbcd8c6528499f65e40a60a8184e0dfa3fee69a9e3d64cbba7b",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Reports absence instead of the 13 advisor IDs. The reference itself incorrectly lists student-side IDs; neither list is supplied.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 11,
+        "uuid": "39a28b2592a2-6b553ecfdd84",
+        "interpretation_stratum": "ambiguous",
+        "ambiguity": "Distinct courses versus teaching assignments.",
+        "verified_reference_conflict": null,
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 11,
+          "uuid": "39a28b2592a2-6b553ecfdd84",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-011.json",
+          "source_sha256": "b55eddeeb67065f7b69f1d06fcfc608e79e86d0af87b5dd470641f0d4bcf04d7",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-versus-assignment ambiguity; final answers zero or 102 do not match the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 11,
+          "uuid": "39a28b2592a2-6b553ecfdd84",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-011.json",
+          "source_sha256": "ed2663066d798018689695e4240bd6383743bb9a6daba0ce4d832282374292c6",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-versus-assignment ambiguity; final answers zero or 102 do not match the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 11,
+          "uuid": "39a28b2592a2-6b553ecfdd84",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-011.json",
+          "source_sha256": "efc82d3b6e5679c0e7a6c40a79bbc5d4f18e303dbab387ce41cad93658d3926d",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-versus-assignment ambiguity; final answers zero or 102 do not match the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 11,
+          "uuid": "39a28b2592a2-6b553ecfdd84",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-011.json",
+          "source_sha256": "17399d9a205940017b0acc76b81bc1077b2c58766bbb4a537f126a91a58321ce",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-versus-assignment ambiguity; final answers zero or 102 do not match the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 14,
+        "uuid": "39a28b2592a2-83098045c302",
+        "interpretation_stratum": "ambiguous",
+        "ambiguity": "Distinct courses versus teaching assignments, and faculty-member scope.",
+        "verified_reference_conflict": null,
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 14,
+          "uuid": "39a28b2592a2-83098045c302",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-014.json",
+          "source_sha256": "5067324b13309317540abb64b1d547643a72434947340f3b42186eff84dcb20a",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-count and faculty-scope ambiguity; no output gives the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 14,
+          "uuid": "39a28b2592a2-83098045c302",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-014.json",
+          "source_sha256": "66fac329154b543d239c728adb90d191341d9f7e0763418c94219247fbd7290e",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-count and faculty-scope ambiguity; no output gives the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 14,
+          "uuid": "39a28b2592a2-83098045c302",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-014.json",
+          "source_sha256": "759a19b696cbe060112b3e1f5bb30d177cf7df1cd00b0427a8a7ff92f5f5642c",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-count and faculty-scope ambiguity; no output gives the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 14,
+          "uuid": "39a28b2592a2-83098045c302",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-014.json",
+          "source_sha256": "2efa59fbcb6717b778fd1f44ff68e9860f25ed21cabad5374abc28cfcc3ee5c4",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified course-count and faculty-scope ambiguity; no output gives the reference 27. No forced semantic label.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 15,
+        "uuid": "39a28b2592a2-0bf6f436491e",
+        "interpretation_stratum": "specified_sql_interpretation",
+        "ambiguity": null,
+        "verified_reference_conflict": "Reference filters teacher ID 9 rather than advisors of student 6.",
+        "task_local_initial_scope_witness": true,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 15,
+          "uuid": "39a28b2592a2-0bf6f436491e",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-015.json",
+          "source_sha256": "db7c9df3dfccedacb402fb9bb50ddc3382d2fab39d12cc9c4d420cea302b563c",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not give the eight courses of the advisor of student 6. A partial unrelated course list or inability statement does not answer the query; initialization insufficiency limits attribution.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 15,
+          "uuid": "39a28b2592a2-0bf6f436491e",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-015.json",
+          "source_sha256": "bf862dc9b2c55aba000f0996a260876d68fc4f92d6e221a86bbcbf558336ad0a",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not give the eight courses of the advisor of student 6. A partial unrelated course list or inability statement does not answer the query; initialization insufficiency limits attribution.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 15,
+          "uuid": "39a28b2592a2-0bf6f436491e",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-015.json",
+          "source_sha256": "92741a2ab02089a67d3dc7a398de98ee3632c3972073bb35c1ce871b6ee0b9ae",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not give the eight courses of the advisor of student 6. A partial unrelated course list or inability statement does not answer the query; initialization insufficiency limits attribution.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 15,
+          "uuid": "39a28b2592a2-0bf6f436491e",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-015.json",
+          "source_sha256": "312739ea57a1ec5185451c7a6e0146bf4c5289df5bc31f4fd0f94402ddb9ec60",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Does not give the eight courses of the advisor of student 6. A partial unrelated course list or inability statement does not answer the query; initialization insufficiency limits attribution.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "computer_student",
+        "task_index": 18,
+        "uuid": "39a28b2592a2-f6490a3e3217",
+        "interpretation_stratum": "specified_sql_interpretation",
+        "ambiguity": null,
+        "verified_reference_conflict": "Reference filters taughtBy person 141 and returns course ID, instead of querying course 147 and returning people.",
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "computer_student",
+          "task_index": 18,
+          "uuid": "39a28b2592a2-f6490a3e3217",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "computer_student/original/qwen3/shard-0/case-018.json",
+          "source_sha256": "0b97cb9d7fbd58b86a904fe5bfc07bdaa903acf868bed21cc11bb030b90d2f6d",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Gives Level_300 but only three of seven teacher IDs. The reference is separately defective; matching a subset containing 165 is not full semantic correctness.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 18,
+          "uuid": "39a28b2592a2-f6490a3e3217",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen3/shard-0/case-018.json",
+          "source_sha256": "3ef153217c9033197d135b6e0c0961fd68d2c349c83b44b97dcc2eac3f2c1309",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Gives Level_300 but only three of seven teacher IDs. The reference is separately defective; matching a subset containing 165 is not full semantic correctness.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 18,
+          "uuid": "39a28b2592a2-f6490a3e3217",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "computer_student/original/qwen25/shard-0/case-018.json",
+          "source_sha256": "d184b96261fcf8d0ffc272d35a14ee0c2e97286972fc93559d687be50f5226a2",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Gives Level_300 but only three of seven teacher IDs. The reference is separately defective; matching a subset containing 165 is not full semantic correctness.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "computer_student",
+          "task_index": 18,
+          "uuid": "39a28b2592a2-f6490a3e3217",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "computer_student/coverage_check/qwen25/shard-0/case-018.json",
+          "source_sha256": "fdeda2ae3234ebdc6d997a710c1e5c59c771c66835c8e4155248d21b99f6c0d6",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "Gives Level_300 but only three of seven teacher IDs. The reference is separately defective; matching a subset containing 165 is not full semantic correctness.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "cars",
+        "task_index": 12,
+        "uuid": "1f58b1e965af-90d36f78b725",
+        "interpretation_stratum": "ambiguous",
+        "ambiguity": "Distinct cars versus production records.",
+        "verified_reference_conflict": null,
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "cars",
+          "task_index": 12,
+          "uuid": "1f58b1e965af-90d36f78b725",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "cars/original/qwen3/shard-0/case-012.json",
+          "source_sha256": "af45deb898e6aa90206e22d6d7d2ac7b4406e6d14506e6ae4d02c40cc6a7c5c8",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "compatible",
+          "reason": "Preidentified distinct-car versus production-row ambiguity. Where present, 102 matches the reference row count, not the alternative 70 distinct cars.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "cars",
+          "task_index": 12,
+          "uuid": "1f58b1e965af-90d36f78b725",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "cars/coverage_check/qwen3/shard-0/case-012.json",
+          "source_sha256": "868bdf30342b0b3b1f65c4f12b0f32c7e7f48f1ea0f899d95722ad443f14d843",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "compatible",
+          "reason": "Preidentified distinct-car versus production-row ambiguity. Where present, 102 matches the reference row count, not the alternative 70 distinct cars.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "cars",
+          "task_index": 12,
+          "uuid": "1f58b1e965af-90d36f78b725",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "cars/original/qwen25/shard-0/case-012.json",
+          "source_sha256": "c3cfb1602f34a6277727225284a5a70dc163b78c1550a9bdcb08f17a8206c66e",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "no_answer",
+          "reason": "No final answer: max_steps. Preidentified distinct-car versus production-row ambiguity. Where present, 102 matches the reference row count, not the alternative 70 distinct cars.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "cars",
+          "task_index": 12,
+          "uuid": "1f58b1e965af-90d36f78b725",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "cars/coverage_check/qwen25/shard-0/case-012.json",
+          "source_sha256": "57927b211bc1df066713c738db59392d613b9a4e69ea2c21f951ab79221d589d",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "compatible",
+          "reason": "Preidentified distinct-car versus production-row ambiguity. Where present, 102 matches the reference row count, not the alternative 70 distinct cars.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "cars",
+        "task_index": 19,
+        "uuid": "1f58b1e965af-c8f230c04d16",
+        "interpretation_stratum": "ambiguous",
+        "ambiguity": "Fastest lacks a direct speed field; horsepower and acceleration are different proxies.",
+        "verified_reference_conflict": null,
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "cars",
+          "task_index": 19,
+          "uuid": "1f58b1e965af-c8f230c04d16",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "cars/original/qwen3/shard-0/case-019.json",
+          "source_sha256": "b3a8c7fdb5ffd36f98b64984012b04475125c84a24b64c9910991ed82217d4d0",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified fastest-car interpretation ambiguity. Qwen3 chooses Japan by fuel economy, unlike reference USA by horsepower; Qwen2.5 gives reference-compatible USA.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "cars",
+          "task_index": 19,
+          "uuid": "1f58b1e965af-c8f230c04d16",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "cars/coverage_check/qwen3/shard-0/case-019.json",
+          "source_sha256": "b5aa6f301c7afdbee31ee0780afe1085bece313a2d74eba911fa0f7050e24250",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "incompatible",
+          "reason": "Preidentified fastest-car interpretation ambiguity. Qwen3 chooses Japan by fuel economy, unlike reference USA by horsepower; Qwen2.5 gives reference-compatible USA.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "cars",
+          "task_index": 19,
+          "uuid": "1f58b1e965af-c8f230c04d16",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "cars/original/qwen25/shard-0/case-019.json",
+          "source_sha256": "bcaa4806ff808bdda2a6b19c245c8687072f2e9d3e2bfc18994b34b34d7a0595",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "compatible",
+          "reason": "Preidentified fastest-car interpretation ambiguity. Qwen3 chooses Japan by fuel economy, unlike reference USA by horsepower; Qwen2.5 gives reference-compatible USA.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "cars",
+          "task_index": 19,
+          "uuid": "1f58b1e965af-c8f230c04d16",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "cars/coverage_check/qwen25/shard-0/case-019.json",
+          "source_sha256": "e6b681e9c208e6201be012babf26692a4f8a28bb969be216abfbbd20c3144ef3",
+          "interpretation_stratum": "ambiguous",
+          "answer_label": "ambiguous",
+          "reference_compatibility": "compatible",
+          "reason": "Preidentified fastest-car interpretation ambiguity. Qwen3 chooses Japan by fuel economy, unlike reference USA by horsepower; Qwen2.5 gives reference-compatible USA.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    },
+    {
+      "policy": {
+        "domain": "book_publishing_company",
+        "task_index": 4,
+        "uuid": "5661cd917583-3c3392e57062",
+        "interpretation_stratum": "specified_sql_interpretation",
+        "ambiguity": null,
+        "verified_reference_conflict": "Reference selects CFO rather than requested CEO.",
+        "task_local_initial_scope_witness": false,
+        "acceptance_note": "Use the requested fields from the SQL card; inspect semantic answer and explanation, not substring presence alone."
+      },
+      "outcomes": [
+        {
+          "domain": "book_publishing_company",
+          "task_index": 4,
+          "uuid": "5661cd917583-3c3392e57062",
+          "model": "qwen3",
+          "condition": "original",
+          "source": "book_publishing_company/original/qwen3/shard-0/case-004.json",
+          "source_sha256": "eea10e27b8a261cc076fcaea9ff4b34e17af9685df2f9db3c137ad6dfb25a3dc",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "The requested CEO is Philip Cramer, hired 1989-11-11. Only Qwen2.5 reminder supplies that answer. It conflicts with the released CFO reference, which is retained separately.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "book_publishing_company",
+          "task_index": 4,
+          "uuid": "5661cd917583-3c3392e57062",
+          "model": "qwen3",
+          "condition": "coverage_check",
+          "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-004.json",
+          "source_sha256": "753251179218fcd4e111d767a6b07620b8c42b1914a8faf30be58dd269547520",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "The requested CEO is Philip Cramer, hired 1989-11-11. Only Qwen2.5 reminder supplies that answer. It conflicts with the released CFO reference, which is retained separately.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "book_publishing_company",
+          "task_index": 4,
+          "uuid": "5661cd917583-3c3392e57062",
+          "model": "qwen25",
+          "condition": "original",
+          "source": "book_publishing_company/original/qwen25/shard-0/case-004.json",
+          "source_sha256": "51cae06ac747e660302f129724558d80c65af50dd66d690141546d3b3ffd899c",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "incorrect",
+          "reference_compatibility": "incompatible",
+          "reason": "The requested CEO is Philip Cramer, hired 1989-11-11. Only Qwen2.5 reminder supplies that answer. It conflicts with the released CFO reference, which is retained separately.",
+          "grounding_status": "not_scored"
+        },
+        {
+          "domain": "book_publishing_company",
+          "task_index": 4,
+          "uuid": "5661cd917583-3c3392e57062",
+          "model": "qwen25",
+          "condition": "coverage_check",
+          "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-004.json",
+          "source_sha256": "46a22ce5876121f73259c850cdefe16836d3c9a9dda1c2acd6e98d7d0343e6ea",
+          "interpretation_stratum": "specified_sql_interpretation",
+          "answer_label": "correct",
+          "reference_compatibility": "incompatible",
+          "reason": "The requested CEO is Philip Cramer, hired 1989-11-11. Only Qwen2.5 reminder supplies that answer. It conflicts with the released CFO reference, which is retained separately.",
+          "grounding_status": "not_scored"
+        }
+      ]
+    }
+  ],
+  "inference_limit": "deterministically selected small databases; task-paired executions; no population significance claim"
+}

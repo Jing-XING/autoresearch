@@ -1,0 +1,2228 @@
+{
+  "purpose": "post-hoc full-recorded-history indistinguishability witness, not a new model experiment or prevalence estimate",
+  "source": "results\\remote\\vakra-coverage12-v1\\runs\\vakra-coverage12-v1\\coverage_check\\qwen3\\shard-0\\case-003.json",
+  "source_sha256": "c5288e04a86ca48fc4def58698ac64ee2d44a18797443cb480cb0acd797b635d",
+  "uuid": "486ea46224d1-9bae74dab965",
+  "worker_prefix_files_sha256": {
+    "case-000.json": "a08a9a9d4773aa52964ca8ee359ab0ef134f6bdc91d9261675d32187f405decd",
+    "case-001.json": "1f96d6defeb2ae5adbde293daec28c7fcfac0db3c76e9a51c785535acd79ed13",
+    "case-002.json": "3371c2213269c483f3bd7ce35e57326350c36943752d56e2e2733f6e15e28449"
+  },
+  "setup_note": "First attempt used a different warmup and failed exact schema-order comparison. Subsequent attempts showed that the mutation changes a previous independent episode. The final check reproduces worker registration history but compares the target episode only; its model starts with a fresh two-message input. No schema or target-observation normalization is applied.",
+  "previous_independent_episode_differences": [
+    {
+      "uuid": "486ea46224d1-2b5bb9f47372",
+      "call": {
+        "name": "get_CountryLanguage_IsOfficials",
+        "arguments": {
+          "data_label": "retrieved_Country_1"
+        }
+      }
+    }
+  ],
+  "original_final_answer": "Now I have the filtered data for the country with the highest life expectancy (83.5). From this data, I can extract the required information:\n\n1. Country name: Andorra (from Country_Name)\n2. Capital city: Andorra la Vella (from City_Name)\n3. Official language: Looking at the CountryLanguage_Language column, I see \"Catalan\" is listed with \"T\" (true) for IsOfficial, while French and Portuguese have \"F\" (false). So Catalan is the official language.\n\nTherefore, the country with the highest life expectancy is Andorra, with capital city Andorra la Vella and official language Catalan.",
+  "database_sha256": "813faade795b875f6d46cf81d9651e2400524b414a407aa9d473aa9a8c142861",
+  "counterfactual_database_sha256": "f789bfcff54999b78fea0949433d5e98cddecff66e985047e8f1cc7659f99b64",
+  "mutation_sql": "UPDATE CountryLanguage SET IsOfficial='T' WHERE CountryCode='AND' AND Language='Spanish' AND IsOfficial='F'",
+  "target_sql": "SELECT c.Name, city.Name, l.Language FROM Country c JOIN City city ON city.ID=c.Capital JOIN CountryLanguage l ON l.CountryCode=c.Code WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T' ORDER BY c.Code,l.Language",
+  "original_answer": [
+    [
+      "Andorra",
+      "Andorra la Vella",
+      "Catalan"
+    ]
+  ],
+  "counterfactual_answer": [
+    [
+      "Andorra",
+      "Andorra la Vella",
+      "Catalan"
+    ],
+    [
+      "Andorra",
+      "Andorra la Vella",
+      "Spanish"
+    ]
+  ],
+  "initial_peek_equal": true,
+  "tool_schemas_equal": true,
+  "all_recorded_tool_responses_equal": true,
+  "tool_calls_replayed_per_database": 2,
+  "observable_history_sha256": "0cc172aa5576dfe12af308347a4a315269870615a791122bbd0aab589f45ef27",
+  "serialization": "Python JSON with literal NaN preserved as in the source artifacts; sorted object keys for digest, no value normalization.",
+  "observation": {
+    "initial_peek": {
+      "handle": "retrieved_Country_1",
+      "num_records": 30670,
+      "key_details": [
+        {
+          "name": "Country_Code",
+          "dtype": "str",
+          "first_3_values": [
+            "AFG",
+            "AFG",
+            "AFG"
+          ]
+        },
+        {
+          "name": "Country_Name",
+          "dtype": "str",
+          "first_3_values": [
+            "Afghanistan",
+            "Afghanistan",
+            "Afghanistan"
+          ]
+        },
+        {
+          "name": "Country_Continent",
+          "dtype": "str",
+          "first_3_values": [
+            "Asia",
+            "Asia",
+            "Asia"
+          ]
+        },
+        {
+          "name": "Country_Region",
+          "dtype": "str",
+          "first_3_values": [
+            "Southern and Central Asia",
+            "Southern and Central Asia",
+            "Southern and Central Asia"
+          ]
+        },
+        {
+          "name": "Country_SurfaceArea",
+          "dtype": "float64",
+          "first_3_values": [
+            652090.0,
+            652090.0,
+            652090.0
+          ]
+        },
+        {
+          "name": "Country_IndepYear",
+          "dtype": "float64",
+          "first_3_values": [
+            1919.0,
+            1919.0,
+            1919.0
+          ]
+        },
+        {
+          "name": "Country_Population",
+          "dtype": "int64",
+          "first_3_values": [
+            22720000,
+            22720000,
+            22720000
+          ]
+        },
+        {
+          "name": "Country_LifeExpectancy",
+          "dtype": "float64",
+          "first_3_values": [
+            45.9,
+            45.9,
+            45.9
+          ]
+        },
+        {
+          "name": "Country_GNP",
+          "dtype": "float64",
+          "first_3_values": [
+            5976.0,
+            5976.0,
+            5976.0
+          ]
+        },
+        {
+          "name": "Country_GNPOld",
+          "dtype": "float64",
+          "first_3_values": [
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "name": "Country_LocalName",
+          "dtype": "str",
+          "first_3_values": [
+            "Afganistan/Afqanestan",
+            "Afganistan/Afqanestan",
+            "Afganistan/Afqanestan"
+          ]
+        },
+        {
+          "name": "Country_GovernmentForm",
+          "dtype": "str",
+          "first_3_values": [
+            "Islamic Emirate",
+            "Islamic Emirate",
+            "Islamic Emirate"
+          ]
+        },
+        {
+          "name": "Country_HeadOfState",
+          "dtype": "str",
+          "first_3_values": [
+            "Mohammad Omar",
+            "Mohammad Omar",
+            "Mohammad Omar"
+          ]
+        },
+        {
+          "name": "Country_Capital",
+          "dtype": "int64",
+          "first_3_values": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Country_Code2",
+          "dtype": "str",
+          "first_3_values": [
+            "AF",
+            "AF",
+            "AF"
+          ]
+        },
+        {
+          "name": "CountryLanguage_CountryCode",
+          "dtype": "str",
+          "first_3_values": [
+            "AFG",
+            "AFG",
+            "AFG"
+          ]
+        },
+        {
+          "name": "CountryLanguage_Language",
+          "dtype": "str",
+          "first_3_values": [
+            "Balochi",
+            "Dari",
+            "Pashto"
+          ]
+        },
+        {
+          "name": "CountryLanguage_IsOfficial",
+          "dtype": "str",
+          "first_3_values": [
+            "F",
+            "T",
+            "T"
+          ]
+        },
+        {
+          "name": "CountryLanguage_Percentage",
+          "dtype": "float64",
+          "first_3_values": [
+            0.9,
+            32.1,
+            52.4
+          ]
+        },
+        {
+          "name": "City_ID",
+          "dtype": "int64",
+          "first_3_values": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "City_Name",
+          "dtype": "str",
+          "first_3_values": [
+            "Kabul",
+            "Kabul",
+            "Kabul"
+          ]
+        },
+        {
+          "name": "City_CountryCode",
+          "dtype": "str",
+          "first_3_values": [
+            "AFG",
+            "AFG",
+            "AFG"
+          ]
+        },
+        {
+          "name": "City_District",
+          "dtype": "str",
+          "first_3_values": [
+            "Kabol",
+            "Kabol",
+            "Kabol"
+          ]
+        },
+        {
+          "name": "City_Population",
+          "dtype": "int64",
+          "first_3_values": [
+            1780000,
+            1780000,
+            1780000
+          ]
+        }
+      ]
+    },
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Codes",
+          "description": "Lookup data Country_Code: Column Country_Code\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_Codes",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Names",
+          "description": "Lookup data Country_Name: Column Country_Name\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_Names",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Continents",
+          "description": "Lookup data Country_Continent: Column Country_Continent\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_Continents",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Regions",
+          "description": "Lookup data Country_Region: Column Country_Region\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_Regions",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_SurfaceAreas",
+          "description": "Lookup data Country_SurfaceArea: Column Country_SurfaceArea\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of Country_SurfaceAreas",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_IndepYears",
+          "description": "Lookup data Country_IndepYear: Column Country_IndepYear\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of Country_IndepYears",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Populations",
+          "description": "Lookup data Country_Population: Column Country_Population\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['int64']: list of Country_Populations",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_LifeExpectancys",
+          "description": "Lookup data Country_LifeExpectancy: Column Country_LifeExpectancy\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of Country_LifeExpectancys",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_GNPs",
+          "description": "Lookup data Country_GNP: Column Country_GNP\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of Country_GNPs",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_GNPOlds",
+          "description": "Lookup data Country_GNPOld: Column Country_GNPOld\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of Country_GNPOlds",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_LocalNames",
+          "description": "Lookup data Country_LocalName: Column Country_LocalName\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_LocalNames",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_GovernmentForms",
+          "description": "Lookup data Country_GovernmentForm: Column Country_GovernmentForm\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_GovernmentForms",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_HeadOfStates",
+          "description": "Lookup data Country_HeadOfState: Column Country_HeadOfState\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_HeadOfStates",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Capitals",
+          "description": "Lookup data Country_Capital: Column Country_Capital\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of Country_Capitals",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Country_Code2s",
+          "description": "Lookup data Country_Code2: Column Country_Code2\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Country_Code2s",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_CountryLanguage_CountryCodes",
+          "description": "Lookup data CountryLanguage_CountryCode: Column CountryLanguage_CountryCode\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of CountryLanguage_CountryCodes",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_CountryLanguage_Languages",
+          "description": "Lookup data CountryLanguage_Language: Column CountryLanguage_Language\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of CountryLanguage_Languages",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_CountryLanguage_IsOfficials",
+          "description": "Lookup data CountryLanguage_IsOfficial: Column CountryLanguage_IsOfficial\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of CountryLanguage_IsOfficials",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_CountryLanguage_Percentages",
+          "description": "Lookup data CountryLanguage_Percentage: Column CountryLanguage_Percentage\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['float64']: list of CountryLanguage_Percentages",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_City_IDs",
+          "description": "Lookup data City_ID: Column City_ID\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['int64']: list of City_IDs",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_City_Names",
+          "description": "Lookup data City_Name: Column City_Name\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of City_Names",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_City_CountryCodes",
+          "description": "Lookup data City_CountryCode: Column City_CountryCode\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of City_CountryCodes",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_City_Districts",
+          "description": "Lookup data City_District: Column City_District\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of City_Districts",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_City_Populations",
+          "description": "Lookup data City_Population: Column City_Population\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['int64']: list of City_Populations",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_IDs",
+          "description": "Lookup data ID: Column ID\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['int64']: list of IDs",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Names",
+          "description": "Lookup data Name: Column Name\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Names",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_CountryCodes",
+          "description": "Lookup data CountryCode: Column CountryCode\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of CountryCodes",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Districts",
+          "description": "Lookup data District: Column District\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['str']: list of Districts",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_Populations",
+          "description": "Lookup data Population: Column Population\n\n\tArgs:\n\t\tdata (dict): table containing the data to be retrieved\n\tReturns:\n\t\tlist['int64']: list of Populations",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Input for getter functions that retrieve a specific column from table data.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "GetterInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "Calculator",
+          "description": "",
+          "parameters": {
+            "$defs": {
+              "CalculatorOperation": {
+                "description": "Available arithmetic operations for the Calculator tool:\n- 'add': Addition (input_1 + input_2)\n- 'subtract': Subtraction (input_1 - input_2)\n- 'multiply': Multiplication (input_1 * input_2)\n- 'divide': Division (input_1 / input_2)",
+                "enum": [
+                  "add",
+                  "subtract",
+                  "multiply",
+                  "divide"
+                ],
+                "title": "CalculatorOperation",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false,
+            "description": "Perform arithmetic operations on scalar or list inputs.",
+            "properties": {
+              "input_1": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  }
+                ],
+                "description": "First operand (scalar or list of numeric values, may contain None)",
+                "title": "Input 1"
+              },
+              "input_2": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "items": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  }
+                ],
+                "description": "Second operand (scalar or list of numeric values, may contain None)",
+                "title": "Input 2"
+              },
+              "operation": {
+                "$ref": "#/$defs/CalculatorOperation",
+                "description": "Arithmetic operation to perform.\n\nOptions:\n- 'add': Addition (input_1 + input_2)\n- 'subtract': Subtraction (input_1 - input_2)\n- 'multiply': Multiplication (input_1 * input_2)\n- 'divide': Division (input_1 / input_2)"
+              }
+            },
+            "required": [
+              "input_1",
+              "input_2",
+              "operation"
+            ],
+            "title": "CalculatorInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "concatenate_data",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Concatenates two data tables along axis 0 (rows). ",
+            "properties": {
+              "data_label_1": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "data_label_2": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              }
+            },
+            "required": [
+              "data_label_1",
+              "data_label_2"
+            ],
+            "title": "ConcatenateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_unique_values",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Returns only the unique values from the input array. ",
+            "properties": {
+              "unique_array": {
+                "description": "Array of objects from which duplicates will be removed. ",
+                "items": {},
+                "title": "Unique Array",
+                "type": "array"
+              }
+            },
+            "required": [
+              "unique_array"
+            ],
+            "title": "SelectUniqueDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "transform_data_to_substring",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Transform list of string values by taking substrings.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "Name of string valued key to transform.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "start_index": {
+                "description": "Start index of substring.",
+                "title": "Start Index",
+                "type": "integer"
+              },
+              "end_index": {
+                "description": "End index of substring. Must be >= start_index.",
+                "title": "End Index",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "start_index",
+              "end_index"
+            ],
+            "title": "TransformDataToSubstringInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "transform_data_to_absolute_value",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Transform numeric values into their absolute value.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "Name of numeric valued key to take absolute value of.",
+                "title": "Key Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name"
+            ],
+            "title": "TransformDataToAbsoluteValueInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "transform_data_to_datetime_part",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Transform list of datetime strings into specified subpart.",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "Name of string valued key containing datetime values to transform.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "datetime_pattern": {
+                "description": "ISO datetime pattern to extract (e.g., '%Y' for year, '%m' for month, '%d' for day).",
+                "title": "Datetime Pattern",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "datetime_pattern"
+            ],
+            "title": "TransformDataToDatetimePartInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "truncate",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Return the first n elements of a list-like object.",
+            "properties": {
+              "truncate_array": {
+                "anyOf": [
+                  {
+                    "additionalProperties": {
+                      "items": {},
+                      "type": "array"
+                    },
+                    "type": "object"
+                  },
+                  {
+                    "items": {},
+                    "type": "array"
+                  }
+                ],
+                "description": "A list-like object or table to truncate.",
+                "title": "Truncate Array"
+              },
+              "n": {
+                "description": "The number of rows/elements to return. Must be non-negative.",
+                "minimum": 0,
+                "title": "N",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "truncate_array",
+              "n"
+            ],
+            "title": "TruncateInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_equal_to",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "equal_to",
+                "default": "equal_to",
+                "description": "Condition is pre-set to 'equal_to' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_not_equal_to",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "not_equal_to",
+                "default": "not_equal_to",
+                "description": "Condition is pre-set to 'not_equal_to' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_greater_than",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "greater_than",
+                "default": "greater_than",
+                "description": "Condition is pre-set to 'greater_than' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_less_than",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "less_than",
+                "default": "less_than",
+                "description": "Condition is pre-set to 'less_than' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_greater_than_equal_to",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "greater_than_equal_to",
+                "default": "greater_than_equal_to",
+                "description": "Condition is pre-set to 'greater_than_equal_to' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_less_than_equal_to",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "less_than_equal_to",
+                "default": "less_than_equal_to",
+                "description": "Condition is pre-set to 'less_than_equal_to' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_contains",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "contains",
+                "default": "contains",
+                "description": "Condition is pre-set to 'contains' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "select_data_like",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a filter based on a specified condition and value to the input data. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "description": "The key on which the filter will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "The value to compare against in the filtering operation.",
+                "title": "Value"
+              },
+              "condition": {
+                "const": "like",
+                "default": "like",
+                "description": "Condition is pre-set to 'like' for this specialized function.",
+                "title": "Condition",
+                "type": "string"
+              }
+            },
+            "required": [
+              "data_label",
+              "key_name",
+              "value"
+            ],
+            "title": "FilterDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "sort_data_ascending",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Sort the input data in either descending (default) or ascending order. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the sort will be applied. Not required if ranking_array is provided.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "ascending": {
+                "const": true,
+                "default": true,
+                "description": "Sort order is pre-set to ascending for this specialized function.",
+                "title": "Ascending",
+                "type": "boolean"
+              },
+              "ranking_array": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Optional array of numeric values to use for sorting. If provided, data will be sorted by these values instead of key_name. Must have the same length as the number of rows in data. Typically used when sorting by computed values from arithmetic expressions.",
+                "title": "Ranking Array"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "SortDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "sort_data_descending",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Sort the input data in either descending (default) or ascending order. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the sort will be applied. Not required if ranking_array is provided.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "ascending": {
+                "const": false,
+                "default": false,
+                "description": "Sort order is pre-set to descending for this specialized function.",
+                "title": "Ascending",
+                "type": "boolean"
+              },
+              "ranking_array": {
+                "anyOf": [
+                  {
+                    "items": {
+                      "type": "number"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Optional array of numeric values to use for sorting. If provided, data will be sorted by these values instead of key_name. Must have the same length as the number of rows in data. Typically used when sorting by computed values from arithmetic expressions.",
+                "title": "Ranking Array"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "SortDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_min",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "min",
+                "default": "min",
+                "description": "Aggregation operation is pre-set to 'min' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_max",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "max",
+                "default": "max",
+                "description": "Aggregation operation is pre-set to 'max' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_sum",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "sum",
+                "default": "sum",
+                "description": "Aggregation operation is pre-set to 'sum' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_mean",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "mean",
+                "default": "mean",
+                "description": "Aggregation operation is pre-set to 'mean' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_count",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "count",
+                "default": "count",
+                "description": "Aggregation operation is pre-set to 'count' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_std",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "std",
+                "default": "std",
+                "description": "Aggregation operation is pre-set to 'std' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_argmin",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "argmin",
+                "default": "argmin",
+                "description": "Aggregation operation is pre-set to 'argmin' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "compute_data_argmax",
+          "description": "",
+          "parameters": {
+            "additionalProperties": false,
+            "description": "Apply a specified aggregation operation to the values in a single key of the data object. ",
+            "properties": {
+              "data_label": {
+                "type": "string",
+                "description": "Handle string referencing a stored data table (e.g. 'retrieved_data_1'). Pass the handle returned by a previous tool call."
+              },
+              "key_name": {
+                "default": "",
+                "description": "The key on which the aggregation will be applied.",
+                "title": "Key Name",
+                "type": "string"
+              },
+              "aggregation_operation": {
+                "const": "argmax",
+                "default": "argmax",
+                "description": "Aggregation operation is pre-set to 'argmax' for this specialized function.",
+                "title": "Aggregation Operation",
+                "type": "string"
+              },
+              "distinct": {
+                "default": false,
+                "description": "Whether to aggregate only unique values. ",
+                "title": "Distinct",
+                "type": "boolean"
+              },
+              "limit": {
+                "const": -1,
+                "default": -1,
+                "description": "Limit is pre-set to -1 (no limit) for this specialized function.",
+                "title": "Limit",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "data_label"
+            ],
+            "title": "AggregateDataInput",
+            "type": "object"
+          }
+        }
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "get_data",
+          "description": "Get the data from the server. Optionally switch to a different tool universe by providing tool_universe_id parameter. If the universe is switched, the active data for the new universe will be returned.",
+          "parameters": {
+            "description": "Input model for get_data tool.",
+            "properties": {
+              "tool_universe_id": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "default": null,
+                "description": "Optional tool universe ID to switch to before retrieving data. If provided and different from current universe, the server will reload active_data for the specified universe before returning it.",
+                "title": "Tool Universe Id"
+              }
+            },
+            "title": "GetDataInput",
+            "type": "object"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "call": {
+          "name": "compute_data_max",
+          "arguments": {
+            "data_label": "retrieved_Country_1",
+            "key_name": "Country_LifeExpectancy"
+          }
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "83.5",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "isError": false
+      },
+      {
+        "call": {
+          "name": "select_data_equal_to",
+          "arguments": {
+            "data_label": "retrieved_Country_1",
+            "key_name": "Country_LifeExpectancy",
+            "value": 83.5
+          }
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"handle\": \"filtered_Country_1\", \"num_records\": 4, \"key_details\": [{\"name\": \"Country_Code\", \"dtype\": \"str\", \"first_3_values\": [\"AND\", \"AND\", \"AND\"]}, {\"name\": \"Country_Name\", \"dtype\": \"str\", \"first_3_values\": [\"Andorra\", \"Andorra\", \"Andorra\"]}, {\"name\": \"Country_Continent\", \"dtype\": \"str\", \"first_3_values\": [\"Europe\", \"Europe\", \"Europe\"]}, {\"name\": \"Country_Region\", \"dtype\": \"str\", \"first_3_values\": [\"Southern Europe\", \"Southern Europe\", \"Southern Europe\"]}, {\"name\": \"Country_SurfaceArea\", \"dtype\": \"float64\", \"first_3_values\": [468.0, 468.0, 468.0]}, {\"name\": \"Country_IndepYear\", \"dtype\": \"float64\", \"first_3_values\": [1278.0, 1278.0, 1278.0]}, {\"name\": \"Country_Population\", \"dtype\": \"int64\", \"first_3_values\": [78000, 78000, 78000]}, {\"name\": \"Country_LifeExpectancy\", \"dtype\": \"float64\", \"first_3_values\": [83.5, 83.5, 83.5]}, {\"name\": \"Country_GNP\", \"dtype\": \"float64\", \"first_3_values\": [1630.0, 1630.0, 1630.0]}, {\"name\": \"Country_GNPOld\", \"dtype\": \"float64\", \"first_3_values\": [NaN, NaN, NaN]}, {\"name\": \"Country_LocalName\", \"dtype\": \"str\", \"first_3_values\": [\"Andorra\", \"Andorra\", \"Andorra\"]}, {\"name\": \"Country_GovernmentForm\", \"dtype\": \"str\", \"first_3_values\": [\"Parliamentary Coprincipality\", \"Parliamentary Coprincipality\", \"Parliamentary Coprincipality\"]}, {\"name\": \"Country_HeadOfState\", \"dtype\": \"str\", \"first_3_values\": [\"\", \"\", \"\"]}, {\"name\": \"Country_Capital\", \"dtype\": \"int64\", \"first_3_values\": [55, 55, 55]}, {\"name\": \"Country_Code2\", \"dtype\": \"str\", \"first_3_values\": [\"AD\", \"AD\", \"AD\"]}, {\"name\": \"CountryLanguage_CountryCode\", \"dtype\": \"str\", \"first_3_values\": [\"AND\", \"AND\", \"AND\"]}, {\"name\": \"CountryLanguage_Language\", \"dtype\": \"str\", \"first_3_values\": [\"Catalan\", \"French\", \"Portuguese\"]}, {\"name\": \"CountryLanguage_IsOfficial\", \"dtype\": \"str\", \"first_3_values\": [\"T\", \"F\", \"F\"]}, {\"name\": \"CountryLanguage_Percentage\", \"dtype\": \"float64\", \"first_3_values\": [32.3, 6.2, 10.8]}, {\"name\": \"City_ID\", \"dtype\": \"int64\", \"first_3_values\": [55, 55, 55]}, {\"name\": \"City_Name\", \"dtype\": \"str\", \"first_3_values\": [\"Andorra la Vella\", \"Andorra la Vella\", \"Andorra la Vella\"]}, {\"name\": \"City_CountryCode\", \"dtype\": \"str\", \"first_3_values\": [\"AND\", \"AND\", \"AND\"]}, {\"name\": \"City_District\", \"dtype\": \"str\", \"first_3_values\": [\"Andorra la Vella\", \"Andorra la Vella\", \"Andorra la Vella\"]}, {\"name\": \"City_Population\", \"dtype\": \"int64\", \"first_3_values\": [21189, 21189, 21189]}]}",
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "isError": false
+      }
+    ]
+  },
+  "scope": "Same target-episode query, schemas, initial preview and every tool-result content; deterministic relational tools and fixed recorded actions. Earlier independent episodes are not part of this model input. No claim about cross-episode memory, external or prior knowledge.",
+  "interpretation": "The actual answer is correct in the original database, but these tool observations alone cannot establish that Catalan is the only official language. This does not prove all incomplete previews are insufficient.",
+  "script_sha256": "fe6ef33c0328ab920b394eed49ddf71bab46e49ba30351551258f73583b4e536"
+}

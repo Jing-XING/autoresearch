@@ -47,6 +47,8 @@ def main():
             rows.append({'domain':d,'condition':c,'model':m,'uuid':e['uuid'],'source':rel,
                          'termination':e['termination'],'final_answer':e.get('final_answer'),
                          'usage':usage,'completed_generations':sum('reply' in t for t in trace),
+                         'protocol_error_messages':dict(Counter(t['protocol_error'] for t in trace if 'protocol_error' in t)),
+                         'final_at_generation_token_ceiling':bool(e.get('final_answer') is not None and trace and trace[-1].get('reply',{}).get('output_tokens')==manifest['max_new_tokens']),
                          'mcp_flagged_errors':sum(bool(t.get('tool_result',{}).get('isError')) for t in trace),
                          'validation_error_payloads':sum(any(x.get('text','').startswith('Input validation error:') for x in t.get('tool_result',{}).get('content',[])) for t in trace),
                          'errors':[{k:t[k] for k in ('step','error_type','error','protocol_error') if k in t} for t in trace if 'error' in t or 'protocol_error' in t]})
@@ -55,6 +57,8 @@ def main():
                        'terminations':dict(Counter(r['termination'] for r in rs)),
                        'usage':{k:sum(r['usage'].get(k,0) for r in rs) for k in ('model_calls','tool_calls','input_tokens','output_tokens','generation_seconds','protocol_errors')},
                        'completed_generations':sum(r['completed_generations'] for r in rs),
+                       'protocol_error_messages':dict(sum((Counter(r['protocol_error_messages']) for r in rs),Counter())),
+                       'final_at_generation_token_ceiling':sum(r['final_at_generation_token_ceiling'] for r in rs),
                        'mcp_flagged_errors':sum(r['mcp_flagged_errors'] for r in rs),
                        'validation_error_payloads':sum(r['validation_error_payloads'] for r in rs)})
     for d in domains:
