@@ -1,0 +1,66 @@
+{
+  "purpose": "Check automatic discovery without manually registering a compensation pair.",
+  "prior_probe_sha256": "62557d21ad00992a4ee3d5b35defb5f71166edd479de3ecf6e5c4d7b186cd61d",
+  "rac_revision": "068c327ab3f9b79a86a39503946e26320b74b97a",
+  "packages": {
+    "langchain-mcp-adapters": "0.3.2",
+    "langchain-core": "1.6.3",
+    "mcp": "1.30.0",
+    "pydantic": "2.13.5"
+  },
+  "script_sha256": "3e1c894281a5693b77dba4ce9b98089bce1f41e95df057778cc12f15cd751901",
+  "server_sha256": "7bccfe884ffe8f6f84f417e479b96d121cb63337ca6db7a35390a4f18702a714",
+  "declared_tool_schema": {
+    "name": "book",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "booking_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "booking_id"
+      ],
+      "x-compensation-pair": "cancel"
+    }
+  },
+  "direct_parser_result": [
+    "book",
+    "cancel"
+  ],
+  "get_input_schema_is_dict": false,
+  "get_input_schema_type": "<class 'pydantic._internal._model_construction.ModelMetaclass'>",
+  "automatic_discovered_pairs": {},
+  "wrapper_should_track": false,
+  "recorded_actions": 0,
+  "rollback_report": {
+    "success": true,
+    "compensated": [],
+    "failed": [],
+    "message": "No actions to rollback"
+  },
+  "fixture_state": {
+    "active": true,
+    "calls": [
+      {
+        "name": "book",
+        "arguments": {
+          "booking_id": "fixture-1"
+        },
+        "mode": "success",
+        "is_error": false,
+        "active_after": true
+      }
+    ]
+  },
+  "state_sha256": "07eac807092b75dffbe9e9524932949f4b7847ad2f4b53c49298e0b180bf026b",
+  "network_attempts": 0,
+  "model_calls": 0,
+  "controls_passed": true,
+  "limits": [
+    "One local schema-declared pair with current dependencies, not all MCP metadata forms.",
+    "No compensation mapping manually added; successful no-op rollback means an empty recorded plan, not verified absence of effects.",
+    "Constructed tool workflow, not an original paper task or failure-prevalence estimate."
+  ]
+}

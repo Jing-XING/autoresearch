@@ -1,0 +1,20 @@
+{
+  "controls_passed": true,
+  "native_mcp_cases": 12,
+  "additional_automatic_discovery_case": 1,
+  "source_probes_sha256": {
+    "research\\evidence\\rac_real_mcp_probe_v1.json": "62557d21ad00992a4ee3d5b35defb5f71166edd479de3ecf6e5c4d7b186cd61d",
+    "research\\evidence\\rac_mcp_discovery_probe_v1.json": "578175c43171f71ccae15f1296401ae639ffceb1740f21edcd097a9b24c50a5c"
+  },
+  "dependency_files_sha256": {
+    "langchain_mcp_adapters/tools.py": "8111a65e5debe4110630989df2e8e572d9eb4ebdfa6e9510cd0dbb6fe7223667",
+    "langchain_mcp_adapters/client.py": "dd706d76529f4fd06891ec3a967a513b3113795155b1b83307d17377bf45831d",
+    "langchain_mcp_adapters/sessions.py": "7d89ddef4402759ad0ddc20b9f87be226e092bd3a994784014e20fe7e3da853e",
+    "langchain_core/tools/base.py": "259da69b2ca5e171f4cc58acec2190352e7091f4d96a20158ce51feed4a78a02",
+    "mcp/server/lowlevel/server.py": "1e8df33dc1c8084891cabaa94a6c9ffb46ea054126433e0f8596d290b79ccc24"
+  },
+  "installed_record_hashes_verified": true,
+  "official_adapter_wheel_sha256": "094e6b3096dbcc408417d5722f6915f164772e50c502ae3d8989405bf12c3c84",
+  "script_sha256": "6b33c3ad2d8b3d53bd943621a6c2d9e17f314d76fcfd7e6fe398e908f76e45ea",
+  "limits": "Thirteen constructed executions, not thirteen independent defects or tasks. No original-paper model result replicated."
+}
