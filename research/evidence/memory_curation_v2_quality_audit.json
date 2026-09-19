@@ -1,0 +1,44 @@
+{
+  "purpose": "curation quality audit before target treatment",
+  "bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "exact_reconstruction": true,
+  "source_ticket_identity_unchanged": true,
+  "conditions": [
+    {
+      "condition": "outcome_only",
+      "n": 74,
+      "max_words": 88,
+      "max_output_tokens": 117,
+      "total_output_tokens": 6281,
+      "total_input_tokens": 512029,
+      "sum_generation_seconds": 248.31831916607916,
+      "median_output_tokens": 81.0,
+      "ceiling_hits": 0,
+      "missing_terminal_punctuation": 0
+    },
+    {
+      "condition": "full_metadata",
+      "n": 74,
+      "max_words": 87,
+      "max_output_tokens": 109,
+      "total_output_tokens": 6359,
+      "total_input_tokens": 514170,
+      "sum_generation_seconds": 249.28577907569706,
+      "median_output_tokens": 85.5,
+      "ceiling_hits": 0,
+      "missing_terminal_punctuation": 0
+    },
+    {
+      "condition": "boundary_aware",
+      "n": 74,
+      "max_words": 90,
+      "max_output_tokens": 119,
+      "total_output_tokens": 6296,
+      "total_input_tokens": 517574,
+      "sum_generation_seconds": 247.79039092548192,
+      "median_output_tokens": 84.0,
+      "ceiling_hits": 0,
+      "missing_terminal_punctuation": 0
+    }
+  ]
+}

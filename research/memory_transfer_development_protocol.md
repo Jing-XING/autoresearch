@@ -78,6 +78,17 @@ All exact score ties are logged. This simple retriever is a control, not a
 claimed contribution or an assumption of optimal retrieval. Limited ticket
 diversity may produce many ties and must be reported rather than hidden.
 
+The pre-treatment retrieval audit confirms ties for all 20 development targets
+and only four distinct selected source records (reused 3, 5, 6 and 6 times).
+One is already successful at cutoff, one is externally cut and later succeeds,
+and two are externally cut without success in their recorded continuations.
+These analysis-only labels did not select the records and remain unavailable
+to the curator/target. The first grid is conditional on these four selected
+lessons. Any broader memory claim requires replication over alternative
+outcome-independent tie selections; one lexicographic tie realization cannot
+establish robustness to source selection. Such repetitions do not add target
+task identities.
+
 The current official policy/ticket is preserved verbatim. A common wrapper
 identifies prior experience as potentially inapplicable quoted data. Only the
 lesson reaches the model; source IDs and condition labels remain in audit

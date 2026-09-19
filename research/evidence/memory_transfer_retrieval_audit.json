@@ -1,0 +1,150 @@
+{
+  "purpose": "fixed retrieval audit; no target rollout or reward involved",
+  "source_bank_v1_sha256": "71fba4c4f7c2432b6fa9a0d31febba63f3c80be85c5752b30506249713238951",
+  "source_pool_records": 74,
+  "target_tasks": 20,
+  "unique_selected_records": 4,
+  "targets_with_ties": 20,
+  "rows": [
+    {
+      "task_id": "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+      "record_id": "356f2909e2472ab38853e211",
+      "similarity": 0.9999999999999999,
+      "tied_candidates": 21,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "record_id": "356f2909e2472ab38853e211",
+      "similarity": 0.9999999999999999,
+      "tied_candidates": 21,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "record_id": "356f2909e2472ab38853e211",
+      "similarity": 0.9999999999999999,
+      "tied_candidates": 21,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]data_mode_off[PERSONA:None]",
+      "record_id": "09060edd04ee056725e696c1",
+      "similarity": 1.0,
+      "tied_candidates": 6,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+      "record_id": "09060edd04ee056725e696c1",
+      "similarity": 1.0,
+      "tied_candidates": 6,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_network_preference[PERSONA:Hard]",
+      "record_id": "09060edd04ee056725e696c1",
+      "similarity": 1.0,
+      "tied_candidates": 6,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]bad_vpn[PERSONA:None]",
+      "record_id": "09060edd04ee056725e696c1",
+      "similarity": 1.0,
+      "tied_candidates": 6,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mobile_data_issue]data_usage_exceeded[PERSONA:Easy]",
+      "record_id": "09060edd04ee056725e696c1",
+      "similarity": 1.0,
+      "tied_candidates": 6,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on[PERSONA:None]",
+      "record_id": "12403621a4da5d614219a538",
+      "similarity": 1.0,
+      "tied_candidates": 14,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[service_issue]unseat_sim_card[PERSONA:Easy]",
+      "record_id": "12403621a4da5d614219a538",
+      "similarity": 1.0,
+      "tied_candidates": 14,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[service_issue]lock_sim_card_pin[PERSONA:Hard]",
+      "record_id": "12403621a4da5d614219a538",
+      "similarity": 1.0,
+      "tied_candidates": 14,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings[PERSONA:None]",
+      "record_id": "12403621a4da5d614219a538",
+      "similarity": 1.0,
+      "tied_candidates": 14,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[service_issue]overdue_bill_suspension[PERSONA:Easy]",
+      "record_id": "12403621a4da5d614219a538",
+      "similarity": 1.0,
+      "tied_candidates": 14,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[service_issue]contract_end_suspension[PERSONA:Hard]",
+      "record_id": "12403621a4da5d614219a538",
+      "similarity": 1.0,
+      "tied_candidates": 14,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mms_issue]bad_network_preference[PERSONA:None]",
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "similarity": 1.0000000000000002,
+      "tied_candidates": 11,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mms_issue]bad_wifi_calling[PERSONA:Easy]",
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "similarity": 1.0000000000000002,
+      "tied_candidates": 11,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mms_issue]break_apn_mms_setting[PERSONA:Hard]",
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "similarity": 1.0000000000000002,
+      "tied_candidates": 11,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mms_issue]break_app_sms_permission[PERSONA:None]",
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "similarity": 1.0000000000000002,
+      "tied_candidates": 11,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mms_issue]break_app_storage_permission[PERSONA:Easy]",
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "similarity": 1.0000000000000002,
+      "tied_candidates": 11,
+      "pool_size": 74
+    },
+    {
+      "task_id": "[mms_issue]break_app_both_permissions[PERSONA:Hard]",
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "similarity": 1.0000000000000002,
+      "tied_candidates": 11,
+      "pool_size": 74
+    }
+  ]
+}
