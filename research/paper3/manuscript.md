@@ -7,34 +7,30 @@ new recovery algorithm. The evidence is not yet sufficient for submission.
 
 ## Abstract
 
-Agent recovery components depend on tools, adapters and execution logs agreeing
-about whether an operation succeeded. We examine these agreements in a fixed
-release of RobustAgentCompensation (RAC), separating compensation execution,
-returned status, recorded state and the residual effect in a controlled
-environment. Local probes reproduce a rollback path that ignores normally
-returned error results. Executing the paper's archived source confirms the
-same mechanism under current dependencies. A native stdio MCP study identifies
-two further integration boundaries: a schema-declared compensation pair is
-not discovered, and a returned error ToolMessage can coexist with an internal
-COMPLETED record. Six matched executions with an older MCP adapter distinguish
-the effect of exception-raising behavior from that of returning an error
-message. An independent agent-saga transport reports explicit MCP compensation
-errors as failures on the same fixture, while silent no-ops remain undetected.
-SagaLLM coordinator controls separately expose its exception-based completion
-convention. These comparisons delimit the diagnosed mechanisms rather than
-establishing a general framework ranking.
-Twenty-five native airline controls and a 2,000-reservation direct-call census
-distinguish cancellation contracts, strict state idempotence and errors after
-completed effects.
-An additional native retail census finds that 423 direct cancellations meet
-the declared ledger contract, whereas 120 payment-change/cancellation
-compositions return normally with cancelled status but an unbalanced ledger.
-Separately, an audit of all 280 JSON files in the published archive identifies
-duplicate aggregate records and nested progress snapshots; a conservative
-structured-status screen finds no observed instance of the constructed
-status contradiction. These results support a narrowly scoped, reproducible
-integration diagnosis. They do not reproduce the published model benchmark
-or establish that the observed interface failures occurred in its trials.
+Agent recovery components must distinguish tool execution, reported status and
+persisted effects. We audit these agreements in a pinned release of
+RobustAgentCompensation (RAC), using controlled native integrations and a
+separate audit of its published artifact. Normally returned error messages
+can coexist with completed recovery records, and a schema-declared
+compensation pair is not automatically discovered. Matched MCP adapter
+versions isolate an error-delivery difference, while independent agent-saga
+and SagaLLM controls delimit transport and coordinator behavior. Twenty-five
+native airline cases distinguish failed effects from errors after completed
+cancellation. A census of 2,000 reservations shows that repeated cancellation
+preserves a narrow status/net contract while changing ledger history. In a
+second native environment, all 423 direct retail cancellations satisfy the
+declared accounting contract, whereas 120 payment-change/cancellation paths
+across 102 orders return normally with cancelled status but unbalanced
+per-method ledgers. An independent offline verifier recomputes the saved
+states and accounting results. Separately, all 280 JSON files in the released
+RAC archive are audited for duplicate records and explicit structured-status
+contradictions; none of the latter are observed under the fixed screen.
+These findings identify reproducible integration and composition failures,
+without attributing constructed failures to the published benchmark. The
+experiments contain no autonomous model decisions and establish neither
+framework-wide rankings, deployed failure prevalence nor external financial
+harm. They support explicit effect contracts and versioned recovery evidence,
+not a new general recovery algorithm.
 
 ## 1. Introduction
 
@@ -498,7 +494,10 @@ reanalysis does not require access to the original research machine.
 A standard-library-only Python entry point recomputes the 25-case airline
 state comparison, every transition and signed ledger net of the 2,000-record
 retry census, and the released archive's duplication, prefix-chain and
-structured-status results. It reads saved data rather than importing the
+structured-status results. The current package also verifies the retail
+source and result archives, independently reconstructs the 543-path selection
+and recomputes every affected state and ledger from its 663 calls. It reads
+saved data rather than importing the
 native tool or the original measurement functions. It also rejects missing,
 extra or altered package members. The README states exactly which other
 probe reports are provided only for byte-verified inspection. Successful
@@ -511,9 +510,11 @@ Windows interpreter paths, which must be adapted to another machine. We
 therefore distinguish portable offline reanalysis from an environment-portable
 end-to-end launcher. The artifact adds reproducibility support for the
 reported diagnostic observations; it adds no new experimental observations.
-That versioned offline bundle predates section 5.8. The later retail census
-has a separate pinned raw archive, source package, protocol and offline
-verifier; it is not silently included in the older package's coverage claim.
+The retained v1/v2 bundles predate section 5.8. The v3 bundle explicitly adds
+the pinned retail source package, raw archive, protocol and integrated
+reanalysis; the older packages' scope is unchanged. Complete final retail
+database restoration is represented by the runtime assertion and equal
+recorded hashes, rather than an archived full final database.
 
 ## 9. Provisional conclusion
 

@@ -76,3 +76,19 @@ This is an explicit composition diagnostic, not a representative autonomous
 agent workload, external financial harm, framework comparison or official
 retail score. The older P3 portable artifact and rendered PDF predate this
 extension and must not be described as covering the updated manuscript.
+
+## Integrated v3 offline artifact
+
+`paper3_offline_artifact_receipt_v3.json` identifies the updated manuscript,
+review PDF, integrated verifier, and archive manifest. This version adds the
+native retail source/result packages to the earlier airline and published
+archive evidence. The standalone verifier reconstructs all 543 retail paths
+and checks their 663 calls without importing experiment or third-party code.
+Six meaningful integrity/semantic tests cover missing/altered members, unsafe
+paths, declared aliases, a falsely positive retail contract and a concealed
+gift-balance mismatch. The isolated-directory execution and actual outputs
+are recorded separately in the v3 portability and reanalysis receipts.
+`paper3_review_pdf_v2.json` records the updated nine-page review PDF's source
+hashes, five tables, nine references and complete visual/geometry inspection.
+It remains explicitly labelled incomplete; rendering is not a publication
+readiness judgment.

@@ -4,6 +4,7 @@ Supports the Markdown subset used by the current working papers. This is an
 editorial artifact, not a publisher template or a claim of submission readiness.
 """
 import argparse
+from datetime import date
 import hashlib
 import html
 import importlib.metadata
@@ -15,7 +16,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from pypdf import PdfReader
 
 
@@ -52,7 +53,7 @@ def bib_records(text):
     return records
 
 
-def build(paper, output):
+def build(paper, output, review_date):
     source, bibliography = paper/'manuscript.md', paper/'references.bib'
     text = source.read_text(encoding='utf-8')
     assert 'incomplete' in text[:800].lower() or 'not submission-ready' in text[:800].lower()
@@ -116,7 +117,7 @@ def build(paper, output):
         paragraph = ' '.join(chunks)
         paragraphs.append(paragraph)
         story.append(Paragraph(inline(paragraph), body))
-    story.extend([PageBreak(), Paragraph('References', h2)])
+    story.extend([Spacer(1, 12), Paragraph('References', h2)])
     records = bib_records(bibliography.read_text(encoding='utf-8'))
     for number, (key, fields) in enumerate(records, 1):
         author = fields.get('author', '').replace(' and ', '; ')
@@ -130,7 +131,7 @@ def build(paper, output):
         canvas.line(51, 37, A4[0]-51, 37)
         canvas.setFont('Helvetica', 8)
         canvas.setFillColor(colors.HexColor('#52616c'))
-        canvas.drawString(51, 25, 'INCOMPLETE REVIEW DRAFT | 19 September 2026')
+        canvas.drawString(51, 25, 'INCOMPLETE REVIEW DRAFT | '+review_date.strftime('%d %B %Y'))
         canvas.drawRightString(A4[0]-51, 25, str(document.page))
         canvas.restoreState()
     doc.build(story, onFirstPage=page, onLaterPages=page)
@@ -143,7 +144,7 @@ def build(paper, output):
         'bibliography_sha256': hashlib.sha256(bibliography.read_bytes()).hexdigest(),
         'builder_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'output': output.as_posix(), 'pdf_sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
-        'pages': len(pdf.pages), 'tables': tables, 'reference_records': len(records),
+        'pages': len(pdf.pages), 'tables': tables, 'reference_records': len(records), 'review_date': review_date.isoformat(),
         'packages': {n: importlib.metadata.version(n) for n in ('reportlab', 'pypdf')},
         'publication_ready': False, 'visual_review': 'pending'}
     output.with_suffix('.build.json').write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8')
@@ -154,5 +155,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--paper', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--date', type=date.fromisoformat, required=True)
     args = parser.parse_args()
-    build(args.paper, args.output)
+    build(args.paper, args.output, args.date)

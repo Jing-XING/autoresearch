@@ -7,12 +7,12 @@ of published model scores, or a certificate of publication readiness.
 ## One-command reanalysis
 
 Use Python 3.10 or later, with no additional packages, GPU or network access.
-Obtain `paper3-offline-evidence-v2.zip`, its SHA-256 from the accompanying
-`paper3_offline_artifact_receipt_v2.json`, and
+Obtain `paper3-offline-evidence-v3.zip`, its SHA-256 from the accompanying
+`paper3_offline_artifact_receipt_v3.json`, and
 `scripts/verify_paper3_offline_artifact.py` from this repository. Run:
 
 ```text
-python scripts/verify_paper3_offline_artifact.py paper3-offline-evidence-v2.zip --sha256 HASH_FROM_RECEIPT --output paper3-reanalysis.json
+python scripts/verify_paper3_offline_artifact.py paper3-offline-evidence-v3.zip --sha256 HASH_FROM_RECEIPT --output paper3-reanalysis.json
 ```
 
 The output path must not already exist. The verifier reads ZIP members without
@@ -34,6 +34,13 @@ The command independently recomputes these quantities from saved inputs:
   224 distinct canonical aggregates, the 35-file event-prefix chain and the
   conservative structured-status screen. Recorded success does not become
   verified external success through this analysis.
+- All 543 native retail paths: 423 direct cancellations and 120 two-operation
+  compositions. It reconstructs every eligible order/payment alternative from
+  the initial database and checks each returned order, affected payment-method
+  state, exact ledger entry and per-method signed net. It verifies the full
+  pinned retail source archive without executing it. Whole-database restoration
+  remains a runtime assertion with equal recorded hashes, not a separately
+  archived final full database.
 
 Other probe reports and their saved raw MCP records are byte-verified and
 available for inspection, but their framework execution, dependency identity
@@ -41,7 +48,8 @@ and assertion logic are **not reexecuted by this command**. See each report's
 exact source revision, package versions, fixture choices and limitations.
 The verifier's successful exit must not be described as replication of every
 manuscript result. It does not import or trust the original measurement
-functions for the three reanalyzed study components.
+functions for the four reanalyzed study components. Retained v1/v2 packages
+cover the earlier three components; their historical scope is unchanged.
 
 ## What the archive preserves
 
@@ -79,7 +87,8 @@ status only. It cannot rule out missing, textual or silent failures.
 
 ## Later native retail composition extension
 
-The v2 offline artifact above predates manuscript section 5.8. The separate
+The retained v2 artifact predates manuscript section 5.8; v3 includes this
+extension and its integrated portable reanalysis. The separate
 source package `results/deploy/native-retail-composition-v1.zip` contains all
 302 pinned tau2 source files, public retail database/policy, upstream license,
 source manifest, frozen protocol, probe and measurement tests. On the designated
@@ -101,5 +110,6 @@ script `scripts/verify_tau_retail_composition_v1.py` recomputes its selection,
 ledger and affected-state results without running native tools. It currently
 expects the original source-data paths in this workspace; unlike the earlier
 artifact verifier, it is not yet a standalone relocated package entry point.
-Its existing report files are created exclusively. Do not overwrite them or
+The integrated v3 entry point above removes that workspace-path dependency
+for offline reanalysis. Existing report files are created exclusively. Do not overwrite them or
 count another audit as a new native experiment.

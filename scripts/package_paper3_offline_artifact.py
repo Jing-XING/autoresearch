@@ -14,15 +14,15 @@ def sha(data):return hashlib.sha256(data).hexdigest()
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--version',choices=('v1','v2'),required=True)
+    parser.add_argument('--version',choices=('v1','v2','v3'),required=True)
     args=parser.parse_args()
     files={};aliases={}
     def add(name):
         p=Path(name)
         if not p.is_absolute():p=ROOT/p
         p=p.resolve();rel=p.relative_to(ROOT).as_posix()
-        assert p.is_file() and (rel.startswith(('research/','scripts/','results/')))
-        assert p.suffix in ('.json','.jsonl','.py','.md','.bib','.zip') or p.name=='LICENSE'
+        assert p.is_file() and (rel.startswith(('research/','scripts/','results/','output/pdf/')))
+        assert p.suffix in ('.json','.jsonl','.py','.md','.bib','.zip','.pdf') or p.name=='LICENSE'
         assert not p.name.startswith('.env')
         files[rel]=p.read_bytes()
         if str(name)!=rel:aliases[str(name)]=rel
@@ -74,8 +74,19 @@ def main():
         if digest in needed: add(str(p));found.add(digest)
     assert found==needed
     r=report('tau_airline_retry_census_v1.json');rel=add(r['raw']);assert sha(files[rel])==r['raw_sha256']
-    manifest=dict(format='paper3-offline-v1',
-        scope='Byte-integrity inspection plus offline reanalysis of native airline25, retrycensus2000 and publishedarchive280. Other reports are inspection-only; no native/model reexecution.',
+    if args.version=='v3':
+        for name in ('research/evidence/native_retail_composition_package_v1.json',
+                     'research/native_retail_composition_protocol_v1.md',
+                     'scripts/probe_tau_retail_payment_cancel_v1.py',
+                     'scripts/verify_tau_retail_composition_v1.py',
+                     'scripts/build_review_pdf.py',
+                     'output/pdf/paper3-recovery-interfaces-review.pdf',
+                     'output/pdf/paper3-recovery-interfaces-review.build.json',
+                     'results/deploy/native-retail-composition-v1.zip',
+                     'results/remote/native-retail-composition-v1-results.zip'):
+            add(name)
+    manifest=dict(format='paper3-offline-v2' if args.version=='v3' else 'paper3-offline-v1',
+        scope='Byte-integrity inspection plus offline reanalysis of native airline25, retrycensus2000, publishedarchive280'+(', and native retail543 paths/663 calls' if args.version=='v3' else '')+'. Other reports are inspection-only; no native/model reexecution.',
         original_path_aliases=aliases,
         files={n:dict(bytes=len(b),sha256=sha(b)) for n,b in sorted(files.items())})
     archive=ROOT/f'results/remote/paper3-offline-evidence-{args.version}.zip'

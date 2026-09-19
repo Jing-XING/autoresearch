@@ -14,5 +14,11 @@
     "pypdf": "6.10.0"
   },
   "publication_ready": false,
-  "visual_review": "passed: final pages1-8 pixel-identical to inspected pages; final page9 separately inspected, no overlap/clipping"
+  "visual_review": "passed: final pages1-8 pixel-identical to inspected pages; final page9 separately inspected, no overlap/clipping",
+  "abstract_words": 224,
+  "geometry_outliers": 0,
+  "review_method": "Every rendered page visually inspected at100dpi; after removing forced reference-page break, final pages1-8 byte-identical PNGs and finalpage9 inspected.",
+  "pdf_bytes": 37500,
+  "rendered_pages": 9,
+  "scope": "Updated incomplete review artifact, not publication-ready."
 }

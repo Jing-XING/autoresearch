@@ -1,0 +1,24 @@
+{
+  "archive_sha256": "f5ad4ac2dbc56262e60dd07fc5d7858cc034eb03ddb1004db53585ef41d5772e",
+  "verifier_sha256": "e54d9bb1cf5a615ba2cccacb33154cd79d593263d2faf6aae07d486c9f9001db",
+  "initial_files": [
+    "artifact.zip",
+    "verify.py"
+  ],
+  "cwd": "results/audits/paper3-portable-v3",
+  "command": [
+    "python",
+    "-I",
+    "verify.py",
+    "artifact.zip",
+    "--sha256",
+    "f5ad4ac2dbc56262e60dd07fc5d7858cc034eb03ddb1004db53585ef41d5772e",
+    "--output",
+    "reanalysis.json"
+  ],
+  "exit_code": 0,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "reanalysis_sha256": "7bdffda35fea2c274bfb69f0b59f34132a614696ffca44db2943880036d61586",
+  "offline": true,
+  "scope": "Actual isolated-directory Windows execution, no package installs or native experiment rerun; Linux separately checked if recorded."
+}

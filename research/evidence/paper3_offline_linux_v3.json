@@ -1,0 +1,30 @@
+{
+  "scope": "Actual Linux isolated-directory offline arithmetic and integrity reanalysis; not native experiment rerun or submission-readiness certification.",
+  "archive_sha256": "f5ad4ac2dbc56262e60dd07fc5d7858cc034eb03ddb1004db53585ef41d5772e",
+  "verifier_sha256": "e54d9bb1cf5a615ba2cccacb33154cd79d593263d2faf6aae07d486c9f9001db",
+  "raw_report_path": "results/remote/paper3-offline-linux-v3.json",
+  "raw_report_sha256": "3d0b5ea27a9773136e1dd912f7640e8f967928f0ae4007b6ca63bd04caef7b0e",
+  "raw_report_bytes": 11828,
+  "report_json_equals_windows_report": true,
+  "execution_observed_in_remote_terminal": {
+    "initial_files": [
+      "artifact.zip",
+      "verify.py"
+    ],
+    "python": "Python 3.13.5",
+    "cwd": "/xingjing/autoresearch-agent-papers/preflights/paper3-offline-linux-v3",
+    "command": [
+      "/xingjing/autoresearch-agent-papers/.venv/bin/python",
+      "-I",
+      "verify.py",
+      "artifact.zip",
+      "--sha256",
+      "f5ad4ac2dbc56262e60dd07fc5d7858cc034eb03ddb1004db53585ef41d5772e",
+      "--output",
+      "reanalysis.json"
+    ],
+    "returncode": 0,
+    "seconds": 3.0177635475993156
+  },
+  "transfer": "Exact-name LAN bridge received raw report and verified expected SHA-256. Execution metadata transcribed from visible remote terminal; report is actual transferred bytes."
+}

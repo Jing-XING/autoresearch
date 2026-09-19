@@ -1,0 +1,11 @@
+{
+  "archive": "results/remote/paper3-offline-evidence-v3.zip",
+  "bytes": 16956911,
+  "sha256": "f5ad4ac2dbc56262e60dd07fc5d7858cc034eb03ddb1004db53585ef41d5772e",
+  "payload_members": 128,
+  "total_entries": 129,
+  "manifest_sha256": "ea35b9bfc35af1dbf05e455ed6a9b0f0fda55c17a03a8eba55c11c4757bb4e0a",
+  "verifier_sha256": "e54d9bb1cf5a615ba2cccacb33154cd79d593263d2faf6aae07d486c9f9001db",
+  "manuscript_sha256": "5e5e10657616c3fd644e5fb61fba6f336a3369e61e6db493a79fff5694883865",
+  "scope": "Byte-integrity inspection plus offline reanalysis of native airline25, retrycensus2000, publishedarchive280, and native retail543 paths/663 calls. Other reports are inspection-only; no native/model reexecution."
+}

@@ -36,7 +36,7 @@ class Artifact:
         check(all(safe_name(n) for n in names), 'Unsafe ZIP name')
         check(self.zip.testzip() is None, 'ZIP CRC mismatch')
         self.manifest = json.loads(self.zip.read('artifact_manifest.json'))
-        check(self.manifest['format'] == 'paper3-offline-v1', 'Unknown artifact format')
+        check(self.manifest['format'] in ('paper3-offline-v1','paper3-offline-v2'), 'Unknown artifact format')
         check(set(names) == set(self.manifest['files']) | {'artifact_manifest.json'}, 'Incomplete or extra artifact members')
         for name, metadata in self.manifest['files'].items():
             data = self.zip.read(name)
@@ -188,6 +188,113 @@ def archive_audit(a):
                 compensation_count_scope='Raw record occurrences across files, including repeated snapshots; not distinct actions, independent trials or verified effect outcomes.')
 
 
+def retail_records(rows, source, selection):
+    """Check the finite composition census without native tool/oracle imports."""
+    eligible=[];excluded=[];expected=set()
+    for oid,order in sorted(source['orders'].items()):
+        if order['status']!='pending':
+            excluded.append(dict(order_id=oid,reason='not_pending'));continue
+        h=order['payment_history'];methods=source['users'][order['user_id']]['payment_methods']
+        check(len(h)==1 and h[0]['transaction_type']=='payment' and h[0]['amount']>0,'Unexpected initial pending ledger')
+        old=h[0]['payment_method_id'];check(old in methods,'Missing original method')
+        alternatives=[k for k,v in sorted(methods.items()) if k!=old and
+                      (v['source']!='gift_card' or Decimal(str(v['balance']))>=Decimal(str(h[0]['amount'])))]
+        eligible.append(dict(order_id=oid,alternatives=alternatives))
+        expected.update((oid,k) for k in [None]+alternatives)
+    check(selection==dict(total_orders=len(source['orders']),selected=eligible,excluded=excluded),'Retail selection differs')
+    check(len(rows)==len(expected) and {(r['order_id'],r['new_payment_method']) for r in rows}==expected,'Retail path grid differs')
+    counts=Counter();types=Counter()
+    for row in rows:
+        oid,new=row['order_id'],row['new_payment_method'];before=row['before'];old=row['old_payment_method']
+        original=source['orders'][oid];methods=source['users'][original['user_id']]['payment_methods']
+        check(row['user_id']==original['user_id'] and before['payment_methods']==methods,'Retail initial user differs')
+        check(all(before['order'][k]==v for k,v in original.items()),'Retail initial order differs')
+        amount=Decimal(str(original['payment_history'][0]['amount']))
+        check(old==original['payment_history'][0]['payment_method_id'],'Retail original payment differs')
+        gift_target={k:Decimal(str(v['balance']))+(amount if k==old else 0) for k,v in methods.items() if v['source']=='gift_card'}
+        check({k:Decimal(v) for k,v in row['expected_cancelled_gift_balances'].items()}==gift_target,'Retail gift target differs')
+        kind='cancel_only' if new is None else 'change_then_cancel'
+        calls=['cancel_pending_order'] if new is None else ['modify_pending_order_payment','cancel_pending_order']
+        check(row['kind']==kind and [s['tool'] for s in row['steps']]==calls,'Retail call path differs')
+        previous=before['order']['payment_history']
+        for step in row['steps']:
+            check(step['error'] is None and step['result']==step['state']['order'],'Retail return/state differs')
+            state=step['state'];order=state['order'];measurement=step['measurement'];net=defaultdict(lambda:Decimal(0))
+            for entry in order['payment_history']:
+                check(entry['transaction_type'] in ('payment','refund') and entry['amount']>=0,'Retail ledger sign')
+                net[entry['payment_method_id']]+=Decimal(str(entry['amount']))*(1 if entry['transaction_type']=='payment' else -1)
+            check(all(order[k]==v for k,v in before['order'].items() if k not in ('status','payment_history','cancel_reason')),'Retail unrelated order mutation')
+            if step['tool']=='modify_pending_order_payment':
+                check(step['arguments']==dict(order_id=oid,payment_method_id=new),'Retail change arguments')
+                check(order['status']=='pending' and dict(net)=={old:Decimal(0),new:amount},'Retail intermediate ledger differs')
+                history=previous+[dict(transaction_type='payment',amount=float(amount),payment_method_id=new),dict(transaction_type='refund',amount=float(amount),payment_method_id=old)]
+            else:
+                check(step['arguments']==dict(order_id=oid,reason='no longer needed'),'Retail cancel arguments')
+                check(order['status']=='cancelled' and order['cancel_reason']=='no longer needed','Retail cancellation status differs')
+                history=previous+[dict(transaction_type='refund',amount=p['amount'],payment_method_id=p['payment_method_id']) for p in previous]
+                check(dict(net)==({old:Decimal(0)} if new is None else {old:-2*amount,new:Decimal(0)}),'Retail final ledger differs')
+            check(order['payment_history']==history,'Retail exact ledger differs')
+            expected_methods=deepcopy(methods)
+            for mid,method in expected_methods.items():
+                if method['source']=='gift_card':
+                    method['balance']=float(Decimal(str(method['balance']))+(amount if mid==old else 0)-net.get(mid,Decimal(0)))
+            check(state['payment_methods']==expected_methods,'Retail instrument state differs')
+            gift={k:Decimal(str(v['balance'])) for k,v in state['payment_methods'].items() if v['source']=='gift_card'}
+            gift_ok=gift==gift_target;zero=all(v==0 for v in net.values())
+            contract=order['status']=='cancelled' and zero and gift_ok
+            check({k:Decimal(v) for k,v in measurement['signed_net_by_method'].items()}==dict(net),'Retail reported per-method net differs')
+            check(Decimal(measurement['signed_net_total'])==sum(net.values(),Decimal(0)),'Retail reported total differs')
+            check(measurement['ledger_entries']==len(history) and measurement['status']==order['status'],'Retail reported status/count differs')
+            check({k:Decimal(v) for k,v in measurement['gift_balances'].items()}==gift,'Retail reported gift state differs')
+            check(measurement['cancelled']==(order['status']=='cancelled') and measurement['per_method_net_zero']==zero
+                  and measurement['expected_cancelled_gift_balances_met']==gift_ok and measurement['cancellation_contract_met']==contract,'Retail reported contract differs')
+            counts['native_calls']+=1;previous=history
+        counts[kind]+=1;counts[kind+'_contract_met']+=contract
+        counts[kind+'_normal_return']+=1;counts[kind+'_cancelled']+=1
+        if new is not None:
+            counts['composition_gift_balance_mismatch']+=not gift_ok
+            types[methods[old]['source']+'->'+methods[new]['source']]+=1
+    return dict(unique_orders=len(eligible),unique_orders_with_alternatives=sum(bool(r['alternatives']) for r in eligible),
+                paths=len(rows),counts=dict(counts),payment_type_pairs=dict(types))
+
+
+def native_retail(a):
+    package=a.evidence('native_retail_composition_package_v1')
+    audit=a.evidence('native_retail_composition_reanalysis_v1')
+    report=a.evidence('native_retail_composition_summary_v1')
+    source_data=a.read(package['archive'],package['sha256'])
+    check(len(source_data)==package['bytes'],'Retail source package bytes differ')
+    with ZipFile(BytesIO(source_data)) as z:
+        check(len(z.namelist())==len(set(z.namelist()))==package['entries'] and all(safe_name(n) for n in z.namelist()),'Retail source inventory')
+        check(set(z.namelist())==set(package['manifest']['files'])|{'deployment_manifest.json'},'Retail source member set')
+        check(json.loads(z.read('deployment_manifest.json'))==package['manifest'],'Retail source manifest')
+        for name,record in package['manifest']['files'].items():
+            data=z.read(name);check(len(data)==record['bytes'] and sha(data)==record['sha256'],'Retail source member differs')
+        source_bytes=z.read('tau/data/tau2/domains/retail/db.json')
+    check(sha(source_bytes)==report['database_sha256'],'Retail database differs')
+    raw=a.read('results/remote/native-retail-composition-v1-results.zip',audit['archive_sha256'])
+    check(len(raw)==audit['archive_bytes'],'Retail result package bytes differ')
+    with ZipFile(BytesIO(raw)) as z:
+        check(len(z.namelist())==len(set(z.namelist()))==9 and set(z.namelist())==set(audit['members']),'Retail raw inventory')
+        payload={n:z.read(n) for n in z.namelist()}
+    for name,record in audit['members'].items():
+        check(len(payload[name])==record['bytes'] and sha(payload[name])==record['sha256'],'Retail raw member differs')
+    check(json.loads(payload['deployment_manifest.json'])==package['manifest'] and json.loads(payload['run/summary.json'])==report,'Retail report/deployment differs')
+    execution=json.loads(payload['execution.json'])
+    check([r['name'] for r in execution]==['tests','census'] and all(r['returncode']==0 and not r['timeout'] for r in execution),'Retail execution failed')
+    check(sha(payload['run/records.jsonl'])==report['records_sha256'] and sha(payload['run/selection.json'])==report['selection_sha256'],'Retail raw source differs')
+    rows=[json.loads(line) for line in payload['run/records.jsonl'].splitlines()]
+    result=retail_records(rows,json.loads(source_bytes),json.loads(payload['run/selection.json']))
+    check(result['unique_orders']==report['eligible_orders']==423 and result['unique_orders_with_alternatives']==102,'Retail population differs')
+    check(result['paths']==543 and result['counts']['native_calls']==663 and result['counts']['composition_gift_balance_mismatch']==59,'Retail census totals differ')
+    check(all(result['counts'][k]==v for k,v in report['counts'].items()),'Retail aggregate counts differ')
+    check(result['payment_type_pairs']==report['payment_type_pairs'],'Retail type pair counts differ')
+    check(report['model_calls']==0 and not report['external_connection_attempts'],'Retail unexpected external calls')
+    check(report['database_restored'] and report['initial_database_sha256']==report['restored_database_sha256'],'Retail reported restoration differs')
+    result['restoration_scope']='Full database restoration is runtime-asserted with recorded equal hashes; no archived full final database is independently reconstructed here.'
+    return result
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archive',type=Path);parser.add_argument('--sha256',required=True)
@@ -200,6 +307,7 @@ def main():
                     archive_sha256=args.sha256,member_count=len(a.manifest['files']),
                     native_airline=native_airline(a),retry_census=retry_census(a),published_archive=archive_audit(a),
                     unchecked_scope='Other probe reports are byte-verified and available for inspection. Their recorded boolean assertions, dependency provenance and execution behavior are not independently reexecuted by this command.')
+        if a.manifest['format']=='paper3-offline-v2':result['native_retail']=native_retail(a)
     finally:a.zip.close()
     with args.output.open('x',encoding='utf8') as f:json.dump(result,f,indent=2);f.write('\n')
     print(json.dumps({k:result[k] for k in ('archive_sha256','member_count','retry_census','published_archive')}))

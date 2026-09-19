@@ -1,0 +1,453 @@
+{
+  "scope": "Offline byte integrity and arithmetic/state reanalysis; no experiment reexecution or submission-readiness certification.",
+  "archive_sha256": "f5ad4ac2dbc56262e60dd07fc5d7858cc034eb03ddb1004db53585ef41d5772e",
+  "member_count": 128,
+  "native_airline": {
+    "executions": 25,
+    "wal_files": 8,
+    "equal_state_groups": 8,
+    "same_response_different_state_pairs": 6,
+    "rows": [
+      {
+        "profile": "single_card",
+        "fault": "normal",
+        "client": "rac_unadapted_mapper",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "normal",
+        "client": "rac_default",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "normal",
+        "client": "rac_raise_control",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "normal",
+        "client": "agent_saga",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "rolled_back": 1,
+          "clean": true,
+          "summary": "Rollback clean: 1 step(s) compensated.",
+          "orphaned": [],
+          "failed": []
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "native_error_before_effect",
+        "client": "rac_default",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "native_error_before_effect",
+        "client": "rac_raise_control",
+        "contract": false,
+        "states": [
+          "COMPLETED"
+        ],
+        "report": {
+          "success": null
+        },
+        "exception": {
+          "type": "CriticalFailure",
+          "message": "Compensation failed immediately: Reservation EXPERIMENTALLY_MISSING_ID not found"
+        }
+      },
+      {
+        "profile": "single_card",
+        "fault": "native_error_before_effect",
+        "client": "agent_saga",
+        "contract": false,
+        "states": [
+          "COMPENSATION_FAILED"
+        ],
+        "report": {
+          "rolled_back": 0,
+          "clean": false,
+          "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+          "orphaned": [],
+          "failed": [
+            "book_reservation"
+          ]
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "shadow_only",
+        "client": "rac_default",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "shadow_only",
+        "client": "rac_raise_control",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "shadow_only",
+        "client": "agent_saga",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "rolled_back": 1,
+          "clean": true,
+          "summary": "Rollback clean: 1 step(s) compensated.",
+          "orphaned": [],
+          "failed": []
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "error_after_effect",
+        "client": "rac_default",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "single_card",
+        "fault": "error_after_effect",
+        "client": "rac_raise_control",
+        "contract": true,
+        "states": [
+          "COMPLETED"
+        ],
+        "report": {
+          "success": null
+        },
+        "exception": {
+          "type": "CriticalFailure",
+          "message": "Compensation failed immediately: Constructed acknowledgement error after native cancellation committed"
+        }
+      },
+      {
+        "profile": "single_card",
+        "fault": "error_after_effect",
+        "client": "agent_saga",
+        "contract": true,
+        "states": [
+          "COMPENSATION_FAILED"
+        ],
+        "report": {
+          "rolled_back": 0,
+          "clean": false,
+          "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+          "orphaned": [],
+          "failed": [
+            "book_reservation"
+          ]
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "normal",
+        "client": "rac_default",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "normal",
+        "client": "rac_raise_control",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "normal",
+        "client": "agent_saga",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "rolled_back": 1,
+          "clean": true,
+          "summary": "Rollback clean: 1 step(s) compensated.",
+          "orphaned": [],
+          "failed": []
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "native_error_before_effect",
+        "client": "rac_default",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "native_error_before_effect",
+        "client": "rac_raise_control",
+        "contract": false,
+        "states": [
+          "COMPLETED"
+        ],
+        "report": {
+          "success": null
+        },
+        "exception": {
+          "type": "CriticalFailure",
+          "message": "Compensation failed immediately: Reservation EXPERIMENTALLY_MISSING_ID not found"
+        }
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "native_error_before_effect",
+        "client": "agent_saga",
+        "contract": false,
+        "states": [
+          "COMPENSATION_FAILED"
+        ],
+        "report": {
+          "rolled_back": 0,
+          "clean": false,
+          "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+          "orphaned": [],
+          "failed": [
+            "book_reservation"
+          ]
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "shadow_only",
+        "client": "rac_default",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "shadow_only",
+        "client": "rac_raise_control",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "shadow_only",
+        "client": "agent_saga",
+        "contract": false,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "rolled_back": 1,
+          "clean": true,
+          "summary": "Rollback clean: 1 step(s) compensated.",
+          "orphaned": [],
+          "failed": []
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "error_after_effect",
+        "client": "rac_default",
+        "contract": true,
+        "states": [
+          "COMPENSATED"
+        ],
+        "report": {
+          "success": true
+        },
+        "exception": null
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "error_after_effect",
+        "client": "rac_raise_control",
+        "contract": true,
+        "states": [
+          "COMPLETED"
+        ],
+        "report": {
+          "success": null
+        },
+        "exception": {
+          "type": "CriticalFailure",
+          "message": "Compensation failed immediately: Constructed acknowledgement error after native cancellation committed"
+        }
+      },
+      {
+        "profile": "two_leg_mixed",
+        "fault": "error_after_effect",
+        "client": "agent_saga",
+        "contract": true,
+        "states": [
+          "COMPENSATION_FAILED"
+        ],
+        "report": {
+          "rolled_back": 0,
+          "clean": false,
+          "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book_reservation",
+          "orphaned": [],
+          "failed": [
+            "book_reservation"
+          ]
+        },
+        "exception": null
+      }
+    ]
+  },
+  "retry_census": {
+    "population": 2000,
+    "cancels": 10000,
+    "ack_errors": 8000,
+    "reads": 2000,
+    "ledger_patterns": {
+      "(2, 4, 8)": 2000
+    },
+    "initial_payment_types": {
+      "gift_card": 965,
+      "credit_card": 1035
+    },
+    "read_policy_equal_to_single": 2000,
+    "blind_policy_equal_to_single": 0
+  },
+  "published_archive": {
+    "json_files": 280,
+    "realm_files": 60,
+    "tau_files": 207,
+    "aggregate_files": 13,
+    "aggregate_occurrences": 1272,
+    "distinct_aggregate_records": 224,
+    "prefix_chain_sizes": [
+      35
+    ],
+    "structured_status_mismatches": 0,
+    "successful_compensation_record_occurrences_by_framework": {
+      "saga_llm": 79134,
+      "react_agent_compensation": 9,
+      "langgraph_prompt_eng": 0,
+      "langgraph": 0,
+      "langgraph_pe_std_tools": 0,
+      "saga_react": 0
+    },
+    "compensation_count_scope": "Raw record occurrences across files, including repeated snapshots; not distinct actions, independent trials or verified effect outcomes."
+  },
+  "unchecked_scope": "Other probe reports are byte-verified and available for inspection. Their recorded boolean assertions, dependency provenance and execution behavior are not independently reexecuted by this command.",
+  "native_retail": {
+    "unique_orders": 423,
+    "unique_orders_with_alternatives": 102,
+    "paths": 543,
+    "counts": {
+      "native_calls": 663,
+      "cancel_only": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_cancelled": 423,
+      "change_then_cancel": 120,
+      "change_then_cancel_contract_met": 0,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_cancelled": 120,
+      "composition_gift_balance_mismatch": 59
+    },
+    "payment_type_pairs": {
+      "gift_card->paypal": 26,
+      "credit_card->gift_card": 1,
+      "paypal->credit_card": 32,
+      "credit_card->paypal": 20,
+      "credit_card->credit_card": 8,
+      "gift_card->credit_card": 33
+    },
+    "restoration_scope": "Full database restoration is runtime-asserted with recorded equal hashes; no archived full final database is independently reconstructed here."
+  }
+}
