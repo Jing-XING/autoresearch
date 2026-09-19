@@ -1,0 +1,125 @@
+{
+  "purpose": "descriptive tabulation of assistant labels, not official score or confirmation",
+  "annotations_sha256": "23cc3efe45a4af0982b6a9a04d793274e76ece036687279a0885a63397ded2b2",
+  "groups": [
+    {
+      "condition": "original",
+      "model": "qwen3",
+      "all_episodes": 12,
+      "labels": {
+        "correct": 3,
+        "incorrect": 2,
+        "no_answer": 6,
+        "ambiguous": 1
+      },
+      "clear_interpretation_n": 11,
+      "clear_interpretation_correct": 3
+    },
+    {
+      "condition": "original",
+      "model": "qwen25",
+      "all_episodes": 12,
+      "labels": {
+        "correct": 4,
+        "incorrect": 4,
+        "no_answer": 3,
+        "ambiguous": 1
+      },
+      "clear_interpretation_n": 11,
+      "clear_interpretation_correct": 4
+    },
+    {
+      "condition": "coverage_check",
+      "model": "qwen3",
+      "all_episodes": 12,
+      "labels": {
+        "correct": 9,
+        "incorrect": 1,
+        "no_answer": 1,
+        "ambiguous": 1
+      },
+      "clear_interpretation_n": 11,
+      "clear_interpretation_correct": 9
+    },
+    {
+      "condition": "coverage_check",
+      "model": "qwen25",
+      "all_episodes": 12,
+      "labels": {
+        "incorrect": 2,
+        "correct": 6,
+        "no_answer": 3,
+        "ambiguous": 1
+      },
+      "clear_interpretation_n": 11,
+      "clear_interpretation_correct": 6
+    }
+  ],
+  "paired_clear_interpretation": [
+    {
+      "model": "qwen3",
+      "wins": [
+        "486ea46224d1-9bae74dab965",
+        "486ea46224d1-aff4c9603f4d",
+        "486ea46224d1-7d79ad7c0e0e",
+        "486ea46224d1-65e39fac89be",
+        "486ea46224d1-cd809c9ef7fa",
+        "486ea46224d1-c859d649b4b5"
+      ],
+      "losses": [],
+      "unchanged": [
+        "486ea46224d1-2b5bb9f47372",
+        "486ea46224d1-674a4702614a",
+        "486ea46224d1-74c57403a8e6",
+        "486ea46224d1-27cb99545c51",
+        "486ea46224d1-cd446461ab5d"
+      ]
+    },
+    {
+      "model": "qwen25",
+      "wins": [
+        "486ea46224d1-674a4702614a",
+        "486ea46224d1-74c57403a8e6",
+        "486ea46224d1-aff4c9603f4d"
+      ],
+      "losses": [
+        "486ea46224d1-2b5bb9f47372"
+      ],
+      "unchanged": [
+        "486ea46224d1-9bae74dab965",
+        "486ea46224d1-27cb99545c51",
+        "486ea46224d1-7d79ad7c0e0e",
+        "486ea46224d1-65e39fac89be",
+        "486ea46224d1-cd809c9ef7fa",
+        "486ea46224d1-cd446461ab5d",
+        "486ea46224d1-c859d649b4b5"
+      ]
+    }
+  ],
+  "ambiguous_reference_matches": [
+    {
+      "condition": "coverage_check",
+      "model": "qwen25",
+      "uuid": "486ea46224d1-5df43dad6593",
+      "reference_compatible_if_ambiguous": true
+    },
+    {
+      "condition": "coverage_check",
+      "model": "qwen3",
+      "uuid": "486ea46224d1-5df43dad6593",
+      "reference_compatible_if_ambiguous": false
+    },
+    {
+      "condition": "original",
+      "model": "qwen25",
+      "uuid": "486ea46224d1-5df43dad6593",
+      "reference_compatible_if_ambiguous": false
+    },
+    {
+      "condition": "original",
+      "model": "qwen3",
+      "uuid": "486ea46224d1-5df43dad6593",
+      "reference_compatible_if_ambiguous": false
+    }
+  ]
+}

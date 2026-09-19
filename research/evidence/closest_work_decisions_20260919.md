@@ -62,3 +62,39 @@ Decision: do not spend GPU experiments on the unmodified D02 proposal. Retain
 it only if a narrower failure class and a mechanism beyond these baselines can
 be demonstrated. This does not reduce the five-paper delivery objective;
 candidate directions must be replaced when evidence rejects their premise.
+
+## Further candidate screening: verification, recovery and clarification
+
+The following is primary-abstract screening, not full reproduction or a
+claim that every possible narrower contribution is excluded.
+
+[Partially Correlated Verifier Cascades](https://arxiv.org/abs/2607.13918)
+already models latent false-accept rates, diminishing evidence from repeated
+gates and blind-spot ceilings. It explicitly motivates changing evidence
+sources or model families. P05 cannot claim verifier dependence or a warning
+against independent-vote assumptions as its new contribution.
+
+[Engineering Reliable Commit Gates](https://arxiv.org/abs/2609.10969)
+already separates source diversity from model diversity, chooses cost-aware
+verification portfolios, and tests concurrent writes and lost responses with
+atomic guards and idempotent request identifiers. This overlaps both P03 and
+P05. A new retry wrapper, lineage label, or diversified vote is insufficient.
+The paper reports transfer limits, which should not be omitted when choosing
+it as a baseline. Its reported results have not been independently reproduced
+in this repository.
+
+[Ask Early, Ask Late, Ask Right](https://arxiv.org/abs/2605.07937)
+studies clarification injected at controlled execution positions and separates
+missing goal, input, constraint and context information. P04 must therefore
+distinguish useful work during an outstanding reply from merely asking at a
+better time. The latter is already explicitly studied.
+
+[A2H](https://arxiv.org/abs/2602.15831) formalizes agent-to-human discovery and
+communication. Its abstract establishes protocol scope; asynchronous callback
+and blocking semantics require reading the method before comparison. A new
+message schema alone would not justify P04. Native GAIA2 user-message behavior
+also does not yet establish the pending-reply environment needed here.
+
+Decision: keep these three slots provisional. Do not manufacture independent
+papers by splitting a common reliability wrapper into multiple manuscripts.
+Their shared motivation is not evidence of distinct scientific contributions.
