@@ -71,6 +71,9 @@ without a tool error; 32 of 93 calls across the other batches fail. Neither
 call executability nor these replays establish answer correctness or the
 outcome of a batch-enabled agent. The current single-call adapter is a
 material experimental limitation and is not the default official agent.
+The unchanged upstream system prompt itself requests one call per iteration;
+multiple emitted calls therefore also violate the instruction. Runtime
+permissiveness must be tested separately, not assumed to explain all failure.
 
 ## Reproduction and scope
 

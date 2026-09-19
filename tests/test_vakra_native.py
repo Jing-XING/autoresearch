@@ -92,6 +92,63 @@ class TestVakraNative(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result["trace"][0]["input"][1]["content"], "Read the names")
         self.assertEqual(result["instruction_condition"], "coverage_check")
 
+    async def test_sequential_batch_preserves_order_and_all_observations(self):
+        session = Session()
+        second = self.call.replace('"initial"', '"later-handle"')
+        result = await run_episode(Model([self.call + second, "Answer"]), session,
+            self.query, self.source, 3, 64, call_policy="sequential")
+        self.assertEqual(session.calls[1:], [
+            ("get_Names", {"data_label": "initial"}),
+            ("get_Names", {"data_label": "later-handle"})])
+        self.assertEqual(result["usage"]["tool_calls"], 2)
+        self.assertEqual(result["usage"]["protocol_errors"], 0)
+        self.assertEqual(len(result["trace"][0]["calls"]), 2)
+        responses = result["trace"][1]["input"][-2:]
+        self.assertEqual([r["tool_call_id"] for r in responses], ["native-0-0", "native-0-1"])
+        self.assertTrue(all(r["content"] == '["Anguilla"]' for r in responses))
+
+    async def test_unknown_name_rejects_entire_batch_before_execution(self):
+        session = Session()
+        result = await run_episode(Model([self.call + self.call.replace('get_Names', 'unknown'), "Answer"]),
+            session, self.query, self.source, 3, 64, call_policy="sequential")
+        self.assertEqual(len(session.calls), 1)
+        self.assertEqual(result["usage"]["protocol_errors"], 1)
+
+    async def test_oversized_batch_does_not_partially_spend_budget(self):
+        session = Session()
+        result = await run_episode(Model([self.call * 3, self.call, "Answer"]), session,
+            self.query, self.source, 4, 64, call_policy="sequential", max_tool_calls=2)
+        self.assertEqual(result["usage"]["tool_calls"], 1)
+        self.assertEqual(result["trace"][0]["tool_budget_rejection"], {"requested": 3, "remaining": 2})
+        self.assertEqual(result["usage"]["protocol_errors"], 0)
+        self.assertEqual(result["termination"], "agent_finished")
+
+    async def test_spent_tool_budget_still_allows_final_answer(self):
+        result = await run_episode(Model([self.call * 2, "Answer"]), Session(),
+            self.query, self.source, 3, 64, call_policy="sequential", max_tool_calls=2)
+        self.assertEqual(result["final_answer"], "Answer")
+        exceeded = await run_episode(Model([self.call * 2, self.call]), Session(),
+            self.query, self.source, 3, 64, call_policy="sequential", max_tool_calls=2)
+        self.assertEqual(exceeded["termination"], "tool_budget_exceeded")
+        self.assertEqual(exceeded["usage"]["tool_calls"], 2)
+
+    async def test_batch_transport_failure_retains_prefix_and_stops_tail(self):
+        class FailingSecond(Session):
+            async def call_tool(self, name, arguments):
+                if name != "get_data" and len(self.calls) == 2:
+                    self.calls.append((name, arguments))
+                    raise TimeoutError("second call failed")
+                return await super().call_tool(name, arguments)
+        session = FailingSecond()
+        result = await run_episode(Model([self.call * 3]), session, self.query,
+            self.source, 3, 64, call_policy="sequential")
+        records = result["trace"][0]["calls"]
+        self.assertEqual(len(records), 2)
+        self.assertIn("tool_result", records[0])
+        self.assertEqual(records[1]["error_type"], "TimeoutError")
+        self.assertEqual(result["usage"]["tool_calls"], 2)
+        self.assertEqual(result["termination"], "transport_error")
+
 
 if __name__ == "__main__":
     unittest.main()

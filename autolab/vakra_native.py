@@ -59,7 +59,12 @@ def result_text(result):
 
 
 async def run_episode(model, session, query, agent_source, max_steps, max_new_tokens,
-                      instruction_condition="original"):
+                      instruction_condition="original", call_policy="single", max_tool_calls=None):
+    if call_policy not in ("single", "sequential"):
+        raise ValueError("Unknown call policy")
+    max_tool_calls = max_steps if max_tool_calls is None else max_tool_calls
+    if max_tool_calls < 1:
+        raise ValueError("Tool-call budget must be positive")
     suffix = INSTRUCTION_CONDITIONS[instruction_condition]
     initial_result = await session.call_tool("get_data", {"tool_universe_id": query["uuid"]})
     peek = decode_result(initial_result)
@@ -94,9 +99,9 @@ async def run_episode(model, session, query, agent_source, max_steps, max_new_to
         messages.append({"role": "assistant", "content": reply.text})
         try:
             calls = parse_calls(reply.text)
-            if len(calls) > 1:
+            if call_policy == "single" and len(calls) > 1:
                 raise ValueError("At most one tool call per iteration is allowed")
-            if calls and calls[0]["name"] not in known:
+            if any(call["name"] not in known for call in calls):
                 raise ValueError("Tool name is absent from current schema")
             if not calls and not reply.text.strip():
                 raise ValueError("Empty model response")
@@ -107,29 +112,51 @@ async def run_episode(model, session, query, agent_source, max_steps, max_new_to
                 termination = "protocol_error_limit"
                 break
             messages.append({"role": "user", "content": "Invalid response: " + str(exc)
-                             + ". Use one complete tool_call block with name and arguments, or provide your final answer."})
+                             + (". Use one complete tool_call block with name and arguments, or provide your final answer."
+                                if call_policy == "single" else
+                                ". Use complete tool_call blocks with name and arguments from the current schema, or provide your final answer.")})
             continue
         if not calls:
             final_answer = reply.text
             termination = "agent_finished"
             break
-        call = calls[0]
-        usage["tool_calls"] += 1
-        event["tool_call"] = call
-        try:
-            result = await session.call_tool(call["name"], call["arguments"])
-        except Exception as exc:
-            event.update(error_type=type(exc).__name__, error=str(exc))
-            termination = "transport_error"
+        remaining = max_tool_calls - usage["tool_calls"]
+        if len(calls) > remaining:
+            # Never execute an arbitrary prefix of a budget-exceeding batch.
+            event["tool_budget_rejection"] = {"requested": len(calls), "remaining": remaining}
+            if remaining == 0:
+                termination = "tool_budget_exceeded"
+                break
+            messages.append({"role": "user", "content":
+                f"Tool-call budget: {remaining} calls remain. This batch of {len(calls)} calls was not executed. "
+                "Request no more than the remaining calls, or provide your final answer."})
+            continue
+        if call_policy == "sequential":
+            event["calls"] = []
+        for index, call in enumerate(calls):
+            record = event if call_policy == "single" else {}
+            if call_policy == "sequential":
+                event["calls"].append(record)
+            usage["tool_calls"] += 1
+            record["tool_call"] = call
+            try:
+                result = await session.call_tool(call["name"], call["arguments"])
+            except Exception as exc:
+                record.update(error_type=type(exc).__name__, error=str(exc))
+                termination = "transport_error"
+                break
+            record["tool_result"] = result.model_dump(mode="json")
+            call_id = f"native-{step}" if call_policy == "single" else f"native-{step}-{index}"
+            messages.append({"role": "tool", "name": call["name"], "tool_call_id": call_id,
+                             "content": result_text(result)})
+        if termination == "transport_error":
             break
-        event["tool_result"] = result.model_dump(mode="json")
-        messages.append({"role": "tool", "name": call["name"], "tool_call_id": f"native-{step}",
-                         "content": result_text(result)})
     return {"uuid": query["uuid"], "query": query, "initial_peek": peek, "tools": tools,
             "trace": trace, "messages": messages, "usage": usage,
             "final_answer": final_answer, "termination": termination,
             "elapsed_seconds": time.monotonic() - started,
-            "instruction_condition": instruction_condition}
+            "instruction_condition": instruction_condition, "call_policy": call_policy,
+            "max_tool_calls": max_tool_calls}
 
 
 async def run(args):
@@ -158,6 +185,7 @@ async def run(args):
         "selected_task_ids": [q["uuid"] for q in selected],
         "selection": "fixed input order then stride, without outcome filtering",
         "max_steps": args.max_steps, "max_new_tokens": args.max_new_tokens,
+        "call_policy": args.call_policy, "max_tool_calls": args.max_tool_calls or args.max_steps,
         "max_input_tokens": args.max_input_tokens,
         "instruction_condition": args.instruction_condition,
         "instruction_suffix": INSTRUCTION_CONDITIONS[args.instruction_condition],
@@ -176,6 +204,8 @@ async def run(args):
                         "initial public MCP switch registers startup getters; refresh schema per query",
                         "five explicit protocol-error retries; no hidden answer evaluation"],
     }
+    if args.call_policy == "sequential":
+        manifest["adaptations"].append("all parsed calls validated for known names before sequential execution; arguments unmodified; explicit total tool-call budget")
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     model = NativeTransformersModel(args.model_path, tool_prefix=False,
                                     max_input_tokens=args.max_input_tokens)
@@ -200,7 +230,7 @@ async def run(args):
                     try:
                         episode = await run_episode(model, session, query, args.agent_source,
                                                     args.max_steps, args.max_new_tokens,
-                                                    args.instruction_condition)
+                                                    args.instruction_condition, args.call_policy, args.max_tool_calls)
                     except Exception as exc:
                         episode = {"uuid": query["uuid"], "termination": "run_error",
                                    "error_type": type(exc).__name__, "error": str(exc)}
@@ -223,12 +253,16 @@ def main():
     p.add_argument("--max-steps", type=int, default=20)
     p.add_argument("--max-new-tokens", type=int, default=512)
     p.add_argument("--max-input-tokens", type=int)
+    p.add_argument("--call-policy", choices=("single", "sequential"), default="single")
+    p.add_argument("--max-tool-calls", type=int)
     p.add_argument("--instruction-condition", choices=tuple(INSTRUCTION_CONDITIONS), default="original")
     args = p.parse_args()
     if not 0 <= args.shard < args.shards or args.count < args.shards or min(args.max_steps, args.max_new_tokens) < 1:
         p.error("Invalid count, shard, or budget")
     if args.max_input_tokens is not None and args.max_input_tokens < 1:
         p.error("Input-token limit must be positive")
+    if args.max_tool_calls is not None and args.max_tool_calls < 1:
+        p.error("Tool-call limit must be positive")
     asyncio.run(run(args))
 
 
