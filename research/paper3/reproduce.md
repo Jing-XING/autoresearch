@@ -4,9 +4,33 @@ This accompanies an **incomplete working manuscript**. It supports byte-level
 inspection and offline reanalysis. It is not a new experiment, a reproduction
 of published model scores, or a certificate of publication readiness.
 
-## Current review manuscript
+## Latest source extension and historical review PDF
 
-The updated PDF is `output/pdf/paper3-recovery-interfaces-review-v3.pdf`.
+The current manuscript adds section 5.9's matched refund-iterator intervention
+and two foundational references. The twelve-page v3 PDF described below
+predates these changes. It remains an identified historical rendering, not
+the current source rendered as a submission file.
+
+For the new saved-state reanalysis, keep the original retail census ZIP and
+public retail database at their repository-relative paths, then run:
+
+```text
+python scripts/verify_retail_refund_interventions_v1.py --archive results/remote/retail-refund-interventions-v2-results.zip --sha256 50fa549b27433090c25dc9e489e2dc483d247128d62178ce65761b29111fbe08 --output NEW_REPORT.json
+```
+
+The verifier is standard-library only. It checks all 1,629 saved paths,
+reconstructs cancellation effects with rational arithmetic, and compares
+all native paths and intervention prefixes with the earlier immutable census.
+It does not execute native tools, import the measurement helper or call a
+model. This command currently uses the repository's pinned original census
+and database; it is not a new self-contained integrated package. The result
+archive includes the frozen experiment code/protocol and execution metadata.
+Its summary and receipt are tracked separately. The failed v1 startup and
+two earlier GitHub download timeouts remain operational history, not trials.
+
+## Earlier review manuscript
+
+The earlier PDF is `output/pdf/paper3-recovery-interfaces-review-v3.pdf`.
 It includes the historical retail screen and the three-question scientific
 synthesis. Its twelve pages, seven tables and nine references were visually
 checked; the source and output hashes are recorded in

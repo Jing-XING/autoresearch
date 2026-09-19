@@ -20,3 +20,22 @@ negative archival screens. This positioning remains an argument to be assessed,
 not proof of novelty, venue suitability or acceptance. The main manuscript
 keeps dependency-version and source-selection limits explicit. No external
 reviewer, independent human adjudication or model performance gain is claimed.
+
+## Established foundations checked during the intervention extension
+
+- Garcia-Molina and Salem, *Sagas*, Princeton TR-070-87 (January 1987):
+  [institutional record and abstract](https://www.cs.princeton.edu/research/techreps/598)
+  establish interleavable transaction sequences and compensation for partial
+  execution. The institutional abstract was read. A scanned PDF was located,
+  but its requested screenshot content was not available to the model; this
+  entry does not claim a complete reading or derive stronger formal properties.
+- Barr, Harman, McMinn, Shahbaz and Yoo, *The Oracle Problem in Software
+  Testing: A Survey*, IEEE TSE 41(5), 507–525 (2015),
+  [institutional metadata](https://discovery.ucl.ac.uk/id/eprint/1471263/) and
+  [author manuscript](https://philmcminn.com/publications/barr2015.pdf).
+  The abstract/introduction and definitions of stimuli/observations and partial
+  oracles were read. The P3 predicates are examples of established partial
+  effect oracles, not a new testing paradigm or general correctness guarantee.
+
+These two sources ground the interpretation of the empirical cases. They do
+not supply experimental replication or increase the observed case count.

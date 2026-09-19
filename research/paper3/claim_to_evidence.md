@@ -2,7 +2,33 @@
 
 This is a working paper, not a completed submission or a new-method claim.
 
-## Current manuscript synthesis and review PDF
+## Current extension: matched refund-iterator intervention
+
+Section 5.9 adds actual designated-host executions, after freezing the protocol
+and intervention helper at `efa1229`. An import-only startup fix at `478a06f`
+preceded the completed census; neither intervention nor the protocol changed.
+The three arms cover 1,629 matched paths and 1,989 calls. Direct controls meet
+the contract in 423/423 cases per arm. In the 120 composed paths, native,
+payment-only and net-by-method variants respectively produce old-instrument
+net -2A, -A and zero, with contract passes 0, 0 and 120. There are 59, 59 and
+zero gift-balance mismatches. The incomplete repair control is constructed,
+not a literature method or model baseline.
+
+`retail_refund_interventions_summary_v1.json` preserves the actual summary;
+`retail_refund_interventions_reanalysis_v1.json` recomputes saved cancellation
+effects with rational arithmetic. All 543 native paths equal the prior raw
+census; 1,269 direct records and 360 payment-change prefixes agree including
+the native references. The receipt pins the 247,307-byte, 13-member archive
+and records the startup failures separately. These are dependent finite
+paths, not independent agent tasks or a production-repair guarantee.
+
+The main source now has eight tables and eleven bibliography records,
+including verified Sagas and test-oracle foundations. Its 233-word abstract
+includes the intervention. The retained twelve-page v3 PDF predates this
+extension and is not a rendering of the current source. The integrated
+offline v3 archive also remains a historical snapshot.
+
+## Earlier manuscript synthesis and review PDF
 
 The 20 September revision states three research questions concerning error
 consumption, persisted effects and archival corroboration. Its abstract now

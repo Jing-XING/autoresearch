@@ -9,29 +9,30 @@ new recovery algorithm. The evidence is not yet sufficient for submission.
 
 Agent recovery reports summarize control flow, but their relationship to
 persisted effects depends on adapters and business contracts. We examine
-three questions: when error status survives conversion but is ignored by
-recovery bookkeeping, when normally returned operations violate an effect
-contract, and whether published trajectories corroborate these mechanisms.
-Controlled executions of pinned RAC code, MCP adapters, agent-saga and
-SagaLLM separate error propagation from postcondition checking. A matched
-adapter-version change alters explicit-error handling without repairing a
-silent no-op. Twenty-five native airline cases show both identical successful
-payloads with different persisted effects and errors after completed
-cancellation. Across 2,000 initial reservations, repeated cancellation
-preserves a status/net contract while changing ledger history. In retail,
-all 423 direct cancellations meet the declared accounting contract, whereas
-120 payment-change/cancellation paths across 102 orders return normally but
-leave incorrect per-method ledgers. Two archival screens delimit these
-findings: 280 released RAC JSON files contain no contradiction under a fixed
-structured-status screen, and 1,824 published retail simulations contain no
-same-order payment-change/cancellation sequence. All 433 scorable cancellation
-payloads in the latter have balanced ledgers. Offline verifiers recompute
-saved states, selection and accounting without executing the measured tools.
-The contribution is a reproducible empirical account of disagreements among
-execution status, recovery records and declared effects. Source-selected
-diagnostics establish neither deployed prevalence nor autonomous-agent
-performance; the historical runs do not corroborate the constructed failures.
-We claim no new recovery algorithm or external financial harm.
+error consumption, effect-contract violations and archival corroboration
+through controlled executions of pinned RAC code, MCP adapters, agent-saga,
+SagaLLM and native benchmark tools. A matched adapter-version change alters
+explicit-error handling without repairing a silent no-op. Twenty-five airline
+cases separate returned status from persisted effects; across 2,000 initial
+reservations, repeated cancellation preserves a status/net contract while
+changing ledger history. In retail, 423 direct cancellations meet the declared
+accounting contract, whereas 120 payment-change/cancellation paths across 102
+orders return normally but leave incorrect per-method ledgers. A subsequent
+1,629-path matched intervention changes only cancellation's refund iterator:
+skipping refund entries leaves all 120 composition failures, while refunding
+outstanding per-method net removes them and preserves every direct control.
+Two archival screens delimit these findings: 280 released RAC JSON files
+contain no contradiction under a fixed structured-status screen, and 1,824
+published retail simulations contain no same-order payment-change/cancellation
+sequence. All 433 scorable cancellation payloads in the latter have balanced
+ledgers. Independent arithmetic implementations recompute saved states and
+accounting without executing the measured tools. The contribution is a
+reproducible empirical diagnosis, with local intervention evidence, of
+disagreements among execution status, recovery records and declared effects.
+Source-selected diagnostics establish neither deployed prevalence nor
+autonomous-agent performance; the historical runs do not corroborate the
+constructed failures. We claim no new recovery algorithm or external financial
+harm.
 
 ## 1. Introduction
 
@@ -64,7 +65,7 @@ tested conversions does an explicit tool error cease to control the recovery
 record? Sections 4 and 5.1-5.5 isolate returned values, exception conventions,
 schema discovery and an adapter-version change. **RQ2:** which declared
 effect properties remain unestablished even when an operation returns
-normally? Sections 5.6-5.8 compare saved native states under acknowledgement
+normally? Sections 5.6-5.9 compare saved native states under acknowledgement
 faults, retries and ordinary operation composition. **RQ3:** do existing
 published traces show the diagnosed mechanisms? Section 6 supplies separate
 archive screens, including their negative findings.
@@ -464,6 +465,59 @@ it does not attribute the behavior to RAC or revise a published benchmark
 success rate. Synthetic ledger imbalances are not evidence of real financial
 loss. The selected sequence and single pinned implementation limit its scope.
 
+### 5.9 A matched intervention localizes the retail accounting failure
+
+The composition result suggests a specific implementation mechanism, but
+source inspection alone does not establish that changing it removes the
+observed failure. We therefore freeze a follow-up three-implementation
+census after observing section 5.8. It is a source-informed causal control,
+not a blinded discovery experiment or a proposal for a new compensation
+algorithm. The population, operation arguments, initial states and effect
+predicate remain fixed: 423 direct paths and 120 compositions across 102
+orders with valid alternatives, for each implementation.
+
+The native condition uses the original method. Two research copies change
+only the iterable expression in its refund loop. The payment-only condition
+passes payment entries and skips refund entries. The net-by-method condition
+first computes each instrument's outstanding payments minus refunds, then
+passes one positive entry for each nonzero outstanding balance. It rejects
+negative balances rather than claiming to repair already over-refunded
+histories. Native reason/status checks, gift-balance updates, refund creation
+and cancellation status remain unchanged. Reverting the replaced expression
+recovers the original abstract syntax tree exactly; the original source files
+and class method are preserved. The payment-only variant is an intentionally
+incomplete repair control, not an attributed literature baseline.
+
+| Cancellation implementation | Direct contract passes | Composed contract passes | Old-method net after composition | Composed ledger entries |
+|---|---:|---:|---:|---:|
+| Native | 423 / 423 | 0 / 120 | -2A | 6 |
+| Payment entries only | 423 / 423 | 0 / 120 | -A | 5 |
+| Outstanding net by method | 423 / 423 | 120 / 120 | 0 | 4 |
+
+All 1,629 paths return normally, totaling 1,989 calls with no model invocation,
+injected transport error or external connection. The new native arm matches
+every saved state and payload in the earlier 543-path census. All 1,269
+direct-path records, including the native reference, agree across the three
+implementations. All 360 payment-change prefixes likewise agree. Thus neither
+a changed initial state nor a changed payment operation explains the final
+contrast. A separate verifier reconstructs each cancellation state with
+rational arithmetic without importing the measured implementation.
+
+Skipping historical refunds reduces the old-method excess but still treats
+the already refunded original payment as outstanding. Its final old-method
+net is -A on every composition, and the same 59 original-gift-card paths
+still violate the balance component. Net-by-method cancellation leaves zero
+net on both instruments, with no gift-balance mismatch. This local intervention
+supports the unsigned-history explanation under the fixed fixture. It does
+not establish a production repair: negative prior balances, concurrent writes,
+external settlement and dialogue authorization are outside the experiment.
+The variants are constructed using the observed mechanism, so their success
+is diagnostic evidence, not out-of-distribution agent performance.
+
+The protocol and intervention helper were committed before the census. An
+import-only launcher correction preceded the completed run; failed startup
+attempts are retained separately and do not add experimental trials.
+
 ## 6. What the released experiment archive shows
 
 ### 6.1 Recovery-framework archive
@@ -550,7 +604,10 @@ version, not a comparison of complete historical environments. For RQ2,
 even correct error propagation cannot distinguish a silent no-op from a
 completed effect without an additional state observation. The retail census
 goes further: no error injection is required for a normally returning
-composition to violate the declared accounting predicate. For RQ3, neither
+composition to violate the declared accounting predicate. The matched
+refund-iterator intervention then removes that violation while preserving
+direct cancellations and payment-change prefixes. This isolates one local
+mechanism without adding an autonomous-agent performance claim. For RQ3, neither
 archive screen corroborates the constructed mechanism in the inspected
 historical runs. That negative evidence is retained alongside the positive
 diagnostic findings.
@@ -568,7 +625,7 @@ failure, not merely an inequality between two valid ledger histories.
 These expressions explain the measured transition rules; they are not
 proofs about tools outside the pinned implementations.
 
-Table 7 summarizes the resulting evidence boundaries. Each row refers to a
+Table 8 summarizes the resulting evidence boundaries. Each row refers to a
 distinct study population or configuration; the rows cannot be pooled into
 one failure rate.
 
@@ -578,9 +635,28 @@ one failure rate.
 | Same native response, different saved state | That response alone does not identify the declared effect | Every successful response is unreliable |
 | Airline retry: net preserved, history changed | Strict state idempotence and the narrow contract differ | Duplicate external refunds or a violated idempotency promise |
 | Retail composition: old-instrument net -2A | The selected normal-return sequence violates the accounting contract | Its occurrence in autonomous agent workloads |
+| Net-refund intervention repairs the selected compositions | Refund-history iteration is a controllable local cause | A generally valid distributed payment repair |
 | No qualifying sequence in the retail archive | The inspected historical runs do not corroborate that composition | Zero risk in other workflows or versions |
 
 ### 7.2 Closest related work
+
+Compensating a partially completed sequence is an established transaction
+design. The original [Sagas report](https://www.cs.princeton.edu/research/techreps/598)
+describes interleavable component transactions with compensation when the
+whole sequence does not complete. Our contribution is not that compensation
+needs an intended effect, or that a multi-step workflow needs recovery.
+We inspect whether particular agent-tool integrations consume the error
+representations they actually receive and whether selected native effects
+satisfy separately declared predicates.
+
+The distinction between running a test and deciding whether its behavior is
+correct is likewise the established test-oracle problem. [Barr et al.](https://discovery.ucl.ac.uk/id/eprint/1471263/)
+survey specifications, contracts and derived or partial oracles. Our flag,
+ledger and balance predicates are deliberately partial effect oracles, not
+a new general solution to that problem. Their value here is that they expose
+different conclusions from the same recovery-status record, while stating
+which effects remain unmeasured. Passing these predicates cannot certify
+all business obligations, dialogue authorization or external settlement.
 
 [RAC](https://arxiv.org/abs/2605.03409v1) is the subject of the audit and already
 studies compensation in agent workflows. [Verified Tool Calls](https://arxiv.org/abs/2608.02645)
@@ -683,6 +759,13 @@ screen and this revised manuscript; its manifest continues to identify
 its historical contents. A new review PDF accompanies the present text,
 but does not retroactively change any prior package or experiment receipt.
 
+The later refund-iterator intervention has its own immutable result archive,
+`retail-refund-interventions-v2-results.zip`, with code, frozen protocol, exact
+deployment metadata, execution status and all 1,629 records. Its separate
+standard-library verifier checks the original native-arm match, unchanged
+prefixes and reconstructed cancellation effects. Neither the integrated v3
+artifact nor the earlier twelve-page review PDF includes this extension.
+
 ## 9. Conclusion
 
 The executed probes demonstrate specific inconsistencies between returned
@@ -698,7 +781,10 @@ cancellations. The native retry census further separates a preserved status/net
 contract from exact state idempotence, without inferring financial harm from
 ledger growth. The retail composition census additionally finds normally
 returning cancellations with an incorrect per-method ledger, despite every
-direct-cancellation control meeting the declared contract. The archival analysis prevents these
+direct-cancellation control meeting the declared contract. The matched
+refund-iterator intervention localizes that failure while preserving direct
+controls; merely ignoring historical refund entries leaves it unresolved.
+The archival analysis prevents these
 findings from being misrepresented as observed benchmark failures: neither
 archival screen corroborates the constructed mechanism under its stated
 definition. Together, the results justify checking error consumption and

@@ -1,0 +1,120 @@
+{
+  "status": "executed-and-independently-recomputed",
+  "protocol_freeze_commit": "efa12292a0efa26f948665b72c10350f709307ae",
+  "execution_commit": "478a06f9c6ccc07eb02e8ed4538a0ba4d80319e1",
+  "archive": "results/remote/retail-refund-interventions-v2-results.zip",
+  "archive_bytes": 247307,
+  "archive_sha256": "50fa549b27433090c25dc9e489e2dc483d247128d62178ce65761b29111fbe08",
+  "archive_members": 13,
+  "paths": 1629,
+  "method_calls": 1989,
+  "real_model_calls": 0,
+  "execution": {
+    "command": [
+      "/xingjing/autoresearch-agent-papers/.venv/bin/python",
+      "-I",
+      "/xingjing/autoresearch-agent-papers/preflights/retail-refund-interventions-v2/scripts/probe_retail_refund_interventions_v1.py",
+      "--base",
+      "/xingjing/autoresearch-agent-papers/preflights/native-retail-composition-v1",
+      "--output",
+      "/xingjing/autoresearch-agent-papers/preflights/retail-refund-interventions-v2/run"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 4.6216588243842125,
+    "timeout": false
+  },
+  "runtime_python": "3.13.5 (main, Jun 12 2025, 22:46:40) [GCC 12.2.0]",
+  "packages": {
+    "pydantic": "2.13.5",
+    "loguru": "0.7.3",
+    "litellm": "1.82.6"
+  },
+  "native_source_files_verified": 304,
+  "original_class_method_unchanged": true,
+  "original_native_paths_equal_to_prior": 543,
+  "source_sha256": {
+    "autolab/retail_interventions.py": "b837abb4ccad7e7dcd85ab41ed3798d89f2be5e7cc8014149a47a037812ae369",
+    "scripts/probe_retail_refund_interventions_v1.py": "63da91c4827d680f9774f7a7e91c24e0363525d909ef2b2f521154df56d1be16",
+    "research/retail_refund_intervention_protocol_v1.md": "bb0f106e84259c496816d7800086d7bcdb242d7f30b7c67f9d03ea87e0e677a6"
+  },
+  "members": {
+    "autolab/__init__.py": {
+      "bytes": 192,
+      "sha256": "1253894480b12e2156c804b4a04e7de85fb5e2adc0b1bea8a1b7358cef3455f3"
+    },
+    "autolab/retail_interventions.py": {
+      "bytes": 3191,
+      "sha256": "b837abb4ccad7e7dcd85ab41ed3798d89f2be5e7cc8014149a47a037812ae369"
+    },
+    "deployment.json": {
+      "bytes": 643,
+      "sha256": "12505f9e706261018af2ac8664a3e07865103e3aa74d4d5c1b5704c2cb7d814b"
+    },
+    "execution.json": {
+      "bytes": 506,
+      "sha256": "369e9b91ed4a53eb50d3a18d50770b68da3ddfed339c0217aa3d9fe96e98554d"
+    },
+    "research/retail_refund_intervention_protocol_v1.md": {
+      "bytes": 4038,
+      "sha256": "bb0f106e84259c496816d7800086d7bcdb242d7f30b7c67f9d03ea87e0e677a6"
+    },
+    "run/interventions.json": {
+      "bytes": 4815,
+      "sha256": "a756da36bb9806d051c7277f0e1f3245c99727a47b2f32f5c8797884a1e930fb"
+    },
+    "run/records.jsonl": {
+      "bytes": 8277148,
+      "sha256": "fe8e6dbe164be42035c5de803f4d5a1f11c3a69817201e61a49ef7bb188b4fd3"
+    },
+    "run/selection.json": {
+      "bytes": 76052,
+      "sha256": "9234f0b418e379b467e3d40fb04d534d6b4663f0f4a5218d8ff8b33903b90258"
+    },
+    "run/summary.json": {
+      "bytes": 2616,
+      "sha256": "0e54ab1c83d745fdb80a10dd9bf614ff54c68a92225b15258acc247cb72e40c7"
+    },
+    "scripts/probe_retail_refund_interventions_v1.py": {
+      "bytes": 9698,
+      "sha256": "63da91c4827d680f9774f7a7e91c24e0363525d909ef2b2f521154df56d1be16"
+    },
+    "stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.log": {
+      "bytes": 953,
+      "sha256": "1e15b620a46c351af1cdd2a8c9e1a913c0c40db21e81d56432d6524e4fe2b9ae"
+    },
+    "tests/test_retail_interventions.py": {
+      "bytes": 2441,
+      "sha256": "bbfa60215c4a9524afaa66d40eb48735394e8803ff73351564ed1433c9cb3caa"
+    }
+  },
+  "verifier_sha256": "0d33031153855394aaff75e38066d06a68f32ce0e2525f75c87be8f60f0c1831",
+  "reanalysis_receipt_sha256": "c3e9fb92414810324f169d9cb9100b2f3cb4a31fcb1aafeb6ccbd00bbd159b8a",
+  "meaningful_tests": {
+    "command": "python -m pytest tests/test_retail_interventions.py tests/test_retail_refund_verifier.py -q",
+    "passed": 5,
+    "seconds": 0.75,
+    "exit_code": 0,
+    "scope": "Three synthetic intervention tests and two semantic falsifications of returned raw data despite recomputed consistent hashes"
+  },
+  "startup_history": {
+    "github_download_timeouts": 2,
+    "first_launcher_returncode": 1,
+    "first_launcher_elapsed_seconds": 0.1148407328378728,
+    "failure": "Missing unrelated autolab.runner import, before native tool import or any census call",
+    "preserved_remote_directory": "/xingjing/autoresearch-agent-papers/preflights/retail-refund-interventions-v1",
+    "source_of_failure_metadata": "Observed terminal output; failed-directory log bytes are retained on server, not included in completed-run ZIP",
+    "correction": "Only helper loading changed; isolated two-file Python -I --help passed before execution"
+  },
+  "limits": [
+    "Source-informed local intervention, not a novel refund or compensation algorithm",
+    "Complete finite fixture, not independent tasks or a production failure rate",
+    "No concurrency, external settlement, model decisions or official benchmark scoring",
+    "Negative outstanding balances deliberately outside repair scope",
+    "Full database restoration is a saved runtime assertion/hash equality, not an archived whole final database",
+    "Current manuscript updated; prior PDF and integrated v3 bundle remain historical"
+  ]
+}

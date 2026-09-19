@@ -1,0 +1,65 @@
+{
+  "scope": "Source-informed matched intervention diagnostic; not agent outcomes, novel compensation method or production fix",
+  "counts": {
+    "native": {
+      "calls": 663,
+      "cancel_only": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_gift_mismatch": 0,
+      "change_then_cancel": 120,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_contract_met": 0,
+      "change_then_cancel_gift_mismatch": 59
+    },
+    "payment_only": {
+      "calls": 663,
+      "cancel_only": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_gift_mismatch": 0,
+      "change_then_cancel": 120,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_contract_met": 0,
+      "change_then_cancel_gift_mismatch": 59
+    },
+    "net_by_method": {
+      "calls": 663,
+      "cancel_only": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_gift_mismatch": 0,
+      "change_then_cancel": 120,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_contract_met": 120,
+      "change_then_cancel_gift_mismatch": 0
+    }
+  },
+  "paths": 1629,
+  "unique_orders": 423,
+  "unique_orders_with_alternatives": 102,
+  "elapsed_seconds": 0.636091835796833,
+  "python": "3.13.5 (main, Jun 12 2025, 22:46:40) [GCC 12.2.0]",
+  "packages": {
+    "pydantic": "2.13.5",
+    "loguru": "0.7.3",
+    "litellm": "1.82.6"
+  },
+  "source_files_verified": 304,
+  "database_sha256": "dbde692e380bb4ad17f9f7841172cf1e69bebad2daa405628ccdc52a42b3b9b0",
+  "initial_database_model_sha256": "3ca5bd70e621602e23d909c87f26224a1a486e75955d8a6da53721ec224b23dc",
+  "restored_database_model_sha256": "3ca5bd70e621602e23d909c87f26224a1a486e75955d8a6da53721ec224b23dc",
+  "source_sha256": {
+    "autolab/retail_interventions.py": "b837abb4ccad7e7dcd85ab41ed3798d89f2be5e7cc8014149a47a037812ae369",
+    "scripts/probe_retail_refund_interventions_v1.py": "63da91c4827d680f9774f7a7e91c24e0363525d909ef2b2f521154df56d1be16",
+    "research/retail_refund_intervention_protocol_v1.md": "bb0f106e84259c496816d7800086d7bcdb242d7f30b7c67f9d03ea87e0e677a6"
+  },
+  "output_sha256": {
+    "selection.json": "9234f0b418e379b467e3d40fb04d534d6b4663f0f4a5218d8ff8b33903b90258",
+    "interventions.json": "a756da36bb9806d051c7277f0e1f3245c99727a47b2f32f5c8797884a1e930fb",
+    "records.jsonl": "fe8e6dbe164be42035c5de803f4d5a1f11c3a69817201e61a49ef7bb188b4fd3"
+  },
+  "model_calls": 0,
+  "external_connection_attempts": [],
+  "original_class_method_unchanged": true
+}

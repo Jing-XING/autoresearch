@@ -1,0 +1,86 @@
+{
+  "status": "independently-recomputed",
+  "counts": {
+    "native": {
+      "cancel_only": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_gift_mismatch": 0,
+      "calls": 663,
+      "change_then_cancel": 120,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_contract_met": 0,
+      "change_then_cancel_gift_mismatch": 59
+    },
+    "payment_only": {
+      "cancel_only": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_gift_mismatch": 0,
+      "calls": 663,
+      "change_then_cancel": 120,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_contract_met": 0,
+      "change_then_cancel_gift_mismatch": 59
+    },
+    "net_by_method": {
+      "cancel_only": 423,
+      "cancel_only_normal_return": 423,
+      "cancel_only_contract_met": 423,
+      "cancel_only_gift_mismatch": 0,
+      "calls": 663,
+      "change_then_cancel": 120,
+      "change_then_cancel_normal_return": 120,
+      "change_then_cancel_contract_met": 120,
+      "change_then_cancel_gift_mismatch": 0
+    }
+  },
+  "native_paths_equal_to_prior_census": 543,
+  "direct_paths_equal_including_native": 1269,
+  "payment_change_prefixes_equal_including_native": 360,
+  "composition_signatures": {
+    "native": [
+      {
+        "old_net_over_amount": "-2",
+        "new_net_over_amount": "0",
+        "ledger_entries": 6,
+        "paths": 120
+      }
+    ],
+    "payment_only": [
+      {
+        "old_net_over_amount": "-1",
+        "new_net_over_amount": "0",
+        "ledger_entries": 5,
+        "paths": 120
+      }
+    ],
+    "net_by_method": [
+      {
+        "old_net_over_amount": "0",
+        "new_net_over_amount": "0",
+        "ledger_entries": 4,
+        "paths": 120
+      }
+    ]
+  },
+  "archive_sha256": "50fa549b27433090c25dc9e489e2dc483d247128d62178ce65761b29111fbe08",
+  "archive_bytes": 247307,
+  "archive_members": 13,
+  "execution": {
+    "command": [
+      "/xingjing/autoresearch-agent-papers/.venv/bin/python",
+      "-I",
+      "/xingjing/autoresearch-agent-papers/preflights/retail-refund-interventions-v2/scripts/probe_retail_refund_interventions_v1.py",
+      "--base",
+      "/xingjing/autoresearch-agent-papers/preflights/native-retail-composition-v1",
+      "--output",
+      "/xingjing/autoresearch-agent-papers/preflights/retail-refund-interventions-v2/run"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 4.6216588243842125,
+    "timeout": false
+  },
+  "source_sha256": "0d33031153855394aaff75e38066d06a68f32ce0e2525f75c87be8f60f0c1831",
+  "scope": "Saved-state reconstruction with rational arithmetic; no native/model execution; whole-DB restoration is a retained runtime assertion"
+}
