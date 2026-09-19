@@ -1,5 +1,11 @@
 # RAC compensation-status counterexample
 
+Bibliographic update, 2026-09-19: the later v4 of the previously screened
+framework-bug study is titled [Where Agent Frameworks Fall Short](https://arxiv.org/html/2602.21806v4).
+Sections III and V explicitly cover version-aware interface testing. The
+paper3 bibliography now cites that version; the older v1 reading below is
+retained as a version-specific research note.
+
 Status: executed CPU software probe, 2026-09-19. This is not an LLM benchmark,
 an estimate of failure prevalence, or a replication of the RAC paper's results.
 

@@ -217,11 +217,11 @@ record. No published success-rate claim is revised by our local probes.
 
 ## 7. Related work and limits
 
-[RAC](https://arxiv.org/abs/2605.03409) is the subject of the audit and already
+[RAC](https://arxiv.org/abs/2605.03409v1) is the subject of the audit and already
 studies compensation in agent workflows. [Verified Tool Calls](https://arxiv.org/abs/2608.02645)
-is direct prior work on validating tool effects. [Bugs in Modern LLM Agent
-Frameworks](https://arxiv.org/abs/2602.21806) already studies execution semantics
-and interface compatibility. The [Agent Crash Test](https://github.com/pavloparaschakis/agent-crash-test)
+is direct prior work on validating tool effects. [Where Agent Frameworks Fall
+Short](https://arxiv.org/html/2602.21806v4) already studies interface compatibility
+and explicitly motivates version-aware API-sequence testing. The [Agent Crash Test](https://github.com/pavloparaschakis/agent-crash-test)
 artifact likewise includes controlled tool faults and effect oracles.
 Our controlled failures do not establish novelty for fault injection,
 typed errors, postcondition verification or framework bug taxonomies.
