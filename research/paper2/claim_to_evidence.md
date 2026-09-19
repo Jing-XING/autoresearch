@@ -2,6 +2,35 @@
 
 This is an incomplete development manuscript, not a completed paper.
 
+## Main-paper reorganization, 20 September 2026
+
+The main manuscript now organizes the completed evidence around three research
+questions rather than the sequence of experiment runs. The preceding manuscript
+is preserved byte-for-byte as `study_record.md` (SHA256
+`f09f7e4d48f5c00242dcf0391e0c8768f05c773bd3d815a3415cd9c31c3de27e`).
+Historical section numbers below refer to that record. No score, task mask,
+prediction or conclusion is changed by the reorganization.
+
+| Main-paper location | Detailed study-record location | Content |
+|---|---|---|
+| Sections 2-3 | Sections 2-3, 6, 9.1, 10.1-10.3 | Definition, design, selection and scoring |
+| Section 4, Tables 2-3 | Sections 10.4, 10.6-10.9 | Completed 420-run expansion and sensitivity |
+| Section 5.1, Table 4 | Section 7 | Paired executor comparison |
+| Section 5.2, Table 5 | Sections 10.3, 10.10 | Twelve registered output-budget controls |
+| Section 5.3 | Section 10.5 | Selected native acquisition control |
+| Section 6 | Sections 5-6, 8-8.2 | Replay witnesses and negative controls |
+| Sections 7-9 | Sections 11-13 | Related work and bounded conclusions |
+
+`scripts/check_paper2_manuscript_tables.py` compares all 18 result rows in
+Tables 2-5 against saved evidence and checks the exact executed reminder and
+preserved study-record bytes. This checks editorial consistency, not new
+semantic judgments. Table 1 is a study inventory, not an independent task
+count. The nine-page PDF is a visually checked review artifact, explicitly
+not a submission-ready paper. Its receipt is
+`../evidence/paper2_review_pdf_v1.json`.
+
+## Historical claim ledger
+
 | Claim | Evidence | Limit |
 |---|---|---|
 | Eight initial episodes contain incomplete language lists, wrong aggregation scope and one OOM. | `../evidence/vakra_native_first4_v1_audit.md`, corresponding summary and hashed archive | Selected first four public training queries, two Qwen checkpoints; not prevalence. |

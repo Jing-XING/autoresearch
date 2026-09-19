@@ -1,0 +1,39 @@
+{
+  "source": "research/paper2/manuscript.md",
+  "source_sha256": "4c1d2e0a999ab9dec3093f19cf20c4cfe96bef1dd67ef552b93c694660307670",
+  "bibliography_sha256": "34957babc5a197f2eeaf04944198fcf4142785184c73bdb10b2fd5357e82082a",
+  "builder_sha256": "f42da3f91d4d679f94e7d43d1b35749200c1753c0db07ac2e2ef5c49c65cabd6",
+  "output": "output/pdf/paper2-scope-coverage-review.pdf",
+  "pdf_sha256": "3c66e1e1462a73cdfad10a6fd088f26a762766f12991491bf7801593fa892cc5",
+  "pages": 9,
+  "tables": 5,
+  "reference_records": 11,
+  "review_date": "2026-09-20",
+  "packages": {
+    "reportlab": "4.4.9",
+    "pypdf": "6.10.0"
+  },
+  "publication_ready": false,
+  "visual_review": "passed: all nine pages inspected; final pages2 and9 re-inspected, other seven PNGs byte-identical to inspected version",
+  "main_words": 4553,
+  "abstract_words": 245,
+  "result_tables_verified": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "result_rows_verified": 18,
+  "rendered_pages": 9,
+  "out_of_bounds_characters": 0,
+  "missing_glyph_squares": 0,
+  "preprints_marked": 7,
+  "prior_manuscript": "research/paper2/study_record.md",
+  "prior_manuscript_sha256": "f09f7e4d48f5c00242dcf0391e0c8768f05c773bd3d815a3415cd9c31c3de27e",
+  "table_checker_sha256": "e4b25aa0fb485e1e27b9646ac659501e3a20b6efa8a7b689b96120d295daff3f",
+  "notes": [
+    "Reorganization changes no experimental labels or outcomes.",
+    "This PDF is a review draft, not a publisher template or submission-ready paper.",
+    "No new neural experiments or independent human adjudication."
+  ]
+}

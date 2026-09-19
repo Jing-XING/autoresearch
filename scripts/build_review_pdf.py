@@ -63,6 +63,7 @@ def build(paper, output, review_date):
         author='', subject='Incomplete research manuscript for review')
     body = ParagraphStyle('Body', fontName='Times-Roman', fontSize=10.5, leading=14,
                           spaceAfter=7, alignment=TA_JUSTIFY)
+    literal_body = ParagraphStyle('LiteralBody', parent=body, alignment=0)
     h1 = ParagraphStyle('Title', parent=body, fontName='Times-Bold', fontSize=19,
                         leading=23, spaceAfter=14, alignment=0, keepWithNext=True)
     h2 = ParagraphStyle('Section', parent=body, fontName='Times-Bold', fontSize=13,
@@ -116,13 +117,20 @@ def build(paper, output, review_date):
             i += 1
         paragraph = ' '.join(chunks)
         paragraphs.append(paragraph)
-        story.append(Paragraph(inline(paragraph), body))
+        style = literal_body if re.search(r'\b[0-9a-f]{40,64}\b', paragraph) else body
+        story.append(Paragraph(inline(paragraph), style))
     story.extend([Spacer(1, 12), Paragraph('References', h2)])
     records = bib_records(bibliography.read_text(encoding='utf-8'))
     for number, (key, fields) in enumerate(records, 1):
         author = fields.get('author', '').replace(' and ', '; ')
         lead = f'[{number}] '+'. '.join(v for v in [author, fields.get('year'), fields['title']] if v)+'.'
-        tail = ' '.join(fields.get(k, '') for k in ('howpublished', 'publisher', 'note'))
+        tail = ' '.join(fields.get(k, '') for k in ('booktitle', 'howpublished', 'publisher', 'note'))
+        if fields.get('pages'):
+            tail += ' pp. '+fields['pages'].replace('--', '-')+'.'
+        if fields.get('doi'):
+            tail += ' DOI: '+fields['doi']+'.'
+        if fields.get('eprint'):
+            tail += ' arXiv:'+fields['eprint']+' (preprint).'
         story.append(Paragraph(inline(lead+' '+tail)+
             f' <link href="{html.escape(fields["url"])}" color="#164b70">Source</link>.', refs))
     def page(canvas, document):

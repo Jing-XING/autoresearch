@@ -1,8 +1,22 @@
 # Reproducing the complete prospective expansion analysis
 
-This entry covers manuscript sections 10.8–10.9 and the integrated 420-run
-answer analysis. It is not yet a single portable reproduction of every study
-in this working manuscript. Earlier studies retain their own scripts and
+To check the reorganized manuscript's four result tables against the retained
+evidence, run `python scripts/check_paper2_manuscript_tables.py`. To rebuild
+the review PDF with ReportLab and pypdf installed, run:
+
+```sh
+python scripts/build_review_pdf.py --paper research/paper2 \
+  --output output/pdf/paper2-scope-coverage-review.pdf --date 2026-09-20
+```
+
+The builder labels this as an incomplete review draft and includes the eleven
+bibliographic records. Rendering is not evidence of publication readiness.
+
+This entry covers manuscript section 4 and the integrated 420-run answer
+analysis, followed by the section 5.2 generation-budget control. The detailed
+preceding manuscript is preserved verbatim in `study_record.md`; its sections
+10.8–10.10 supply the former numbering. This is not yet a single portable
+reproduction of every study. Earlier studies retain their scripts and
 evidence references in `claim_to_evidence.md`.
 
 ## Inputs
