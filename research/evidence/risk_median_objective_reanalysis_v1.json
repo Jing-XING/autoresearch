@@ -1,0 +1,50 @@
+{
+  "archive_sha256": "b9b07c7f46eccf90a366262f1ae55905d7afd3e53bb4c69e2330a61bf8555c3d",
+  "members": {
+    "execution.json": "3a7bab69f6f2b9bd75295f75e87d9b38b1ea124d6a86a83af74903180948f112",
+    "output/components.npz": "86fbd89e610d860c21b1907593bc32f80a599b6c8e7214459ae8713768e6fb00",
+    "output/report.json": "37e1d600e25dbb4f0875675bf685454525ccf5018b3533d78caa6f82e845aeff",
+    "research/risk_median_objective_v1.md": "83f45b7409b4da1ff333bc41c019b36cd41c6685dda6f27d02562fd925f884c1",
+    "scripts/analyze_risk_median_objective_v1.py": "f20b0ef39e477b6bc07e27cb84e5539d40d89f6ce74ece2784db8bf99125bb3b",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "cca04d171f74ad9014b743563284b0942109d97d8de6dbe896775efc98b4537a"
+  },
+  "scalar_control_medians_verified": 384,
+  "grid_medians_recomputed": 7776,
+  "sampled_component_pairs_replayed": 288,
+  "total_component_pairs": 384000,
+  "maximum_component_absolute_difference": 1.3322676295501878e-15,
+  "public_files_verified": 48,
+  "verification_source_sha256": "9dfd502fcd7a963e50125a84fb78129642fe4a35c892fbecd6bf5fc9545fd17d",
+  "summary": {
+    "uniform": {
+      "median_cell_ratio": [
+        1.0,
+        1.0
+      ],
+      "evaluation_cells_better_than_difference": 0
+    },
+    "difference": {
+      "median_cell_ratio": [
+        0.8195913871068923,
+        0.8142366856712729
+      ],
+      "evaluation_cells_better_than_difference": 0
+    },
+    "mse_oracle": {
+      "median_cell_ratio": [
+        0.7988565920133786,
+        0.7752325605806607
+      ],
+      "evaluation_cells_better_than_difference": 44
+    },
+    "selected_grid": {
+      "median_cell_ratio": [
+        0.7922433428749245,
+        0.7873789874206045
+      ],
+      "evaluation_cells_better_than_difference": 37
+    }
+  },
+  "scope": "All saved control medians and coefficient curves checked; 288 selected component pairs independently recomputed with scalar loss arithmetic. Same NumPy RNG for sample identities. No model or official grader execution; not all 384000 sample pairs regenerated."
+}

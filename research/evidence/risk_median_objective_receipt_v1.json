@@ -1,0 +1,40 @@
+{
+  "freeze_commit": "bf9f4ae0c395219b1c61f7c07525636a9c17aa01",
+  "raw_archive": "results/remote/risk-median-objective-v1-results.zip",
+  "raw_bytes": 5826002,
+  "raw_sha256": "b9b07c7f46eccf90a366262f1ae55905d7afd3e53bb4c69e2330a61bf8555c3d",
+  "execution": {
+    "exit_code": 0,
+    "seconds": 5.56557884439826,
+    "command": [
+      "/xingjing/autoresearch-agent-papers/.venv/bin/python",
+      "-I",
+      "/xingjing/autoresearch-agent-papers/preflights/risk-median-objective-v1/scripts/analyze_risk_median_objective_v1.py",
+      "--root",
+      "/xingjing/autoresearch-agent-papers/preflights/risk-development-controls-v1",
+      "--protocol",
+      "/xingjing/autoresearch-agent-papers/preflights/risk-median-objective-v1/research/risk_median_objective_v1.md",
+      "--output",
+      "/xingjing/autoresearch-agent-papers/preflights/risk-median-objective-v1/output"
+    ],
+    "source_commit": "bf9f4ae0c395219b1c61f7c07525636a9c17aa01",
+    "source_sha256": {
+      "scripts/analyze_risk_median_objective_v1.py": "f20b0ef39e477b6bc07e27cb84e5539d40d89f6ce74ece2784db8bf99125bb3b",
+      "research/risk_median_objective_v1.md": "83f45b7409b4da1ff333bc41c019b36cd41c6685dda6f27d02562fd925f884c1"
+    }
+  },
+  "local_tests": {
+    "command": "python -X utf8 -m unittest tests.test_risk_median_objective -v",
+    "tests_passed": 2,
+    "elapsed_seconds": 0.017,
+    "scope": "Synthetic component/label-driver equivalence and selection-block isolation"
+  },
+  "initial_execution_attempt": "GitHub read timeout before directory creation or diagnostic execution; no partial experiment.",
+  "transfer": "Frozen 5088-byte two-member code/protocol ZIP transferred by single named GET; raw results returned with verified SHA256; temporary servers terminated after transfer.",
+  "code_archive_sha256": "3c79f15e5337e77f57a73c5c1edb13a08927eda07f43792d6ca538db811a7f3d",
+  "reanalysis_receipt": "research/evidence/risk_median_objective_reanalysis_v1.json",
+  "model_calls": 0,
+  "hidden_grader_calls": 0,
+  "new_pools": 0,
+  "submission_ready_paper": false
+}

@@ -48,6 +48,14 @@ not external replication or a new research-agent result.
 
 ## Research decision
 
+Follow-up qualification: the task's public objective is median squared
+error, not expected squared error. The later frozen two-block diagnostic in
+`risk_median_objective_findings_v1.md` addresses that separate objective.
+The original calculation below is not a bound on the median criterion.
+The follow-up still finds no aggregate advantage from selecting a coefficient
+over the standard full-label analytic coefficient on fresh sampling seeds;
+neither is an Agent policy or a budget-valid estimator.
+
 Do not build the fifth paper around Agent selection of this one coefficient.
 Its optimum is an established analytic control-variate rule, and on these
 fixed public inputs a simple existing correction already captures much of
