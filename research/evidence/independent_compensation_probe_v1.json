@@ -1,0 +1,1190 @@
+{
+  "purpose": "Execute two independent recovery implementations without models or services.\n\nSagaLLM receives scripted agents through its coordinator interface. agent-saga\nuses its unchanged MCP transport against the same real SDK fixture used for RAC.\nThese are selected mechanism controls, not a task benchmark or prevalence study.\n",
+  "source_manifests": [
+    {
+      "repository": "genglongling/SagaLLM",
+      "commit": "2781c33edc4005b066671d5dc3cad157fae14f11",
+      "tree_sha256": "14905162d0902642104d38aaf4740c2fa2f904429c5660360cf6f0dddf4a176d",
+      "files": {
+        "README.md": "ee4b2d69c6e6a10a09424270c4cdf85f54b99ec865fe4ff2de881e20e5ab4ecf",
+        "requirements.txt": "e8442179ada87ce6d4eea1e7aea22f31007af48e966206cef4f16e5fe0db4593",
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/multi_agent/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/multi_agent/agent.py": "1b6625f852a50fe38807c07d1f689a8d1d24d6e4644b60377d27886b55b5436c",
+        "src/multi_agent/crew.py": "b89315ccd17c2927d1f60bf89b097155429ba817ca465bad836bede9da7e4f40",
+        "src/multi_agent/saga.py": "5bae66956ad225614e5f77d8bea162367906fa5b8e93e5bdff36ab3815cfebc9",
+        "src/multi_agent/test.py": "a1f2737260475ad413495057ec52f7100ae8c6d931d7b0c8672323b98a4fd0ea",
+        "src/planning_agent/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/planning_agent/react_agent.py": "9820e13bf6aed099245e097f9441f1a41b2146c4fdf1906465c3acafa323b932",
+        "src/reflection_agent/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/reflection_agent/reflection_agent.py": "f953865844805f7e0d1966a93d4a7a3c603557e5a66dd4cd32b704de432f2d33",
+        "src/tool_agent/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/tool_agent/tool.py": "fba59c9c4dc98e57e2c1857814b0597b9893d9085e4a5a4eec52a5678646dd51",
+        "src/tool_agent/tool_agent.py": "dffd05f0a3181a72b2a73d7671e67f069728175d6dac7e00bcee06fd2d4ff6fb",
+        "src/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/utils/completions.py": "2965351bfb6edc9be6d2d4cce5d94636b2da23e129a6323ee6d885b40098c87d",
+        "src/utils/extraction.py": "df84508513ef03311d88799cc5224e4c447b491e3e384326f5f4bbcda3341475",
+        "src/utils/logging.py": "cdf50f1172c14cefdc39f8a5708638cb8dda58f63ce72945aaf176c188d52c4e"
+      },
+      "executed": false
+    },
+    {
+      "repository": "thomasjgeorge23/agent-saga",
+      "commit": "4310ff570e60c42c081ae216e87a1ccb093525d4",
+      "tree_sha256": "108443abc43876916450442a0bbd4b3b9e69b8d0ca2f46ed05a1974d100a5176",
+      "files": {
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "MANUAL.md": "475fd9c477809d81adb52cd72d585019cc32b67da0460b85de78785bc4ca9a1e",
+        "README.md": "687e18a669353d19e309116aa689433eb75df9854b2231ecebac73fb79dd128c",
+        "agent_saga/__init__.py": "e11644e2c954d20cc79c8784e9ed39f74d8466eae4cf69bddaddcf573d84c32c",
+        "agent_saga/adapters/__init__.py": "231c5a821ed8693b1d45ec50d5957875fd337099bed58ea303e552d094bef687",
+        "agent_saga/adapters/_common.py": "aa0f34444de8c7818fc275745229f085d6f19f50586895db273fa0c3cde35667",
+        "agent_saga/adapters/autogen.py": "6943965a6f9445851208febe6b672df81b9d9fa9255abbaca424fd20986fbc63",
+        "agent_saga/adapters/base_db.py": "281357f258b2e45a6587ee74380b901e337c4c448107f287dc1079e028f0c970",
+        "agent_saga/adapters/crewai.py": "c043e651448ab780a1243700be0c93463912d0798f28714c1bd63060b397c5a4",
+        "agent_saga/adapters/langgraph.py": "79bfe097415df71c99bbb2065ee75a7ea75de8b6e365a8b9f6f8d2a78c2c880a",
+        "agent_saga/adapters/llamaindex.py": "8a5b9a3e3cc7d89e59b094f4e897c11ec3e4fa9a59e2d206452caafc77711619",
+        "agent_saga/adapters/openai_agents.py": "ab075ed5fb14d3e3e493bde4e604375c5c763324424f6185195aa48aaf4c87e1",
+        "agent_saga/adapters/sqlalchemy.py": "78099f472f57a835638c4ab01b2559446b7c56b51f60c600c426dcc64216ab96",
+        "agent_saga/adapters/supabase.py": "28387cd238d96b7543dbb671cd2f8e769b8b6be6825dde637c1dd5e360fbcdfc",
+        "agent_saga/approvals.py": "114d245da3c2c60858251d24eacd7dc069f065e0f8c4650828a32103b0066e4e",
+        "agent_saga/cli.py": "5bbdbfd88e0f2e90be67a3ca7177dd2fc09c41b5ee2f535505c4374e4c5fbc4a",
+        "agent_saga/connectors/__init__.py": "8adc4632249679073af0e9fe58f8658e05a87cf919c457dfff50b2b31360874f",
+        "agent_saga/connectors/_secrets.py": "9bfcd33fbf1e4aaf9fa288c0dd604d0694b3b4d8994bb4a4a1636e32c65f6dc6",
+        "agent_saga/connectors/postgres.py": "ef8ba147f3a171357590647ac5b9ef2138ad3a550f2e03484e6823ab2c50430f",
+        "agent_saga/connectors/salesforce.py": "e5da9254ec6c0162f68468ed55ea52283ab408466101ce40d709a1c3705eeaa8",
+        "agent_saga/connectors/stripe.py": "22edf2d4254a27f2b9c0d889c933922cc453f8c27ee9005ef8890def3560f472",
+        "agent_saga/context.py": "076125c1b4532ca4b11d20131459778124054996c77d99034a7de934ddfda1cb",
+        "agent_saga/decorator.py": "a959bb244ccfe7c313205a07f64a3ea204470f4534d7e59a1c0c7bf0a9176135",
+        "agent_saga/durable.py": "6039b553f267d64034e05c8890a58293df6a4af44644eec8c3a0769425c6f48e",
+        "agent_saga/encryption.py": "bd9ff7b26af01a9cdfbae2edcdacf5c7dc8d0b1d04d7fb5c2d3b96395c6b1c48",
+        "agent_saga/executors.py": "2572db5b90e8c4edbfbb9e91af1681738fbcc304d3d380c3e87d22b11a3994ba",
+        "agent_saga/frameworks/__init__.py": "c5414f70097edfbc7ae399d7376415539fe8d03d3a883ff8169e70fa04a76247",
+        "agent_saga/frameworks/fastapi.py": "171b2799289b321cb44cd367f04a2490f5f5ae82761a3ea1b73d0c4ebd7127a1",
+        "agent_saga/gate.py": "792eedc766b01ec3609ac7cdb86d06cf8cdd7f00560948ec4c61c524abe47acc",
+        "agent_saga/gc.py": "2ff452ebe4e0af1cdea73c3820945e4931ef0a9358d9ddc3f417e863f9fc59e8",
+        "agent_saga/idempotency.py": "d3fd87c94bbc1fa125f6e110940bc647914e80aa65d0c55283eff297bb9ddfe9",
+        "agent_saga/integrity.py": "60f5c57d851e133c5e2531c3b6343fa5f8eaec9af9770681c54b81f90706a365",
+        "agent_saga/ledger.py": "d26548408c2692384a2c4654e597371238f71c3bf7a0038f8c47826f6933f1c3",
+        "agent_saga/limits.py": "7d75a4283febce03a24d1884e699a37cbf1ffb3afb7c38eeace17ade4f6cfa9f",
+        "agent_saga/locks.py": "2fe99db3f8e0d2362a135dcd250c7fcfbd9151a01e699d46ba447a60af9c2d51",
+        "agent_saga/mcp/__init__.py": "f95f8e2380dec2f4e6b4783065f184449b9afc805552cf8194e1b2543db46f93",
+        "agent_saga/mcp/policy.py": "3f607f156bc580697e50b3d01c5c3ab20ead4f7b6b43d2cf397c2a6e10ed7060",
+        "agent_saga/mcp/proxy.py": "f908edc1c1b8e8743f501f3bd7162319acdb89cddd67d416bca3de174fd82cbe",
+        "agent_saga/mcp/stdio.py": "e53777446fd903bac3db136db1115896b7e76c4e36be6aade39cc86f844d6224",
+        "agent_saga/observability/__init__.py": "cade5836b232c07b389ae3d893e5c1607015ac6d59ac3c65e70108436490d74c",
+        "agent_saga/observability/otel.py": "35570fa3fbcd4db44689687c7886c98d29e7b3f3a258aa4bc995a096069c09e6",
+        "agent_saga/patterns/__init__.py": "dc9db7d5f618a9e6c7990e31458a5a01c16fbe8223d8207a4345b5e3e3b02dec",
+        "agent_saga/patterns/tentative.py": "47dc3b52d713a04d2e79e8911e7d165a1c768d1a336d4e55f6bedbbd04a26b9b",
+        "agent_saga/recovery.py": "f0b5c4994a04fe8980f176bb07204190c34c696d36334cc06594652181253a9c",
+        "agent_saga/registry.py": "52b284038d2b00c886981288d9e4708ec1cf3019b16a347dc552afa644c18f66",
+        "agent_saga/retry.py": "372b782f422c844a04e95053119e4a63543001be1487c17e293d5b6dd029fc21",
+        "agent_saga/semantics.py": "14fc177a58ee630dac3cff5c108b2f74bcdf814091388582858770775a377ece",
+        "agent_saga/serialization.py": "d68146aa16795dd947f76158d4582804a3f9d1cab5a16698a30988e44a9c3f54",
+        "agent_saga/snapshot.py": "bbae63f1bdb504e501f8ec618926293a6864400142744d29c9cda7fab6b27c0b",
+        "agent_saga/ui/__init__.py": "ce8a0d758e581033320467431c162a993cf324991e2af4202986eebfaf59eb92",
+        "agent_saga/ui/__main__.py": "ca51b2ded6687ba59a72605598c8607fcfb9aeb79aa3438bb5a86aff1ed28311",
+        "agent_saga/ui/reader.py": "36885c3f837300d406f84df162ef939e0f3c11df9f46264e3e5ffa89d23e0036",
+        "agent_saga/ui/server.py": "f964af6fc13560edd0d367937544014819cfee7af97b40c0d6a37faa3d383b80",
+        "agent_saga/wal/__init__.py": "16475c089a6d19c4d2e8a5a87b52eda3f056bf5ee0330e49529403aedfa1beb7",
+        "agent_saga/wal/base.py": "14238241064e40769bd69e283b426914686ace34b20718253ebdd274c19cdb06",
+        "agent_saga/wal/file_wal.py": "9517dd3bb62f204b8f2d7958851134f596395243546d38df3bc93240cedd032d",
+        "agent_saga/wal/postgres_wal.py": "b7b4e0b0252e208af39cba10a3b13a16f7498d3c27da7f88479efbad8c4e6257",
+        "agent_saga/wal/redis_wal.py": "d36ae28486409ab60618379140aa2629126776f2f0966b3c00d2634d54873bbe",
+        "pyproject.toml": "fdc462ab1b123e59943ce10bacc66ab00bc719839e48e3374399aba7f1607317"
+      },
+      "executed": false
+    }
+  ],
+  "sagallm_cases": [
+    {
+      "route": "rollback",
+      "behavior": "success",
+      "fixture_state": {
+        "active": false,
+        "events": [
+          "booking:run",
+          "downstream:run",
+          "booking:rollback"
+        ]
+      },
+      "coordinator_context": {
+        "booking": {
+          "booking_id": "fixture-1",
+          "status": "success"
+        }
+      },
+      "raised_to_caller": null,
+      "stdout": "\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🛠 Transaction Manager: Agents and dependencies initialized.\n\u001b[1m\u001b[36m==================================================\n\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: booking\n\u001b[1m\u001b[36m==================================================\n\n\u001b[32m✅ booking completed successfully.\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: downstream\n\u001b[1m\u001b[36m==================================================\n\n\u001b[31m❌ ERROR in downstream: Explicit constructed forward failure\n\u001b[33m🔄 Rolling back executed agents...\n\u001b[34m↩️ Rolled back: booking\n\u001b[31m🚨 Execution halted due to error.\n",
+      "printed_rolled_back": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "returned_error",
+      "fixture_state": {
+        "active": true,
+        "events": [
+          "booking:run",
+          "downstream:run",
+          "booking:rollback"
+        ]
+      },
+      "coordinator_context": {
+        "booking": {
+          "booking_id": "fixture-1",
+          "status": "success"
+        }
+      },
+      "raised_to_caller": null,
+      "stdout": "\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🛠 Transaction Manager: Agents and dependencies initialized.\n\u001b[1m\u001b[36m==================================================\n\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: booking\n\u001b[1m\u001b[36m==================================================\n\n\u001b[32m✅ booking completed successfully.\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: downstream\n\u001b[1m\u001b[36m==================================================\n\n\u001b[31m❌ ERROR in downstream: Explicit constructed forward failure\n\u001b[33m🔄 Rolling back executed agents...\n\u001b[34m↩️ Rolled back: booking\n\u001b[31m🚨 Execution halted due to error.\n",
+      "printed_rolled_back": true
+    },
+    {
+      "route": "rollback",
+      "behavior": "raised_error",
+      "fixture_state": {
+        "active": true,
+        "events": [
+          "booking:run",
+          "downstream:run",
+          "booking:rollback"
+        ]
+      },
+      "coordinator_context": {
+        "booking": {
+          "booking_id": "fixture-1",
+          "status": "success"
+        }
+      },
+      "raised_to_caller": null,
+      "stdout": "\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🛠 Transaction Manager: Agents and dependencies initialized.\n\u001b[1m\u001b[36m==================================================\n\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: booking\n\u001b[1m\u001b[36m==================================================\n\n\u001b[32m✅ booking completed successfully.\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: downstream\n\u001b[1m\u001b[36m==================================================\n\n\u001b[31m❌ ERROR in downstream: Explicit constructed forward failure\n\u001b[33m🔄 Rolling back executed agents...\n\u001b[31m⚠️ Error rolling back booking: Constructed compensation exception\n\u001b[31m🚨 Execution halted due to error.\n",
+      "printed_rolled_back": false
+    },
+    {
+      "route": "rollback",
+      "behavior": "silent_noop",
+      "fixture_state": {
+        "active": true,
+        "events": [
+          "booking:run",
+          "downstream:run",
+          "booking:rollback"
+        ]
+      },
+      "coordinator_context": {
+        "booking": {
+          "booking_id": "fixture-1",
+          "status": "success"
+        }
+      },
+      "raised_to_caller": null,
+      "stdout": "\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🛠 Transaction Manager: Agents and dependencies initialized.\n\u001b[1m\u001b[36m==================================================\n\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: booking\n\u001b[1m\u001b[36m==================================================\n\n\u001b[32m✅ booking completed successfully.\n\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🚀 Running Agent: downstream\n\u001b[1m\u001b[36m==================================================\n\n\u001b[31m❌ ERROR in downstream: Explicit constructed forward failure\n\u001b[33m🔄 Rolling back executed agents...\n\u001b[34m↩️ Rolled back: booking\n\u001b[31m🚨 Execution halted due to error.\n",
+      "printed_rolled_back": true
+    },
+    {
+      "route": "forward",
+      "behavior": "raise_before_effect",
+      "fixture_state": {
+        "active": false,
+        "events": []
+      },
+      "coordinator_context": {},
+      "raised_to_caller": {
+        "type": "KeyError",
+        "message": "<__main__.sagallm_cases.<locals>.ScriptedAgent object at 0x0000026D706918B0>"
+      },
+      "stdout": "\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🛠 Transaction Manager: Agents and dependencies initialized.\n\u001b[1m\u001b[36m==================================================\n\n",
+      "printed_rolled_back": false
+    },
+    {
+      "route": "forward",
+      "behavior": "raise_after_effect",
+      "fixture_state": {
+        "active": false,
+        "events": []
+      },
+      "coordinator_context": {},
+      "raised_to_caller": {
+        "type": "KeyError",
+        "message": "<__main__.sagallm_cases.<locals>.ScriptedAgent object at 0x0000026D706DAF60>"
+      },
+      "stdout": "\u001b[1m\u001b[36m\n==================================================\n\u001b[35m🛠 Transaction Manager: Agents and dependencies initialized.\n\u001b[1m\u001b[36m==================================================\n\n",
+      "printed_rolled_back": false
+    }
+  ],
+  "sagallm_import_stdout": "📂 Project Root: C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\n🔍 Updated sys.path:\nC:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\third_party\\sagallm\\source\\src\nC:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\scripts\nC:\\Users\\xingjing\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip\nC:\\Users\\xingjing\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\nC:\\Users\\xingjing\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\nC:\\Users\\xingjing\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\nC:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\venvs\\recovery-comparison\nC:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\venvs\\recovery-comparison\\Lib\\site-packages\nC:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\src\n✅ Utils imported successfully!\n",
+  "agent_saga_mcp_cases": [
+    {
+      "route": "rollback",
+      "behavior": "success",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"booking_id\": \"fixture-1\", \"status\": \"success\"}"
+          }
+        ],
+        "isError": false
+      },
+      "forward_exception": null,
+      "states_before_rollback": [
+        "COMMITTED"
+      ],
+      "fixture_before_rollback": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "states_after_rollback": [
+        "COMPENSATED"
+      ],
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "state_sha256": "845c07c6e4250021e0a6735a13dc036ade59d5f20c8b7f241456f4da85f4066b",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-rollback-success.wal.jsonl",
+      "wal_sha256": "e212b194aa80ea069f591f76c424b21be072afa00d49126c73058b57aa7820b8"
+    },
+    {
+      "route": "rollback",
+      "behavior": "explicit_error",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"booking_id\": \"fixture-1\", \"status\": \"success\"}"
+          }
+        ],
+        "isError": false
+      },
+      "forward_exception": null,
+      "states_before_rollback": [
+        "COMMITTED"
+      ],
+      "fixture_before_rollback": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book",
+        "orphaned": [],
+        "failed": [
+          "book"
+        ]
+      },
+      "states_after_rollback": [
+        "COMPENSATION_FAILED"
+      ],
+      "fixture_state": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "explicit_error",
+            "is_error": true,
+            "active_after": true
+          }
+        ]
+      },
+      "state_sha256": "b6b21daefe5a8f4b62a30797105b26ccef33fef6c6dd3036cec1a7511b631e31",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-rollback-explicit_error.wal.jsonl",
+      "wal_sha256": "566aa46697e406f5fab72ee17f3f2df9d3016130676b12b2cf52c7c7fe8b3cbe"
+    },
+    {
+      "route": "rollback",
+      "behavior": "server_exception",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"booking_id\": \"fixture-1\", \"status\": \"success\"}"
+          }
+        ],
+        "isError": false
+      },
+      "forward_exception": null,
+      "states_before_rollback": [
+        "COMMITTED"
+      ],
+      "fixture_before_rollback": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 0,
+        "clean": false,
+        "summary": "Rollback INCOMPLETE -- 0 compensated; 1 FAILED: book",
+        "orphaned": [],
+        "failed": [
+          "book"
+        ]
+      },
+      "states_after_rollback": [
+        "COMPENSATION_FAILED"
+      ],
+      "fixture_state": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "server_exception",
+            "is_error": true,
+            "active_after": true
+          }
+        ]
+      },
+      "state_sha256": "479a22c9a5398ebb618797192916fb854ec0a18a85adf8bf93fc7fca097b698b",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-rollback-server_exception.wal.jsonl",
+      "wal_sha256": "2a73fe1dbcafd95e3055be5e49076a7a6c436e105df00f188160002068cd472d"
+    },
+    {
+      "route": "rollback",
+      "behavior": "silent_noop",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"booking_id\": \"fixture-1\", \"status\": \"success\"}"
+          }
+        ],
+        "isError": false
+      },
+      "forward_exception": null,
+      "states_before_rollback": [
+        "COMMITTED"
+      ],
+      "fixture_before_rollback": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "states_after_rollback": [
+        "COMPENSATED"
+      ],
+      "fixture_state": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "silent_noop",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "state_sha256": "927ef43aa67e1b9ee39083a8144ed2685d02a1634ab7e2ecd9d6579c41077e3f",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-rollback-silent_noop.wal.jsonl",
+      "wal_sha256": "62e19281e1cbdcdee2bdfa0d074188c1cf59d70df8c42f02fc18cdda24a8cc97"
+    },
+    {
+      "route": "forward",
+      "behavior": "success",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"booking_id\": \"fixture-1\", \"status\": \"success\"}"
+          }
+        ],
+        "isError": false
+      },
+      "forward_exception": null,
+      "states_before_rollback": [
+        "COMMITTED"
+      ],
+      "fixture_before_rollback": {
+        "active": true,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "states_after_rollback": [
+        "COMPENSATED"
+      ],
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": true
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "state_sha256": "845c07c6e4250021e0a6735a13dc036ade59d5f20c8b7f241456f4da85f4066b",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-forward-success.wal.jsonl",
+      "wal_sha256": "4fff99866ded5cdeae9aca6ef7de7b8452b1bda9f38ae8007f507e9e13baeea1"
+    },
+    {
+      "route": "forward",
+      "behavior": "explicit_error",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": null,
+      "forward_exception": {
+        "type": "RuntimeError",
+        "message": "tool 'book' reported an error: {\"error\": \"Fixture operation unavailable\"}"
+      },
+      "states_before_rollback": [
+        "UNKNOWN"
+      ],
+      "fixture_before_rollback": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "explicit_error",
+            "is_error": true,
+            "active_after": false
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "states_after_rollback": [
+        "COMPENSATED"
+      ],
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "explicit_error",
+            "is_error": true,
+            "active_after": false
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "state_sha256": "f3ab7798036e8114787b0045e1ed5e63af047a05cf977483bafe911178d0c78c",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-forward-explicit_error.wal.jsonl",
+      "wal_sha256": "678240ef2c17af08224a189bb9c80bff1a76429fbcb8c37b7b1219021cf34b29"
+    },
+    {
+      "route": "forward",
+      "behavior": "server_exception",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": null,
+      "forward_exception": {
+        "type": "RuntimeError",
+        "message": "tool 'book' reported an error: Fixture operation unavailable"
+      },
+      "states_before_rollback": [
+        "UNKNOWN"
+      ],
+      "fixture_before_rollback": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "server_exception",
+            "is_error": true,
+            "active_after": false
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "states_after_rollback": [
+        "COMPENSATED"
+      ],
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "server_exception",
+            "is_error": true,
+            "active_after": false
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "state_sha256": "93e9930115c2809d17070329ad21340e950422b8a161d31e798c9a41735a4578",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-forward-server_exception.wal.jsonl",
+      "wal_sha256": "9d1298e0bb9c3058abb719e2b404bdadeeda291453ffc1e4b53902164940faa8"
+    },
+    {
+      "route": "forward",
+      "behavior": "silent_noop",
+      "initialize_result": {
+        "protocolVersion": "2025-03-26",
+        "capabilities": {
+          "experimental": {},
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "serverInfo": {
+          "name": "local-compensation-fixture",
+          "version": "1.30.0"
+        }
+      },
+      "declared_policy": {
+        "compensation": "cancel",
+        "booking_id_source": "forward arguments"
+      },
+      "tool_schemas": {
+        "tools": [
+          {
+            "name": "book",
+            "description": "Activate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ],
+              "x-compensation-pair": "cancel"
+            }
+          },
+          {
+            "name": "cancel",
+            "description": "Deactivate a local fixture booking.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "booking_id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "booking_id"
+              ]
+            }
+          }
+        ]
+      },
+      "forward_result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"booking_id\": \"fixture-1\", \"status\": \"success\"}"
+          }
+        ],
+        "isError": false
+      },
+      "forward_exception": null,
+      "states_before_rollback": [
+        "COMMITTED"
+      ],
+      "fixture_before_rollback": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "silent_noop",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "rollback_report": {
+        "rolled_back": 1,
+        "clean": true,
+        "summary": "Rollback clean: 1 step(s) compensated.",
+        "orphaned": [],
+        "failed": []
+      },
+      "states_after_rollback": [
+        "COMPENSATED"
+      ],
+      "fixture_state": {
+        "active": false,
+        "calls": [
+          {
+            "name": "book",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "silent_noop",
+            "is_error": false,
+            "active_after": false
+          },
+          {
+            "name": "cancel",
+            "arguments": {
+              "booking_id": "fixture-1"
+            },
+            "mode": "success",
+            "is_error": false,
+            "active_after": false
+          }
+        ]
+      },
+      "state_sha256": "5a807f338c911fdb6e39b23b28663834fee5e4407bcda0a63eb30543f8119004",
+      "wal_file": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-gt2wzleh\\agent-saga-forward-silent_noop.wal.jsonl",
+      "wal_sha256": "dce54251f1e0bbc78c3e4259e7c33f43b03e8b7b2e39cc300347c3dd24c9ce41"
+    }
+  ],
+  "script_sha256": "351e211bec65fcb7851f52ab884e88ce429c52a46e51af98ec1f5458f838f9dc",
+  "fixture_script_sha256": "7bccfe884ffe8f6f84f417e479b96d121cb63337ca6db7a35390a4f18702a714",
+  "packages": {
+    "colorama": "0.4.6",
+    "graphviz": "0.21",
+    "pydantic": "2.13.5",
+    "pydantic-core": "2.46.5",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.4",
+    "annotated-types": "0.8.0"
+  },
+  "environment_adaptation": "Initial import failed because agent-saga retry.py imports undeclared pydantic; installed pydantic 2.13.5 without changing source. No MCP cases ran on that failed attempt.",
+  "harness_correction": "An initial harness omitted wal.start() and failed before the first forward tool call. Final harness follows the upstream CLI lifecycle; that setup failure is not a framework compensation result.",
+  "child_python": "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\results\\venvs\\rac-mcp\\Scripts\\python.exe",
+  "parent_external_connection_attempts": [],
+  "allowed_stdlib_socketpairs": 0,
+  "child_external_network_blocked": true,
+  "model_calls": 0,
+  "limits": [
+    "Selected software mechanisms, not independent model tasks or a framework ranking.",
+    "SagaLLM uses scripted duck-typed agents, not its model-driven Agent implementation.",
+    "A generic returned error dictionary is not an advertised SagaLLM error protocol.",
+    "agent-saga uses actual upstream stdio and SDK server; the outer serve_stdio client loop is not invoked.",
+    "Compensation policy and explicit rollback boundary are supplied by the experimenter.",
+    "No crash durability, connector-service or arbitrary postcondition guarantee is tested."
+  ]
+}

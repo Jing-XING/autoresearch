@@ -1,0 +1,62 @@
+{
+  "purpose": "Check raw state/WAL consistency and construct a scoped cross-implementation table.",
+  "input_sha256": {
+    "research\\evidence\\independent_compensation_probe_v2.json": "24f19250528ef07f7c2cf6468cef29f33941f475401093425064c75fe6859d9e",
+    "research\\evidence\\rac_real_mcp_probe_v1.json": "62557d21ad00992a4ee3d5b35defb5f71166edd479de3ecf6e5c4d7b186cd61d"
+  },
+  "raw_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-success.wal.jsonl": "a93c277b357dde2bfbe3d5e69921c72ffccdb825a3974eaef483168e2ff65d81",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-success.json": "845c07c6e4250021e0a6735a13dc036ade59d5f20c8b7f241456f4da85f4066b",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-explicit_error.wal.jsonl": "4e370a104f4f01f81f39fb051aee225da46a9cc8a65d3282cc5f9a5235115cd1",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-explicit_error.json": "b6b21daefe5a8f4b62a30797105b26ccef33fef6c6dd3036cec1a7511b631e31",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-server_exception.wal.jsonl": "1c421bbbde4b4431f5bd0c436cbfaf2c89751530467d0101837d71ec9a290281",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-server_exception.json": "479a22c9a5398ebb618797192916fb854ec0a18a85adf8bf93fc7fca097b698b",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-silent_noop.wal.jsonl": "7a29d180b15dfd8d2f079d47db92da2547a4d9eb17514d3b8337336234e8c23e",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-rollback-silent_noop.json": "927ef43aa67e1b9ee39083a8144ed2685d02a1634ab7e2ecd9d6579c41077e3f",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-success.wal.jsonl": "be6fb3bfb1efeb906c654b63376c8070ec6a904e5f699354b2031e9bec93cf20",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-success.json": "845c07c6e4250021e0a6735a13dc036ade59d5f20c8b7f241456f4da85f4066b",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-explicit_error.wal.jsonl": "905b42fcc8932d805cd3c2d5a45ba9ed5f372ee65e3064b7563d355deeeb5bb8",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-explicit_error.json": "f3ab7798036e8114787b0045e1ed5e63af047a05cf977483bafe911178d0c78c",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-server_exception.wal.jsonl": "818a3ed31e1b290137a3fb6ae619cacf5a31a57d576bf271efe38b94af5f71d1",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-server_exception.json": "93e9930115c2809d17070329ad21340e950422b8a161d31e798c9a41735a4578",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-silent_noop.wal.jsonl": "e672f9761ff899b1645679b5e72460fd88e9d06be1c98c1d34386d6bc0c0d93b",
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\\u8bba\u6587&\u4e13\u5229\\autoresearch-generic\\results\\probes\\rac-mcp\\independent-5upfy2vc\\agent-saga-forward-silent_noop.json": "5a807f338c911fdb6e39b23b28663834fee5e4407bcda0a63eb30543f8119004"
+  },
+  "actual_sdk_rollback_comparisons": [
+    {
+      "behavior": "success",
+      "fixture_active": false,
+      "rac_default_reported_success": true,
+      "rac_status": "COMPENSATED",
+      "agent_saga_clean": true,
+      "agent_saga_status": "COMPENSATED"
+    },
+    {
+      "behavior": "explicit_error",
+      "fixture_active": true,
+      "rac_default_reported_success": true,
+      "rac_status": "COMPENSATED",
+      "agent_saga_clean": false,
+      "agent_saga_status": "COMPENSATION_FAILED"
+    },
+    {
+      "behavior": "server_exception",
+      "fixture_active": true,
+      "rac_default_reported_success": true,
+      "rac_status": "COMPENSATED",
+      "agent_saga_clean": false,
+      "agent_saga_status": "COMPENSATION_FAILED"
+    },
+    {
+      "behavior": "silent_noop",
+      "fixture_active": true,
+      "rac_default_reported_success": true,
+      "rac_status": "COMPENSATED",
+      "agent_saga_clean": true,
+      "agent_saga_status": "COMPENSATED"
+    }
+  ],
+  "checked_agent_saga_cases": 8,
+  "checked_sagallm_cases": 6,
+  "limits": "Identical constructed MCP fixture and behavior controls; differing library stacks and supplied declaration mechanisms. No task-level superiority or automatic-discovery comparison."
+}

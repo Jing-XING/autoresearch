@@ -1,0 +1,7 @@
+{
+  "archive": "results/remote/independent-compensation-v2-evidence.zip",
+  "sha256": "8e6fceb61b5e07b35a1117d2edaf189945622783c27b4ae1dda9097ad848e314",
+  "bytes": 61511,
+  "members": 38,
+  "purpose": "Raw local states and WALs for complete v2 plus superseded v1 and original harness source; duplicate executions are not independent evidence."
+}

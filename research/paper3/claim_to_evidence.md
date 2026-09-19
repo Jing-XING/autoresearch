@@ -12,6 +12,8 @@ This is a working paper, not a completed submission or a new-method claim.
 | Native MCP error messages can be inconsistent with internal COMPLETED/COMPENSATED records. | `../evidence/rac_real_mcp_probe_v1.json`; `../evidence/rac_mcp_probe_validation_v1.json` | Twelve real protocol executions with explicit diagnostic registration; local constructed tools. |
 | Changing the adapter version changes four explicit-error paths. | `../evidence/rac_mcp_adapter_version_probe_v1.json` | Six matched defaults, 0.2.2 vs 0.3.2; all other dependencies current. |
 | Released records are not all independent trials; conservative screen finds zero status mismatches. | `../evidence/rac_zenodo_archive_audit_v1.json`; `../evidence/rac_zenodo_archive_findings.md` | All 280 JSON inspected; no general natural-language or post-state correctness proof. |
+| Independent agent-saga transport propagates explicit MCP errors into failed compensation status. | `../evidence/independent_compensation_probe_v2.json`; `../evidence/independent_compensation_validation_v1.json` | Eight real upstream-stdio controls, same constructed SDK fixture, supplied policy/boundary; no outer client proxy loop, model task or general superiority claim. |
+| SagaLLM coordinator uses exception-based completion and omits the currently failing agent from rollback. | `../evidence/independent_compensation_probe_v2.json` | Six scripted-agent controls; generic error dictionary is not a declared result protocol. Initial v1 forward fixtures were invalid and are retained, not counted. |
 
 No claims of a new compensation algorithm, superiority over competitors,
 production prevalence, reconstructed paper scores or independent human

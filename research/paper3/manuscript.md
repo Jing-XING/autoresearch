@@ -18,7 +18,11 @@ two further integration boundaries: a schema-declared compensation pair is
 not discovered, and a returned error ToolMessage can coexist with an internal
 COMPLETED record. Six matched executions with an older MCP adapter distinguish
 the effect of exception-raising behavior from that of returning an error
-message. Successful and silent-no-op controls show the limits of status checks.
+message. An independent agent-saga transport reports explicit MCP compensation
+errors as failures on the same fixture, while silent no-ops remain undetected.
+SagaLLM coordinator controls separately expose its exception-based completion
+convention. These comparisons delimit the diagnosed mechanisms rather than
+establishing a general framework ranking.
 Separately, an audit of all 280 JSON files in the published archive identifies
 duplicate aggregate records and nested progress snapshots; a conservative
 structured-status screen finds no observed instance of the constructed
@@ -43,9 +47,10 @@ reasonable for a conversational loop, but a downstream recovery component
 must interpret the resulting value consistently. It cannot assume that every
 normal return means the requested state transition occurred.
 
-This study investigates a concrete implementation rather than proposing a
-new general transaction protocol. The subject is the public RAC code and its
-archived artifact. We ask which failures can be demonstrated through actual
+This study investigates concrete implementations rather than proposing a
+new general transaction protocol. Its primary subject is the public RAC code
+and its archived artifact, with selected independent implementation controls.
+We ask which failures can be demonstrated through actual
 component execution, which depend on the selected dependency version, and
 whether the released experimental traces independently show those failures.
 Separating these questions prevents a unit-level counterexample from becoming
@@ -105,6 +110,19 @@ format. Fourteen archived-source rollback cases address source-version scope.
 The native MCP study contains twelve execution controls and one unmodified
 automatic-discovery workflow, followed by six matched older-adapter executions.
 We do not sum these numbers into a task-level sample size or a defect rate.
+
+Independent controls pin agent-saga commit
+`4310ff570e60c42c081ae216e87a1ccb093525d4` and SagaLLM commit
+`2781c33edc4005b066671d5dc3cad157fae14f11`. Downloaded source blobs are verified
+against their Git trees. Eight agent-saga controls use its unmodified
+`UpstreamServer` and `SagaMCPProxy` with the existing SDK fixture, a local
+write-ahead log, an explicitly supplied compensation policy and rollback
+boundary. The outer client-facing stdio loop is not exercised. Six SagaLLM
+controls execute its unmodified coordinator with scripted agents, not its
+model-driven agent. The isolated parent environment adds colorama 0.4.6,
+graphviz 0.21 and pydantic 2.13.5; the child uses the existing MCP environment.
+These fixtures were selected after the RAC diagnosis, so their selection is
+not independent of the observed mechanism.
 
 ## 4. Returned errors and rollback records
 
@@ -191,6 +209,52 @@ the remaining packages are still current, and the newer default was released
 after the paper. Attributing this MCP-specific behavior retrospectively to
 the original reported model experiments would be unwarranted.
 
+### 5.3 Independent native MCP transport control
+
+[agent-saga](https://github.com/thomasjgeorge23/agent-saga/tree/4310ff570e60c42c081ae216e87a1ccb093525d4)
+provides a useful positive control. Its stdio transport raises on an MCP
+`isError` result. Using exactly the same fixture script and four rollback
+behaviors as the RAC default-adapter study produces the following observations.
+The validation checks raw fixture-state equality across implementations and
+consistency between agent-saga's report and persisted log.
+
+| Compensation behavior | Residual booking | RAC default reports success | agent-saga reports clean |
+|---|---|---|---|
+| Successful cancellation | No | Yes | Yes |
+| Explicit MCP error | Yes | Yes | No |
+| Server exception serialized as MCP error | Yes | Yes | No |
+| Successful response with no effect | Yes | Yes | Yes |
+
+The two explicit errors become `COMPENSATION_FAILED` in agent-saga. In its
+forward-error controls, the operation is recorded as `UNKNOWN`, and the
+explicit rollback uses the booking identifier supplied in the original
+arguments. This conservatively preserves the possibility of an effect even
+though the constructed failing forward operation makes none. A silent no-op
+still produces a positive rollback report with a residual booking. Thus
+correct error propagation addresses one boundary without proving an external
+postcondition. The comparison does not test crash recovery, connector services,
+automatic pair discovery or overall framework reliability.
+
+### 5.4 An exception-based coordinator interface
+
+The independent [SagaLLM coordinator](https://github.com/genglongling/SagaLLM/blob/2781c33edc4005b066671d5dc3cad157fae14f11/src/multi_agent/saga.py)
+calls rollback on agents whose forward calls returned before a subsequent
+exception. With scripted agents, a raised compensation error produces a
+warning; a normally returned error dictionary and a silent no-op both produce
+a printed rollback-completion message while leaving the local effect active.
+The dictionary is an experimenter-defined value, not an advertised SagaLLM
+error protocol. This result demonstrates its exception convention and should
+not be presented as violation of a declared typed-result contract.
+
+Two further controls raise before and after the forward effect. In both,
+the currently failing agent is absent from the coordinator's completed list
+and its compensation is not attempted; only the after-effect case leaves a
+residual booking. These are scripted coordinator paths, not a reproduction of
+SagaLLM's model benchmark. The contrast with agent-saga's explicit `UNKNOWN`
+state illustrates why a failed return and an absent effect are different
+facts. This distinction is established in prior recovery work and is not a
+new algorithmic contribution here.
+
 ## 6. What the released experiment archive shows
 
 We separately inspect all 280 JSON files in the published archive. The audit
@@ -226,9 +290,9 @@ artifact likewise includes controlled tool faults and effect oracles.
 Our controlled failures do not establish novelty for fault injection,
 typed errors, postcondition verification or framework bug taxonomies.
 
-The current evidence is concentrated in one recovery implementation. Its
-several paths and two source versions do not constitute replication across
-independent recovery systems. The operations are constructed, the declarations
+Most evidence remains concentrated in RAC. The two independent implementations
+add narrowly selected coordinator and transport controls, not a representative
+sample of recovery systems or matched end-to-end tasks. The operations are constructed, the declarations
 and failure modes are selected, and the experiments contain no autonomous
 model decisions. An external effect oracle is available by construction.
 These conditions make the mechanisms inspectable but limit deployment claims.
@@ -239,7 +303,9 @@ The executed probes demonstrate specific inconsistencies between returned
 tool errors, automatic compensation discovery and recovery records. They also
 show why recording the complete dependency combination matters: an adapter's
 error-delivery default changes the same constructed workflow's recovery result.
-The archival analysis prevents these findings from being misrepresented as
-observed benchmark failures. Broader independent comparisons, a complete
-bibliography and submission-quality positioning remain necessary before this
-working manuscript can support a publication claim.
+The independent transport control shows that explicit MCP errors can be
+propagated consistently with recovery status; the no-op control separates
+that property from verified restoration. The archival analysis prevents these
+findings from being misrepresented as observed benchmark failures. Broader
+realistic workflows and submission-quality positioning remain necessary before
+this working manuscript can support a publication claim.
