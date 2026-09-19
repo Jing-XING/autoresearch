@@ -1,0 +1,90 @@
+{
+  "summary_sha256": "6b64085f7ed3e889ae3b1e89626a947e1484dc16f322eb5ba50b2378fb9ce858",
+  "rows": [
+    {
+      "domain": "computer_student",
+      "model": "qwen3",
+      "condition": "original",
+      "correct": 4,
+      "n": 17
+    },
+    {
+      "domain": "cars",
+      "model": "qwen3",
+      "condition": "original",
+      "correct": 10,
+      "n": 18
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen3",
+      "condition": "original",
+      "correct": 15,
+      "n": 20
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "correct": 4,
+      "n": 17
+    },
+    {
+      "domain": "cars",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "correct": 15,
+      "n": 18
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "correct": 13,
+      "n": 20
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen25",
+      "condition": "original",
+      "correct": 4,
+      "n": 17
+    },
+    {
+      "domain": "cars",
+      "model": "qwen25",
+      "condition": "original",
+      "correct": 9,
+      "n": 18
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen25",
+      "condition": "original",
+      "correct": 6,
+      "n": 20
+    },
+    {
+      "domain": "computer_student",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "correct": 4,
+      "n": 17
+    },
+    {
+      "domain": "cars",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "correct": 9,
+      "n": 18
+    },
+    {
+      "domain": "book_publishing_company",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "correct": 8,
+      "n": 20
+    }
+  ],
+  "note": "No inferred error bars; no population significance claim."
+}

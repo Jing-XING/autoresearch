@@ -1,0 +1,82 @@
+[
+  {
+    "model": "qwen3",
+    "condition": "none",
+    "success": 13,
+    "regular_failure": 7,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen3",
+    "condition": "raw",
+    "success": 11,
+    "regular_failure": 9,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen3",
+    "condition": "outcome_only",
+    "success": 10,
+    "regular_failure": 10,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen3",
+    "condition": "full_metadata",
+    "success": 10,
+    "regular_failure": 10,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen3",
+    "condition": "boundary_aware",
+    "success": 10,
+    "regular_failure": 10,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen25",
+    "condition": "none",
+    "success": 7,
+    "regular_failure": 13,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen25",
+    "condition": "raw",
+    "success": 11,
+    "regular_failure": 9,
+    "run_error": 0,
+    "registered": 20
+  },
+  {
+    "model": "qwen25",
+    "condition": "outcome_only",
+    "success": 7,
+    "regular_failure": 9,
+    "run_error": 4,
+    "registered": 20
+  },
+  {
+    "model": "qwen25",
+    "condition": "full_metadata",
+    "success": 11,
+    "regular_failure": 8,
+    "run_error": 1,
+    "registered": 20
+  },
+  {
+    "model": "qwen25",
+    "condition": "boundary_aware",
+    "success": 8,
+    "regular_failure": 12,
+    "run_error": 0,
+    "registered": 20
+  }
+]

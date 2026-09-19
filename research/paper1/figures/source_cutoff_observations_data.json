@@ -1,0 +1,35 @@
+{
+  "cutoffs": [
+    4,
+    8,
+    16
+  ],
+  "categories": [
+    "Successful by cutoff",
+    "Cut; recorded continuation succeeds",
+    "Cut; recorded continuation does not succeed",
+    "Terminated unsuccessfully by cutoff"
+  ],
+  "counts": [
+    [
+      0,
+      14,
+      60,
+      0
+    ],
+    [
+      4,
+      10,
+      59,
+      1
+    ],
+    [
+      7,
+      7,
+      56,
+      4
+    ]
+  ],
+  "distinct_tasks": 74,
+  "purpose": "descriptive source audit"
+}
