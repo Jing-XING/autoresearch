@@ -12,8 +12,10 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
-from autolab.retail_interventions import replace_refund_iterator
+helper_spec = importlib.util.spec_from_file_location("retail_intervention_helpers", ROOT / "autolab/retail_interventions.py")
+helper_module = importlib.util.module_from_spec(helper_spec)
+helper_spec.loader.exec_module(helper_module)
+replace_refund_iterator = helper_module.replace_refund_iterator
 
 
 def sha(path):
