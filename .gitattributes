@@ -1,0 +1,5 @@
+# These files are used as byte-hashed experimental inputs and evidence.
+# Preserve their bytes across Windows/Linux checkouts; do not rewrite line endings.
+*.json -text
+*.jsonl -text
+*.py -text

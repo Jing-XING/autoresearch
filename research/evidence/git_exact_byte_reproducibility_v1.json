@@ -1,0 +1,554 @@
+{
+  "purpose": "Repair exact-byte Git reproducibility without modifying local experimental inputs",
+  "prior_commit": "3f4554b",
+  "before": {
+    "purpose": "Compare tracked experimental JSON/Python bytes with an index or commit tree.",
+    "tree": "HEAD",
+    "tracked_files_checked": 217,
+    "mismatched_files": 86,
+    "mismatches": [
+      {
+        "path": "prepare.py",
+        "local_sha256": "f3ff54f2271df15144f0674a6234306e350004fc1ae3f9237aa176e6d3ba9944",
+        "tree_sha256": "4f2ba9cbb8ba8c4a3d35be405a913e2f3be3af9aea103ed52ef7b2a662058150",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/langchain_error_envelope_probe_v1.json",
+        "local_sha256": "cd92343db2a6a514527a643f94f210f49e9ea067412d304cc6f7934ca5c01ed5",
+        "tree_sha256": "b3c45691bd3a4dd7e33f0351fa2e3d771a46e239a2da437717ce70b91e54f920",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/memory_bank_content_diversity_v1.json",
+        "local_sha256": "5d51767dd2f097cf94534e97090bf0082aa94bc979c8553ff7087ce684e6f9fb",
+        "tree_sha256": "e520ec612b45561ffc3bc21593493c40e3c823aa6b344559c0d011ede892f31f",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/memory_curation_v2_quality_audit.json",
+        "local_sha256": "f8a29abf042765a468fba210baa60c182c53132299e2f1ebaeef20aa2d09409c",
+        "tree_sha256": "450a4b3ed938180f73e37e6e7cf49ee234df132443122bba7ac819c2ea39e55b",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/memory_cutoff_satisfaction_join_v1.json",
+        "local_sha256": "9207a9e89579088f3a1694d59b65ca6f579caa4996eadc32b0262fcde536a880",
+        "tree_sha256": "8bc39b40ec4ab6d919cda6d4173c56273d94f0de2798e61b3ff37b222b489fdd",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/memory_test40_selected_grounding_validation_v1.json",
+        "local_sha256": "d1c99373da6839d7c4a0a1239d1976d8c805f3ffddaba88d10cfa47b67f4a41e",
+        "tree_sha256": "2e40be549a14d6f0f61016b1c1d6bc065ae237d1e8fea4887c3ae6a6658fb21c",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/memory_test40_tie_registration_v1.json",
+        "local_sha256": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb",
+        "tree_sha256": "1c498df793a2dc6994d8006992ecfc85927ff0b8aeaeaea5dc74fb556060929e",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/memory_transfer_retrieval_audit.json",
+        "local_sha256": "20d8559529f1f7cab5c41c5ff32e7c8fe7ad7a6cc6a73d91798e0e43be9758a8",
+        "tree_sha256": "62228f9cbeb7d71d245b2a53aa401c49abb36bbbb404a88edd5a14534555e840",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/qwen30b_deployment_v1.json",
+        "local_sha256": "9baaf662f045786e1c8c692a3eb8dd1cffcf86aa7ec65a1b4d6b7aa35157db2f",
+        "tree_sha256": "c8803752334e42aaed4fe2a7a7d4b0705f4bdc1e6fe1df2c797ba96a11ef4ee6",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/qwen30b_download_manifest.json",
+        "local_sha256": "bd53e0167539cc3ca79347dae504d78f97e054b220d1da58331d8ad0a97a1967",
+        "tree_sha256": "0b6761535223fcb3a9f4c21c2f6267c0b319b3723bc3a145ecf7a45d3a760747",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_archived_rollback_probe_v1.json",
+        "local_sha256": "a8b0180e337ee31b34c2649e30e914d23b07f8497885c25696f0adc3a46fd5cf",
+        "tree_sha256": "ef06803b63cc1819340b96154c14d6dc2cb73be8d76e7c3ad04b336fdbba286e",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_compensation_status_probe_v1.json",
+        "local_sha256": "c761d64775fe6747c1e34095839eb2b68166ca38b9254c3929eb28ebdb3f4e7e",
+        "tree_sha256": "3e3e26689b03cb15aa5fe83ebfebd57750a0d961acad9c2d7d1c68f666a3a0c5",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_compensation_status_probe_v2.json",
+        "local_sha256": "00d42cc17d42e90234ea25d63a2a757dcba1b26abae2f8c912895978aea9ea39",
+        "tree_sha256": "30644e3214b462f562ddd555eef0da068ee273bb28d111d7e0e3e4b2e5ee8fa6",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_interceptor_recovery_probe_v1.json",
+        "local_sha256": "f9781215d212d7f0fe5201c00c56767748a9806c96fdfbb6f21dbeeb6653e185",
+        "tree_sha256": "ba3140a59ced439a7e2fa2b6c52d9733cee86dc8070236e08c62f979c37444e4",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_mcp_discovery_probe_v1.json",
+        "local_sha256": "578175c43171f71ccae15f1296401ae639ffceb1740f21edcd097a9b24c50a5c",
+        "tree_sha256": "a3b2eaa263f3a2c7d68a3d43edef853fae8ddd808ab0d2060222941edafb4426",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_mcp_probe_validation_v1.json",
+        "local_sha256": "59d286aef397340f41961f7534cf2c08054b5aa58fa9c4a477fc205e4624916d",
+        "tree_sha256": "26f1472d0758fc9b6a23fd8e14fbdc47364a48d49a755ae8535ba683eb1857bb",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_real_langchain_tools_probe_v1.json",
+        "local_sha256": "744b628e98575eb132146e47c0b8e21031523f967b7dcbe579a07951d87e49cc",
+        "tree_sha256": "10c6fa8b5b009b1bd02d38d078fea34c162cc6be811557daa339ba02b996c300",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_real_mcp_probe_v1.json",
+        "local_sha256": "62557d21ad00992a4ee3d5b35defb5f71166edd479de3ecf6e5c4d7b186cd61d",
+        "tree_sha256": "5ca31400f96c1deff68fcfeb01e535d5ac2e5ca5c243052bac754e4a5547fa05",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/rac_zenodo_archive_audit_v1.json",
+        "local_sha256": "3844d9fc96cdae397aa29f01c4e7ec8255a27692689cc58dde03f50c01f618ae",
+        "tree_sha256": "967b966efae9c731e5c38c71677bf82e96ed254b79de039d220a0174b40d611c",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/smollm3_download_manifest.json",
+        "local_sha256": "5eaaa3abb8524efa0c6f595060847ec61a28a2d57bcc863523c9a66478de3934",
+        "tree_sha256": "3fb9a8997fb9a5c40ffd6a48cf98c6fa63e086e6fd5b1b3ad4cc30470faaeecb",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau2_solo_state_overlap_audit.json",
+        "local_sha256": "93bfe8260b95cb016ed5d8fb2d71d9e09cc9a2615e13550fd1ad1326b04b06a3",
+        "tree_sha256": "0a72a4c69e6e527389a45999b010401bc4901fc3619ae9c0614377f01ea6835a",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau2_split_membership_audit.json",
+        "local_sha256": "969a6f87c1625c8cb8ab1c1330bc49cefaa6eed7fb480ec4b5c5c15ad8119907",
+        "tree_sha256": "18c28da814c0efb942742afa7be748fdbacd91f7a6162758463de9903dabe049",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_small20_v2_analysis.json",
+        "local_sha256": "0f7bd8924da702b80937787e46897a6187f95374f2f76f7e6c39aafcbf84a631",
+        "tree_sha256": "cb906a3b2082e0220ed9fbb2d19bc7a8e2164aa72d570a12bbe87c814b0462fb",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_boundary_aware_state_audit.json",
+        "local_sha256": "adf21b4f426f4f3a5b3b26114092f7523ca75dd44bddd8f8e30c2fa0a5527931",
+        "tree_sha256": "f37d2f88f963f1a4bb784a3390985c3b756e059ded3ae94af01a70de6498e57e",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_control_reproducibility.json",
+        "local_sha256": "abb530c731b315e8d433009d7ba4c1ed3e2b4c003b51e2dec957eb881264ce2f",
+        "tree_sha256": "7377720f28eacb704ebefc0ed7ad240111dd76fe02bebdccb0436b12a0f9f188",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_full_metadata_state_audit.json",
+        "local_sha256": "f00a839606b448523395bcf6a6bc842d8f6f888512f338690c166af0dad5eb0e",
+        "tree_sha256": "c12eda007b99088a8522b660215b6d9e7f75427ce463b831fae65898ceeb64f0",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_none_summary.json",
+        "local_sha256": "b65efab7821448b688eaeea2f7dc9b31b3fe02e3d3e2c63555533211be62db04",
+        "tree_sha256": "e7902fd238066f67a34e01f875f0a8579bd3334dc71b8be249422e5620db1311",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_outcome_only_state_audit.json",
+        "local_sha256": "65049991a427b8b26a9e8a4ce4ed1a0b38e49f4fea5bd64e037945aa2b372adf",
+        "tree_sha256": "0d39bec9e85b3e9a32e12239bd45a9823e7852c729f1a49f3f67d303218c01f3",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_protocol_failure_audit.json",
+        "local_sha256": "54be87232f1f0ebada153b5aab8e652447e5f7d3b11628fae3b8b131f4b31684",
+        "tree_sha256": "c1c62bb995922f2aa7497ec136bff9b2c908f73216c6be2f79db8b0b74ca5f35",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_memory_v2_raw_state_audit.json",
+        "local_sha256": "562125a3f749fe6c4dd575f1c265f69214b08b8f49fda893c32b14fc58e52066",
+        "tree_sha256": "1a8577c4fe44d4653c3989b356b9c852beb0d6dd87c1fda5f01f60d568316555",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_native_small20_prefix_v1_state_audit.json",
+        "local_sha256": "c960559e82e4493af9bb5f070699633064762003f0bb54d5fe0121b29cdac056",
+        "tree_sha256": "d59f46cc0434a9ed5bba096e914b5a8db66508d8d39d01a0589557d73731a20c",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_native_small20_prefix_v1_summary.json",
+        "local_sha256": "9e9dda730ed81b2c63c62f6941c7c312344b3951d14e7b91f3068575f6e20fa6",
+        "tree_sha256": "b17da91fb443ed98f363a35f20834e01944c5a53f5cf6e271bae61b059615911",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_train74_all_state_audit.json",
+        "local_sha256": "5f82a61bab330c8f636d3ce614b8dc48d3669968a2dd7cb4d62ffff4f2a771ee",
+        "tree_sha256": "12268d687aba20c61b9ef5b544451ba492a41390e4cb56355b467761f6679842",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_train74_qwen3_source_summary.json",
+        "local_sha256": "d2460cd08baa05a0ed3e6ed513205c89a9c73c3d4000bf387029932c1359e263",
+        "tree_sha256": "1e42b8edcb2ffd5c645de625c3fe93de57dad0826c8f20d1464672726e54bbb0",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_train74_qwen3_state_audit.json",
+        "local_sha256": "bad753e51be27979c436895871fb81de568c17d327096c4a5bee0d5477c8a968",
+        "tree_sha256": "df3731164c7770afb1df21c47c0bafd63978c407121227fefe026f3fc30c6ab5",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/tau_train74_source_summary.json",
+        "local_sha256": "7be29c73be885a3c43132a97c9db45444a945e55e963c8b164b8bda47a4280ec",
+        "tree_sha256": "10cf8c0decfa41bc844173331b4ec769bf471ea53b4411045aff0f69cccda1d3",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_cars_price_swap_audit_v1.json",
+        "local_sha256": "7394098ebe5ca6805e9e80a87beacbfd87fb9d40083a3c4c3e37f5a8cf84fc31",
+        "tree_sha256": "356566a27c27a3c261506012a1c3bd2b83c673ab7560ed1f174dbd3a08825484",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_cars_price_swap_candidates_v1.json",
+        "local_sha256": "248ccc6be1a92fb73f17a35b447a7d1c657072794ffe4a95ed56edc63aae8c82",
+        "tree_sha256": "433c46a33d4cd8dbfaf562a63b31add29219601629e66dcd128f384a3808e48d",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_coverage12_v1_answer_annotations.json",
+        "local_sha256": "23cc3efe45a4af0982b6a9a04d793274e76ece036687279a0885a63397ded2b2",
+        "tree_sha256": "e66cf2fb5a0105e3f9a85a2ae8a90042db910450ab096ff147949bbfe681847c",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_coverage12_v1_answer_audit_summary.json",
+        "local_sha256": "41bfb780916a716e428bcf0623d6f7831751a56df5cd73e9d8eaf1db55cfdaef",
+        "tree_sha256": "3f4b486273a52d291117e15da458af1dd5aabbf21d911a174e00393ca324307f",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_coverage12_v1_observed_lineage.json",
+        "local_sha256": "38721830ceb6376130972d0ada6a487a18769e33f4fd30ee4f69b1a969cd33f7",
+        "tree_sha256": "fbc8c2d32cd093ff8d0410ac6006045257ebc876957278a588955dff705ceb96",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_coverage12_v1_summary.json",
+        "local_sha256": "e163c228b1b4264bbdba8f00c82e11a800567aa883ef07eecff2109e5219c50c",
+        "tree_sha256": "b38435e25cd76944a82578000f816031636b47d9b3e64f4185c4b5d22b0fc490",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_cross_universe_visibility.json",
+        "local_sha256": "5326e11249846cad3551cf917cbaf53191ba06548e5c8f00ee0223929f81d70b",
+        "tree_sha256": "d5fd340247d320c9d898afb146b019e96f46e9a826fd6af4956986574bca6616",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_answer_audit_policy_v1.json",
+        "local_sha256": "ceff8ec6dcea7dd8ce2b9912c3fdd928d8ca81d7924981c2e429eb6d46b951af",
+        "tree_sha256": "58a9bb613abac6f31a6647b8c3b016302230a368279548d93b236e2cd0439cf5",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_first160_answer_annotations.json",
+        "local_sha256": "c533899dbbcda002d240e95de3cdd503e1dde7c5d222d27d4ce11ad644b22d82",
+        "tree_sha256": "f6fcdd9cf6f089d34036b79ea848ac267a0cb2b65adf6721cc0181567106324a",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_first160_protocol_audit.json",
+        "local_sha256": "baf534c4d4671faeed5075fae5021feda6cb6e75b238b176fc652d7fd24da943",
+        "tree_sha256": "85a0bc431579ea7f0c7fe2eb653f168092a257453c6b5311534e95032518bba2",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_first160_rejected_batch_audit.json",
+        "local_sha256": "f2d9c2257483d0627ffa1ac2b4da628a5e30caaa9398a38b49d1d7ba8da3ae22",
+        "tree_sha256": "6cd024d3b887c9a92e7987fefb69d64cfb477f53b95c5e0723c272f1fa5a1d73",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_setup_audit.json",
+        "local_sha256": "1af73e582a48d8e9ae56a5c2af24b186d329e4a2640b656598ec356740c04072",
+        "tree_sha256": "215e358b1752aa9f11377e14ac83d91dbb8e0e33aa50e806e733732155cdaa85",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_sql_cards_v1.json",
+        "local_sha256": "50e71d927ed7666a3c68f751324ff8d5cf056af40f7a4642b42d377715c05e60",
+        "tree_sha256": "c2deb79bac711266603851ee9baaf496ab0b38832eecc083575e1fcfaa7c83c3",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_v1_answer_annotations.json",
+        "local_sha256": "6b9bfcb31cf70f7db032d4d07a40a23ce63ed134986bce38dde71559e2799e84",
+        "tree_sha256": "6d1ef98877dfad41e2b735ca57236730979a220cb8e3687ac202f3b839078385",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_v1_answer_summary.json",
+        "local_sha256": "6b64085f7ed3e889ae3b1e89626a947e1484dc16f322eb5ba50b2378fb9ce858",
+        "tree_sha256": "88114448a08a1e81e46bf285a7b937ea23c6bfc1ee77d3082c03fb8c76e6c29b",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_v1_execution_summary.json",
+        "local_sha256": "fd8cdf2849008891d6fc0979f7e0b9fd348b86298c7e04fe30cb2ef092c9c3a1",
+        "tree_sha256": "6d2b0e3d7622cc2c4c2eddcd96f8d5ff98fffdf8a072da05930f5fc7719a8ba8",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_crossdomain_v1_rejected_batch_audit.json",
+        "local_sha256": "3d21af77d05255db82a1671401cc8a399ffb763a9db348887e9a55802de48b91",
+        "tree_sha256": "0a14876d285b203edcecb10d024e0cd00e319da0530ac1848e39c14ed2fdec83",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_domain_expansion_download_v1.json",
+        "local_sha256": "b24be28cfb741cb4c1d63bfe43ba81ccb38d458ba38068816fd979bf7bfae937",
+        "tree_sha256": "a5cfdf2696f3f22325fcb6c12cf807a296663a844082c7f082fa8d07f3415813",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_domain_expansion_registration_v1.json",
+        "local_sha256": "276d65aad2d63a641ca586727515cd9b1f7f30fe4dff98c662da5518c7595167",
+        "tree_sha256": "7b094c37acfd6efa5b30b2fa8ce57404af4e1e53aa31461f3557c6ea0cccdb57",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_domain_expansion_setup_v1.json",
+        "local_sha256": "35d164b716edf5c54ca93d81669975a55841c864ffbef1c3f180d1de25e84369",
+        "tree_sha256": "bdcab31a4e3b2d78429fc865fb1b55b29e96d5031090dae6cf38e98cc27ba51c",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_domain_expansion_sql_cards_v1.json",
+        "local_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+        "tree_sha256": "ed3e8bc60679414e786085df1c6d40bd31118b45369fcdd65f3289cac59f99d6",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_executor_pairing_v1.json",
+        "local_sha256": "f9e5d4bec319aa71c1721a3cae2f9bf6bed63cd304773356f05d77cee3555142",
+        "tree_sha256": "3984e528fad852df9fec0c7893233d634fa0eb5561460305f17d94f84c013bbb",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_expansion_answer_lengths_v1.json",
+        "local_sha256": "2f7bd036f8cad3ea94acc8d258df780fb4490aa1bbf2fb50c085ba1e1057784e",
+        "tree_sha256": "f4302e8173cf2c74656c569b5b46044d1e85e9918b69c9a4473675525d6c37f3",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_expansion_deployment_v1.json",
+        "local_sha256": "a577ad03588fd70fd20fb4d627bcc2bf08abd3ad9f7a222f222d9f6c5eba1e95",
+        "tree_sha256": "12a9618c72f942e89d630a671378bf5df38e3043e59256b35d1d6d5d097536ca",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_full_history_witness.json",
+        "local_sha256": "df795bb7174d482753ce08ef175f34d0a66166566351ed941c40a7989e91c4af",
+        "tree_sha256": "3ac0ba24c4eb6804175b5c0d563c87c5ba629d6ed156f49991afcccde9e52ce5",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_initial_scope_counterfactuals.json",
+        "local_sha256": "fcc0bf39fbb357008d24189f537da72845eb37fc164a42e8659934963e1308a7",
+        "tree_sha256": "c26685eb0a2a9cf07ffe3cca1975792abe183884ff5dacfe198ae704a06feb65",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_native_first4_v1_summary.json",
+        "local_sha256": "98ee775730f6919953efae2b3099940ebe01f9759c24fdeeeae7f758cda7b73c",
+        "tree_sha256": "d65decd0b99ad195ce8f5163b6b9eebf1f659db2735b7e7d3a1a262c0e343a71",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_permissive_v1_answer_annotations.json",
+        "local_sha256": "12c188b07dfb0a57eccb3a0dc655c0552a5de8f6f4826651abcdf32dfc001d18",
+        "tree_sha256": "ca74e925f025d50f18411efeb2cc76dea971d1a1ff936f80f28783b7c6590393",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_permissive_v1_answer_summary.json",
+        "local_sha256": "7fb87daf7241269ed986f3d7526c53e4bb4d731633927a158d6aad1d1b74d508",
+        "tree_sha256": "99c8ef614ccec6f320179cc50f19aea437115804f92f542fd66ec02f571ba0b5",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_permissive_v1_execution_summary.json",
+        "local_sha256": "67e48b7aa141deed2eba0a6061b39c9ebf5caa0bd6a8275b1398746aa2fcbe48",
+        "tree_sha256": "cce636996ea87b64e461521b754b2c9b86ccbeefbc91d015e4851e04e3fdd450",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_prompt_conditional_uncertainty_v1.json",
+        "local_sha256": "f5eb34e26a1fe37fe84e352c0cf49d6a3e43567660f4c14f5093f55f14a5edb9",
+        "tree_sha256": "babab44cdb951f8a223ac1752a124a729897066ee77e21babeccbbca7d1efca8",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_publishing_contract_audit_v1.json",
+        "local_sha256": "5d25a2a929260e74d63b362eae67902bc71ef20551bb69303cd0e1f61c4b170c",
+        "tree_sha256": "2cc34b43016bcd9d2a4c065bf5cd9b2d20140cdccaa1116a8e8ba5bb52a762c7",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_publishing_contract_candidates_v1.json",
+        "local_sha256": "10f3df91c3b61831ce2662c5b55caae7c65655656e60a27faad3c532613eca92",
+        "tree_sha256": "0661f53fe72fc6c5cae3f259b0a94d848df4285c38f0a77bab4ab13fce4bbfa3",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_publishing_contract_repair_v1.json",
+        "local_sha256": "a9b60b8318ed660c4e3fde5d2b02e8be3a5c303e5a87df6f80f1cade8c1dbe81",
+        "tree_sha256": "52cfd23797c85f143ad765f23052bb69b0b16b551f93fcf9beba7d747aeb1e20",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_sequential_adapter_preflight.json",
+        "local_sha256": "c11270c819b85c4acdf0d7d8ab4a63d1eb41e5a8de403d35db5c03b077d195ff",
+        "tree_sha256": "f74d3bba235291d7da0a081bc67a49718be1e2c1fbcafff9dac290b2d02e9b81",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_smollm3_v1_answer_annotations.json",
+        "local_sha256": "e3d1fe1e7845c4690736ad61f359da4c8fe88f0d7dceb69de5d9437347da9d25",
+        "tree_sha256": "1f75c7768ce7e53f161fe2dc7ef482d02436f91087e5370ec5e8935daf25e8c9",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_smollm3_v1_answer_summary.json",
+        "local_sha256": "eed4f563dd9adf5f2f6500939a70c49b6a0975920ac7a3518b6df4418252943b",
+        "tree_sha256": "bcc757566199452d34171d1b6813b9794584b5b1a4be1b9fb0252964222c0f70",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_smollm3_v1_execution_summary.json",
+        "local_sha256": "e2c5f02fcceec6c2e1f98929b4ce6d83565a3e8abb79229ccd8317880d9967c6",
+        "tree_sha256": "55522226c9ff203f5b859827754e6659af4affb2ce507f20fb096dedb133aeae",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_world12_semantic_audit_cards.json",
+        "local_sha256": "fbfa98c02ea8a320d5c6564063427cec5fb1b7a1d50619f76880883cbeffdc4b",
+        "tree_sha256": "b9684670e7e08a16cbd654162cc4b665a9718db48177426a4b8d835fc171f311",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_world_binary_status_audit_v1.json",
+        "local_sha256": "692380d7e07e8cd4cccb6a717171fc5fbb12d5d06bb27a33a248315724ce99af",
+        "tree_sha256": "e4f6fbf339b8c1aefebfddbe09e92f724a9f391be235280f06e2013f63b59e10",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_world_binary_status_candidates_v1.json",
+        "local_sha256": "e8a727a67790ba806af4d6ec181a890120f8f680b849fc9d319ec71201efd5b1",
+        "tree_sha256": "569e2420aba9ece2d30f70770ab9d2383e7be5b47593e1186a6a6de4d0e1074b",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_world_mutation_candidates_v1.json",
+        "local_sha256": "4de081a57b3088ce0b6098e9337f102f1e25a125fadfcb12cd778cc946d049b6",
+        "tree_sha256": "7ce0964958d0f5a0b608bd71dcfc4e23870d38e2ecf3c9d4c66b0607c6def555",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vakra_world_mutation_search_v1.json",
+        "local_sha256": "9e1784a216a60cd66a40cf3ed763433b4dbfcc950ec87e25814849fc79fd8854",
+        "tree_sha256": "fe169b0467a9d9459411b2e0c905b393c4fbf36cbea17e0a357d8290b9f85dd8",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/evidence/vpcontrol_frozen_arithmetic_audit_v1.json",
+        "local_sha256": "113c5bbd3a4150249395eda445057cfe86fe38fbbc84a28f07d186da956715b2",
+        "tree_sha256": "ffc8e5fefcedbc7380efb43f2d61d952692232d87b5f056d196c70cc1dc33426",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/paper1/figures/memory_transfer_development.json",
+        "local_sha256": "dcf3ff3d1b74518437729e0c96f65d57b4d3ef2326327b524bb68bf375359889",
+        "tree_sha256": "3c5bdb3882108e3c7be6c00b8666da9b99ff61e404870d03c22b35b38d704f08",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/paper1/figures/source_cutoff_observations_data.json",
+        "local_sha256": "bb1cf78a13b0b481ba4537b04dc27e4d61e18b01792f24cd2086034e64002777",
+        "tree_sha256": "4fbea4c66ba40b49f313c90850b629120c9550002e501962950479b6cce06054",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/paper2/figures/contract_counterexample_source.json",
+        "local_sha256": "5d99e6693f5d9ad3ea1086300ff1504920e4cbc9353d1170deeaac9ea63fa378",
+        "tree_sha256": "c8872b603af2e5f43e1beb8c86621fd88405ff5193e9a14b9aa692b2d3b73f1d",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "research/paper2/figures/crossdomain_prompt_replication.json",
+        "local_sha256": "0bb0bd1015ce105786bb6c2dfb95807e119a5b90c9f7cfc3828abe6a62fb2613",
+        "tree_sha256": "0932866d32b2a03565ee79244e6d38235183d65e416263712a441bf58a235cdc",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "scripts/run_vakra_permissive_v1.py",
+        "local_sha256": "93b43294b0cd657f257ee0381c384af2cd0fe5053f89412f84b87804c57ded29",
+        "tree_sha256": "dd5b8020a823345fbc39c2887a77b1b0754db00d4462532f901412f4cd55803e",
+        "only_crlf_normalization": true
+      },
+      {
+        "path": "train.py",
+        "local_sha256": "5277fe091d302c6536bb86ed69b3eaebd7b821203ea3e5cefbad2e8949231772",
+        "tree_sha256": "2954175f4ac42ad65164aef40910ef953789abcd05a5cc886ac9ba5a00814414",
+        "only_crlf_normalization": true
+      }
+    ],
+    "scope": "Tracked JSON, JSONL and Python files only; ignored remote artifacts are not part of this check."
+  },
+  "staged_after": {
+    "purpose": "Compare tracked experimental JSON/Python bytes with an index or commit tree.",
+    "tree": "INDEX",
+    "tracked_files_checked": 218,
+    "mismatched_files": 0,
+    "mismatches": [],
+    "scope": "Tracked JSON, JSONL and Python files only; ignored remote artifacts are not part of this check."
+  },
+  "actual_checkout_checks": [
+    {
+      "core_autocrlf": "true",
+      "files_verified": 4
+    },
+    {
+      "core_autocrlf": "false",
+      "files_verified": 4
+    }
+  ],
+  "unchanged_representative_sha256": {
+    "research/evidence/vakra_crossdomain_sql_cards_v1.json": "50e71d927ed7666a3c68f751324ff8d5cf056af40f7a4642b42d377715c05e60",
+    "research/evidence/memory_test40_tie_registration_v1.json": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb",
+    "research/evidence/rac_real_mcp_probe_v1.json": "62557d21ad00992a4ee3d5b35defb5f71166edd479de3ecf6e5c4d7b186cd61d",
+    "scripts/probe_rac_real_mcp.py": "e9cba3e2d22409de3c66ce1fa724b70be225b6d22f4d406c9d0366fae2a1df90"
+  },
+  "limits": "JSON/Python evidence and source bytes are preserved. This does not independently verify scientific annotations or recreate ignored remote artifacts."
+}
