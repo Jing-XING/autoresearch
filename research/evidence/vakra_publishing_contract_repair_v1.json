@@ -1,0 +1,821 @@
+{
+  "purpose": "Offline one-predicate repair diagnostic; not a model intervention result.",
+  "audit_sha256": "5d25a2a929260e74d63b362eae67902bc71ef20551bb69303cd0e1f61c4b170c",
+  "source_sha256": "b797f8ae931f84c5649318c8a188a7c006c2d3e2cafe318cfd02584f768dfd6d",
+  "script_sha256": "b2e458a403d916727cb1e81172c1258e866550708b76c644cf7626004738f3e0",
+  "results": [
+    {
+      "database_condition": "original",
+      "database_sha256": "b493a54214d7b224a6f2b9b22b0f651c98f0c345a91cdec10b94825d4d897f4d",
+      "tool_results": [
+        {
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "retrieved_titles_1",
+              "key_name": "authors_contract",
+              "value": "0"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_titles_1\", \"num_records\": 25, \"key_details\": [{\"name\": \"titles_title_id\", \"dtype\": \"str\", \"first_3_values\": [\"PS3333\", \"BU1032\", \"BU2075\"]}, {\"name\": \"titles_title\", \"dtype\": \"str\", \"first_3_values\": [\"Prolonged Data Deprivation: Four Case Studies\", \"The Busy Executive's Database Guide\", \"You Can Combat Computer Stress!\"]}, {\"name\": \"titles_type\", \"dtype\": \"str\", \"first_3_values\": [\"psychology\", \"business\", \"business\"]}, {\"name\": \"titles_pub_id\", \"dtype\": \"str\", \"first_3_values\": [\"0736\", \"1389\", \"0736\"]}, {\"name\": \"titles_price\", \"dtype\": \"float64\", \"first_3_values\": [19.99, 19.99, 2.99]}, {\"name\": \"titles_advance\", \"dtype\": \"float64\", \"first_3_values\": [2000.0, 5000.0, 10125.0]}, {\"name\": \"titles_royalty\", \"dtype\": \"float64\", \"first_3_values\": [10.0, 10.0, 24.0]}, {\"name\": \"titles_ytd_sales\", \"dtype\": \"float64\", \"first_3_values\": [4072.0, 4095.0, 18722.0]}, {\"name\": \"titles_notes\", \"dtype\": \"str\", \"first_3_values\": [\"What happens when the data runs dry?  Searching evaluations of information-shortage effects.\", \"An overview of available database systems with emphasis on common business applications. Illustrated.\", \"The latest medical and psychological techniques for living with the electronic office. Easy-to-understand explanations.\"]}, {\"name\": \"titles_pubdate\", \"dtype\": \"str\", \"first_3_values\": [\"1991-06-12 00:00:00.0\", \"1991-06-12 00:00:00.0\", \"1991-06-30 00:00:00.0\"]}, {\"name\": \"titleauthor_au_id\", \"dtype\": \"str\", \"first_3_values\": [\"172-32-1176\", \"213-46-8915\", \"213-46-8915\"]}, {\"name\": \"titleauthor_title_id\", \"dtype\": \"str\", \"first_3_values\": [\"PS3333\", \"BU1032\", \"BU2075\"]}, {\"name\": \"titleauthor_au_ord\", \"dtype\": \"int64\", \"first_3_values\": [1, 2, 1]}, {\"name\": \"titleauthor_royaltyper\", \"dtype\": \"int64\", \"first_3_values\": [100, 40, 100]}, {\"name\": \"authors_au_id\", \"dtype\": \"str\", \"first_3_values\": [\"172-32-1176\", \"213-46-8915\", \"213-46-8915\"]}, {\"name\": \"authors_au_lname\", \"dtype\": \"str\", \"first_3_values\": [\"White\", \"Green\", \"Green\"]}, {\"name\": \"authors_au_fname\", \"dtype\": \"str\", \"first_3_values\": [\"Johnson\", \"Marjorie\", \"Marjorie\"]}, {\"name\": \"authors_phone\", \"dtype\": \"str\", \"first_3_values\": [\"408 496-7223\", \"415 986-7020\", \"415 986-7020\"]}, {\"name\": \"authors_address\", \"dtype\": \"str\", \"first_3_values\": [\"10932 Bigge Rd.\", \"309 63rd St. #411\", \"309 63rd St. #411\"]}, {\"name\": \"authors_city\", \"dtype\": \"str\", \"first_3_values\": [\"Menlo Park\", \"Oakland\", \"Oakland\"]}, {\"name\": \"authors_state\", \"dtype\": \"str\", \"first_3_values\": [\"CA\", \"CA\", \"CA\"]}, {\"name\": \"authors_zip\", \"dtype\": \"str\", \"first_3_values\": [\"94025\", \"94618\", \"94618\"]}, {\"name\": \"authors_contract\", \"dtype\": \"str\", \"first_3_values\": [\"0\", \"0\", \"0\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          },
+          "decoded": {
+            "handle": "filtered_titles_1",
+            "num_records": 25,
+            "key_details": [
+              {
+                "name": "titles_title_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "PS3333",
+                  "BU1032",
+                  "BU2075"
+                ]
+              },
+              {
+                "name": "titles_title",
+                "dtype": "str",
+                "first_3_values": [
+                  "Prolonged Data Deprivation: Four Case Studies",
+                  "The Busy Executive's Database Guide",
+                  "You Can Combat Computer Stress!"
+                ]
+              },
+              {
+                "name": "titles_type",
+                "dtype": "str",
+                "first_3_values": [
+                  "psychology",
+                  "business",
+                  "business"
+                ]
+              },
+              {
+                "name": "titles_pub_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "0736",
+                  "1389",
+                  "0736"
+                ]
+              },
+              {
+                "name": "titles_price",
+                "dtype": "float64",
+                "first_3_values": [
+                  19.99,
+                  19.99,
+                  2.99
+                ]
+              },
+              {
+                "name": "titles_advance",
+                "dtype": "float64",
+                "first_3_values": [
+                  2000.0,
+                  5000.0,
+                  10125.0
+                ]
+              },
+              {
+                "name": "titles_royalty",
+                "dtype": "float64",
+                "first_3_values": [
+                  10.0,
+                  10.0,
+                  24.0
+                ]
+              },
+              {
+                "name": "titles_ytd_sales",
+                "dtype": "float64",
+                "first_3_values": [
+                  4072.0,
+                  4095.0,
+                  18722.0
+                ]
+              },
+              {
+                "name": "titles_notes",
+                "dtype": "str",
+                "first_3_values": [
+                  "What happens when the data runs dry?  Searching evaluations of information-shortage effects.",
+                  "An overview of available database systems with emphasis on common business applications. Illustrated.",
+                  "The latest medical and psychological techniques for living with the electronic office. Easy-to-understand explanations."
+                ]
+              },
+              {
+                "name": "titles_pubdate",
+                "dtype": "str",
+                "first_3_values": [
+                  "1991-06-12 00:00:00.0",
+                  "1991-06-12 00:00:00.0",
+                  "1991-06-30 00:00:00.0"
+                ]
+              },
+              {
+                "name": "titleauthor_au_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "172-32-1176",
+                  "213-46-8915",
+                  "213-46-8915"
+                ]
+              },
+              {
+                "name": "titleauthor_title_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "PS3333",
+                  "BU1032",
+                  "BU2075"
+                ]
+              },
+              {
+                "name": "titleauthor_au_ord",
+                "dtype": "int64",
+                "first_3_values": [
+                  1,
+                  2,
+                  1
+                ]
+              },
+              {
+                "name": "titleauthor_royaltyper",
+                "dtype": "int64",
+                "first_3_values": [
+                  100,
+                  40,
+                  100
+                ]
+              },
+              {
+                "name": "authors_au_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "172-32-1176",
+                  "213-46-8915",
+                  "213-46-8915"
+                ]
+              },
+              {
+                "name": "authors_au_lname",
+                "dtype": "str",
+                "first_3_values": [
+                  "White",
+                  "Green",
+                  "Green"
+                ]
+              },
+              {
+                "name": "authors_au_fname",
+                "dtype": "str",
+                "first_3_values": [
+                  "Johnson",
+                  "Marjorie",
+                  "Marjorie"
+                ]
+              },
+              {
+                "name": "authors_phone",
+                "dtype": "str",
+                "first_3_values": [
+                  "408 496-7223",
+                  "415 986-7020",
+                  "415 986-7020"
+                ]
+              },
+              {
+                "name": "authors_address",
+                "dtype": "str",
+                "first_3_values": [
+                  "10932 Bigge Rd.",
+                  "309 63rd St. #411",
+                  "309 63rd St. #411"
+                ]
+              },
+              {
+                "name": "authors_city",
+                "dtype": "str",
+                "first_3_values": [
+                  "Menlo Park",
+                  "Oakland",
+                  "Oakland"
+                ]
+              },
+              {
+                "name": "authors_state",
+                "dtype": "str",
+                "first_3_values": [
+                  "CA",
+                  "CA",
+                  "CA"
+                ]
+              },
+              {
+                "name": "authors_zip",
+                "dtype": "str",
+                "first_3_values": [
+                  "94025",
+                  "94618",
+                  "94618"
+                ]
+              },
+              {
+                "name": "authors_contract",
+                "dtype": "str",
+                "first_3_values": [
+                  "0",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "call": {
+            "name": "get_titles_titles",
+            "arguments": {
+              "data_label": "filtered_titles_1"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "[\"Prolonged Data Deprivation: Four Case Studies\", \"The Busy Executive's Database Guide\", \"You Can Combat Computer Stress!\", \"But Is It User Friendly?\", \"Cooking with Computers: Surreptitious Balance Sheets\", \"Sushi, Anyone?\", \"Straight Talk About Computers\", \"The Busy Executive's Database Guide\", \"Secrets of Silicon Valley\", \"Sushi, Anyone?\", \"Net Etiquette\", \"Emotional Security: A New Algorithm\", \"Fifty Years in Buckingham Palace Kitchens\", \"Sushi, Anyone?\", \"Silicon Valley Gastronomic Treats\", \"The Gourmet Microwave\", \"Cooking with Computers: Surreptitious Balance Sheets\", \"Computer Phobic AND Non-Phobic Individuals: Behavior Variations\", \"Computer Phobic AND Non-Phobic Individuals: Behavior Variations\", \"Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean\", \"Secrets of Silicon Valley\", \"The Gourmet Microwave\", \"Is Anger the Enemy?\", \"Is Anger the Enemy?\", \"Life Without Fear\"]",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          },
+          "decoded": [
+            "Prolonged Data Deprivation: Four Case Studies",
+            "The Busy Executive's Database Guide",
+            "You Can Combat Computer Stress!",
+            "But Is It User Friendly?",
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            "Sushi, Anyone?",
+            "Straight Talk About Computers",
+            "The Busy Executive's Database Guide",
+            "Secrets of Silicon Valley",
+            "Sushi, Anyone?",
+            "Net Etiquette",
+            "Emotional Security: A New Algorithm",
+            "Fifty Years in Buckingham Palace Kitchens",
+            "Sushi, Anyone?",
+            "Silicon Valley Gastronomic Treats",
+            "The Gourmet Microwave",
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            "Secrets of Silicon Valley",
+            "The Gourmet Microwave",
+            "Is Anger the Enemy?",
+            "Is Anger the Enemy?",
+            "Life Without Fear"
+          ]
+        },
+        {
+          "call": {
+            "name": "get_titles_ytd_saless",
+            "arguments": {
+              "data_label": "filtered_titles_1"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "[4072.0, 4095.0, 18722.0, 8780.0, 3876.0, 4095.0, 4095.0, 4095.0, 4095.0, 4095.0, null, 3336.0, 15096.0, 4095.0, 2032.0, 22246.0, 3876.0, 375.0, 375.0, 375.0, 4095.0, 22246.0, 2045.0, 2045.0, 111.0]",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          },
+          "decoded": [
+            4072.0,
+            4095.0,
+            18722.0,
+            8780.0,
+            3876.0,
+            4095.0,
+            4095.0,
+            4095.0,
+            4095.0,
+            4095.0,
+            null,
+            3336.0,
+            15096.0,
+            4095.0,
+            2032.0,
+            22246.0,
+            3876.0,
+            375.0,
+            375.0,
+            375.0,
+            4095.0,
+            22246.0,
+            2045.0,
+            2045.0,
+            111.0
+          ]
+        }
+      ],
+      "deduplicated_title_sales_pairs": [
+        [
+          "But Is It User Friendly?",
+          8780.0
+        ],
+        [
+          "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+          375.0
+        ],
+        [
+          "Cooking with Computers: Surreptitious Balance Sheets",
+          3876.0
+        ],
+        [
+          "Emotional Security: A New Algorithm",
+          3336.0
+        ],
+        [
+          "Fifty Years in Buckingham Palace Kitchens",
+          15096.0
+        ],
+        [
+          "Is Anger the Enemy?",
+          2045.0
+        ],
+        [
+          "Life Without Fear",
+          111.0
+        ],
+        [
+          "Net Etiquette",
+          null
+        ],
+        [
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          375.0
+        ],
+        [
+          "Prolonged Data Deprivation: Four Case Studies",
+          4072.0
+        ],
+        [
+          "Secrets of Silicon Valley",
+          4095.0
+        ],
+        [
+          "Silicon Valley Gastronomic Treats",
+          2032.0
+        ],
+        [
+          "Straight Talk About Computers",
+          4095.0
+        ],
+        [
+          "Sushi, Anyone?",
+          4095.0
+        ],
+        [
+          "The Busy Executive's Database Guide",
+          4095.0
+        ],
+        [
+          "The Gourmet Microwave",
+          22246.0
+        ],
+        [
+          "You Can Combat Computer Stress!",
+          18722.0
+        ]
+      ],
+      "matches_frozen_sql": true
+    },
+    {
+      "database_condition": "mutant",
+      "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+      "tool_results": [
+        {
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "retrieved_titles_1",
+              "key_name": "authors_contract",
+              "value": "0"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"handle\": \"filtered_titles_1\", \"num_records\": 24, \"key_details\": [{\"name\": \"titles_title_id\", \"dtype\": \"str\", \"first_3_values\": [\"PS3333\", \"BU1032\", \"BU2075\"]}, {\"name\": \"titles_title\", \"dtype\": \"str\", \"first_3_values\": [\"Prolonged Data Deprivation: Four Case Studies\", \"The Busy Executive's Database Guide\", \"You Can Combat Computer Stress!\"]}, {\"name\": \"titles_type\", \"dtype\": \"str\", \"first_3_values\": [\"psychology\", \"business\", \"business\"]}, {\"name\": \"titles_pub_id\", \"dtype\": \"str\", \"first_3_values\": [\"0736\", \"1389\", \"0736\"]}, {\"name\": \"titles_price\", \"dtype\": \"float64\", \"first_3_values\": [19.99, 19.99, 2.99]}, {\"name\": \"titles_advance\", \"dtype\": \"float64\", \"first_3_values\": [2000.0, 5000.0, 10125.0]}, {\"name\": \"titles_royalty\", \"dtype\": \"float64\", \"first_3_values\": [10.0, 10.0, 24.0]}, {\"name\": \"titles_ytd_sales\", \"dtype\": \"float64\", \"first_3_values\": [4072.0, 4095.0, 18722.0]}, {\"name\": \"titles_notes\", \"dtype\": \"str\", \"first_3_values\": [\"What happens when the data runs dry?  Searching evaluations of information-shortage effects.\", \"An overview of available database systems with emphasis on common business applications. Illustrated.\", \"The latest medical and psychological techniques for living with the electronic office. Easy-to-understand explanations.\"]}, {\"name\": \"titles_pubdate\", \"dtype\": \"str\", \"first_3_values\": [\"1991-06-12 00:00:00.0\", \"1991-06-12 00:00:00.0\", \"1991-06-30 00:00:00.0\"]}, {\"name\": \"titleauthor_au_id\", \"dtype\": \"str\", \"first_3_values\": [\"172-32-1176\", \"213-46-8915\", \"213-46-8915\"]}, {\"name\": \"titleauthor_title_id\", \"dtype\": \"str\", \"first_3_values\": [\"PS3333\", \"BU1032\", \"BU2075\"]}, {\"name\": \"titleauthor_au_ord\", \"dtype\": \"int64\", \"first_3_values\": [1, 2, 1]}, {\"name\": \"titleauthor_royaltyper\", \"dtype\": \"int64\", \"first_3_values\": [100, 40, 100]}, {\"name\": \"authors_au_id\", \"dtype\": \"str\", \"first_3_values\": [\"172-32-1176\", \"213-46-8915\", \"213-46-8915\"]}, {\"name\": \"authors_au_lname\", \"dtype\": \"str\", \"first_3_values\": [\"White\", \"Green\", \"Green\"]}, {\"name\": \"authors_au_fname\", \"dtype\": \"str\", \"first_3_values\": [\"Johnson\", \"Marjorie\", \"Marjorie\"]}, {\"name\": \"authors_phone\", \"dtype\": \"str\", \"first_3_values\": [\"408 496-7223\", \"415 986-7020\", \"415 986-7020\"]}, {\"name\": \"authors_address\", \"dtype\": \"str\", \"first_3_values\": [\"10932 Bigge Rd.\", \"309 63rd St. #411\", \"309 63rd St. #411\"]}, {\"name\": \"authors_city\", \"dtype\": \"str\", \"first_3_values\": [\"Menlo Park\", \"Oakland\", \"Oakland\"]}, {\"name\": \"authors_state\", \"dtype\": \"str\", \"first_3_values\": [\"CA\", \"CA\", \"CA\"]}, {\"name\": \"authors_zip\", \"dtype\": \"str\", \"first_3_values\": [\"94025\", \"94618\", \"94618\"]}, {\"name\": \"authors_contract\", \"dtype\": \"str\", \"first_3_values\": [\"0\", \"0\", \"0\"]}]}",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          },
+          "decoded": {
+            "handle": "filtered_titles_1",
+            "num_records": 24,
+            "key_details": [
+              {
+                "name": "titles_title_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "PS3333",
+                  "BU1032",
+                  "BU2075"
+                ]
+              },
+              {
+                "name": "titles_title",
+                "dtype": "str",
+                "first_3_values": [
+                  "Prolonged Data Deprivation: Four Case Studies",
+                  "The Busy Executive's Database Guide",
+                  "You Can Combat Computer Stress!"
+                ]
+              },
+              {
+                "name": "titles_type",
+                "dtype": "str",
+                "first_3_values": [
+                  "psychology",
+                  "business",
+                  "business"
+                ]
+              },
+              {
+                "name": "titles_pub_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "0736",
+                  "1389",
+                  "0736"
+                ]
+              },
+              {
+                "name": "titles_price",
+                "dtype": "float64",
+                "first_3_values": [
+                  19.99,
+                  19.99,
+                  2.99
+                ]
+              },
+              {
+                "name": "titles_advance",
+                "dtype": "float64",
+                "first_3_values": [
+                  2000.0,
+                  5000.0,
+                  10125.0
+                ]
+              },
+              {
+                "name": "titles_royalty",
+                "dtype": "float64",
+                "first_3_values": [
+                  10.0,
+                  10.0,
+                  24.0
+                ]
+              },
+              {
+                "name": "titles_ytd_sales",
+                "dtype": "float64",
+                "first_3_values": [
+                  4072.0,
+                  4095.0,
+                  18722.0
+                ]
+              },
+              {
+                "name": "titles_notes",
+                "dtype": "str",
+                "first_3_values": [
+                  "What happens when the data runs dry?  Searching evaluations of information-shortage effects.",
+                  "An overview of available database systems with emphasis on common business applications. Illustrated.",
+                  "The latest medical and psychological techniques for living with the electronic office. Easy-to-understand explanations."
+                ]
+              },
+              {
+                "name": "titles_pubdate",
+                "dtype": "str",
+                "first_3_values": [
+                  "1991-06-12 00:00:00.0",
+                  "1991-06-12 00:00:00.0",
+                  "1991-06-30 00:00:00.0"
+                ]
+              },
+              {
+                "name": "titleauthor_au_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "172-32-1176",
+                  "213-46-8915",
+                  "213-46-8915"
+                ]
+              },
+              {
+                "name": "titleauthor_title_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "PS3333",
+                  "BU1032",
+                  "BU2075"
+                ]
+              },
+              {
+                "name": "titleauthor_au_ord",
+                "dtype": "int64",
+                "first_3_values": [
+                  1,
+                  2,
+                  1
+                ]
+              },
+              {
+                "name": "titleauthor_royaltyper",
+                "dtype": "int64",
+                "first_3_values": [
+                  100,
+                  40,
+                  100
+                ]
+              },
+              {
+                "name": "authors_au_id",
+                "dtype": "str",
+                "first_3_values": [
+                  "172-32-1176",
+                  "213-46-8915",
+                  "213-46-8915"
+                ]
+              },
+              {
+                "name": "authors_au_lname",
+                "dtype": "str",
+                "first_3_values": [
+                  "White",
+                  "Green",
+                  "Green"
+                ]
+              },
+              {
+                "name": "authors_au_fname",
+                "dtype": "str",
+                "first_3_values": [
+                  "Johnson",
+                  "Marjorie",
+                  "Marjorie"
+                ]
+              },
+              {
+                "name": "authors_phone",
+                "dtype": "str",
+                "first_3_values": [
+                  "408 496-7223",
+                  "415 986-7020",
+                  "415 986-7020"
+                ]
+              },
+              {
+                "name": "authors_address",
+                "dtype": "str",
+                "first_3_values": [
+                  "10932 Bigge Rd.",
+                  "309 63rd St. #411",
+                  "309 63rd St. #411"
+                ]
+              },
+              {
+                "name": "authors_city",
+                "dtype": "str",
+                "first_3_values": [
+                  "Menlo Park",
+                  "Oakland",
+                  "Oakland"
+                ]
+              },
+              {
+                "name": "authors_state",
+                "dtype": "str",
+                "first_3_values": [
+                  "CA",
+                  "CA",
+                  "CA"
+                ]
+              },
+              {
+                "name": "authors_zip",
+                "dtype": "str",
+                "first_3_values": [
+                  "94025",
+                  "94618",
+                  "94618"
+                ]
+              },
+              {
+                "name": "authors_contract",
+                "dtype": "str",
+                "first_3_values": [
+                  "0",
+                  "0",
+                  "0"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "call": {
+            "name": "get_titles_titles",
+            "arguments": {
+              "data_label": "filtered_titles_1"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "[\"Prolonged Data Deprivation: Four Case Studies\", \"The Busy Executive's Database Guide\", \"You Can Combat Computer Stress!\", \"Cooking with Computers: Surreptitious Balance Sheets\", \"Sushi, Anyone?\", \"Straight Talk About Computers\", \"The Busy Executive's Database Guide\", \"Secrets of Silicon Valley\", \"Sushi, Anyone?\", \"Net Etiquette\", \"Emotional Security: A New Algorithm\", \"Fifty Years in Buckingham Palace Kitchens\", \"Sushi, Anyone?\", \"Silicon Valley Gastronomic Treats\", \"The Gourmet Microwave\", \"Cooking with Computers: Surreptitious Balance Sheets\", \"Computer Phobic AND Non-Phobic Individuals: Behavior Variations\", \"Computer Phobic AND Non-Phobic Individuals: Behavior Variations\", \"Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean\", \"Secrets of Silicon Valley\", \"The Gourmet Microwave\", \"Is Anger the Enemy?\", \"Is Anger the Enemy?\", \"Life Without Fear\"]",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          },
+          "decoded": [
+            "Prolonged Data Deprivation: Four Case Studies",
+            "The Busy Executive's Database Guide",
+            "You Can Combat Computer Stress!",
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            "Sushi, Anyone?",
+            "Straight Talk About Computers",
+            "The Busy Executive's Database Guide",
+            "Secrets of Silicon Valley",
+            "Sushi, Anyone?",
+            "Net Etiquette",
+            "Emotional Security: A New Algorithm",
+            "Fifty Years in Buckingham Palace Kitchens",
+            "Sushi, Anyone?",
+            "Silicon Valley Gastronomic Treats",
+            "The Gourmet Microwave",
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            "Secrets of Silicon Valley",
+            "The Gourmet Microwave",
+            "Is Anger the Enemy?",
+            "Is Anger the Enemy?",
+            "Life Without Fear"
+          ]
+        },
+        {
+          "call": {
+            "name": "get_titles_ytd_saless",
+            "arguments": {
+              "data_label": "filtered_titles_1"
+            }
+          },
+          "result": {
+            "meta": null,
+            "content": [
+              {
+                "type": "text",
+                "text": "[4072.0, 4095.0, 18722.0, 3876.0, 4095.0, 4095.0, 4095.0, 4095.0, 4095.0, null, 3336.0, 15096.0, 4095.0, 2032.0, 22246.0, 3876.0, 375.0, 375.0, 375.0, 4095.0, 22246.0, 2045.0, 2045.0, 111.0]",
+                "annotations": null,
+                "meta": null
+              }
+            ],
+            "structuredContent": null,
+            "isError": false
+          },
+          "decoded": [
+            4072.0,
+            4095.0,
+            18722.0,
+            3876.0,
+            4095.0,
+            4095.0,
+            4095.0,
+            4095.0,
+            4095.0,
+            null,
+            3336.0,
+            15096.0,
+            4095.0,
+            2032.0,
+            22246.0,
+            3876.0,
+            375.0,
+            375.0,
+            375.0,
+            4095.0,
+            22246.0,
+            2045.0,
+            2045.0,
+            111.0
+          ]
+        }
+      ],
+      "deduplicated_title_sales_pairs": [
+        [
+          "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+          375.0
+        ],
+        [
+          "Cooking with Computers: Surreptitious Balance Sheets",
+          3876.0
+        ],
+        [
+          "Emotional Security: A New Algorithm",
+          3336.0
+        ],
+        [
+          "Fifty Years in Buckingham Palace Kitchens",
+          15096.0
+        ],
+        [
+          "Is Anger the Enemy?",
+          2045.0
+        ],
+        [
+          "Life Without Fear",
+          111.0
+        ],
+        [
+          "Net Etiquette",
+          null
+        ],
+        [
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          375.0
+        ],
+        [
+          "Prolonged Data Deprivation: Four Case Studies",
+          4072.0
+        ],
+        [
+          "Secrets of Silicon Valley",
+          4095.0
+        ],
+        [
+          "Silicon Valley Gastronomic Treats",
+          2032.0
+        ],
+        [
+          "Straight Talk About Computers",
+          4095.0
+        ],
+        [
+          "Sushi, Anyone?",
+          4095.0
+        ],
+        [
+          "The Busy Executive's Database Guide",
+          4095.0
+        ],
+        [
+          "The Gourmet Microwave",
+          22246.0
+        ],
+        [
+          "You Can Combat Computer Stress!",
+          18722.0
+        ]
+      ],
+      "matches_frozen_sql": true
+    }
+  ],
+  "limit": "The evaluator supplied the correct predicate and paired getter outputs offline. No model generated this repair, no neural continuation was run, and no success-rate improvement is claimed. This only establishes that an existing public tool sequence can distinguish these two data worlds."
+}

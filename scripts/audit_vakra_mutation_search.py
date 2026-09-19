@@ -37,9 +37,10 @@ def calls(raw):
 async def replay(prepared, database, raw, prior, warm, log):
     from mcp import ClientSession
     from mcp.client.stdio import StdioServerParameters, stdio_client
+    domain = json.loads((prepared / 'preparation_manifest.json').read_bytes())['domain']
     params = StdioServerParameters(command=sys.executable,
         args=['-X', 'utf8', '-m', 'autolab.vakra_stdio', '--runtime', str(prepared / 'runtime'),
-              '--database', str(database), '--domain', 'world'], cwd=str(ROOT),
+              '--database', str(database), '--domain', domain], cwd=str(ROOT),
         env={'PYTHON_DOTENV_DISABLED': '1', 'PYTHONUTF8': '1', 'PYTHONPATH': str(ROOT)})
     previous_differences = 0
     async with stdio_client(params, errlog=log) as (read, write):
@@ -74,13 +75,13 @@ async def replay(prepared, database, raw, prior, warm, log):
     return {**metadata, 'preserved': True, 'calls_checked': len(observations), 'observation_sha256': digest}
 
 
-async def main(candidate_path=None, output=None, summary_path=None):
+async def main(candidate_path=None, output=None, summary_path=None, prepared=None, raw_root=None):
     candidate_path = candidate_path or ROOT / 'research/evidence/vakra_world_mutation_candidates_v1.json'
     candidates = json.loads(candidate_path.read_bytes())
     assert candidates['mutation_source_sha256'] == sha(ROOT / 'autolab/relational_mutations.py')
-    prepared = ROOT / 'results/vakra-world-runtime-v3'
+    prepared = prepared or ROOT / 'results/vakra-world-runtime-v3'
     prep = json.loads((prepared / 'preparation_manifest.json').read_bytes())
-    database = prepared / 'world.sqlite'
+    database = prepared / (prep['domain'] + '.sqlite')
     assert sha(database) == prep['database_sha256'] == candidates['database_sha256']
     for name, digest in prep['runtime_files'].items():
         assert sha(prepared / 'runtime' / name) == digest
@@ -98,7 +99,7 @@ async def main(candidate_path=None, output=None, summary_path=None):
                 assert answer(con, card['target_sql']) == candidate['answer']
                 assert candidate['answer'] != card['search']['original_answer']
             changed_paths[(card['uuid'], index)] = (changed, sha(changed))
-    raw_root = ROOT / 'results/remote/vakra-coverage12-v1/runs/vakra-coverage12-v1'
+    raw_root = raw_root or ROOT / 'results/remote/vakra-coverage12-v1/runs/vakra-coverage12-v1'
     cards = {r['uuid']: r for r in candidates['rows']}
     queries = json.loads((prepared / 'queries.json').read_bytes())
     semaphore = asyncio.Semaphore(2)

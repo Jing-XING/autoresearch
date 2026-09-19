@@ -1,0 +1,1344 @@
+{
+  "purpose": "Replay bounded development mutations through the unchanged real MCP server.\n\nEvery witness preserves a target episode's complete recorded tool observation.\nSearch exhaustion means unknown, never a positive sufficiency certificate.\n",
+  "candidate_file_sha256": "10f3df91c3b61831ce2662c5b55caae7c65655656e60a27faad3c532613eca92",
+  "script_sha256": "e95ba8ee514c8831d136c8e869616a885874018ed67bd98cd8126078857c7d56",
+  "preparation_sha256": "bfdd673f1fd786346ca934fb0ff88b3a04418714c5389f4f28c79a4e813cb518",
+  "episodes": 8,
+  "distinct_tasks": 2,
+  "mutant_databases": 14,
+  "statuses": {
+    "witness_found": 6,
+    "no_witness_in_bounded_search": 2
+  },
+  "rows": [
+    {
+      "source": "coverage_check/qwen25/shard-0/case-007.json",
+      "source_sha256": "599e00d7a8a734a7324933ee75f3ca4ebad3ce8daa9b556327e28c95277b06bd",
+      "uuid": "5661cd917583-4b2d539ed90b",
+      "task_index": 7,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "3c8392eed08eb39db7a15d7aa1324ab4b5e151bd1df260d173f7fc12842e99e3",
+        "case-001.json": "a377a044388c25c16c8874ae52964828cedff7df742021e3f2eb1e83cb853da1",
+        "case-002.json": "e22a430fb4f82f6f22d08eb9993d24fd3853b0803a92c5e42a7c0615d4448452",
+        "case-003.json": "f9a6998fc5db49dd591c0c28683ff8e2d9e5d227ce59b67ab3f3067e21151331",
+        "case-004.json": "8c56e568e637bd06de917b3ab8733575d0b7908729ce20000e5f413c0edef8b3",
+        "case-005.json": "cf9d6b988e3d4724ac7d0597ab45aeec0c108b7d0c0d8056e9658ad920f8f6a4",
+        "case-006.json": "d46ae36c6eadca2ea17d4bb3e5e0c5c7741879a49f59981bc4830a8baf4d701e"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 3,
+          "observation_sha256": "bee64339d0b37738e1a5b85bedbaa919cbf9a68a4ea02cf67a4f79b2a73e9b40"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 3,
+        "observation_sha256": "bee64339d0b37738e1a5b85bedbaa919cbf9a68a4ea02cf67a4f79b2a73e9b40"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "authors",
+          "column": "contract",
+          "keys": [
+            "au_id"
+          ],
+          "operator": "single_contract_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "238-95-7766"
+              ],
+              "before": "0",
+              "after": "1"
+            }
+          ]
+        },
+        "database": "results\\vakra-publishing-contract-v1\\task-007-mutation-02.sqlite",
+        "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+        "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' ORDER BY t.title_id",
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "observation_sha256": "bee64339d0b37738e1a5b85bedbaa919cbf9a68a4ea02cf67a4f79b2a73e9b40"
+      }
+    },
+    {
+      "source": "coverage_check/qwen25/shard-0/case-008.json",
+      "source_sha256": "fddb8ea5bac237bfcbd0a875e4d918b42972d0e8236724566ca457a152145e67",
+      "uuid": "5661cd917583-0db47e6e47ec",
+      "task_index": 8,
+      "original_termination": "max_steps",
+      "worker_prefix_sha256": {
+        "case-000.json": "3c8392eed08eb39db7a15d7aa1324ab4b5e151bd1df260d173f7fc12842e99e3",
+        "case-001.json": "a377a044388c25c16c8874ae52964828cedff7df742021e3f2eb1e83cb853da1",
+        "case-002.json": "e22a430fb4f82f6f22d08eb9993d24fd3853b0803a92c5e42a7c0615d4448452",
+        "case-003.json": "f9a6998fc5db49dd591c0c28683ff8e2d9e5d227ce59b67ab3f3067e21151331",
+        "case-004.json": "8c56e568e637bd06de917b3ab8733575d0b7908729ce20000e5f413c0edef8b3",
+        "case-005.json": "cf9d6b988e3d4724ac7d0597ab45aeec0c108b7d0c0d8056e9658ad920f8f6a4",
+        "case-006.json": "d46ae36c6eadca2ea17d4bb3e5e0c5c7741879a49f59981bc4830a8baf4d701e",
+        "case-007.json": "599e00d7a8a734a7324933ee75f3ca4ebad3ce8daa9b556327e28c95277b06bd"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "filtered_titles_1",
+              "key_name": "authors_contract",
+              "value": "0"
+            }
+          }
+        },
+        {
+          "candidate_index": 3,
+          "database_sha256": "ff9b1c1dc1938ad0365a4970424606b51fc98b1fae70b4d59fe6395c67bf5954",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "filtered_titles_1",
+              "key_name": "authors_contract",
+              "value": "0"
+            }
+          }
+        },
+        {
+          "candidate_index": 4,
+          "database_sha256": "166a28a2ed13e21b36d6fd584b0625365a5a28c26e1077af0e496db5c637ee1f",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "filtered_titles_1",
+              "key_name": "authors_contract",
+              "value": "0"
+            }
+          }
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 20,
+        "observation_sha256": "2160c1dece64963b79623d91e0fb0cabac4317cc9a55f52310b60564720bfc6a"
+      },
+      "status": "no_witness_in_bounded_search"
+    },
+    {
+      "source": "coverage_check/qwen3/shard-0/case-007.json",
+      "source_sha256": "aa0c076f59db24fe8f129ec10e604321ca1af7836d63d692494bbd785c157f4c",
+      "uuid": "5661cd917583-4b2d539ed90b",
+      "task_index": 7,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "8ad277dd297b0082d223ed444c63c89d4c5b2f314e5d03e3ea65c1b9df7b5ff2",
+        "case-001.json": "2dd3f5b241dde8eebb882babd1d9812dfc04a5c9bc6b77a1841b8797cb027b7d",
+        "case-002.json": "bde0bda53d10e5822d47e14193a29f8b30a3b74a3a06d7d3430bb5ea022ac5b5",
+        "case-003.json": "daefff6a94be458aa9822817ee0c80ae7dbe63d8d9ecd7ea53cc616a2dbeafe8",
+        "case-004.json": "e6a68345702bad011105cacdf93c1cfbd4ae5c604a477951f97b9ec0f2f1c3a8",
+        "case-005.json": "beee582d6e98a67b15b78d9cb342e2cfd11d44e30ccd3defd45214eb897b9f2e",
+        "case-006.json": "c5f16d18b8794f3e44d013659b1384fa8fc8bd6b9769e85e9a0493d801768ce7"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 1,
+          "observation_sha256": "5c1f6584244232583dc6c6d1eef3ffe65d44e1cbde8004d0947ef15eb9f0c6d5"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 1,
+        "observation_sha256": "5c1f6584244232583dc6c6d1eef3ffe65d44e1cbde8004d0947ef15eb9f0c6d5"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "authors",
+          "column": "contract",
+          "keys": [
+            "au_id"
+          ],
+          "operator": "single_contract_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "238-95-7766"
+              ],
+              "before": "0",
+              "after": "1"
+            }
+          ]
+        },
+        "database": "results\\vakra-publishing-contract-v1\\task-007-mutation-02.sqlite",
+        "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+        "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' ORDER BY t.title_id",
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "observation_sha256": "5c1f6584244232583dc6c6d1eef3ffe65d44e1cbde8004d0947ef15eb9f0c6d5"
+      }
+    },
+    {
+      "source": "coverage_check/qwen3/shard-0/case-008.json",
+      "source_sha256": "a19f726b6565fa06aa2f5c7829efaacf543f0cea6285622e5f5900e18d4d9bc2",
+      "uuid": "5661cd917583-0db47e6e47ec",
+      "task_index": 8,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "8ad277dd297b0082d223ed444c63c89d4c5b2f314e5d03e3ea65c1b9df7b5ff2",
+        "case-001.json": "2dd3f5b241dde8eebb882babd1d9812dfc04a5c9bc6b77a1841b8797cb027b7d",
+        "case-002.json": "bde0bda53d10e5822d47e14193a29f8b30a3b74a3a06d7d3430bb5ea022ac5b5",
+        "case-003.json": "daefff6a94be458aa9822817ee0c80ae7dbe63d8d9ecd7ea53cc616a2dbeafe8",
+        "case-004.json": "e6a68345702bad011105cacdf93c1cfbd4ae5c604a477951f97b9ec0f2f1c3a8",
+        "case-005.json": "beee582d6e98a67b15b78d9cb342e2cfd11d44e30ccd3defd45214eb897b9f2e",
+        "case-006.json": "c5f16d18b8794f3e44d013659b1384fa8fc8bd6b9769e85e9a0493d801768ce7",
+        "case-007.json": "aa0c076f59db24fe8f129ec10e604321ca1af7836d63d692494bbd785c157f4c"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 4,
+          "observation_sha256": "cceb6a419c8bb198d579c027ca5c32514c89e1c46fae5c47ee5e2e7e6b1765bf"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 4,
+        "observation_sha256": "cceb6a419c8bb198d579c027ca5c32514c89e1c46fae5c47ee5e2e7e6b1765bf"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "authors",
+          "column": "contract",
+          "keys": [
+            "au_id"
+          ],
+          "operator": "single_contract_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "238-95-7766"
+              ],
+              "before": "0",
+              "after": "1"
+            }
+          ]
+        },
+        "database": "results\\vakra-publishing-contract-v1\\task-008-mutation-02.sqlite",
+        "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+        "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' AND a.state='CA' ORDER BY t.ytd_sales DESC,t.title",
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "observation_sha256": "cceb6a419c8bb198d579c027ca5c32514c89e1c46fae5c47ee5e2e7e6b1765bf"
+      }
+    },
+    {
+      "source": "original/qwen25/shard-0/case-007.json",
+      "source_sha256": "d9c3ba9a75d534531d0d9eca17f3a0188aee7bd0b27a5aace25aaf8cf180baca",
+      "uuid": "5661cd917583-4b2d539ed90b",
+      "task_index": 7,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "7b09563222e44cae4f6fb91415e90f17a069475704d631b426c74253d14b8cc9",
+        "case-001.json": "dc4613a09b7a31ffba22c3eff886a43d8467ceb88e871bc04605a3397c0dcd5b",
+        "case-002.json": "711477b3ce9911db04dbd9ca453e4f4b6f28275cbb49cdbcd5b3ea55f7039e76",
+        "case-003.json": "5b2e2153d53a71d831531a11f3376ac252fd785ccc9ea29618bbf016c3b3b19b",
+        "case-004.json": "1d5b481e9329fbfb5dec555e3d37517272f1a594c98c5ecb1970f83967c4fa33",
+        "case-005.json": "75810e8bdc0f6181f5d30412d267ebb06c9a7798af4fbaf12614bcc879014308",
+        "case-006.json": "85d977176fdbbdfe9a960b457069a1ed53f8032fade379e647844d832488264f"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "sort_data_ascending",
+            "arguments": {
+              "data_label": "filtered_titles_1",
+              "key_name": "titles_title"
+            }
+          }
+        },
+        {
+          "candidate_index": 3,
+          "database_sha256": "ff9b1c1dc1938ad0365a4970424606b51fc98b1fae70b4d59fe6395c67bf5954",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 4,
+          "observation_sha256": "3c08b015e65c9888c668074213d4a6ac60f26ccff89afe42104ecec34b6f25aa"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 4,
+        "observation_sha256": "3c08b015e65c9888c668074213d4a6ac60f26ccff89afe42104ecec34b6f25aa"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "authors",
+          "column": "contract",
+          "keys": [
+            "au_id"
+          ],
+          "operator": "single_contract_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "274-80-9391"
+              ],
+              "before": "0",
+              "after": "1"
+            }
+          ]
+        },
+        "database": "results\\vakra-publishing-contract-v1\\task-007-mutation-03.sqlite",
+        "database_sha256": "ff9b1c1dc1938ad0365a4970424606b51fc98b1fae70b4d59fe6395c67bf5954",
+        "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' ORDER BY t.title_id",
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "observation_sha256": "3c08b015e65c9888c668074213d4a6ac60f26ccff89afe42104ecec34b6f25aa"
+      }
+    },
+    {
+      "source": "original/qwen25/shard-0/case-008.json",
+      "source_sha256": "876a1a6b25b22dccc233a41c0c8208af91ac36c80943a8e3ae26aef4f0c6ecba",
+      "uuid": "5661cd917583-0db47e6e47ec",
+      "task_index": 8,
+      "original_termination": "protocol_error_limit",
+      "worker_prefix_sha256": {
+        "case-000.json": "7b09563222e44cae4f6fb91415e90f17a069475704d631b426c74253d14b8cc9",
+        "case-001.json": "dc4613a09b7a31ffba22c3eff886a43d8467ceb88e871bc04605a3397c0dcd5b",
+        "case-002.json": "711477b3ce9911db04dbd9ca453e4f4b6f28275cbb49cdbcd5b3ea55f7039e76",
+        "case-003.json": "5b2e2153d53a71d831531a11f3376ac252fd785ccc9ea29618bbf016c3b3b19b",
+        "case-004.json": "1d5b481e9329fbfb5dec555e3d37517272f1a594c98c5ecb1970f83967c4fa33",
+        "case-005.json": "75810e8bdc0f6181f5d30412d267ebb06c9a7798af4fbaf12614bcc879014308",
+        "case-006.json": "85d977176fdbbdfe9a960b457069a1ed53f8032fade379e647844d832488264f",
+        "case-007.json": "d9c3ba9a75d534531d0d9eca17f3a0188aee7bd0b27a5aace25aaf8cf180baca"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 1,
+          "preserved": true,
+          "calls_checked": 0,
+          "observation_sha256": "9b0b888246f26f12983ef33bec2bf20a712a0162a14212f373201a97877a6f97"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 0,
+        "observation_sha256": "9b0b888246f26f12983ef33bec2bf20a712a0162a14212f373201a97877a6f97"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "authors",
+          "column": "contract",
+          "keys": [
+            "au_id"
+          ],
+          "operator": "single_contract_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "238-95-7766"
+              ],
+              "before": "0",
+              "after": "1"
+            }
+          ]
+        },
+        "database": "results\\vakra-publishing-contract-v1\\task-008-mutation-02.sqlite",
+        "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+        "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' AND a.state='CA' ORDER BY t.ytd_sales DESC,t.title",
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "observation_sha256": "9b0b888246f26f12983ef33bec2bf20a712a0162a14212f373201a97877a6f97"
+      }
+    },
+    {
+      "source": "original/qwen3/shard-0/case-007.json",
+      "source_sha256": "b797f8ae931f84c5649318c8a188a7c006c2d3e2cafe318cfd02584f768dfd6d",
+      "uuid": "5661cd917583-4b2d539ed90b",
+      "task_index": 7,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "38124725784c44193f1fd78c2927d65a34205cb25438da5061b43071a1daf632",
+        "case-001.json": "c8a95fe726323167b265884bfd57ed7f61537a56a2e58c1b4efa80b526af82d3",
+        "case-002.json": "f70b4b3a1f476d6a83003f71dae2dd6e54b4716f4193e2bdd6518d981b2c67f2",
+        "case-003.json": "739bb1b130a443ab67c95f4f1092e2c42e6c9c7592caf8f22c57ab542b2449d6",
+        "case-004.json": "9848aae17e08517ba4eb4eb64eb026aaebafa7e1fb9383773fcd9c1f617b5682",
+        "case-005.json": "9d2e116c9144dfed60063d4da583dc5538fd04b1ae7f827df86b68a632d88626",
+        "case-006.json": "c9b7e6220f1096269e23979dcee8794e12fdcb00876a6b469590cc247e499659"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 3,
+          "observation_sha256": "0cc820efe2baec2fa152c62d9519e32ac6d52a6b4aec3efa4e2e14e58dca1e14"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 3,
+        "observation_sha256": "0cc820efe2baec2fa152c62d9519e32ac6d52a6b4aec3efa4e2e14e58dca1e14"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "authors",
+          "column": "contract",
+          "keys": [
+            "au_id"
+          ],
+          "operator": "single_contract_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "238-95-7766"
+              ],
+              "before": "0",
+              "after": "1"
+            }
+          ]
+        },
+        "database": "results\\vakra-publishing-contract-v1\\task-007-mutation-02.sqlite",
+        "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+        "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' ORDER BY t.title_id",
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "observation_sha256": "0cc820efe2baec2fa152c62d9519e32ac6d52a6b4aec3efa4e2e14e58dca1e14"
+      }
+    },
+    {
+      "source": "original/qwen3/shard-0/case-008.json",
+      "source_sha256": "025884531d67443f8f12187842573db7d53cc0f8e8c84a4b3e1ed439b60e6efe",
+      "uuid": "5661cd917583-0db47e6e47ec",
+      "task_index": 8,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "38124725784c44193f1fd78c2927d65a34205cb25438da5061b43071a1daf632",
+        "case-001.json": "c8a95fe726323167b265884bfd57ed7f61537a56a2e58c1b4efa80b526af82d3",
+        "case-002.json": "f70b4b3a1f476d6a83003f71dae2dd6e54b4716f4193e2bdd6518d981b2c67f2",
+        "case-003.json": "739bb1b130a443ab67c95f4f1092e2c42e6c9c7592caf8f22c57ab542b2449d6",
+        "case-004.json": "9848aae17e08517ba4eb4eb64eb026aaebafa7e1fb9383773fcd9c1f617b5682",
+        "case-005.json": "9d2e116c9144dfed60063d4da583dc5538fd04b1ae7f827df86b68a632d88626",
+        "case-006.json": "c9b7e6220f1096269e23979dcee8794e12fdcb00876a6b469590cc247e499659",
+        "case-007.json": "b797f8ae931f84c5649318c8a188a7c006c2d3e2cafe318cfd02584f768dfd6d"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "b2a73c47c28dc09417ac0d93db6903b8848f0c9c8ac68d146d2973dba4742eab",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "82bb9ed3a5dd9073edb4b26914745375aadf3be82e2eb1a8803db6544a6dd13b",
+          "previous_independent_episode_differences": 2,
+          "preserved": false,
+          "first_difference": "initial_peek"
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "e41cfdb85f2131ae62391f13b9a8705012a75d88b9f78fe1601e4a880a610c98",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "get_authors_contracts",
+            "arguments": {
+              "data_label": "retrieved_titles_1"
+            }
+          }
+        },
+        {
+          "candidate_index": 3,
+          "database_sha256": "ff9b1c1dc1938ad0365a4970424606b51fc98b1fae70b4d59fe6395c67bf5954",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "get_authors_contracts",
+            "arguments": {
+              "data_label": "retrieved_titles_1"
+            }
+          }
+        },
+        {
+          "candidate_index": 4,
+          "database_sha256": "166a28a2ed13e21b36d6fd584b0625365a5a28c26e1077af0e496db5c637ee1f",
+          "previous_independent_episode_differences": 0,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "get_authors_contracts",
+            "arguments": {
+              "data_label": "retrieved_titles_1"
+            }
+          }
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 6,
+        "observation_sha256": "f0e73053684873665173c678fcbcc514a6ff84fc154dd69df4b9be2bb678eb7e"
+      },
+      "status": "no_witness_in_bounded_search"
+    }
+  ],
+  "candidate_contract": "Post-outcome development on two known publishing tasks. A declared synthetic-world contract allows one authors.contract status to change from string 0 to string 1, with all other cells unchanged. Every observed original flag is 0; value 1 is an explicit counterfactual-domain assumption, not sampled observed support. Enumerate all 23 single-author flips per task, retain every answer-changing flip and replay all four existing sequential-executor model/prompt arms. Stop after the first target-observation-preserving witness. No claim about real historical contract changes, multi-cell sufficiency or general prevalence.",
+  "scope": "Known development traces; stop at first witness per episode. Original replay is mandatory. All initial peek fields, ordered schemas and every target-episode tool response content/isError are compared exactly. Previous independent episodes may change, but are absent from the target model input. No witness is inconclusive. No model was rerun and natural-language interpretation remains evaluator supplied."
+}

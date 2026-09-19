@@ -1,0 +1,1224 @@
+{
+  "purpose": "Development audit of a named binary-contract perturbation class in publishing.",
+  "database_sha256": "b493a54214d7b224a6f2b9b22b0f651c98f0c345a91cdec10b94825d4d897f4d",
+  "cards_sha256": "50e71d927ed7666a3c68f751324ff8d5cf056af40f7a4642b42d377715c05e60",
+  "source_sha256": "e930da810638802645f18b473efef48fddb065008321b297c0d9c66133e2c723",
+  "mutation_source_sha256": "a8c0651d8c69b4550eac5d8269c6114650b3b9e9cf9537e3bd3522b6c2903cdf",
+  "rows": [
+    {
+      "task_index": 7,
+      "uuid": "5661cd917583-4b2d539ed90b",
+      "query": "List all the titles and year to date sales by author who are not on contract.",
+      "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' ORDER BY t.title_id",
+      "search": {
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            15096
+          ],
+          [
+            "Is Anger the Enemy?",
+            2045
+          ],
+          [
+            "Life Without Fear",
+            111
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            375
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            2032
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "The Gourmet Microwave",
+            22246
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "draws": 23,
+        "candidates": [
+          {
+            "draw": 0,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "172-32-1176"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 1,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "213-46-8915"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ]
+            ]
+          },
+          {
+            "draw": 2,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "238-95-7766"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 4,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "274-80-9391"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 9,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "486-29-1786"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 11,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "648-92-1872"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 13,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "712-45-1867"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 18,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "807-91-6654"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Life Without Fear",
+                111
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 22,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "998-72-3567"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Fifty Years in Buckingham Palace Kitchens",
+                15096
+              ],
+              [
+                "Is Anger the Enemy?",
+                2045
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+                375
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Silicon Valley Gastronomic Treats",
+                2032
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "The Gourmet Microwave",
+                22246
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 8,
+      "uuid": "5661cd917583-0db47e6e47ec",
+      "query": "For all authors from CA who are not on contract, which title of his/hers has the most year to date sales.",
+      "target_sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' AND a.state='CA' ORDER BY t.ytd_sales DESC,t.title",
+      "search": {
+        "original_answer": [
+          [
+            "But Is It User Friendly?",
+            8780
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            375
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            3876
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            3336
+          ],
+          [
+            "Net Etiquette",
+            null
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            4072
+          ],
+          [
+            "Secrets of Silicon Valley",
+            4095
+          ],
+          [
+            "Straight Talk About Computers",
+            4095
+          ],
+          [
+            "Sushi, Anyone?",
+            4095
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            4095
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            18722
+          ]
+        ],
+        "draws": 23,
+        "candidates": [
+          {
+            "draw": 0,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "172-32-1176"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 1,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "213-46-8915"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ]
+            ]
+          },
+          {
+            "draw": 2,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "238-95-7766"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 4,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "274-80-9391"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Emotional Security: A New Algorithm",
+                3336
+              ],
+              [
+                "Net Etiquette",
+                null
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          },
+          {
+            "draw": 9,
+            "mutation": {
+              "table": "authors",
+              "column": "contract",
+              "keys": [
+                "au_id"
+              ],
+              "operator": "single_contract_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "486-29-1786"
+                  ],
+                  "before": "0",
+                  "after": "1"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "But Is It User Friendly?",
+                8780
+              ],
+              [
+                "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+                375
+              ],
+              [
+                "Cooking with Computers: Surreptitious Balance Sheets",
+                3876
+              ],
+              [
+                "Prolonged Data Deprivation: Four Case Studies",
+                4072
+              ],
+              [
+                "Secrets of Silicon Valley",
+                4095
+              ],
+              [
+                "Straight Talk About Computers",
+                4095
+              ],
+              [
+                "Sushi, Anyone?",
+                4095
+              ],
+              [
+                "The Busy Executive's Database Guide",
+                4095
+              ],
+              [
+                "You Can Combat Computer Stress!",
+                18722
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "Post-outcome development on two known publishing tasks. A declared synthetic-world contract allows one authors.contract status to change from string 0 to string 1, with all other cells unchanged. Every observed original flag is 0; value 1 is an explicit counterfactual-domain assumption, not sampled observed support. Enumerate all 23 single-author flips per task, retain every answer-changing flip and replay all four existing sequential-executor model/prompt arms. Stop after the first target-observation-preserving witness. No claim about real historical contract changes, multi-cell sufficiency or general prevalence."
+}
