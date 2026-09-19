@@ -1,0 +1,3046 @@
+{
+  "repository": "bespokelabsai/AutoResearchExam",
+  "revision": "7758e84af55f7666cbdcdd7192959f45b09827af",
+  "tree_sha256": "6811bc0e676d0ce9962d170cfc729ac23598ceae0407936addc831fb35cbf6d0",
+  "scope": "All29 public task specifications and public setup/instruction documents; no tests, hidden data, hints, solutions or task model execution.",
+  "repository_total_blobs": 1004,
+  "repository_total_blob_bytes": 489268162,
+  "files": {
+    "CITATION.cff": {
+      "bytes": 1330,
+      "sha256": "f709196074dd4b0aaa745fd10f8f5a5f5ba642c5aa3688d10ef0ebc7f7442c52",
+      "git_blob": "7ef574757e6c426ad52671d1e37c1653bf5d779a"
+    },
+    "LICENSE": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    "README.md": {
+      "bytes": 7279,
+      "sha256": "ed4bb9537d97c5404fcd148a22412c0b4f5482dd7e8d7c48f6378cc6a5c99138",
+      "git_blob": "a41bef73a9fed285ad1f0578c34ba1a985ba0c9e"
+    },
+    "act-tensor-sparse-panel-imputation-r2/README.md": {
+      "bytes": 589,
+      "sha256": "a0177c4ff1b6fd6d9cc7cde14afb8f5d302ed443b7aed9dc0b6133eea2e6c694",
+      "git_blob": "abe72852b460e4055075b0c41b20ebe79ceabaaa"
+    },
+    "act-tensor-sparse-panel-imputation-r2/environment/Dockerfile": {
+      "bytes": 1957,
+      "sha256": "5781772ec66fd09ad66b5b462937a276efdb8ac2d0315a60739d5566fc839147",
+      "git_blob": "87b2aabb324bfed31ae179e525c6ba7a107f1104"
+    },
+    "act-tensor-sparse-panel-imputation-r2/environment/requirements.txt": {
+      "bytes": 47,
+      "sha256": "075730996bbce5d39457c5b54fde62e24a29a92d807b6e4f0b73c41806c866e1",
+      "git_blob": "d726c5907cd65c3e4c6bbd2a3854aa0e6fdcffe9"
+    },
+    "act-tensor-sparse-panel-imputation-r2/instruction.md": {
+      "bytes": 4309,
+      "sha256": "0c9ee2521673e86c5306355a9d028571c07cd083110014b919dc0bbc6451996b",
+      "git_blob": "c86931b0585dd5da22da1d78875f0ea79589e5fe"
+    },
+    "act-tensor-sparse-panel-imputation-r2/task.toml": {
+      "bytes": 1154,
+      "sha256": "8bf32d0df260d2f411a9e488d30fc15be6341beb386bbae68ad9af1b367c8002",
+      "git_blob": "8b48f9c7245a651e67f09f926375dd65f48389cc"
+    },
+    "activeprune-al-unlabeled-pool-pruning/README.md": {
+      "bytes": 874,
+      "sha256": "e781d890b4c45c9f2e8bf212ca9c7b62dbc9ae2157a80f7343eea38bd7851066",
+      "git_blob": "ae8bbe1d2146df3f43dd85deab03d06d2dbd63b7"
+    },
+    "activeprune-al-unlabeled-pool-pruning/environment/Dockerfile": {
+      "bytes": 2018,
+      "sha256": "78165dafdb53b5b200551a8c551ee350533df62880a2383384f04ffd26e4de30",
+      "git_blob": "c4903df7d085ba5e6ea6a1be717bbd2bc8162a19"
+    },
+    "activeprune-al-unlabeled-pool-pruning/environment/requirements.txt": {
+      "bytes": 82,
+      "sha256": "9b9c22ff5500eb31fdf5059becef25b53caf412b8fe0d3500736ff1724263c41",
+      "git_blob": "dc6ffc1ca3b4a5771190391aed2811b30ae3e448"
+    },
+    "activeprune-al-unlabeled-pool-pruning/instruction.md": {
+      "bytes": 5950,
+      "sha256": "e1673173858193ebbf6d34efdb5d4ca3a8bc33f72372b04cc9aa385893e89cba",
+      "git_blob": "7cccb708fa20aa176dbdf94864e1a7f44c74d243"
+    },
+    "activeprune-al-unlabeled-pool-pruning/task.toml": {
+      "bytes": 1141,
+      "sha256": "bfdfcb5b14b0dc0a30b66d9900938c511b9d69da9058ad48372273f3000a69a8",
+      "git_blob": "5e3d71889f89c0f49a84075d4b31e33ab25a1af2"
+    },
+    "budgeted-covtype-dual-market-open/README.md": {
+      "bytes": 977,
+      "sha256": "465f9e921dd01702d058ebc3b161134c40781b626c0da9969fb52518eb360566",
+      "git_blob": "f03898a40a6082de684d6e59ae37e434bb4d4029"
+    },
+    "budgeted-covtype-dual-market-open/environment/Dockerfile": {
+      "bytes": 1951,
+      "sha256": "f26fe1d0f3304731034c4085c40025b011c210d23be913d213ca94ff981c1d4e",
+      "git_blob": "00da9bb6d337abfea1f928d0af0c23b115811c63"
+    },
+    "budgeted-covtype-dual-market-open/environment/requirements.txt": {
+      "bytes": 33,
+      "sha256": "3b357251fd47d8428a758be0bf0bb40a11251a74c0c53cd0e95b3476884fead5",
+      "git_blob": "c8e640ecf32b46c1fc74c4cc9c01ba5bd8f136cd"
+    },
+    "budgeted-covtype-dual-market-open/instruction.md": {
+      "bytes": 4618,
+      "sha256": "0cf06c38988de7b02072c8aaa3f07e2b2c1253392d6b11dd760206919a1e0fa9",
+      "git_blob": "5bebfbd728e5c60866137899690758d741777862"
+    },
+    "budgeted-covtype-dual-market-open/task.toml": {
+      "bytes": 1288,
+      "sha256": "f1fa52caff6876afd0ddca5554d9e34ed1a62dffe715d8d25320f383965f9f4b",
+      "git_blob": "35553a558f11b1b46bb6243c69100f9222d2229c"
+    },
+    "budgeted-imputation-mcar50/README.md": {
+      "bytes": 731,
+      "sha256": "7dcd209db43698b8b6bac8abfd5d790c0ac2efec4d72eb07268d56bf633b3d2e",
+      "git_blob": "82192035e4f24068d8dcdc1e92f68000734d5395"
+    },
+    "budgeted-imputation-mcar50/environment/Dockerfile": {
+      "bytes": 1842,
+      "sha256": "db4287837f939b925e9ded958953713889f16044efb71ddc853e86aa802f3714",
+      "git_blob": "9b9d71f0e46599e3ad7b0ffbffdf4bb9307570f4"
+    },
+    "budgeted-imputation-mcar50/environment/requirements.txt": {
+      "bytes": 82,
+      "sha256": "9b9c22ff5500eb31fdf5059becef25b53caf412b8fe0d3500736ff1724263c41",
+      "git_blob": "dc6ffc1ca3b4a5771190391aed2811b30ae3e448"
+    },
+    "budgeted-imputation-mcar50/instruction.md": {
+      "bytes": 5001,
+      "sha256": "db5f523c327513114bb130af24984f89bd384fe0f01357dd69c1b0eded0f009f",
+      "git_blob": "f84ec423ac8078a03282890c7b000594230f982e"
+    },
+    "budgeted-imputation-mcar50/task.toml": {
+      "bytes": 1048,
+      "sha256": "ce6fbc841001a0bfa3272952b928ceb3b93f3c5f3507be4f912ac437ae6a4e21",
+      "git_blob": "a86c0f27e4f5f255ed3eb1b73b6c8f1695146578"
+    },
+    "carps-star-discrepancy-subset-select/README.md": {
+      "bytes": 1020,
+      "sha256": "4822e58397603ce67a547554e251a8e979c1c9350e2021c256d2ba400c380a4f",
+      "git_blob": "da74be77ac27bf5a1fa3002e0c0520a63d36ba52"
+    },
+    "carps-star-discrepancy-subset-select/environment/Dockerfile": {
+      "bytes": 1842,
+      "sha256": "db4287837f939b925e9ded958953713889f16044efb71ddc853e86aa802f3714",
+      "git_blob": "9b9d71f0e46599e3ad7b0ffbffdf4bb9307570f4"
+    },
+    "carps-star-discrepancy-subset-select/environment/requirements.txt": {
+      "bytes": 27,
+      "sha256": "cf4d1dc9a101f290fca565d8a6fb4f3ca3f1ada0912c93a81bf37f3fcdf20973",
+      "git_blob": "b2c8174712815cd13bff215d4cd4238b180df145"
+    },
+    "carps-star-discrepancy-subset-select/instruction.md": {
+      "bytes": 3016,
+      "sha256": "77138bdffa578f1211e19fc2c1e74a6fec18323a91dfb97bb7808e5b26427987",
+      "git_blob": "83960625fccf0d0287a88a9a4def0828d242f136"
+    },
+    "carps-star-discrepancy-subset-select/task.toml": {
+      "bytes": 1092,
+      "sha256": "c5530242a3186e24c26aa2cf61c2c3eb36eb2b14ab3312c7405a925f922d402b",
+      "git_blob": "386dce389d210c5a25f777d1d2a28927f192144e"
+    },
+    "causalpfn-cate-pehe-ihdp-surfaceb/README.md": {
+      "bytes": 1087,
+      "sha256": "6756fb004f8e4457e7885559b5d652d9c00340fbc68f7cb518c2191d6ef78ba5",
+      "git_blob": "711de5e9c14424cee12acf50010ade79310ea67d"
+    },
+    "causalpfn-cate-pehe-ihdp-surfaceb/environment/Dockerfile": {
+      "bytes": 1867,
+      "sha256": "4e44f857ba0e201f4f606d9a355deaabb784f4215544a37be0f6f7b798821a16",
+      "git_blob": "0d16b892132541e2964f3564e6dd5d346cac8d38"
+    },
+    "causalpfn-cate-pehe-ihdp-surfaceb/environment/requirements.txt": {
+      "bytes": 327,
+      "sha256": "4e7bfc4154a85b087e7296ee412decceb2c69b896ecc240ef9f97891b6509dea",
+      "git_blob": "a25dfe8c2a945f5ae6037e76c3593b7a26743139"
+    },
+    "causalpfn-cate-pehe-ihdp-surfaceb/instruction.md": {
+      "bytes": 3551,
+      "sha256": "282f76f0102ca6647fbfd4ffff0eb3c6a6ae3c5cca535c057ba04adc5226c921",
+      "git_blob": "01f312e225eee41d300e9dd9f6b7d538375a8349"
+    },
+    "causalpfn-cate-pehe-ihdp-surfaceb/task.toml": {
+      "bytes": 1081,
+      "sha256": "f76351e8732110d8d630dca8ad02961fc4430e030d92075c594cb6d89dcbeea9",
+      "git_blob": "ca620d169957483a80306a6702b6d17616397fce"
+    },
+    "causalrivers-heldout-station-graph-auroc/README.md": {
+      "bytes": 1098,
+      "sha256": "2905e9bd6d52ba7e822ebce6668e04ebbb638809fde5f4689f6b4d53021cdac9",
+      "git_blob": "dbea8064efe8323a21e2699aa29aaec72338718b"
+    },
+    "causalrivers-heldout-station-graph-auroc/environment/Dockerfile": {
+      "bytes": 2247,
+      "sha256": "3af7fa94ea93c53efc452898cf434b20961f5f128ea87643e5dc93d8b70017df",
+      "git_blob": "46741d292a0f501c536ca56ad1811bda230751f1"
+    },
+    "causalrivers-heldout-station-graph-auroc/environment/requirements.txt": {
+      "bytes": 169,
+      "sha256": "49e0df7b7b95be64c46fe0fac9ac32efaa57c98346e4eba419ede9467132579b",
+      "git_blob": "8251474c765e783cfdc983cc6727c2bbd2a73184"
+    },
+    "causalrivers-heldout-station-graph-auroc/instruction.md": {
+      "bytes": 4734,
+      "sha256": "c06b09551a2757a7906152b1114a127e9d86b67d93771e3dbf44ced000b0c4e7",
+      "git_blob": "01f421fbd0a83b54d00d085d0bb796a4d67261e4"
+    },
+    "causalrivers-heldout-station-graph-auroc/task.toml": {
+      "bytes": 1288,
+      "sha256": "6e27fe21f474013d99b1e6c0534be9e5e8c39b7e20d75228e38ea5f112dff555",
+      "git_blob": "f6570ce469bcd6633f4d3ba430686f51ec50abb5"
+    },
+    "citation.bib": {
+      "bytes": 502,
+      "sha256": "07a653865529e1fc74bec22113383c3deaae6e740ed38928b45267a806637578",
+      "git_blob": "73fa5a275f18cd5febe6db94788538414609b2e6"
+    },
+    "coreset-selection-group-robust-waterbirds/README.md": {
+      "bytes": 1093,
+      "sha256": "f2d282bb4aea2f2e8b6f7e63fb6b77a866fbc2c5499de332d32851828979dda4",
+      "git_blob": "78a96e861225da6940346b9c9acbd49b5ba3fb1e"
+    },
+    "coreset-selection-group-robust-waterbirds/environment/Dockerfile": {
+      "bytes": 1801,
+      "sha256": "c422e9dc1b92f43ed53ab8bbf19e248d5e3076d7968cae8027534745e92513e3",
+      "git_blob": "840b1710eb48f835350cce2885506fa3fb1f7d2b"
+    },
+    "coreset-selection-group-robust-waterbirds/environment/requirements.txt": {
+      "bytes": 82,
+      "sha256": "1f7f8812b30d8c40e0a7cd2fb9f36a79a9ad37a582b626f122c3019181aee73c",
+      "git_blob": "239d63dab9267b3a05fbae5bb167a157347eff81"
+    },
+    "coreset-selection-group-robust-waterbirds/instruction.md": {
+      "bytes": 3807,
+      "sha256": "666837914f847200e68a7cd0055149ea16a7ca2dd3b720babdd048db01e8f412",
+      "git_blob": "914964e0104ba1e50ae093355ec6c9baa2aa5d9a"
+    },
+    "coreset-selection-group-robust-waterbirds/task.toml": {
+      "bytes": 1164,
+      "sha256": "eed443e9a87039089fc156b9ca6ea372a1a3c0c795899772c058d2be03fb641c",
+      "git_blob": "d00f9baf5d61e2955c7adf29bb77f881c43a9463"
+    },
+    "cpu-decoder-graph-executor/README.md": {
+      "bytes": 1163,
+      "sha256": "ddd539a1b2c363f0af44782527524929e117b128be20e2b13fc577cdcb96856b",
+      "git_blob": "7833c8248b7e275e611b25eeaf87bbf13486c4e0"
+    },
+    "cpu-decoder-graph-executor/environment/Dockerfile": {
+      "bytes": 1874,
+      "sha256": "d3474350fb3e93949afd1b29a8eaf952b62ef08d8cc93c268a26dde82ac59123",
+      "git_blob": "f4a0b444446329c303eca1e1e29722fa4289087c"
+    },
+    "cpu-decoder-graph-executor/environment/requirements.txt": {
+      "bytes": 34,
+      "sha256": "e79f852cbfe98fab4d4d3d99100f306aadcb58e15f139d9663682393f867022b",
+      "git_blob": "818175bee9b3cd6c48270c8ace0877792abacb5f"
+    },
+    "cpu-decoder-graph-executor/instruction.md": {
+      "bytes": 4931,
+      "sha256": "826bde245fa3fa4eac4235b3cf0fc7f95d06a2d4c643d5ccab3b63c5a71840f7",
+      "git_blob": "11d0e5186bc52d80df2dae3342e6c7f6d173ef75"
+    },
+    "cpu-decoder-graph-executor/task.toml": {
+      "bytes": 1148,
+      "sha256": "131c6406f5eb6b2654cbd15dc5fc71722a15da079a147d721fd72976a54d2098",
+      "git_blob": "e99d81abbef5af209c27d1aa1cdb8fec82f98d0a"
+    },
+    "cpu-llm-decode-throughput/README.md": {
+      "bytes": 663,
+      "sha256": "c40c4c0cbd5ce723d9d00e2ed4bce0f0e03bf705a53dbd931306067cc2b0c390",
+      "git_blob": "ed68d449bb42d79d2c19c90b9ec85058ffd5f1d4"
+    },
+    "cpu-llm-decode-throughput/environment/Dockerfile": {
+      "bytes": 2297,
+      "sha256": "32e1ba814715ba1515f9b8c2456ba772c970b3eadd137e0530dcd1182d56cb98",
+      "git_blob": "9588157e93f12a624f3a9d9c35c1d622707736d1"
+    },
+    "cpu-llm-decode-throughput/environment/requirements.txt": {
+      "bytes": 165,
+      "sha256": "a71fb82e7c13bf3a11d80d857efddd1fccb2315b3af33be9976896bea04fbbfd",
+      "git_blob": "58235bcc89a0ba999b48b8ca5ca6c64779a1e7de"
+    },
+    "cpu-llm-decode-throughput/instruction.md": {
+      "bytes": 4971,
+      "sha256": "e3150dff47a1ac0e18360f59fc62bbb495ec94011806f277656799d4478ab4e1",
+      "git_blob": "b0deda53349fb056eaa5c528f148106ffcaef8c5"
+    },
+    "cpu-llm-decode-throughput/task.toml": {
+      "bytes": 1147,
+      "sha256": "caf47628c37fc6c4c2952920a4255299f6d0ac8663b1817e30af94388dc8def2",
+      "git_blob": "1d3676c2b18d88ddf8436b0c529b5ed82180a561"
+    },
+    "dctabeval-aeac-pooled-cat-statistics/README.md": {
+      "bytes": 1061,
+      "sha256": "a4314b6e332299ed2e03b052a749464562a2c829a895269568fe8a3181266b77",
+      "git_blob": "37293158408b5f44fd82345aa7f48c43ec7a6e8b"
+    },
+    "dctabeval-aeac-pooled-cat-statistics/environment/Dockerfile": {
+      "bytes": 971,
+      "sha256": "8102e073527a81e3765b3005c542e2b80647033eb0adc9abc041b60ec44e6e8c",
+      "git_blob": "9ceef6a2e3980c1d9122952703eac915b4dcb428"
+    },
+    "dctabeval-aeac-pooled-cat-statistics/environment/requirements.txt": {
+      "bytes": 384,
+      "sha256": "bd2e9d2c7b2085e8c0d12cca5de05611c1f501710e396728bedb44ecb5096c4d",
+      "git_blob": "e1ea870ad284ef6b36b64f7ca23230a3fc8afc76"
+    },
+    "dctabeval-aeac-pooled-cat-statistics/instruction.md": {
+      "bytes": 4680,
+      "sha256": "23f85e039f68534902627ccc2cdb6f9acea4b039f466f54a4f5032d6ba291e71",
+      "git_blob": "bc59e4ae928d882de8a98d258dcd38ddeb020613"
+    },
+    "dctabeval-aeac-pooled-cat-statistics/task.toml": {
+      "bytes": 1130,
+      "sha256": "56a2f803ce97ce1521aa394224727f665084f65fd92e79c61b6481b0a2bbc62c",
+      "git_blob": "70ff9d4d75250b6ca6796c35878cbbee75fe7560"
+    },
+    "fast-adv-budgeted-pgd50-robust-cifar10/README.md": {
+      "bytes": 1177,
+      "sha256": "d1035996d83382575679a6702a719705eea39833dc19aa43bca70a2649e66971",
+      "git_blob": "fb3397f66ed4790462cef8331d59f33b0a33307d"
+    },
+    "fast-adv-budgeted-pgd50-robust-cifar10/environment/Dockerfile": {
+      "bytes": 1587,
+      "sha256": "f7bd848814d99adcf090f1f773434f17079a38b26450913582ac3b9fc543d792",
+      "git_blob": "3bb892f171165b3844c37014f52ecb2910c13d3d"
+    },
+    "fast-adv-budgeted-pgd50-robust-cifar10/instruction.md": {
+      "bytes": 2469,
+      "sha256": "3eeaefe20b96d8419805e42f7601e6e4afa5e39eff5fa3cdb17588401da19ea8",
+      "git_blob": "09fcf1e204b89d40f2f188c6d395e8131f23ba24"
+    },
+    "fast-adv-budgeted-pgd50-robust-cifar10/task.toml": {
+      "bytes": 1172,
+      "sha256": "7910eab61921925b0715e9e3c229bea9f9eee6727712fd3a8c2e3f5d586e7b66",
+      "git_blob": "610938a41b7a820887db93a26f0e3208a1610712"
+    },
+    "fastercache-budgeted-video-dit-cache-policy/README.md": {
+      "bytes": 1087,
+      "sha256": "b405b5c0553fe172a9c230f1673d2be8a4883b2725e704bd5bc48a24930e2055",
+      "git_blob": "d8aac21916f1e417017de952995888a126f82ecb"
+    },
+    "fastercache-budgeted-video-dit-cache-policy/environment/Dockerfile": {
+      "bytes": 1557,
+      "sha256": "e5cab521bc954a3b04824d517541b5fe417b5d49fb990bae62bd0a9eab92cba4",
+      "git_blob": "b9c9a1dadf2bef9b5e1589ccaf886a6772a853d5"
+    },
+    "fastercache-budgeted-video-dit-cache-policy/instruction.md": {
+      "bytes": 3898,
+      "sha256": "6bc89e76d83f1be8d9edb983c62958e7d9e36b6dfe383ee0a2ec13fbeee7d939",
+      "git_blob": "68f4803a5557e70beed2070c7d2cdae82584da7e"
+    },
+    "fastercache-budgeted-video-dit-cache-policy/task.toml": {
+      "bytes": 993,
+      "sha256": "c86213b9fab206e1fa01d2ccdc325cf2cbe501577caf67a55283f9edd0865365",
+      "git_blob": "7a2244b24bdd7190a57e178d898c0287e5097419"
+    },
+    "fastergcg-candidate-token-rank-ccc/README.md": {
+      "bytes": 1165,
+      "sha256": "d034b7036ea61d6eab300ffcba7d20675c3afcde5f267abc3daf9583bb0e4f00",
+      "git_blob": "c60aac0f18b3d8a9dcbfd7d270e46a0a455a91e1"
+    },
+    "fastergcg-candidate-token-rank-ccc/environment/Dockerfile": {
+      "bytes": 1829,
+      "sha256": "6704091cc4d203675f8ed7129303798fb4daf0c64243c4780cec47798c5153d4",
+      "git_blob": "9a0ceaee1bb43e1199000c65acded398782be7ad"
+    },
+    "fastergcg-candidate-token-rank-ccc/instruction.md": {
+      "bytes": 4113,
+      "sha256": "f8a8fe733fcb2202bb79fa5e95ce9fb4bb74f79b371bef128b24adea0a8446ae",
+      "git_blob": "eb22bf5889e1fe5b821804ecd0de8b82e64bc7ed"
+    },
+    "fastergcg-candidate-token-rank-ccc/task.toml": {
+      "bytes": 1001,
+      "sha256": "3f8637ec4771cbed3d101eea6e33614dbaaffa1d959e434287c7ae8d80158201",
+      "git_blob": "b9b5d0affb29d2c0b23ddd64c9ba545ddbdf0e23"
+    },
+    "grpo-rl-halfcheetah-advantage-estimator/README.md": {
+      "bytes": 1114,
+      "sha256": "a158f61b596325074bf42b0c81d00578077923cf86dbaf1c94411cb1d0ec0baf",
+      "git_blob": "b6eb25cc216741ad107b18632d3ccf9b3279fb12"
+    },
+    "grpo-rl-halfcheetah-advantage-estimator/environment/Dockerfile": {
+      "bytes": 1952,
+      "sha256": "2c1dedd3eecd822f34206d9201eae7fda2803e539470008b2638b4e796f58e31",
+      "git_blob": "2d66514d0951f16ed53b45d55b8b5095ee444e7a"
+    },
+    "grpo-rl-halfcheetah-advantage-estimator/environment/requirements.txt": {
+      "bytes": 473,
+      "sha256": "98d4b08eef9203672eac33907bfb3d358da8701888d04f794318e83f9366f87d",
+      "git_blob": "b0ddf6940d2d6356e52cf9ae21b775a3bd05fb7d"
+    },
+    "grpo-rl-halfcheetah-advantage-estimator/instruction.md": {
+      "bytes": 5677,
+      "sha256": "97e7f1c4d3b14463f342ad2d40cc6c5d46cb5dddec5c4bf79532b62169785d8c",
+      "git_blob": "c1295bee4a8ef19feb1658b514cc2520e824ddd1"
+    },
+    "grpo-rl-halfcheetah-advantage-estimator/task.toml": {
+      "bytes": 1748,
+      "sha256": "7a94b45186864036ee9cdae7dde9d69ab88b54597139d093a323a276321116ed",
+      "git_blob": "a4fbb79737502a2b55058a3f7e80e7fd621bb11c"
+    },
+    "hicard-latent-encoder/README.md": {
+      "bytes": 776,
+      "sha256": "bf84ca92e837cd8c40e7c88d590f2817ba664b675e9d64714bbb0ef3e9393cc2",
+      "git_blob": "51a8224e177c47b8f4f2873ab6e05d38b31d9f51"
+    },
+    "hicard-latent-encoder/environment/Dockerfile": {
+      "bytes": 1884,
+      "sha256": "743861687e20b2d6bd753a40f87ee65e336dfe56e0bf2bb4f403dd17c3b6a5e3",
+      "git_blob": "840b366272e58264e8397aade8d7e937cf00e008"
+    },
+    "hicard-latent-encoder/environment/requirements.txt": {
+      "bytes": 82,
+      "sha256": "9b9c22ff5500eb31fdf5059becef25b53caf412b8fe0d3500736ff1724263c41",
+      "git_blob": "dc6ffc1ca3b4a5771190391aed2811b30ae3e448"
+    },
+    "hicard-latent-encoder/instruction.md": {
+      "bytes": 4650,
+      "sha256": "26f263ab432d30044de3d5a031a8dde0d2a5c24172855090ac8fa5d2789f5e08",
+      "git_blob": "5a5d5a25cbecb0150ecbe6c7b65036483eaece70"
+    },
+    "hicard-latent-encoder/task.toml": {
+      "bytes": 1115,
+      "sha256": "57cc019890347ef201c55bc60753b69c8346069e126ad79b5c4c6488168fc5fb",
+      "git_blob": "a7559405f8881cb038ce1b642b0a62b1580c383b"
+    },
+    "label-efficient-risk-estimator/README.md": {
+      "bytes": 724,
+      "sha256": "2ef370dbe539c6209e90c2f58f3ad59cdf3d21a1c0002ec251d29e5108c7325c",
+      "git_blob": "6c29f771c000372c71820db642c61258bbe81372"
+    },
+    "label-efficient-risk-estimator/environment/Dockerfile": {
+      "bytes": 1031,
+      "sha256": "4b91fc76584c48c7b9a74e61a3b18594f40c50dcddf32bcb3a43b234bcd166d6",
+      "git_blob": "38662c9e126193c42fdf26663cbdea012611d45a"
+    },
+    "label-efficient-risk-estimator/environment/requirements.txt": {
+      "bytes": 27,
+      "sha256": "8afe2dab8e71cdfff123950a7104eed064b3d478f1dc5710e041c22ff96454c4",
+      "git_blob": "7f2a0d4123a6443051ec64e916557b9244bfad8c"
+    },
+    "label-efficient-risk-estimator/instruction.md": {
+      "bytes": 4825,
+      "sha256": "66a209cd63aaaa9060abd535855f03521e2bed022a65507c7cd5ae67a7129d3a",
+      "git_blob": "b1bef81331df5879fe215a4885d24b503144bdae"
+    },
+    "label-efficient-risk-estimator/task.toml": {
+      "bytes": 1129,
+      "sha256": "cf5881c80420845e6a47b9f6432e989f97aac862fcf395acf310d3aa3003a832",
+      "git_blob": "f03fcd98040a5f8ca85a0f27ae474f9ec1c1f248"
+    },
+    "less-is-more-pretrain-token-budget-selector/README.md": {
+      "bytes": 1124,
+      "sha256": "3945452d14e90fbbf6e2134d4f83f351a73b9c35cd7c56f7d37bd10bcfce0467",
+      "git_blob": "75269a30ee4ce74af9884366b51074d274e8240e"
+    },
+    "less-is-more-pretrain-token-budget-selector/environment/Dockerfile": {
+      "bytes": 2931,
+      "sha256": "17fb4c4ca7b508c701899cf66fc6fbeb93562694067fd3cbd2959afb47118647",
+      "git_blob": "147250ff16bfa04fd7fd36a7b84fa424ebab992b"
+    },
+    "less-is-more-pretrain-token-budget-selector/instruction.md": {
+      "bytes": 3619,
+      "sha256": "d4a524997bb02447045d5845154d2d6483cf7cab9fd5e1c4dd05b8250c1aa88b",
+      "git_blob": "6f6f8ff4ca886d77f0118ee5ed2d15f75a36ef65"
+    },
+    "less-is-more-pretrain-token-budget-selector/task.toml": {
+      "bytes": 1655,
+      "sha256": "8661617ff91327b2ec7952d648e16e0a78f2205b8e03fca910bbec1b44a15e75",
+      "git_blob": "a3e25e123fab827258181566c7551e01473e0f92"
+    },
+    "mlh-coco-16bit-hash-head-map5000/README.md": {
+      "bytes": 1113,
+      "sha256": "18ebe0a5da6794b500f84c56d9f31f5e3dba2c54399acd7c36f8f7b6944e6a01",
+      "git_blob": "606f94b2822e29aa97f94179f749026ca5ff886b"
+    },
+    "mlh-coco-16bit-hash-head-map5000/environment/Dockerfile": {
+      "bytes": 1958,
+      "sha256": "72613d4623bad20192dec9a22e0eff3bb704c804df849c28bea09c884545720f",
+      "git_blob": "ff14129da5612d8f6e50375ee367ef5b7b952d74"
+    },
+    "mlh-coco-16bit-hash-head-map5000/environment/requirements.txt": {
+      "bytes": 310,
+      "sha256": "da7839eefbfca946bd6edc7a5b7cc978d7a9ff9116488603af0d3d73614fcff8",
+      "git_blob": "6294a416fc0edbf7b80b6b9b9cb7cbf73a395448"
+    },
+    "mlh-coco-16bit-hash-head-map5000/instruction.md": {
+      "bytes": 3746,
+      "sha256": "1f732548eacd1cfaef3f687837a18b78ed2f15ffd8d89d0e90d9a01c8c82335e",
+      "git_blob": "4cda6e3e87080b1b459d14d4b43ecf2608526705"
+    },
+    "mlh-coco-16bit-hash-head-map5000/task.toml": {
+      "bytes": 1147,
+      "sha256": "3d1957dbe9b5191f1de8215b2186087503dcfe56e5695e93f600d4d60c8e9ed8",
+      "git_blob": "904845d5b00e37171274e87bb5c476bf1b8b58ba"
+    },
+    "reppo-reliable-onpolicy-control-trainer/README.md": {
+      "bytes": 1201,
+      "sha256": "70dcd9ef6fc9f490b91efa03ab7a1fbb88f8d14615eb972f7039621c2ff76a11",
+      "git_blob": "56a4b53261dfce6da0926f7002548b05b42844c3"
+    },
+    "reppo-reliable-onpolicy-control-trainer/environment/Dockerfile": {
+      "bytes": 1864,
+      "sha256": "927f37636dd7288612746f7500a913cb65c4c8aef425753eaa3c1d1749906b6d",
+      "git_blob": "95cc08cdd40ca8602212f6cd38041bfddc407616"
+    },
+    "reppo-reliable-onpolicy-control-trainer/environment/requirements.txt": {
+      "bytes": 257,
+      "sha256": "50f11867301a5bf467e57cdddee3fb335549bcb5a5faddf7316612d8a4561d36",
+      "git_blob": "478c0b8d7225378df85e9d90edb728b7bbd17f44"
+    },
+    "reppo-reliable-onpolicy-control-trainer/instruction.md": {
+      "bytes": 7158,
+      "sha256": "fd1125d08978ccd1860683ac2c59aa0276650cc05ccf67b70a3b0bdb642389bc",
+      "git_blob": "c2c63fdc87ea09f0af1ff14fd4b5e850ec987d20"
+    },
+    "reppo-reliable-onpolicy-control-trainer/task.toml": {
+      "bytes": 1248,
+      "sha256": "036906e73a27613518f1c14169368f571baf04a76071540643d7ee36904c3c15",
+      "git_blob": "24b9992068bd98b3154b2a16e12cce742385cd1d"
+    },
+    "sae-sparse-dict-nmse-frontier/README.md": {
+      "bytes": 1116,
+      "sha256": "c8eeb69f3982cb34818dbec8eb81e4bc4ec1acc92b4c8acf1540239cded7a9d0",
+      "git_blob": "c15f713545b579c3efcb844d2ebfa979fd862113"
+    },
+    "sae-sparse-dict-nmse-frontier/environment/Dockerfile": {
+      "bytes": 2068,
+      "sha256": "4a6a844de874b1adcf61ea6ca8e444e965c026e77776752717a03f1f641f4f87",
+      "git_blob": "48c83ea3020774ab865cfb6c4c28c41887d7a614"
+    },
+    "sae-sparse-dict-nmse-frontier/instruction.md": {
+      "bytes": 3536,
+      "sha256": "2be98c370c17f0ad61b229e554cc829669fb0eafc0885a5850ac5ec1634f8825",
+      "git_blob": "d90b5dea1419cb160f237ab064c383de3ad6a7f3"
+    },
+    "sae-sparse-dict-nmse-frontier/task.toml": {
+      "bytes": 1017,
+      "sha256": "cb188b64c97c37ba8be55401805b6702512c29e46a5a13b6da9d47891e8013fe",
+      "git_blob": "2ea070409255a829eebc9f573eca40690283693b"
+    },
+    "shortest-valid-ci-l2-ece/README.md": {
+      "bytes": 947,
+      "sha256": "560a0f7cbb31a4fb8c2ccea000d66ddbc046a5c041a7032afaefe6c29cf740a5",
+      "git_blob": "263405511588e7d178aa189175e7adf65ec424e3"
+    },
+    "shortest-valid-ci-l2-ece/environment/Dockerfile": {
+      "bytes": 1923,
+      "sha256": "76b77309b993c68a5a64c854eda61b9d885492ca7c2199cc533181faee2a5118",
+      "git_blob": "68c007d997590be79b8f735ad8e02af1ffa86dfe"
+    },
+    "shortest-valid-ci-l2-ece/environment/requirements.txt": {
+      "bytes": 27,
+      "sha256": "cf4d1dc9a101f290fca565d8a6fb4f3ca3f1ada0912c93a81bf37f3fcdf20973",
+      "git_blob": "b2c8174712815cd13bff215d4cd4238b180df145"
+    },
+    "shortest-valid-ci-l2-ece/instruction.md": {
+      "bytes": 4951,
+      "sha256": "be11f61a026312478f96b11af65a2872d7108682970b6a1d686fdf7996739726",
+      "git_blob": "2cc125661dd4f01ba8f1c696f5ec34934c2bdfa5"
+    },
+    "shortest-valid-ci-l2-ece/task.toml": {
+      "bytes": 1117,
+      "sha256": "15cd4bf9a93a6fad2420ab90f38f6a5793b76e03417457bf02c96a26051762b3",
+      "git_blob": "87e88623bd6ac11197fe20880163a1127d5cb672"
+    },
+    "sketched-newton-cov-estimator/README.md": {
+      "bytes": 746,
+      "sha256": "56a54e5bae15afb2f6f9ca67fa4da396b65236003ee4124a046c3ec01b8a5379",
+      "git_blob": "667d854653f1fe96fc6e01fbe14d5b7bdb75d12f"
+    },
+    "sketched-newton-cov-estimator/environment/Dockerfile": {
+      "bytes": 1846,
+      "sha256": "3da867f38842c2553f7ab69c67dd169d3d6c0a20c04600df90b87854c50ce243",
+      "git_blob": "cd26e73efed06076c78099c4a477b1cab7811d7b"
+    },
+    "sketched-newton-cov-estimator/environment/requirements.txt": {
+      "bytes": 27,
+      "sha256": "cf4d1dc9a101f290fca565d8a6fb4f3ca3f1ada0912c93a81bf37f3fcdf20973",
+      "git_blob": "b2c8174712815cd13bff215d4cd4238b180df145"
+    },
+    "sketched-newton-cov-estimator/instruction.md": {
+      "bytes": 4470,
+      "sha256": "1e843187ae1ca642747afec357b4f931b0fb8eeaf077e15b9545a157a2b4a2da",
+      "git_blob": "3a8daa82ed03703ffa96bb559075efdedcdf7a27"
+    },
+    "sketched-newton-cov-estimator/task.toml": {
+      "bytes": 1142,
+      "sha256": "763f6d63604ea333fd0cb1147ada8a35047322b6e2da2bcebe80780755c0ce54",
+      "git_blob": "719fcd701f50781109cdf85031789c201fb9c71c"
+    },
+    "sopcc-online-chance-constrained-policy/README.md": {
+      "bytes": 1173,
+      "sha256": "07c2b52159c0036be5c7229dd86fecc09c8a6c7216b5e41f5e9df65002980a20",
+      "git_blob": "3da5d3759c8e2287a90a1070fde76b1844ecbf61"
+    },
+    "sopcc-online-chance-constrained-policy/environment/Dockerfile": {
+      "bytes": 2046,
+      "sha256": "178ddfa84b1e4f63c214322eab4595e0966e4fdfca0138d95183f7b46dcf4cac",
+      "git_blob": "ddb1ff5211215c5d37a9e2b4d9eb55e86cf4f39d"
+    },
+    "sopcc-online-chance-constrained-policy/environment/requirements.txt": {
+      "bytes": 136,
+      "sha256": "1d4af681c1ad7863590ef9d9df65d871ba636f05699c481e3698caf4fbc958e7",
+      "git_blob": "01ccb069ac7a13550ab665749d672a28a21aaada"
+    },
+    "sopcc-online-chance-constrained-policy/instruction.md": {
+      "bytes": 6977,
+      "sha256": "6eeb6a3162149487c9ef7ab1607657dceaefec2ac3154432a1e2da520c65dc07",
+      "git_blob": "515c91131d8616d1a5372eed96409713ad118abf"
+    },
+    "sopcc-online-chance-constrained-policy/task.toml": {
+      "bytes": 1137,
+      "sha256": "72de1676b85a641675f5d5267ddc9c806e699bf2e9045609e036627db1662d3e",
+      "git_blob": "8a9e2db4dd4cb9c1c735024c9f4a220c50798612"
+    },
+    "sparse-elsa-item-embeddings-8nnz/README.md": {
+      "bytes": 1157,
+      "sha256": "cf141a229bdb42fa1c332474dcc1856b9e8b6abdecc8f67f750d3008d717b677",
+      "git_blob": "dd9e0cebd297b2bfa7d7ffd2cd4ebe5c4c2aabed"
+    },
+    "sparse-elsa-item-embeddings-8nnz/environment/Dockerfile": {
+      "bytes": 2307,
+      "sha256": "d9b1886bc188ed1bfb0e48cb2572003bb4d644df7507792a84ef18d4e4eb1534",
+      "git_blob": "ddb8ecfe5c301237fc6f8d7e061c4f34552cd0e6"
+    },
+    "sparse-elsa-item-embeddings-8nnz/environment/requirements.txt": {
+      "bytes": 156,
+      "sha256": "131bcec170624181bce77a1bd6aeb8b9a9d06860715345a8f6d6c49ca34e1934",
+      "git_blob": "ffa3ec8d9aecf991e0c3b728749b524ae9c1e468"
+    },
+    "sparse-elsa-item-embeddings-8nnz/instruction.md": {
+      "bytes": 4917,
+      "sha256": "98d92d98a211c38a3cf0c3441c7f89803f020a8d59f2af617114e28fc8f97c3b",
+      "git_blob": "158904cd8c111c14018a6b2e1ba203940a6af26c"
+    },
+    "sparse-elsa-item-embeddings-8nnz/task.toml": {
+      "bytes": 1147,
+      "sha256": "41a1a40eb15e61ad7c79cb96ba35969b7adbed0f6605e8cfeea206fa0e290ea0",
+      "git_blob": "538a9a40f31eaa2050941599358e64845e9d2d55"
+    },
+    "svdquant-w4a4-psnr/README.md": {
+      "bytes": 779,
+      "sha256": "5017c4864fb9489faf5d7976f42b2de5d1a1de8694ade5016fbd5d39b57fc5a9",
+      "git_blob": "f2f171fcfff9f0373d9a44f16bc87090522c4327"
+    },
+    "svdquant-w4a4-psnr/environment/Dockerfile": {
+      "bytes": 1588,
+      "sha256": "11ce4717992f63b43dd5bef598b007131da62abed5fad8816c98fdf2a517a202",
+      "git_blob": "144dff821b949e849cb565ba96c3d7aa1865090f"
+    },
+    "svdquant-w4a4-psnr/environment/requirements.txt": {
+      "bytes": 82,
+      "sha256": "bce0270d757a66cc51023b866d01c3b7b6214ea34fd469bec746526b71113ff5",
+      "git_blob": "3eb7b818f0c853966150e30553d1f8e371f94a42"
+    },
+    "svdquant-w4a4-psnr/instruction.md": {
+      "bytes": 2771,
+      "sha256": "925282b9cf7abe0013894672b9b0b61359a6cd70ec9ca382ef122f7e9036d61e",
+      "git_blob": "50314ca0cd2eb47451e63cb31bef73dafa98ed26"
+    },
+    "svdquant-w4a4-psnr/task.toml": {
+      "bytes": 989,
+      "sha256": "88ce42041fd9ef4ef53a9cde6df420a4a0d2de52a7b983b561729fc041c4c527",
+      "git_blob": "e17c7b580f775865289e765a808da7b66ea93fc7"
+    },
+    "tgat-milp-branching-node-count/README.md": {
+      "bytes": 700,
+      "sha256": "17097d6def623ea2f7cd5217325e3a99528b846589eb2856c723a94e892e9b86",
+      "git_blob": "40636152fbb97826d62d249cd61c2e069c1df3d0"
+    },
+    "tgat-milp-branching-node-count/environment/Dockerfile": {
+      "bytes": 1968,
+      "sha256": "4062294e7ef616906e3655644b27f7b3169f26a9453f276ecd6953a47db83757",
+      "git_blob": "83b4e64e7ba1c3767fbe5f49f0db30d15ecbeb37"
+    },
+    "tgat-milp-branching-node-count/environment/requirements.txt": {
+      "bytes": 362,
+      "sha256": "4508986ae48a14057251e3c63b4d9f3d77dd807ac887265584209a4b185236e9",
+      "git_blob": "6a68a0bf90a8e747157198775aa58bb0fd3f472f"
+    },
+    "tgat-milp-branching-node-count/instruction.md": {
+      "bytes": 4463,
+      "sha256": "5705da1731f83a89d5cda4496d9a4bf8ed04ef0d62dc689b0d127ba5ca75aa6e",
+      "git_blob": "df7e3c3ead2a9132d988bfa62e5d35e4f2a93803"
+    },
+    "tgat-milp-branching-node-count/task.toml": {
+      "bytes": 1145,
+      "sha256": "9eebe49bbbd9a57168d80d422b470cc3b70f5509abaa742462dcacfdae0f7136",
+      "git_blob": "e214fc7f877d5c0e6b55c4d0638bae3ce28889fd"
+    },
+    "ties-merging-clip-vitl14-eight-task-merge/README.md": {
+      "bytes": 660,
+      "sha256": "492ffed34f1854275fb3be7b0583c23620ce417d32998d53ae4ca961c2fd5261",
+      "git_blob": "d9f7da14a0a382b40879b8d8aa3cc1230661b2ca"
+    },
+    "ties-merging-clip-vitl14-eight-task-merge/environment/Dockerfile": {
+      "bytes": 1538,
+      "sha256": "4f6933e243345b87b3ffc1071aba76f70838871294c323c11ceafdb1cebd863b",
+      "git_blob": "0e9270293fe92a2e27df2617a255c6794673a838"
+    },
+    "ties-merging-clip-vitl14-eight-task-merge/instruction.md": {
+      "bytes": 3798,
+      "sha256": "2e35336021464919c6ce72e05678d19c460bbd57d4ba9c64b3a9614dc8dd217d",
+      "git_blob": "022e553bed9d2da99ab8823dca019c82a77737fd"
+    },
+    "ties-merging-clip-vitl14-eight-task-merge/task.toml": {
+      "bytes": 1212,
+      "sha256": "88ea33550d4a28b878e09dfcadbad637dcb7214720edf66ec422f489ff034ac2",
+      "git_blob": "473e93fc2979a3805e9125b2deaa87635b60f0de"
+    },
+    "vas-maskless-deployment-feasibility/README.md": {
+      "bytes": 1167,
+      "sha256": "7bff45bb18173e77393ea281796b4429e39f39c4be1412defe3493f1d924589b",
+      "git_blob": "a4af75f5a3f51c7e3a7a38756e1bce191acbaea9"
+    },
+    "vas-maskless-deployment-feasibility/environment/Dockerfile": {
+      "bytes": 1898,
+      "sha256": "421c5e8bfdee933021001bfc7c1455d0719e594517686155c68f3f3b69756fd7",
+      "git_blob": "e5a1ae61e1513a0a83860e2e7dd16d63a455e723"
+    },
+    "vas-maskless-deployment-feasibility/environment/requirements.txt": {
+      "bytes": 191,
+      "sha256": "e19213caad6685eaf27d8c430a50c1d251097c117c428865f116d265b4facdc1",
+      "git_blob": "3205c2e9b4c634f74d76cdf97034b4f4f6b32896"
+    },
+    "vas-maskless-deployment-feasibility/instruction.md": {
+      "bytes": 5990,
+      "sha256": "dca3ded271092ecef26b2ee83599fb7b49c5bf3956c87ea605c81e62bf078de8",
+      "git_blob": "d2fa1c58e7ec60394c1de4a24f6ddb217ad22711"
+    },
+    "vas-maskless-deployment-feasibility/task.toml": {
+      "bytes": 1174,
+      "sha256": "43ca780dda7d5a6404121dc6e173b29170aa5820078470c9a384d25742c2216e",
+      "git_blob": "41ce86c06453e261e7a9f9342453ae252278a5f2"
+    }
+  },
+  "task_specs": [
+    {
+      "task": "act-tensor-sparse-panel-imputation-r2",
+      "task_toml_sha256": "8bf32d0df260d2f411a9e488d30fc15be6341beb386bbae68ad9af1b367c8002",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/solution"
+        ],
+        "task": {
+          "name": "bespokelabs/act-tensor-sparse-panel-imputation-r2",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Unsupervised and representation learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "activeprune-al-unlabeled-pool-pruning",
+      "task_toml_sha256": "bfdfcb5b14b0dc0a30b66d9900938c511b9d69da9058ad48372273f3000a69a8",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/activeprune-al-unlabeled-pool-pruning",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Data Engineering and Curation",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "budgeted-covtype-dual-market-open",
+      "task_toml_sha256": "f1fa52caff6876afd0ddca5554d9e34ed1a62dffe715d8d25320f383965f9f4b",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/budgeted-covtype-dual-market-open",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "difficulty": "hard",
+          "model_difficulty": "hard",
+          "category": "Machine Learning and AI",
+          "tags": [
+            "budgeted-acquisition",
+            "active-learning",
+            "dynamic-pricing",
+            "market-pricing"
+          ],
+          "task_objective": [
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 8.0,
+          "expert_time_estimate_minutes": 480,
+          "junior_time_estimate_minutes": 960,
+          "docker_flags": []
+        },
+        "verifier": {
+          "timeout_sec": 2000.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "budgeted-imputation-mcar50",
+      "task_toml_sha256": "ce6fbc841001a0bfa3272952b928ceb3b93f3c5f3507be4f912ac437ae6a4e21",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/budgeted-imputation-mcar50",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Feature engineering",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 600.0,
+            "os": "linux",
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "carps-star-discrepancy-subset-select",
+      "task_toml_sha256": "c5530242a3186e24c26aa2cf61c2c3eb36eb2b14ab3312c7405a925f922d402b",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/carps-star-discrepancy-subset-select",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Evaluation infrastructure",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 3.0
+        },
+        "verifier": {
+          "timeout_sec": 1200.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 600.0,
+            "os": "linux",
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "causalpfn-cate-pehe-ihdp-surfaceb",
+      "task_toml_sha256": "f76351e8732110d8d630dca8ad02961fc4430e030d92075c594cb6d89dcbeea9",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/causalpfn-cate-pehe-ihdp-surfaceb",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Model inference and prediction",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 600.0,
+            "os": "linux",
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "causalrivers-heldout-station-graph-auroc",
+      "task_toml_sha256": "6e27fe21f474013d99b1e6c0534be9e5e8c39b7e20d75228e38ea5f112dff555",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/causalrivers-heldout-station-graph-auroc",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Model inference and prediction",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 6.0,
+          "metric_name": "Mean per-subgraph AUROC of directed-edge scores over a sealed panel of connected 5-node gauge subgraphs",
+          "objective": "maximize"
+        },
+        "verifier": {
+          "timeout_sec": 2700.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "coreset-selection-group-robust-waterbirds",
+      "task_toml_sha256": "eed443e9a87039089fc156b9ca6ea372a1a3c0c795899772c058d2be03fb641c",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/coreset-selection-group-robust-waterbirds",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Data loading and training pipelines",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 2400.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "cpu-decoder-graph-executor",
+      "task_toml_sha256": "131c6406f5eb6b2654cbd15dc5fc71722a15da079a147d721fd72976a54d2098",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/cpu-decoder-graph-executor",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Systems and Efficiency",
+          "task_objective": [
+            "Optimize",
+            "Implement"
+          ],
+          "artifact_type": [
+            "Single script or program",
+            "Codebase"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "cpu-llm-decode-throughput",
+      "task_toml_sha256": "caf47628c37fc6c4c2952920a4255299f6d0ac8663b1817e30af94388dc8def2",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/cpu-llm-decode-throughput",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Systems and Efficiency",
+          "task_objective": [
+            "Optimize",
+            "Implement"
+          ],
+          "artifact_type": [
+            "Codebase",
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "timeout_sec": 2400.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "dctabeval-aeac-pooled-cat-statistics",
+      "task_toml_sha256": "56a2f803ce97ce1521aa394224727f665084f65fd92e79c61b6481b0a2bbc62c",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/dctabeval-aeac-pooled-cat-statistics",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Feature engineering",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 3.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "fast-adv-budgeted-pgd50-robust-cifar10",
+      "task_toml_sha256": "7910eab61921925b0715e9e3c229bea9f9eee6727712fd3a8c2e3f5d586e7b66",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/fast-adv-budgeted-pgd50-robust-cifar10",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Training loops",
+          "task_objective": [
+            "Implement",
+            "Optimize",
+            "Secure or harden"
+          ],
+          "artifact_type": [
+            "Single script or program",
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 4.0,
+          "metric_name": "PGD-50 robust accuracy (percent) on the sealed 10,000-image CIFAR-10 test split at eps=8/255",
+          "metric_objective": "maximize"
+        },
+        "verifier": {
+          "network_mode": "no-network",
+          "timeout_sec": 7200.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 14400.0,
+          "os": "linux",
+          "cpus": 4,
+          "memory_mb": 16384,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "fastercache-budgeted-video-dit-cache-policy",
+      "task_toml_sha256": "c86213b9fab206e1fa01d2ccdc325cf2cbe501577caf67a55283f9edd0865365",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/fastercache-budgeted-video-dit-cache-policy",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Model inference and prediction",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 5.0
+        },
+        "verifier": {
+          "network_mode": "no-network",
+          "timeout_sec": 10800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 10800.0,
+          "os": "linux",
+          "cpus": 2,
+          "memory_mb": 16384,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "fastergcg-candidate-token-rank-ccc",
+      "task_toml_sha256": "3f8637ec4771cbed3d101eea6e33614dbaaffa1d959e434287c7ae8d80158201",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/fastergcg-candidate-token-rank-ccc",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Interpretability and model inspection",
+          "task_objective": [
+            "Implement",
+            "Optimize",
+            "Analyze"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "network_mode": "no-network",
+          "timeout_sec": 7200.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 10800.0,
+          "os": "linux",
+          "cpus": 4,
+          "memory_mb": 32768,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "grpo-rl-halfcheetah-advantage-estimator",
+      "task_toml_sha256": "7a94b45186864036ee9cdae7dde9d69ab88b54597139d093a323a276321116ed",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/grpo-rl-halfcheetah-advantage-estimator",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "name": "advantage-estimation-half-cheetah",
+          "task_slug": "grpo-rl-halfcheetah-advantage-estimator",
+          "expert_time_estimate_hours": 4.0,
+          "title": "Advantage estimation for a frozen PPO-clip harness on HalfCheetah-v4 at a 1M-step budget",
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Reinforcement learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "metric_name": "Mean undiscounted episodic return on HalfCheetah-v4 after a fixed 999,424-environment-step training run of the frozen PPO-clip harness, averaged over 240 held-out evaluation episodes (12 sealed training seeds x 20 sealed evaluation seeds), in raw environment reward",
+          "objective": "maximize",
+          "reward_map": "rational_squash",
+          "open_ended": true,
+          "graded_deliverable": "/app/output/advantage.py"
+        },
+        "verifier": {
+          "timeout_sec": 15000.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "hicard-latent-encoder",
+      "task_toml_sha256": "57cc019890347ef201c55bc60753b69c8346069e126ad79b5c4c6488168fc5fb",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/hicard-latent-encoder",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Feature engineering",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "label-efficient-risk-estimator",
+      "task_toml_sha256": "cf5881c80420845e6a47b9f6432e989f97aac862fcf395acf310d3aa3003a832",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/label-efficient-risk-estimator",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Evaluation, Calibration, and Robustness",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 2700.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "less-is-more-pretrain-token-budget-selector",
+      "task_toml_sha256": "8661617ff91327b2ec7952d648e16e0a78f2205b8e03fca910bbec1b44a15e75",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/less-is-more-pretrain-token-budget-selector",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "task_slug": "less-is-more-pretrain-token-budget-selector",
+          "title": "Spend a pretraining token budget: write the corpus selector that minimises held-out perplexity",
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Data loading and training pipelines",
+          "expert_time_estimate_hours": 8.0,
+          "objective": "maximize",
+          "metric_name": "percent reduction in held-out perplexity of the pinned 124M GPT trained on the agent-selected <=125M-token subset of the sealed 250M-token pool, relative to the same pinned trainer run on the entire pool",
+          "reward_map": "rational_squash",
+          "degenerate_reward": 0.1,
+          "graded_gpu": "H100",
+          "dataset": "allenai/c4 (en and en.noclean), revision 1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+          "notes": "Open-ended: continuous reward in [0,1], no threshold, no reference solution. Anchors and measurements are never disclosed to the agent."
+        },
+        "verifier": {
+          "network_mode": "no-network",
+          "timeout_sec": 14400.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 28800.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 10800.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 32768,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "mlh-coco-16bit-hash-head-map5000",
+      "task_toml_sha256": "3d1957dbe9b5191f1de8215b2186087503dcfe56e5695e93f600d4d60c8e9ed8",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/mlh-coco-16bit-hash-head-map5000",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Unsupervised and representation learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "reppo-reliable-onpolicy-control-trainer",
+      "task_toml_sha256": "036906e73a27613518f1c14169368f571baf04a76071540643d7ee36904c3c15",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/solution"
+        ],
+        "task": {
+          "name": "bespokelabs/reppo-reliable-onpolicy-control-trainer",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "task_slug": "reppo-reliable-onpolicy-control-trainer",
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Model Training and Alignment",
+          "metric_name": "reliable_success_fraction",
+          "objective": "maximize",
+          "graded_deliverable": "/app/solution/trainer.py",
+          "device": "cpu",
+          "expert_time_estimate_hours": 12.0
+        },
+        "verifier": {
+          "timeout_sec": 2400.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "sae-sparse-dict-nmse-frontier",
+      "task_toml_sha256": "cb188b64c97c37ba8be55401805b6702512c29e46a5a13b6da9d47891e8013fe",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/sae-sparse-dict-nmse-frontier",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Unsupervised and representation learning",
+          "task_objective": [
+            "Optimize",
+            "Implement"
+          ],
+          "artifact_type": [
+            "Single script or program",
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "network_mode": "no-network",
+          "timeout_sec": 7200.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 10800.0,
+          "os": "linux",
+          "cpus": 4,
+          "memory_mb": 32768,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "shortest-valid-ci-l2-ece",
+      "task_toml_sha256": "15cd4bf9a93a6fad2420ab90f38f6a5793b76e03417457bf02c96a26051762b3",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/shortest-valid-ci-l2-ece",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Model evaluation and benchmarking",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "sketched-newton-cov-estimator",
+      "task_toml_sha256": "763f6d63604ea333fd0cb1147ada8a35047322b6e2da2bcebe80780755c0ce54",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/sketched-newton-cov-estimator",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Evaluation infrastructure",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "timeout_sec": 1500.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "sopcc-online-chance-constrained-policy",
+      "task_toml_sha256": "72de1676b85a641675f5d5267ddc9c806e699bf2e9045609e036627db1662d3e",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/solution"
+        ],
+        "task": {
+          "name": "bespokelabs/sopcc-online-chance-constrained-policy",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Reinforcement learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 1800.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "sparse-elsa-item-embeddings-8nnz",
+      "task_toml_sha256": "41a1a40eb15e61ad7c79cb96ba35969b7adbed0f6605e8cfeea206fa0e290ea0",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/sparse-elsa-item-embeddings-8nnz",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Unsupervised and representation learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "timeout_sec": 3300.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 18000.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "svdquant-w4a4-psnr",
+      "task_toml_sha256": "88ce42041fd9ef4ef53a9cde6df420a4a0d2de52a7b983b561729fc041c4c527",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/svdquant-w4a4-psnr",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "ML serving and deployment",
+          "task_objective": [
+            "Optimize",
+            "Transform",
+            "Implement"
+          ],
+          "artifact_type": [
+            "Codebase",
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 4.0
+        },
+        "verifier": {
+          "network_mode": "no-network",
+          "timeout_sec": 14400.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 10800.0,
+          "os": "linux",
+          "cpus": 4,
+          "memory_mb": 32768,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "tgat-milp-branching-node-count",
+      "task_toml_sha256": "9eebe49bbbd9a57168d80d422b470cc3b70f5509abaa742462dcacfdae0f7136",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/submission"
+        ],
+        "task": {
+          "name": "bespokelabs/tgat-milp-branching-node-count",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Reinforcement Learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program",
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "timeout_sec": 2700.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "ties-merging-clip-vitl14-eight-task-merge",
+      "task_toml_sha256": "88ea33550d4a28b878e09dfcadbad637dcb7214720edf66ec422f489ff034ac2",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/ties-merging-clip-vitl14-eight-task-merge",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Machine Learning and AI",
+          "subcategory": "Computer vision",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program",
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 6.0
+        },
+        "verifier": {
+          "timeout_sec": 7200.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {}
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 21600.0
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "deb.debian.org",
+            "security.debian.org",
+            "archive.ubuntu.com",
+            "security.ubuntu.com",
+            "developer.download.nvidia.com",
+            "packages.cloud.google.com",
+            "raw.githubusercontent.com",
+            "nodejs.org",
+            "registry.npmjs.org",
+            "downloads.claude.ai",
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 14400.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 65536,
+          "storage_mb": 307200,
+          "gpus": 1,
+          "gpu_types": [
+            "H100"
+          ],
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    },
+    {
+      "task": "vas-maskless-deployment-feasibility",
+      "task_toml_sha256": "43ca780dda7d5a6404121dc6e173b29170aa5820078470c9a384d25742c2216e",
+      "spec": {
+        "schema_version": "1.4",
+        "artifacts": [
+          "/app/output"
+        ],
+        "task": {
+          "name": "bespokelabs/vas-maskless-deployment-feasibility",
+          "version": "1.0.0",
+          "description": "",
+          "keywords": [
+            "autoresearch",
+            "machine-learning",
+            "benchmark"
+          ],
+          "authors": [
+            {
+              "name": "Bespoke Labs"
+            }
+          ]
+        },
+        "metadata": {
+          "category": "Model Training and ML Infrastructure",
+          "subcategory": "Reinforcement learning",
+          "task_objective": [
+            "Implement",
+            "Optimize"
+          ],
+          "artifact_type": [
+            "Single script or program",
+            "Generated output artifact"
+          ],
+          "expert_time_estimate_hours": 3.0
+        },
+        "verifier": {
+          "timeout_sec": 2400.0,
+          "environment_mode": "separate",
+          "collect": [],
+          "env": {},
+          "environment": {
+            "network_mode": "no-network",
+            "build_timeout_sec": 3600.0,
+            "os": "linux",
+            "cpus": 8,
+            "memory_mb": 14336,
+            "storage_mb": 153600,
+            "gpus": 0,
+            "mcp_servers": [],
+            "env": {}
+          }
+        },
+        "agent": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "timeout_sec": 14400.0,
+          "user": "agent"
+        },
+        "environment": {
+          "network_mode": "allowlist",
+          "allowed_hosts": [
+            "api.openai.com",
+            "api.anthropic.com"
+          ],
+          "build_timeout_sec": 3600.0,
+          "os": "linux",
+          "cpus": 8,
+          "memory_mb": 14336,
+          "storage_mb": 153600,
+          "gpus": 0,
+          "mcp_servers": [],
+          "env": {}
+        },
+        "solution": {
+          "env": {}
+        }
+      }
+    }
+  ],
+  "fetch_script_sha256": "68bc47f71280a0d60cedaa0ee4df1b50c9a72497b0e158d39f656f09fea76af6"
+}

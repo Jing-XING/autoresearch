@@ -1,0 +1,84 @@
+{
+  "scope": "Acquisition plus executed public-input preflight on the designated server. Not official grader/model execution. No queued experiment changed.",
+  "archive": "results/deploy/autoresearch-exam-public-preflight-v1.zip",
+  "archive_bytes": 1377805,
+  "archive_sha256": "44b35de3c9746a7a0317a006f2aab7b78186032a4fa14840a768da2f1985d7cd",
+  "payload_members": 205,
+  "total_entries": 206,
+  "remote_directory": "/xingjing/autoresearch-agent-papers/preflights/autoresearch-exam-public-v1",
+  "report_sha256": "ccff83a509c04db543ada3686c7a8a3ee91b22f408cbc0665c95f4f62a179c86",
+  "transfer_receipt_sha256": "b96a2da37d286a8855ea08c27b16fc4140b5a4cf0a5b35bcd3ccba1cf0933e41",
+  "preflight_script_sha256": "cefb7b6a8d35d569beac20096cf46f29ff3c554f9dd06cb48b8f1fe38bd07560",
+  "public_specs_sha256": "a7c4f4e14a020c0815fc4e95700a99348d9377a703bb5c0367699358a992d1b4",
+  "public_assets_sha256": "3db1504bf169d989773f221d37a3aad732946d0d03a2b64be858f6396a0e1695",
+  "cpu_only_tasks": [
+    "act-tensor-sparse-panel-imputation-r2",
+    "activeprune-al-unlabeled-pool-pruning",
+    "budgeted-covtype-dual-market-open",
+    "budgeted-imputation-mcar50",
+    "carps-star-discrepancy-subset-select",
+    "causalpfn-cate-pehe-ihdp-surfaceb",
+    "causalrivers-heldout-station-graph-auroc",
+    "coreset-selection-group-robust-waterbirds",
+    "cpu-decoder-graph-executor",
+    "cpu-llm-decode-throughput",
+    "dctabeval-aeac-pooled-cat-statistics",
+    "grpo-rl-halfcheetah-advantage-estimator",
+    "hicard-latent-encoder",
+    "label-efficient-risk-estimator",
+    "mlh-coco-16bit-hash-head-map5000",
+    "reppo-reliable-onpolicy-control-trainer",
+    "shortest-valid-ci-l2-ece",
+    "sketched-newton-cov-estimator",
+    "sopcc-online-chance-constrained-policy",
+    "sparse-elsa-item-embeddings-8nnz",
+    "tgat-milp-branching-node-count",
+    "vas-maskless-deployment-feasibility"
+  ],
+  "h100_tasks": [
+    "fast-adv-budgeted-pgd50-robust-cifar10",
+    "fastercache-budgeted-video-dit-cache-policy",
+    "fastergcg-candidate-token-rank-ccc",
+    "less-is-more-pretrain-token-budget-selector",
+    "sae-sparse-dict-nmse-frontier",
+    "svdquant-w4a4-psnr",
+    "ties-merging-clip-vitl14-eight-task-merge"
+  ],
+  "original_task_runtime_requirements": {
+    "label-efficient-risk-estimator": {
+      "requirements": [
+        "numpy==2.3.2",
+        "scipy==1.16.1"
+      ],
+      "sha256": "8afe2dab8e71cdfff123950a7104eed064b3d478f1dc5710e041c22ff96454c4"
+    },
+    "carps-star-discrepancy-subset-select": {
+      "requirements": [
+        "numpy==2.5.2",
+        "scipy==1.18.0"
+      ],
+      "sha256": "cf4d1dc9a101f290fca565d8a6fb4f3ca3f1ada0912c93a81bf37f3fcdf20973"
+    },
+    "shortest-valid-ci-l2-ece": {
+      "requirements": [
+        "numpy==2.5.2",
+        "scipy==1.18.0"
+      ],
+      "sha256": "cf4d1dc9a101f290fca565d8a6fb4f3ca3f1ada0912c93a81bf37f3fcdf20973"
+    }
+  },
+  "observed_numpy": "2.5.3",
+  "remote_container_observation": {
+    "docker_cli": null,
+    "docker_socket_present": false,
+    "logical_cpus_not_effective_quota": 64,
+    "disk_free_gib_snapshot": 4520.5
+  },
+  "runtime_limits": [
+    "Remote NumPy2.5.3 differs from the exact per-task pins recorded above.",
+    "SciPy not tested.",
+    "No official container, evaluator, reward or autonomous model experiment executed."
+  ],
+  "documentation_correction": "An initial local receipt assertion incorrectly grouped the subset task with the risk task at NumPy2.3.2. Reading the actual pinned requirements corrected this to2.5.2 before receipt publication; no remote preflight rerun or data change.",
+  "script_sha256": "d6dab4a1ffa003e0e975f89b94d3cf50c78e7daa5105304759b5ef4018b87634"
+}

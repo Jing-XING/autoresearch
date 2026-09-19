@@ -26,3 +26,10 @@ holdout separation and established adaptive-data-analysis methods. The
 current dependent-verification candidate is not replaced or counted complete
 by this screening. No additional GPU job is authorized by this note; the
 already registered experimental queue remains unchanged.
+
+Subsequent work: [task/runtime preparation](autoresearch_exam_task_readiness_v1.md)
+now pins all29 task specifications and the public inputs for three CPU-only
+interfaces. The designated host executed public array/schema checks and
+48 calls to the unchanged CI generator. No hidden evaluator, task reward or
+adaptive research-agent loop was run. Current container has neither Docker
+CLI nor daemon socket; original task runtime parity remains unverified.

@@ -1,0 +1,339 @@
+{
+  "status": "public-input-preflight-passed",
+  "revision": "7758e84af55f7666cbdcdd7192959f45b09827af",
+  "files_verified": 202,
+  "input_manifest_sha256": {
+    "autoresearch_exam_task_specs_v1.json": "a7c4f4e14a020c0815fc4e95700a99348d9377a703bb5c0367699358a992d1b4",
+    "autoresearch_exam_public_assets_v1.json": "3db1504bf169d989773f221d37a3aad732946d0d03a2b64be858f6396a0e1695"
+  },
+  "script_sha256": "cefb7b6a8d35d569beac20096cf46f29ff3c554f9dd06cb48b8f1fe38bd07560",
+  "python": "3.13.5 (main, Jun 12 2025, 22:46:40) [GCC 12.2.0]",
+  "numpy": "2.5.3",
+  "risk_pools": [
+    {
+      "pool": "dev00",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev01",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev02",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev03",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev04",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev05",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev06",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev07",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev08",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev09",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev10",
+      "n": 2000,
+      "classes": 2
+    },
+    {
+      "pool": "dev11",
+      "n": 2000,
+      "classes": 2
+    }
+  ],
+  "clouds": [
+    {
+      "id": "cloud_00",
+      "n": 2436,
+      "k": 30
+    },
+    {
+      "id": "cloud_01",
+      "n": 3217,
+      "k": 65
+    },
+    {
+      "id": "cloud_02",
+      "n": 1149,
+      "k": 30
+    },
+    {
+      "id": "cloud_03",
+      "n": 1374,
+      "k": 30
+    },
+    {
+      "id": "cloud_04",
+      "n": 3621,
+      "k": 50
+    },
+    {
+      "id": "cloud_05",
+      "n": 872,
+      "k": 65
+    },
+    {
+      "id": "cloud_06",
+      "n": 2457,
+      "k": 50
+    },
+    {
+      "id": "cloud_07",
+      "n": 2990,
+      "k": 65
+    }
+  ],
+  "ci_settings": [
+    {
+      "id": "dev1_00",
+      "n": 10000,
+      "K": 5,
+      "k": 1,
+      "seed": 20260919,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_01",
+      "n": 2000,
+      "K": 50,
+      "k": 3,
+      "seed": 20260920,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_02",
+      "n": 2000,
+      "K": 50,
+      "k": 1,
+      "seed": 20260921,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_03",
+      "n": 2000,
+      "K": 10,
+      "k": 2,
+      "seed": 20260922,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_04",
+      "n": 2000,
+      "K": 3,
+      "k": 1,
+      "seed": 20260923,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_05",
+      "n": 500,
+      "K": 10,
+      "k": 3,
+      "seed": 20260924,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_06",
+      "n": 2000,
+      "K": 2,
+      "k": 1,
+      "seed": 20260925,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev1_07",
+      "n": 10000,
+      "K": 5,
+      "k": 3,
+      "seed": 20260926,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_00",
+      "n": 2000,
+      "K": 50,
+      "k": 2,
+      "seed": 20260927,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_01",
+      "n": 10000,
+      "K": 10,
+      "k": 2,
+      "seed": 20260928,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_02",
+      "n": 10000,
+      "K": 3,
+      "k": 2,
+      "seed": 20260929,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_03",
+      "n": 200,
+      "K": 10,
+      "k": 3,
+      "seed": 20260930,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_04",
+      "n": 10000,
+      "K": 3,
+      "k": 1,
+      "seed": 20260931,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_05",
+      "n": 10000,
+      "K": 2,
+      "k": 1,
+      "seed": 20260932,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_06",
+      "n": 10000,
+      "K": 10,
+      "k": 1,
+      "seed": 20260933,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev2_07",
+      "n": 2000,
+      "K": 50,
+      "k": 3,
+      "seed": 20260934,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_00",
+      "n": 10000,
+      "K": 2,
+      "k": 1,
+      "seed": 20260935,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_01",
+      "n": 500,
+      "K": 5,
+      "k": 1,
+      "seed": 20260936,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_02",
+      "n": 2000,
+      "K": 50,
+      "k": 2,
+      "seed": 20260937,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_03",
+      "n": 2000,
+      "K": 10,
+      "k": 2,
+      "seed": 20260938,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_04",
+      "n": 2000,
+      "K": 5,
+      "k": 2,
+      "seed": 20260939,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_05",
+      "n": 2000,
+      "K": 50,
+      "k": 3,
+      "seed": 20260940,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_06",
+      "n": 200,
+      "K": 10,
+      "k": 3,
+      "seed": 20260941,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    },
+    {
+      "id": "dev3_07",
+      "n": 2000,
+      "K": 50,
+      "k": 1,
+      "seed": 20260942,
+      "grid_index": 20,
+      "identical_seed_replay": true
+    }
+  ],
+  "ci_generator_calls": 48,
+  "external_connection_attempts": [],
+  "model_calls": 0,
+  "grader_calls": 0,
+  "scope": "Public development inputs and generator API only. No Agent policy evaluation, task score, confidence-interval coverage study, hidden test access, Docker reproduction or new method result. NumPy may differ from original per-task pinned environments."
+}

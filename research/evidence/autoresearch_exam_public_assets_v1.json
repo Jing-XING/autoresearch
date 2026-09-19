@@ -1,0 +1,311 @@
+{
+  "repository": "bespokelabsai/AutoResearchExam",
+  "revision": "7758e84af55f7666cbdcdd7192959f45b09827af",
+  "tree_sha256": "6811bc0e676d0ce9962d170cfc729ac23598ceae0407936addc831fb35cbf6d0",
+  "tasks": [
+    "label-efficient-risk-estimator",
+    "shortest-valid-ci-l2-ece",
+    "carps-star-discrepancy-subset-select"
+  ],
+  "files": {
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_00.npy": {
+      "bytes": 58592,
+      "sha256": "e3c113b089b7b7f13429593eebcbdfb71f0374bc9b9a1b4f8e910709911d5b35",
+      "git_blob": "4a8b15a9501e43afd31bf8698a5f82f9639abfd0"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_01.npy": {
+      "bytes": 77336,
+      "sha256": "9dae1df7b994f2d75958439cafa6843725d845ab72d164b8c543d8d95c6fa356",
+      "git_blob": "e82565000fff860749e340bd4787d5aa11ba08f4"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_02.npy": {
+      "bytes": 27704,
+      "sha256": "61145848214161145ef956a5ba9cbfb5700f6110d2ba38b225fe338826bc18da",
+      "git_blob": "af1cbf230866727313d09be7de221de1d057f4fa"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_03.npy": {
+      "bytes": 33104,
+      "sha256": "a4e9c7089ed94a809b406e81d3362701dc8dd8e6f076eae7ac68428590d0dc55",
+      "git_blob": "08231ce769f3becd367dfff665367c49b1844370"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_04.npy": {
+      "bytes": 87032,
+      "sha256": "d1941a6fac230b157ed295c2a6322918bc7f36c87401a837bbc9e81cfbdd0709",
+      "git_blob": "5172df1c7d2bedac96fea1c6adc0bacc586f5a97"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_05.npy": {
+      "bytes": 21056,
+      "sha256": "611bd182922e738836f09b4050e96693fbecb30f56c243520194acca646d17c2",
+      "git_blob": "04b97aa75f2772136fee8d12ceb0bf2ee9d1209f"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_06.npy": {
+      "bytes": 59096,
+      "sha256": "139339b1a17b118221fa5afede47e5c6809e2ae682d3a48d89e5e3db5353bc9b",
+      "git_blob": "188ff123230b80d4967bab897c98d88f7480e2f7"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/cloud_07.npy": {
+      "bytes": 71888,
+      "sha256": "6b8095ee6ebe9f5e61a78b18c5d499b4ba5044dbc1955843c59599f18852594c",
+      "git_blob": "66d93a90b3666dd615bc38537dc3d96b16d2f4b8"
+    },
+    "carps-star-discrepancy-subset-select/environment/app/data/examples/manifest.json": {
+      "bytes": 888,
+      "sha256": "a2270976daefdc079e3f7bc6477f9f3043e1ae00090b325c989b021c734a96b6",
+      "git_blob": "0287e439b33e0501b0c685b135ba0efe2e2cb735"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/labels.npy": {
+      "bytes": 16128,
+      "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+      "git_blob": "19834b939b2f08730b29f1ace265945699d126ae"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/meta.json": {
+      "bytes": 52,
+      "sha256": "bdfe94a5439a2f43d457508db43baec3fa6fd01ce2d6acf348928818aa7e592e",
+      "git_blob": "28c26b36ba988b269cf097b11529d1a80626d3b4"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+      "git_blob": "d7fb5584e51b11246f31434ea01a1ba6deec42b5"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "9cd3c28d0b3e4da7b8c8db02d85b800e7c69fadf69d9041434a3ef3c96babf04",
+      "git_blob": "5df2d67463a7d67e94760288b73ad09e4f3fa452"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/labels.npy": {
+      "bytes": 16128,
+      "sha256": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+      "git_blob": "19313d65fba16a249a29a3a66de285d8338569cb"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/meta.json": {
+      "bytes": 52,
+      "sha256": "fbd09bd017ebdc5fb7d020f7bc589074d9c6ca0356867600bae0967a80edb99a",
+      "git_blob": "99b841be7e872db613f3cd9635df7ef8cee32cd2"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b",
+      "git_blob": "b0a78cc013d4a7aaac75db794c0ddd1c683f0a71"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "8b891313ce930ce9af1de3350984da342e82f69218592649004c1dbd86d78fc7",
+      "git_blob": "94ed6530a68b91f90cf6c5aedc7f468f3093d414"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/labels.npy": {
+      "bytes": 16128,
+      "sha256": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+      "git_blob": "de41408f45de8eb00785c00830d7846b008f1c34"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/meta.json": {
+      "bytes": 52,
+      "sha256": "a8c3d3d7b32a9a7e10dbab73a30d32fa73d3a68a06a18c358238bb315b700cfa",
+      "git_blob": "a426781330f11b4bda93e78d57401d71c113952c"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "a65d8681fef80d00e930f6755c159fde6e07e6e4db174f9416c8b7bcf5688c04",
+      "git_blob": "7b611c441baf2d7a52801d7b85cb062e1026bda0"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "dc8b82b8d786e50e41a6aba916f45e6a6518865fbd9ce1c003f246669d133852",
+      "git_blob": "e82da9046ae0513cd175163e328e3d8420138902"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/labels.npy": {
+      "bytes": 16128,
+      "sha256": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65",
+      "git_blob": "185cb8d13cff57f931dd370d822a03b55d36e35c"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/meta.json": {
+      "bytes": 52,
+      "sha256": "eceee8941dbfd4981d98c0007cd14b2ece7d5eef6655667cc0c8d0d1f81ca41d",
+      "git_blob": "69df5661cf3993e6b69aa83d17d175b2b0507d54"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909",
+      "git_blob": "0a5e4534eabd94309103b85189e34af677b9fff9"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "f444d80995573f54be8b268fa8a265cf7b405125c79d846f0a215b2a3fec2095",
+      "git_blob": "ebe91e92d63e0e112926f10ade9d2c96c72bf009"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/labels.npy": {
+      "bytes": 16128,
+      "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+      "git_blob": "19834b939b2f08730b29f1ace265945699d126ae"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/meta.json": {
+      "bytes": 52,
+      "sha256": "6508d5fa5bb30682f9878ace2a0a8ffe7c673ba5041f05929f39965f862d7bb1",
+      "git_blob": "c4fa2e3d6fa55afc3d1d2c8112269e61a488124e"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+      "git_blob": "d7fb5584e51b11246f31434ea01a1ba6deec42b5"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "39f928ca736748d528f7b5474eb581d3095d7b6219a56c693f4420ad3d3ce33f",
+      "git_blob": "8f4eeb2a7e23cf596e118da80d645d51d290d8ef"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/labels.npy": {
+      "bytes": 16128,
+      "sha256": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+      "git_blob": "19313d65fba16a249a29a3a66de285d8338569cb"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/meta.json": {
+      "bytes": 52,
+      "sha256": "db746ac36195cf64db4617d7a1d71bc0fde577821c287e1dbee38e1c1deab204",
+      "git_blob": "a614228a5e39054f3fe0be16a84632c031e9668d"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "c8e5dfc910f9be543e0950caabd2dfb9aa3d08fbee5ab2ade6dfd99509350c22",
+      "git_blob": "95c82ea0670326c8f8a4c39448617722652a4ec5"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "aa23a111886cc85b63860304deff19f5a5aefa5c5177169bf78a53d977b9c89f",
+      "git_blob": "c5f74ce21dd744b562c30016b253e37b261e096d"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/labels.npy": {
+      "bytes": 16128,
+      "sha256": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+      "git_blob": "de41408f45de8eb00785c00830d7846b008f1c34"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/meta.json": {
+      "bytes": 52,
+      "sha256": "911cc1db918020cc35a31dfd48a342641e9d912bf383c2c0de07e3713687e978",
+      "git_blob": "32f091d4eaf33f3c929cd62deec5bd069cf53200"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe",
+      "git_blob": "073ba5a116080a3fefb08ba423880b32d53f03e4"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "1173ead7517353f57d2671de4399859a948d5aa8da8db9fc46bc3f26bd292a5b",
+      "git_blob": "3aa7f50390690a47ef34fe9b1d3950498e712d20"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/labels.npy": {
+      "bytes": 16128,
+      "sha256": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65",
+      "git_blob": "185cb8d13cff57f931dd370d822a03b55d36e35c"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/meta.json": {
+      "bytes": 52,
+      "sha256": "0098addb35cbcdc882283744144a2acf2aa911388cb2b1a1cba56c0210e757f0",
+      "git_blob": "782bd450ae9998ed36e73113077c896aa25d40b9"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909",
+      "git_blob": "0a5e4534eabd94309103b85189e34af677b9fff9"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "97f92fbc42573621f1bd7664bad18da71b33b79f2bc72ba2616c8087254cca7c",
+      "git_blob": "605671528bdee8dba0b69ebba008153f1f3f2d7f"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/labels.npy": {
+      "bytes": 16128,
+      "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+      "git_blob": "19834b939b2f08730b29f1ace265945699d126ae"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/meta.json": {
+      "bytes": 52,
+      "sha256": "2250a6484a08780a3afaefc9e04dc1c3f10635fd2a3dec85ae7721fbdf151d25",
+      "git_blob": "e9b2ae835871ea5e76f53bb8343d9288f8ba7740"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+      "git_blob": "d7fb5584e51b11246f31434ea01a1ba6deec42b5"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "1ff62cb368e45f9ebb592e20e0ad6e899c9a5599db2085f7b828a82ee5bce30e",
+      "git_blob": "1c762f5088ea09f64f62267e7878c68089765c66"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/labels.npy": {
+      "bytes": 16128,
+      "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+      "git_blob": "19834b939b2f08730b29f1ace265945699d126ae"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/meta.json": {
+      "bytes": 52,
+      "sha256": "b3bfb0c400a6d15af6df5bfac75e422a6754475141f5e0d66599178bf0f7c1b8",
+      "git_blob": "a96dc49fc30570e08345bec9ef9885717c2791e6"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+      "git_blob": "d7fb5584e51b11246f31434ea01a1ba6deec42b5"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "4af1c3f51551fe94e28bb84485067edc4cf355e7fa9543d936f3b3580a02bde1",
+      "git_blob": "f4710f05dc2e0a0f851ffa247b89ef94935d0f54"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/labels.npy": {
+      "bytes": 16128,
+      "sha256": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+      "git_blob": "19313d65fba16a249a29a3a66de285d8338569cb"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/meta.json": {
+      "bytes": 52,
+      "sha256": "324f1bf0d0dd172d05b11ec87028ae0fefbc5f597de623586fb1b4cab384fcd8",
+      "git_blob": "6affab78eea0c1340bd33850d26da98631759fa3"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "a5974111e511d6df53b8aba9761c336907db1f9f6a003267e355e3998cb59722",
+      "git_blob": "e420e108bfd208360dee396733b658429f15a200"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b",
+      "git_blob": "b0a78cc013d4a7aaac75db794c0ddd1c683f0a71"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/labels.npy": {
+      "bytes": 16128,
+      "sha256": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+      "git_blob": "de41408f45de8eb00785c00830d7846b008f1c34"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/meta.json": {
+      "bytes": 52,
+      "sha256": "12242516e77b89c6f3f30af3eaf3d8f1cf77c9b47aee384c935954eb6d673ffd",
+      "git_blob": "ad4a44a8cc45b08bfb37a42da8b7ef37a81ac22e"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/surrogate_probs.npy": {
+      "bytes": 32128,
+      "sha256": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe",
+      "git_blob": "073ba5a116080a3fefb08ba423880b32d53f03e4"
+    },
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/target_probs.npy": {
+      "bytes": 32128,
+      "sha256": "6c9ce87a1c22d18c1a4d597346fa933551e54c363ae182a8fae938f5c198a136",
+      "git_blob": "7f8d21c3d171fef03a95aa02a8c9e11331eca58b"
+    },
+    "shortest-valid-ci-l2-ece/environment/app/data/dev_panel.json": {
+      "bytes": 51788,
+      "sha256": "584b0d154d072140ad893f53487287d9e75bdfe4861846d5e6f1587f6178d2a9",
+      "git_blob": "b4a49574acb1150dc7355b918dc30544c20b4eac"
+    },
+    "shortest-valid-ci-l2-ece/environment/app/panel.py": {
+      "bytes": 6925,
+      "sha256": "9632aaea88db6983db037cbf546b8d79983b757fc68d6d9760a210c264a6297c",
+      "git_blob": "adb05af06ad883f53929cf0495cce01741de9a86"
+    }
+  },
+  "selection": "Deliberate feasibility sample: three CPU-only interfaces using small public arrays/generators and NumPy/SciPy. Not random/representative task selection, no new-method claim.",
+  "scope": "Public environment/app assets only. Development labels/parameters are explicitly agent-visible in the original task. No hidden/intermediate/final evaluator inputs, tests, hints or solutions downloaded.",
+  "fetch_script_sha256": "e505a844ddea99c7c7ea37a4c03a699fd0b75f721ea703a12d0a09cc0b10d521",
+  "dependency_script_sha256": "68bc47f71280a0d60cedaa0ee4df1b50c9a72497b0e158d39f656f09fea76af6"
+}
