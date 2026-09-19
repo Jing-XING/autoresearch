@@ -1,0 +1,51 @@
+{
+  "scope": "Pre-outcome offline analysis implementation for frozen 48-episode Hotpot pilot; no pilot/evaluation gold or neural outcomes read.",
+  "test_command": "python -m pytest tests/test_hotpot_analysis.py tests/test_hotpot_pilot.py -q",
+  "tests_passed": 10,
+  "subtests_passed": 4,
+  "pytest_reported_seconds": 0.95,
+  "exit_code": 0,
+  "fixture": {
+    "scripted_grid_episodes": 48,
+    "workers": 4,
+    "tasks": 8,
+    "real_model_calls": 0,
+    "gold_labels": "invented fixture answers only; public pilot inputs reused"
+  },
+  "replay_scope": "Original deployed worker control flow with recorded replies; integrity check, not independent implementation or neural reproduction",
+  "source_sha256": {
+    "autolab/hotpot_analysis.py": "03308da587b1f6f8aa3f638988433c2c5a2d87da00d514c5e860d5608e4577f4",
+    "scripts/analyze_hotpot_pilot_v1.py": "e6388b095f6824819b91aa2515dbe83a838ef469228d816f4fbc4ca658be6cf1",
+    "tests/test_hotpot_analysis.py": "dc5bcc075e8aecb65cdf5eed166620e36d39f5dec7a4dede5c4bdbf36b6a8f87",
+    "research/hotpot_pilot_analysis_v1.md": "dc13131d67a21fd847b20191b6cd6115ef4b7d0941581eeb85400eb5606adddd"
+  },
+  "deployment_archive_sha256": "17d98a8db2563ad0044c5a7fc84fd7f691b20504d72391473fe12a5468ec1cdf",
+  "scorer_manifest_matches_frozen_selection": true,
+  "remote_observation": {
+    "status": "waiting_for_dependencies",
+    "supervisor_pid": 18283,
+    "workers": 0,
+    "case_files": 0,
+    "source": "Read-only terminal output observed through designated platform browser"
+  },
+  "actual_complete_grid_validated": false,
+  "registered_conditions_or_estimands_changed": false,
+  "rejections_tested": [
+    "incomplete grid before any gold access",
+    "extra case",
+    "missing case",
+    "tampered state",
+    "changed model input",
+    "token count mismatch",
+    "missing recorded generation",
+    "unused recorded generation"
+  ],
+  "preserved_edge_cases": [
+    "actor pre-generation error",
+    "predictor exception",
+    "protocol error limit",
+    "three empty predictor replies",
+    "same decoded text with different token IDs",
+    "no returned replies not credited as deterministic"
+  ]
+}
