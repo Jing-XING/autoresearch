@@ -1,0 +1,240 @@
+{
+  "archive": "results/deploy/risk-development-controls-v1.zip",
+  "bytes": 770157,
+  "sha256": "14e1e49d47e0debadda2bf361cb691b285854c18302df6d92d8c3671d55c946a",
+  "payload_files": 57,
+  "entries": 58,
+  "manifest": {
+    "purpose": "Trusted public-development risk baselines, no private grader or model.",
+    "files": {
+      "autolab/__init__.py": {
+        "bytes": 192,
+        "sha256": "1253894480b12e2156c804b4a04e7de85fb5e2adc0b1bea8a1b7358cef3455f3"
+      },
+      "autolab/runner.py": {
+        "bytes": 7285,
+        "sha256": "0ec995249bf2098e3c6a03ecacb61e4a2dfb68ba4cf0d1e610df4e633ea82e73"
+      },
+      "autolab/risk_development.py": {
+        "bytes": 6571,
+        "sha256": "f8c59a0672ec5fea43f5fb6d1bfe44fa127b7d69d70206dfc3bad3ef1b2b45e9"
+      },
+      "scripts/run_risk_development_controls.py": {
+        "bytes": 4018,
+        "sha256": "52e29565b77ab4b80fb326fc903e74b5d39275a7b2041c6619236d0e619cdc6e"
+      },
+      "tests/test_risk_development.py": {
+        "bytes": 3123,
+        "sha256": "026cede32c01cebf64e7ea36539b6f8943263cbe9e38be7cc3b373f15ca55aff"
+      },
+      "research/risk_development_controls_v1.md": {
+        "bytes": 4052,
+        "sha256": "d5df4f4fe269b101083b79992f886c9b9dfe30129f36faada3ec2c4d8bdd9223"
+      },
+      "research/evidence/autoresearch_exam_public_assets_v1.json": {
+        "bytes": 16516,
+        "sha256": "3db1504bf169d989773f221d37a3aad732946d0d03a2b64be858f6396a0e1695"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev00/labels.npy": {
+        "bytes": 16128,
+        "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev00/meta.json": {
+        "bytes": 52,
+        "sha256": "bdfe94a5439a2f43d457508db43baec3fa6fd01ce2d6acf348928818aa7e592e"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev00/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev00/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "9cd3c28d0b3e4da7b8c8db02d85b800e7c69fadf69d9041434a3ef3c96babf04"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev01/labels.npy": {
+        "bytes": 16128,
+        "sha256": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev01/meta.json": {
+        "bytes": 52,
+        "sha256": "fbd09bd017ebdc5fb7d020f7bc589074d9c6ca0356867600bae0967a80edb99a"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev01/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev01/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "8b891313ce930ce9af1de3350984da342e82f69218592649004c1dbd86d78fc7"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev02/labels.npy": {
+        "bytes": 16128,
+        "sha256": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev02/meta.json": {
+        "bytes": 52,
+        "sha256": "a8c3d3d7b32a9a7e10dbab73a30d32fa73d3a68a06a18c358238bb315b700cfa"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev02/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "a65d8681fef80d00e930f6755c159fde6e07e6e4db174f9416c8b7bcf5688c04"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev02/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "dc8b82b8d786e50e41a6aba916f45e6a6518865fbd9ce1c003f246669d133852"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev03/labels.npy": {
+        "bytes": 16128,
+        "sha256": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev03/meta.json": {
+        "bytes": 52,
+        "sha256": "eceee8941dbfd4981d98c0007cd14b2ece7d5eef6655667cc0c8d0d1f81ca41d"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev03/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev03/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "f444d80995573f54be8b268fa8a265cf7b405125c79d846f0a215b2a3fec2095"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev04/labels.npy": {
+        "bytes": 16128,
+        "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev04/meta.json": {
+        "bytes": 52,
+        "sha256": "6508d5fa5bb30682f9878ace2a0a8ffe7c673ba5041f05929f39965f862d7bb1"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev04/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev04/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "39f928ca736748d528f7b5474eb581d3095d7b6219a56c693f4420ad3d3ce33f"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev05/labels.npy": {
+        "bytes": 16128,
+        "sha256": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev05/meta.json": {
+        "bytes": 52,
+        "sha256": "db746ac36195cf64db4617d7a1d71bc0fde577821c287e1dbee38e1c1deab204"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev05/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "c8e5dfc910f9be543e0950caabd2dfb9aa3d08fbee5ab2ade6dfd99509350c22"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev05/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "aa23a111886cc85b63860304deff19f5a5aefa5c5177169bf78a53d977b9c89f"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev06/labels.npy": {
+        "bytes": 16128,
+        "sha256": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev06/meta.json": {
+        "bytes": 52,
+        "sha256": "911cc1db918020cc35a31dfd48a342641e9d912bf383c2c0de07e3713687e978"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev06/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev06/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "1173ead7517353f57d2671de4399859a948d5aa8da8db9fc46bc3f26bd292a5b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev07/labels.npy": {
+        "bytes": 16128,
+        "sha256": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev07/meta.json": {
+        "bytes": 52,
+        "sha256": "0098addb35cbcdc882283744144a2acf2aa911388cb2b1a1cba56c0210e757f0"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev07/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev07/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "97f92fbc42573621f1bd7664bad18da71b33b79f2bc72ba2616c8087254cca7c"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev08/labels.npy": {
+        "bytes": 16128,
+        "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev08/meta.json": {
+        "bytes": 52,
+        "sha256": "2250a6484a08780a3afaefc9e04dc1c3f10635fd2a3dec85ae7721fbdf151d25"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev08/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev08/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "1ff62cb368e45f9ebb592e20e0ad6e899c9a5599db2085f7b828a82ee5bce30e"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev09/labels.npy": {
+        "bytes": 16128,
+        "sha256": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev09/meta.json": {
+        "bytes": 52,
+        "sha256": "b3bfb0c400a6d15af6df5bfac75e422a6754475141f5e0d66599178bf0f7c1b8"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev09/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev09/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "4af1c3f51551fe94e28bb84485067edc4cf355e7fa9543d936f3b3580a02bde1"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev10/labels.npy": {
+        "bytes": 16128,
+        "sha256": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev10/meta.json": {
+        "bytes": 52,
+        "sha256": "324f1bf0d0dd172d05b11ec87028ae0fefbc5f597de623586fb1b4cab384fcd8"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev10/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "a5974111e511d6df53b8aba9761c336907db1f9f6a003267e355e3998cb59722"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev10/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev11/labels.npy": {
+        "bytes": 16128,
+        "sha256": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev11/meta.json": {
+        "bytes": 52,
+        "sha256": "12242516e77b89c6f3f30af3eaf3d8f1cf77c9b47aee384c935954eb6d673ffd"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev11/surrogate_probs.npy": {
+        "bytes": 32128,
+        "sha256": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/environment/app/data/dev/dev11/target_probs.npy": {
+        "bytes": 32128,
+        "sha256": "6c9ce87a1c22d18c1a4d597346fa933551e54c363ae182a8fae938f5c198a136"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/LICENSE": {
+        "bytes": 11357,
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      },
+      "results/third_party/autoresearch-exam-tasks/source/label-efficient-risk-estimator/instruction.md": {
+        "bytes": 4825,
+        "sha256": "66a209cd63aaaa9060abd535855f03521e2bed022a65507c7cd5ae67a7129d3a"
+      }
+    }
+  }
+}
