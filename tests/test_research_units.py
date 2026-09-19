@@ -39,5 +39,24 @@ class ResearchUnitsTest(unittest.TestCase):
         x=score(json.dumps(dict(expected,unique_a=12)),expected)
         self.assertTrue(x['valid']);self.assertFalse(x['correct']);self.assertTrue(x['fields']['unique_b'])
 
+    def test_worker_uses_one_call_and_retains_failure(self):
+        from autolab.research_unit_pilot import run_one, SETTINGS
+        from autolab.tool_agent import ModelReply
+        item,_=build_example('dev00',[[0.,0.]]*24,'small_paired')
+        class Fake:
+            def __init__(self,fail=False):self.calls=[];self.fail=fail
+            def generate_tools(self,messages,tools,limit):
+                self.calls.append((messages,tools,limit))
+                if self.fail:raise ValueError('fixture failure')
+                return ModelReply('{}',300,2,0.01)
+        for fail in (False,True):
+            model=Fake(fail);result=run_one(model,item)
+            self.assertEqual(len(model.calls),1)
+            self.assertEqual(model.calls[0][1:],([],384))
+            self.assertEqual(json.loads(model.calls[0][0][1]['content']),item)
+            self.assertEqual(result['status'],'generation_error' if fail else 'returned')
+            self.assertFalse(result['scored'])
+            self.assertEqual('reply' in result,not fail)
+
 
 if __name__=='__main__':unittest.main()
