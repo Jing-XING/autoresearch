@@ -1,0 +1,258 @@
+{
+  "purpose": "native-model development audit, no official evaluation score",
+  "complete": true,
+  "episodes": 8,
+  "distinct_task_ids": 4,
+  "batch_wall_seconds": 160.01033210754395,
+  "groups": [
+    {
+      "model": "qwen25",
+      "episodes": 4,
+      "agent_finished": 4,
+      "model_errors": 0,
+      "tool_error_results": 8
+    },
+    {
+      "model": "qwen3",
+      "episodes": 4,
+      "agent_finished": 3,
+      "model_errors": 1,
+      "tool_error_results": 0
+    }
+  ],
+  "input_sha256": {
+    "qwen25/shard-0/case-000.json": "f123f4a2383c13cfa499f68758a624199685f237dc273e30217929a6241b39a4",
+    "qwen25/shard-0/case-001.json": "9022af63e24a5f70fed0a71c4f1c6032b7fa681c705129372c919a366a653ea6",
+    "qwen25/shard-0/manifest.json": "ed5396182b0e1c6ed62ffc0826977d20b95fceb6f45f311172d786736c200c98",
+    "qwen25/shard-1/case-000.json": "96cc71801b189a9f9d513bc73141f375d8c963c2a763366326c59391becf7c6e",
+    "qwen25/shard-1/case-001.json": "7f6399ba27bc3e851c164b9fb1a4ba743987a134094f56f219caa7df04e212c5",
+    "qwen25/shard-1/manifest.json": "82177d15346e21b51db701b22b04cde93cf3f184e51d164f75b80f5282ea6e10",
+    "qwen3/shard-0/case-000.json": "68008209131544ffe86fcbc202f128ca4ce5a9034063c76075d8d04a5d0f09c1",
+    "qwen3/shard-0/case-001.json": "b6b721fac834fd5c567e769222d78968153934b054417ea9c969d165c1b58061",
+    "qwen3/shard-0/manifest.json": "6ee4d9b3737dba481d3999571ce390a41429478aa9def7398c386ee489f57f6d",
+    "qwen3/shard-1/case-000.json": "30babed3b71007217a62ed7efca94c74609358f76f6450cbd8fd73bcc0171520",
+    "qwen3/shard-1/case-001.json": "1e6111113be81bc8d9d11f36f0a6bd99592e8c822f356c336b477449636abaf5",
+    "qwen3/shard-1/manifest.json": "73af435ae185d5a39d7e1a080a39a4bc58e6ebbb949b724645398a8f077dc7bb"
+  },
+  "rows": [
+    {
+      "model": "qwen25",
+      "uuid": "486ea46224d1-2b5bb9f47372",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "List any five countries which use English as an official language."
+          }
+        ]
+      },
+      "final_answer": "Given the persistent issues with directly referencing the handle, let's manually extract the first five country names from the filtered data.\n\nFrom the previous response, the filtered data contains the following country names where English is an official language:\n\n1. Anguilla\n2. American Samoa\n3. Antigua and Barbuda\n4. Australia\n5. Belize\n\nThese are the first five countries that use English as an official language.\n\nTherefore, the answer is:\n\n1. Anguilla\n2. American Samoa\n3. Antigua and Barbuda\n4. Australia\n5. Belize",
+      "usage": {
+        "model_calls": 12,
+        "tool_calls": 11,
+        "input_tokens": 193372,
+        "output_tokens": 1095,
+        "generation_seconds": 71.98367101699114,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 72.49293683283031,
+      "tool_error_results": 6,
+      "errors": [],
+      "max_observed_tool_text_characters": 4920
+    },
+    {
+      "model": "qwen25",
+      "uuid": "486ea46224d1-74c57403a8e6",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "List the languages used in Turkmenistan."
+          }
+        ]
+      },
+      "final_answer": "From the list provided, the languages used in Turkmenistan are:\n\n- Turkmenian\n\nIt appears that the list contains many languages from various countries, but based on the context of your question, the relevant language for Turkmenistan from the given data is Turkmenian.",
+      "usage": {
+        "model_calls": 2,
+        "tool_calls": 1,
+        "input_tokens": 27089,
+        "output_tokens": 88,
+        "generation_seconds": 7.566819032654166,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 7.6265737768262625,
+      "tool_error_results": 0,
+      "errors": [],
+      "max_observed_tool_text_characters": 11067
+    },
+    {
+      "model": "qwen25",
+      "uuid": "486ea46224d1-674a4702614a",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "How many cities are there in England?"
+          }
+        ]
+      },
+      "final_answer": "Based on the current dataset, there are 4079 entries. Without additional information specifying which entries correspond to cities in England, we can't accurately determine the number of cities in England. \n\nIf you have more detailed data or metadata that can help identify which cities belong to England, please provide that so I can give you a precise answer. Otherwise, the total count of entries in the dataset is 4079.",
+      "usage": {
+        "model_calls": 2,
+        "tool_calls": 1,
+        "input_tokens": 22643,
+        "output_tokens": 271,
+        "generation_seconds": 13.08723714388907,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 13.197617394849658,
+      "tool_error_results": 0,
+      "errors": [],
+      "max_observed_tool_text_characters": 4
+    },
+    {
+      "model": "qwen25",
+      "uuid": "486ea46224d1-9bae74dab965",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "Provide the name, capital city and its official language of the country with the highest life expectancy."
+          }
+        ]
+      },
+      "final_answer": "The official languages of Andorra include Catalan, French, Portuguese, and Spanish. Since Andorra la Vella is the capital, the official language(s) of the capital city would be the same as those of the country.\n\nTherefore, the name of the country with the highest life expectancy is **Andorra**, the capital city is **Andorra la Vella**, and the official languages of the capital city are **Catalan, French, Portuguese, and Spanish**.",
+      "usage": {
+        "model_calls": 9,
+        "tool_calls": 7,
+        "input_tokens": 126489,
+        "output_tokens": 1332,
+        "generation_seconds": 67.1537185292691,
+        "protocol_errors": 1
+      },
+      "elapsed_seconds": 67.94465817697346,
+      "tool_error_results": 2,
+      "errors": [
+        {
+          "step": 0,
+          "protocol_error": "Incomplete tool-call block"
+        }
+      ],
+      "max_observed_tool_text_characters": 2403
+    },
+    {
+      "model": "qwen3",
+      "uuid": "486ea46224d1-2b5bb9f47372",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "List any five countries which use English as an official language."
+          }
+        ]
+      },
+      "final_answer": "Here are five countries that use English as an official language:\n\n1. Anguilla\n2. American Samoa\n3. Antigua and Barbuda\n4. Australia\n5. Belize\n\nThese countries have English as an official language based on the data analysis.",
+      "usage": {
+        "model_calls": 6,
+        "tool_calls": 5,
+        "input_tokens": 107638,
+        "output_tokens": 582,
+        "generation_seconds": 37.80069135501981,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 38.102464728057384,
+      "tool_error_results": 0,
+      "errors": [],
+      "max_observed_tool_text_characters": 11067
+    },
+    {
+      "model": "qwen3",
+      "uuid": "486ea46224d1-74c57403a8e6",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "List the languages used in Turkmenistan."
+          }
+        ]
+      },
+      "final_answer": "Now I can see the languages used in Turkmenistan. From the filtered data, I can see that Turkmenistan has three languages:\n\n1. Kazakh (2.0%)\n2. Russian (6.7%)\n3. Turkmenian (76.7%)\n\nTurkmenian is the official language, making up 76.7% of the population, while Kazakh and Russian are spoken by smaller percentages of the population.\n\nThe languages used in Turkmenistan are Kazakh, Russian, and Turkmenian.",
+      "usage": {
+        "model_calls": 6,
+        "tool_calls": 5,
+        "input_tokens": 127823,
+        "output_tokens": 624,
+        "generation_seconds": 46.75537084043026,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 47.042517863214016,
+      "tool_error_results": 0,
+      "errors": [],
+      "max_observed_tool_text_characters": 12864
+    },
+    {
+      "model": "qwen3",
+      "uuid": "486ea46224d1-674a4702614a",
+      "termination": "agent_finished",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "How many cities are there in England?"
+          }
+        ]
+      },
+      "final_answer": "The filtered data now shows 71 entries where the district is \"England\". This means there are 71 cities in England based on the provided dataset.\n\nFinal Answer: There are **71 cities** in England.",
+      "usage": {
+        "model_calls": 4,
+        "tool_calls": 3,
+        "input_tokens": 91812,
+        "output_tokens": 461,
+        "generation_seconds": 34.89077481254935,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 35.163637071847916,
+      "tool_error_results": 0,
+      "errors": [],
+      "max_observed_tool_text_characters": 28553
+    },
+    {
+      "model": "qwen3",
+      "uuid": "486ea46224d1-9bae74dab965",
+      "termination": "model_error",
+      "query": {
+        "turns": [
+          {
+            "turn_id": 0,
+            "query": "Provide the name, capital city and its official language of the country with the highest life expectancy."
+          }
+        ]
+      },
+      "final_answer": null,
+      "usage": {
+        "model_calls": 2,
+        "tool_calls": 1,
+        "input_tokens": 12193,
+        "output_tokens": 185,
+        "generation_seconds": 7.582138208672404,
+        "protocol_errors": 0
+      },
+      "elapsed_seconds": 96.95452553220093,
+      "tool_error_results": 0,
+      "errors": [
+        {
+          "step": 1,
+          "error_type": "OutOfMemoryError",
+          "error": "CUDA out of memory. Tried to allocate 3.56 GiB. GPU 0 has a total capacity of 44.42 GiB of which 1.12 GiB is free. Including non-PyTorch memory, this process has 43.30 GiB memory in use. Of the allocated memory 34.19 GiB is allocated by PyTorch, and 8.79 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+        }
+      ],
+      "max_observed_tool_text_characters": 184020
+    }
+  ]
+}

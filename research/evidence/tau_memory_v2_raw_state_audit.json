@@ -1,0 +1,5978 @@
+{
+  "purpose": "development trajectory diagnosis only",
+  "task_split": "small",
+  "tau_source_sha256": "d07cc342f43894f866d1fd151fdd1ed996976cb194299e2d87913bc5bc8ee349",
+  "input_sha256": {
+    "qwen25/shard-0/case-000-status.json": "c2915bf722b2dbf9bf0cfe67d973ca82f45201cd7cfe40f7473b41d119e39ff9",
+    "qwen25/shard-0/case-000.json": "5b44e154f851d5f926ba7149ff9c5092b6f14eac4e535a33388191d1f996037e",
+    "qwen25/shard-0/case-001-status.json": "c060d8f346f5e185c6ae2e3ef92c0332ff510545e4207ce42d69a2f947ce606f",
+    "qwen25/shard-0/case-001.json": "6af8c2b2f990b42665ef173d3b9f6116f346ec56bc95ccd09554115cb2a16ba0",
+    "qwen25/shard-0/case-002-status.json": "3923555873f4ccfa0c8151a16e848f76f415e721ea4ab1a685c4014dc8b1f7f0",
+    "qwen25/shard-0/case-002.json": "2bf2fa54e781b030d381b74456a5b91182a879c968d7b94d01c1083c7b4f14af",
+    "qwen25/shard-0/case-003-status.json": "394b618a0691e67b29acfab24d915c541640aaba88096474948af1256ad8df56",
+    "qwen25/shard-0/case-003.json": "0ac478be8c58c5e0b495f83e6f351c44d27a4a480c0d2927edc1f1f6786306b1",
+    "qwen25/shard-0/case-004-status.json": "3f59a86d419888a937f1bc3aab6990bdc4e463af2e2845b8c654341a7c8a84b6",
+    "qwen25/shard-0/case-004.json": "5ddb564d1c43f9b40d2046b92f229c29d1e02f586deeed9cf99b849d21ffbf37",
+    "qwen25/shard-0/case-005-status.json": "e578ddf0aeb499df75aa0c1efcff7198258d2f0c259e3e3ccd3fcfe02af07273",
+    "qwen25/shard-0/case-005.json": "11fb21351710a3df53cea580283cd8a0077afab9cf39a80f467e426b347a61fc",
+    "qwen25/shard-0/case-006-status.json": "8975fa33371438a6979081c56447daff6be5c94748da89867c5d0f4cd7a64853",
+    "qwen25/shard-0/case-006.json": "34a6441a1b7b157275aed6d9c215608b50fef4597216f7ddd28cb8922f989696",
+    "qwen25/shard-0/case-007-status.json": "e0e2d4272fee35a88d8a2e4415f3ea6eec9ac2f4267fa06e01c8cc7eea9e382d",
+    "qwen25/shard-0/case-007.json": "b306f94c190bdf59440918562c19e0ebb0adbaa63bb3585cbd138051ceafaf2a",
+    "qwen25/shard-0/case-008-status.json": "c2018d8815672ec2e4288458cbb317b0030c290e7bf67c45b7cfb952f0da8d2b",
+    "qwen25/shard-0/case-008.json": "3a63da1861cbea56d3509cd3e00d4c3e4c5e300b799ea5d98d4036c797375540",
+    "qwen25/shard-0/case-009-status.json": "32a08988218606543126604f80161104761f4ddc04606d65ccfc28d77b985138",
+    "qwen25/shard-0/case-009.json": "5cc2a2d663c5d6f1600fa0c901f23bb33088c4d718d5602c2747b6e3c4563beb",
+    "qwen25/shard-1/case-000-status.json": "6fc3a586116468cccc2523835c5230d5b2b5fe0890ddcc8a3cd844b5d0fe6a77",
+    "qwen25/shard-1/case-000.json": "bb2f5e3022ce3f4997ad31695d17f4fcef8398d8003c73a0be068d197c30dbee",
+    "qwen25/shard-1/case-001-status.json": "152c463528d4f649f920f56b8d28fcee6d322066fae555f45461b412af3ae4f2",
+    "qwen25/shard-1/case-001.json": "0a34e4a02a86a84668331e2dbaba416ea22d8731509bdfaecdccc3c6881a7710",
+    "qwen25/shard-1/case-002-status.json": "1f853dc06e50da8f7dd3fb5605b33b549a1d922e745a36ebdeb6ab200100b0fc",
+    "qwen25/shard-1/case-002.json": "e94dc30932affda3a1a840a9c47415ea1ef01ecc921eb2d8338355a9190a8237",
+    "qwen25/shard-1/case-003-status.json": "7f349e255dd1028a7da253e3fdededccdd2fe52b394936101834b31a553f6f97",
+    "qwen25/shard-1/case-003.json": "e0c6eadbdcf26ccb5557fc53e340208319a74ce79590baa3c6cbf85c85e832df",
+    "qwen25/shard-1/case-004-status.json": "84c65a461749a2b46c57dd725bf4d32ba2d9b8093b5d33de6e27c36269816287",
+    "qwen25/shard-1/case-004.json": "292b15d2b36d4122e10525bca2ed4a856311f58d0e994ce68363853ce1b72fdc",
+    "qwen25/shard-1/case-005-status.json": "bf7156d2bbd3f80d15c06528e1290543bbb389389c01f9f65795776c3fc123d8",
+    "qwen25/shard-1/case-005.json": "0362503d50c2199e91715ad5dcd905addc8782306fa07ad87257ecebed84e6af",
+    "qwen25/shard-1/case-006-status.json": "8b5e4ba55f568cadd45fc0dcdfb772f5b173944fffa3574af6000fb91dcd0199",
+    "qwen25/shard-1/case-006.json": "3cb8e434de6f6e1f75f11ce3d9b8e406eabd93ee2b7d8a444456c23aad98b42e",
+    "qwen25/shard-1/case-007-status.json": "fe8774a97127617ba9965a12ed77277e76d2a2cc0fb53c706231d6ce1dd97428",
+    "qwen25/shard-1/case-007.json": "348c689dede3d6827f66b0727924d52a5e6636c7db6990610dc3c5c29449e710",
+    "qwen25/shard-1/case-008-status.json": "83523ee5aa61fe95dc3c612968ae5fe4a1c8341b73a660402d27c7662899b62d",
+    "qwen25/shard-1/case-008.json": "87413c824417101299215a61c3f0d61e54f2d9a9ea86e5ed780f21911d746a2c",
+    "qwen25/shard-1/case-009-status.json": "e371ac0eea80152737821d980ea0d4f45a4217cddb47d3b3e1211fdd6f0521e7",
+    "qwen25/shard-1/case-009.json": "7ceb8fe76448cac0a09e99c790a7b1da2f709042b6970ae6da753c101ba424d3",
+    "qwen3/shard-0/case-000-status.json": "c2915bf722b2dbf9bf0cfe67d973ca82f45201cd7cfe40f7473b41d119e39ff9",
+    "qwen3/shard-0/case-000.json": "acd7e4b9cd97df483091ccaae5a65a53bc28ddc002483962c8b807e80b110158",
+    "qwen3/shard-0/case-001-status.json": "f741a4a278462081093915449ff63a1c5a024a0ac62ef6b6ccd4cede84fd6dcf",
+    "qwen3/shard-0/case-001.json": "dfde7c1f23eefe73627f132ba7d26baaf85b608fb5cb85f3a8807020929db6a1",
+    "qwen3/shard-0/case-002-status.json": "5b71c63f768516a65b3f29b5c58e831688e28412b135a072d6a61e81994aed6d",
+    "qwen3/shard-0/case-002.json": "c5a705705d40c482b0050115a7f6627687dd8114875e019621b93478d6e00b8b",
+    "qwen3/shard-0/case-003-status.json": "1dfc6ce42bb41fe21998b6825eb471b4f5890c9ad7c435137afeb17ac6a7e930",
+    "qwen3/shard-0/case-003.json": "601ace1bbc61c4e6594a3df5cbd6ade1a08a0d95454d23d57ab89e8e37e32958",
+    "qwen3/shard-0/case-004-status.json": "38b9e68f6d9475541305ebf7fc406dbe3a036a8a9d5572789d7cbae8e2eb300f",
+    "qwen3/shard-0/case-004.json": "fff76fd4da04d80ccf2efcfd881f59c4583e0d612d724d2f744767e87c072956",
+    "qwen3/shard-0/case-005-status.json": "dd0fd6b6e0e7ec6cd878a9bb8771e1662e7281a8684d538df5e4c9c573f5e766",
+    "qwen3/shard-0/case-005.json": "41b1af1c8a1f3c930352995d5bdbbf6898f14c80d29971cae2deb6cc2bacac04",
+    "qwen3/shard-0/case-006-status.json": "7bb6fc7a25d249f3fec9d2a2a5201e7be83c3258656d80677248096fe5d851a2",
+    "qwen3/shard-0/case-006.json": "771894275b16ba6e430c2d61a66d82501b46a4d5d29caf2b9262f3d986e28d9e",
+    "qwen3/shard-0/case-007-status.json": "4abf668b1bdc3f1c964293e98aa7e2d302ebc501758252f1ed562fb542581cb2",
+    "qwen3/shard-0/case-007.json": "35962ed4e60ac92188258c244553f319c66e770336ed919f43885acdcbf7e37b",
+    "qwen3/shard-0/case-008-status.json": "c2018d8815672ec2e4288458cbb317b0030c290e7bf67c45b7cfb952f0da8d2b",
+    "qwen3/shard-0/case-008.json": "94370d9b3892ded8ca74f6bc8f20ce4f1429fd82797d7f8bda0da1e027b8e23c",
+    "qwen3/shard-0/case-009-status.json": "1ece0f2813c8634774ae9e9737a10f79a48c71674fdcec300ccf7432f7490975",
+    "qwen3/shard-0/case-009.json": "613ae0cbe08984825c1c998aaddbf4794992fab16c7719b679e23c3deafda24f",
+    "qwen3/shard-1/case-000-status.json": "702837399313b391598b7544acd1c96f8a41b550a8f69678ccd7e1e3cadff453",
+    "qwen3/shard-1/case-000.json": "ff1586e546d7f7193f0f3e69c11fdb4e143635ac5fc68c04f57dd50d12bdf985",
+    "qwen3/shard-1/case-001-status.json": "152c463528d4f649f920f56b8d28fcee6d322066fae555f45461b412af3ae4f2",
+    "qwen3/shard-1/case-001.json": "26458b147cb5f3cee8a7cef633379c98fe7bad40b1b06e1b9f5cad63462ca512",
+    "qwen3/shard-1/case-002-status.json": "1f853dc06e50da8f7dd3fb5605b33b549a1d922e745a36ebdeb6ab200100b0fc",
+    "qwen3/shard-1/case-002.json": "3fa3a570a20885f94cb212801c2a9d633340beb239bf009d2bdef9c0690a0566",
+    "qwen3/shard-1/case-003-status.json": "ca261f95e53b1f9236924384deae5c7cf9d23840e5319b165046f6b7aa8961dd",
+    "qwen3/shard-1/case-003.json": "c3c613e53e461c84199f1b884a5cbab4246216f8476c6e1d232f01279daa930e",
+    "qwen3/shard-1/case-004-status.json": "e64baa08806963db5cce33c31ae7cb810fb61adba88cc673d7015b6e287ce240",
+    "qwen3/shard-1/case-004.json": "5c4e22295094daa74d432b3e4fd551346332c401f262fa2861fa33b9327062e2",
+    "qwen3/shard-1/case-005-status.json": "4f3f5db3873c171ef7ab561f1a0dfa2555d9749a61b154574bcf2d4c92ad520d",
+    "qwen3/shard-1/case-005.json": "7eedc58942c1b12bb3205de720e972f63e1c6beab34b5edce370d36388f73322",
+    "qwen3/shard-1/case-006-status.json": "78b567882f08183c7283a525a3600b8c13419698935622ba420b4986cde20901",
+    "qwen3/shard-1/case-006.json": "c8083b10fac5a3aad47e3095e7bc9c0cf3f428f01498bec39fafe8d8231a4994",
+    "qwen3/shard-1/case-007-status.json": "f7261e89d4c582d930baa576f75dc3ef1c481392c49dc9db47eafd564aa04be7",
+    "qwen3/shard-1/case-007.json": "58dbfcca182ab2e831c52d503906ef7b311bd2674a770a48cb8a463241cef146",
+    "qwen3/shard-1/case-008-status.json": "ff4daffa5c74824e2a134879e0dfdad5c3468a3a109db18f53d288e4b6c80659",
+    "qwen3/shard-1/case-008.json": "70f52dd40a22741fdb0ddf30a7464e08bd0457bb051044df82a0d5bbc1480bde",
+    "qwen3/shard-1/case-009-status.json": "77d772d50cde51ba4e9a48b35d782a4a670038c8f3e3eb13a3b1a74cd2bf7f45",
+    "qwen3/shard-1/case-009.json": "8bf0d3f28e0505ac75b75d0c155a0b1be86d01edbced5a2da7bb8aedb61efcb4"
+  },
+  "rows": [
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-000-status.json",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 11,
+          "generation_count": 6,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-001-status.json",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 47,
+          "generation_count": 24,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-002-status.json",
+      "task_id": "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 6,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 15,
+          "generation_count": 8,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-003-status.json",
+      "task_id": "[mobile_data_issue]bad_vpn[PERSONA:None]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 23,
+          "generation_count": 12,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-004-status.json",
+      "task_id": "[service_issue]airplane_mode_on[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 25,
+          "generation_count": 13,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-005-status.json",
+      "task_id": "[service_issue]lock_sim_card_pin[PERSONA:Hard]",
+      "official_reward": 0.0,
+      "termination": "max_steps",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 48,
+          "generation_count": 24,
+          "tool_count": 24,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 50,
+          "generation_count": 25,
+          "tool_count": 25,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 52,
+          "generation_count": 26,
+          "tool_count": 26,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 54,
+          "generation_count": 27,
+          "tool_count": 27,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 56,
+          "generation_count": 28,
+          "tool_count": 28,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 58,
+          "generation_count": 29,
+          "tool_count": 29,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 60,
+          "generation_count": 30,
+          "tool_count": 30,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 62,
+          "generation_count": 31,
+          "tool_count": 31,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-006-status.json",
+      "task_id": "[service_issue]overdue_bill_suspension[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 29,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 48,
+          "generation_count": 24,
+          "tool_count": 24,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 50,
+          "generation_count": 25,
+          "tool_count": 25,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 52,
+          "generation_count": 26,
+          "tool_count": 26,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 54,
+          "generation_count": 27,
+          "tool_count": 27,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 56,
+          "generation_count": 28,
+          "tool_count": 28,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 58,
+          "generation_count": 29,
+          "tool_count": 29,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 59,
+          "generation_count": 30,
+          "tool_count": 29,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-007-status.json",
+      "task_id": "[mms_issue]bad_network_preference[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 6,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 17,
+          "generation_count": 9,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-008-status.json",
+      "task_id": "[mms_issue]break_apn_mms_setting[PERSONA:Hard]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 5,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 13,
+          "generation_count": 7,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-0/case-009-status.json",
+      "task_id": "[mms_issue]break_app_storage_permission[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 41,
+          "generation_count": 21,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-000-status.json",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 19,
+          "generation_count": 10,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-001-status.json",
+      "task_id": "[mobile_data_issue]data_mode_off[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 11,
+          "generation_count": 6,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-002-status.json",
+      "task_id": "[mobile_data_issue]bad_network_preference[PERSONA:Hard]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 13,
+          "generation_count": 7,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-003-status.json",
+      "task_id": "[mobile_data_issue]data_usage_exceeded[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 47,
+          "generation_count": 24,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-004-status.json",
+      "task_id": "[service_issue]unseat_sim_card[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 7,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 17,
+          "generation_count": 9,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-005-status.json",
+      "task_id": "[service_issue]break_apn_settings[PERSONA:None]",
+      "official_reward": 0.0,
+      "termination": "max_steps",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 48,
+          "generation_count": 24,
+          "tool_count": 24,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 50,
+          "generation_count": 25,
+          "tool_count": 25,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 52,
+          "generation_count": 26,
+          "tool_count": 26,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 54,
+          "generation_count": 27,
+          "tool_count": 27,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 56,
+          "generation_count": 28,
+          "tool_count": 28,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 58,
+          "generation_count": 29,
+          "tool_count": 29,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 60,
+          "generation_count": 30,
+          "tool_count": 30,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 62,
+          "generation_count": 31,
+          "tool_count": 31,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-006-status.json",
+      "task_id": "[service_issue]contract_end_suspension[PERSONA:Hard]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 48,
+          "generation_count": 24,
+          "tool_count": 24,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 50,
+          "generation_count": 25,
+          "tool_count": 25,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 52,
+          "generation_count": 26,
+          "tool_count": 26,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 54,
+          "generation_count": 27,
+          "tool_count": 27,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 56,
+          "generation_count": 28,
+          "tool_count": 28,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 58,
+          "generation_count": 29,
+          "tool_count": 29,
+          "state_satisfied": false,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 59,
+          "generation_count": 30,
+          "tool_count": 29,
+          "state_satisfied": false,
+          "action_satisfied": false,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-007-status.json",
+      "task_id": "[mms_issue]bad_wifi_calling[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 20,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 43,
+          "generation_count": 22,
+          "tool_count": 21,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-008-status.json",
+      "task_id": "[mms_issue]break_app_sms_permission[PERSONA:None]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 41,
+          "generation_count": 21,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen25",
+      "status_file": "qwen25/shard-1/case-009-status.json",
+      "task_id": "[mms_issue]break_app_both_permissions[PERSONA:Hard]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 15,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 35,
+          "generation_count": 18,
+          "tool_count": 17,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-000-status.json",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_enabled_off[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 11,
+          "generation_count": 6,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-001-status.json",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 31,
+          "generation_count": 16,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-002-status.json",
+      "task_id": "[mobile_data_issue]data_saver_mode_on[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 19,
+          "generation_count": 10,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-003-status.json",
+      "task_id": "[mobile_data_issue]bad_vpn[PERSONA:None]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 17,
+          "generation_count": 9,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-004-status.json",
+      "task_id": "[service_issue]airplane_mode_on[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 13,
+          "generation_count": 7,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-005-status.json",
+      "task_id": "[service_issue]lock_sim_card_pin[PERSONA:Hard]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 22,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": true,
+          "action_satisfied": true,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 45,
+          "generation_count": 23,
+          "tool_count": 22,
+          "state_satisfied": true,
+          "action_satisfied": true,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-006-status.json",
+      "task_id": "[service_issue]overdue_bill_suspension[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 47,
+          "generation_count": 24,
+          "tool_count": 23,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-007-status.json",
+      "task_id": "[mms_issue]bad_network_preference[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 10,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 23,
+          "generation_count": 12,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-008-status.json",
+      "task_id": "[mms_issue]break_apn_mms_setting[PERSONA:Hard]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 13,
+          "generation_count": 7,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-0/case-009-status.json",
+      "task_id": "[mms_issue]break_app_storage_permission[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 15,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 33,
+          "generation_count": 17,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-000-status.json",
+      "task_id": "[mobile_data_issue]user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 29,
+          "generation_count": 15,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-001-status.json",
+      "task_id": "[mobile_data_issue]data_mode_off[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 4,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 11,
+          "generation_count": 6,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-002-status.json",
+      "task_id": "[mobile_data_issue]bad_network_preference[PERSONA:Hard]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 5,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 13,
+          "generation_count": 7,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-003-status.json",
+      "task_id": "[mobile_data_issue]data_usage_exceeded[PERSONA:Easy]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 45,
+          "generation_count": 23,
+          "tool_count": 22,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-004-status.json",
+      "task_id": "[service_issue]unseat_sim_card[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 6,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 13,
+          "generation_count": 7,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-005-status.json",
+      "task_id": "[service_issue]break_apn_settings[PERSONA:None]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 43,
+          "generation_count": 22,
+          "tool_count": 21,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-006-status.json",
+      "task_id": "[service_issue]contract_end_suspension[PERSONA:Hard]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 42,
+          "generation_count": 21,
+          "tool_count": 21,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 44,
+          "generation_count": 22,
+          "tool_count": 22,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 46,
+          "generation_count": 23,
+          "tool_count": 23,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 47,
+          "generation_count": 24,
+          "tool_count": 23,
+          "state_satisfied": true,
+          "action_satisfied": false,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-007-status.json",
+      "task_id": "[mms_issue]bad_wifi_calling[PERSONA:Easy]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 12,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 27,
+          "generation_count": 14,
+          "tool_count": 13,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-008-status.json",
+      "task_id": "[mms_issue]break_app_sms_permission[PERSONA:None]",
+      "official_reward": 1.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": 15,
+      "regressions": [],
+      "final_state_satisfied": true,
+      "final_task_satisfied": true,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        },
+        {
+          "message_count": 33,
+          "generation_count": 17,
+          "tool_count": 16,
+          "state_satisfied": true,
+          "action_satisfied": null,
+          "task_satisfied": true
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    },
+    {
+      "model": "qwen3",
+      "status_file": "qwen3/shard-1/case-009-status.json",
+      "task_id": "[mms_issue]break_app_both_permissions[PERSONA:Hard]",
+      "official_reward": 0.0,
+      "termination": "agent_stop",
+      "first_satisfied_generation": null,
+      "regressions": [],
+      "final_state_satisfied": false,
+      "final_task_satisfied": false,
+      "prefixes": [
+        {
+          "message_count": 0,
+          "generation_count": 0,
+          "tool_count": 0,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 2,
+          "generation_count": 1,
+          "tool_count": 1,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 4,
+          "generation_count": 2,
+          "tool_count": 2,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 6,
+          "generation_count": 3,
+          "tool_count": 3,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 8,
+          "generation_count": 4,
+          "tool_count": 4,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 10,
+          "generation_count": 5,
+          "tool_count": 5,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 12,
+          "generation_count": 6,
+          "tool_count": 6,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 14,
+          "generation_count": 7,
+          "tool_count": 7,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 16,
+          "generation_count": 8,
+          "tool_count": 8,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 18,
+          "generation_count": 9,
+          "tool_count": 9,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 20,
+          "generation_count": 10,
+          "tool_count": 10,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 22,
+          "generation_count": 11,
+          "tool_count": 11,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 24,
+          "generation_count": 12,
+          "tool_count": 12,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 26,
+          "generation_count": 13,
+          "tool_count": 13,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 28,
+          "generation_count": 14,
+          "tool_count": 14,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 30,
+          "generation_count": 15,
+          "tool_count": 15,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 32,
+          "generation_count": 16,
+          "tool_count": 16,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 34,
+          "generation_count": 17,
+          "tool_count": 17,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 36,
+          "generation_count": 18,
+          "tool_count": 18,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 38,
+          "generation_count": 19,
+          "tool_count": 19,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 40,
+          "generation_count": 20,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        },
+        {
+          "message_count": 41,
+          "generation_count": 21,
+          "tool_count": 20,
+          "state_satisfied": false,
+          "action_satisfied": null,
+          "task_satisfied": false
+        }
+      ],
+      "meaning": "offline hidden-assertion state diagnostic, not policy-visible feedback or revised benchmark reward"
+    }
+  ],
+  "unscored_runs": []
+}
