@@ -23,7 +23,11 @@ version includes breadth/cost analysis and confidence-based selective branch
 launching. Thus “predict a response, pre-execute, validate, roll back,”
 adaptive branch counts and generic uncertainty-aware speculation are also
 occupied. The [official repository](https://github.com/naimengye/speculative-action)
-was located; implementation has not yet been pinned, audited or reproduced.
+was pinned at `dc938b9ef7474caf07fe4ad16549c1fa8c7d268c`;
+17 selected files were hash-verified and the HotPotQA/state and retail
+execution paths were read. A method-level offline state probe is recorded in
+[the code findings](speculative_action_code_findings_v1.md). It is not a
+benchmark or model reproduction.
 The older anonymous OpenReview PDF was blocked by browser verification;
 the authors' arXiv v2 was used instead.
 
@@ -33,9 +37,20 @@ communication cost. That formulation is adjacent but does not by itself
 cover scheduling several pending operations. It cannot establish novelty
 once the above closer asynchronous methods are considered.
 
-[PASTE](https://arxiv.org/html/2603.18897v1) was located as another direct
-tool-speculation baseline. Only abstract/entry inspection is complete;
-do not treat its exact mechanism or experiment coverage as fully audited.
+[PASTE](https://arxiv.org/html/2603.18897v1), sections 3–6, was read at
+method level. Its patterns combine event signatures, predicted tools,
+symbolic argument mappings and empirical confidence. Separate authoritative
+and speculative queues share results; matching jobs are promoted. Speculation
+uses slack capacity, a resource budget and preemption, with a utility based
+on consumption probability, expected latency benefit, resource cost and
+duration. Section 5.2 already supplies explicit operator eligibility,
+deduplication, partial preparation and dry-run/staging transformations.
+Section 6 describes cache keys using tool names and argument hashes. Thus
+generic resource-aware scheduling, tool allowlists, and bounded speculative
+work are not gaps. The paper says code will be released after review; no
+implementation or reported performance has been independently reproduced
+here. A missing state-version field in this description alone would not
+prove that its implementation reuses invalid state.
 
 Decision: do not launch an expensive generic async-clarification experiment
 or count a paper slot as secured. A defensible residual question needs a

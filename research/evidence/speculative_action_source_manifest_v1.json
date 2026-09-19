@@ -1,0 +1,93 @@
+{
+  "repository": "naimengye/speculative-action",
+  "commit": "dc938b9ef7474caf07fe4ad16549c1fa8c7d268c",
+  "tree_sha256": "d5e7f73c09500a5cc09eebf8abb50221f3c023ceab9f4eb0ccb7ef74bdf9fa95",
+  "scope": "static code audit acquisition, no upstream imports or experiments",
+  "files": {
+    "README.md": {
+      "sha256": "4485042637a0e3a86dda9ce4f929053a30bdf612d823a8a47b7441009f9a620a",
+      "git_blob": "8a5caf711cde7d4a9958cefa609acf3d6ec92234",
+      "bytes": 2210
+    },
+    "e-commerce/README.md": {
+      "sha256": "5af124d175459f155df82f71e3425ac457bf9ae0fe37fe39ba3619299dadc124",
+      "git_blob": "3d015e046e2b65b5157b2139409ab45cc678734a",
+      "bytes": 1154
+    },
+    "e-commerce/tau-bench/README.md": {
+      "sha256": "ebe424a44a790a2bfc1f75435b26d5ebf99e912b51dd3f8e776e6ec79ee1c441",
+      "git_blob": "3fbc2442a11888fdb15e2ed1bd3650c0c13918b3",
+      "bytes": 8293
+    },
+    "e-commerce/tau-bench/tau_bench/agents/tool_calling_agent.py": {
+      "sha256": "95ea35a216ae283fb8dedf42d01cf60edbec6a542764a7adc4396f7114355a1c",
+      "git_blob": "e1b9cd4004fb5ebcc5e32470004a493aeda336f0",
+      "bytes": 3964
+    },
+    "e-commerce/tau-bench/tau_bench/agents/tool_calling_agent_reduce.py": {
+      "sha256": "65b39dd57af6bb70055d0ac3ef9c10d764a8b3a37ba13d421a2d41cc66d04a19",
+      "git_blob": "dae715d0867ce40a9c527ea676141558a6945fce",
+      "bytes": 20900
+    },
+    "e-commerce/tau-bench/tau_bench/agents/tool_calling_agent_static.py": {
+      "sha256": "adec776e6743579a75bab7bd8feab4d461550718299f4ca45ac760d599cebc70",
+      "git_blob": "04698522017c3ddf86d34726d67dfbaea7c553f1",
+      "bytes": 16372
+    },
+    "e-commerce/tau-bench/tau_bench/run.py": {
+      "sha256": "d62a9fe1a924683958994a0ad982e1f5c3e5fc84c34b632345449cae5b85cc1b",
+      "git_blob": "9e121d078b8e12f303130cef6819762c63862d16",
+      "bytes": 9390
+    },
+    "hotpotqa/README.md": {
+      "sha256": "9210a487f66b1e62bf53d216f7c004e8aee62611886a4dcc36d0b3102acceaa6",
+      "git_blob": "a73ebe952d204086fc8c38e7903db72f7b4bbe1e",
+      "bytes": 4656
+    },
+    "hotpotqa/run.py": {
+      "sha256": "d4987b3f95c601e590029466950c93e56b6604c6e21ea59bd39a714b00bdf309",
+      "git_blob": "58fa0f032ed12c4bd49decfe8565c2cec44db609",
+      "bytes": 5293
+    },
+    "hotpotqa/src/constants.py": {
+      "sha256": "2d5efdc331efb711c107a9ff2518300fb89b74923a4933b8b196b6d145b51cdb",
+      "git_blob": "b540bb2bf47ebbd43e426e91a4e6cee38b46036a",
+      "bytes": 716
+    },
+    "hotpotqa/src/environment.py": {
+      "sha256": "d958fe423bc66a19eb0108a9bf2f6fee82bbba6c4b4755033fd508646493952c",
+      "git_blob": "e9b9f1afc13e469752d07e8383054e83867f935a",
+      "bytes": 6784
+    },
+    "hotpotqa/src/llm_client.py": {
+      "sha256": "4685d686a67246c7dabf1126f41efa63754bd2b939f6f8b6ff27a218c9c41b79",
+      "git_blob": "617b5a469f76f90cfc43627cb1760e9041861f04",
+      "bytes": 2585
+    },
+    "hotpotqa/src/metrics.py": {
+      "sha256": "e7914f4446c1ad89020edee34010e8ff4b48354980e6504472d74f16713ee2e6",
+      "git_blob": "179d83e935727fb07b108263f932639a0b167d30",
+      "bytes": 8251
+    },
+    "hotpotqa/src/prompts.py": {
+      "sha256": "daf488dcda2edb2581e3c45592bc08a9164d43b9e5fbc84f631ea532806bd01e",
+      "git_blob": "b869255d75845dcd5c8f91486e3c048d5efeff6f",
+      "bytes": 2180
+    },
+    "hotpotqa/src/runner.py": {
+      "sha256": "bc001033d5e8207fc2e1e6d7e55ec46468e6cb7451addd4015233c68451c2d1e",
+      "git_blob": "dbeb6f44b4222d414da8258a70210b5e35c9aa92",
+      "bytes": 13137
+    },
+    "hotpotqa/src/utils.py": {
+      "sha256": "4fb7e438dcfe23683116e92305677bcc2606de9890d6c302aca768936d7d40a4",
+      "git_blob": "249966da3ebf5c2265dc955030a9909e66102a1c",
+      "bytes": 7317
+    },
+    "hotpotqa/src/wrappers.py": {
+      "sha256": "32e8d2b892d8463f12343ed085bdbdea5cf1de5853289d1f99de26a9226e00f3",
+      "git_blob": "605193bcbed1abbc88071c4ae4e1cd9283f8ac3b",
+      "bytes": 10444
+    }
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "scope": "AST-extracted unmodified methods with explicitly substituted I/O and wrappers",
+  "benchmark_reproduction": false,
+  "llm_calls": 0,
+  "network_calls": 0,
+  "source_manifest_sha256": "28ca61ed6a7eae9c7579454ef4123efdcefc502b314627212220c3e0bc5d355e",
+  "probe_script_sha256": "a21cd2db4deb0b593014f4e4294d2f20cf0da9312b7dcbf2a9477ea7ed434d9e",
+  "executed_methods": [
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "_get_obs",
+      "line": 44,
+      "end_line": 45,
+      "ast_sha256": "b15d32b0afbac196c9b752311497a659ee13b899b14ccfbcdc5ac303846a2efe"
+    },
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "_get_info",
+      "line": 47,
+      "end_line": 48,
+      "ast_sha256": "f60baf16a16829fca1de256b16092a0245686a0c9f741aef4ec4f9e350a27426"
+    },
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "reset",
+      "line": 50,
+      "end_line": 61,
+      "ast_sha256": "6faae66403857fd414c8823f3decffcaad92279586e04cc0ad35b916228dac75"
+    },
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "construct_lookup_list",
+      "line": 63,
+      "end_line": 73,
+      "ast_sha256": "e167e92494d0810359a3de9cbd9a8a09231cfbf1e389503e17970fd4b247725c"
+    },
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "get_page_obs",
+      "line": 76,
+      "end_line": 83,
+      "ast_sha256": "a47854638daf333f9ccd4756fc9e4189b4487fe6e5f1bcde872a2ff933c95134"
+    },
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "guess_step",
+      "line": 85,
+      "end_line": 97,
+      "ast_sha256": "28824089d518fbd547cf5820922739ec6fd11c00e17348eacb7055f9118a2a18"
+    },
+    {
+      "path": "hotpotqa/src/environment.py",
+      "class": "WikiEnv",
+      "method": "step",
+      "line": 126,
+      "end_line": 166,
+      "ast_sha256": "15fa1c009602c32f345ce2183b1927dad3b25eb113f3354093466f9ccaad3ec3"
+    },
+    {
+      "path": "hotpotqa/src/runner.py",
+      "class": "HotPotQARun",
+      "method": "step",
+      "line": 59,
+      "end_line": 74,
+      "ast_sha256": "183afc3c47b18c9af294fa1b253df6bdfd1f177f20c7a605dd2027759967d48c"
+    },
+    {
+      "path": "hotpotqa/src/runner.py",
+      "class": "HotPotQARun",
+      "method": "action_lowercase",
+      "line": 95,
+      "end_line": 100,
+      "ast_sha256": "8213ad3288b8bec806e940697013815238948c2c73392641ef3aa9e5f6e424a9"
+    },
+    {
+      "path": "hotpotqa/src/runner.py",
+      "class": "HotPotQARun",
+      "method": "webthink",
+      "line": 153,
+      "end_line": 226,
+      "ast_sha256": "544cda45d113a908ee5d72998c8f5ba647b25077ec159ad533521cd45d9cd12b"
+    }
+  ],
+  "direct_controls": [
+    {
+      "simulation": "none",
+      "before": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "needle authoritative first. needle authoritative second..",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 1,
+        "answer": null
+      },
+      "after": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "needle authoritative first. needle authoritative second..",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 1,
+        "answer": null
+      },
+      "next_authoritative_lookup": "(Result 1 / 2) needle authoritative first.",
+      "final": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "(Result 1 / 2) needle authoritative first.",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle authoritative first.",
+          "needle authoritative second.."
+        ],
+        "lookup_cnt": 1,
+        "steps": 2,
+        "answer": null
+      }
+    },
+    {
+      "simulation": "search",
+      "before": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "needle authoritative first. needle authoritative second..",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 1,
+        "answer": null
+      },
+      "after": {
+        "page": "needle predicted first. needle predicted second.",
+        "obs": "needle predicted first. needle predicted second..",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 2,
+        "answer": null
+      },
+      "next_authoritative_lookup": "(Result 1 / 2) needle predicted first.",
+      "final": {
+        "page": "needle predicted first. needle predicted second.",
+        "obs": "(Result 1 / 2) needle predicted first.",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle predicted first.",
+          "needle predicted second.."
+        ],
+        "lookup_cnt": 1,
+        "steps": 3,
+        "answer": null
+      }
+    },
+    {
+      "simulation": "lookup",
+      "before": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "needle authoritative first. needle authoritative second..",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 1,
+        "answer": null
+      },
+      "after": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "(Result 1 / 2) needle authoritative first.",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle authoritative first.",
+          "needle authoritative second.."
+        ],
+        "lookup_cnt": 1,
+        "steps": 2,
+        "answer": null
+      },
+      "next_authoritative_lookup": "(Result 2 / 2) needle authoritative second..",
+      "final": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "(Result 2 / 2) needle authoritative second..",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle authoritative first.",
+          "needle authoritative second.."
+        ],
+        "lookup_cnt": 2,
+        "steps": 3,
+        "answer": null
+      }
+    },
+    {
+      "simulation": "finish",
+      "before": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "needle authoritative first. needle authoritative second..",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 1,
+        "answer": null
+      },
+      "after": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "Episode finished, reward = 0\n",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 2,
+        "answer": "predicted"
+      },
+      "next_authoritative_lookup": "Episode finished, reward = 0\n",
+      "final": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "Episode finished, reward = 0\n",
+        "lookup_keyword": null,
+        "lookup_list": null,
+        "lookup_cnt": null,
+        "steps": 2,
+        "answer": "predicted"
+      }
+    }
+  ],
+  "runner_controls": [
+    {
+      "mode": "baseline",
+      "normal": {
+        "observations": [
+          "needle authoritative first. needle authoritative second..",
+          "(Result 1 / 2) needle authoritative first.",
+          "Episode finished, reward = 0\n"
+        ],
+        "actions": [
+          "Search[fixture]",
+          "Lookup[needle]",
+          "Finish[done]"
+        ],
+        "prompt": "Fixture\nFind needle in fixture.\n"
+      },
+      "simulated": {
+        "observations": [],
+        "actions": []
+      },
+      "state": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "Episode finished, reward = 0\n",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle authoritative first.",
+          "needle authoritative second.."
+        ],
+        "lookup_cnt": 1,
+        "steps": 3,
+        "answer": "done"
+      },
+      "scripted_generation_calls": [
+        {
+          "step": 1,
+          "candidates_requested": 1
+        },
+        {
+          "step": 2,
+          "candidates_requested": 1
+        },
+        {
+          "step": 3,
+          "candidates_requested": 1
+        }
+      ]
+    },
+    {
+      "mode": "shared_upstream_flow",
+      "normal": {
+        "observations": [
+          "needle authoritative first. needle authoritative second..",
+          "(Result 1 / 2) needle predicted first.",
+          "Episode finished, reward = 0\n"
+        ],
+        "actions": [
+          "Search[fixture]",
+          "Lookup[needle]",
+          "Finish[done]"
+        ],
+        "prompt": "Fixture\nFind needle in fixture.\n"
+      },
+      "simulated": {
+        "observations": [
+          "needle predicted first. needle predicted second..",
+          "needle predicted first. needle predicted second..",
+          "needle predicted first. needle predicted second.."
+        ],
+        "actions": [
+          [
+            "Search[fixture]"
+          ],
+          [
+            "Lookup[needle]"
+          ],
+          [
+            "Finish[done]"
+          ]
+        ],
+        "prompt": "Fixture\nFind needle in fixture.\n"
+      },
+      "state": {
+        "page": "needle predicted first. needle predicted second.",
+        "obs": "Episode finished, reward = 0\n",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle predicted first.",
+          "needle predicted second.."
+        ],
+        "lookup_cnt": 2,
+        "steps": 5,
+        "answer": "done"
+      },
+      "scripted_generation_calls": [
+        {
+          "step": 1,
+          "candidates_requested": 1
+        },
+        {
+          "step": 1,
+          "candidates_requested": 3
+        },
+        {
+          "step": 2,
+          "candidates_requested": 1
+        },
+        {
+          "step": 2,
+          "candidates_requested": 3
+        },
+        {
+          "step": 3,
+          "candidates_requested": 1
+        },
+        {
+          "step": 3,
+          "candidates_requested": 3
+        }
+      ]
+    },
+    {
+      "mode": "snapshot_restore_control",
+      "normal": {
+        "observations": [
+          "needle authoritative first. needle authoritative second..",
+          "(Result 1 / 2) needle authoritative first.",
+          "Episode finished, reward = 0\n"
+        ],
+        "actions": [
+          "Search[fixture]",
+          "Lookup[needle]",
+          "Finish[done]"
+        ],
+        "prompt": "Fixture\nFind needle in fixture.\n"
+      },
+      "simulated": {
+        "observations": [
+          "needle predicted first. needle predicted second..",
+          "needle predicted first. needle predicted second..",
+          "needle predicted first. needle predicted second.."
+        ],
+        "actions": [
+          [
+            "Search[fixture]"
+          ],
+          [
+            "Lookup[needle]"
+          ],
+          [
+            "Finish[done]"
+          ]
+        ],
+        "prompt": "Fixture\nFind needle in fixture.\n"
+      },
+      "state": {
+        "page": "needle authoritative first. needle authoritative second.",
+        "obs": "Episode finished, reward = 0\n",
+        "lookup_keyword": "needle",
+        "lookup_list": [
+          "needle authoritative first.",
+          "needle authoritative second.."
+        ],
+        "lookup_cnt": 1,
+        "steps": 3,
+        "answer": "done"
+      },
+      "scripted_generation_calls": [
+        {
+          "step": 1,
+          "candidates_requested": 1
+        },
+        {
+          "step": 1,
+          "candidates_requested": 3
+        },
+        {
+          "step": 2,
+          "candidates_requested": 1
+        },
+        {
+          "step": 2,
+          "candidates_requested": 3
+        },
+        {
+          "step": 3,
+          "candidates_requested": 1
+        },
+        {
+          "step": 3,
+          "candidates_requested": 3
+        }
+      ]
+    }
+  ],
+  "finding": "Shared simulated search changes the page read by the next authoritative lookup; snapshot/restore of authoritative state restores the fixed baseline in this fixture."
+}
