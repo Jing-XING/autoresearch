@@ -1,0 +1,25 @@
+{
+  "purpose": "Acquire official HotpotQA distractor development data and pin its scorer.\n\nNo benchmark or model execution. Download URLs are linked by hotpotqa.github.io.\n",
+  "dataset_source": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+  "original_dataset_url": "https://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json",
+  "mirror": {
+    "repository": "hotpotqa/hotpot_qa",
+    "commit": "1908d6afbbead072334abe2965f91bd2709910ab",
+    "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+    "parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "parquet_bytes": 27452575,
+    "conversion": "id to _id; context and supporting-facts structs to row-pair lists, with no semantic filtering or order changes.",
+    "original_host_failure": "HTTPS TLS handshake timeout after sandbox network retry; no certificate verification disabled."
+  },
+  "dataset_bytes": 45931342,
+  "dataset_sha256": "2c56eb73e5f4cfaecf52342286510c40ebdbd7c8eea5971ceb2b3438929838f7",
+  "records": 7405,
+  "license_page": "https://hotpotqa.github.io/",
+  "license": "CC BY-SA 4.0, attribution and source links retained; see dataset homepage",
+  "scorer_repository": "hotpotqa/hotpot",
+  "scorer_commit": "3635853403a8735609ee997664e1528f4480762a",
+  "scorer_url": "https://raw.githubusercontent.com/hotpotqa/hotpot/3635853403a8735609ee997664e1528f4480762a/hotpot_evaluate_v1.py",
+  "scorer_sha256": "d35fc91a6db21d791dbdda11daf3856e9359f5701d54e3eefba20d88fecc02c0",
+  "dataset_pin_note": "Receipt pins source bytes and any declared conversion. Converted JSON is not claimed byte-identical to the unavailable original-host JSON.",
+  "model_experiments": 0
+}

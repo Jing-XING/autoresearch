@@ -67,3 +67,11 @@ callback pattern saves state, suspends, and resumes upon reply. This is not
 itself a scheduler for useful actions during a pending reply. However, that
 distinction does not rescue the broad proposal from the closer Async I/O and
 Speculative Actions overlap above. No A2H implementation was run.
+
+The [snapshot-control preparation](hotpot_snapshot_readiness_v1.md) now supplies
+fixed public retrieval content and disjoint task IDs for a narrower empirical
+question: whether a measurement run's simulated calls alter the authoritative
+trajectory. Eight pilot tasks/eighty passages passed deterministic environment
+preflight with exact pinned method bodies; no model experiment or new isolation
+method is claimed. Forty evaluation tasks are reserved. This preparation does
+not yet secure an independent fourth-paper contribution.
