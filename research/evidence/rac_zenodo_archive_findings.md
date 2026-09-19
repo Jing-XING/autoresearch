@@ -79,3 +79,8 @@ do not label the paper's performance independently reproduced. A replication
 requires the actual trial identifiers, evaluator definitions, final sample
 mapping and task-state checks. Existing CPU fixtures establish a narrower
 software claim independently of the archival performance numbers.
+
+The author-linked anonymous airline repository was also opened in Chrome on
+September 19. Its page explicitly reports that the repository is expired.
+We did not access its benchmark runner or infer its unavailable evaluator
+semantics from the archive's summary fields.

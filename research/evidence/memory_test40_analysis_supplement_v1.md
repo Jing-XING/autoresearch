@@ -34,3 +34,23 @@ effects under different tie rules, and rejection of invalid grids. They pass.
 These small fixtures verify arithmetic and input checks only; the full
 560-episode analyzer has not yet been validated against completed new data.
 The main result will record hashes of all three analysis source files.
+
+## Literal-content check before inference
+
+The subsequent fixed-bank audit (`memory_bank_content_diversity_v1.json`)
+finds 52 distinct raw memories and 51/51/50 distinct outcome/full/boundary
+lessons among 74 source IDs. In the selected group used by 15 test targets,
+`alternative_1` and `alternative_2` have identical raw/full/boundary content.
+The other four selected ticket groups have three distinct texts per condition.
+No source has identical full-metadata and boundary-aware text.
+
+Keep the registered executions and all three reported choices; do not replace
+sources after this check. Explicitly report the duplicate-content comparisons
+as reproducibility checks, not additional treatment or source diversity.
+The analyzer compares complete recorded model inputs, schemas and replies
+(including generated token IDs), excluding elapsed time and source-selection
+metadata, and reports whether rewards also match. Disagreements are retained
+for investigation rather than silently normalized. An additional CPU test
+checks that identical lessons with differing model I/O remain visible, bringing
+the sensitivity module to four passing tests. Actual duplicate-content
+replication results remain unavailable until the full batch completes.

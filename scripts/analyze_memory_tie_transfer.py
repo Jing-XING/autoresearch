@@ -139,6 +139,11 @@ def analyze(root, registration_path, bank_path, code_zip, deployment_path):
                    'termination': status.get('termination'), 'model_calls': status['model_calls'],
                    'usage': dict(usage), 'protocol_errors': protocol_errors,
                    'source_record_id': chosen['record_id'] if chosen else None,
+                   'memory_text_sha256': hashlib.sha256(records[chosen['record_id']]['memories'][condition].encode()).hexdigest() if chosen else None,
+                   'model_io_sha256': hashlib.sha256(json.dumps([
+                       {'input': c['input'], 'tools': c['tools'],
+                        'reply': {k: v for k, v in c['reply'].items() if k != 'elapsed_seconds'}}
+                       for c in audit['calls']], sort_keys=True).encode()).hexdigest(),
                    'ticket_sha256': selected[task_id]['ticket_sha256']}
             rows.append(row)
             local_rows.append(status)

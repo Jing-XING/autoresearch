@@ -47,6 +47,17 @@ class TieSensitivityTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 describe_tie_sensitivity(bad, reg)
 
+    def test_identical_lessons_keep_reproducibility_disagreement_visible(self):
+        reg, rows = self.fixture()
+        for row in rows:
+            if row['task_id'] == 'a' and row['condition'] == 'full_metadata' and row['tie_order'] != 'record_id':
+                row['memory_text_sha256'] = 'same-lesson'
+                row['model_io_sha256'] = row['tie_order']
+        checks = describe_tie_sensitivity(rows, reg)['duplicate_content_checks']
+        self.assertEqual(len(checks), 1)
+        self.assertFalse(checks[0]['identical_model_io'])
+        self.assertTrue(checks[0]['identical_recorded_rewards'])
+
 
 if __name__ == '__main__':
     unittest.main()

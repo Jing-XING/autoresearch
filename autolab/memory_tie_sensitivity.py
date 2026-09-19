@@ -1,5 +1,6 @@
 """Finite-grid sensitivity; three tie choices are not independent source draws."""
 from itertools import combinations
+from collections import defaultdict
 
 
 def describe_tie_sensitivity(rows, registration):
@@ -55,6 +56,19 @@ def describe_tie_sensitivity(rows, registration):
                 within_arm.append(dict(model=model, condition=condition, left=left, right=right,
                     gains=gains, losses=losses, changed_tasks=len(gains) + len(losses),
                     success_difference=(len(gains) - len(losses)) / len(tasks)))
+    duplicate_groups = defaultdict(list)
+    for row in rows:
+        if row.get('memory_text_sha256'):
+            key = (row['model'], row['task_id'], row['condition'], row['memory_text_sha256'])
+            duplicate_groups[key].append(row)
+    duplicate_checks = []
+    for key, group in sorted(duplicate_groups.items()):
+        if len(group) > 1:
+            duplicate_checks.append(dict(model=key[0], task_id=key[1], condition=key[2],
+                memory_text_sha256=key[3], tie_orders=[r['tie_order'] for r in group],
+                identical_model_io=len({r['model_io_sha256'] for r in group}) == 1,
+                identical_recorded_rewards=len({r['reward'] for r in group}) == 1))
     return dict(treatment_effects=summaries, within_condition_tie_changes=within_arm,
+        duplicate_content_checks=duplicate_checks,
         interpretation='All three preregistered choices reported. No best-choice ranking or pooled independent-sample test.',
         limits='Only five shared ticket/source groups in the intended study. Leave-group-out values are sensitivity diagnostics, not confidence bounds.')
