@@ -1,0 +1,237 @@
+{
+  "purpose": "Development refinement: vary only one official-language flag at a time.\n\nDesigned after both a known manual witness and the schema-only search results.\nThis is a positive-control/constraint-sensitivity audit, not independent data.\n",
+  "database_sha256": "813faade795b875f6d46cf81d9651e2400524b414a407aa9d473aa9a8c142861",
+  "preceding_candidate_file_sha256": "4de081a57b3088ce0b6098e9337f102f1e25a125fadfcb12cd778cc946d049b6",
+  "mutation_source_sha256": "a8c0651d8c69b4550eac5d8269c6114650b3b9e9cf9537e3bd3522b6c2903cdf",
+  "source_sha256": "4413facd496441b0866f2cc0507e52a420e32dbc78e1acb637309f0f79ab00ae",
+  "eligibility": [
+    {
+      "task_index": 1,
+      "eligible": false
+    },
+    {
+      "task_index": 2,
+      "eligible": false
+    },
+    {
+      "task_index": 3,
+      "eligible": true
+    },
+    {
+      "task_index": 4,
+      "eligible": false
+    },
+    {
+      "task_index": 5,
+      "eligible": false
+    },
+    {
+      "task_index": 6,
+      "eligible": true
+    },
+    {
+      "task_index": 7,
+      "eligible": false
+    },
+    {
+      "task_index": 8,
+      "eligible": false
+    },
+    {
+      "task_index": 9,
+      "eligible": false
+    },
+    {
+      "task_index": 11,
+      "eligible": false
+    }
+  ],
+  "rows": [
+    {
+      "task_index": 3,
+      "uuid": "486ea46224d1-9bae74dab965",
+      "query": "Provide the name, capital city and its official language of the country with the highest life expectancy.",
+      "target_sql": "SELECT c.Name,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+      "search": {
+        "original_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ]
+        ],
+        "draws": 984,
+        "candidates": [
+          {
+            "draw": 22,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "IsOfficial",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "single_official_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "AND",
+                    "Catalan"
+                  ],
+                  "before": "T",
+                  "after": "F"
+                }
+              ]
+            },
+            "answer": []
+          },
+          {
+            "draw": 23,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "IsOfficial",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "single_official_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "AND",
+                    "French"
+                  ],
+                  "before": "F",
+                  "after": "T"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "Catalan"
+              ],
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "French"
+              ]
+            ]
+          },
+          {
+            "draw": 24,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "IsOfficial",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "single_official_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "AND",
+                    "Portuguese"
+                  ],
+                  "before": "F",
+                  "after": "T"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "Catalan"
+              ],
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "Portuguese"
+              ]
+            ]
+          },
+          {
+            "draw": 25,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "IsOfficial",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "single_official_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "AND",
+                    "Spanish"
+                  ],
+                  "before": "F",
+                  "after": "T"
+                }
+              ]
+            },
+            "answer": [
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "Catalan"
+              ],
+              [
+                "Andorra",
+                "Andorra la Vella",
+                "Spanish"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "task_index": 6,
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "query": "Provide the country, population, capital city, and official language of the country with the smallest surface area.",
+      "target_sql": "SELECT c.Name,c.Population,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country) AND l.IsOfficial='T'",
+      "search": {
+        "original_answer": [
+          [
+            "Holy See (Vatican City State)",
+            1000,
+            "Città del Vaticano",
+            "Italian"
+          ]
+        ],
+        "draws": 984,
+        "candidates": [
+          {
+            "draw": 928,
+            "mutation": {
+              "table": "CountryLanguage",
+              "column": "IsOfficial",
+              "keys": [
+                "CountryCode",
+                "Language"
+              ],
+              "operator": "single_official_flag_flip",
+              "changes": [
+                {
+                  "key": [
+                    "VAT",
+                    "Italian"
+                  ],
+                  "before": "T",
+                  "after": "F"
+                }
+              ]
+            },
+            "answer": []
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "Post-outcome development refinement. Only one CountryLanguage.IsOfficial flag may change, T/F; every other database cell stays fixed. This preserves geography/identities but does not certify all domain semantics. Exhaustively enumerate this single-cell class over existing rows; retain every SQL-answer-changing flip. All four model/prompt arms on eligible tasks are checked. Stop replay after the first witness; a negative does not prove sufficiency under multiple changes or other allowed data variations."
+}

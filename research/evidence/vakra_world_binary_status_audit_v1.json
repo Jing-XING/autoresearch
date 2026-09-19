@@ -1,0 +1,592 @@
+{
+  "purpose": "Replay bounded development mutations through the unchanged real MCP server.\n\nEvery witness preserves a target episode's complete recorded tool observation.\nSearch exhaustion means unknown, never a positive sufficiency certificate.\n",
+  "candidate_file_sha256": "e8a727a67790ba806af4d6ec181a890120f8f680b849fc9d319ec71201efd5b1",
+  "script_sha256": "78452cf5a4bb55a59bc7b15ee622ae955b47eab5fc4b8f382b4ec9a39b236bab",
+  "preparation_sha256": "ca4ac172afa54b83fa6c0aa8db8a6a674ffd2e91ac77bff52880195f95038f3c",
+  "episodes": 8,
+  "distinct_tasks": 2,
+  "mutant_databases": 5,
+  "statuses": {
+    "witness_found": 6,
+    "no_witness_in_bounded_search": 2
+  },
+  "rows": [
+    {
+      "source": "coverage_check/qwen25/shard-0/case-003.json",
+      "source_sha256": "d34d1cceb20390ac7ae228cbc8ab044dae453cf98920acc1d34229af7f4edb4a",
+      "uuid": "486ea46224d1-9bae74dab965",
+      "task_index": 3,
+      "original_termination": "protocol_error_limit",
+      "worker_prefix_sha256": {
+        "case-000.json": "3112f1a1b214c786512ae4211f5cffc41c94d2d2d30c640029200ce757360361",
+        "case-001.json": "da04f0392a4e9a2e9ce5eaa08da03dd556563a51c58bbc349a5675c4295eb3cd",
+        "case-002.json": "2d6fc83f0b2c8cbc58cac03954e2f137e5ccd1f8f30af1255ce00795c0667686"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "7400d2dd72d18158444100eb755ad349cb9057e6d8ff6ccd8fbaabe44a190ca6",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 0,
+          "observation_sha256": "01468a7503ef8656f5d8c3bffc108c1815590dba9be56d9e07110dc0be021669"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 0,
+        "observation_sha256": "01468a7503ef8656f5d8c3bffc108c1815590dba9be56d9e07110dc0be021669"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "CountryLanguage",
+          "column": "IsOfficial",
+          "keys": [
+            "CountryCode",
+            "Language"
+          ],
+          "operator": "single_official_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "AND",
+                "Catalan"
+              ],
+              "before": "T",
+              "after": "F"
+            }
+          ]
+        },
+        "database": "results\\vakra-world-binary-status-v1\\task-003-mutation-00.sqlite",
+        "database_sha256": "7400d2dd72d18158444100eb755ad349cb9057e6d8ff6ccd8fbaabe44a190ca6",
+        "target_sql": "SELECT c.Name,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+        "original_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ]
+        ],
+        "counterfactual_answer": [],
+        "observation_sha256": "01468a7503ef8656f5d8c3bffc108c1815590dba9be56d9e07110dc0be021669"
+      }
+    },
+    {
+      "source": "coverage_check/qwen25/shard-0/case-006.json",
+      "source_sha256": "7dcc01b9855dd6888aa513b4c4f8a4ca4c95c47b5a6c516f0f16c82c2fa06ffa",
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "task_index": 6,
+      "original_termination": "input_budget_exceeded",
+      "worker_prefix_sha256": {
+        "case-000.json": "3112f1a1b214c786512ae4211f5cffc41c94d2d2d30c640029200ce757360361",
+        "case-001.json": "da04f0392a4e9a2e9ce5eaa08da03dd556563a51c58bbc349a5675c4295eb3cd",
+        "case-002.json": "2d6fc83f0b2c8cbc58cac03954e2f137e5ccd1f8f30af1255ce00795c0667686",
+        "case-003.json": "d34d1cceb20390ac7ae228cbc8ab044dae453cf98920acc1d34229af7f4edb4a",
+        "case-004.json": "3f65e731aed4548ac1ff4cf19404d18728fa1427855d5e43e647f1a8d2e285a4",
+        "case-005.json": "f12ed7c6ae6dccd99aa40b4bdd94c5367e4340594b9e2ae86d0bd8eb25abe3b1"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "9bba0554478e999e21d1c49a127736df1762c4ecbd8ecf4118e0e40c11e6c297",
+          "previous_independent_episode_differences": 0,
+          "preserved": true,
+          "calls_checked": 1,
+          "observation_sha256": "6195470e6ecb027ba4e1cf99988331bc3fce3393045f405f723018e936324437"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 1,
+        "observation_sha256": "6195470e6ecb027ba4e1cf99988331bc3fce3393045f405f723018e936324437"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "CountryLanguage",
+          "column": "IsOfficial",
+          "keys": [
+            "CountryCode",
+            "Language"
+          ],
+          "operator": "single_official_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "VAT",
+                "Italian"
+              ],
+              "before": "T",
+              "after": "F"
+            }
+          ]
+        },
+        "database": "results\\vakra-world-binary-status-v1\\task-006-mutation-00.sqlite",
+        "database_sha256": "9bba0554478e999e21d1c49a127736df1762c4ecbd8ecf4118e0e40c11e6c297",
+        "target_sql": "SELECT c.Name,c.Population,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country) AND l.IsOfficial='T'",
+        "original_answer": [
+          [
+            "Holy See (Vatican City State)",
+            1000,
+            "Città del Vaticano",
+            "Italian"
+          ]
+        ],
+        "counterfactual_answer": [],
+        "observation_sha256": "6195470e6ecb027ba4e1cf99988331bc3fce3393045f405f723018e936324437"
+      }
+    },
+    {
+      "source": "coverage_check/qwen3/shard-0/case-003.json",
+      "source_sha256": "c5288e04a86ca48fc4def58698ac64ee2d44a18797443cb480cb0acd797b635d",
+      "uuid": "486ea46224d1-9bae74dab965",
+      "task_index": 3,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "a08a9a9d4773aa52964ca8ee359ab0ef134f6bdc91d9261675d32187f405decd",
+        "case-001.json": "1f96d6defeb2ae5adbde293daec28c7fcfac0db3c76e9a51c785535acd79ed13",
+        "case-002.json": "3371c2213269c483f3bd7ce35e57326350c36943752d56e2e2733f6e15e28449"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "7400d2dd72d18158444100eb755ad349cb9057e6d8ff6ccd8fbaabe44a190ca6",
+          "previous_independent_episode_differences": 1,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_LifeExpectancy",
+              "value": 83.5
+            }
+          }
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "85b86b830a7c7486eb2cf15756f63e680a58db16f520ce2e8af4b8fddae027fc",
+          "previous_independent_episode_differences": 1,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_LifeExpectancy",
+              "value": 83.5
+            }
+          }
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "2bed83007ea2229d8684d82059691aee2d1539281a5377f188c3052d7a69ad3d",
+          "previous_independent_episode_differences": 1,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_LifeExpectancy",
+              "value": 83.5
+            }
+          }
+        },
+        {
+          "candidate_index": 3,
+          "database_sha256": "f789bfcff54999b78fea0949433d5e98cddecff66e985047e8f1cc7659f99b64",
+          "previous_independent_episode_differences": 1,
+          "preserved": true,
+          "calls_checked": 2,
+          "observation_sha256": "0cc172aa5576dfe12af308347a4a315269870615a791122bbd0aab589f45ef27"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 2,
+        "observation_sha256": "0cc172aa5576dfe12af308347a4a315269870615a791122bbd0aab589f45ef27"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "CountryLanguage",
+          "column": "IsOfficial",
+          "keys": [
+            "CountryCode",
+            "Language"
+          ],
+          "operator": "single_official_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "AND",
+                "Spanish"
+              ],
+              "before": "F",
+              "after": "T"
+            }
+          ]
+        },
+        "database": "results\\vakra-world-binary-status-v1\\task-003-mutation-03.sqlite",
+        "database_sha256": "f789bfcff54999b78fea0949433d5e98cddecff66e985047e8f1cc7659f99b64",
+        "target_sql": "SELECT c.Name,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+        "original_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ],
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Spanish"
+          ]
+        ],
+        "observation_sha256": "0cc172aa5576dfe12af308347a4a315269870615a791122bbd0aab589f45ef27"
+      }
+    },
+    {
+      "source": "coverage_check/qwen3/shard-0/case-006.json",
+      "source_sha256": "3a3ca30ac8c8124f7fb03ecabee416af52c2b0b0eb8c0839f7f8b05e1d61e7e3",
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "task_index": 6,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "a08a9a9d4773aa52964ca8ee359ab0ef134f6bdc91d9261675d32187f405decd",
+        "case-001.json": "1f96d6defeb2ae5adbde293daec28c7fcfac0db3c76e9a51c785535acd79ed13",
+        "case-002.json": "3371c2213269c483f3bd7ce35e57326350c36943752d56e2e2733f6e15e28449",
+        "case-003.json": "c5288e04a86ca48fc4def58698ac64ee2d44a18797443cb480cb0acd797b635d",
+        "case-004.json": "2b7b7dd7419c9475be2a3b947091270c9d6fcf8b277808ffa026f4951b43ae56",
+        "case-005.json": "c5039cd731b44d1e7958c666bdd45cf4db2b741d5844c579b4d96c25a6fc0850"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "9bba0554478e999e21d1c49a127736df1762c4ecbd8ecf4118e0e40c11e6c297",
+          "previous_independent_episode_differences": 1,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 1,
+          "call": {
+            "name": "select_data_equal_to",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_SurfaceArea",
+              "value": 0.4
+            }
+          }
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 2,
+        "observation_sha256": "046b4238fd61a4601a11f0269a31b597b7ddc18698b6f0732bb21c639755255e"
+      },
+      "status": "no_witness_in_bounded_search"
+    },
+    {
+      "source": "original/qwen25/shard-0/case-003.json",
+      "source_sha256": "ef9d838d616321f4efd002a2f42b4aaa2bc31d3f6d1c63e5efae9238358dff40",
+      "uuid": "486ea46224d1-9bae74dab965",
+      "task_index": 3,
+      "original_termination": "agent_finished",
+      "worker_prefix_sha256": {
+        "case-000.json": "e778112a73345afc4153b6c6b4accbf2fe8604a0d3216f639bcac119d9003679",
+        "case-001.json": "abcbe7a980088f771d5e2800caf129f70321f3535a6bf51bd0e53e80aa5f55f4",
+        "case-002.json": "05e0f73e29cc75c911b5a76af38a2af98336a722de73215670dc7f9959e0fb7e"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "7400d2dd72d18158444100eb755ad349cb9057e6d8ff6ccd8fbaabe44a190ca6",
+          "previous_independent_episode_differences": 3,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 2,
+          "call": {
+            "name": "sort_data_descending",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_LifeExpectancy"
+            }
+          }
+        },
+        {
+          "candidate_index": 1,
+          "database_sha256": "85b86b830a7c7486eb2cf15756f63e680a58db16f520ce2e8af4b8fddae027fc",
+          "previous_independent_episode_differences": 3,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 2,
+          "call": {
+            "name": "sort_data_descending",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_LifeExpectancy"
+            }
+          }
+        },
+        {
+          "candidate_index": 2,
+          "database_sha256": "2bed83007ea2229d8684d82059691aee2d1539281a5377f188c3052d7a69ad3d",
+          "previous_independent_episode_differences": 3,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 2,
+          "call": {
+            "name": "sort_data_descending",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_LifeExpectancy"
+            }
+          }
+        },
+        {
+          "candidate_index": 3,
+          "database_sha256": "f789bfcff54999b78fea0949433d5e98cddecff66e985047e8f1cc7659f99b64",
+          "previous_independent_episode_differences": 3,
+          "preserved": true,
+          "calls_checked": 7,
+          "observation_sha256": "2cc65d2e6bddc5559f34e7a052cc141bda9c1bf7385977c4a1d5b410a7bc0700"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 7,
+        "observation_sha256": "2cc65d2e6bddc5559f34e7a052cc141bda9c1bf7385977c4a1d5b410a7bc0700"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "CountryLanguage",
+          "column": "IsOfficial",
+          "keys": [
+            "CountryCode",
+            "Language"
+          ],
+          "operator": "single_official_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "AND",
+                "Spanish"
+              ],
+              "before": "F",
+              "after": "T"
+            }
+          ]
+        },
+        "database": "results\\vakra-world-binary-status-v1\\task-003-mutation-03.sqlite",
+        "database_sha256": "f789bfcff54999b78fea0949433d5e98cddecff66e985047e8f1cc7659f99b64",
+        "target_sql": "SELECT c.Name,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+        "original_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ]
+        ],
+        "counterfactual_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ],
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Spanish"
+          ]
+        ],
+        "observation_sha256": "2cc65d2e6bddc5559f34e7a052cc141bda9c1bf7385977c4a1d5b410a7bc0700"
+      }
+    },
+    {
+      "source": "original/qwen25/shard-0/case-006.json",
+      "source_sha256": "89287421263de44399a238be18b2e4ccb453d12b227a70bf596a3f7db87df064",
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "task_index": 6,
+      "original_termination": "protocol_error_limit",
+      "worker_prefix_sha256": {
+        "case-000.json": "e778112a73345afc4153b6c6b4accbf2fe8604a0d3216f639bcac119d9003679",
+        "case-001.json": "abcbe7a980088f771d5e2800caf129f70321f3535a6bf51bd0e53e80aa5f55f4",
+        "case-002.json": "05e0f73e29cc75c911b5a76af38a2af98336a722de73215670dc7f9959e0fb7e",
+        "case-003.json": "ef9d838d616321f4efd002a2f42b4aaa2bc31d3f6d1c63e5efae9238358dff40",
+        "case-004.json": "a5216d1ee938e8b623d5a855be71676f6a2f5daacdae8e7cf1deced4577f94c7",
+        "case-005.json": "e4dd9ef2ccc7d24197a86df78b14a31131d56028b0bcc7c4a48fa3d8f03d915e"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "9bba0554478e999e21d1c49a127736df1762c4ecbd8ecf4118e0e40c11e6c297",
+          "previous_independent_episode_differences": 3,
+          "preserved": false,
+          "first_difference": "tool_response",
+          "call_index": 0,
+          "call": {
+            "name": "sort_data_ascending",
+            "arguments": {
+              "data_label": "retrieved_Country_1",
+              "key_name": "Country_SurfaceArea",
+              "ascending": true
+            }
+          }
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 1,
+        "observation_sha256": "b45d7298eb029a307a756242d28b0ad9308c254023ae68a8d71af2ea369823de"
+      },
+      "status": "no_witness_in_bounded_search"
+    },
+    {
+      "source": "original/qwen3/shard-0/case-003.json",
+      "source_sha256": "d9a040f6b83b7bd58beb47e326ef91fc3be65d3ee1bab9038a5e0044f8268bd0",
+      "uuid": "486ea46224d1-9bae74dab965",
+      "task_index": 3,
+      "original_termination": "input_budget_exceeded",
+      "worker_prefix_sha256": {
+        "case-000.json": "767b363fb1d4e82c31fa6d8f249dfaf0a4bf7d966bb89b19325926b25f4ccbff",
+        "case-001.json": "04c9b37705a208bb65251e930413166724f122408c448b4fc313b7d3f9fe617d",
+        "case-002.json": "58bc95787e417db8c3e4041cce8445ecc4e3e920cd8bc95ce6e4edaa8e67d160"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "7400d2dd72d18158444100eb755ad349cb9057e6d8ff6ccd8fbaabe44a190ca6",
+          "previous_independent_episode_differences": 1,
+          "preserved": true,
+          "calls_checked": 1,
+          "observation_sha256": "8130b870fc8ceaf9bc6e9cf04d518d6d1dfc8cbc4d09987916ebd79615be74c5"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 1,
+        "observation_sha256": "8130b870fc8ceaf9bc6e9cf04d518d6d1dfc8cbc4d09987916ebd79615be74c5"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "CountryLanguage",
+          "column": "IsOfficial",
+          "keys": [
+            "CountryCode",
+            "Language"
+          ],
+          "operator": "single_official_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "AND",
+                "Catalan"
+              ],
+              "before": "T",
+              "after": "F"
+            }
+          ]
+        },
+        "database": "results\\vakra-world-binary-status-v1\\task-003-mutation-00.sqlite",
+        "database_sha256": "7400d2dd72d18158444100eb755ad349cb9057e6d8ff6ccd8fbaabe44a190ca6",
+        "target_sql": "SELECT c.Name,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+        "original_answer": [
+          [
+            "Andorra",
+            "Andorra la Vella",
+            "Catalan"
+          ]
+        ],
+        "counterfactual_answer": [],
+        "observation_sha256": "8130b870fc8ceaf9bc6e9cf04d518d6d1dfc8cbc4d09987916ebd79615be74c5"
+      }
+    },
+    {
+      "source": "original/qwen3/shard-0/case-006.json",
+      "source_sha256": "26737d4d0def8676bda6388e82ebbae7e9059ca5c2f2eae776348b28261f2939",
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "task_index": 6,
+      "original_termination": "input_budget_exceeded",
+      "worker_prefix_sha256": {
+        "case-000.json": "767b363fb1d4e82c31fa6d8f249dfaf0a4bf7d966bb89b19325926b25f4ccbff",
+        "case-001.json": "04c9b37705a208bb65251e930413166724f122408c448b4fc313b7d3f9fe617d",
+        "case-002.json": "58bc95787e417db8c3e4041cce8445ecc4e3e920cd8bc95ce6e4edaa8e67d160",
+        "case-003.json": "d9a040f6b83b7bd58beb47e326ef91fc3be65d3ee1bab9038a5e0044f8268bd0",
+        "case-004.json": "05b660a7c557ea439631db18b80c1c0bdc22c16ddff9b3142b63e88c69012428",
+        "case-005.json": "b502344d76191239fd3251dc1687c8c002c410029949b1f1610218bc5115952c"
+      },
+      "trials": [
+        {
+          "candidate_index": 0,
+          "database_sha256": "9bba0554478e999e21d1c49a127736df1762c4ecbd8ecf4118e0e40c11e6c297",
+          "previous_independent_episode_differences": 1,
+          "preserved": true,
+          "calls_checked": 1,
+          "observation_sha256": "6195470e6ecb027ba4e1cf99988331bc3fce3393045f405f723018e936324437"
+        }
+      ],
+      "baseline_replay": {
+        "previous_independent_episode_differences": 0,
+        "preserved": true,
+        "calls_checked": 1,
+        "observation_sha256": "6195470e6ecb027ba4e1cf99988331bc3fce3393045f405f723018e936324437"
+      },
+      "status": "witness_found",
+      "witness": {
+        "mutation": {
+          "table": "CountryLanguage",
+          "column": "IsOfficial",
+          "keys": [
+            "CountryCode",
+            "Language"
+          ],
+          "operator": "single_official_flag_flip",
+          "changes": [
+            {
+              "key": [
+                "VAT",
+                "Italian"
+              ],
+              "before": "T",
+              "after": "F"
+            }
+          ]
+        },
+        "database": "results\\vakra-world-binary-status-v1\\task-006-mutation-00.sqlite",
+        "database_sha256": "9bba0554478e999e21d1c49a127736df1762c4ecbd8ecf4118e0e40c11e6c297",
+        "target_sql": "SELECT c.Name,c.Population,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country) AND l.IsOfficial='T'",
+        "original_answer": [
+          [
+            "Holy See (Vatican City State)",
+            1000,
+            "Città del Vaticano",
+            "Italian"
+          ]
+        ],
+        "counterfactual_answer": [],
+        "observation_sha256": "6195470e6ecb027ba4e1cf99988331bc3fce3393045f405f723018e936324437"
+      }
+    }
+  ],
+  "candidate_contract": "Post-outcome development refinement. Only one CountryLanguage.IsOfficial flag may change, T/F; every other database cell stays fixed. This preserves geography/identities but does not certify all domain semantics. Exhaustively enumerate this single-cell class over existing rows; retain every SQL-answer-changing flip. All four model/prompt arms on eligible tasks are checked. Stop replay after the first witness; a negative does not prove sufficiency under multiple changes or other allowed data variations.",
+  "scope": "Known development traces; stop at first witness per episode. Original replay is mandatory. All initial peek fields, ordered schemas and every target-episode tool response content/isError are compared exactly. Previous independent episodes may change, but are absent from the target model input. No witness is inconclusive. No model was rerun and natural-language interpretation remains evaluator supplied."
+}

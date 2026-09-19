@@ -1,0 +1,2767 @@
+{
+  "purpose": "Compare fixed inputs and stable generation prefixes across executor policies.",
+  "strict_summary_sha256": "fd8cdf2849008891d6fc0979f7e0b9fd348b86298c7e04fe30cb2ef092c9c3a1",
+  "permissive_summary_sha256": "67e48b7aa141deed2eba0a6061b39c9ebf5caa0bd6a8275b1398746aa2fcbe48",
+  "source_sha256": "3e01d19fdf5c42352b46e95f206f17a512378249440a951e24d3e9c2f2f40a02",
+  "episodes": 240,
+  "same_first_reply": 240,
+  "same_final_text": 213,
+  "first_difference_types": {
+    "model_input_changed": 37,
+    "none": 203
+  },
+  "rows": [
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-000.json",
+      "strict_sha256": "25a37f71acb96c3e474cd07fd5c3ce2cdbcc1223318bc00c5cbdcd54f19aaf70",
+      "permissive_sha256": "3c8392eed08eb39db7a15d7aa1324ab4b5e151bd1df260d173f7fc12842e99e3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": {
+        "step": 2,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "protocol_error_limit"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-001.json",
+      "strict_sha256": "f95629912252ee58c13c715e2545808549776dc8d4198ac4bd6596173b321b70",
+      "permissive_sha256": "a377a044388c25c16c8874ae52964828cedff7df742021e3f2eb1e83cb853da1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-002.json",
+      "strict_sha256": "1c4b1d4e51eb686d490acc466e147aacac099cb1a3822e7dcd15d3702ec5a3af",
+      "permissive_sha256": "e22a430fb4f82f6f22d08eb9993d24fd3853b0803a92c5e42a7c0615d4448452",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-003.json",
+      "strict_sha256": "75d63628d0aa9be9c28500d671e9714acb5aeecb399ef835aa0971cf2612dc63",
+      "permissive_sha256": "f9a6998fc5db49dd591c0c28683ff8e2d9e5d227ce59b67ab3f3067e21151331",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-004.json",
+      "strict_sha256": "46a22ce5876121f73259c850cdefe16836d3c9a9dda1c2acd6e98d7d0343e6ea",
+      "permissive_sha256": "8c56e568e637bd06de917b3ab8733575d0b7908729ce20000e5f413c0edef8b3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-005.json",
+      "strict_sha256": "0a3c129e4cd42622fdaea150268d0be65b8b8c06f67e7b46e69cc9dacfc413e7",
+      "permissive_sha256": "cf9d6b988e3d4724ac7d0597ab45aeec0c108b7d0c0d8056e9658ad920f8f6a4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "tool_budget_exceeded"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-006.json",
+      "strict_sha256": "6224ff98ae2e659430dc88b6f829e78d60a58a60d42e9e0ee2964d0a86cb8ed3",
+      "permissive_sha256": "d46ae36c6eadca2ea17d4bb3e5e0c5c7741879a49f59981bc4830a8baf4d701e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-007.json",
+      "strict_sha256": "f58f52247a598832ad818769ed6471abebd44bfa266665371b5ea7430eef8c2f",
+      "permissive_sha256": "599e00d7a8a734a7324933ee75f3ca4ebad3ce8daa9b556327e28c95277b06bd",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": {
+        "step": 2,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-008.json",
+      "strict_sha256": "552a6729db558c42d08f69345f2b8e467ce55fed75de27b2a855e075c9db3894",
+      "permissive_sha256": "fddb8ea5bac237bfcbd0a875e4d918b42972d0e8236724566ca457a152145e67",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 20,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "max_steps",
+      "permissive_termination": "max_steps"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-009.json",
+      "strict_sha256": "8b1e82de1450c1a1fe39e2b3db7b03f004f6b2e26295294f8f3f449c1d5e0af3",
+      "permissive_sha256": "005f151deb8c18fb709b641b28f5ca587e91619adbbb4cd16d79da6e971df902",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-010.json",
+      "strict_sha256": "c6bdf7c79e98515a08c0bf0944d715edb4da0b5218d28caf379c519829639e73",
+      "permissive_sha256": "bb94795864c6353f06a36c829bf2ffbdf799f16bc5ed915eed86a029acfe7088",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-011.json",
+      "strict_sha256": "30993628ed7bf281e38581613fa55662252a973d91b716c213cf8c766b121460",
+      "permissive_sha256": "7ae66277cce280a2714d1be1d43870ef3cc0be4b0010cceaeb12a41307a58dc1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-012.json",
+      "strict_sha256": "ead02e1cb43a0657175a7210880245af9889e68e002e36ab2adc4e47d7fcf58a",
+      "permissive_sha256": "250120879991c6cb1a3e849440572ece73f727d5ea8b67ffdb6bf438483462d4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-013.json",
+      "strict_sha256": "fbe6a002b0cdfd748792819de8a4af34b28f78592dcbb80652eecfa13e98e3de",
+      "permissive_sha256": "17aa06fc2b3849987b68b7f462533bd3b374c794a67537823a7283c364a5f2bc",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-014.json",
+      "strict_sha256": "5a56b2c933a28715efd5cec20a197188f09225be6eb014f56d98bbd32cab8c01",
+      "permissive_sha256": "37c11e8c0a18012064006424a375f979a6b77987d19a7f6aa4d68189876d4a74",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-015.json",
+      "strict_sha256": "55367e48d8e95bb6138565300d0cdde362df849cef9423908df5a1ae9506cc87",
+      "permissive_sha256": "fb5199a65c384c63cda375da1f4f2cc54a6645d64df0967d3c9d6aaa45a26265",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-016.json",
+      "strict_sha256": "fe8d2ac5f235401b8a5a08d6ec28f5b94f22afea2fcc52626643721c73c657e2",
+      "permissive_sha256": "72be590d1af6f1fd691f6614b69fec7de1917fed8a017450ae0b75204ffd0aee",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": {
+        "step": 7,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-017.json",
+      "strict_sha256": "587a162166995005602506513f0fb6f0eca1cc64b98663992b360e68d506c592",
+      "permissive_sha256": "e9ee31d4e7d5be9c0252d8f2a30ec1e2e453b4bc48c968d0d6022bdddce76422",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-018.json",
+      "strict_sha256": "cf7c4d45b994cb878d982f9e59e6c1cd057eeb4cabba73c7e280180573620408",
+      "permissive_sha256": "f1229b03651edd3a2a534bca98e0a20f295044b628af41d66326b858cc82af55",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen25/shard-0/case-019.json",
+      "strict_sha256": "802e6f0d8c2b6488d3efa13661375fcf02c8f1315bb2eacd75ade2fa4e2a1097",
+      "permissive_sha256": "0c1ceb875fb830c2fd43549e6f0bf6bd3862501a225c62e3463f689b9e9fbe36",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-000.json",
+      "strict_sha256": "a99fac2f8dc94382e4cb37ed346c493982534c25667267f219e93109016035f2",
+      "permissive_sha256": "8ad277dd297b0082d223ed444c63c89d4c5b2f314e5d03e3ea65c1b9df7b5ff2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-001.json",
+      "strict_sha256": "acf1be3b536ae22b0bef849cb532328ab23e7a080519309a3a6c35d98083f7a6",
+      "permissive_sha256": "2dd3f5b241dde8eebb882babd1d9812dfc04a5c9bc6b77a1841b8797cb027b7d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-002.json",
+      "strict_sha256": "863b9da986da2acddbcf2c666ff9feb48f57a66d4b8dd67edd88c37c08f67444",
+      "permissive_sha256": "bde0bda53d10e5822d47e14193a29f8b30a3b74a3a06d7d3430bb5ea022ac5b5",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-003.json",
+      "strict_sha256": "1e40088d5e641a44f95acee0270686ac6af2b662ce3d0f8876b26c4fb3623bb3",
+      "permissive_sha256": "daefff6a94be458aa9822817ee0c80ae7dbe63d8d9ecd7ea53cc616a2dbeafe8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-004.json",
+      "strict_sha256": "753251179218fcd4e111d767a6b07620b8c42b1914a8faf30be58dd269547520",
+      "permissive_sha256": "e6a68345702bad011105cacdf93c1cfbd4ae5c604a477951f97b9ec0f2f1c3a8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-005.json",
+      "strict_sha256": "9820421d39cf14dfd666aef3524bfad68b4844838d954a822515b189d97573db",
+      "permissive_sha256": "beee582d6e98a67b15b78d9cb342e2cfd11d44e30ccd3defd45214eb897b9f2e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-006.json",
+      "strict_sha256": "71711208bf95f9a5057fe459dcf70875c4cd20db081f269d453ada834d2c13e4",
+      "permissive_sha256": "c5f16d18b8794f3e44d013659b1384fa8fc8bd6b9769e85e9a0493d801768ce7",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-007.json",
+      "strict_sha256": "65fff8a6f69f2d9277fa957d344c40628b46f027881c50f48428cdc0f06375cc",
+      "permissive_sha256": "aa0c076f59db24fe8f129ec10e604321ca1af7836d63d692494bbd785c157f4c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-008.json",
+      "strict_sha256": "84fa711385a9e31d9656aac6d31dea9ac3379d02ca033811d7e9a247d65b70aa",
+      "permissive_sha256": "a19f726b6565fa06aa2f5c7829efaacf543f0cea6285622e5f5900e18d4d9bc2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-009.json",
+      "strict_sha256": "18b70d404e56bb8e97acaa132eef0120c3ab33d741f768a0b726f72fea4553d1",
+      "permissive_sha256": "b5c53199ad7817fd1ba6b9165f5a19187c56d9b0e60f036b5be78fd0fd662d69",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-010.json",
+      "strict_sha256": "b86e4a1decbb7a5905649437771e1beec6bd264e6c205d787c73902f96286b84",
+      "permissive_sha256": "2db68f32cb908ca8067cbfdbcd38cab19a91a36996e70aa5c23482bd4260859e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-011.json",
+      "strict_sha256": "ced4ad48e1ab985f11a9caba17beedba0502f14cc06b8ec68e215921b6148b43",
+      "permissive_sha256": "e371f3b32d2dc5a53957f87152cde500fcb384b2b73d9613c03a8ed04347cb80",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-012.json",
+      "strict_sha256": "7657d7f80b32bb878cb9d96f772812fcf2e4f4a6a18dee1619ba597d0a5c3dcd",
+      "permissive_sha256": "2dcb8fa241ada955a95d1a7227baf20c99b84e7adefed816fb37ae937f70123d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-013.json",
+      "strict_sha256": "5bef85318ba3195e9276a0076bc2d2b003acffa87ab38892a6b4e38b633dae90",
+      "permissive_sha256": "2d2ff47c8a850af0ad5ea0eef597214dc953f4960e962bd4352f7831ff8f9715",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-014.json",
+      "strict_sha256": "081880f01b147ec4d2a74204f7b90aefe5ea721779bc9c2ee5fc843a5238ed82",
+      "permissive_sha256": "23508de612fbc182b12a0e1eaee8d429023e7ba08321f6fecefc37e7f74a1b8f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-015.json",
+      "strict_sha256": "2994219f028649cc6493080b0d42c20b228fdc5357949c4546d3e444c0ee14e0",
+      "permissive_sha256": "9345e90b3cc8d6bed1e14d78e2596f60ef87e7a54e73ab433ee2c85a5fef0a6c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-016.json",
+      "strict_sha256": "5478e7b601e9183ac272fac902ffe20cdc8db60413144c1cf2134d57baefcd25",
+      "permissive_sha256": "7c21f2c6801613e273b68aa6eb59bf5c13c32ee9ba4737366ed79ca7f434b8bb",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-017.json",
+      "strict_sha256": "ca759181d223dd6a5fffbedbcf1a7f06e6bb941a8f9e4a3799fcc71545546206",
+      "permissive_sha256": "2b7f0a3d472745289a14bf11c8915ac45f1a7a16c561d98351d613ba5d3ad82d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 8,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-018.json",
+      "strict_sha256": "e3b551e5a25da65ca0373ccd7eb668ce2c061adf80a33e80c09834cd933d9ff4",
+      "permissive_sha256": "67ae9d402ec37f70f41be4bcc1b0c6cb62273019d09a01342ab837902fdb980d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/coverage_check/qwen3/shard-0/case-019.json",
+      "strict_sha256": "0fc08c45c82f19a082f664cd75e8c4980bf1a7fd22b401f7d415245613a48748",
+      "permissive_sha256": "176e120dfc2ea5a3e300001a4f8c2a2f3f4400522b22cc2b4e322a33543ebb0c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-000.json",
+      "strict_sha256": "03954fce765b0139c64b95e0af0e80ccfb090b9c0fe02e4792ece80498f1eccb",
+      "permissive_sha256": "7b09563222e44cae4f6fb91415e90f17a069475704d631b426c74253d14b8cc9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-001.json",
+      "strict_sha256": "669bd9c13b7821818c08077031a46022f87902955f9c279bd263670c59cdf8bb",
+      "permissive_sha256": "dc4613a09b7a31ffba22c3eff886a43d8467ceb88e871bc04605a3397c0dcd5b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-002.json",
+      "strict_sha256": "3282f407a23920c182ee84e09dfbf36da602144ed38f97ed2c9291b485ceaf51",
+      "permissive_sha256": "711477b3ce9911db04dbd9ca453e4f4b6f28275cbb49cdbcd5b3ea55f7039e76",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-003.json",
+      "strict_sha256": "c67227fb7e7f21aed5a2f4378b51f609d2deb05b5a943e276b5022df445b8ee6",
+      "permissive_sha256": "5b2e2153d53a71d831531a11f3376ac252fd785ccc9ea29618bbf016c3b3b19b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": {
+        "step": 2,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-004.json",
+      "strict_sha256": "51cae06ac747e660302f129724558d80c65af50dd66d690141546d3b3ffd899c",
+      "permissive_sha256": "1d5b481e9329fbfb5dec555e3d37517272f1a594c98c5ecb1970f83967c4fa33",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-005.json",
+      "strict_sha256": "fffc27b47164a5a42be78b1b69b3e6ef8caf543072a0b2817b3d7114975e49ac",
+      "permissive_sha256": "75810e8bdc0f6181f5d30412d267ebb06c9a7798af4fbaf12614bcc879014308",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-006.json",
+      "strict_sha256": "843c963963e5208766cf0293497ddcabf4865b52f0e66e58b3eb57b57f98e51a",
+      "permissive_sha256": "85d977176fdbbdfe9a960b457069a1ed53f8032fade379e647844d832488264f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-007.json",
+      "strict_sha256": "954e962a08226e5f47043f2b1b05540cb5cce8ce88eeed287950e635594506b7",
+      "permissive_sha256": "d9c3ba9a75d534531d0d9eca17f3a0188aee7bd0b27a5aace25aaf8cf180baca",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-008.json",
+      "strict_sha256": "3ad904aefb69f9dffb4005e51bfcd416a9a8a571b483536d91cac80800be029a",
+      "permissive_sha256": "876a1a6b25b22dccc233a41c0c8208af91ac36c80943a8e3ae26aef4f0c6ecba",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "protocol_error_limit"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-009.json",
+      "strict_sha256": "8d26680da0231e97fd837ea9f99f48bc9b9209d9995572b8d0933c80d030a518",
+      "permissive_sha256": "ab2e91e2928cba6b414724144cc5790b7f3dc32e102757995777aecc19c01443",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-010.json",
+      "strict_sha256": "2b7a7abccaefc98e13b7952b19eb26191841040eef6232fd244cffdd238e0c8a",
+      "permissive_sha256": "5320aa094f3a29302ecc1a2d9310ff686718bc49ba3427de06141f9ce75c4155",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": {
+        "step": 2,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-011.json",
+      "strict_sha256": "bf3d2921cb0c0e4b1aa72315fcc7d5d7750d963bad74042cdd042ef24dd1995a",
+      "permissive_sha256": "8c7bd94f39a08cc424a22d4265461ad3063fc1b39d6269610b540a5677394055",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-012.json",
+      "strict_sha256": "37a2265bbcb632d4c1a410a2c204a4e3303564a0198d2d8497f0d5e8f7b3f5d2",
+      "permissive_sha256": "02a36cf62164570b7faea140371c16692dc296776aaba10a02acf110135ed6ac",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-013.json",
+      "strict_sha256": "feb9e85e015be79725b79da2954140a7e62d2b03285e6a46a1fcb690d65e0827",
+      "permissive_sha256": "a702c5bad51a347c229a9ec23ae12cbae1305c1f4555a0c1a43d99e2b53dddd2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-014.json",
+      "strict_sha256": "d72a980143913861d482bb19f333b4d3a44fe7288e4866ee3e404cfb398b7b87",
+      "permissive_sha256": "c5d3ad01ed8e0b923a0e4948a8d1ad021f381a60b6509a923882b5d0b1b84228",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-015.json",
+      "strict_sha256": "92ad1931e1b3b125cf21bb7a3740f20e9e079eccdfa9505896cf3d4efa5637ef",
+      "permissive_sha256": "dc335b5c5525526f6f5811c07e07b70bec43fc521662bdf6d886267cc5491ea1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-016.json",
+      "strict_sha256": "1916157e58bc5bd2bd8ad918b6b7cb28562706514df74696d4cbe920769f3993",
+      "permissive_sha256": "ca77760d6e9af95288c415424dbe490b8d67b9e5f114010fd92c2f6ee352880e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-017.json",
+      "strict_sha256": "39f5753152007c789b95ebc943f4904fcbf9b52fa3752c8e5e821e92d4a55d44",
+      "permissive_sha256": "8744b210efffed87c4a084a2d558dab3743ffcaa588678790eeab3622c93e71f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-018.json",
+      "strict_sha256": "6fa323081a415b492910ba589aecaa87975502c728e606b5d85bf694788cb45c",
+      "permissive_sha256": "68e6464aac281b7c45c0660b1673c55b4aeff01f25a64e7402cd279ed9a83950",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen25/shard-0/case-019.json",
+      "strict_sha256": "17c0f6536c371ed260457cd4a2c61f0589fd17bdd637e9ef40df365dd193c0f6",
+      "permissive_sha256": "a27fec7b826bc3af3bb444e15639db0c3ecd1f3a1f7f6ac600b82740b23eac8c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-000.json",
+      "strict_sha256": "3eba9eabb1ef434562c0d7a8b4956950084a7dfdc84c69a34b8cf47b3abcae80",
+      "permissive_sha256": "38124725784c44193f1fd78c2927d65a34205cb25438da5061b43071a1daf632",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-001.json",
+      "strict_sha256": "2def054d3e3a75b48da1aa3a0b2a6b61d4256bdf03f5244ba4619ce0310ed2ea",
+      "permissive_sha256": "c8a95fe726323167b265884bfd57ed7f61537a56a2e58c1b4efa80b526af82d3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-002.json",
+      "strict_sha256": "5d1f2d2d6085e7d5a8af0700ada41a74346bc658a6ba90b3d4262294c3b70d6d",
+      "permissive_sha256": "f70b4b3a1f476d6a83003f71dae2dd6e54b4716f4193e2bdd6518d981b2c67f2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-003.json",
+      "strict_sha256": "f35ea2f0f0f30ada5908555b23e0ff6f357a08d994d2904ff4088a68c484dad5",
+      "permissive_sha256": "739bb1b130a443ab67c95f4f1092e2c42e6c9c7592caf8f22c57ab542b2449d6",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-004.json",
+      "strict_sha256": "eea10e27b8a261cc076fcaea9ff4b34e17af9685df2f9db3c137ad6dfb25a3dc",
+      "permissive_sha256": "9848aae17e08517ba4eb4eb64eb026aaebafa7e1fb9383773fcd9c1f617b5682",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-005.json",
+      "strict_sha256": "03fd974236cdf6ce8dc4eaa8d7e46853ae9f13be516cb7323caedf45474e9d19",
+      "permissive_sha256": "9d2e116c9144dfed60063d4da583dc5538fd04b1ae7f827df86b68a632d88626",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-006.json",
+      "strict_sha256": "de8c4c1afdfb266b93077f473448cd92eca55f4bf52fcdbbc892f9c87d24fba6",
+      "permissive_sha256": "c9b7e6220f1096269e23979dcee8794e12fdcb00876a6b469590cc247e499659",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-007.json",
+      "strict_sha256": "4fc7b7eecd22d781755e24fb022e0426dd7e41089fa3300026fdf32c4b965b40",
+      "permissive_sha256": "b797f8ae931f84c5649318c8a188a7c006c2d3e2cafe318cfd02584f768dfd6d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-008.json",
+      "strict_sha256": "f64177422a93a6c6f594645838047f97edfe228ce04463d3b725ad7d083cc981",
+      "permissive_sha256": "025884531d67443f8f12187842573db7d53cc0f8e8c84a4b3e1ed439b60e6efe",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-009.json",
+      "strict_sha256": "d97681eb91985af7b30ee28a5ae67bbff2bdd4dd503eb949d04dabbe17a4ccc0",
+      "permissive_sha256": "7282fd3ef1906ac93c56f9d0d26195df5ea695ee423a86a028de5058563457b8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-010.json",
+      "strict_sha256": "c93a6b3af042d435d48ae5d06601002d29eec0356dc514aa887be3ee689bb46c",
+      "permissive_sha256": "1a58fa84c2e75c7ddc9246505afeb074b18c7c336fbe0663eefe9e01a8b38176",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-011.json",
+      "strict_sha256": "7ee2d92d96cdc059f9b4f2da0bcc6adf1f2bfcd4d7b1896d166dca28bd06cee8",
+      "permissive_sha256": "6ba71c6e2e348dccc3a2531950c680e0273764739d1bdb119621ba37d7f65f0c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-012.json",
+      "strict_sha256": "b977925d1f5b1bb8e99a5f14e6ce021c3d23eb4fb445f0e9695aeccbe8a46742",
+      "permissive_sha256": "f19b45e31f1c9291ea18ef934b49a977a56e416062dfbf0ec1cb9ac7a01d25a2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-013.json",
+      "strict_sha256": "84ae300b1d40bcbb02e4d1587790c65aa0852fc72d2f0b2a7f4ad52b9e797f50",
+      "permissive_sha256": "17baaf8f4450d4d53e05b4644c41dd79b2107a7d50291fc619c5ee9251ea9763",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-014.json",
+      "strict_sha256": "df14b4c651f31574f19d0975cb089b453c00b1272a4897cc8696ee96dced3252",
+      "permissive_sha256": "419aaab1475d7f48ea1e7c10999fe14314275972a7c425cfaf4df01cae8222a3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-015.json",
+      "strict_sha256": "fd6a0c5c1bcb11bd707b211f0e581b31508a2e7ade38b4ace0855c26e535e9a0",
+      "permissive_sha256": "ed17754c9a2dd5b6673128713098b138b7602d733f8075c70e701e15608d67ec",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-016.json",
+      "strict_sha256": "5214b8ee7f7a5bcf7b54a732b2d0c85199adf1ffe8de2120fb8c54e84cc4f6d8",
+      "permissive_sha256": "b75afce6d8663176575c7ff2da9a12cb22e789f64d0ba255bae152b6f4cb89be",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-017.json",
+      "strict_sha256": "6568099b2b04d93290281ff438f340275a357c5fcee411e1a58cecabd415c035",
+      "permissive_sha256": "dd603e7397e95a325cd0a7fc95609eb1b3ea442505bc36c2e85dd2cab7e91a1a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-018.json",
+      "strict_sha256": "6c567add83a52a9bd4d0973e3d4ea9f2527f44292fa61385776cfeac2ad517e8",
+      "permissive_sha256": "c0aaaf3e0a19c3c3e345612b0799363a2e26c58895b6471d66ae40f1beb400ac",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "book_publishing_company/original/qwen3/shard-0/case-019.json",
+      "strict_sha256": "ca022b1210993c0b573d571fcae1850f93d86467b6170a4fef91b4a58d04fcf2",
+      "permissive_sha256": "d8ce1d24dfdf2e53007a9d28af9e1fd7fc01e9ccdb18ec6149bd5836e39d5a5f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-000.json",
+      "strict_sha256": "a27123f68c402cfeba3db17539391e50bf51d31dde6357538f0bddda2d2752e5",
+      "permissive_sha256": "cd221dcb9e2d402ae5a0c0e899bed7af304107edcf85b54d830f0035a2ad5ab2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-001.json",
+      "strict_sha256": "3967b2230e337045f1849d2e3c4284c404f21d27ca9ffdb8469e15d755dbe0e1",
+      "permissive_sha256": "dae4ccc1fed80eeca01a75540c2b3e41f90b3977be8e95dc3abed57795ebba00",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-002.json",
+      "strict_sha256": "3531025df037c082e0801f8a7d8c13494a78bdeaab3b7465d1d56946e3dd1709",
+      "permissive_sha256": "2d802aba7a79f62afc92130d445b634fa5ffedef60c8da59c1c7633cb74814c9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-003.json",
+      "strict_sha256": "465f7b4098b25284f9783f102e8c87b08a67c492748206ae6b5897d7c3415285",
+      "permissive_sha256": "3d6f159e71e14ea44ad7304500fd6915023550ff7a1b4c9354d9aa816c49e0ae",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-004.json",
+      "strict_sha256": "05ed4faab2f1626599a11d31ed3f874fca3a2c164192c2dcf56f9eb50c9e3078",
+      "permissive_sha256": "84f5c6f06b797219856059fa0c77daa5827415665f03a23a510c8798f145b6c5",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-005.json",
+      "strict_sha256": "832a10a9b9af12e6b36059355408c32e63eb59d3fc0bb19d42f7a0dae1586fd9",
+      "permissive_sha256": "4cb1dfa7d6efb196bc697ac6b8960b9c96ca59adfc43fa2a88e1cb32e1d4e807",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-006.json",
+      "strict_sha256": "da8f91d246e839fd231c9076eccc2f94151179df3b1daff5dbbe2869bfcfe3f0",
+      "permissive_sha256": "c261c2154fbe4cbad7e9441a216685895a03b03152ab3bd75b623c13ec321e72",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-007.json",
+      "strict_sha256": "846a073dafe8785b56bd8d3326de877cd448ece1880c1bd25aa6ab8a6c5ea1c8",
+      "permissive_sha256": "e27c9747f95dd61e1327164f746a63a8bafa4d73f72b0605708e1a10bf5cdce9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-008.json",
+      "strict_sha256": "8582d535ee884c4e1744a6522e8f2fd1d1ae3cce258bbd1b588285e17170c8fd",
+      "permissive_sha256": "47d569e37e88ddeb2a1a4959c12210730e610595448b7410b69a4135cd188016",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-009.json",
+      "strict_sha256": "78046d0d8bfca554a5a8c0a29f042858d7d4240b59c3247b2c1421d4c40aabfa",
+      "permissive_sha256": "9b36a1671f0df1d663d2ff7afa62c575d34d57e1768ef0fee5e4f373674957f3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-010.json",
+      "strict_sha256": "fc45f67d185c3f3401255153fb66e4b45adbc2e24b4ec3818b641b01c4b4a83c",
+      "permissive_sha256": "160a55abf8b0b571f772b6cbe78b2d5400d53c200ae8c90f3f0c7ae5ecfbb468",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-011.json",
+      "strict_sha256": "d62a466fa82613d81e346884ec7ed0130dc48f3e914e2752963459fef36b14e0",
+      "permissive_sha256": "8ca4249ee927d5712514dd02b19068cc3c3d0d0be162f9c8954dfa80123a7b87",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-012.json",
+      "strict_sha256": "57927b211bc1df066713c738db59392d613b9a4e69ea2c21f951ab79221d589d",
+      "permissive_sha256": "07cd28586fff4416308524056860c11d71874c1d88480c581f2235ee3269dce6",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "protocol_error_limit"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-013.json",
+      "strict_sha256": "8a9cdd0f128f08d13072dfba51946a20b875d72196ad681bec00612841fc7e05",
+      "permissive_sha256": "4cd15a1e66e1db03aaec503330b3eb5d340cce9bb6c037a9092e7c82c69b745b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-014.json",
+      "strict_sha256": "83485fd822fea49df39d66ff463fd3731a70289de614819a50c6a2c9baec6d43",
+      "permissive_sha256": "94a8e71d133bf60cf72638b2f00fa534a3427852126a85774f1bc9bd22b18544",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-015.json",
+      "strict_sha256": "6aa197fd863b37593cc1b63bd305aeb04324d278d85008c8fdbdc9939abd719c",
+      "permissive_sha256": "479e03a70a5439f5e984dbd526fb9bb35a3adb8cc4286f08411b1b9e721e861a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-016.json",
+      "strict_sha256": "3b40b58dc476d0201a32f5131e090f273e38ea0260fb24912fe02ce85002d7bd",
+      "permissive_sha256": "734ad323b777a31f35760e628632b76cf1720c13f6251bf9fbf9a50d398a1d0c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-017.json",
+      "strict_sha256": "de8d1ecb6566eb1c0fbe04ff4ab1df1069183bd6260f2dcbb2ed2690fa42f23f",
+      "permissive_sha256": "1238150aa53c2ec208bcfbe8f1e4b0288458c8dc1702f78a0a4ab9324674be90",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-018.json",
+      "strict_sha256": "8d7f91958ddab6b158c54b3db075a83fc9806f12bb7070d097bd9ab1897a4962",
+      "permissive_sha256": "5068ad9bb0f1409cc65674148207e843097a6c7d11e7849128efb479fbbcf223",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen25/shard-0/case-019.json",
+      "strict_sha256": "e6b681e9c208e6201be012babf26692a4f8a28bb969be216abfbbd20c3144ef3",
+      "permissive_sha256": "d068ee00588ebc0383c50c3ab99f53e3b9f3fa8f02c72a78de0b44050d671197",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-000.json",
+      "strict_sha256": "50b0ea1dd85a288a450045de3d3cdf6ada2ca849a535b399b33decc9758645c3",
+      "permissive_sha256": "156016c07304ce21c9f05e51dbdd785c84213baa133f16b2dbcaaa8ae50a57c9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-001.json",
+      "strict_sha256": "d70ce39f7656934fc301b0c2bf355a570e94b1690daeedc7f41cd0d494176207",
+      "permissive_sha256": "0e252cc573e667e7a4f84f2327ec15a79ec1ad44a98ee40bf16a8513758dc19a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-002.json",
+      "strict_sha256": "85b7777e6773e05ab1b77235d67e937595e452cb4eca5d92e8b00d5c4682bd8d",
+      "permissive_sha256": "db1b3175451b150aa682764ac1034b0b7aa8e4ad04bea6d09d4c864c6f8cb258",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-003.json",
+      "strict_sha256": "84125bf9745a038884dfc28ad3d741901e8b2c024e6155cc7f3ecdd53f9abef3",
+      "permissive_sha256": "044030f6234919f8a2d0b896e098647453ccc92c844d87257776cf13363a87f4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-004.json",
+      "strict_sha256": "c3d14caae73b8c79f3564fe4bc96bef3a346677226eacb3680001281434b5251",
+      "permissive_sha256": "19e3c6c7d8c920e781ae80704d2224f53cbaf71058295d5311ca904b18bffa73",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-005.json",
+      "strict_sha256": "6399d4915e306182c269a0e4087c47137eec64f20662ddc93e9445879600ce1a",
+      "permissive_sha256": "fd8e2acd499c05c81511bc76c69392e5a61df943d7e715192ceebe93e5f491f4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-006.json",
+      "strict_sha256": "49c14ba38cfcd16f560e6647f296aaf1b0d09909a8a8dc4f6730a6bba63b710c",
+      "permissive_sha256": "78a0252e36d934250b12aa29620ba50e6268bda612dc0332cea4d3e7a167ceb2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-007.json",
+      "strict_sha256": "fc3d0e69f51b40208324e35ea7c901a035c0f860466ad59c6fe3c6d094e88c51",
+      "permissive_sha256": "5422c93a8863f2ec702aa9deee8bba1709ac2eacd24532fa4132da13899dfd63",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-008.json",
+      "strict_sha256": "1f7f1d9625e364a75f0fcca4ccc2442b504593fe9c736b0690f5bc23cee42399",
+      "permissive_sha256": "e69ef42da3f1c7e7db4383d23bd008f7baf0a45c93efff8ffb41505240b1bd58",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-009.json",
+      "strict_sha256": "4849dbcdfb8e82484567ebbae5ae665af88b9ed02f56eeee96b1369e628a720a",
+      "permissive_sha256": "7449cb8fcb8fb62b910918243d46e66346a0fd7a517de08bdc13ec005fb6ba0f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-010.json",
+      "strict_sha256": "7167df78dbb3cc5b083dc680a05cf6c583c6bda97ea0098205bf243784a52bd5",
+      "permissive_sha256": "e7139e655abddc3ad23fad340f20defe6906d7f9133f328311966a629b078514",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-011.json",
+      "strict_sha256": "9e32a19d46a957b138a427c38a2ada5e194d5392a43f5e120ed258873f749842",
+      "permissive_sha256": "e60bcd84817a688090f2ab1eed2af78edd2cde0641ab7aefeb141da76ada99d2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-012.json",
+      "strict_sha256": "868bdf30342b0b3b1f65c4f12b0f32c7e7f48f1ea0f899d95722ad443f14d843",
+      "permissive_sha256": "46f6f3eba0b3a71bd4c7c3caac1e4ea8bc2979bc751b071bf6090e35890f71d9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-013.json",
+      "strict_sha256": "152df48bd68782db5f3ebb0a109d6337ed16625c7fe509e78c1f2a8f1e6a141d",
+      "permissive_sha256": "15c72373ec4facd68908c6e5e9da9de8f2e448ff8527b6829e8f7074b9716c0a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-014.json",
+      "strict_sha256": "872aff3289a5601c72646b4e45c27a17e386e8fc5c516fe72cace1ecd2d5a26b",
+      "permissive_sha256": "a7de1f533887dcad86f9c693a1a4f1c7514aa86f2be2d7bd523dcbdbc408274f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-015.json",
+      "strict_sha256": "1da6d6a932b3bbd58436d1049cd87905060193ecc6c357fdd7bb3dd380d40871",
+      "permissive_sha256": "cdcc5617b76193919ab5baba558802f90ad3e9b430511409fc00b6bf6e819992",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-016.json",
+      "strict_sha256": "68d8db4e404122bb237ee38b7c9b60f2319cb32b4f4dd58189717d5ae58f3c10",
+      "permissive_sha256": "b4f497a94d7deba86da8c928b1ddf047213b1a6fe8c48e0d9e9b50023debc798",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-017.json",
+      "strict_sha256": "59b0458b5f84fbbac972e9e2450a6b3ddaf3811964b885d1eb1398cc9f3e785b",
+      "permissive_sha256": "6ec0a8321e69591b09f28e43c94cb1b7e371a2a27206e5b83c5921b7034616cc",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-018.json",
+      "strict_sha256": "3fa4e920cd9c10d28b18d325a9e265ef5411b7dd58d49b8ef5b8d7ef1b0d1de3",
+      "permissive_sha256": "aecdd010e56b4501eab1b791461812f47733504831472289250626ef4585f0f3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/coverage_check/qwen3/shard-0/case-019.json",
+      "strict_sha256": "b5aa6f301c7afdbee31ee0780afe1085bece313a2d74eba911fa0f7050e24250",
+      "permissive_sha256": "8508b02caf65f87fb3be43ac05c06c0c69e6546209c7295594dc0c66882ef765",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-000.json",
+      "strict_sha256": "f633e8ef060edf0863e08b976c331326d5028190a2f86dc1c7d5238bca16e46d",
+      "permissive_sha256": "18448c2d608611907e795cc73d55487103d6f0ba1b24ce662effc155f004d33e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-001.json",
+      "strict_sha256": "20ed9367046b6fab6abe7d7b8df747e6078ac33eb1ce70336eb9bdfbb6b17b75",
+      "permissive_sha256": "ba62211a0838279d880598262c66123d651787fa0fe7cc107da2ac0c80106e6a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-002.json",
+      "strict_sha256": "21c682fdb7b596113c134c6136361ae99837fe4c702cc3fed25a0513e06bfede",
+      "permissive_sha256": "9bea9b3286257b7ecbf2c91add50b09ec8139d8eca2f65f40ecc0739541a7072",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-003.json",
+      "strict_sha256": "bb53773a43f7505592a5689c3f6fad93e969f55c8b7f57b575a5a8c69182b8ba",
+      "permissive_sha256": "ab9cae64dd317d0e295e37696d0196fc2c8a4953abc8a8194c437385b20f92be",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-004.json",
+      "strict_sha256": "d1e07ce4d525dfdc134aa88e101d66dd91f5a3a4ce3b4e680a8c2dfc691d61c5",
+      "permissive_sha256": "194cfea171ec638903c2f805363a65a03f520498b282d181be362e73187032ad",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "protocol_error_limit"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-005.json",
+      "strict_sha256": "17b3f5616ef9284f4c77ff2fb97694850907fd4d91dfa6814b3d1620e36b7156",
+      "permissive_sha256": "3ef917bd79434206def5943889b2874a6694c961375825e10b648657e112f997",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-006.json",
+      "strict_sha256": "07adeff9191c35d11f066d0b289c292c79aeb06d58829be6abbf50d31ab72212",
+      "permissive_sha256": "b4eb055ed2d5c09cfcbbfd2b939a79dabc06d0128c90c8a9df4c10c1b7b80a0d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-007.json",
+      "strict_sha256": "e9c21d14cfcc15834f337043f84f19712d94487d5040a8dbdebe412d396f1d4e",
+      "permissive_sha256": "0ff363f7a7c37eca46995ed3e1f7118dec0e95bd5cd6fbd2d5ae8322d3064f13",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "tool_budget_exceeded"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-008.json",
+      "strict_sha256": "fa63a88b204a6c37a3c0fd4c1e4515409c9cc09cdc711cab560429f07a8ee8c6",
+      "permissive_sha256": "d6d2b4d0a0e8a844d88043caebff2546f5a7ff5db3201aa7bf4ec23ae50dc15c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-009.json",
+      "strict_sha256": "b02abee37dd1e996aa8084fcef58c351647ed56e392fda0b7d9cd7016187ad47",
+      "permissive_sha256": "940fe0ff9e52cab9c67bf590673fb5758964c9a55af952a1c5293145c0c53a66",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-010.json",
+      "strict_sha256": "9d0c64b4b786365694c3ac8d2a9bca818d16b53df5d8bb32866145680e768ba0",
+      "permissive_sha256": "672ebe6c320ff8b5d766da6f23aa8efd16d2956d8c26fe74e60816d9688dbc03",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-011.json",
+      "strict_sha256": "e57f9539015a2a8d2f411cd9ea0e1c252fd7270ac9392788e44d172aee754ae0",
+      "permissive_sha256": "daf68c8e74b1d80720b68abce6196be8a15655c5024d34f3e636d0edf9481831",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-012.json",
+      "strict_sha256": "c3cfb1602f34a6277727225284a5a70dc163b78c1550a9bdcb08f17a8206c66e",
+      "permissive_sha256": "74c50b4dc6935e7f08674dcaaf92e10717119166067dfd84012aaa62ecb5e567",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 20,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "max_steps",
+      "permissive_termination": "max_steps"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-013.json",
+      "strict_sha256": "f4aac04f8ff6fc87c1d16979e08a22d518fbbb8f7f95b2b624035b86a5c6c5a9",
+      "permissive_sha256": "75c38e7b7262bc3edb14751d1a6aec07f4d8a9346bfc92d854b0f6fc1f08f469",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": {
+        "step": 4,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-014.json",
+      "strict_sha256": "e5494c846e9472fbbe87448537b06c0e53887d2112a69cf70702509df33eaa5a",
+      "permissive_sha256": "ea0daf4a6e68223400ee4d11dad282ef96bc4229c06969ba6bbd8a9e717e36cf",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-015.json",
+      "strict_sha256": "062546d0f5fb7509f00e0aba37719f709f52ecb568037877f06daf48a7b2063c",
+      "permissive_sha256": "9123e72c0997e12c7b5f0a5de12193ccab0386c0bcaef37e6446b31e36f9ab80",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-016.json",
+      "strict_sha256": "47f702b989d5bd0b836431d174e467651158560b822272839a4d0c067f7f6011",
+      "permissive_sha256": "ba766c1b885fd25874be3f13e323e13201920f6cda6bc5f8c30fdfa0da17a243",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-017.json",
+      "strict_sha256": "cd48ab2774ead8d1427402245be567bdbfc7fa7d29e425b07844247e6b4abff6",
+      "permissive_sha256": "d478a85427b6db90c726d1e96768e01a6a0e2e617eb77c488c9c3f99e13cde6a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-018.json",
+      "strict_sha256": "aa7573042a0bad63bc1a88be18184c19ede9a8fa07eb63980f1faba2f5e7b651",
+      "permissive_sha256": "3b2c83fb1ee0065cb7fde1c3a87c089e287b5e005bb93e93afe8dee831adc588",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen25/shard-0/case-019.json",
+      "strict_sha256": "bcaa4806ff808bdda2a6b19c245c8687072f2e9d3e2bfc18994b34b34d7a0595",
+      "permissive_sha256": "53d7bfc1898908c47588b95f3442e7213c0dacbad3ac10ce010fc84b745cac5f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-000.json",
+      "strict_sha256": "788e412ed7a4c1cd04aa5fd24d4de804006fab57099110352d2dc0abd56b5127",
+      "permissive_sha256": "57092fb3f0a630d7f31b949b8ffbb77a11babff28823e7939b66cccd8777d202",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 9,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-001.json",
+      "strict_sha256": "e6840d51576f1943067c2c1d44440f9863d9123059d2339470c21b9e8233e9ed",
+      "permissive_sha256": "7a6e9314057635dcb7889ae6349f465687e6f101c7e88efb8bb5fa55dde772c7",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-002.json",
+      "strict_sha256": "5c63cf35946b3b0092e75d352216f30b29c94b2de03904fbeed057679a8fe817",
+      "permissive_sha256": "6a82c3279364e5ffbbd87497183115a608e1b801b3eac0999942ccd13a1a22a6",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": {
+        "step": 3,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-003.json",
+      "strict_sha256": "615d706709d45c3b410083fcbefee5f6a5aadd817f6efb265641ba5b9a4cb473",
+      "permissive_sha256": "8c18b18253a0f5b2a1ea411647dd00583924b3f4ea82573600a284ed971c3d67",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-004.json",
+      "strict_sha256": "483a692fa4651e714be93d511fa2ff44bf4f0f8b83759c0f137e7590f8c75cc8",
+      "permissive_sha256": "f607cd0435df7c4f0a22da7cbfe6f43b865d1500a55c345b3d1993c2a03a4e24",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-005.json",
+      "strict_sha256": "0e69bf71dc18626df2d3e7fc267b24080d8a40d9de3dcff0163e84673f6cb4ea",
+      "permissive_sha256": "9e720517b93735fe6b0cb7aafabe6e6278238b4b38732c8edf97a0524f04ba0e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-006.json",
+      "strict_sha256": "e2d5453163314fbc68dbc72de7ed6def0a241b5493825430c2a895bccea66a44",
+      "permissive_sha256": "1cd95926439b550253b065106ac9c7eb0007c89089797e8812f76c8fe4b60ad6",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-007.json",
+      "strict_sha256": "531ed05328360f26ed2c93bbd9104056f133966a9c825bc6de0d26624516fca7",
+      "permissive_sha256": "05beb558f6a0c6ed6a641ef74f106966a3cb24ea0e35cdf11186aabf195f0324",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-008.json",
+      "strict_sha256": "9f67996a42339748ded230af2bc3d5481811ace329e92d5242961781eea22759",
+      "permissive_sha256": "d4a5dd364983e882a466f8d94eceb146d2430cc21598bc119c70ce6182bd836a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-009.json",
+      "strict_sha256": "65cc6494b7972c8190afc563ad002c403051e66993b6c3e021ad08fd99062cef",
+      "permissive_sha256": "1e13f938e7c5de9716755813517e47f8f906f747bcff41e1e8f868bccd92b1c9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-010.json",
+      "strict_sha256": "a554f745b3b3e28b7bbe4948fd0c8026ce1426899f033a0249cb50ccbb05a3f3",
+      "permissive_sha256": "8b344c9508eede7beb74228cce6306d37267d17b7d5513ac02aa3957ca4c5b68",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-011.json",
+      "strict_sha256": "dbc183282f00454612b103846f25e2b538e5798ca09d6ec49d1aa5d7f06cc4d9",
+      "permissive_sha256": "c270eb3d48055ed5f7caee56a1ec1b6780e242da97b69896a9ff13d300d8d06a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-012.json",
+      "strict_sha256": "af45deb898e6aa90206e22d6d7d2ac7b4406e6d14506e6ae4d02c40cc6a7c5c8",
+      "permissive_sha256": "8b86d8341e7da0c7b6d60acbcaa1827574669c9a229d44e6a946442df51f0ef3",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-013.json",
+      "strict_sha256": "c484198ff401640dfde4f1bc8a9bf91e687c54a5a7af7ae1f880c43b22fec7c3",
+      "permissive_sha256": "8e33900faf952e21618570f5b6fd2aff88cdb5e582683c71d54fc5661ce85db2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-014.json",
+      "strict_sha256": "5f3037c7c68d87c65fa4d32a2c050667b08539cff2a47c8a7d27c90d349de091",
+      "permissive_sha256": "0d2eb2648260684d0b13a209fdf7ea611185e25c77f53d3a6ee00b6b6f88f098",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-015.json",
+      "strict_sha256": "a79a14efde9f505dfdc1bbb4ba0edd0d2404be348f2ad7363bc85b1e4ddea474",
+      "permissive_sha256": "56e5486c2d7964eb811f74895ccc1d91cc81b2073a197ddfb2aef7f49f9b5401",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-016.json",
+      "strict_sha256": "0aeb2d49a3c2048187ea1c7f871f1a1cb0844382c9addd5c00bcb485d27a503a",
+      "permissive_sha256": "d1ef6009b160a1b53d4ffa9685504fe82714be41a368c9279153b0adff9a8d5b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-017.json",
+      "strict_sha256": "ea1c10790587eedc21131acb771c30aee5979b56d0caf82074cb48a81b952b96",
+      "permissive_sha256": "df7e9d698c955326dbad14e794476eeb1ab880a5a7c587cc40839b751bbb4f2d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-018.json",
+      "strict_sha256": "877bd0589a6a394766fa4428166fe710552d6e98b859117e5c14e6c20aa1028c",
+      "permissive_sha256": "5823243fa476f94682c820c52f7d1ac7c2aa797ba9318478bd463e67716928f7",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "cars/original/qwen3/shard-0/case-019.json",
+      "strict_sha256": "b3a8c7fdb5ffd36f98b64984012b04475125c84a24b64c9910991ed82217d4d0",
+      "permissive_sha256": "a40a2b17700b67dabf6831f25a6e6491021a6c0e082ea5adf2c21e91cf869dcb",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-000.json",
+      "strict_sha256": "7830a1e8578f7f9ce41d9efb96d948fe0563c39d405c550a4582f9c0ac64dfb8",
+      "permissive_sha256": "c7f849fa65690dc96c5d07b01d3435954d18c9fa37357825f979ffc1b53b8901",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-001.json",
+      "strict_sha256": "1dbbb9e5695ba5464a350814f8aec730e29f7981b75f351e51c3339a7d977c40",
+      "permissive_sha256": "233622f3179bdcecaea2e7fefa8a0c8a01c52c2ae3ed855b3d21e03d67f49386",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-002.json",
+      "strict_sha256": "e86e170616f4315a48f7fb1a68326d0772d57b84fcb7976938bb4c0cf66e2207",
+      "permissive_sha256": "cc7b1e4b675df7bc7e84ff875a92afec53158c8ccbe1d7afa32bd7218ab8b148",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-003.json",
+      "strict_sha256": "03ad3826d6a5a89d04726d503279d794f9fa86dd1d214d5e92acfcb473b27e44",
+      "permissive_sha256": "db9efee41cac72de97e9a70dbf591df776c8cd081e54b524f3e695bdb07cdaf8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-004.json",
+      "strict_sha256": "4281ab2f4e6f0a6d440c945a0889b7c0f51627d3d6ba1cd5005c7416186b3408",
+      "permissive_sha256": "aed14fc084f24e5e0d86018dfd4be92cf48aaa11c0a726216e4aacab7517fa32",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-005.json",
+      "strict_sha256": "9ebc7bde1f825fbcd8c6528499f65e40a60a8184e0dfa3fee69a9e3d64cbba7b",
+      "permissive_sha256": "ce4d20395c9ec17f26c33544f69db422b8fab52cf28d9f33638ee7ebc4b710c5",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-006.json",
+      "strict_sha256": "49cf5e1643b0a55b73bd4b1c36ff20b6219b0704882eb983ab1400e88b2ec581",
+      "permissive_sha256": "81113f1f2268b260005841a337ed83071a51c9709ebc8040616bb3594171ddd1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-007.json",
+      "strict_sha256": "9434052c07775ac27e272a83275cadd76f880d5ba606bf58d0556c4670f3d0e7",
+      "permissive_sha256": "d76aab28790bfca1d99d622e96566775247ba374d24b5a594b55ce678225053d",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-008.json",
+      "strict_sha256": "a5fffa726a686667eec4848800e64f2d33302443a8318bf828bc00a652e09aef",
+      "permissive_sha256": "4e83d6bdb581e8ac180de7afb057385dbe278643109ce707e5fbe4c2b946e67f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-009.json",
+      "strict_sha256": "21d7e0a82bd7dcc87a79fefa0f4a14265e499a30ce5176ec4b82eb982a6cec23",
+      "permissive_sha256": "725de87a2242910258039dca0051f3d1b22760fc437543272247daa393877af2",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-010.json",
+      "strict_sha256": "735e640c04d7fee308d788e4d599808407ce5d2ba33100d3abc33ac7a8d70d9d",
+      "permissive_sha256": "b30f4e00222252f4f31a8868d218b7559d98ce7214a0cf52d0227db2c6ef5aeb",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "protocol_error_limit",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-011.json",
+      "strict_sha256": "17399d9a205940017b0acc76b81bc1077b2c58766bbb4a537f126a91a58321ce",
+      "permissive_sha256": "bfe3a540e3439563934388d653aabdd23defff53f6f0d255136d1e1516dbd990",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-012.json",
+      "strict_sha256": "822d53b083f1108da9131d5941857b2b05ee585dcaf02ce1ed955d15901c2d8c",
+      "permissive_sha256": "82fdb34485fa619bdd88e9b4c3a38a9a65be784354a03b12f70143e417ebd42a",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-013.json",
+      "strict_sha256": "09fbcc81923c5245377b0c53f26bded1577de2eeb649eabf8339d7cb19b88a5e",
+      "permissive_sha256": "8cf8d0e2c61bf810232b3ab38eca825184971034391310ba779714b95de5fb8c",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-014.json",
+      "strict_sha256": "2efa59fbcb6717b778fd1f44ff68e9860f25ed21cabad5374abc28cfcc3ee5c4",
+      "permissive_sha256": "84e3a746178f6366621d11b962fe866a09f3de06a11837572b7515187c5f74cc",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-015.json",
+      "strict_sha256": "312739ea57a1ec5185451c7a6e0146bf4c5289df5bc31f4fd0f94402ddb9ec60",
+      "permissive_sha256": "7e0ba5631290f3059c726a3fec54b4fe576df9d08f3a77c6945ce1a918a961a8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-016.json",
+      "strict_sha256": "cfcb3ea9a826a353aba1686aae7125277d58b5bfda4b0c350772234f4b57461c",
+      "permissive_sha256": "c9674b50e3b2afc5e343f93d1db321214fd70d274bfdbd552391f104c146c874",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-017.json",
+      "strict_sha256": "fa7f417498c65c00ea670fcefa8f5f70a707f7e3aacd91a762e6622d28bb39b0",
+      "permissive_sha256": "f62fd66fad16b8d7ea637bf79b55727e0ed39df3296326283a3b149383218871",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-018.json",
+      "strict_sha256": "fdeda2ae3234ebdc6d997a710c1e5c59c771c66835c8e4155248d21b99f6c0d6",
+      "permissive_sha256": "4032a0c5f9d5c27d527dbefaf36eaa5e803fc573fd9ecd5ffbc7716d27754efe",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen25/shard-0/case-019.json",
+      "strict_sha256": "07af8bb93ea606f39dbe5cd785b5607995dea7bc3e1e2003399d58dc973b9b3b",
+      "permissive_sha256": "124c2478098bf50b0af7ff28ded314940ec2f8a4749ceffdef885a3a4204f0ac",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-000.json",
+      "strict_sha256": "63b99b7472bde70d15d07c7bfe0d44253cfe9e05dffbd66c8b7ad544c0f60b8f",
+      "permissive_sha256": "3b4c5aad57e80ef7a1d87561b1358675974f3c7e55daf418e6cdd345d335dbd9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-001.json",
+      "strict_sha256": "0a041a39d23b3f0098d3d9cf27f5de9d2ca781660f3ddc12ebee36c6763f6713",
+      "permissive_sha256": "bfa6b7ba9ddfe18d593544dc74c2fb36d00289445fcd1b9693491c1dd82de844",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-002.json",
+      "strict_sha256": "ff2414c00a0459030819883e683e493853c18781ed295209e08f0081e5a43dd9",
+      "permissive_sha256": "85d2ec821c770a1e416177561bb0021334f595fe81bf2c9830709e89ac6e3a9b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-003.json",
+      "strict_sha256": "023ca571af25cdbdf6dc72d9aebceb380e2cf0894f6f9d276f19c14e679c20d1",
+      "permissive_sha256": "41f33d78ca37e6f952b9f815706e990dadaad5586afcf3388e0dd2d750941f15",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-004.json",
+      "strict_sha256": "631459b3a2cae6cb3ad035e4110cf5fe00cb86fb505d6f11c6c92954308cc28d",
+      "permissive_sha256": "7c4baffc1f60c8e77cd6c967006a6014b024119bd22dc52e1032c8011326f81b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-005.json",
+      "strict_sha256": "9f7bb9ec39d83b6cdba838007d428b48f03352a505579a318386001c8ddd160f",
+      "permissive_sha256": "bd6ce74887feb939788d5ac87fb915e286e8fa2349886aaeec340cf4dd167049",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-006.json",
+      "strict_sha256": "fa9166d218e34f80f14d3b21570b2872409f1931c8a3ed295a0d983f909a4eea",
+      "permissive_sha256": "ae60883940d0da276e54b25e9ce58d30fc8609784afd833cd7d743c597de5847",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-007.json",
+      "strict_sha256": "df3518f967787bec9f6146ff14354d2ab2f66bcf7b4d0ea6f5bdbdc91805a96c",
+      "permissive_sha256": "3bd8a6be4faee965ce5fbe4229124de7de9f17d11595de80e17447cc394946ac",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-008.json",
+      "strict_sha256": "ec86a6b4cf67261663e76036c2180fc4ab04e4a8d860f31e8b472e30609e9e53",
+      "permissive_sha256": "8c74146381bf422da718052ce0887c76bf1a1cf843de01c60ee71ef090798e0b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-009.json",
+      "strict_sha256": "2bb71b9d9ced4cb821e8cc73aa1f55ca794b12e7aef6ed06b5321953a8d9ed2e",
+      "permissive_sha256": "9de57a78f6a98b54793d265b710fb0fe5552fa8de1f3cba2ae1ea14a1fae54d5",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-010.json",
+      "strict_sha256": "0dd09b1b681d8f13159e57b1b0cd548814a0afd567358c41cfcd6fc412e82ca5",
+      "permissive_sha256": "2236bf1d4a439401576e7e7e414ea2b8e2ddc4d68a1ae8bc403f8d00c39d3054",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-011.json",
+      "strict_sha256": "ed2663066d798018689695e4240bd6383743bb9a6daba0ce4d832282374292c6",
+      "permissive_sha256": "5f306df231ca0c5d6a2f560738d4f246ea4060dfad4c06c45bad9465ab393478",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-012.json",
+      "strict_sha256": "97170615cf5de753e3a31894c0cbf6ea394eefa90bfcfd693d08ccb48c34a680",
+      "permissive_sha256": "818c61b046dc5168e4b878fed4f9c91502d4ead3d684cb27198a46632228c601",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-013.json",
+      "strict_sha256": "4c822e985518264391ed5797de0e91c44272f0f670bb5b0f110701f44593ea80",
+      "permissive_sha256": "f8d2d0db021b90272d4ade76a3413f65db5f7db9aa133cdfb15e93f8dc331815",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-014.json",
+      "strict_sha256": "66fac329154b543d239c728adb90d191341d9f7e0763418c94219247fbd7290e",
+      "permissive_sha256": "6b027a29599c4d7a07b99a1ac74ed5fdba29c5abee8145a1b68021df416fe1e7",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-015.json",
+      "strict_sha256": "bf862dc9b2c55aba000f0996a260876d68fc4f92d6e221a86bbcbf558336ad0a",
+      "permissive_sha256": "f5e841adda8877a5f6f723fea5a44539be4974ffe7c2b767bfaccc1972e183d0",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-016.json",
+      "strict_sha256": "4764d27f0bb677d45197f16874dc1253b6eb3e09206b8ecfdda7b83d92b29416",
+      "permissive_sha256": "7f9076af744ac508c8993bd60be3093ce6ae21e12c82bfe48d74a7383882d4e1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-017.json",
+      "strict_sha256": "1e75573bc4a0c1deac513ddeb2b879f29a9e6b60b3c56a984f4cc8536d391c49",
+      "permissive_sha256": "98a37ab25fe48eb540832a98f8424cb20e6c64ecbb02d9ddbe5f947ee32085e9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-018.json",
+      "strict_sha256": "3ef153217c9033197d135b6e0c0961fd68d2c349c83b44b97dcc2eac3f2c1309",
+      "permissive_sha256": "9fada3496dc8c9ed3070b061e35a9fcebc2855bfef03b1fa764f9489e4a9c466",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/coverage_check/qwen3/shard-0/case-019.json",
+      "strict_sha256": "23c26643809134b08d459de2b9be025b2bab68ecba4ca2191d0893ebe277ad09",
+      "permissive_sha256": "40144952560903818ed378cb39ccefdcdc398ea07f68aa03236099aeb4ca42a4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-000.json",
+      "strict_sha256": "475a4880287aef1bfccccdc87c341c22f9df573ad14d38666ad239e97ab4727f",
+      "permissive_sha256": "e60880374ae3c7810fe5e61aa58c00f77e709f9fef05ab8afb769d0e0308a22e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": {
+        "step": 1,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-001.json",
+      "strict_sha256": "265044a3a1adb02ae9d631bec223a0c93cc16f92be6b71e06936f7c650ddebda",
+      "permissive_sha256": "96f42c50bc683a6038e8aa9b0e432abbad708668ff22ceec0d0d2fc56f62c17f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-002.json",
+      "strict_sha256": "7d074d315e26314d6ba95577852c30909b59892e600a036160587330c8cae625",
+      "permissive_sha256": "9d87ac77052b3ebad76086bd62aab7d167c6d67bde9240c7ff94ededf32cc347",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 6,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-003.json",
+      "strict_sha256": "4590473793ad798de9bb14fa9050f83645fe5e31107e9443b9fcf07dc472bacb",
+      "permissive_sha256": "e228f93c7b08cf894a3a53d016152adee57fe881fea7539093b8bb5de02307e5",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-004.json",
+      "strict_sha256": "af9bbfb76ae84fd9d91c275354acacb1892c6f43e34c02ab286b485792b0def7",
+      "permissive_sha256": "f35e802700fb17950526b411a66c73af6340c7e14fa1e62ca1c7ba46aac121ef",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-005.json",
+      "strict_sha256": "93021d5a77f7db6653a6a0eea0e444bdcec987954a0526822896fcb02027eec7",
+      "permissive_sha256": "dfc9c7a0e83e5c3d3e8e176fc9d99dc4983e957390dc5fdfee6f80276a3f12ec",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-006.json",
+      "strict_sha256": "305e57b0880a3aaba7101358206f6f9f066307679f0e703f97e43e977b56b900",
+      "permissive_sha256": "472cbeea199eed38e43abce15f8ccec9bddb0ee532c654896decbd8370ead460",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-007.json",
+      "strict_sha256": "7c71f6cbd88b7e1c147aca49607f979117accef3aeb1c1179588598f17b1a512",
+      "permissive_sha256": "0261a917ed50be1ae7313162dcb8fed015d6d0ff682eed6ea9f1ba0f78ce0e84",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 7,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-008.json",
+      "strict_sha256": "51fb867363102c7b6733ea83967043e040600e0c336ca53110f2a90d1eb1d616",
+      "permissive_sha256": "b6d1bba41fc98530013c81afa29395af6433106d8dab7e411d8697fadab967a4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-009.json",
+      "strict_sha256": "08ad9138d5abf4e536f5618d8e393ea31690dae53a00443aadb5447092625c34",
+      "permissive_sha256": "e384f71a3769fd881ea54fb1b7e88a734f1da7e9b18b59ef87140606a3892213",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-010.json",
+      "strict_sha256": "3c4f8fa770520818425aba4272b78afa0a9dbe5f150059f173bd47b7b7a09afc",
+      "permissive_sha256": "13b7233a00464069a04d98f5601b0973b4085604bdf5a91f0fe57b80c1e6c9e4",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-011.json",
+      "strict_sha256": "efc82d3b6e5679c0e7a6c40a79bbc5d4f18e303dbab387ce41cad93658d3926d",
+      "permissive_sha256": "1da481945deeb4e9a9d00f8c6c116adc762df7905c635bf3c437423e45fb8cd0",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-012.json",
+      "strict_sha256": "46b35524e3e972692497fc28855c71df3bb7a35b70390320ca95b93dcd4d7729",
+      "permissive_sha256": "a7fc69608c55c54a06b795ef1529e8fc0f968be7e89505ec086d6165e9b06565",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-013.json",
+      "strict_sha256": "ba0a7ba237e75301eea5ff75230b37aa8cec5ef14323e7d678fbf25c65f1d0e4",
+      "permissive_sha256": "b7464ab6f0f7488bf10b5b67aa39e8fed5fd50b24ce581f86bef8466e41779a8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-014.json",
+      "strict_sha256": "759a19b696cbe060112b3e1f5bb30d177cf7df1cd00b0427a8a7ff92f5f5642c",
+      "permissive_sha256": "367059fc9d2ffb8c4fa01984d815f9fcd5052931bae758cf0258057265080f5f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": {
+        "step": 3,
+        "type": "model_input_changed"
+      },
+      "final_text_equal": false,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-015.json",
+      "strict_sha256": "92741a2ab02089a67d3dc7a398de98ee3632c3972073bb35c1ce871b6ee0b9ae",
+      "permissive_sha256": "a444db4aca61a70ec9661bddbf89b6a645b68256c6249adda0f92bcaa6e1dd03",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-016.json",
+      "strict_sha256": "9925843bfea30b1b59da009f0cc0c9dfd250c1bdcb069545eaa425b1580cea4a",
+      "permissive_sha256": "d42da6af9aeb45e4d6958b880a420e0396335302e45fda2e18ffa8423e1239b1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-017.json",
+      "strict_sha256": "92ca1460e2fe4486bd4232a7e313595a5c307ce28649218eb6036d194ba07b79",
+      "permissive_sha256": "85d19a9d60941b8494e3e14068ce03a49fc8db7496ac0c169c4c417d49c7149b",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-018.json",
+      "strict_sha256": "d184b96261fcf8d0ffc272d35a14ee0c2e97286972fc93559d687be50f5226a2",
+      "permissive_sha256": "8e6f466f0469522f1fe658d6a96cc451ae7c080cc5c9a74803098ec34a4a0cb7",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen25/shard-0/case-019.json",
+      "strict_sha256": "1481e68f857c1fdbe3d340fd85ab6ce21f00a1282c32cc6ce0b28f92eea2dfeb",
+      "permissive_sha256": "1f487a411f13fb5321b0bde7e1864d767c251ec4b462cdd39daec47621f8a3be",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-000.json",
+      "strict_sha256": "562ecb85b0f752de6252e91699b3dbcf587eedab2c71a384617a9761b9ef6efb",
+      "permissive_sha256": "bcc694bde65402d550899a8814e9b5d71ab3c2a35b7aeb345ada1025fea471b1",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-001.json",
+      "strict_sha256": "27b28e8ba7190b9dab80105436faa48001c8b99979de21b5793ce33966751bf6",
+      "permissive_sha256": "b62c46ae384d9a787746cdd5ba7a111781d122f201512406c8cd6921b4b8ead6",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-002.json",
+      "strict_sha256": "30a5ce024cad4ecd9e4a75594dc2f8ec63fdb0833958bbb24ddc033814df09f7",
+      "permissive_sha256": "1df0ce340890bdfbacde752c72b96caa0d80d9e066ca07bac2b86d584eb26650",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-003.json",
+      "strict_sha256": "fe4794ad43bfe1ca9bdeb5214f961546aa60a0b32043ecc6431bbb7a422b14b4",
+      "permissive_sha256": "2ba14b4a106e5395b29dbbba5fdd575d14a496f91271ee96a81dac11e01f3554",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-004.json",
+      "strict_sha256": "96fe8b0e8124783ca2ef02337ea8f64bef7bd74542efda275701074ad288af2d",
+      "permissive_sha256": "aea19b59f675a795dca65a7e6fddf4ac64ac85ea8550d048255f6c33f42f5479",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-005.json",
+      "strict_sha256": "1ba2e7b9794bc1ab9c93efd42549434254f81a4f77fa6ca71caf1895dc4d7a7c",
+      "permissive_sha256": "d4788a3163b4096c8e0777620f9a5f74a32f7a0d1d1aee12c32d9f2200d7c494",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-006.json",
+      "strict_sha256": "533847abd2314360bf13e36172c91bd964494ad4444462da5237b343d3fcbf81",
+      "permissive_sha256": "3bcc6f36bd432ea5e9df71616954eb453e2adb8473655d7eb5fc03477f23fad9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-007.json",
+      "strict_sha256": "af8bc345c6d866473cbb5c2b11806f0ae0db1b418290ba251cd81fbd751f4669",
+      "permissive_sha256": "99e0610ad498920ab11a4e369c9ed49d5245177ff2b717af59592d43c1b9f78e",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-008.json",
+      "strict_sha256": "8f2e12f13f6397364f72150393f35521d6454fc3c89b0bd1e31d1552da81070c",
+      "permissive_sha256": "5a052cc78477a8dc8f660089b8d7a64d09889a295fc7ea91b9ed9a3876b4aeba",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 1,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-009.json",
+      "strict_sha256": "7c08db7ac7f98bafe595d906c6f21cb94374fea3d6bce7aa33bfc5c96604ff54",
+      "permissive_sha256": "55a150133d7f224962d15be49b298c667b2ea8df4d50f31b71fd10084fbec4e8",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-010.json",
+      "strict_sha256": "433936a5bc4435d07acff596c2ac548ae0651b79af322e88ee01a3b76e86d80e",
+      "permissive_sha256": "0217abd5f3cd5ffe54726a195e27aa36ee977751dd5efe0a0d7b59622bf6cdcd",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-011.json",
+      "strict_sha256": "b55eddeeb67065f7b69f1d06fcfc608e79e86d0af87b5dd470641f0d4bcf04d7",
+      "permissive_sha256": "a765a5dbb5eeaa6e411e178d2c87e4024636f76cdab6dae1f780223c0b2e14b6",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-012.json",
+      "strict_sha256": "aa968d7dbd6d357133cc4a5ecbf797eba0d8f44df73b0e7f185c62daba434a9c",
+      "permissive_sha256": "e58e0b467bca63e9b2528ddc3cef17e47b543285eec1910b0656cf10324225d9",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-013.json",
+      "strict_sha256": "9bfc4abb9a7b4e192893a71cef1eb16ced51017bc86c6688238b228129705417",
+      "permissive_sha256": "22a366aeb37b7c5068036e2b75294d4b7189b478870c0c71fe8528a6cf184540",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-014.json",
+      "strict_sha256": "5067324b13309317540abb64b1d547643a72434947340f3b42186eff84dcb20a",
+      "permissive_sha256": "58949e150be76f425919a336359a2208acf1cdd811db195a5f345e5c5496c920",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 4,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-015.json",
+      "strict_sha256": "db7c9df3dfccedacb402fb9bb50ddc3382d2fab39d12cc9c4d420cea302b563c",
+      "permissive_sha256": "ee7de835c13bd9485af9f34d0620ca9ab1d857b5a8b5c96cacc62a50b0a5ba96",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-016.json",
+      "strict_sha256": "6cb556a9fdbd6afff24f9e9bec9707a56ce345a31edcd12b03466a1cbc088d38",
+      "permissive_sha256": "c7519637e35162b7bc216fe57f573d9da8ae8fda2fb97ac0e4c3266554f6d8bf",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-017.json",
+      "strict_sha256": "5349f50af5b52f68fe0eedbed4c8f0f555b047f071c72fadfc775a6aaf19a837",
+      "permissive_sha256": "ab8fd26674eb755e26e63221760fdd07609ebc8cf453124e8ba868995d8b5e3f",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 2,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-018.json",
+      "strict_sha256": "0b97cb9d7fbd58b86a904fe5bfc07bdaa903acf868bed21cc11bb030b90d2f6d",
+      "permissive_sha256": "e9cdef19f77da60db43bc70b23412d0def6276a53c053d056a006550a49bb9bd",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 3,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    },
+    {
+      "source": "computer_student/original/qwen3/shard-0/case-019.json",
+      "strict_sha256": "c01c93712f50b1f0580a8f96620574de575c0706e3010ea3b3f1b7c4b2f80db6",
+      "permissive_sha256": "6277568a43c60c45aa91e225b7b89e572d407b6a4839124c5884cedb204e3cab",
+      "same_first_reply": true,
+      "identical_generation_prefix_length": 5,
+      "first_difference": null,
+      "final_text_equal": true,
+      "strict_termination": "agent_finished",
+      "permissive_termination": "agent_finished"
+    }
+  ],
+  "limits": "Tool-call IDs alone are omitted from logical-input comparison, following the actual tokenizer preflight. This is not a semantic answer score. First-input/source checks do not rule out numerical nondeterminism."
+}

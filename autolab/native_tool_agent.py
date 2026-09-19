@@ -1,5 +1,6 @@
-"""Qwen native tool-template adapter. Infrastructure, not a proposed research method."""
+"""Explicit native tool-template profiles; infrastructure, not a research method."""
 from dataclasses import asdict, dataclass
+from datetime import datetime
 import hashlib
 import json
 import re
@@ -36,23 +37,38 @@ def parse_calls(text):
     return calls
 
 
+def template_options(tools, profile="standard", template_date="2026-09-19"):
+    if profile == "standard":
+        return {"tools": tools}
+    if profile == "smollm3_no_think":
+        date = datetime.strptime(template_date, "%Y-%m-%d")
+        return {"xml_tools": [t["function"] for t in tools], "enable_thinking": False,
+                "strftime_now": date.strftime}
+    raise ValueError("Unsupported native template profile")
+
+
 class NativeTransformersModel(LocalTransformersModel):
-    def __init__(self, model_path, tool_prefix=False, max_input_tokens=None):
+    def __init__(self, model_path, tool_prefix=False, max_input_tokens=None,
+                 template_profile="standard", template_date="2026-09-19"):
+        template_options([], template_profile, template_date)
         super().__init__(model_path)
         self.tool_prefix = tool_prefix
         self.max_input_tokens = max_input_tokens
+        self.template_profile = template_profile
+        self.template_date = template_date
 
     def generate_tools(self, messages, tools, max_new_tokens):
         prefix = "<tool_call>\n" if self.tool_prefix else ""
+        options = template_options(tools, self.template_profile, self.template_date)
         if prefix:
             prompt = self.tokenizer.apply_chat_template(
-                messages, tools=tools, add_generation_prompt=True, tokenize=False)
+                messages, add_generation_prompt=True, tokenize=False, **options)
             tensors = self.tokenizer(prompt + prefix, add_special_tokens=False,
                                      return_tensors="pt")
         else:
             tensors = self.tokenizer.apply_chat_template(
-                messages, tools=tools, add_generation_prompt=True, tokenize=True,
-                return_tensors="pt", return_dict=True)
+                messages, add_generation_prompt=True, tokenize=True,
+                return_tensors="pt", return_dict=True, **options)
         n_input = tensors["input_ids"].shape[-1]
         limit = self.max_input_tokens
         if limit is not None and n_input > limit:

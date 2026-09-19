@@ -74,8 +74,8 @@ async def replay(prepared, database, raw, prior, warm, log):
     return {**metadata, 'preserved': True, 'calls_checked': len(observations), 'observation_sha256': digest}
 
 
-async def main():
-    candidate_path = ROOT / 'research/evidence/vakra_world_mutation_candidates_v1.json'
+async def main(candidate_path=None, output=None, summary_path=None):
+    candidate_path = candidate_path or ROOT / 'research/evidence/vakra_world_mutation_candidates_v1.json'
     candidates = json.loads(candidate_path.read_bytes())
     assert candidates['mutation_source_sha256'] == sha(ROOT / 'autolab/relational_mutations.py')
     prepared = ROOT / 'results/vakra-world-runtime-v3'
@@ -84,7 +84,7 @@ async def main():
     assert sha(database) == prep['database_sha256'] == candidates['database_sha256']
     for name, digest in prep['runtime_files'].items():
         assert sha(prepared / 'runtime' / name) == digest
-    output = ROOT / 'results/vakra-world-mutation-search-v1'
+    output = output or ROOT / 'results/vakra-world-mutation-search-v1'
     output.mkdir(exist_ok=False)
     changed_paths = {}
     for card in candidates['rows']:
@@ -148,7 +148,7 @@ async def main():
 
     sources = [p for p in sorted(raw_root.glob('*/*/shard-0/case-*.json'))
                if json.loads(p.read_bytes())['uuid'] in cards]
-    assert len(sources) == 40
+    assert len(sources) == 4 * len(cards)
     rows = await asyncio.gather(*(audit(p) for p in sources))
     assert sha(database) == candidates['database_sha256']
     for path, digest in changed_paths.values():
@@ -157,8 +157,10 @@ async def main():
         'script_sha256': sha(Path(__file__)), 'preparation_sha256': sha(prepared / 'preparation_manifest.json'),
         'episodes': len(rows), 'distinct_tasks': len(cards), 'mutant_databases': len(changed_paths),
         'statuses': dict(Counter(r['status'] for r in rows)), 'rows': rows,
-        'scope': 'Known development traces; two tasks excluded for non-unique-answer/ambiguity semantics before search. Up to eight pre-generated answer-changing candidates per task; stop at first witness per episode. Original replay is mandatory. All initial peek fields, ordered schemas and every target-episode tool response content/isError are compared exactly. Previous independent episodes may change, but are absent from the target model input. The finite grammar excludes keys, insertions and deletions; no witness is inconclusive. No model was rerun and natural-language interpretation remains evaluator supplied.'}
-    with (ROOT / 'research/evidence/vakra_world_mutation_search_v1.json').open('x', encoding='utf-8') as f:
+        'candidate_contract': candidates['scope'],
+        'scope': 'Known development traces; stop at first witness per episode. Original replay is mandatory. All initial peek fields, ordered schemas and every target-episode tool response content/isError are compared exactly. Previous independent episodes may change, but are absent from the target model input. No witness is inconclusive. No model was rerun and natural-language interpretation remains evaluator supplied.'}
+    summary_path = summary_path or ROOT / 'research/evidence/vakra_world_mutation_search_v1.json'
+    with summary_path.open('x', encoding='utf-8') as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     print(json.dumps({'complete': True, 'statuses': report['statuses']}), flush=True)
 

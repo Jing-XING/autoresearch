@@ -186,6 +186,8 @@ async def run(args):
         "selection": "fixed input order then stride, without outcome filtering",
         "max_steps": args.max_steps, "max_new_tokens": args.max_new_tokens,
         "call_policy": args.call_policy, "max_tool_calls": args.max_tool_calls or args.max_steps,
+        "template_profile": args.template_profile,
+        "template_date": args.template_date if args.template_profile == "smollm3_no_think" else None,
         "max_input_tokens": args.max_input_tokens,
         "instruction_condition": args.instruction_condition,
         "instruction_suffix": INSTRUCTION_CONDITIONS[args.instruction_condition],
@@ -198,7 +200,7 @@ async def run(args):
         "packages": {n: importlib.metadata.version(n) for n in
                      ("torch", "transformers", "mcp", "pandas", "numpy", "pydantic")},
         "model_files_sha256": {p.name: sha256_file(p) for p in sorted(args.model_path.iterdir())
-                                if p.is_file() and (p.suffix in (".json", ".safetensors") or p.name == "merges.txt")},
+                                if p.is_file() and (p.suffix in (".json", ".jinja", ".safetensors") or p.name == "merges.txt")},
         "adaptations": ["native Transformers generation replaces hosted LangGraph model",
                         "official system-prompt method loaded without API clients",
                         "initial public MCP switch registers startup getters; refresh schema per query",
@@ -208,7 +210,8 @@ async def run(args):
         manifest["adaptations"].append("all parsed calls validated for known names before sequential execution; arguments unmodified; explicit total tool-call budget")
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     model = NativeTransformersModel(args.model_path, tool_prefix=False,
-                                    max_input_tokens=args.max_input_tokens)
+                                    max_input_tokens=args.max_input_tokens,
+                                    template_profile=args.template_profile, template_date=args.template_date)
     params = StdioServerParameters(command=sys.executable,
         args=["-X", "utf8", "-m", "autolab.vakra_stdio", "--runtime", str(prepared / "runtime"),
               "--database", str(database), "--domain", prep["domain"]],
@@ -255,6 +258,8 @@ def main():
     p.add_argument("--max-input-tokens", type=int)
     p.add_argument("--call-policy", choices=("single", "sequential"), default="single")
     p.add_argument("--max-tool-calls", type=int)
+    p.add_argument("--template-profile", choices=("standard", "smollm3_no_think"), default="standard")
+    p.add_argument("--template-date", default="2026-09-19")
     p.add_argument("--instruction-condition", choices=tuple(INSTRUCTION_CONDITIONS), default="original")
     args = p.parse_args()
     if not 0 <= args.shard < args.shards or args.count < args.shards or min(args.max_steps, args.max_new_tokens) < 1:
