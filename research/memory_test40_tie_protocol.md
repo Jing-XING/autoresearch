@@ -55,3 +55,22 @@ to choose the prompt contrast or tie seed. Their public availability does not
 establish absence from model pretraining, nor does identity separation prove
 independent task families. Further modifications after these results would
 require a new experiment and could not reuse this batch as untouched evidence.
+
+## Analysis implementation before target outcomes
+
+`scripts/analyze_memory_tie_transfer.py` requires the complete 28-worker grid,
+the exact deployment archive and registration, all 560 registered statuses,
+official reward/termination agreement, unchanged task/model/runtime hashes,
+and the registered source choice in actual model-call records. It strips only
+the exact stored lesson and fixed wrapper from each first input, then compares
+the remaining policy/task messages and ordered tools across conditions and
+checkpoints. Errors stay in the denominator. It reports all three paired
+instruction contrasts separately, common-baseline contrasts, visible-ticket
+groups, source reuse and costs; it does not pool the three source choices as
+independent tasks or select the best choice after seeing results.
+
+On the already completed development artifacts, the first-input check matched
+all 80 full/boundary inputs to 40 no-memory controls and rejected all 80
+deliberately altered lesson strings. This checks the input-comparison routine
+on real previous records; the full new-grid analyzer has only been compiled
+and cannot be called validated on test40 results before those results exist.
