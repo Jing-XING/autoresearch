@@ -1,0 +1,3596 @@
+{
+  "purpose": "offline SQL audit candidates, not official scoring or corrected benchmark",
+  "model_answers_inspected": false,
+  "model_outcome_labels_used": false,
+  "input_sha256": {
+    "databases/computer_student/computer_student.sqlite": "617669575dff24ed08efacf95e05bb53347f2d895f053faa2dcbcd047b27a513",
+    "train/capability_1_bi_apis/input/computer_student.json": "2a31d8b18c211c17f8dd1b072402f4df63cbf6de12127ddf0ccf3da4468758bd",
+    "train/capability_1_bi_apis/output/computer_student.json": "6472ffbcf5006a90874bd6b5ef656875771739827c19f579e82f50742f2935e3",
+    "databases/cars/cars.sqlite": "0338e4d6f3c7bb90748b6a1971c0d18f301166b77f2ca9984c197a0f20d7f67e",
+    "train/capability_1_bi_apis/input/cars.json": "3131d40b3898e5fe62a2f7e0d6af61e57b7efd1f62195e11b387b111420ddc31",
+    "train/capability_1_bi_apis/output/cars.json": "4a0b1f56ff99a35e75646150f4d258722ca9f0683dee3e94d3c363b329c76c14",
+    "databases/book_publishing_company/book_publishing_company.sqlite": "b493a54214d7b224a6f2b9b22b0f651c98f0c345a91cdec10b94825d4d897f4d",
+    "train/capability_1_bi_apis/input/book_publishing_company.json": "bdc1105afa547bfd2d217bf69b675b3e753d556d3a24085a18459bde12ff466b",
+    "train/capability_1_bi_apis/output/book_publishing_company.json": "c17a2ee3c89e344b7e2f5346bcde4cd5b7078b250b4c76f906e9383ce7922759"
+  },
+  "cards": [
+    {
+      "domain": "computer_student",
+      "task_index": 0,
+      "uuid": "39a28b2592a2-333e7200668a",
+      "query": "How many professors are teaching course ID 18?",
+      "reference_answer": 6,
+      "sql": "SELECT COUNT(DISTINCT p_id) FROM taughtBy WHERE course_id=18",
+      "columns": [
+        "COUNT(DISTINCT p_id)"
+      ],
+      "rows": [
+        [
+          6
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 1,
+      "uuid": "39a28b2592a2-c089830d9f27",
+      "query": "List all the course IDs for professional or master/graduate courses.",
+      "reference_answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        23,
+        29,
+        32,
+        34,
+        35,
+        36,
+        39,
+        40,
+        46,
+        50,
+        54,
+        56,
+        61,
+        63,
+        64,
+        65,
+        66,
+        67,
+        71,
+        74,
+        76,
+        77,
+        79,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        91,
+        98,
+        101,
+        103,
+        108,
+        109,
+        114,
+        115,
+        116,
+        117,
+        119,
+        120,
+        121,
+        123,
+        129,
+        131,
+        132,
+        134,
+        135,
+        136,
+        138,
+        139,
+        141,
+        144,
+        149,
+        150,
+        152,
+        153,
+        155,
+        156,
+        158,
+        160,
+        162,
+        166,
+        167,
+        168,
+        169,
+        170,
+        172,
+        173
+      ],
+      "sql": "SELECT course_id FROM course WHERE courseLevel='Level_500' ORDER BY course_id",
+      "columns": [
+        "course_id"
+      ],
+      "rows": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          7
+        ],
+        [
+          9
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          19
+        ],
+        [
+          23
+        ],
+        [
+          29
+        ],
+        [
+          32
+        ],
+        [
+          34
+        ],
+        [
+          35
+        ],
+        [
+          36
+        ],
+        [
+          39
+        ],
+        [
+          40
+        ],
+        [
+          46
+        ],
+        [
+          50
+        ],
+        [
+          54
+        ],
+        [
+          56
+        ],
+        [
+          61
+        ],
+        [
+          63
+        ],
+        [
+          64
+        ],
+        [
+          65
+        ],
+        [
+          66
+        ],
+        [
+          67
+        ],
+        [
+          71
+        ],
+        [
+          74
+        ],
+        [
+          76
+        ],
+        [
+          77
+        ],
+        [
+          79
+        ],
+        [
+          83
+        ],
+        [
+          84
+        ],
+        [
+          85
+        ],
+        [
+          86
+        ],
+        [
+          87
+        ],
+        [
+          88
+        ],
+        [
+          91
+        ],
+        [
+          98
+        ],
+        [
+          101
+        ],
+        [
+          103
+        ],
+        [
+          108
+        ],
+        [
+          109
+        ],
+        [
+          114
+        ],
+        [
+          115
+        ],
+        [
+          116
+        ],
+        [
+          117
+        ],
+        [
+          119
+        ],
+        [
+          120
+        ],
+        [
+          121
+        ],
+        [
+          123
+        ],
+        [
+          129
+        ],
+        [
+          131
+        ],
+        [
+          132
+        ],
+        [
+          134
+        ],
+        [
+          135
+        ],
+        [
+          136
+        ],
+        [
+          138
+        ],
+        [
+          139
+        ],
+        [
+          141
+        ],
+        [
+          144
+        ],
+        [
+          149
+        ],
+        [
+          150
+        ],
+        [
+          152
+        ],
+        [
+          153
+        ],
+        [
+          155
+        ],
+        [
+          156
+        ],
+        [
+          158
+        ],
+        [
+          160
+        ],
+        [
+          162
+        ],
+        [
+          166
+        ],
+        [
+          167
+        ],
+        [
+          168
+        ],
+        [
+          169
+        ],
+        [
+          170
+        ],
+        [
+          172
+        ],
+        [
+          173
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 2,
+      "uuid": "39a28b2592a2-362f022268de",
+      "query": "How many courses are there for basic or medium undergraduate courses?",
+      "reference_answer": 8,
+      "sql": "SELECT COUNT(*) FROM course WHERE courseLevel='Level_300'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          8
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 3,
+      "uuid": "39a28b2592a2-43a91de74912",
+      "query": "Provide the ID of professors who are teaching high-level or harder undergraduate course.",
+      "reference_answer": [
+        297,
+        180,
+        22,
+        99,
+        79,
+        150,
+        211,
+        240,
+        407,
+        165,
+        331,
+        394,
+        290,
+        104,
+        124,
+        204,
+        255,
+        351,
+        171,
+        293,
+        415,
+        107,
+        213,
+        375,
+        64,
+        189,
+        248,
+        263,
+        5,
+        18,
+        166,
+        168,
+        189,
+        248,
+        150,
+        101,
+        201,
+        324,
+        331,
+        267,
+        98,
+        101,
+        180,
+        407,
+        394,
+        351,
+        324,
+        351,
+        351,
+        378,
+        351,
+        165,
+        150,
+        165,
+        211,
+        407,
+        351,
+        82,
+        179,
+        234,
+        235,
+        267,
+        290,
+        72,
+        342,
+        394,
+        394,
+        201,
+        298,
+        331,
+        351,
+        267
+      ],
+      "sql": "SELECT DISTINCT t.p_id FROM taughtBy t JOIN course c USING(course_id) JOIN person p ON p.p_id=t.p_id WHERE c.courseLevel='Level_400' AND p.professor=1 ORDER BY t.p_id",
+      "columns": [
+        "p_id"
+      ],
+      "rows": [
+        [
+          5
+        ],
+        [
+          22
+        ],
+        [
+          64
+        ],
+        [
+          72
+        ],
+        [
+          79
+        ],
+        [
+          82
+        ],
+        [
+          98
+        ],
+        [
+          101
+        ],
+        [
+          104
+        ],
+        [
+          107
+        ],
+        [
+          124
+        ],
+        [
+          150
+        ],
+        [
+          165
+        ],
+        [
+          166
+        ],
+        [
+          168
+        ],
+        [
+          171
+        ],
+        [
+          179
+        ],
+        [
+          180
+        ],
+        [
+          189
+        ],
+        [
+          201
+        ],
+        [
+          211
+        ],
+        [
+          213
+        ],
+        [
+          234
+        ],
+        [
+          235
+        ],
+        [
+          240
+        ],
+        [
+          248
+        ],
+        [
+          267
+        ],
+        [
+          290
+        ],
+        [
+          293
+        ],
+        [
+          297
+        ],
+        [
+          298
+        ],
+        [
+          324
+        ],
+        [
+          331
+        ],
+        [
+          342
+        ],
+        [
+          351
+        ],
+        [
+          375
+        ],
+        [
+          378
+        ],
+        [
+          394
+        ],
+        [
+          407
+        ],
+        [
+          415
+        ]
+      ],
+      "interpretation_note": "Professor flag 1 follows empirical binary indicator usage; released person.csv value_description conflicts with that usage. Alternative includes all teaching persons, as reference does. Duplicate IDs need not be repeated for an entity list.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT DISTINCT t.p_id FROM taughtBy t JOIN course c USING(course_id) WHERE c.courseLevel='Level_400' ORDER BY t.p_id",
+        "columns": [
+          "p_id"
+        ],
+        "rows": [
+          [
+            5
+          ],
+          [
+            18
+          ],
+          [
+            22
+          ],
+          [
+            64
+          ],
+          [
+            72
+          ],
+          [
+            79
+          ],
+          [
+            82
+          ],
+          [
+            98
+          ],
+          [
+            99
+          ],
+          [
+            101
+          ],
+          [
+            104
+          ],
+          [
+            107
+          ],
+          [
+            124
+          ],
+          [
+            150
+          ],
+          [
+            165
+          ],
+          [
+            166
+          ],
+          [
+            168
+          ],
+          [
+            171
+          ],
+          [
+            179
+          ],
+          [
+            180
+          ],
+          [
+            189
+          ],
+          [
+            201
+          ],
+          [
+            204
+          ],
+          [
+            211
+          ],
+          [
+            213
+          ],
+          [
+            234
+          ],
+          [
+            235
+          ],
+          [
+            240
+          ],
+          [
+            248
+          ],
+          [
+            255
+          ],
+          [
+            263
+          ],
+          [
+            267
+          ],
+          [
+            290
+          ],
+          [
+            293
+          ],
+          [
+            297
+          ],
+          [
+            298
+          ],
+          [
+            324
+          ],
+          [
+            331
+          ],
+          [
+            342
+          ],
+          [
+            351
+          ],
+          [
+            375
+          ],
+          [
+            378
+          ],
+          [
+            394
+          ],
+          [
+            407
+          ],
+          [
+            415
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 4,
+      "uuid": "39a28b2592a2-178d76a262a8",
+      "query": "What are the courses taught by the advisors who gave advice to student with ID 376?",
+      "reference_answer": 165,
+      "sql": "SELECT DISTINCT t.course_id FROM advisedBy a JOIN taughtBy t ON a.p_id_dummy=t.p_id WHERE a.p_id=376 ORDER BY t.course_id",
+      "columns": [
+        "course_id"
+      ],
+      "rows": [
+        [
+          4
+        ],
+        [
+          18
+        ],
+        [
+          23
+        ],
+        [
+          34
+        ],
+        [
+          48
+        ],
+        [
+          61
+        ],
+        [
+          151
+        ]
+      ],
+      "interpretation_note": "advisedBy.p_id_dummy is the advisor per official schema description. Reference instead filters student ID 141 despite query 376 and joins teaching to the student side.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 5,
+      "uuid": "39a28b2592a2-e88f2b619318",
+      "query": "Name the advisors for students in Year 3 of the program.",
+      "reference_answer": [
+        362,
+        280,
+        116,
+        320,
+        286,
+        418,
+        384,
+        348,
+        18,
+        362,
+        228,
+        309,
+        228,
+        228,
+        276,
+        384
+      ],
+      "sql": "SELECT DISTINCT a.p_id_dummy FROM advisedBy a JOIN person p ON a.p_id=p.p_id WHERE p.yearsInProgram='Year_3' ORDER BY a.p_id_dummy",
+      "columns": [
+        "p_id_dummy"
+      ],
+      "rows": [
+        [
+          5
+        ],
+        [
+          101
+        ],
+        [
+          124
+        ],
+        [
+          150
+        ],
+        [
+          171
+        ],
+        [
+          240
+        ],
+        [
+          324
+        ],
+        [
+          335
+        ],
+        [
+          342
+        ],
+        [
+          378
+        ],
+        [
+          393
+        ],
+        [
+          394
+        ],
+        [
+          407
+        ]
+      ],
+      "interpretation_note": "Question asks advisors; reference retrieves advisedBy.p_id (student side), not documented p_id_dummy (advisor). Names are unavailable, so IDs are the representable answer.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 6,
+      "uuid": "39a28b2592a2-839f3e3f08b0",
+      "query": "Which level of courses is taught by professor ID 297?",
+      "reference_answer": "Level_400",
+      "sql": "SELECT DISTINCT c.courseLevel FROM course c JOIN taughtBy t USING(course_id) WHERE t.p_id=297",
+      "columns": [
+        "courseLevel"
+      ],
+      "rows": [
+        [
+          "Level_400"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 7,
+      "uuid": "39a28b2592a2-b174a579b40a",
+      "query": "Who are the professors who gave advice to students in the 12th years of program?",
+      "reference_answer": [
+        101,
+        179,
+        234
+      ],
+      "sql": "SELECT DISTINCT a.p_id_dummy FROM advisedBy a JOIN person p ON a.p_id=p.p_id WHERE p.yearsInProgram='Year_12' ORDER BY a.p_id_dummy",
+      "columns": [
+        "p_id_dummy"
+      ],
+      "rows": [
+        [
+          101
+        ],
+        [
+          179
+        ],
+        [
+          234
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 8,
+      "uuid": "39a28b2592a2-dce48035fac7",
+      "query": "How many basic and medium undergraduate courses are there?",
+      "reference_answer": 8,
+      "sql": "SELECT COUNT(*) FROM course WHERE courseLevel='Level_300'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          8
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 9,
+      "uuid": "39a28b2592a2-dd1f0fd6952a",
+      "query": "How many people teaches course no.11?",
+      "reference_answer": 5,
+      "sql": "SELECT COUNT(DISTINCT p_id) FROM taughtBy WHERE course_id=11",
+      "columns": [
+        "COUNT(DISTINCT p_id)"
+      ],
+      "rows": [
+        [
+          5
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 10,
+      "uuid": "39a28b2592a2-e00e77fb7090",
+      "query": "How many teachers are faculty employees?",
+      "reference_answer": 3,
+      "sql": "SELECT COUNT(*) FROM person WHERE hasPosition='Faculty_eme'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          3
+        ]
+      ],
+      "interpretation_note": "Faculty employee maps to Faculty_eme only via the released glossary; ordinary faculty-member interpretation would differ.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 11,
+      "uuid": "39a28b2592a2-6b553ecfdd84",
+      "query": "How many basic or medium undergraduate courses are taught by a professor?",
+      "reference_answer": 27,
+      "sql": "SELECT COUNT(DISTINCT c.course_id) FROM course c JOIN taughtBy t USING(course_id) JOIN person p ON p.p_id=t.p_id WHERE c.courseLevel='Level_300' AND p.professor=1",
+      "columns": [
+        "COUNT(DISTINCT c.course_id)"
+      ],
+      "rows": [
+        [
+          7
+        ]
+      ],
+      "interpretation_note": "Distinct courses versus professor-course assignment rows. Reference counts rows (27); preserve both interpretations.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT COUNT(*) FROM course c JOIN taughtBy t USING(course_id) JOIN person p ON p.p_id=t.p_id WHERE c.courseLevel='Level_300' AND p.professor=1",
+        "columns": [
+          "COUNT(*)"
+        ],
+        "rows": [
+          [
+            27
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 12,
+      "uuid": "39a28b2592a2-a223bf6c44c0",
+      "query": "Please list the IDs of all the faculty employees who teaches a basic or medium undergraduate course.",
+      "reference_answer": 375,
+      "sql": "SELECT DISTINCT p.p_id FROM course c JOIN taughtBy t USING(course_id) JOIN person p ON p.p_id=t.p_id WHERE c.courseLevel='Level_300' AND p.hasPosition='Faculty_eme'",
+      "columns": [
+        "p_id"
+      ],
+      "rows": [
+        [
+          375
+        ]
+      ],
+      "interpretation_note": "Faculty employee maps to Faculty_eme via released glossary.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 13,
+      "uuid": "39a28b2592a2-69f4064c9895",
+      "query": "Is the teacher who teaches course no.9 a faculty member?",
+      "reference_answer": "Faculty",
+      "sql": "SELECT p.p_id,p.hasPosition FROM taughtBy t JOIN person p USING(p_id) WHERE t.course_id=9",
+      "columns": [
+        "p_id",
+        "hasPosition"
+      ],
+      "rows": [
+        [
+          235,
+          "Faculty"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 14,
+      "uuid": "39a28b2592a2-83098045c302",
+      "query": "Among the courses that are basic or medium undergraduate courses, how many of them are taught by a faculty member?",
+      "reference_answer": 27,
+      "sql": "SELECT COUNT(DISTINCT c.course_id) FROM course c JOIN taughtBy t USING(course_id) JOIN person p ON p.p_id=t.p_id WHERE c.courseLevel='Level_300' AND p.hasPosition!='0'",
+      "columns": [
+        "COUNT(DISTINCT c.course_id)"
+      ],
+      "rows": [
+        [
+          6
+        ]
+      ],
+      "interpretation_note": "Distinct courses taught by faculty versus reference professor-course assignment count; predicates also differ.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT COUNT(*) FROM course c JOIN taughtBy t USING(course_id) JOIN person p ON p.p_id=t.p_id WHERE c.courseLevel='Level_300' AND p.professor=1",
+        "columns": [
+          "COUNT(*)"
+        ],
+        "rows": [
+          [
+            27
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 15,
+      "uuid": "39a28b2592a2-0bf6f436491e",
+      "query": "For the professor who advised student no.6, please list the IDs of the courses he or she teaches.",
+      "reference_answer": 124,
+      "sql": "SELECT DISTINCT t.course_id FROM advisedBy a JOIN taughtBy t ON a.p_id_dummy=t.p_id WHERE a.p_id=6 ORDER BY t.course_id",
+      "columns": [
+        "course_id"
+      ],
+      "rows": [
+        [
+          27
+        ],
+        [
+          40
+        ],
+        [
+          66
+        ],
+        [
+          77
+        ],
+        [
+          104
+        ],
+        [
+          126
+        ],
+        [
+          137
+        ],
+        [
+          147
+        ]
+      ],
+      "interpretation_note": "Student 6 has multiple advisors in the database; question singular is misleading. Reference filters teaching-person ID 9 instead of the advisors of 6.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 16,
+      "uuid": "39a28b2592a2-55b68ffc5625",
+      "query": "In total, all the students in the 3rd year of their program are advised by how many professors?",
+      "reference_answer": 13,
+      "sql": "SELECT COUNT(DISTINCT a.p_id_dummy) FROM advisedBy a JOIN person p ON a.p_id=p.p_id WHERE p.yearsInProgram='Year_3'",
+      "columns": [
+        "COUNT(DISTINCT a.p_id_dummy)"
+      ],
+      "rows": [
+        [
+          13
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 17,
+      "uuid": "39a28b2592a2-6237d41221b2",
+      "query": "List down all the person IDs who taught course ID of 18.",
+      "reference_answer": [
+        107,
+        213,
+        290,
+        326,
+        373,
+        375
+      ],
+      "sql": "SELECT p_id FROM taughtBy WHERE course_id=18 ORDER BY p_id",
+      "columns": [
+        "p_id"
+      ],
+      "rows": [
+        [
+          107
+        ],
+        [
+          213
+        ],
+        [
+          290
+        ],
+        [
+          326
+        ],
+        [
+          373
+        ],
+        [
+          375
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 18,
+      "uuid": "39a28b2592a2-f6490a3e3217",
+      "query": "Describe the course level and list of person IDs who taught course ID of 147.",
+      "reference_answer": [
+        "Level_300",
+        165
+      ],
+      "sql": "SELECT c.courseLevel,t.p_id FROM course c JOIN taughtBy t USING(course_id) WHERE c.course_id=147 ORDER BY t.p_id",
+      "columns": [
+        "courseLevel",
+        "p_id"
+      ],
+      "rows": [
+        [
+          "Level_300",
+          52
+        ],
+        [
+          "Level_300",
+          57
+        ],
+        [
+          "Level_300",
+          165
+        ],
+        [
+          "Level_300",
+          201
+        ],
+        [
+          "Level_300",
+          324
+        ],
+        [
+          "Level_300",
+          331
+        ],
+        [
+          "Level_300",
+          364
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "computer_student",
+      "task_index": 19,
+      "uuid": "39a28b2592a2-6516ae4cda2f",
+      "query": "Find the professor ID and position in faculty who taught high-level undergraduate course of less than 10 in ID.",
+      "reference_answer": [
+        297,
+        "Faculty_eme"
+      ],
+      "sql": "SELECT DISTINCT p.p_id,p.hasPosition FROM person p JOIN taughtBy t USING(p_id) JOIN course c USING(course_id) WHERE c.courseLevel='Level_400' AND c.course_id<10 AND p.professor=1 ORDER BY p.p_id",
+      "columns": [
+        "p_id",
+        "hasPosition"
+      ],
+      "rows": [
+        [
+          297,
+          "Faculty_eme"
+        ]
+      ],
+      "interpretation_note": "High-level undergraduate is Level_400 per released glossary. Professor flag caveat as in task 3.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 0,
+      "uuid": "1f58b1e965af-4c0c5ef5f800",
+      "query": "Among the cars with 8 cylinders, what is the name of the one that's the most expensive?",
+      "reference_answer": "plymouth fury gran sedan",
+      "sql": "SELECT d.car_name FROM data d JOIN price p USING(ID) WHERE d.cylinders=8 AND p.price=(SELECT MAX(p2.price) FROM data d2 JOIN price p2 USING(ID) WHERE d2.cylinders=8)",
+      "columns": [
+        "car_name"
+      ],
+      "rows": [
+        [
+          "plymouth fury gran sedan"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 1,
+      "uuid": "1f58b1e965af-c8c0ee76f1fe",
+      "query": "Among the cars over 3000lbs, how many of them cost less than $30000?",
+      "reference_answer": 78,
+      "sql": "SELECT COUNT(*) FROM data d JOIN price p USING(ID) WHERE d.weight>3000 AND p.price<30000",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          78
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 2,
+      "uuid": "1f58b1e965af-49f2b72eddcb",
+      "query": "What is the acceleration of the most expensive car?",
+      "reference_answer": 14.5,
+      "sql": "SELECT d.acceleration FROM data d JOIN price p USING(ID) WHERE p.price=(SELECT MAX(price) FROM price)",
+      "columns": [
+        "acceleration"
+      ],
+      "rows": [
+        [
+          14.5
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 3,
+      "uuid": "1f58b1e965af-01d20bb1cfe7",
+      "query": "How much US dollars does a Ford Torino cost?",
+      "reference_answer": 20000.0,
+      "sql": "SELECT p.price FROM data d JOIN price p USING(ID) WHERE lower(d.car_name)='ford torino'",
+      "columns": [
+        "price"
+      ],
+      "rows": [
+        [
+          20000.0
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 4,
+      "uuid": "1f58b1e965af-02b30c2e311f",
+      "query": "What was the origin country of the car model ford torino produced in 1970?",
+      "reference_answer": "USA",
+      "sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE lower(d.car_name)='ford torino' AND pr.model_year=1970",
+      "columns": [
+        "country"
+      ],
+      "rows": [
+        [
+          "USA"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 5,
+      "uuid": "1f58b1e965af-1856a4298798",
+      "query": "Among the car models introduced in the market in 1970, how many of them have the USA as their origin country?",
+      "reference_answer": 45,
+      "sql": "SELECT COUNT(DISTINCT pr.ID) FROM production pr JOIN country c ON c.origin=pr.country WHERE pr.model_year=1970 AND c.country='USA'",
+      "columns": [
+        "COUNT(DISTINCT pr.ID)"
+      ],
+      "rows": [
+        [
+          45
+        ]
+      ],
+      "interpretation_note": "Count distinct car records versus production records; alternative preserves reference row count.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT COUNT(*) FROM production pr JOIN country c ON c.origin=pr.country WHERE pr.model_year=1970 AND c.country='USA'",
+        "columns": [
+          "COUNT(*)"
+        ],
+        "rows": [
+          [
+            45
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "cars",
+      "task_index": 6,
+      "uuid": "1f58b1e965af-8f8d0031e0a1",
+      "query": "Please list the names of all the car models whose origin country is the USA.",
+      "reference_answer": [
+        "chevrolet chevelle malibu",
+        "buick skylark 320",
+        "plymouth satellite",
+        "amc rebel sst",
+        "ford torino",
+        "ford galaxie 500",
+        "chevrolet impala",
+        "plymouth fury iii",
+        "pontiac catalina",
+        "amc ambassador dpl",
+        "dodge challenger se",
+        "plymouth 'cuda 340",
+        "chevrolet monte carlo",
+        "buick estate wagon (sw)",
+        "plymouth duster",
+        "amc hornet",
+        "ford maverick",
+        "amc gremlin",
+        "ford f250",
+        "chevy c20",
+        "dodge d200",
+        "hi 1200d",
+        "chevrolet vega 2300",
+        "ford pinto",
+        "plymouth satellite custom",
+        "ford torino 500",
+        "amc matador",
+        "pontiac catalina brougham",
+        "dodge monaco (sw)",
+        "ford country squire (sw)",
+        "pontiac safari (sw)",
+        "amc hornet sportabout (sw)",
+        "chevrolet vega (sw)",
+        "pontiac firebird",
+        "ford mustang",
+        "mercury capri 2000",
+        "plymouth cricket",
+        "dodge colt hardtop",
+        "chevrolet vega",
+        "ford pinto runabout",
+        "amc ambassador sst",
+        "mercury marquis",
+        "buick lesabre custom",
+        "oldsmobile delta 88 royale",
+        "chrysler newport royal",
+        "amc matador (sw)",
+        "chevrolet chevelle concours (sw)",
+        "ford gran torino (sw)",
+        "plymouth satellite custom (sw)",
+        "ford pinto (sw)",
+        "dodge colt (sw)",
+        "buick century 350",
+        "chevrolet malibu",
+        "ford gran torino",
+        "dodge coronet custom",
+        "mercury marquis brougham",
+        "chevrolet caprice classic",
+        "ford ltd",
+        "plymouth fury gran sedan",
+        "chrysler new yorker brougham",
+        "buick electra 225 custom",
+        "amc ambassador brougham",
+        "plymouth valiant",
+        "chevrolet nova custom",
+        "ford country",
+        "plymouth custom suburb",
+        "oldsmobile vista cruiser",
+        "mercury capri v6",
+        "chevrolet monte carlo s",
+        "pontiac grand prix",
+        "dodge dart custom",
+        "oldsmobile omega",
+        "chevrolet nova",
+        "chevrolet chevelle malibu classic",
+        "plymouth satellite sebring",
+        "buick century luxus (sw)",
+        "dodge coronet custom (sw)",
+        "dodge colt",
+        "plymouth valiant custom",
+        "mercury monarch",
+        "chevrolet bel air",
+        "plymouth grand fury",
+        "buick century",
+        "chevroelt chevelle malibu",
+        "plymouth fury",
+        "buick skyhawk",
+        "chevrolet monza 2+2",
+        "ford mustang ii",
+        "pontiac astro",
+        "amc pacer",
+        "capri ii",
+        "dodge coronet brougham",
+        "chevrolet chevette",
+        "chevrolet woody",
+        "dodge aspen se",
+        "ford granada ghia",
+        "pontiac ventura sj",
+        "amc pacer d/l",
+        "plymouth volare premier v8",
+        "cadillac seville",
+        "chevy c10",
+        "ford f108",
+        "dodge d100",
+        "buick opel isuzu deluxe",
+        "plymouth arrow gs",
+        "oldsmobile cutlass supreme",
+        "dodge monaco brougham",
+        "mercury cougar brougham",
+        "chevrolet concours",
+        "buick skylark",
+        "plymouth volare custom",
+        "ford granada",
+        "pontiac grand prix lj",
+        "chevrolet monte carlo landau",
+        "chrysler cordoba",
+        "ford thunderbird",
+        "pontiac sunbird coupe",
+        "ford mustang ii 2+2",
+        "dodge colt m/m",
+        "ford fiesta",
+        "oldsmobile cutlass salon brougham",
+        "dodge diplomat",
+        "mercury monarch ghia",
+        "pontiac phoenix lj",
+        "ford fairmont (auto)",
+        "ford fairmont (man)",
+        "plymouth volare",
+        "amc concord",
+        "buick century special",
+        "mercury zephyr",
+        "dodge aspen",
+        "amc concord d/l",
+        "buick regal sport coupe (turbo)",
+        "ford futura",
+        "dodge magnum xe",
+        "dodge omni",
+        "plymouth sapporo",
+        "oldsmobile starfire sx",
+        "pontiac lemans v6",
+        "mercury zephyr 6",
+        "ford fairmont 4",
+        "amc concord dl 6",
+        "dodge aspen 6",
+        "ford ltd landau",
+        "mercury grand marquis",
+        "dodge st. regis",
+        "chevrolet malibu classic (sw)",
+        "chrysler lebaron town @ country (sw)",
+        "dodge colt hatchback custom",
+        "amc spirit dl",
+        "cadillac eldorado",
+        "plymouth horizon",
+        "plymouth horizon tc3",
+        "buick skylark limited",
+        "chevrolet citation",
+        "oldsmobile omega brougham",
+        "pontiac phoenix",
+        "ford fairmont",
+        "ford mustang cobra",
+        "plymouth reliant",
+        "dodge aries wagon (sw)",
+        "plymouth champ",
+        "plymouth horizon 4",
+        "ford escort 4w",
+        "ford escort 2h",
+        "oldsmobile cutlass ls",
+        "ford granada gl",
+        "chrysler lebaron salon",
+        "chevrolet cavalier",
+        "chevrolet cavalier wagon",
+        "chevrolet cavalier 2-door",
+        "pontiac j2000 se hatchback",
+        "dodge aries se",
+        "ford fairmont futura",
+        "amc concord dl",
+        "plymouth horizon miser",
+        "mercury lynx l",
+        "buick century limited",
+        "oldsmobile cutlass ciera (diesel)",
+        "chrysler lebaron medallion",
+        "ford granada l",
+        "dodge charger 2.2",
+        "chevrolet camaro",
+        "ford mustang gl",
+        "dodge rampage",
+        "ford ranger",
+        "chevy s-10"
+      ],
+      "sql": "SELECT DISTINCT d.car_name FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE c.country='USA' ORDER BY d.car_name",
+      "columns": [
+        "car_name"
+      ],
+      "rows": [
+        [
+          "amc ambassador brougham"
+        ],
+        [
+          "amc ambassador dpl"
+        ],
+        [
+          "amc ambassador sst"
+        ],
+        [
+          "amc concord"
+        ],
+        [
+          "amc concord d/l"
+        ],
+        [
+          "amc concord dl"
+        ],
+        [
+          "amc concord dl 6"
+        ],
+        [
+          "amc gremlin"
+        ],
+        [
+          "amc hornet"
+        ],
+        [
+          "amc hornet sportabout (sw)"
+        ],
+        [
+          "amc matador"
+        ],
+        [
+          "amc matador (sw)"
+        ],
+        [
+          "amc pacer"
+        ],
+        [
+          "amc pacer d/l"
+        ],
+        [
+          "amc rebel sst"
+        ],
+        [
+          "amc spirit dl"
+        ],
+        [
+          "buick century"
+        ],
+        [
+          "buick century 350"
+        ],
+        [
+          "buick century limited"
+        ],
+        [
+          "buick century luxus (sw)"
+        ],
+        [
+          "buick century special"
+        ],
+        [
+          "buick electra 225 custom"
+        ],
+        [
+          "buick estate wagon (sw)"
+        ],
+        [
+          "buick lesabre custom"
+        ],
+        [
+          "buick opel isuzu deluxe"
+        ],
+        [
+          "buick regal sport coupe (turbo)"
+        ],
+        [
+          "buick skyhawk"
+        ],
+        [
+          "buick skylark"
+        ],
+        [
+          "buick skylark 320"
+        ],
+        [
+          "buick skylark limited"
+        ],
+        [
+          "cadillac eldorado"
+        ],
+        [
+          "cadillac seville"
+        ],
+        [
+          "capri ii"
+        ],
+        [
+          "chevroelt chevelle malibu"
+        ],
+        [
+          "chevrolet bel air"
+        ],
+        [
+          "chevrolet camaro"
+        ],
+        [
+          "chevrolet caprice classic"
+        ],
+        [
+          "chevrolet cavalier"
+        ],
+        [
+          "chevrolet cavalier 2-door"
+        ],
+        [
+          "chevrolet cavalier wagon"
+        ],
+        [
+          "chevrolet chevelle concours (sw)"
+        ],
+        [
+          "chevrolet chevelle malibu"
+        ],
+        [
+          "chevrolet chevelle malibu classic"
+        ],
+        [
+          "chevrolet chevette"
+        ],
+        [
+          "chevrolet citation"
+        ],
+        [
+          "chevrolet concours"
+        ],
+        [
+          "chevrolet impala"
+        ],
+        [
+          "chevrolet malibu"
+        ],
+        [
+          "chevrolet malibu classic (sw)"
+        ],
+        [
+          "chevrolet monte carlo"
+        ],
+        [
+          "chevrolet monte carlo landau"
+        ],
+        [
+          "chevrolet monte carlo s"
+        ],
+        [
+          "chevrolet monza 2+2"
+        ],
+        [
+          "chevrolet nova"
+        ],
+        [
+          "chevrolet nova custom"
+        ],
+        [
+          "chevrolet vega"
+        ],
+        [
+          "chevrolet vega (sw)"
+        ],
+        [
+          "chevrolet vega 2300"
+        ],
+        [
+          "chevrolet woody"
+        ],
+        [
+          "chevy c10"
+        ],
+        [
+          "chevy c20"
+        ],
+        [
+          "chevy s-10"
+        ],
+        [
+          "chrysler cordoba"
+        ],
+        [
+          "chrysler lebaron medallion"
+        ],
+        [
+          "chrysler lebaron salon"
+        ],
+        [
+          "chrysler lebaron town @ country (sw)"
+        ],
+        [
+          "chrysler new yorker brougham"
+        ],
+        [
+          "chrysler newport royal"
+        ],
+        [
+          "dodge aries se"
+        ],
+        [
+          "dodge aries wagon (sw)"
+        ],
+        [
+          "dodge aspen"
+        ],
+        [
+          "dodge aspen 6"
+        ],
+        [
+          "dodge aspen se"
+        ],
+        [
+          "dodge challenger se"
+        ],
+        [
+          "dodge charger 2.2"
+        ],
+        [
+          "dodge colt"
+        ],
+        [
+          "dodge colt (sw)"
+        ],
+        [
+          "dodge colt hardtop"
+        ],
+        [
+          "dodge colt hatchback custom"
+        ],
+        [
+          "dodge colt m/m"
+        ],
+        [
+          "dodge coronet brougham"
+        ],
+        [
+          "dodge coronet custom"
+        ],
+        [
+          "dodge coronet custom (sw)"
+        ],
+        [
+          "dodge d100"
+        ],
+        [
+          "dodge d200"
+        ],
+        [
+          "dodge dart custom"
+        ],
+        [
+          "dodge diplomat"
+        ],
+        [
+          "dodge magnum xe"
+        ],
+        [
+          "dodge monaco (sw)"
+        ],
+        [
+          "dodge monaco brougham"
+        ],
+        [
+          "dodge omni"
+        ],
+        [
+          "dodge rampage"
+        ],
+        [
+          "dodge st. regis"
+        ],
+        [
+          "ford country"
+        ],
+        [
+          "ford country squire (sw)"
+        ],
+        [
+          "ford escort 2h"
+        ],
+        [
+          "ford escort 4w"
+        ],
+        [
+          "ford f108"
+        ],
+        [
+          "ford f250"
+        ],
+        [
+          "ford fairmont"
+        ],
+        [
+          "ford fairmont (auto)"
+        ],
+        [
+          "ford fairmont (man)"
+        ],
+        [
+          "ford fairmont 4"
+        ],
+        [
+          "ford fairmont futura"
+        ],
+        [
+          "ford fiesta"
+        ],
+        [
+          "ford futura"
+        ],
+        [
+          "ford galaxie 500"
+        ],
+        [
+          "ford gran torino"
+        ],
+        [
+          "ford gran torino (sw)"
+        ],
+        [
+          "ford granada"
+        ],
+        [
+          "ford granada ghia"
+        ],
+        [
+          "ford granada gl"
+        ],
+        [
+          "ford granada l"
+        ],
+        [
+          "ford ltd"
+        ],
+        [
+          "ford ltd landau"
+        ],
+        [
+          "ford maverick"
+        ],
+        [
+          "ford mustang"
+        ],
+        [
+          "ford mustang cobra"
+        ],
+        [
+          "ford mustang gl"
+        ],
+        [
+          "ford mustang ii"
+        ],
+        [
+          "ford mustang ii 2+2"
+        ],
+        [
+          "ford pinto"
+        ],
+        [
+          "ford pinto (sw)"
+        ],
+        [
+          "ford pinto runabout"
+        ],
+        [
+          "ford ranger"
+        ],
+        [
+          "ford thunderbird"
+        ],
+        [
+          "ford torino"
+        ],
+        [
+          "ford torino 500"
+        ],
+        [
+          "hi 1200d"
+        ],
+        [
+          "mercury capri 2000"
+        ],
+        [
+          "mercury capri v6"
+        ],
+        [
+          "mercury cougar brougham"
+        ],
+        [
+          "mercury grand marquis"
+        ],
+        [
+          "mercury lynx l"
+        ],
+        [
+          "mercury marquis"
+        ],
+        [
+          "mercury marquis brougham"
+        ],
+        [
+          "mercury monarch"
+        ],
+        [
+          "mercury monarch ghia"
+        ],
+        [
+          "mercury zephyr"
+        ],
+        [
+          "mercury zephyr 6"
+        ],
+        [
+          "oldsmobile cutlass ciera (diesel)"
+        ],
+        [
+          "oldsmobile cutlass ls"
+        ],
+        [
+          "oldsmobile cutlass salon brougham"
+        ],
+        [
+          "oldsmobile cutlass supreme"
+        ],
+        [
+          "oldsmobile delta 88 royale"
+        ],
+        [
+          "oldsmobile omega"
+        ],
+        [
+          "oldsmobile omega brougham"
+        ],
+        [
+          "oldsmobile starfire sx"
+        ],
+        [
+          "oldsmobile vista cruiser"
+        ],
+        [
+          "plymouth 'cuda 340"
+        ],
+        [
+          "plymouth arrow gs"
+        ],
+        [
+          "plymouth champ"
+        ],
+        [
+          "plymouth cricket"
+        ],
+        [
+          "plymouth custom suburb"
+        ],
+        [
+          "plymouth duster"
+        ],
+        [
+          "plymouth fury"
+        ],
+        [
+          "plymouth fury gran sedan"
+        ],
+        [
+          "plymouth fury iii"
+        ],
+        [
+          "plymouth grand fury"
+        ],
+        [
+          "plymouth horizon"
+        ],
+        [
+          "plymouth horizon 4"
+        ],
+        [
+          "plymouth horizon miser"
+        ],
+        [
+          "plymouth horizon tc3"
+        ],
+        [
+          "plymouth reliant"
+        ],
+        [
+          "plymouth sapporo"
+        ],
+        [
+          "plymouth satellite"
+        ],
+        [
+          "plymouth satellite custom"
+        ],
+        [
+          "plymouth satellite custom (sw)"
+        ],
+        [
+          "plymouth satellite sebring"
+        ],
+        [
+          "plymouth valiant"
+        ],
+        [
+          "plymouth valiant custom"
+        ],
+        [
+          "plymouth volare"
+        ],
+        [
+          "plymouth volare custom"
+        ],
+        [
+          "plymouth volare premier v8"
+        ],
+        [
+          "pontiac astro"
+        ],
+        [
+          "pontiac catalina"
+        ],
+        [
+          "pontiac catalina brougham"
+        ],
+        [
+          "pontiac firebird"
+        ],
+        [
+          "pontiac grand prix"
+        ],
+        [
+          "pontiac grand prix lj"
+        ],
+        [
+          "pontiac j2000 se hatchback"
+        ],
+        [
+          "pontiac lemans v6"
+        ],
+        [
+          "pontiac phoenix"
+        ],
+        [
+          "pontiac phoenix lj"
+        ],
+        [
+          "pontiac safari (sw)"
+        ],
+        [
+          "pontiac sunbird coupe"
+        ],
+        [
+          "pontiac ventura sj"
+        ]
+      ],
+      "interpretation_note": "Exhaustive names; reference is long. Report output-token ceiling as a separate limitation, do not silently score a prefix as complete.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 7,
+      "uuid": "1f58b1e965af-a14daed69e42",
+      "query": "Please list the names of the top 3 most expensive cars.",
+      "reference_answer": [
+        "plymouth fury gran sedan",
+        "ford ltd landau",
+        "dodge colt"
+      ],
+      "sql": "SELECT d.car_name,p.price FROM data d JOIN price p USING(ID) ORDER BY p.price DESC,d.ID LIMIT 3",
+      "columns": [
+        "car_name",
+        "price"
+      ],
+      "rows": [
+        [
+          "plymouth fury gran sedan",
+          53745.93806
+        ],
+        [
+          "ford ltd landau",
+          52480.06755
+        ],
+        [
+          "dodge colt",
+          52035.83362
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 8,
+      "uuid": "1f58b1e965af-d8965b97188e",
+      "query": "Please list all the years in which the car model Chevrolet Impala was introduced in the market.",
+      "reference_answer": [
+        1970,
+        1971,
+        1972,
+        1973
+      ],
+      "sql": "SELECT DISTINCT pr.model_year FROM data d JOIN production pr USING(ID) WHERE lower(d.car_name)='chevrolet impala' ORDER BY pr.model_year",
+      "columns": [
+        "model_year"
+      ],
+      "rows": [
+        [
+          1970
+        ],
+        [
+          1971
+        ],
+        [
+          1972
+        ],
+        [
+          1973
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 9,
+      "uuid": "1f58b1e965af-7e6b6c110247",
+      "query": "Please list the weights of all the cars with the price over $40000.",
+      "reference_answer": [
+        4732,
+        3439,
+        4746,
+        2189,
+        4042,
+        4237,
+        2401,
+        2124,
+        1836,
+        4638,
+        3907,
+        4215,
+        3353,
+        3012,
+        1940,
+        2815,
+        3425,
+        2155,
+        2405,
+        2830,
+        3140,
+        2795,
+        3725,
+        1915,
+        3900,
+        2700,
+        2556,
+        2144,
+        2434,
+        2800,
+        2085,
+        2950,
+        2420,
+        2490,
+        2050,
+        1985,
+        2640,
+        2865,
+        2025,
+        2125,
+        2295,
+        2625
+      ],
+      "sql": "SELECT d.weight FROM data d JOIN price p USING(ID) WHERE p.price>40000 ORDER BY d.ID",
+      "columns": [
+        "weight"
+      ],
+      "rows": [
+        [
+          4732
+        ],
+        [
+          3439
+        ],
+        [
+          4746
+        ],
+        [
+          2189
+        ],
+        [
+          4042
+        ],
+        [
+          4237
+        ],
+        [
+          2401
+        ],
+        [
+          2124
+        ],
+        [
+          1836
+        ],
+        [
+          4638
+        ],
+        [
+          3907
+        ],
+        [
+          4215
+        ],
+        [
+          3353
+        ],
+        [
+          3012
+        ],
+        [
+          1940
+        ],
+        [
+          2815
+        ],
+        [
+          3425
+        ],
+        [
+          2155
+        ],
+        [
+          2405
+        ],
+        [
+          2830
+        ],
+        [
+          3140
+        ],
+        [
+          2795
+        ],
+        [
+          3725
+        ],
+        [
+          1915
+        ],
+        [
+          3900
+        ],
+        [
+          2700
+        ],
+        [
+          2556
+        ],
+        [
+          2144
+        ],
+        [
+          2434
+        ],
+        [
+          2800
+        ],
+        [
+          2085
+        ],
+        [
+          2950
+        ],
+        [
+          2420
+        ],
+        [
+          2490
+        ],
+        [
+          2050
+        ],
+        [
+          1985
+        ],
+        [
+          2640
+        ],
+        [
+          2865
+        ],
+        [
+          2025
+        ],
+        [
+          2125
+        ],
+        [
+          2295
+        ],
+        [
+          2625
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 10,
+      "uuid": "1f58b1e965af-f4c4d2aa8bd6",
+      "query": "What is the maximum acceleration of a car with price over $40000?",
+      "reference_answer": 21.7,
+      "sql": "SELECT MAX(d.acceleration) FROM data d JOIN price p USING(ID) WHERE p.price>40000",
+      "columns": [
+        "MAX(d.acceleration)"
+      ],
+      "rows": [
+        [
+          21.7
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 11,
+      "uuid": "1f58b1e965af-e5ab95182474",
+      "query": "What is the average price of cars with 8 cylinders?",
+      "reference_answer": 28982.184051757282,
+      "sql": "SELECT AVG(p.price) FROM data d JOIN price p USING(ID) WHERE d.cylinders=8",
+      "columns": [
+        "AVG(p.price)"
+      ],
+      "rows": [
+        [
+          28982.184051757282
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 12,
+      "uuid": "1f58b1e965af-90d36f78b725",
+      "query": "How many cars in the database are originated from Europe?",
+      "reference_answer": 102,
+      "sql": "SELECT COUNT(DISTINCT pr.ID) FROM production pr JOIN country c ON c.origin=pr.country WHERE c.country='Europe'",
+      "columns": [
+        "COUNT(DISTINCT pr.ID)"
+      ],
+      "rows": [
+        [
+          70
+        ]
+      ],
+      "interpretation_note": "Count distinct car records versus production records; the country table uses Europe as a category.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT COUNT(*) FROM production pr JOIN country c ON c.origin=pr.country WHERE c.country='Europe'",
+        "columns": [
+          "COUNT(*)"
+        ],
+        "rows": [
+          [
+            102
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "cars",
+      "task_index": 13,
+      "uuid": "1f58b1e965af-29698d7878a1",
+      "query": "Show the origin country of Chevrolet Malibu.",
+      "reference_answer": [
+        "USA",
+        "USA",
+        "USA",
+        "USA"
+      ],
+      "sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE lower(d.car_name)='chevrolet malibu'",
+      "columns": [
+        "country"
+      ],
+      "rows": [
+        [
+          "USA"
+        ]
+      ],
+      "interpretation_note": "Exact Chevrolet Malibu name versus substring family; retain both if they differ.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE lower(d.car_name) LIKE '%chevrolet malibu%'",
+        "columns": [
+          "country"
+        ],
+        "rows": [
+          [
+            "USA"
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "cars",
+      "task_index": 14,
+      "uuid": "1f58b1e965af-76785f95349f",
+      "query": "What are the miles per gallon of the most expensive car?",
+      "reference_answer": 14.0,
+      "sql": "SELECT d.mpg FROM data d JOIN price p USING(ID) WHERE p.price=(SELECT MAX(price) FROM price)",
+      "columns": [
+        "mpg"
+      ],
+      "rows": [
+        [
+          14.0
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 15,
+      "uuid": "1f58b1e965af-ecae01ec3f57",
+      "query": "Which is the origin country of the $44274.40748 car?",
+      "reference_answer": "USA",
+      "sql": "SELECT DISTINCT c.country FROM price p JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE ROUND(p.price,5)=44274.40748",
+      "columns": [
+        "country"
+      ],
+      "rows": [
+        [
+          "USA"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 16,
+      "uuid": "1f58b1e965af-1bff98ba02a8",
+      "query": "How much is the Volkswagen Dasher with 14.1 mph acceleration?",
+      "reference_answer": 20000.0,
+      "sql": "SELECT p.price FROM data d JOIN price p USING(ID) WHERE lower(d.car_name)='volkswagen dasher' AND d.acceleration=14.1",
+      "columns": [
+        "price"
+      ],
+      "rows": [
+        [
+          20000.0
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 17,
+      "uuid": "1f58b1e965af-a11c6689e23f",
+      "query": "Provide the engine displacement status of the $37443.85589 car.",
+      "reference_answer": 200.0,
+      "sql": "SELECT d.displacement FROM data d JOIN price p USING(ID) WHERE ROUND(p.price,5)=37443.85589",
+      "columns": [
+        "displacement"
+      ],
+      "rows": [
+        [
+          200.0
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 18,
+      "uuid": "1f58b1e965af-5f6e00f521b2",
+      "query": "When was the $32650.65157 car introduced to the market? State the year.",
+      "reference_answer": 80,
+      "sql": "SELECT d.model,pr.model_year FROM data d JOIN price p USING(ID) JOIN production pr USING(ID) WHERE ROUND(p.price,5)=32650.65157",
+      "columns": [
+        "model",
+        "model_year"
+      ],
+      "rows": [
+        [
+          80,
+          1980
+        ]
+      ],
+      "interpretation_note": "Reference returns two-digit data.model, query asks introduced year; retain production.model_year to diagnose any mismatch.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "cars",
+      "task_index": 19,
+      "uuid": "1f58b1e965af-c8f230c04d16",
+      "query": "State the origin country of the fastest car in the database.",
+      "reference_answer": "USA",
+      "sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE d.horsepower=(SELECT MAX(horsepower) FROM data)",
+      "columns": [
+        "country"
+      ],
+      "rows": [
+        [
+          "USA"
+        ]
+      ],
+      "interpretation_note": "Fastest is not directly measured. Reference uses maximum horsepower; minimum acceleration time is a different plausible proxy. No unique semantic gold is asserted.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT DISTINCT c.country FROM data d JOIN production pr USING(ID) JOIN country c ON c.origin=pr.country WHERE d.acceleration=(SELECT MIN(acceleration) FROM data)",
+        "columns": [
+          "country"
+        ],
+        "rows": [
+          [
+            "USA"
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 0,
+      "uuid": "5661cd917583-e6dd5c0c82b6",
+      "query": "What is the title with the most ordered quantity in year 1992?",
+      "reference_answer": "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+      "sql": "SELECT t.title,SUM(s.qty) AS total_qty FROM titles t JOIN sales s USING(title_id) WHERE strftime('%Y',s.ord_date)='1992' GROUP BY t.title_id,t.title ORDER BY total_qty DESC,t.title_id",
+      "columns": [
+        "title",
+        "total_qty"
+      ],
+      "rows": [
+        [
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          40
+        ],
+        [
+          "Fifty Years in Buckingham Palace Kitchens",
+          20
+        ],
+        [
+          "Sushi, Anyone?",
+          20
+        ]
+      ],
+      "interpretation_note": "Most ordered quantity may mean total orders per title or largest single order. Both interpretations are returned; first row(s) determine extremum.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT t.title,s.qty FROM titles t JOIN sales s USING(title_id) WHERE strftime('%Y',s.ord_date)='1992' ORDER BY s.qty DESC,t.title_id",
+        "columns": [
+          "title",
+          "qty"
+        ],
+        "rows": [
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            40
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            20
+          ],
+          [
+            "Sushi, Anyone?",
+            20
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 1,
+      "uuid": "5661cd917583-a31f54d71ff8",
+      "query": "Among the titles with royalty percentage, which title has the greatest royalty percentage. State it's minimum range to enjoy this royalty percentage.",
+      "reference_answer": [
+        "Cooking with Computers: Surreptitious Balance Sheets",
+        28001
+      ],
+      "sql": "SELECT t.title,r.lorange,r.royalty FROM titles t JOIN roysched r USING(title_id) WHERE r.royalty=(SELECT MAX(royalty) FROM roysched) ORDER BY t.title_id,r.lorange",
+      "columns": [
+        "title",
+        "lorange",
+        "royalty"
+      ],
+      "rows": [
+        [
+          "Cooking with Computers: Surreptitious Balance Sheets",
+          28001,
+          24
+        ],
+        [
+          "You Can Combat Computer Stress!",
+          14001,
+          24
+        ],
+        [
+          "Straight Talk About Computers",
+          35001,
+          24
+        ],
+        [
+          "The Gourmet Microwave",
+          12001,
+          24
+        ],
+        [
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          14001,
+          24
+        ]
+      ],
+      "interpretation_note": "Report all tied maximum-royalty schedules and their lower range; reference chooses one row.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 2,
+      "uuid": "5661cd917583-be77953010d5",
+      "query": "Name all employees who were hired before year 1990.",
+      "reference_answer": [
+        [
+          "Carlos",
+          "Gary",
+          "Helen",
+          "Howard",
+          "Manuel",
+          "Margaret",
+          "Maria",
+          "Patricia",
+          "Philip",
+          "Timothy",
+          "Yoshi"
+        ],
+        [
+          "Hernadez",
+          "Thomas",
+          "Bennett",
+          "Snyder",
+          "Pereira",
+          "Smith",
+          "Pontes",
+          "McKenna",
+          "Cramer",
+          "O'Rourke",
+          "Latimer"
+        ]
+      ],
+      "sql": "SELECT fname,lname FROM employee WHERE hire_date<'1990-01-01' ORDER BY fname,lname",
+      "columns": [
+        "fname",
+        "lname"
+      ],
+      "rows": [
+        [
+          "Carlos",
+          "Hernadez"
+        ],
+        [
+          "Gary",
+          "Thomas"
+        ],
+        [
+          "Helen",
+          "Bennett"
+        ],
+        [
+          "Howard",
+          "Snyder"
+        ],
+        [
+          "Manuel",
+          "Pereira"
+        ],
+        [
+          "Margaret",
+          "Smith"
+        ],
+        [
+          "Maria",
+          "Pontes"
+        ],
+        [
+          "Patricia",
+          "McKenna"
+        ],
+        [
+          "Philip",
+          "Cramer"
+        ],
+        [
+          "Timothy",
+          "O'Rourke"
+        ],
+        [
+          "Yoshi",
+          "Latimer"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 3,
+      "uuid": "5661cd917583-dca022f3e041",
+      "query": "Which employee has the lowest job level. State the first name, last name and when he /she was hired.",
+      "reference_answer": [
+        "Yoshi",
+        "Latimer",
+        "1989-06-11 00:00:00.0"
+      ],
+      "sql": "SELECT fname,lname,hire_date FROM employee WHERE job_lvl=(SELECT MIN(job_lvl) FROM employee)",
+      "columns": [
+        "fname",
+        "lname",
+        "hire_date"
+      ],
+      "rows": [
+        [
+          "Yoshi",
+          "Latimer",
+          "1989-06-11 00:00:00.0"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 4,
+      "uuid": "5661cd917583-3c3392e57062",
+      "query": "Name the Chief Executive Officer and when he/she was hired.",
+      "reference_answer": [
+        "Francisco",
+        "Chang",
+        "1990-11-03 00:00:00.0"
+      ],
+      "sql": "SELECT e.fname,e.lname,e.hire_date FROM employee e JOIN jobs j USING(job_id) WHERE j.job_desc='Chief Executive Officer'",
+      "columns": [
+        "fname",
+        "lname",
+        "hire_date"
+      ],
+      "rows": [
+        [
+          "Philip",
+          "Cramer",
+          "1989-11-11 00:00:00.0"
+        ]
+      ],
+      "interpretation_note": "Query asks CEO; released reference explicitly filters CFO. SQL uses CEO.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 5,
+      "uuid": "5661cd917583-8bebb64d620f",
+      "query": "Name the title with the highest price published by 'Binnet & Hardley'.",
+      "reference_answer": "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+      "sql": "SELECT t.title,t.price FROM titles t JOIN publishers p USING(pub_id) WHERE p.pub_name='Binnet & Hardley' ORDER BY t.price DESC,t.title_id",
+      "columns": [
+        "title",
+        "price"
+      ],
+      "rows": [
+        [
+          "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+          21.59
+        ],
+        [
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          20.95
+        ],
+        [
+          "Silicon Valley Gastronomic Treats",
+          19.99
+        ],
+        [
+          "Sushi, Anyone?",
+          14.99
+        ],
+        [
+          "Fifty Years in Buckingham Palace Kitchens",
+          11.95
+        ],
+        [
+          "The Gourmet Microwave",
+          2.99
+        ],
+        [
+          "The Psychology of Computer Cooking",
+          null
+        ]
+      ],
+      "interpretation_note": "Full ordered rows retained for tie inspection; target is greatest price.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 6,
+      "uuid": "5661cd917583-3db42fe063eb",
+      "query": "Among all employees, who have job level greater than 200. State the employee name and job description.",
+      "reference_answer": [
+        [
+          "Carlos",
+          "Francisco",
+          "Matti",
+          "Maria",
+          "Philip"
+        ],
+        [
+          "Hernadez",
+          "Chang",
+          "Karttunen",
+          "Pontes",
+          "Cramer"
+        ],
+        [
+          "Publisher",
+          "Chief Financial Officier",
+          "Managing Editor",
+          "Publisher",
+          "Chief Executive Officer"
+        ]
+      ],
+      "sql": "SELECT e.fname,e.lname,j.job_desc FROM employee e JOIN jobs j USING(job_id) WHERE e.job_lvl>200 ORDER BY e.fname,e.lname",
+      "columns": [
+        "fname",
+        "lname",
+        "job_desc"
+      ],
+      "rows": [
+        [
+          "Carlos",
+          "Hernadez",
+          "Publisher"
+        ],
+        [
+          "Francisco",
+          "Chang",
+          "Chief Financial Officier"
+        ],
+        [
+          "Maria",
+          "Pontes",
+          "Publisher"
+        ],
+        [
+          "Matti",
+          "Karttunen",
+          "Managing Editor"
+        ],
+        [
+          "Philip",
+          "Cramer",
+          "Chief Executive Officer"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 7,
+      "uuid": "5661cd917583-4b2d539ed90b",
+      "query": "List all the titles and year to date sales by author who are not on contract.",
+      "reference_answer": [
+        [
+          "BU1032",
+          "BU1032",
+          "BU1111",
+          "BU1111",
+          "BU2075",
+          "BU7832",
+          "MC2222",
+          "MC3021",
+          "MC3021",
+          "PC1035",
+          "PC8888",
+          "PC8888",
+          "PC9999",
+          "PS1372",
+          "PS1372",
+          "PS2091",
+          "PS2091",
+          "PS2106",
+          "PS3333",
+          "PS7777",
+          "TC3218",
+          "TC4203",
+          "TC7777",
+          "TC7777",
+          "TC7777"
+        ],
+        [
+          4095.0,
+          4095.0,
+          3876.0,
+          3876.0,
+          18722.0,
+          4095.0,
+          2032.0,
+          22246.0,
+          22246.0,
+          8780.0,
+          4095.0,
+          4095.0,
+          null,
+          375.0,
+          375.0,
+          2045.0,
+          2045.0,
+          111.0,
+          4072.0,
+          3336.0,
+          375.0,
+          15096.0,
+          4095.0,
+          4095.0,
+          4095.0
+        ]
+      ],
+      "sql": "SELECT DISTINCT t.title_id,t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' ORDER BY t.title_id",
+      "columns": [
+        "title_id",
+        "title",
+        "ytd_sales"
+      ],
+      "rows": [
+        [
+          "BU1032",
+          "The Busy Executive's Database Guide",
+          4095
+        ],
+        [
+          "BU1111",
+          "Cooking with Computers: Surreptitious Balance Sheets",
+          3876
+        ],
+        [
+          "BU2075",
+          "You Can Combat Computer Stress!",
+          18722
+        ],
+        [
+          "BU7832",
+          "Straight Talk About Computers",
+          4095
+        ],
+        [
+          "MC2222",
+          "Silicon Valley Gastronomic Treats",
+          2032
+        ],
+        [
+          "MC3021",
+          "The Gourmet Microwave",
+          22246
+        ],
+        [
+          "PC1035",
+          "But Is It User Friendly?",
+          8780
+        ],
+        [
+          "PC8888",
+          "Secrets of Silicon Valley",
+          4095
+        ],
+        [
+          "PC9999",
+          "Net Etiquette",
+          null
+        ],
+        [
+          "PS1372",
+          "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+          375
+        ],
+        [
+          "PS2091",
+          "Is Anger the Enemy?",
+          2045
+        ],
+        [
+          "PS2106",
+          "Life Without Fear",
+          111
+        ],
+        [
+          "PS3333",
+          "Prolonged Data Deprivation: Four Case Studies",
+          4072
+        ],
+        [
+          "PS7777",
+          "Emotional Security: A New Algorithm",
+          3336
+        ],
+        [
+          "TC3218",
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          375
+        ],
+        [
+          "TC4203",
+          "Fifty Years in Buckingham Palace Kitchens",
+          15096
+        ],
+        [
+          "TC7777",
+          "Sushi, Anyone?",
+          4095
+        ]
+      ],
+      "interpretation_note": "Question requests titles; reference emits title IDs with duplicates from authorship join. Card includes ID/name/sales and deduplicates repeated title observations.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 8,
+      "uuid": "5661cd917583-0db47e6e47ec",
+      "query": "For all authors from CA who are not on contract, which title of his/hers has the most year to date sales.",
+      "reference_answer": "You Can Combat Computer Stress!",
+      "sql": "SELECT DISTINCT t.title,t.ytd_sales FROM titles t JOIN titleauthor ta USING(title_id) JOIN authors a USING(au_id) WHERE a.contract='0' AND a.state='CA' ORDER BY t.ytd_sales DESC,t.title",
+      "columns": [
+        "title",
+        "ytd_sales"
+      ],
+      "rows": [
+        [
+          "You Can Combat Computer Stress!",
+          18722
+        ],
+        [
+          "But Is It User Friendly?",
+          8780
+        ],
+        [
+          "Secrets of Silicon Valley",
+          4095
+        ],
+        [
+          "Straight Talk About Computers",
+          4095
+        ],
+        [
+          "Sushi, Anyone?",
+          4095
+        ],
+        [
+          "The Busy Executive's Database Guide",
+          4095
+        ],
+        [
+          "Prolonged Data Deprivation: Four Case Studies",
+          4072
+        ],
+        [
+          "Cooking with Computers: Surreptitious Balance Sheets",
+          3876
+        ],
+        [
+          "Emotional Security: A New Algorithm",
+          3336
+        ],
+        [
+          "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+          375
+        ],
+        [
+          "Net Etiquette",
+          null
+        ]
+      ],
+      "interpretation_note": "Full ordered candidates retained for tie inspection; target is greatest YTD sales.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 9,
+      "uuid": "5661cd917583-3f392d8766f8",
+      "query": "How many publishers are in the USA?",
+      "reference_answer": 6,
+      "sql": "SELECT COUNT(*) FROM publishers WHERE country='USA'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          6
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 10,
+      "uuid": "5661cd917583-b5246332ef10",
+      "query": "Please list the first names of the employees who work as Managing Editor.",
+      "reference_answer": [
+        "Annette",
+        "Diego",
+        "Matti",
+        "Victoria"
+      ],
+      "sql": "SELECT e.fname FROM employee e JOIN jobs j USING(job_id) WHERE j.job_desc='Managing Editor' ORDER BY e.fname",
+      "columns": [
+        "fname"
+      ],
+      "rows": [
+        [
+          "Annette"
+        ],
+        [
+          "Diego"
+        ],
+        [
+          "Matti"
+        ],
+        [
+          "Victoria"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 11,
+      "uuid": "5661cd917583-72dd7c7b022b",
+      "query": "What is the highest level of job to get to for the employee who got hired the earliest?",
+      "reference_answer": 100,
+      "sql": "SELECT e.fname,e.lname,j.max_lvl FROM employee e JOIN jobs j USING(job_id) WHERE e.hire_date=(SELECT MIN(hire_date) FROM employee)",
+      "columns": [
+        "fname",
+        "lname",
+        "max_lvl"
+      ],
+      "rows": [
+        [
+          "Timothy",
+          "O'Rourke",
+          100
+        ]
+      ],
+      "interpretation_note": "Highest achievable job level is jobs.max_lvl, not employee.job_lvl.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 12,
+      "uuid": "5661cd917583-e54b4404190f",
+      "query": "What is the price of the book that sells the best?",
+      "reference_answer": 10.95,
+      "sql": "SELECT t.title,t.price,SUM(s.qty) AS total_qty FROM titles t JOIN sales s USING(title_id) GROUP BY t.title_id,t.title,t.price ORDER BY total_qty DESC,t.title_id",
+      "columns": [
+        "title",
+        "price",
+        "total_qty"
+      ],
+      "rows": [
+        [
+          "Is Anger the Enemy?",
+          10.95,
+          108
+        ],
+        [
+          "Secrets of Silicon Valley",
+          20.0,
+          50
+        ],
+        [
+          "The Gourmet Microwave",
+          2.99,
+          40
+        ],
+        [
+          "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+          20.95,
+          40
+        ],
+        [
+          "You Can Combat Computer Stress!",
+          2.99,
+          35
+        ],
+        [
+          "But Is It User Friendly?",
+          22.95,
+          30
+        ],
+        [
+          "Cooking with Computers: Surreptitious Balance Sheets",
+          11.95,
+          25
+        ],
+        [
+          "Life Without Fear",
+          7.0,
+          25
+        ],
+        [
+          "Emotional Security: A New Algorithm",
+          7.99,
+          25
+        ],
+        [
+          "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+          21.59,
+          20
+        ],
+        [
+          "Fifty Years in Buckingham Palace Kitchens",
+          11.95,
+          20
+        ],
+        [
+          "Sushi, Anyone?",
+          14.99,
+          20
+        ],
+        [
+          "The Busy Executive's Database Guide",
+          19.99,
+          15
+        ],
+        [
+          "Straight Talk About Computers",
+          19.99,
+          15
+        ],
+        [
+          "Prolonged Data Deprivation: Four Case Studies",
+          19.99,
+          15
+        ],
+        [
+          "Silicon Valley Gastronomic Treats",
+          19.99,
+          10
+        ]
+      ],
+      "interpretation_note": "Bestselling may mean total sold per title or largest single order; reference uses latter. Both returned.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels",
+      "alternative": {
+        "sql": "SELECT t.title,t.price,s.qty FROM titles t JOIN sales s USING(title_id) ORDER BY s.qty DESC,t.title_id",
+        "columns": [
+          "title",
+          "price",
+          "qty"
+        ],
+        "rows": [
+          [
+            "Is Anger the Enemy?",
+            10.95,
+            75
+          ],
+          [
+            "Secrets of Silicon Valley",
+            20.0,
+            50
+          ],
+          [
+            "Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean",
+            20.95,
+            40
+          ],
+          [
+            "You Can Combat Computer Stress!",
+            2.99,
+            35
+          ],
+          [
+            "But Is It User Friendly?",
+            22.95,
+            30
+          ],
+          [
+            "Cooking with Computers: Surreptitious Balance Sheets",
+            11.95,
+            25
+          ],
+          [
+            "The Gourmet Microwave",
+            2.99,
+            25
+          ],
+          [
+            "Life Without Fear",
+            7.0,
+            25
+          ],
+          [
+            "Emotional Security: A New Algorithm",
+            7.99,
+            25
+          ],
+          [
+            "Computer Phobic AND Non-Phobic Individuals: Behavior Variations",
+            21.59,
+            20
+          ],
+          [
+            "Is Anger the Enemy?",
+            10.95,
+            20
+          ],
+          [
+            "Fifty Years in Buckingham Palace Kitchens",
+            11.95,
+            20
+          ],
+          [
+            "Sushi, Anyone?",
+            14.99,
+            20
+          ],
+          [
+            "Straight Talk About Computers",
+            19.99,
+            15
+          ],
+          [
+            "The Gourmet Microwave",
+            2.99,
+            15
+          ],
+          [
+            "Prolonged Data Deprivation: Four Case Studies",
+            19.99,
+            15
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            19.99,
+            10
+          ],
+          [
+            "Silicon Valley Gastronomic Treats",
+            19.99,
+            10
+          ],
+          [
+            "Is Anger the Enemy?",
+            10.95,
+            10
+          ],
+          [
+            "The Busy Executive's Database Guide",
+            19.99,
+            5
+          ],
+          [
+            "Is Anger the Enemy?",
+            10.95,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 13,
+      "uuid": "5661cd917583-7d126a36167d",
+      "query": "In which country is the publisher of the book \"Life Without Fear\" located?",
+      "reference_answer": "USA",
+      "sql": "SELECT DISTINCT p.country FROM titles t JOIN publishers p USING(pub_id) WHERE t.title='Life Without Fear'",
+      "columns": [
+        "country"
+      ],
+      "rows": [
+        [
+          "USA"
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 14,
+      "uuid": "5661cd917583-9feeef14823d",
+      "query": "What is the publisher that has published the most expensive book?",
+      "reference_answer": "Algodata Infosystems",
+      "sql": "SELECT p.pub_name,t.title,t.price FROM titles t JOIN publishers p USING(pub_id) WHERE t.price=(SELECT MAX(price) FROM titles)",
+      "columns": [
+        "pub_name",
+        "title",
+        "price"
+      ],
+      "rows": [
+        [
+          "Algodata Infosystems",
+          "But Is It User Friendly?",
+          22.95
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 15,
+      "uuid": "5661cd917583-f4b1684d51e2",
+      "query": "Among the publishers in the USA, how many of them have published books that are over $15?",
+      "reference_answer": 3,
+      "sql": "SELECT COUNT(DISTINCT p.pub_id) FROM publishers p JOIN titles t USING(pub_id) WHERE p.country='USA' AND t.price>15",
+      "columns": [
+        "COUNT(DISTINCT p.pub_id)"
+      ],
+      "rows": [
+        [
+          3
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 16,
+      "uuid": "5661cd917583-ce6d88e92649",
+      "query": "Which type of book had the most pre-paid amount?",
+      "reference_answer": "mod_cook",
+      "sql": "SELECT type,advance FROM titles WHERE advance=(SELECT MAX(advance) FROM titles)",
+      "columns": [
+        "type",
+        "advance"
+      ],
+      "rows": [
+        [
+          "mod_cook",
+          15000.0
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 17,
+      "uuid": "5661cd917583-c0f31ebdd78f",
+      "query": "What's the royalty for the bestseller book?",
+      "reference_answer": 24.0,
+      "sql": "SELECT title,royalty,ytd_sales FROM titles WHERE ytd_sales=(SELECT MAX(ytd_sales) FROM titles)",
+      "columns": [
+        "title",
+        "royalty",
+        "ytd_sales"
+      ],
+      "rows": [
+        [
+          "The Gourmet Microwave",
+          24,
+          22246
+        ]
+      ],
+      "interpretation_note": "Uses maximum ytd_sales, as reference; royalty is percentage in stored data.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 18,
+      "uuid": "5661cd917583-df184354abd3",
+      "query": "Which job level is O'Rourke at?",
+      "reference_answer": 100,
+      "sql": "SELECT fname,lname,job_lvl FROM employee WHERE lname='O''Rourke'",
+      "columns": [
+        "fname",
+        "lname",
+        "job_lvl"
+      ],
+      "rows": [
+        [
+          "Timothy",
+          "O'Rourke",
+          100
+        ]
+      ],
+      "interpretation_note": "Direct SQL interpretation; values refer to this fixed database, not current real-world facts.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    },
+    {
+      "domain": "book_publishing_company",
+      "task_index": 19,
+      "uuid": "5661cd917583-6bc4f635e23a",
+      "query": "Show me the employ id of the highest employee who doesn't have a middle name.",
+      "reference_answer": "F-C16315M",
+      "sql": "SELECT emp_id,job_lvl FROM employee WHERE (minit IS NULL OR minit='') ORDER BY job_lvl DESC,emp_id",
+      "columns": [
+        "emp_id",
+        "job_lvl"
+      ],
+      "rows": [
+        [
+          "F-C16315M",
+          227
+        ],
+        [
+          "A-R89858F",
+          152
+        ],
+        [
+          "R-M53550M",
+          150
+        ],
+        [
+          "M-L67958F",
+          135
+        ],
+        [
+          "L-B31947F",
+          120
+        ],
+        [
+          "M-P91209M",
+          101
+        ],
+        [
+          "A-C71970F",
+          87
+        ],
+        [
+          "M-R38834F",
+          75
+        ],
+        [
+          "H-B39728F",
+          35
+        ],
+        [
+          "Y-L77953M",
+          32
+        ]
+      ],
+      "interpretation_note": "Highest is interpreted as job_lvl. Missing middle initial includes NULL and empty string; all sorted rows retained to expose ties.",
+      "annotation_status": "candidate interpretation; review before assigning model answer labels"
+    }
+  ],
+  "global_notes": [
+    "Level_300/400/500 follow released course glossary.",
+    "Faculty_eme is called faculty employee by the released glossary.",
+    "The professor column glossary conflicts with observed binary indicator usage; related cards explicitly disclose this.",
+    "All 60 selected questions remain in execution counts. Ambiguity and reference disagreements cannot be silently dropped."
+  ]
+}

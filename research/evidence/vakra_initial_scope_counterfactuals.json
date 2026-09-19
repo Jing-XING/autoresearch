@@ -1,0 +1,142 @@
+{
+  "purpose": "task-local observation insufficiency witnesses, not model results",
+  "scope_condition": "Tools operate on the prescribed initial relation or its descendants; no cross-task universe switch, external database access or prior database knowledge.",
+  "important_limit": "The actual MCP get_data accepts other universe IDs. Therefore this is NOT a proof that the unrestricted live API makes these tasks impossible.",
+  "database_sha256": "617669575dff24ed08efacf95e05bb53347f2d895f053faa2dcbcd047b27a513",
+  "references_sha256": "6472ffbcf5006a90874bd6b5ef656875771739827c19f579e82f50742f2935e3",
+  "upstream_initializer_sha256": "b0243a353cb8854679900b8ad877b7170185f444dc241da0c51de2115405f900",
+  "rows": [
+    {
+      "uuid": "39a28b2592a2-178d76a262a8",
+      "query": "What are the courses taught by the advisors who gave advice to student with ID 376?",
+      "mutation_sql": "UPDATE taughtBy SET course_id=0 WHERE p_id=? AND course_id=?",
+      "mutation_parameters": [
+        107,
+        4
+      ],
+      "counterfactual_database_sha256": "2ba6e2884dd29b318c8bccb3020dbb9bb37cff398f68a2f4d9bd2b5479f120f4",
+      "initial_relation_equal": true,
+      "initial_relation_sha256": "e33490b4c4cb136b7c27b9d20959c7ccd88e0a6bad0489185d9e188e5e4c4c50",
+      "initial_relation_rows": 7,
+      "target_sql": "SELECT DISTINCT t.course_id FROM advisedBy a JOIN taughtBy t ON a.p_id_dummy=t.p_id WHERE a.p_id=? ORDER BY t.course_id",
+      "target_parameters": [
+        376
+      ],
+      "original_answer": [
+        [
+          4
+        ],
+        [
+          18
+        ],
+        [
+          23
+        ],
+        [
+          34
+        ],
+        [
+          48
+        ],
+        [
+          61
+        ],
+        [
+          151
+        ]
+      ],
+      "counterfactual_answer": [
+        [
+          0
+        ],
+        [
+          18
+        ],
+        [
+          23
+        ],
+        [
+          34
+        ],
+        [
+          48
+        ],
+        [
+          61
+        ],
+        [
+          151
+        ]
+      ]
+    },
+    {
+      "uuid": "39a28b2592a2-0bf6f436491e",
+      "query": "For the professor who advised student no.6, please list the IDs of the courses he or she teaches.",
+      "mutation_sql": "UPDATE taughtBy SET course_id=0 WHERE p_id=? AND course_id=?",
+      "mutation_parameters": [
+        165,
+        27
+      ],
+      "counterfactual_database_sha256": "de706a3086c80c87582df5bc45870954169cc58fbb9af61213371bcfdf7068fb",
+      "initial_relation_equal": true,
+      "initial_relation_sha256": "dd962e3456c9a4707aee443983eb0aca65392181e286e96ad5722fa7660874e6",
+      "initial_relation_rows": 7,
+      "target_sql": "SELECT DISTINCT t.course_id FROM advisedBy a JOIN taughtBy t ON a.p_id_dummy=t.p_id WHERE a.p_id=? ORDER BY t.course_id",
+      "target_parameters": [
+        6
+      ],
+      "original_answer": [
+        [
+          27
+        ],
+        [
+          40
+        ],
+        [
+          66
+        ],
+        [
+          77
+        ],
+        [
+          104
+        ],
+        [
+          126
+        ],
+        [
+          137
+        ],
+        [
+          147
+        ]
+      ],
+      "counterfactual_answer": [
+        [
+          0
+        ],
+        [
+          40
+        ],
+        [
+          66
+        ],
+        [
+          77
+        ],
+        [
+          104
+        ],
+        [
+          126
+        ],
+        [
+          137
+        ],
+        [
+          147
+        ]
+      ]
+    }
+  ]
+}

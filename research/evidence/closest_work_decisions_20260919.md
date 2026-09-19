@@ -98,3 +98,32 @@ also does not yet establish the pending-reply environment needed here.
 Decision: keep these three slots provisional. Do not manufacture independent
 papers by splitting a common reliability wrapper into multiple manuscripts.
 Their shared motivation is not evidence of distinct scientific contributions.
+
+## Benchmark attribution and judging: additional primary-source checks
+
+[ELT-Bench-Verified](https://arxiv.org/abs/2603.29399), abstract v2,
+already audits ambiguous tasks, incorrect references and rigid evaluators,
+combining automated diagnosis with human validation. Benchmark correction
+alone is not a new contribution for this project. We have read the abstract,
+not reproduced its auditor or its reported improvements.
+
+[AgentJudgeBench](https://arxiv.org/abs/2608.26623), abstract v1, studies
+tool-workflow judges with and without reference answers and reports that
+reference exposure can hurt alignment. Our separation of SQL interpretations
+from reference compatibility is a necessary measurement precaution; it must
+not be presented as discovering reference anchoring. We have not reproduced
+the paper's experiments.
+
+The official [Inside VAKRA analysis](https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis),
+Evaluation Framework section, already evaluates executed trajectories before
+judging final answers. It compares recovered information with reference tool
+outputs, uses an LLM for inconclusive equivalence, and checks grounding and
+answer consistency. Therefore it would be false to characterize VAKRA as
+answer-only evaluation or to claim that our passive ledger introduces its
+first grounding check. Our local qualitative scores remain distinct from
+that official pipeline, which we have not run.
+
+The two initial-relation counterfactuals are concrete diagnostic artifacts.
+Their restriction to a prescribed task-local universe is essential because
+the live API also permits universe switching. Neither these witnesses nor
+the elementary indistinguishability argument establish a new general theorem.

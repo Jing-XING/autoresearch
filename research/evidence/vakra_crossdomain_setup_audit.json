@@ -1,0 +1,133 @@
+{
+  "purpose": "frozen cross-domain selection and CPU compatibility; no model outcomes",
+  "all_selected_tasks_retained": true,
+  "registered_episodes": 240,
+  "domains": [
+    {
+      "domain": "computer_student",
+      "available_queries": 27,
+      "selected_task_ids": [
+        "39a28b2592a2-333e7200668a",
+        "39a28b2592a2-c089830d9f27",
+        "39a28b2592a2-362f022268de",
+        "39a28b2592a2-43a91de74912",
+        "39a28b2592a2-178d76a262a8",
+        "39a28b2592a2-e88f2b619318",
+        "39a28b2592a2-839f3e3f08b0",
+        "39a28b2592a2-b174a579b40a",
+        "39a28b2592a2-dce48035fac7",
+        "39a28b2592a2-dd1f0fd6952a",
+        "39a28b2592a2-e00e77fb7090",
+        "39a28b2592a2-6b553ecfdd84",
+        "39a28b2592a2-a223bf6c44c0",
+        "39a28b2592a2-69f4064c9895",
+        "39a28b2592a2-83098045c302",
+        "39a28b2592a2-0bf6f436491e",
+        "39a28b2592a2-55b68ffc5625",
+        "39a28b2592a2-6237d41221b2",
+        "39a28b2592a2-f6490a3e3217",
+        "39a28b2592a2-6516ae4cda2f"
+      ],
+      "registered_episodes": 80,
+      "preparation_sha256": "e411a829b9ac7fc6d2387a0f6ac0eff475e25ee3a1abd810e4f4ea20b051f284",
+      "audit_sha256": "60e3c51713cc33cdc033badbd8fa2eea0907bc04e59fe3eca10f60d50e3a5144",
+      "reference_audit_total": 27,
+      "reference_execution_errors_all": 7,
+      "selected_reference_errors": [
+        {
+          "uuid": "39a28b2592a2-dce48035fac7",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('39a28b2592a2-dce48035fac7'): ['course_id', 'courseLevel']"
+        },
+        {
+          "uuid": "39a28b2592a2-dd1f0fd6952a",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('39a28b2592a2-dd1f0fd6952a'): ['course_id', 'p_id']"
+        },
+        {
+          "uuid": "39a28b2592a2-e00e77fb7090",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('39a28b2592a2-e00e77fb7090'): ['p_id', 'professor', 'student', 'hasPosition', 'inPhase', 'yearsInProgram']"
+        },
+        {
+          "uuid": "39a28b2592a2-6b553ecfdd84",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('39a28b2592a2-6b553ecfdd84'): ['course_course_id', 'course_courseLevel', 'taughtBy_course_id', 'taughtBy_p_id', 'person_p_id', 'person_professor', 'person_student', 'person_hasPosition', 'person_inPhase', 'person_yearsInProgram']"
+        },
+        {
+          "uuid": "39a28b2592a2-83098045c302",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('39a28b2592a2-83098045c302'): ['course_course_id', 'course_courseLevel', 'taughtBy_course_id', 'taughtBy_p_id', 'person_p_id', 'person_professor', 'person_student', 'person_hasPosition', 'person_inPhase', 'person_yearsInProgram']"
+        }
+      ]
+    },
+    {
+      "domain": "cars",
+      "available_queries": 46,
+      "selected_task_ids": [
+        "1f58b1e965af-4c0c5ef5f800",
+        "1f58b1e965af-c8c0ee76f1fe",
+        "1f58b1e965af-49f2b72eddcb",
+        "1f58b1e965af-01d20bb1cfe7",
+        "1f58b1e965af-02b30c2e311f",
+        "1f58b1e965af-1856a4298798",
+        "1f58b1e965af-8f8d0031e0a1",
+        "1f58b1e965af-a14daed69e42",
+        "1f58b1e965af-d8965b97188e",
+        "1f58b1e965af-7e6b6c110247",
+        "1f58b1e965af-f4c4d2aa8bd6",
+        "1f58b1e965af-e5ab95182474",
+        "1f58b1e965af-90d36f78b725",
+        "1f58b1e965af-29698d7878a1",
+        "1f58b1e965af-76785f95349f",
+        "1f58b1e965af-ecae01ec3f57",
+        "1f58b1e965af-1bff98ba02a8",
+        "1f58b1e965af-a11c6689e23f",
+        "1f58b1e965af-5f6e00f521b2",
+        "1f58b1e965af-c8f230c04d16"
+      ],
+      "registered_episodes": 80,
+      "preparation_sha256": "0b0118dbd002c05ff545c9e771a290fae33cc2fc738e7170114c5a9f9a3a0e0e",
+      "audit_sha256": "efb98091e337d0adf165c077518b43353aa617a336e8f49c942f70d14638f386",
+      "reference_audit_total": 46,
+      "reference_execution_errors_all": 8,
+      "selected_reference_errors": [
+        {
+          "uuid": "1f58b1e965af-1856a4298798",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('1f58b1e965af-1856a4298798'): ['production_ID', 'production_model_year', 'production_country', 'country_origin', 'country_country']"
+        },
+        {
+          "uuid": "1f58b1e965af-90d36f78b725",
+          "error": "Invalid key_name ['']. Valid keys in current universe ('1f58b1e965af-90d36f78b725'): ['production_ID', 'production_model_year', 'production_country', 'country_origin', 'country_country']"
+        }
+      ]
+    },
+    {
+      "domain": "book_publishing_company",
+      "available_queries": 26,
+      "selected_task_ids": [
+        "5661cd917583-e6dd5c0c82b6",
+        "5661cd917583-a31f54d71ff8",
+        "5661cd917583-be77953010d5",
+        "5661cd917583-dca022f3e041",
+        "5661cd917583-3c3392e57062",
+        "5661cd917583-8bebb64d620f",
+        "5661cd917583-3db42fe063eb",
+        "5661cd917583-4b2d539ed90b",
+        "5661cd917583-0db47e6e47ec",
+        "5661cd917583-3f392d8766f8",
+        "5661cd917583-b5246332ef10",
+        "5661cd917583-72dd7c7b022b",
+        "5661cd917583-e54b4404190f",
+        "5661cd917583-7d126a36167d",
+        "5661cd917583-9feeef14823d",
+        "5661cd917583-f4b1684d51e2",
+        "5661cd917583-ce6d88e92649",
+        "5661cd917583-c0f31ebdd78f",
+        "5661cd917583-df184354abd3",
+        "5661cd917583-6bc4f635e23a"
+      ],
+      "registered_episodes": 80,
+      "preparation_sha256": "bfdd673f1fd786346ca934fb0ff88b3a04418714c5389f4f28c79a4e813cb518",
+      "audit_sha256": "84851f99f2dfbb55c8881c85c2ad3f6d5ed8c43061d3a6f070bfd901d0d03196",
+      "reference_audit_total": 26,
+      "reference_execution_errors_all": 0,
+      "selected_reference_errors": []
+    }
+  ]
+}
