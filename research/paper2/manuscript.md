@@ -4,38 +4,37 @@
 question from the historical proposal in this directory. Eight initial model
 episodes, 48 matched development episodes, 240 fixed-prompt replication
 episodes, 240 executor-sensitivity episodes, 240 third-model sensitivity
-episodes, 120 larger-checkpoint episodes and three completed domains
-(120 cookbook, 120 Disney and 60 genes episodes) of a registered expansion
+episodes, 120 larger-checkpoint episodes and a completed 420-episode
+registered expansion across four further databases
 support the present observations.
 A novel method and independently confirmed benefit are not established.
 
 ## Abstract
 
 Successful tool execution does not establish that an agent has enough evidence
-to answer a question. We study this distinction in relational tool interaction,
-separating execution validity, answer correctness and identification by the
-observed trace. A development study on public VAKRA tasks motivates a fixed
-coverage reminder. Across three additional small databases, its effects vary
-by domain: Qwen3 gains on cars but regresses on publishing. A matched
-240-episode executor control accepts sequential tool-call batches under the
-same total call budget. Qwen2.5 produces twelve additional final answers but
-only one net additional SQL-compatible answer; Qwen3's subtotal is unchanged.
-A separate 240-episode SmolLM3 study produces 221 final responses but only six
-SQL-compatible answers among 220 scored executions. On the same tasks,
-Qwen3-30B-A3B obtains 35/55 correct answers with the original prompt and
-38/55 with the reminder; the conditional paired interval includes zero.
-Full-transcript database
-replays provide two concrete examples in which a correct original answer is
-not identified by its observations under an explicit admissible intervention.
-One example retrieves every requested output value yet applies an incorrect
-predicate, showing why output coverage alone is insufficient. A bounded
-price-swap search adds no correct-answer witness. Task-paired resampling and
-leave-one-domain-out analysis limit aggregate prompt-benefit claims. The
-results support reporting execution, correctness and evidence sufficiency
-separately, with explicit limits on counterfactual admissibility and resource
-budgets. They are assistant-audited diagnostic results on public training
-tasks, not official benchmark scores or evidence of a new controller's
-superiority.
+to answer a question. We study public relational-tool tasks, separating
+execution validity, answer correctness and identification by the observed
+trace. A fixed coverage reminder has mixed domain effects. In a matched
+240-episode executor control, accepting sequential call batches gives
+Qwen2.5 twelve additional final answers but only one net additional correct
+answer under fixed SQL interpretations. A separate SmolLM3 study produces
+six correct answers among 220 scored executions. A larger Qwen3 checkpoint
+scores 35/55 versus 38/55 with the reminder on the known tasks.
+A prospective 420-episode expansion across four further databases yields
+original/reminder counts of 24/49 versus 20/49, 14/49 versus 15/49, and
+27/49 versus 29/49 across three checkpoints. All conditional paired
+intervals include zero; omitting Disney reverses both positive aggregate
+differences. Forty-three input-budget failures and incomplete requested lists
+further delimit interpretation. Full-transcript database replays provide two
+examples where a correct original answer is not identified under an explicit
+admissible intervention. One retrieves every requested output value yet
+applies an incorrect predicate. A bounded price-swap search adds no
+correct-answer witness. These results support reporting execution,
+correctness and evidence sufficiency separately, with explicit limits on
+counterfactual admissibility and resource budgets. They are diagnostic
+results on public training tasks, reviewed by one unblinded assistant;
+they establish neither official benchmark scores, population failure
+prevalence nor a new controller's superiority.
 
 ## 1. Introduction
 
@@ -559,8 +558,8 @@ The performance floor of SmolLM3 and the small number of databases motivate
 two separately registered extensions. Their design was fixed after the
 developmental results above; they are not retroactively described as part of
 the original study. The known-task checkpoint extension is complete; the
-prospective domain extension has two closed domain slices, while the full
-registered grid remains incomplete.
+prospective domain extension is also complete; its separately registered
+output-budget control remains pending.
 
 ### 10.1 A larger checkpoint on the known tasks
 
@@ -750,8 +749,8 @@ establishes neither a model success-rate gain nor general semantic sufficiency.
 All six Disney workers also completed the registered twenty-task grid. The
 120 raw records, six successful worker exits and sixty matched initial
 prompt pairs pass the same source, model and protocol checks as cookbook.
-This is the second closed domain slice, not a claim that all 420 registered
-executions have completed. Tasks 001 and 014 retain their pre-run popularity
+This slice was first analyzed before the complete grid closed; the final
+420-run analysis appears in section 10.9. Tasks 001 and 014 retain their pre-run popularity
 ambiguity labels, leaving eighteen scored tasks per arm.
 
 | Checkpoint | Original correct / scored | Reminder correct / scored | Paired gains / losses | Finals, original / reminder |
@@ -794,8 +793,8 @@ different response-level standard would change the reported counts.
 Disney therefore adds a negative Qwen3 comparison and positive Qwen2.5 and
 Qwen30B comparisons under both disclosed readings. Twenty tasks from one
 database, with a fixed eighteen-task denominator, do not establish a
-population prompt effect or identify its mechanism. Ice hockey and the
-separate output-budget control are not incorporated as completed results here.
+population prompt effect or identify its mechanism. The separate
+output-budget control is not incorporated as a completed result here.
 
 ### 10.7 Completed genes slice and scoring-floor limits
 
@@ -825,7 +824,87 @@ tasks at a common zero floor cannot establish equivalence between prompts,
 general ineffectiveness, or a population failure rate. The high pre-run
 ambiguity fraction further limits this domain's role in generalization.
 We retain this result without changing interpretations or replacing tasks
-after observing answers. The full registered expansion remains incomplete.
+after observing answers. The complete-grid comparison below retains these
+labels unchanged.
+
+### 10.8 Ice hockey: resource failures and complete-answer requirements
+
+The final six workers complete all 120 ice-hockey executions. The eight
+preidentified ambiguous questions remain outside answer accuracy, leaving
+twelve scored tasks per arm. All 120 complete final responses or absences
+are reviewed against the frozen cards; no task is replaced or reinterpreted.
+
+| Checkpoint | Original correct / scored | Reminder correct / scored | Paired gains / losses | Finals, original / reminder |
+|---|---:|---:|---:|---:|
+| Qwen3-4B | 3/12 | 3/12 | 2 / 2 | 11 / 13 |
+| Qwen2.5-7B | 2/12 | 1/12 | 0 / 1 | 15 / 16 |
+| Qwen3-30B-A3B | 4/12 | 3/12 | 1 / 2 | 8 / 13 |
+
+There are 76 final responses, 43 input-budget terminations and one step-limit
+termination. Thirty missing answers are on scored tasks and remain in their
+denominators; the other fourteen concern preidentified ambiguities. Every
+input-budget failure follows at least one successful generation: 23 occur
+after one, fourteen after two, and three each after three or four. The saved
+executor checks report attempted contexts of 32,849 to 161,160 tokens against
+the unchanged 32,768-token limit. These are recorded budget measurements, not
+independent retokenizations. They show a constraint on continuing interaction;
+they do not justify discarding the failed tasks or assigning their intended
+answers.
+
+For the preflagged 129-player list, all six final responses omit required
+names. Both Qwen2.5 responses name only three players; the other four provide
+long incomplete enumerations. Seven finals in the domain reach the generation
+ceiling. The requested mapping of twenty distinct Oshawa players to their
+heights is also not satisfied by a repeated list of season-row heights or a
+two-player sample. These outcomes retain the complete-answer rules fixed
+before generation. They do not prove that every semantically equivalent
+serialization must exceed the budget; the registered longer-output control
+will address one part of that question.
+
+Completion and correctness again differ. The larger checkpoint produces
+five more finals with the reminder but one fewer correct answer. Its
+oldest-player response lists the relevant birthdates yet explicitly selects
+Alexander Svitov instead of Yegor Shastin. The original prompt selects Shastin
+correctly. Listing a correct candidate inside a contradictory selection is
+not credited as the requested single answer. No causal explanation for this
+prompt-dependent error is inferred from that example.
+
+### 10.9 Complete prospective expansion and conditional uncertainty
+
+All 24 workers exit successfully, producing the exact 420 registered records
+and 210 verified initial prompt pairs. The complete archive retains 364 final
+responses, forty protocol errors and nine finals at the generation ceiling.
+The earlier 300 cookbook, Disney and genes labels are transferred unchanged
+after matching every episode hash. The fixed 21-task ambiguity mask excludes
+126 executions from answer accuracy while retaining all costs. Thus each arm
+has 49 scored tasks across the same four databases.
+
+| Checkpoint | Original correct | Reminder correct | Gains / losses | Difference (pp) | Conditional 95% paired bootstrap interval (pp) |
+|---|---:|---:|---:|---:|---:|
+| Qwen3-4B | 24/49 | 20/49 | 3 / 7 | -8.16 | [-20.41, 4.08] |
+| Qwen2.5-7B | 14/49 | 15/49 | 4 / 3 | +2.04 | [-8.16, 12.24] |
+| Qwen3-30B-A3B | 27/49 | 29/49 | 4 / 2 | +4.08 | [-4.08, 14.29] |
+
+For this descriptive analysis, we compute the exact finite distribution of
+the stratified paired bootstrap. Each task pair contributes -1, 0 or +1 for
+reminder-minus-original correctness. Within each of the four fixed domains,
+we resample its observed number of scored pairs with replacement, then sum
+over domains and divide by 49. Convolution with rational probabilities gives
+the 2.5th and 97.5th percentiles without Monte Carlo approximation. A small
+exhaustive-resampling check validates this calculation. This is an ordinary
+conditional bootstrap calculation, not a new estimator or a preregistered
+hypothesis test. It does not cover unseen-domain sampling, model randomness
+or annotation uncertainty, and we make no multiplicity-adjusted superiority
+claim across checkpoints.
+
+Every interval contains zero. Omitting Disney gives a net difference of
+-1/31 tasks (-3.23 points) for each checkpoint, reversing the two positive
+full-grid differences. Applying the eight previously disclosed conservative
+Disney label changes, without adding new changes, produces counts 21/49
+versus 19/49, 14/49 versus 14/49, and 25/49 versus 28/49 respectively; all
+three corresponding conditional intervals still include zero. These checks
+restrict the aggregate prompt-benefit interpretation. They do not establish
+prompt equivalence or erase the within-domain gains and losses.
 
 ## 11. Related work and limits
 
@@ -879,7 +958,7 @@ mutation nor distinguishing accidental correctness is new by itself.
 
 The evidence comprises development on one database and fixed-prompt
 comparisons on three deliberately small databases, with three Qwen checkpoints
-and SmolLM3, plus completed cookbook, Disney and genes slices of a larger registered expansion.
+and SmolLM3, plus a complete prospective expansion across four further databases.
 SmolLM3 is near floor, and the six earlier paired prompt
 comparisons have descriptive intervals that include zero. Broad
 generalization, a formal semantic verifier and an official VAKRA score are
@@ -950,7 +1029,9 @@ control demonstrates one feasible complete retrieval, without a model repair
 claim. Disney has mixed checkpoint-specific prompt effects, including under
 the disclosed conservative answer-review sensitivity. Genes is at zero on
 all three scored tasks for every arm, limiting comparison at that floor.
-Ice hockey and the output-budget extension remain pending.
+Ice hockey adds no net reminder benefit on any checkpoint. The complete
+four-database expansion retains mixed aggregate effects and conditional
+intervals that include zero; the output-budget extension remains pending.
 Larger sample counts
 will not by themselves resolve assistant annotation bias, identify the cause
 of a prompt effect, or demonstrate a new method's superiority.
@@ -964,7 +1045,11 @@ completion, and SmolLM3 performs near the scoring floor. A larger Qwen3
 checkpoint improves absolute scores on the known tasks, while its paired
 reminder comparison remains inconclusive. Cookbook shows no reminder gain,
 and Disney has mixed checkpoint-specific effects; genes yields no correct
-answers on its three scored tasks in any arm. A selected cookbook control retrieves all required
+answers on its three scored tasks in any arm. Ice hockey has neutral or
+negative reminder differences alongside substantial input-budget failures.
+The completed prospective expansion does not establish a consistent aggregate
+benefit; both positive differences reverse when Disney is omitted.
+A selected cookbook control retrieves all required
 values through existing tools within budget, limiting an interface-impossibility
 interpretation. Two
 fully replayed examples show that a correct original answer can remain
@@ -972,4 +1057,4 @@ unidentified under an explicit admissible intervention, including after full
 output-column retrieval. These findings support more explicit evaluation and
 auditing of relational tool use. They do not yet establish a general evidence
 controller, a benchmark-wide failure rate or confirmatory benefits on the
-pending extensions.
+pending output-budget control.

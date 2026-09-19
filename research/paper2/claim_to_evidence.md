@@ -207,3 +207,42 @@ at the generation ceiling. The summary retains all six arms and costs.
 The review is by one unblinded assistant, with no independent human
 adjudication. The three-task zero floor does not establish prompt equivalence,
 general ineffectiveness, a causal trace mechanism or a population failure rate.
+
+## Complete 420-run expansion and final ice-hockey review
+
+`vakra_expansion_complete_grid_v1.json` validates the full registered grid,
+all 24 successful worker exits, all model/source/preparation hashes and 210
+matched initial prompt pairs. This supersedes earlier partial-domain status
+statements without changing those artifacts. The 517-member raw archive is
+6,097,663 bytes, SHA256
+`2e59af3255513bea2933f61822ad39131fb33f8de59ad5b1b5b2e10be7c572f5`.
+Every extracted member equals its archive bytes. No episode was rerun for
+this analysis. The deployment remains the registered v2 restart bundle.
+
+`vakra_expansion_complete_annotations_v1.json` retains all 300 earlier
+annotations unchanged after checking their source hashes, and adds the
+unblinded assistant review of every full hockey final response or absence.
+The hockey scores are 3/12 to 3/12, 2/12 to 1/12 and 4/12 to 3/12 for Qwen3,
+Qwen2.5 and Qwen30B; paired gains/losses are 2/2, 0/1 and 1/2. Forty-eight
+ambiguous executions remain excluded only from accuracy. Thirty scored
+executions have no answer and remain in their fixed denominators. The domain
+has 76 finals, 43 input-limit terminations, one step-limit termination and
+seven finals at the output ceiling. The complete-grid answer summary links
+all labels to raw hashes and reports counts 24→20, 14→15 and 27→29 out of 49.
+
+`vakra_expansion_complete_sensitivity_v1.json` preserves the exact rational
+probability mass function of the within-domain paired bootstrap. All primary
+and retained eight-case Disney sensitivity intervals contain zero. Omitting
+Disney makes each checkpoint's net difference -1/31. This is a post-completion
+descriptive calculation conditional on four domains and assistant labels,
+not a preregistered or multiplicity-adjusted test of a population benefit.
+Two mathematical checks include exhaustive enumeration on small strata.
+The same report preserves every input-budget failure's raw identity and saved
+counter. All 43 follow one to four successful generations; observed attempted
+input size is 32,849–161,160 against the 32,768 limit. No independent
+retokenization, causal tool diagnosis or failure exclusion is implied.
+
+`vakra_expansion_complete_raw_receipt_v1.json` records archive and derived
+hashes, provenance and the corrected transfer-hash transcription. The
+separate twelve-run generation-budget control was started automatically after
+the 420-run grid completed and is not included in these results.

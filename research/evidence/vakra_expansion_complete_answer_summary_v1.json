@@ -1,0 +1,2273 @@
+{
+  "purpose": "Descriptive assistant-authored SQL-interpretation audit; not official or independent human scoring",
+  "complete_batch": true,
+  "review_scope": "full_registered_grid",
+  "executions": 420,
+  "distinct_tasks": 70,
+  "groups": [
+    {
+      "domain": "cookbook",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 9,
+      "labels": {
+        "incorrect": 7,
+        "correct": 9,
+        "ambiguous": 4
+      },
+      "accuracy": 0.5625,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 59,
+        "tool_calls": 39,
+        "input_tokens": 270514,
+        "output_tokens": 7895,
+        "generation_seconds": 260.0156577769667,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 8,
+      "labels": {
+        "incorrect": 8,
+        "correct": 8,
+        "ambiguous": 4
+      },
+      "accuracy": 0.5,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 67,
+        "tool_calls": 47,
+        "input_tokens": 326905,
+        "output_tokens": 8183,
+        "generation_seconds": 280.2319805715233,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 7,
+      "labels": {
+        "incorrect": 9,
+        "correct": 7,
+        "ambiguous": 4
+      },
+      "accuracy": 0.4375,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 77,
+        "tool_calls": 67,
+        "input_tokens": 433842,
+        "output_tokens": 7192,
+        "generation_seconds": 300.48750060237944,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 7,
+      "labels": {
+        "incorrect": 9,
+        "correct": 7,
+        "ambiguous": 4
+      },
+      "accuracy": 0.4375,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 74,
+        "tool_calls": 55,
+        "input_tokens": 376204,
+        "output_tokens": 5834,
+        "generation_seconds": 242.51733382605016,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 11,
+      "labels": {
+        "correct": 11,
+        "incorrect": 5,
+        "ambiguous": 4
+      },
+      "accuracy": 0.6875,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 81,
+        "tool_calls": 61,
+        "input_tokens": 401019,
+        "output_tokens": 7828,
+        "generation_seconds": 1389.801783947274,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 16,
+      "ambiguous_tasks": 4,
+      "correct": 11,
+      "labels": {
+        "correct": 11,
+        "incorrect": 5,
+        "ambiguous": 4
+      },
+      "accuracy": 0.6875,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 79,
+        "tool_calls": 59,
+        "input_tokens": 398698,
+        "output_tokens": 8159,
+        "generation_seconds": 1437.8085884209722,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 12,
+      "labels": {
+        "correct": 12,
+        "ambiguous": 2,
+        "incorrect": 6
+      },
+      "accuracy": 0.6666666666666666,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 81,
+        "tool_calls": 61,
+        "input_tokens": 930401,
+        "output_tokens": 10060,
+        "generation_seconds": 441.5420827623457,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 9,
+      "labels": {
+        "correct": 9,
+        "ambiguous": 2,
+        "incorrect": 9
+      },
+      "accuracy": 0.5,
+      "final_answers": 20,
+      "terminations": {
+        "agent_finished": 20
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 71,
+        "tool_calls": 51,
+        "input_tokens": 820114,
+        "output_tokens": 8709,
+        "generation_seconds": 386.9006280936301,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 5,
+      "labels": {
+        "correct": 5,
+        "ambiguous": 2,
+        "no_answer": 1,
+        "incorrect": 12
+      },
+      "accuracy": 0.2777777777777778,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "protocol_error_limit": 1,
+        "max_steps": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 95,
+        "tool_calls": 88,
+        "input_tokens": 1162748,
+        "output_tokens": 9290,
+        "generation_seconds": 512.034708218649,
+        "protocol_errors": 6
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 7,
+      "labels": {
+        "correct": 7,
+        "ambiguous": 2,
+        "incorrect": 11
+      },
+      "accuracy": 0.3888888888888889,
+      "final_answers": 19,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 63,
+        "tool_calls": 46,
+        "input_tokens": 722090,
+        "output_tokens": 7577,
+        "generation_seconds": 374.5084846019745,
+        "protocol_errors": 5
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 12,
+      "labels": {
+        "correct": 12,
+        "ambiguous": 2,
+        "no_answer": 1,
+        "incorrect": 5
+      },
+      "accuracy": 0.6666666666666666,
+      "final_answers": 18,
+      "terminations": {
+        "agent_finished": 18,
+        "max_steps": 1,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 119,
+        "tool_calls": 92,
+        "input_tokens": 1470792,
+        "output_tokens": 18343,
+        "generation_seconds": 3279.4154854491353,
+        "protocol_errors": 9
+      }
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 18,
+      "ambiguous_tasks": 2,
+      "correct": 15,
+      "labels": {
+        "correct": 15,
+        "ambiguous": 2,
+        "incorrect": 3
+      },
+      "accuracy": 0.8333333333333334,
+      "final_answers": 19,
+      "terminations": {
+        "agent_finished": 19,
+        "protocol_error_limit": 1
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 88,
+        "tool_calls": 63,
+        "input_tokens": 1013481,
+        "output_tokens": 11770,
+        "generation_seconds": 2118.561242993921,
+        "protocol_errors": 6
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 40,
+        "tool_calls": 29,
+        "input_tokens": 179577,
+        "output_tokens": 5635,
+        "generation_seconds": 194.50768974423409,
+        "protocol_errors": 1
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 41,
+        "tool_calls": 31,
+        "input_tokens": 191053,
+        "output_tokens": 6213,
+        "generation_seconds": 217.27225492708385,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 45,
+        "tool_calls": 38,
+        "input_tokens": 228301,
+        "output_tokens": 5196,
+        "generation_seconds": 202.4779340736568,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 10,
+      "terminations": {
+        "agent_finished": 10
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 35,
+        "tool_calls": 28,
+        "input_tokens": 157010,
+        "output_tokens": 3167,
+        "generation_seconds": 124.87764602154493,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 7,
+      "terminations": {
+        "agent_finished": 7,
+        "max_steps": 3
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 99,
+        "tool_calls": 89,
+        "input_tokens": 638442,
+        "output_tokens": 12434,
+        "generation_seconds": 2211.965669406578,
+        "protocol_errors": 3
+      }
+    },
+    {
+      "domain": "genes",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 10,
+      "scored_tasks": 3,
+      "ambiguous_tasks": 7,
+      "correct": 0,
+      "labels": {
+        "ambiguous": 7,
+        "incorrect": 3
+      },
+      "accuracy": 0.0,
+      "final_answers": 7,
+      "terminations": {
+        "protocol_error_limit": 1,
+        "agent_finished": 7,
+        "max_steps": 2
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 80,
+        "tool_calls": 67,
+        "input_tokens": 478063,
+        "output_tokens": 11155,
+        "generation_seconds": 1939.3435900565237,
+        "protocol_errors": 6
+      }
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 12,
+      "ambiguous_tasks": 8,
+      "correct": 3,
+      "labels": {
+        "incorrect": 3,
+        "no_answer": 6,
+        "ambiguous": 8,
+        "correct": 3
+      },
+      "accuracy": 0.25,
+      "final_answers": 11,
+      "terminations": {
+        "agent_finished": 11,
+        "input_budget_exceeded": 9
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 64,
+        "tool_calls": 48,
+        "input_tokens": 1113147,
+        "output_tokens": 8992,
+        "generation_seconds": 531.16713559255,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 12,
+      "ambiguous_tasks": 8,
+      "correct": 3,
+      "labels": {
+        "incorrect": 5,
+        "no_answer": 4,
+        "ambiguous": 8,
+        "correct": 3
+      },
+      "accuracy": 0.25,
+      "final_answers": 13,
+      "terminations": {
+        "agent_finished": 13,
+        "input_budget_exceeded": 7
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 63,
+        "tool_calls": 40,
+        "input_tokens": 1041332,
+        "output_tokens": 8222,
+        "generation_seconds": 473.3809967096895,
+        "protocol_errors": 3
+      }
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 12,
+      "ambiguous_tasks": 8,
+      "correct": 2,
+      "labels": {
+        "incorrect": 6,
+        "correct": 2,
+        "ambiguous": 8,
+        "no_answer": 4
+      },
+      "accuracy": 0.16666666666666666,
+      "final_answers": 15,
+      "terminations": {
+        "agent_finished": 15,
+        "input_budget_exceeded": 5
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 69,
+        "tool_calls": 101,
+        "input_tokens": 1231284,
+        "output_tokens": 8789,
+        "generation_seconds": 543.696509256959,
+        "protocol_errors": 1
+      }
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 12,
+      "ambiguous_tasks": 8,
+      "correct": 1,
+      "labels": {
+        "incorrect": 8,
+        "correct": 1,
+        "ambiguous": 8,
+        "no_answer": 3
+      },
+      "accuracy": 0.08333333333333333,
+      "final_answers": 16,
+      "terminations": {
+        "agent_finished": 16,
+        "input_budget_exceeded": 4
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 61,
+        "tool_calls": 71,
+        "input_tokens": 1026992,
+        "output_tokens": 6104,
+        "generation_seconds": 403.50260683335364,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 20,
+      "scored_tasks": 12,
+      "ambiguous_tasks": 8,
+      "correct": 4,
+      "labels": {
+        "incorrect": 1,
+        "no_answer": 7,
+        "ambiguous": 8,
+        "correct": 4
+      },
+      "accuracy": 0.3333333333333333,
+      "final_answers": 8,
+      "terminations": {
+        "agent_finished": 8,
+        "input_budget_exceeded": 11,
+        "max_steps": 1
+      },
+      "final_at_generation_token_ceiling": 1,
+      "all_execution_usage": {
+        "model_calls": 87,
+        "tool_calls": 69,
+        "input_tokens": 1557445,
+        "output_tokens": 8068,
+        "generation_seconds": 1694.8318857904524,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 20,
+      "scored_tasks": 12,
+      "ambiguous_tasks": 8,
+      "correct": 3,
+      "labels": {
+        "incorrect": 3,
+        "no_answer": 6,
+        "ambiguous": 8,
+        "correct": 3
+      },
+      "accuracy": 0.25,
+      "final_answers": 13,
+      "terminations": {
+        "agent_finished": 13,
+        "input_budget_exceeded": 7
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 71,
+        "tool_calls": 51,
+        "input_tokens": 1183599,
+        "output_tokens": 7749,
+        "generation_seconds": 1551.5387355294079,
+        "protocol_errors": 0
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen3",
+      "condition": "original",
+      "executions": 70,
+      "scored_tasks": 49,
+      "ambiguous_tasks": 21,
+      "correct": 24,
+      "labels": {
+        "incorrect": 19,
+        "correct": 24,
+        "ambiguous": 21,
+        "no_answer": 6
+      },
+      "accuracy": 0.4897959183673469,
+      "final_answers": 61,
+      "terminations": {
+        "agent_finished": 61,
+        "input_budget_exceeded": 9
+      },
+      "final_at_generation_token_ceiling": 3,
+      "all_execution_usage": {
+        "model_calls": 244,
+        "tool_calls": 177,
+        "input_tokens": 2493639,
+        "output_tokens": 32582,
+        "generation_seconds": 1427.2325658760965,
+        "protocol_errors": 1
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen3",
+      "condition": "coverage_check",
+      "executions": 70,
+      "scored_tasks": 49,
+      "ambiguous_tasks": 21,
+      "correct": 20,
+      "labels": {
+        "incorrect": 25,
+        "correct": 20,
+        "ambiguous": 21,
+        "no_answer": 4
+      },
+      "accuracy": 0.40816326530612246,
+      "final_answers": 63,
+      "terminations": {
+        "agent_finished": 63,
+        "input_budget_exceeded": 7
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 242,
+        "tool_calls": 169,
+        "input_tokens": 2379404,
+        "output_tokens": 31327,
+        "generation_seconds": 1357.7858603019267,
+        "protocol_errors": 3
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen25",
+      "condition": "original",
+      "executions": 70,
+      "scored_tasks": 49,
+      "ambiguous_tasks": 21,
+      "correct": 14,
+      "labels": {
+        "incorrect": 30,
+        "correct": 14,
+        "ambiguous": 21,
+        "no_answer": 5
+      },
+      "accuracy": 0.2857142857142857,
+      "final_answers": 63,
+      "terminations": {
+        "agent_finished": 63,
+        "protocol_error_limit": 1,
+        "max_steps": 1,
+        "input_budget_exceeded": 5
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 286,
+        "tool_calls": 294,
+        "input_tokens": 3056175,
+        "output_tokens": 30467,
+        "generation_seconds": 1558.6966521516442,
+        "protocol_errors": 7
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen25",
+      "condition": "coverage_check",
+      "executions": 70,
+      "scored_tasks": 49,
+      "ambiguous_tasks": 21,
+      "correct": 15,
+      "labels": {
+        "incorrect": 31,
+        "correct": 15,
+        "ambiguous": 21,
+        "no_answer": 3
+      },
+      "accuracy": 0.30612244897959184,
+      "final_answers": 65,
+      "terminations": {
+        "agent_finished": 65,
+        "protocol_error_limit": 1,
+        "input_budget_exceeded": 4
+      },
+      "final_at_generation_token_ceiling": 0,
+      "all_execution_usage": {
+        "model_calls": 233,
+        "tool_calls": 200,
+        "input_tokens": 2282296,
+        "output_tokens": 22682,
+        "generation_seconds": 1145.4060712829232,
+        "protocol_errors": 5
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen30b",
+      "condition": "original",
+      "executions": 70,
+      "scored_tasks": 49,
+      "ambiguous_tasks": 21,
+      "correct": 27,
+      "labels": {
+        "correct": 27,
+        "incorrect": 14,
+        "ambiguous": 21,
+        "no_answer": 8
+      },
+      "accuracy": 0.5510204081632653,
+      "final_answers": 53,
+      "terminations": {
+        "agent_finished": 53,
+        "max_steps": 5,
+        "protocol_error_limit": 1,
+        "input_budget_exceeded": 11
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 386,
+        "tool_calls": 311,
+        "input_tokens": 4067698,
+        "output_tokens": 46673,
+        "generation_seconds": 8576.01482459344,
+        "protocol_errors": 12
+      }
+    },
+    {
+      "domain": "all",
+      "model": "qwen30b",
+      "condition": "coverage_check",
+      "executions": 70,
+      "scored_tasks": 49,
+      "ambiguous_tasks": 21,
+      "correct": 29,
+      "labels": {
+        "correct": 29,
+        "incorrect": 14,
+        "ambiguous": 21,
+        "no_answer": 6
+      },
+      "accuracy": 0.5918367346938775,
+      "final_answers": 59,
+      "terminations": {
+        "agent_finished": 59,
+        "protocol_error_limit": 2,
+        "max_steps": 2,
+        "input_budget_exceeded": 7
+      },
+      "final_at_generation_token_ceiling": 2,
+      "all_execution_usage": {
+        "model_calls": 318,
+        "tool_calls": 240,
+        "input_tokens": 3073841,
+        "output_tokens": 38833,
+        "generation_seconds": 7047.252157000825,
+        "protocol_errors": 12
+      }
+    }
+  ],
+  "paired": [
+    {
+      "domain": "cookbook",
+      "model": "qwen3",
+      "scored_tasks": 16,
+      "gains": [],
+      "losses": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        }
+      ],
+      "difference_percentage_points": -6.25
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen25",
+      "scored_tasks": 16,
+      "gains": [],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "cookbook",
+      "model": "qwen30b",
+      "scored_tasks": 16,
+      "gains": [],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "disney",
+      "model": "qwen3",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        }
+      ],
+      "difference_percentage_points": -16.666666666666668
+    },
+    {
+      "domain": "disney",
+      "model": "qwen25",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        }
+      ],
+      "difference_percentage_points": 11.11111111111111
+    },
+    {
+      "domain": "disney",
+      "model": "qwen30b",
+      "scored_tasks": 18,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        }
+      ],
+      "losses": [],
+      "both_correct": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        }
+      ],
+      "difference_percentage_points": 16.666666666666668
+    },
+    {
+      "domain": "genes",
+      "model": "qwen3",
+      "scored_tasks": 3,
+      "gains": [],
+      "losses": [],
+      "both_correct": [],
+      "both_unsuccessful": [
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "genes",
+      "model": "qwen25",
+      "scored_tasks": 3,
+      "gains": [],
+      "losses": [],
+      "both_correct": [],
+      "both_unsuccessful": [
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "genes",
+      "model": "qwen30b",
+      "scored_tasks": 3,
+      "gains": [],
+      "losses": [],
+      "both_correct": [],
+      "both_unsuccessful": [
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen3",
+      "scored_tasks": 12,
+      "gains": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-515feaea408d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-84be12829fa3"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b7cff310082f"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-2984bcb9f6c2"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b9965c45b7fe"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-778e84fced89"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-63835e742d17"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-3838aca46ae6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-e8645030ed93"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-008141f3490a"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-f467c8ea44a0"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-9ce449e8941d"
+        }
+      ],
+      "difference_percentage_points": 0.0
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen25",
+      "scored_tasks": 12,
+      "gains": [],
+      "losses": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b9965c45b7fe"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-63835e742d17"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-778e84fced89"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-3838aca46ae6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-e8645030ed93"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-008141f3490a"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-515feaea408d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-f467c8ea44a0"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-9ce449e8941d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-84be12829fa3"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b7cff310082f"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-2984bcb9f6c2"
+        }
+      ],
+      "difference_percentage_points": -8.333333333333334
+    },
+    {
+      "domain": "ice_hockey_draft",
+      "model": "qwen30b",
+      "scored_tasks": 12,
+      "gains": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b7cff310082f"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-f467c8ea44a0"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-84be12829fa3"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b9965c45b7fe"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-008141f3490a"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-778e84fced89"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-63835e742d17"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-3838aca46ae6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-e8645030ed93"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-515feaea408d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-9ce449e8941d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-2984bcb9f6c2"
+        }
+      ],
+      "difference_percentage_points": -8.333333333333334
+    },
+    {
+      "domain": "all",
+      "model": "qwen3",
+      "scored_tasks": 49,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-515feaea408d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-84be12829fa3"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b7cff310082f"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-2984bcb9f6c2"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b9965c45b7fe"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-778e84fced89"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-63835e742d17"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-3838aca46ae6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-e8645030ed93"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-008141f3490a"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-f467c8ea44a0"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-9ce449e8941d"
+        }
+      ],
+      "difference_percentage_points": -8.16326530612245
+    },
+    {
+      "domain": "all",
+      "model": "qwen25",
+      "scored_tasks": 49,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b9965c45b7fe"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-63835e742d17"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-778e84fced89"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-3838aca46ae6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-e8645030ed93"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-008141f3490a"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-515feaea408d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-f467c8ea44a0"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-9ce449e8941d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-84be12829fa3"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b7cff310082f"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-2984bcb9f6c2"
+        }
+      ],
+      "difference_percentage_points": 2.0408163265306123
+    },
+    {
+      "domain": "all",
+      "model": "qwen30b",
+      "scored_tasks": 49,
+      "gains": [
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c0fb51d1e703"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-c9b00cbda527"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-8e9434bbcc3f"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b7cff310082f"
+        }
+      ],
+      "losses": [
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-f467c8ea44a0"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-84be12829fa3"
+        }
+      ],
+      "both_correct": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b3edb4cc82cf"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-bade8cc81968"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-982d9425d9e4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-1011b856b367"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-07fb2facaba4"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-ca1de2e0240f"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-b10f8154ccac"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-8a501e6101b8"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e1a038d7893"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-9e5d85f41df0"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-a6f458e57aa7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-fdd5b0e943a7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-1bd5ad982571"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-dfaa807317f7"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-585fc36cc9c6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-51ddf26f6a96"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-21513bce4a10"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-667fe456f4a6"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-af5556147a53"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-f1c6994b7ed9"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-4f24103e8871"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-5ddf6e60c7cb"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7ab1eb405866"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-b9965c45b7fe"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-008141f3490a"
+        }
+      ],
+      "both_unsuccessful": [
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-0e705a585aa7"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-537cccd2783b"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-10e58f0006b9"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-e7dc4aeee090"
+        },
+        {
+          "domain": "cookbook",
+          "uuid": "ec134bf7bda5-58edfd6495e1"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-bdca886a5f4f"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-30444c866c6d"
+        },
+        {
+          "domain": "disney",
+          "uuid": "34a533dfd727-7478b02e4420"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1850a2b13bd5"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-312780d3b08b"
+        },
+        {
+          "domain": "genes",
+          "uuid": "912d5f84749d-1c4e380e14a8"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-778e84fced89"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-63835e742d17"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-3838aca46ae6"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-e8645030ed93"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-515feaea408d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-9ce449e8941d"
+        },
+        {
+          "domain": "ice_hockey_draft",
+          "uuid": "d0d7be63ebc2-2984bcb9f6c2"
+        }
+      ],
+      "difference_percentage_points": 4.081632653061225
+    }
+  ],
+  "limits": [
+    "Failures remain in the fixed scored-task denominators.",
+    "Ambiguous tasks retain their executions and costs but do not enter answer accuracy.",
+    "Task pairs and checkpoints are not independent population samples.",
+    "No evidence-sufficiency or causal mechanism score is inferred from answer correctness."
+  ],
+  "kind": "expansion",
+  "execution_summary_sha256": "1d696d6fec03e735e26240b829bdc2910768ecbe060b0521edb6e6c5dd17b0af",
+  "annotations_sha256": "677a7e12784521f6c541e652ec7e631cac07b1b4a45f7203521cb1c0fb5cde24",
+  "audit_cards_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "audit_policy_sha256": "bcaa7eaecc1a8a3fdf1598bd3a1d91745e4440fb83f3157b98389b00b8d475c3",
+  "analysis_source_sha256": {
+    "C:\\Users\\xingjing\\Documents\\ChatGPT\\论文&专利\\autoresearch-generic\\scripts\\summarize_vakra_registered_answers.py": "f2ad3c3ff4b19be04dcb84940503a0e2b44b2054fe3d2285155d583fd709fb4f",
+    "autolab\\vakra_review_summary.py": "a3ae66ec03df54d5cb5962dae76ce4636e29f746cf2b86375317dff96ce53a0b"
+  }
+}

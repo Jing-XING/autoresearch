@@ -1,0 +1,40 @@
+{
+  "complete_batch": true,
+  "episodes": 420,
+  "distinct_tasks": 70,
+  "successful_worker_exits": 24,
+  "archive": "results/remote/vakra-expansion-v2-complete.zip",
+  "archive_sha256": "2e59af3255513bea2933f61822ad39131fb33f8de59ad5b1b5b2e10be7c572f5",
+  "archive_bytes": 6097663,
+  "archive_entries": 517,
+  "extracted_bytes_verified": true,
+  "initial_prompt_pairs_verified": 210,
+  "prior_annotations_retained": 300,
+  "new_hockey_reviews": 120,
+  "labels": {
+    "incorrect": 133,
+    "correct": 129,
+    "ambiguous": 126,
+    "no_answer": 32
+  },
+  "hockey_labels": {
+    "incorrect": 26,
+    "no_answer": 30,
+    "correct": 16,
+    "ambiguous": 48
+  },
+  "hockey_terminations": {
+    "agent_finished": 76,
+    "input_budget_exceeded": 43,
+    "max_steps": 1
+  },
+  "hockey_final_at_generation_ceiling": 7,
+  "evidence_sha256": {
+    "vakra_expansion_complete_grid_v1.json": "1d696d6fec03e735e26240b829bdc2910768ecbe060b0521edb6e6c5dd17b0af",
+    "vakra_expansion_complete_annotations_v1.json": "677a7e12784521f6c541e652ec7e631cac07b1b4a45f7203521cb1c0fb5cde24",
+    "vakra_expansion_complete_answer_summary_v1.json": "8b2be691b4aa77d012ba03b510bcde595bee5a5b2e0353c5f55d84da63b323f0"
+  },
+  "script_sha256": "c69fda466a8f76c09e16ef94361a64d628d43d59b009805dc8754e300428a875",
+  "transfer_note": "First SHA transcription failed before transfer; wrong-hash bridge stopped. Correct SHA read in four chunks, exact archive transferred successfully. No experiment rerun.",
+  "limits": "One unblinded assistant, fixed SQL interpretations, repeated tasks/checkpoints not independent population samples. No official benchmark or grounding score."
+}
