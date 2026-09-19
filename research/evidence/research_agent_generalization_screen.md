@@ -59,3 +59,22 @@ between the above established allocation patterns. A narrower causal question
 and a faithful strong baseline are still required. Meanwhile, strengthen the
 separate recovery-interface study using native composition controls, where a
 specific source-derived hypothesis can be tested without new model calls.
+
+## Additional feasibility decision, 20 September 2026
+
+[AutoLLMResearch, v2](https://arxiv.org/abs/2605.11518v2) already studies
+research agents that transfer information from cheaper to expensive LLM
+configurations, with a multi-fidelity environment and training pipeline.
+This primary abstract was checked; its code and reported experiments were
+not reproduced. Generic cheap-to-expensive experiment selection is therefore
+not an unoccupied contribution merely because it is added to this repository.
+
+The new [linear-control headroom diagnostic](risk_linear_headroom_findings_v1.md)
+was actually executed on the designated server, using the already public
+development labels. Standard c=1 correction has median exact expected-MSE
+ratio 0.823771 to uniform; the inaccessible full-label linear oracle has
+0.801406. The median within-pool additional reduction is approximately 2.05%,
+with substantially larger headroom in two pools. These exact fixed-population
+statistics are not official rewards or held-out scores. A coefficient-only
+Agent tuning study is deprioritized because it would chiefly rediscover
+familiar control-variate algebra. No fifth-paper contribution is claimed.

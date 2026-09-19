@@ -1,0 +1,592 @@
+{
+  "summary": {
+    "pools": 12,
+    "difference_better_than_uniform": 12,
+    "median_exact_mse_ratio": {
+      "uniform": 1.0,
+      "difference": 0.8237706566212744,
+      "oracle": 0.8014055294110219
+    },
+    "oracle_coefficient_range": [
+      0.790456637136455,
+      3.098284094446807
+    ]
+  },
+  "rows": [
+    {
+      "n": 2000,
+      "mean_loss": 0.39587558394592887,
+      "mean_proxy": 0.5433816443617544,
+      "loss_variance": 0.21571022449017432,
+      "proxy_variance": 0.009457247020744327,
+      "covariance": 0.012762206596092021,
+      "oracle_coefficient": 1.349463175498992,
+      "residual_variances": {
+        "uniform": 0.21571022449017435,
+        "difference": 0.19964305831873463,
+        "oracle": 0.19848809665063782
+      },
+      "mse_ratios": {
+        "uniform": 1.0000000000000002,
+        "difference": 0.9255150458935638,
+        "oracle": 0.9201608181520344
+      },
+      "pool": "dev00",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.0042063493775584,
+          "difference": 0.0038930396372153253,
+          "oracle": 0.003870517884687438
+        },
+        "100": {
+          "uniform": 0.002049247132656656,
+          "difference": 0.001896609054027979,
+          "oracle": 0.0018856369181810592
+        },
+        "200": {
+          "uniform": 0.0009706960102057846,
+          "difference": 0.0008983937624343059,
+          "oracle": 0.0008931964349278703
+        },
+        "400": {
+          "uniform": 0.00043142044898034874,
+          "difference": 0.00039928611663746927,
+          "oracle": 0.00039697619330127565
+        }
+      },
+      "oracle_relative_to_difference": 0.9942148668838118
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.43570773965189524,
+      "mean_proxy": 0.5634380027587755,
+      "loss_variance": 0.052432190519905934,
+      "proxy_variance": 0.029257538572178686,
+      "covariance": 0.023126815550654482,
+      "oracle_coefficient": 0.790456637136455,
+      "residual_variances": {
+        "uniform": 0.05243219051990594,
+        "difference": 0.03543609799077566,
+        "oracle": 0.03415144567206053
+      },
+      "mse_ratios": {
+        "uniform": 1.0000000000000002,
+        "difference": 0.6758462242259803,
+        "oracle": 0.6513450102584384
+      },
+      "pool": "dev01",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.001022427715138166,
+          "difference": 0.0006910039108201254,
+          "oracle": 0.0006659531906051802
+        },
+        "100": {
+          "uniform": 0.0004981058099391064,
+          "difference": 0.0003366429309123688,
+          "oracle": 0.000324438733884575
+        },
+        "200": {
+          "uniform": 0.00023594485733957675,
+          "difference": 0.0001594624409584905,
+          "oracle": 0.0001536815055242724
+        },
+        "400": {
+          "uniform": 0.00010486438103981189,
+          "difference": 7.087219598155132e-05,
+          "oracle": 6.830289134412107e-05
+        }
+      },
+      "oracle_relative_to_difference": 0.9637473539256625
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.44785511139016887,
+      "mean_proxy": 0.5716928786582122,
+      "loss_variance": 0.05556123759568559,
+      "proxy_variance": 0.02820480072778083,
+      "covariance": 0.023547451078383415,
+      "oracle_coefficient": 0.834873867950782,
+      "residual_variances": {
+        "uniform": 0.05556123759568559,
+        "difference": 0.03667113616669959,
+        "oracle": 0.03590208603349382
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.6600129470396671,
+        "oracle": 0.6461714603038587
+      },
+      "pool": "dev02",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.001083444133115869,
+          "difference": 0.000715087155250642,
+          "oracle": 0.0007000906776531295
+        },
+        "100": {
+          "uniform": 0.0005278317571590131,
+          "difference": 0.0003483757935836461,
+          "oracle": 0.00034106981731819126
+        },
+        "200": {
+          "uniform": 0.00025002556918058517,
+          "difference": 0.00016502011275014818,
+          "oracle": 0.00016155938715072218
+        },
+        "400": {
+          "uniform": 0.0001111224751913712,
+          "difference": 7.334227233339919e-05,
+          "oracle": 7.180417206698763e-05
+        }
+      },
+      "oracle_relative_to_difference": 0.9790284617932254
+    },
+    {
+      "n": 2000,
+      "mean_loss": 1.3397963067529093,
+      "mean_proxy": 0.7494612024038622,
+      "loss_variance": 1.6959493081332573,
+      "proxy_variance": 0.06983884332814429,
+      "covariance": 0.21638057745815195,
+      "oracle_coefficient": 3.098284094446807,
+      "residual_variances": {
+        "uniform": 1.695949308133257,
+        "difference": 1.3330269965450976,
+        "oracle": 1.0255408066474496
+      },
+      "mse_ratios": {
+        "uniform": 0.9999999999999999,
+        "difference": 0.7860063919082401,
+        "oracle": 0.6047001533178308
+      },
+      "pool": "dev03",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.03307101150859851,
+          "difference": 0.0259940264326294,
+          "oracle": 0.019998045729625265
+        },
+        "100": {
+          "uniform": 0.01611151842726594,
+          "difference": 0.012663756467178426,
+          "oracle": 0.00974263766315077
+        },
+        "200": {
+          "uniform": 0.007631771886599656,
+          "difference": 0.0059986214844529396,
+          "oracle": 0.004614933629913523
+        },
+        "400": {
+          "uniform": 0.0033918986162665143,
+          "difference": 0.0026660539930901954,
+          "oracle": 0.0020510816132948994
+        }
+      },
+      "oracle_relative_to_difference": 0.7693323610890236
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.3807401686591485,
+      "mean_proxy": 0.5612163868472274,
+      "loss_variance": 0.33777004651642256,
+      "proxy_variance": 0.017409013748917047,
+      "covariance": 0.021086210060428406,
+      "oracle_coefficient": 1.2112237008107427,
+      "residual_variances": {
+        "uniform": 0.33777004651642256,
+        "difference": 0.3130066401444828,
+        "oracle": 0.31222992913095776
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.9266856057032407,
+        "oracle": 0.9243860796749985
+      },
+      "pool": "dev04",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.0065865159070702395,
+          "difference": 0.006103629482817414,
+          "oracle": 0.006088483618053676
+        },
+        "100": {
+          "uniform": 0.0032088154419060142,
+          "difference": 0.0029735630813725864,
+          "oracle": 0.0029661843267440985
+        },
+        "200": {
+          "uniform": 0.0015199652093239016,
+          "difference": 0.0014085298806501727,
+          "oracle": 0.00140503468108931
+        },
+        "400": {
+          "uniform": 0.0006755400930328452,
+          "difference": 0.0006260132802889657,
+          "oracle": 0.0006244598582619156
+        }
+      },
+      "oracle_relative_to_difference": 0.9975185478072717
+    },
+    {
+      "n": 2000,
+      "mean_loss": 1.1202310499040269,
+      "mean_proxy": 0.835438296402217,
+      "loss_variance": 0.7656715698075687,
+      "proxy_variance": 0.06978594541581627,
+      "covariance": 0.10232208185542728,
+      "oracle_coefficient": 1.466227637180323,
+      "residual_variances": {
+        "uniform": 0.7656715698075687,
+        "difference": 0.6308133515125304,
+        "oracle": 0.615644105497314
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.8238693669546443,
+        "oracle": 0.804057679263238
+      },
+      "pool": "dev05",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.014930595611247589,
+          "difference": 0.012300860354494342,
+          "oracle": 0.012005060057197623
+        },
+        "100": {
+          "uniform": 0.007273879913171902,
+          "difference": 0.005992726839369038,
+          "oracle": 0.005848619002224482
+        },
+        "200": {
+          "uniform": 0.003445522064134059,
+          "difference": 0.0028386600818063865,
+          "oracle": 0.002770398474737913
+        },
+        "400": {
+          "uniform": 0.0015313431396151375,
+          "difference": 0.0012616267030250608,
+          "oracle": 0.0012312882109946279
+        }
+      },
+      "oracle_relative_to_difference": 0.9759528773783174
+    },
+    {
+      "n": 2000,
+      "mean_loss": 1.110453355098786,
+      "mean_proxy": 0.8251847189944076,
+      "loss_variance": 0.7470404978993127,
+      "proxy_variance": 0.06487609469623137,
+      "covariance": 0.0933587444417311,
+      "oracle_coefficient": 1.439031508891892,
+      "residual_variances": {
+        "uniform": 0.7470404978993127,
+        "difference": 0.6251991037120819,
+        "oracle": 0.6126943230170758
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.8369012195057023,
+        "oracle": 0.8201621260694434
+      },
+      "pool": "dev06",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.014567289709036597,
+          "difference": 0.012191382522385597,
+          "oracle": 0.01194753929883298
+        },
+        "100": {
+          "uniform": 0.0070968847300434705,
+          "difference": 0.005939391485264778,
+          "oracle": 0.005820596068662221
+        },
+        "200": {
+          "uniform": 0.003361682240546907,
+          "difference": 0.0028133959667043682,
+          "oracle": 0.002757124453576841
+        },
+        "400": {
+          "uniform": 0.0014940809957986253,
+          "difference": 0.0012503982074241638,
+          "oracle": 0.0012253886460341517
+        }
+      },
+      "oracle_relative_to_difference": 0.9799987226137087
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.8234218052505519,
+      "mean_proxy": 0.5893340004221186,
+      "loss_variance": 0.3069241964536622,
+      "proxy_variance": 0.015132126361912772,
+      "covariance": 0.040370542422891405,
+      "oracle_coefficient": 2.667869766439644,
+      "residual_variances": {
+        "uniform": 0.3069241964536622,
+        "difference": 0.24131523796979218,
+        "oracle": 0.19922084686886118
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.7862372558372884,
+        "oracle": 0.649088110910599
+      },
+      "pool": "dev07",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.0059850218308464135,
+          "difference": 0.004705647140410947,
+          "oracle": 0.003884806513942793
+        },
+        "100": {
+          "uniform": 0.0029157798663097907,
+          "difference": 0.0022924947607130255,
+          "oracle": 0.0018925980452541814
+        },
+        "200": {
+          "uniform": 0.00138115888404148,
+          "difference": 0.0010859185708640647,
+          "oracle": 0.0008964938109098753
+        },
+        "400": {
+          "uniform": 0.0006138483929073245,
+          "difference": 0.0004826304759395844,
+          "oracle": 0.0003984416937377224
+        }
+      },
+      "oracle_relative_to_difference": 0.8255626480321961
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.40806267901797877,
+      "mean_proxy": 0.5372868105386155,
+      "loss_variance": 0.17192664094358917,
+      "proxy_variance": 0.007620086068586383,
+      "covariance": 0.009373270563917398,
+      "oracle_coefficient": 1.2300741067162582,
+      "residual_variances": {
+        "uniform": 0.17192664094358917,
+        "difference": 0.16080018588434075,
+        "oracle": 0.16039682352766868
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.9352837058981504,
+        "oracle": 0.9329375752783797
+      },
+      "pool": "dev08",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.003352569498399989,
+          "difference": 0.0031356036247446443,
+          "oracle": 0.0031277380587895393
+        },
+        "100": {
+          "uniform": 0.001633303088964097,
+          "difference": 0.001527601765901237,
+          "oracle": 0.0015237698235128524
+        },
+        "200": {
+          "uniform": 0.0007736698842461513,
+          "difference": 0.0007236008364795333,
+          "oracle": 0.0007217857058745091
+        },
+        "400": {
+          "uniform": 0.00034385328188717834,
+          "difference": 0.00032160037176868155,
+          "oracle": 0.00032079364705533736
+        }
+      },
+      "oracle_relative_to_difference": 0.9974915305324199
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.5283316993290268,
+      "mean_proxy": 0.5841577776362529,
+      "loss_variance": 0.10702417870418336,
+      "proxy_variance": 0.009623605185647257,
+      "covariance": 0.013539890239496925,
+      "oracle_coefficient": 1.4069457316983927,
+      "residual_variances": {
+        "uniform": 0.10702417870418336,
+        "difference": 0.08956800341083677,
+        "oracle": 0.08797428792405844
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.8368950315274482,
+        "oracle": 0.822003859214102
+      },
+      "pool": "dev09",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.0020869714847315756,
+          "difference": 0.001746576066511317,
+          "oracle": 0.0017154986145191395
+        },
+        "100": {
+          "uniform": 0.001016729697689742,
+          "difference": 0.0008508960324029493,
+          "oracle": 0.0008357557352785551
+        },
+        "200": {
+          "uniform": 0.00048160880416882513,
+          "difference": 0.0004030560153487655,
+          "oracle": 0.00039588429565826295
+        },
+        "400": {
+          "uniform": 0.00021404835740836673,
+          "difference": 0.00017913600682167356,
+          "oracle": 0.00017594857584811687
+        }
+      },
+      "oracle_relative_to_difference": 0.9822066427062333
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.35470417145232697,
+      "mean_proxy": 0.3609078458128236,
+      "loss_variance": 0.11369695751502708,
+      "proxy_variance": 0.0597726499203127,
+      "covariance": 0.05116267592355006,
+      "oracle_coefficient": 0.8559546212483263,
+      "residual_variances": {
+        "uniform": 0.11369695751502708,
+        "difference": 0.07114425558823965,
+        "oracle": 0.06990402862283392
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.6257357905011369,
+        "oracle": 0.6148276097326074
+      },
+      "pool": "dev10",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.002217090671543028,
+          "difference": 0.0013873129839706733,
+          "oracle": 0.0013631285581452613
+        },
+        "100": {
+          "uniform": 0.0010801210963927574,
+          "difference": 0.0006758704280882767,
+          "oracle": 0.0006640882719169222
+        },
+        "200": {
+          "uniform": 0.0005116363088176219,
+          "difference": 0.00032014915014707846,
+          "oracle": 0.00031456812880275263
+        },
+        "400": {
+          "uniform": 0.00022739391503005416,
+          "difference": 0.0001422885111764793,
+          "oracle": 0.00013980805724566784
+        }
+      },
+      "oracle_relative_to_difference": 0.9825674335172783
+    },
+    {
+      "n": 2000,
+      "mean_loss": 0.6909104824998011,
+      "mean_proxy": 0.6698766724605076,
+      "loss_variance": 0.05303689489013564,
+      "proxy_variance": 0.004483474013644205,
+      "covariance": 0.006917683232277403,
+      "oracle_coefficient": 1.5429292578088687,
+      "residual_variances": {
+        "uniform": 0.05303689489013564,
+        "difference": 0.04368500243922504,
+        "oracle": 0.042363399034801005
+      },
+      "mse_ratios": {
+        "uniform": 1.0,
+        "difference": 0.8236719462879045,
+        "oracle": 0.7987533795588059
+      },
+      "pool": "dev11",
+      "exact_mse": {
+        "50": {
+          "uniform": 0.001034219450357645,
+          "difference": 0.0008518575475648882,
+          "oracle": 0.0008260862811786196
+        },
+        "100": {
+          "uniform": 0.0005038505014562885,
+          "difference": 0.00041500752317263787,
+          "oracle": 0.00040245229083060957
+        },
+        "200": {
+          "uniform": 0.00023866602700561038,
+          "difference": 0.00019658251097651267,
+          "oracle": 0.0001906352956566045
+        },
+        "400": {
+          "uniform": 0.00010607378978027129,
+          "difference": 8.737000487845007e-05,
+          "oracle": 8.472679806960202e-05
+        }
+      },
+      "oracle_relative_to_difference": 0.9697469765221449
+    }
+  ],
+  "public_input_sha256": {
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/meta.json": "bdfe94a5439a2f43d457508db43baec3fa6fd01ce2d6acf348928818aa7e592e",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev00/target_probs.npy": "9cd3c28d0b3e4da7b8c8db02d85b800e7c69fadf69d9041434a3ef3c96babf04",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/labels.npy": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/meta.json": "fbd09bd017ebdc5fb7d020f7bc589074d9c6ca0356867600bae0967a80edb99a",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/surrogate_probs.npy": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev01/target_probs.npy": "8b891313ce930ce9af1de3350984da342e82f69218592649004c1dbd86d78fc7",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/labels.npy": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/meta.json": "a8c3d3d7b32a9a7e10dbab73a30d32fa73d3a68a06a18c358238bb315b700cfa",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/surrogate_probs.npy": "a65d8681fef80d00e930f6755c159fde6e07e6e4db174f9416c8b7bcf5688c04",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev02/target_probs.npy": "dc8b82b8d786e50e41a6aba916f45e6a6518865fbd9ce1c003f246669d133852",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/labels.npy": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/meta.json": "eceee8941dbfd4981d98c0007cd14b2ece7d5eef6655667cc0c8d0d1f81ca41d",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/surrogate_probs.npy": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev03/target_probs.npy": "f444d80995573f54be8b268fa8a265cf7b405125c79d846f0a215b2a3fec2095",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/meta.json": "6508d5fa5bb30682f9878ace2a0a8ffe7c673ba5041f05929f39965f862d7bb1",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev04/target_probs.npy": "39f928ca736748d528f7b5474eb581d3095d7b6219a56c693f4420ad3d3ce33f",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/labels.npy": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/meta.json": "db746ac36195cf64db4617d7a1d71bc0fde577821c287e1dbee38e1c1deab204",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/surrogate_probs.npy": "c8e5dfc910f9be543e0950caabd2dfb9aa3d08fbee5ab2ade6dfd99509350c22",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev05/target_probs.npy": "aa23a111886cc85b63860304deff19f5a5aefa5c5177169bf78a53d977b9c89f",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/labels.npy": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/meta.json": "911cc1db918020cc35a31dfd48a342641e9d912bf383c2c0de07e3713687e978",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/surrogate_probs.npy": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev06/target_probs.npy": "1173ead7517353f57d2671de4399859a948d5aa8da8db9fc46bc3f26bd292a5b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/labels.npy": "f3de40e415c0b4f68199045225c27c25d646738b6566f7f36c5c210928817e65",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/meta.json": "0098addb35cbcdc882283744144a2acf2aa911388cb2b1a1cba56c0210e757f0",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/surrogate_probs.npy": "587059f8993832e8cd86b3cb378b54a1fde1279b5292763921918529ae315909",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev07/target_probs.npy": "97f92fbc42573621f1bd7664bad18da71b33b79f2bc72ba2616c8087254cca7c",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/meta.json": "2250a6484a08780a3afaefc9e04dc1c3f10635fd2a3dec85ae7721fbdf151d25",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev08/target_probs.npy": "1ff62cb368e45f9ebb592e20e0ad6e899c9a5599db2085f7b828a82ee5bce30e",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/labels.npy": "20e82b56564a298a63f4fa32d0486cf69880998efd47d807581af706f0a8d9c5",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/meta.json": "b3bfb0c400a6d15af6df5bfac75e422a6754475141f5e0d66599178bf0f7c1b8",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/surrogate_probs.npy": "858c1fcabea397ceadb082cd63383a0a32f96f03a38f650202fd740b84f44878",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev09/target_probs.npy": "4af1c3f51551fe94e28bb84485067edc4cf355e7fa9543d936f3b3580a02bde1",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/labels.npy": "48bcbaaa91d3628e06a0bc2d3271f52268c48d8890cfab19727fd6f74c0c903b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/meta.json": "324f1bf0d0dd172d05b11ec87028ae0fefbc5f597de623586fb1b4cab384fcd8",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/surrogate_probs.npy": "a5974111e511d6df53b8aba9761c336907db1f9f6a003267e355e3998cb59722",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev10/target_probs.npy": "7b24f58c5241825ee790558cd7a9d06d8ebb8fbf8fec860bb84bda106887cf1b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/labels.npy": "516cf7cd09b441d0aeb7268f9089d2873e71462ddc1096e96355ce44841b5c7b",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/meta.json": "12242516e77b89c6f3f30af3eaf3d8f1cf77c9b47aee384c935954eb6d673ffd",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/surrogate_probs.npy": "96debf0a38ceecc29f016db21ad939629b4faea3114e458ef4d65c7b188879fe",
+    "label-efficient-risk-estimator/environment/app/data/dev/dev11/target_probs.npy": "6c9ce87a1c22d18c1a4d597346fa933551e54c363ae182a8fae938f5c198a136"
+  },
+  "input_manifest_sha256": "3db1504bf169d989773f221d37a3aad732946d0d03a2b64be858f6396a0e1695",
+  "source_sha256": "1ef1d892811dd63a45cf99128e83d22463a1595e28c0c4a04fc6875921c0ed65",
+  "protocol_sha256": "a50371a39de65024b050b117fa10360596e5c30762cbb42214885bf2d1960352",
+  "python": "3.13.5",
+  "numpy": "2.5.3",
+  "model_calls": 0,
+  "hidden_grader_calls": 0,
+  "external_connection_attempts": [],
+  "scope": "Full-label fixed-public-pool oracle for fixed-coefficient uniform-sampling class only; expected squared error, not median error or official reward."
+}

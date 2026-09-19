@@ -1,0 +1,17 @@
+{
+  "raw_report_sha256": "ff1bac6824091c53d215dc1aae8b186243b020fcf6389004f80520ab2ab22057",
+  "pools": 12,
+  "mse_cells_checked": 144,
+  "verified_public_files": 48,
+  "method": "NumPy covariance matrix and quadratic variance identity, separate from scalar fsum/statistics original calculation; not independent team.",
+  "numpy": "2.3.5",
+  "rtol": 1e-12,
+  "atol": 1e-14,
+  "maximum_variance_absolute_difference": 2.220446049250313e-16,
+  "oracle_to_difference_median": 0.979513592203467,
+  "oracle_to_difference_range": [
+    0.7693323610890236,
+    0.9975185478072717
+  ],
+  "no_new_model_calls": true
+}
