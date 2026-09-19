@@ -55,3 +55,49 @@ database and reference arguments. The optional `--normalization-source` is
 the pinned LiveAPIbench checkout; `--dependency-dir` can point to an isolated
 sqlglot installation. Without those arguments the script reports direct JSON
 comparison only. Never present either comparison as an agent success rate.
+
+## Real MCP compatibility control
+
+The checked-in MCP universe mapping has 2,085 entries, including eight entries
+whose domain is exactly `world`, but none of the 52 downloaded train UUIDs.
+The upstream generator defaults to a test-output directory absent from this
+dataset revision. `autolab.vakra_prepare` invokes that unchanged generator with
+the train-output directory and a new destination. It retains all 52 input
+queries, their prescribed initial table/join arguments, and upstream-derived
+tool family. No answer or reference-program file is copied into the runtime.
+The original checkout remains unchanged. The final minimal runtime packages
+only capability-1 server code and its license, excluding unrelated BPO data.
+
+An actual MCP stdio replay enables the official Pydantic wrappers and server
+handles. In the first pass, five reference programs fail: the startup universe
+does not advertise its dynamic getter, two reference column names differ in
+case from the schema, and two count calls use an empty column name that the MCP
+validator rejects. These are interface compatibility failures, not model errors.
+
+The Router creates getters before its input-model dictionary exists; only a
+later universe switch registers their schemas. A public `get_data` call to a
+different input universe before the first evaluated task avoids the startup
+omission. This setup call is logged separately and is not placed in the model
+context. Tool schemas are refreshed after each task's universe switch. The
+server's tool behavior is unchanged, and reference parameters are not repaired.
+With this documented setup, 48/52 reference programs execute; four retain the
+column-validation errors. Direct JSON answer comparison matches 14/52 and is
+still not an official score. The database hash remains unchanged. A two-task
+preflight confirms the reduced runtime retains the working interface.
+
+`autolab.vakra_native` now connects the existing local native-template model
+adapter to this MCP server. It loads the unchanged official system-prompt
+method separately from hosted-model imports, permits final text answers, and
+records raw generations, actual tool responses, budgets and errors. It has no
+reference-answer argument and does not compute a score during interaction.
+Three unit tests cover tool-to-answer transitions, rejecting multiple calls
+before execution, and preserving a generated trace after transport failure.
+A scripted CPU preflight also traverses the real prompt, MCP schema, handle and
+getter response. It is not a language-model run. Its first fixture incorrectly
+guessed a handle prefix; the corrected fixture reads the actual handle from
+the official prompt. Both diagnostic logs are retained.
+
+MCP runtime used here: mcp 1.30.0, pandas 3.0.1, NumPy 2.3.5,
+Pydantic 2.13.5, PyYAML 6.0.3. Generated 52-query mapping SHA256:
+`c692d4a77426d18ff8c422469aa914cde2ffc7f5846c56f9a9540b9dedcd1ec5`.
+No GPU model result or external judge result is claimed by these controls.
