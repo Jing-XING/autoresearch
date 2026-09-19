@@ -1,0 +1,13 @@
+{
+  "annotation_sha256": "195f31c45b6a0a72311041e10fb1e72e80e03f8ba401ff775e7b923c37dbe706",
+  "bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "registration_sha256": "6ea39c919a80833c5a4686b3c066dc1ddf32fff16e087004653d28b331958deb",
+  "script_sha256": "85b8626b1cbfbf588ea1a91df76e330b1a23951ece010ae2f525c7251e2a83fa",
+  "records": 15,
+  "claim_examples": 17,
+  "exact_quotes_verified": true,
+  "referenced_tool_responses_exist": true,
+  "duplicate_content_verified": true,
+  "semantic_labels_automatically_verified": false,
+  "note": "These checks verify provenance, not independent correctness of the one-reviewer interpretations."
+}

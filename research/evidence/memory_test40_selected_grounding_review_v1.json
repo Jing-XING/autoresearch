@@ -1,0 +1,101 @@
+{
+  "purpose": "Descriptive factual-claim inspection of every source selected by the frozen test retrieval rules, before target outcomes",
+  "reviewer": "Codex assistant; one unblinded reviewer, not independent human adjudication",
+  "bank_sha256": "52928f597ba4f0baa9d8794130f674ba47038e43eca4fca6654abda4c8b04875",
+  "packet_sha256": "5acda2168b1c84279dde1dacec32ffdf57e6fccda88dd333cb32b1dc5a47e2cd",
+  "reviewed_source_ids": 15,
+  "reviewed_lesson_instances": 45,
+  "all_conditions_read": ["outcome_only", "full_metadata", "boundary_aware"],
+  "limits": [
+    "Examples below are selected claim-level annotations after reading all 45 lessons; they are not an exhaustive factuality labeling or an error-rate denominator.",
+    "Sources are selected by the registered retriever, not randomly sampled; duplicate source content is retained and identified.",
+    "Only visible recorded messages and boundary metadata are used. No future source labels or target outcomes were consulted for this review.",
+    "Raw memory omits the source policy. Recommendations and applicability advice are not scored for policy compliance from this packet.",
+    "Unsupported means not established by the cited visible prefix, not necessarily false in the hidden environment.",
+    "A successful sequence supports its observed outcome, not unique causal attribution to one component or guaranteed transfer."
+  ],
+  "records": [
+    {
+      "record_id": "001cad7a4dfa5c36c0c8a9c6",
+      "note": "All three lessons identify missing MMSC as the cause. The absent URL is observed before reset; the prefix ends with reboot and contains no post-reboot MMS test. Advice to restore service is not automatically a claim that restoration already happened.",
+      "claims": [{"condition":"boundary_aware","quote":"a missing MMSC URL in APN settings","label":"supported_pre_action_state","tool_call_ids":["native-5-0","native-6-0","native-7-0"],"reason":"The URL is Not Set before reset. Its sufficiency to explain the entire task and post-reset success remain unverified."}]
+    },
+    {
+      "record_id": "01975cd2a2b65e65e14b16ba",
+      "note": "All three lessons attribute failure to APN configuration using a test that reports inability but not cause.",
+      "claims": [
+        {"condition":"full_metadata","quote":"Resetting the APN settings and rebooting the device resolves the issue","label":"contradicted_recorded_outcome","tool_call_ids":["native-3-0","native-4-0","native-5-0","native-6-0","native-7-0"],"reason":"The last MMS test after the reset and reboot still reports inability to send."},
+        {"condition":"boundary_aware","quote":"due to incorrect APN settings, as confirmed by the `can_send_mms` tool","label":"unsupported_causal_attribution","tool_call_ids":["native-2-0","native-3-0","native-6-0","native-7-0"],"reason":"The MMS test establishes failure, not the proposed APN diagnosis."}
+      ]
+    },
+    {
+      "record_id": "09060edd04ee056725e696c1",
+      "note": "All three lessons recommend the observed successful sequence. The ticket says No Service, while the actual first status-bar response says Airplane Mode. The positive outcome does not isolate airplane mode from the subsequent data toggle.",
+      "claims": [{"condition":"boundary_aware","quote":"the status bar showing \"✈️ Airplane Mode\"","label":"supported_observation","tool_call_ids":["native-2-0","native-3-0","native-4-0","native-5-0"],"reason":"Airplane Mode is directly observed; toggling it off and enabling data precede an excellent speed test."}]
+    },
+    {
+      "record_id": "12403621a4da5d614219a538",
+      "note": "Outcome-only and full-metadata recommend reseating; boundary-aware additionally assigns a post-action SIM state.",
+      "claims": [{"condition":"boundary_aware","quote":"the SIM is not detected after reseating","label":"unsupported_post_action_state","tool_call_ids":["native-6-0","native-7-0"],"reason":"No SIM detected was observed before reseating. After reseating, only successful action completion and No Signal are reported; no new SIM-status query occurs."}]
+    },
+    {
+      "record_id": "2673c1064f552da7a4d91598",
+      "note": "All three lessons retain a missing/incorrect MMSC diagnosis even though the URL changes from Not Set to a concrete URL and MMS still fails. Airplane Mode remains visible throughout the reset.",
+      "claims": [{"condition":"boundary_aware","quote":"the issue stems from APN configuration, which is confirmed by the tool output","label":"unsupported_current_causal_attribution","tool_call_ids":["native-2-0","native-5-0","native-6-0","native-7-0"],"reason":"The prefix confirms the earlier absent URL and its subsequent change, but does not establish that the remaining failure is due to APN configuration."}]
+    },
+    {
+      "record_id": "28685250e103b91dab68f65e",
+      "note": "The three lessons recommend the network preference change; boundary-aware explicitly records its successful measured result. An earlier airplane-mode action is also part of the trajectory.",
+      "claims": [{"condition":"boundary_aware","quote":"enabled an excellent speed test result","label":"supported_recorded_outcome","tool_call_ids":["native-3-0","native-4-0","native-5-0","native-6-0"],"reason":"The network is initially 2G after disabling Airplane Mode, changes to 5G, and the next speed test is excellent."}]
+    },
+    {
+      "record_id": "356f2909e2472ab38853e211",
+      "note": "All lessons summarize connectivity actions; boundary-aware goes beyond the observed failure to exclude agent control.",
+      "claims": [{"condition":"boundary_aware","quote":"unresolved network issues beyond agent control","label":"unsupported_exclusion","tool_call_ids":["native-4-0","native-6-0","native-7-0"],"reason":"The failed speed test establishes unresolved connectivity, not impossibility of agent repair. Data Saver and VPN remain visible and have not been excluded."}]
+    },
+    {
+      "record_id": "4e9d3bedee70ce78226886a3",
+      "note": "All three lessons recognize reseating occurred. The boundary-aware phrase may lie beyond scope is hedged; it is not treated as an assertion of impossibility. Normative escalation advice is not graded.",
+      "claims": [{"condition":"full_metadata","quote":"resulted in no signal, indicating the issue persists beyond physical reinsertion","label":"supported_persistent_outcome","tool_call_ids":["native-5-0","native-6-0","native-7-0"],"reason":"The reseat response and subsequent status check both report No Signal. This supports persistence, not an assertion that reseating caused the lack of signal."}]
+    },
+    {
+      "record_id": "673a629dd5b18b47e8d55114",
+      "note": "All three lessons give positive connectivity advice even though the externally cut prefix has completion reward zero. The visible final tool result is an excellent speed test. Thus zero finite-budget reward is not uniformly verbalized as failure.",
+      "claims": [{"condition":"boundary_aware","quote":"This sequence is effective when the user is abroad and requires data connectivity","label":"supported_source_outcome_only","tool_call_ids":["native-3-0","native-4-0","native-5-0","native-6-0","native-7-0"],"reason":"The source sequence ends with an excellent test, supporting this source outcome, not universal effectiveness on all abroad tasks."}]
+    },
+    {
+      "record_id": "73bbfa1dab82d63fa9c02865",
+      "duplicate_visible_content_of": "4e9d3bedee70ce78226886a3",
+      "note": "Raw history and all three compact lessons are identical to the listed source. Read and retained, but not independent claim evidence.",
+      "claims": [{"condition":"full_metadata","quote":"resulted in no signal, indicating the issue persists beyond physical reinsertion","label":"supported_persistent_outcome","tool_call_ids":["native-5-0","native-6-0","native-7-0"],"reason":"Same visible persistence evidence as the duplicate source; no additional independent observation."}]
+    },
+    {
+      "record_id": "83ebfaa6e9ebffbf04f7e475",
+      "note": "All three lessons claim the user's line is not roaming enabled. Device roaming is observed off, but the only account-line lookup is for another phone number. Those two scopes must not be equated.",
+      "claims": [{"condition":"boundary_aware","quote":"their line is not roaming enabled","label":"unsupported_target_entity_state","tool_call_ids":["native-0-0","native-1-0","native-7-0"],"reason":"The ticket targets 555-123-2002; account roaming_enabled=false is returned for L1001 / 555-123-2001. Device Data Roaming Enabled: No does not establish account-line state for 2002."}]
+    },
+    {
+      "record_id": "9fc5a56f85a8013d8789ac69",
+      "note": "All lessons reuse the pre-reset missing-MMSC diagnosis. Boundary-aware additionally says no further action is needed if the URL remains missing; that is a conditional recommendation, not a recorded observation, and is not graded as a factual error here.",
+      "claims": [{"condition":"boundary_aware","quote":"a missing MMSC URL in the APN settings","label":"supported_before_reset_not_current","tool_call_ids":["native-2-0","native-5-0","native-6-0"],"reason":"The URL was initially absent, is present after reset, and MMS still fails. The prefix does not establish missing URL as the remaining cause."}]
+    },
+    {
+      "record_id": "a00e717b13586094d7879774",
+      "note": "Full-metadata preserves the failed connectivity observation without claiming completed resolution. Outcome-only changes an observed network type; boundary-aware claims resolution without a post-final-action test and also mentions failure.",
+      "claims": [
+        {"condition":"outcome_only","quote":"the device is operating on a 2G network","label":"contradicted_observed_state","tool_call_ids":["native-2-0","native-3-0","native-5-0","native-7-0"],"reason":"Every observed network type in this prefix is 5G, including the explicit network-status response."},
+        {"condition":"boundary_aware","quote":"Toggle data and set network mode to 4g_5g_preferred resolved the issue","label":"unsupported_post_action_outcome","tool_call_ids":["native-3-0","native-4-0","native-5-0","native-7-0"],"reason":"The only speed test fails after the data toggle and before the final network preference action. No post-final-action speed test appears. The later outcome cannot be inferred either way."}
+      ]
+    },
+    {
+      "record_id": "b2b8a0bbc0bd4c9f62744e93",
+      "note": "All three recommend the connectivity sequence. Boundary-aware explicitly retains the failed test and need for more evidence; this is a useful counterexample to blanket claims that boundary-aware summaries discard failures.",
+      "claims": [{"condition":"boundary_aware","quote":"the speed test failed due to no connection, indicating the issue persists despite these steps","label":"supported_recorded_outcome","tool_call_ids":["native-3-0","native-4-0","native-5-0","native-6-0","native-7-0"],"reason":"The final speed test reports No Connection after the listed interventions."}]
+    },
+    {
+      "record_id": "cd613f70f09eebdeb98fa0e6",
+      "note": "All three recommend enabling account-line roaming conditionally; they do not explicitly assert its observed account status. The final action already enables device roaming. No target-line account lookup or MMS test appears, so account-level necessity and final MMS success remain unverified.",
+      "claims": [{"condition":"boundary_aware","quote":"the issue persists due to underlying APN or network settings, which were not verified in the recorded actions","label":"qualified_hypothesis_not_observed_cause","tool_call_ids":["native-1-0","native-6-0","native-7-0"],"reason":"The surrounding sentence explicitly says uncertainty remains if. Network status was checked, but APN and account-line status for the target phone were not; do not convert this conditional phrase into a claimed diagnosis."}]
+    }
+  ]
+}
