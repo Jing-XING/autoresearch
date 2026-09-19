@@ -19,8 +19,22 @@ import time
 from types import SimpleNamespace
 
 from .local_smoke import sha256_file
-from .native_tool_agent import NativeTransformersModel, parse_calls
+from .native_tool_agent import InputBudgetExceeded, NativeTransformersModel, parse_calls
 from .vakra_mcp_audit import decode_result
+
+
+INSTRUCTION_CONDITIONS = {
+    "original": "",
+    "coverage_check": (
+        "\n\nBefore answering, verify that the observed results cover the requested scope. "
+        "A first_3_values preview is a sample, not a complete column. Compare it with num_records. "
+        "For a complete list, obtain the relevant full column from a correctly filtered handle. "
+        "For a count or aggregate, use the appropriate tool on the correctly filtered data. "
+        "Filter or aggregate large tables before fetching full columns. "
+        "Check every requested condition, including any status qualifier. "
+        "If the evidence remains incomplete, explicitly state that limitation instead of claiming completeness."
+    ),
+}
 
 
 def official_system_message(agent_source, peek):
@@ -44,14 +58,16 @@ def result_text(result):
     return "\n".join(blocks)
 
 
-async def run_episode(model, session, query, agent_source, max_steps, max_new_tokens):
+async def run_episode(model, session, query, agent_source, max_steps, max_new_tokens,
+                      instruction_condition="original"):
+    suffix = INSTRUCTION_CONDITIONS[instruction_condition]
     initial_result = await session.call_tool("get_data", {"tool_universe_id": query["uuid"]})
     peek = decode_result(initial_result)
     tools = [{"type": "function", "function": {
         "name": tool.name, "description": tool.description or "", "parameters": tool.inputSchema}}
         for tool in (await session.list_tools()).tools]
     known = {t["function"]["name"] for t in tools}
-    messages = [{"role": "system", "content": official_system_message(agent_source, peek)},
+    messages = [{"role": "system", "content": official_system_message(agent_source, peek) + suffix},
                 {"role": "user", "content": query["dialogue"]["turns"][0]["query"]}]
     usage = {"model_calls": 0, "tool_calls": 0, "input_tokens": 0, "output_tokens": 0,
              "generation_seconds": 0.0, "protocol_errors": 0}
@@ -63,6 +79,10 @@ async def run_episode(model, session, query, agent_source, max_steps, max_new_to
         usage["model_calls"] += 1
         try:
             reply = model.generate_tools(messages, tools, max_new_tokens)
+        except InputBudgetExceeded as exc:
+            event.update(error_type=type(exc).__name__, error=str(exc))
+            termination = "input_budget_exceeded"
+            break
         except Exception as exc:
             event.update(error_type=type(exc).__name__, error=str(exc))
             termination = "model_error"
@@ -108,7 +128,8 @@ async def run_episode(model, session, query, agent_source, max_steps, max_new_to
     return {"uuid": query["uuid"], "query": query, "initial_peek": peek, "tools": tools,
             "trace": trace, "messages": messages, "usage": usage,
             "final_answer": final_answer, "termination": termination,
-            "elapsed_seconds": time.monotonic() - started}
+            "elapsed_seconds": time.monotonic() - started,
+            "instruction_condition": instruction_condition}
 
 
 async def run(args):
@@ -137,6 +158,9 @@ async def run(args):
         "selected_task_ids": [q["uuid"] for q in selected],
         "selection": "fixed input order then stride, without outcome filtering",
         "max_steps": args.max_steps, "max_new_tokens": args.max_new_tokens,
+        "max_input_tokens": args.max_input_tokens,
+        "instruction_condition": args.instruction_condition,
+        "instruction_suffix": INSTRUCTION_CONDITIONS[args.instruction_condition],
         "seed": 20260919, "decoder": "greedy_native_template", "supplied_prefix": "",
         "preparation_sha256": sha256_file(prepared / "preparation_manifest.json"),
         "queries_sha256": sha256_file(prepared / "queries.json"),
@@ -153,7 +177,8 @@ async def run(args):
                         "five explicit protocol-error retries; no hidden answer evaluation"],
     }
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-    model = NativeTransformersModel(args.model_path, tool_prefix=False)
+    model = NativeTransformersModel(args.model_path, tool_prefix=False,
+                                    max_input_tokens=args.max_input_tokens)
     params = StdioServerParameters(command=sys.executable,
         args=["-X", "utf8", "-m", "autolab.vakra_stdio", "--runtime", str(prepared / "runtime"),
               "--database", str(database), "--domain", prep["domain"]],
@@ -174,7 +199,8 @@ async def run(args):
                 for index, query in enumerate(selected):
                     try:
                         episode = await run_episode(model, session, query, args.agent_source,
-                                                    args.max_steps, args.max_new_tokens)
+                                                    args.max_steps, args.max_new_tokens,
+                                                    args.instruction_condition)
                     except Exception as exc:
                         episode = {"uuid": query["uuid"], "termination": "run_error",
                                    "error_type": type(exc).__name__, "error": str(exc)}
@@ -196,9 +222,13 @@ def main():
     p.add_argument("--shards", type=int, default=1)
     p.add_argument("--max-steps", type=int, default=20)
     p.add_argument("--max-new-tokens", type=int, default=512)
+    p.add_argument("--max-input-tokens", type=int)
+    p.add_argument("--instruction-condition", choices=tuple(INSTRUCTION_CONDITIONS), default="original")
     args = p.parse_args()
     if not 0 <= args.shard < args.shards or args.count < args.shards or min(args.max_steps, args.max_new_tokens) < 1:
         p.error("Invalid count, shard, or budget")
+    if args.max_input_tokens is not None and args.max_input_tokens < 1:
+        p.error("Input-token limit must be positive")
     asyncio.run(run(args))
 
 

@@ -1,0 +1,397 @@
+{
+  "purpose": "offline assistant-authored semantic audit cards, not an official evaluator or human annotation",
+  "model_outputs_inspected": "first4-v1 only; coverage12 outcomes not used to define these cards",
+  "input_sha256": {
+    "databases\\world\\world.sqlite": "813faade795b875f6d46cf81d9651e2400524b414a407aa9d473aa9a8c142861",
+    "train\\capability_1_bi_apis\\input\\world.json": "963e6a095087a1b7dbc5d7e114c4e1dea798273248b1fe75bf6f5c8cf426b828",
+    "train\\capability_1_bi_apis\\output\\world.json": "6343f50f91995a6c82a41b4280be69d919e0ee26ea3636772ba28e411e47a67d"
+  },
+  "cards": [
+    {
+      "uuid": "486ea46224d1-2b5bb9f47372",
+      "query": "List any five countries which use English as an official language.",
+      "reference_answer": [
+        "Anguilla",
+        "American Samoa",
+        "Antigua and Barbuda",
+        "Australia",
+        "Belize"
+      ],
+      "audit_sql": "SELECT c.Name FROM Country c JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE l.Language='English' AND l.IsOfficial='T' ORDER BY c.Code",
+      "columns": [
+        "Name"
+      ],
+      "rows": [
+        [
+          "Anguilla"
+        ],
+        [
+          "American Samoa"
+        ],
+        [
+          "Antigua and Barbuda"
+        ],
+        [
+          "Australia"
+        ],
+        [
+          "Belize"
+        ],
+        [
+          "Bermuda"
+        ],
+        [
+          "Barbados"
+        ],
+        [
+          "Canada"
+        ],
+        [
+          "Cocos (Keeling) Islands"
+        ],
+        [
+          "Christmas Island"
+        ],
+        [
+          "Cayman Islands"
+        ],
+        [
+          "Falkland Islands"
+        ],
+        [
+          "United Kingdom"
+        ],
+        [
+          "Gibraltar"
+        ],
+        [
+          "Guam"
+        ],
+        [
+          "Hong Kong"
+        ],
+        [
+          "Ireland"
+        ],
+        [
+          "Saint Kitts and Nevis"
+        ],
+        [
+          "Saint Lucia"
+        ],
+        [
+          "Lesotho"
+        ],
+        [
+          "Marshall Islands"
+        ],
+        [
+          "Malta"
+        ],
+        [
+          "Northern Mariana Islands"
+        ],
+        [
+          "Montserrat"
+        ],
+        [
+          "Norfolk Island"
+        ],
+        [
+          "Niue"
+        ],
+        [
+          "Nauru"
+        ],
+        [
+          "New Zealand"
+        ],
+        [
+          "Palau"
+        ],
+        [
+          "Saint Helena"
+        ],
+        [
+          "Seychelles"
+        ],
+        [
+          "Turks and Caicos Islands"
+        ],
+        [
+          "Tokelau"
+        ],
+        [
+          "Tonga"
+        ],
+        [
+          "Tuvalu"
+        ],
+        [
+          "United States Minor Outlying Islands"
+        ],
+        [
+          "United States"
+        ],
+        [
+          "Saint Vincent and the Grenadines"
+        ],
+        [
+          "Virgin Islands, British"
+        ],
+        [
+          "Virgin Islands, U.S."
+        ],
+        [
+          "Vanuatu"
+        ],
+        [
+          "Samoa"
+        ],
+        [
+          "South Africa"
+        ],
+        [
+          "Zimbabwe"
+        ]
+      ],
+      "interpretation": "Any five distinct eligible countries satisfy the query; matching the reference's exact first five is unnecessary."
+    },
+    {
+      "uuid": "486ea46224d1-674a4702614a",
+      "query": "How many cities are there in England?",
+      "reference_answer": 71,
+      "audit_sql": "SELECT COUNT(*) FROM City WHERE District='England'",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          71
+        ]
+      ],
+      "interpretation": "Count only England records, not all City rows."
+    },
+    {
+      "uuid": "486ea46224d1-74c57403a8e6",
+      "query": "List the languages used in Turkmenistan.",
+      "reference_answer": [
+        "Kazakh",
+        "Russian",
+        "Turkmenian",
+        "Uzbek"
+      ],
+      "audit_sql": "SELECT Language FROM CountryLanguage WHERE CountryCode='TKM' ORDER BY Language",
+      "columns": [
+        "Language"
+      ],
+      "rows": [
+        [
+          "Kazakh"
+        ],
+        [
+          "Russian"
+        ],
+        [
+          "Turkmenian"
+        ],
+        [
+          "Uzbek"
+        ]
+      ],
+      "interpretation": "Complete language set required, including Uzbek. Official language alone is insufficient."
+    },
+    {
+      "uuid": "486ea46224d1-9bae74dab965",
+      "query": "Provide the name, capital city and its official language of the country with the highest life expectancy.",
+      "reference_answer": [
+        "Andorra",
+        55.0,
+        "Catalan"
+      ],
+      "audit_sql": "SELECT c.Name,c.Capital,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.LifeExpectancy=(SELECT MAX(LifeExpectancy) FROM Country) AND l.IsOfficial='T'",
+      "columns": [
+        "Name",
+        "Capital",
+        "Name",
+        "Language"
+      ],
+      "rows": [
+        [
+          "Andorra",
+          55,
+          "Andorra la Vella",
+          "Catalan"
+        ]
+      ],
+      "interpretation": "Reference uses numeric capital ID; the query asks for the capital city. Resolve the foreign key for semantic audit. Include only official languages."
+    },
+    {
+      "uuid": "486ea46224d1-27cb99545c51",
+      "query": "Among the languages used in Baltic Countries, provide the languages which are used by over 80%.\n\n",
+      "reference_answer": "Lithuanian",
+      "audit_sql": "SELECT DISTINCT l.Language FROM Country c JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.Region='Baltic Countries' AND l.Percentage>80 ORDER BY l.Language",
+      "columns": [
+        "Language"
+      ],
+      "rows": [
+        [
+          "Lithuanian"
+        ]
+      ],
+      "interpretation": "Percentage is strictly greater than 80; exact language set."
+    },
+    {
+      "uuid": "486ea46224d1-aff4c9603f4d",
+      "query": "Provide the name, located country, and life expectancy of the most populated city",
+      "reference_answer": [
+        "Mumbai (Bombay)",
+        "IND",
+        62.5
+      ],
+      "audit_sql": "SELECT city.Name,c.Code,c.Name,c.LifeExpectancy FROM City city JOIN Country c ON c.Code=city.CountryCode WHERE city.Population=(SELECT MAX(Population) FROM City)",
+      "columns": [
+        "Name",
+        "Code",
+        "Name",
+        "LifeExpectancy"
+      ],
+      "rows": [
+        [
+          "Mumbai (Bombay)",
+          "IND",
+          "India",
+          62.5
+        ]
+      ],
+      "interpretation": "Reference country is a code. Its corresponding country name is semantically equivalent."
+    },
+    {
+      "uuid": "486ea46224d1-7d79ad7c0e0e",
+      "query": "Provide the country, population, capital city, and official language of the country with the smallest surface area.",
+      "reference_answer": [
+        "Holy See (Vatican City State)",
+        1000,
+        3538.0,
+        "Italian"
+      ],
+      "audit_sql": "SELECT c.Name,c.Population,c.Capital,city.Name,l.Language FROM Country c JOIN City city ON c.Capital=city.ID JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE c.SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country) AND l.IsOfficial='T'",
+      "columns": [
+        "Name",
+        "Population",
+        "Capital",
+        "Name",
+        "Language"
+      ],
+      "rows": [
+        [
+          "Holy See (Vatican City State)",
+          1000,
+          3538,
+          "Città del Vaticano",
+          "Italian"
+        ]
+      ],
+      "interpretation": "Reference uses numeric capital ID. Distinguish country population from city population and official from merely spoken languages."
+    },
+    {
+      "uuid": "486ea46224d1-65e39fac89be",
+      "query": "List the district name of the city with the smallest population.",
+      "reference_answer": "–",
+      "audit_sql": "SELECT Name,Population,District FROM City WHERE Population=(SELECT MIN(Population) FROM City)",
+      "columns": [
+        "Name",
+        "Population",
+        "District"
+      ],
+      "rows": [
+        [
+          "Adamstown",
+          42,
+          "–"
+        ]
+      ],
+      "interpretation": "The stored district is an en dash. Explicitly reporting that the district is unspecified is semantically different from claiming tool failure."
+    },
+    {
+      "uuid": "486ea46224d1-cd809c9ef7fa",
+      "query": "In which continent does the country with the smallest surface area belongs?",
+      "reference_answer": "Europe",
+      "audit_sql": "SELECT Name,Continent FROM Country WHERE SurfaceArea=(SELECT MIN(SurfaceArea) FROM Country)",
+      "columns": [
+        "Name",
+        "Continent"
+      ],
+      "rows": [
+        [
+          "Holy See (Vatican City State)",
+          "Europe"
+        ]
+      ],
+      "interpretation": "Return continent of the minimum-surface-area country."
+    },
+    {
+      "uuid": "486ea46224d1-cd446461ab5d",
+      "query": "Who is the head of the state where the most crowded city belongs?",
+      "reference_answer": "Kocheril Raman Narayanan",
+      "audit_sql": "SELECT city.Name,c.Name,c.HeadOfState FROM City city JOIN Country c ON c.Code=city.CountryCode WHERE city.Population=(SELECT MAX(Population) FROM City)",
+      "columns": [
+        "Name",
+        "Name",
+        "HeadOfState"
+      ],
+      "rows": [
+        [
+          "Mumbai (Bombay)",
+          "India",
+          "Kocheril Raman Narayanan"
+        ]
+      ],
+      "interpretation": "Reference interprets most crowded as largest population, not density. Answer is relative to this historical database, not current head of state."
+    },
+    {
+      "uuid": "486ea46224d1-5df43dad6593",
+      "query": "Among the countries that officially use the English language, what country has the highest capital?",
+      "reference_answer": "ZWE",
+      "audit_sql": "SELECT c.Code,c.Name,c.Capital FROM Country c JOIN CountryLanguage l ON c.Code=l.CountryCode WHERE l.Language='English' AND l.IsOfficial='T' ORDER BY c.Capital DESC LIMIT 1",
+      "columns": [
+        "Code",
+        "Name",
+        "Capital"
+      ],
+      "rows": [
+        [
+          "ZWE",
+          "Zimbabwe",
+          4068
+        ]
+      ],
+      "interpretation": "Ambiguous natural-language query: reference maximizes capital-city identifier, not altitude, population or financial capital. Report reference compatibility separately; do not call this unambiguous semantic correctness."
+    },
+    {
+      "uuid": "486ea46224d1-c859d649b4b5",
+      "query": "List down the cities that belong to the country with a life expectancy of 66.4.",
+      "reference_answer": [
+        "Yerevan",
+        "Gjumri",
+        "Vanadzor"
+      ],
+      "audit_sql": "SELECT city.Name FROM City city JOIN Country c ON c.Code=city.CountryCode WHERE c.LifeExpectancy=66.4 ORDER BY city.ID",
+      "columns": [
+        "Name"
+      ],
+      "rows": [
+        [
+          "Yerevan"
+        ],
+        [
+          "Gjumri"
+        ],
+        [
+          "Vanadzor"
+        ]
+      ],
+      "interpretation": "Complete city set; do not stop at a preview unless its coverage is complete."
+    }
+  ]
+}

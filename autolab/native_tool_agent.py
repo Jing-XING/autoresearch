@@ -17,6 +17,10 @@ class NativeModelReply(ModelReply):
     supplied_prefix: str
 
 
+class InputBudgetExceeded(ValueError):
+    """A registered input-token budget, not an inferred model failure."""
+
+
 def parse_calls(text):
     blocks = re.findall(r"<tool_call>\s*(.*?)\s*</tool_call>", text, re.S)
     if text.count("<tool_call>") != len(blocks) or text.count("</tool_call>") != len(blocks):
@@ -33,9 +37,10 @@ def parse_calls(text):
 
 
 class NativeTransformersModel(LocalTransformersModel):
-    def __init__(self, model_path, tool_prefix=False):
+    def __init__(self, model_path, tool_prefix=False, max_input_tokens=None):
         super().__init__(model_path)
         self.tool_prefix = tool_prefix
+        self.max_input_tokens = max_input_tokens
 
     def generate_tools(self, messages, tools, max_new_tokens):
         prefix = "<tool_call>\n" if self.tool_prefix else ""
@@ -43,12 +48,16 @@ class NativeTransformersModel(LocalTransformersModel):
             prompt = self.tokenizer.apply_chat_template(
                 messages, tools=tools, add_generation_prompt=True, tokenize=False)
             tensors = self.tokenizer(prompt + prefix, add_special_tokens=False,
-                                     return_tensors="pt").to(self.model.device)
+                                     return_tensors="pt")
         else:
             tensors = self.tokenizer.apply_chat_template(
                 messages, tools=tools, add_generation_prompt=True, tokenize=True,
-                return_tensors="pt", return_dict=True).to(self.model.device)
+                return_tensors="pt", return_dict=True)
         n_input = tensors["input_ids"].shape[-1]
+        limit = self.max_input_tokens
+        if limit is not None and n_input > limit:
+            raise InputBudgetExceeded(f"Input has {n_input} tokens; registered maximum is {limit}")
+        tensors = tensors.to(self.model.device)
         self.torch.cuda.synchronize()
         started = time.monotonic()
         with self.torch.inference_mode():

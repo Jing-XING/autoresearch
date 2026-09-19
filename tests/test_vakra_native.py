@@ -4,7 +4,7 @@ import tempfile
 from types import SimpleNamespace
 import unittest
 
-from autolab.native_tool_agent import NativeModelReply
+from autolab.native_tool_agent import InputBudgetExceeded, NativeModelReply
 from autolab.vakra_native import run_episode
 
 
@@ -73,6 +73,24 @@ class TestVakraNative(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result["termination"], "transport_error")
         self.assertEqual(result["trace"][0]["reply"]["text"], self.call)
         self.assertEqual(result["trace"][0]["error_type"], "TimeoutError")
+
+    async def test_input_budget_is_distinct_from_model_error(self):
+        class LimitedModel:
+            def generate_tools(self, *args):
+                raise InputBudgetExceeded("registered limit")
+        session = Session()
+        result = await run_episode(LimitedModel(), session, self.query, self.source, 3, 64)
+        self.assertEqual(result["termination"], "input_budget_exceeded")
+        self.assertIsNone(result["final_answer"])
+        self.assertEqual([c[0] for c in session.calls], ["get_data"])
+
+    async def test_coverage_control_retains_official_prompt_and_query(self):
+        session = Session()
+        result = await run_episode(Model(["No answer"]), session, self.query, self.source,
+                                   3, 64, instruction_condition="coverage_check")
+        self.assertTrue(result["trace"][0]["input"][0]["content"].startswith("Use initial\n\n"))
+        self.assertEqual(result["trace"][0]["input"][1]["content"], "Read the names")
+        self.assertEqual(result["instruction_condition"], "coverage_check")
 
 
 if __name__ == "__main__":
