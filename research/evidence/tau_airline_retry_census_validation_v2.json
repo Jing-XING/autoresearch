@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "validator_sha256": "b267330962440417939d1b47437c60265ea5bd67d1c690606a267aae57247451",
+  "report_sha256": "2847061473d9c6d5f78694d0c3b854d9c85aa85a690e4423ee9558cb8d91f0d4",
+  "raw_sha256": "540c43d53cc0c4533209b663295bc02eca59ae9817c2e16d0211e94d0e2f4a6d",
+  "population": 2000,
+  "states_and_nets_recomputed": 10000,
+  "ledger_entry_patterns": {
+    "(2, 4, 8)": 2000
+  },
+  "initial_payment_type_counts": {
+    "gift_card": 965,
+    "credit_card": 1035
+  },
+  "interpretation": "Finite native input census; no agent tasks, external payments, MCP, stale reads or concurrency."
+}

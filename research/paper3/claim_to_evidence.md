@@ -23,3 +23,9 @@ production prevalence, reconstructed paper scores or independent human
 adjudication are established. Do not aggregate the probe counts into a
 benchmark sample size. Instructions and scope are detailed in
 `../evidence/rac_native_mcp_findings.md`.
+# Additional native retry evidence
+
+| Claim | Evidence | Scope |
+|---|---|---|
+| In all 2,000 public initial reservations, repeated native cancellation gives ledger sizes 2/4/8 while maintaining cancelled status and zero signed net | `../evidence/tau_airline_retry_census_v1.json`, `../evidence/tau_airline_retry_census_validation_v2.json` | Direct native calls; homogeneous one-payment starting ledgers; no external payment harm or framework retry claim |
+| One authoritative native read after an imposed acknowledgement error avoids two further cancellation calls and matches single-cancel state | Same immutable census; raw receipt `../evidence/tau_airline_retry_census_receipt_v2.json` | Diagnostic policy supplied by experimenter; synchronous state, no concurrent writes, no new algorithm |

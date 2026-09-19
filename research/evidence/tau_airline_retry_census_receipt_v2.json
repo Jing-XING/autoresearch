@@ -1,0 +1,18 @@
+{
+  "archive": "results/remote/tau-airline-retry-census-v2-evidence.zip",
+  "bytes": 832348,
+  "sha256": "776dbaf5144d83ef7ec2f653cc2f8fcb03102324b7cbc28eaee05c66f2af836b",
+  "files": {
+    "results/probes/tau-airline-retry-census-v1/records.jsonl": "540c43d53cc0c4533209b663295bc02eca59ae9817c2e16d0211e94d0e2f4a6d",
+    "research/evidence/tau_airline_retry_census_v1.json": "2847061473d9c6d5f78694d0c3b854d9c85aa85a690e4423ee9558cb8d91f0d4",
+    "research/evidence/tau_airline_retry_census_validation_v2.json": "836a9541f9b92a26a6076e361852e59b7e408d61de9247c91963a259212c5f99",
+    "scripts/validate_tau_airline_retry_census.py": "b267330962440417939d1b47437c60265ea5bd67d1c690606a267aae57247451",
+    "scripts/probe_tau_airline_retry_census.py": "db7b866b588acda16d6e18a89116b1496c0ea3571f8ee79a72e10d73f1cc9c7c",
+    "scripts/tau_airline_compensation_fixture.py": "2cf2f0284947d2de21ae84a44f1066b5257aa177f3185ea4280941bb95e025ee",
+    "research/native_airline_retry_protocol.md": "eafb64833054d2857174a3084eee83b027443d5e711d90017b9e90aaf7c07808",
+    "results/probes/tau-airline-retry-census-v1/validator_packaging_attempt_v1.py": "bc66a139fe1b9ef278b2b5692fff4080be48b835d70a222d5b7ec0ce4844e44e",
+    "research/evidence/tau_airline_retry_census_validation_v1.json": "43e0f7126591e5551268042afabdacedea6907afd1ede08501c119f21b2fae06"
+  },
+  "dependency": "Pinned tau2 source/database and fixture bytes from the native-airline study; not vendored in this archive.",
+  "packaging_amendment": "Initial validation passed; post-packaging verification failed because __file__ was absolute and ZIP removed the Windows drive prefix. V2 uses a repository-relative path. Same raw run; initial validator and validation retained."
+}

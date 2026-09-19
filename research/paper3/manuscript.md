@@ -23,9 +23,9 @@ errors as failures on the same fixture, while silent no-ops remain undetected.
 SagaLLM coordinator controls separately expose its exception-based completion
 convention. These comparisons delimit the diagnosed mechanisms rather than
 establishing a general framework ranking.
-Twenty-five native airline-tool controls extend the diagnosis to reservation
-and payment-ledger state, distinguishing a declared cancellation contract from
-full database restoration and errors after completed effects.
+Twenty-five native airline controls and a 2,000-reservation direct-call census
+distinguish cancellation contracts, strict state idempotence and errors after
+completed effects.
 Separately, an audit of all 280 JSON files in the published archive identifies
 duplicate aggregate records and nested progress snapshots; a conservative
 structured-status screen finds no observed instance of the constructed
@@ -321,6 +321,54 @@ isolation or postcondition-verification algorithm. Both partial setup attempts
 and their causes are retained, and repeated cases are not counted as extra
 independent observations.
 
+### 5.7 Contract-preserving retries can still change recorded state
+
+An acknowledgement error after cancellation raises a separate question:
+what changes if the same cancellation is repeated? We register a direct-call
+census of every reservation in the pinned public airline database before
+execution. The population contains 2,000 reservations, all initially having
+one payment-history entry and unset status: 965 gift-card payments and 1,035
+credit-card payments. This is a finite input population with homogeneous
+ledger structure, not 2,000 independent agent tasks or a deployed workload.
+
+For each reservation, we restore its initial value before each of three
+diagnostic policies. The first cancels once. The second cancels three times,
+with an experimenter-imposed acknowledgement exception after each native
+return. The third cancels once with the same imposed exception, then calls
+native `get_reservation_details` and stops if cancelled status and zero signed
+ledger net are observed. These calls execute unchanged native methods directly;
+they do not pass through MCP or a recovery framework. We do not attribute
+the chosen retry behavior to RAC or agent-saga.
+
+| Policy | Cancels / reads per reservation | Final ledger entries | Cancellation contract satisfied | State equal to single cancellation |
+|---|---:|---:|---:|---:|
+| Single cancellation | 1 / 0 | 2 | 2,000 / 2,000 | Reference |
+| Three cancellation attempts | 3 / 0 | 8 | 2,000 / 2,000 | 0 / 2,000 |
+| Authoritative read before retry | 1 / 1 | 2 | 2,000 / 2,000 | 2,000 / 2,000 |
+
+The native method appends the negation of every existing payment-history
+entry, including previously appended negative entries. The successive ledger
+sizes are therefore 2, 4 and 8 for every reservation, while all 10,000 observed
+post-cancellation states retain zero signed net and cancelled status. Strict
+target-state equality fails under repeated cancellation even though the narrow
+contract remains satisfied. Increased gross ledger entries do not establish
+duplicate external refunds or financial loss: this tool records ledger values
+and does not execute an external payment. Nor does its interface promise strict
+state idempotence. These observations delimit the consequence rather than
+labeling every repeated write a failed recovery.
+
+The read-based diagnostic produces exactly the same target state as single
+cancellation for all records, with one extra read and two fewer cancellation
+calls than the three-attempt control. Its observer is authoritative and
+synchronous by construction. This is an upper-bound diagnostic, not a novel
+policy or evidence for reliability under stale reads or concurrent writers.
+A separate validator computes append-negation transitions directly from the
+original database, without importing the tool implementation or measurement
+function. It validates every saved target field and all ledger nets. The
+initial shared database hash is restored after all per-record resets. A ZIP
+path-handling correction is retained separately from the unchanged raw run;
+it does not create additional observations.
+
 ## 6. What the released experiment archive shows
 
 We separately inspect all 280 JSON files in the published archive. The audit
@@ -360,8 +408,11 @@ The evidence remains concentrated in a small set of chosen interfaces. The two i
 add narrowly selected coordinator and transport controls, not a representative
 sample of recovery systems or matched end-to-end tasks. The operations are constructed, the declarations
 and failure modes are selected, and the experiments contain no autonomous
-model decisions. Native airline tools add coupled business state but only two
-chosen input profiles. Their status/ledger contract is narrower than full
+model decisions. Native MCP airline controls add coupled business state but
+only two chosen booking profiles. The separate 2,000-record retry census
+covers the full public initial reservation population, whose ledger structures
+are homogeneous; it adds no autonomous decisions or framework comparison.
+Their status/ledger contract is narrower than full
 restoration, and no official airline task success rate is reported. An external effect oracle is available by construction.
 These conditions make the mechanisms inspectable but limit deployment claims.
 
@@ -376,7 +427,9 @@ propagated consistently with recovery status; the no-op control separates
 that property from verified restoration. Native airline controls extend the
 distinction to a coupled reservation/payment ledger: equal successful payloads
 can accompany different persisted states, and exceptions can follow completed
-cancellations. The archival analysis prevents these
+cancellations. The native retry census further separates a preserved status/net
+contract from exact state idempotence, without inferring financial harm from
+ledger growth. The archival analysis prevents these
 findings from being misrepresented as observed benchmark failures. Broader
 realistic workflows and submission-quality positioning remain necessary before
 this working manuscript can support a publication claim.
